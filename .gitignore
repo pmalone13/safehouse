@@ -1,0 +1,37 @@
+# Ignore everything by default...
+/*
+
+# ...except top-level .py files, and these specific files.
+!/*.py
+!/README.txt
+!/CLAUDE.MD
+!/claudeBirdBoot.txt
+!/.gitignore
+!/birds.db
+!/automations-feature-spec.md
+!/automations.db
+!/bird_dashboard.html
+
+# ...and the automations/ and chatgpt_bridge/ packages (a directory must be
+# unignored before git will look inside it for further exceptions).
+!/automations/
+!/automations/*.py
+/automations/__pycache__/
+!/chatgpt_bridge/
+!/chatgpt_bridge/*.py
+/chatgpt_bridge/__pycache__/
+!/gemini_bridge/
+!/gemini_bridge/*.py
+/gemini_bridge/__pycache__/
+!/home_bridge/
+!/home_bridge/*.py
+/home_bridge/__pycache__/
+
+# adb (Android platform-tools) is a downloaded portable tool, not source.
+/platform-tools/
+
+# ...and the /initbayhouse custom command specifically (NOT the rest of
+# .claude/ -- settings.local.json etc. in there should stay untracked/local).
+!/.claude/
+!/.claude/commands/
+!/.claude/commands/initbayhouse.md
