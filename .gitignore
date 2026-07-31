@@ -4,6 +4,8 @@
 # ...except top-level .py files, and these specific files.
 !/*.py
 !/README.txt
+!/README.md
+!/LICENSE
 !/CLAUDE.MD
 !/claudeBirdBoot.txt
 !/.gitignore
