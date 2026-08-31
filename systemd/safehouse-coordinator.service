@@ -1,0 +1,15 @@
+[Unit]
+Description=safehouse coordinator (queue -> Claude Code sessions)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/safehouse
+ExecStart=/usr/bin/python3 /home/ubuntu/safehouse/coordinator.py
+Restart=on-failure
+RestartSec=5
+Environment=SAFEHOUSE_SESSION_IDLE_TIMEOUT_SECONDS=3600
+
+[Install]
+WantedBy=multi-user.target

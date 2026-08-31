@@ -1,0 +1,6 @@
+# Deliberately empty right now -- queue_db.py, coordinator.py, and
+# twilio_client.py use only the Python standard library, on purpose:
+# this VM has 414MB RAM total, so every dependency is a real cost here.
+# Add packages only when something genuinely can't be done with stdlib
+# (e.g. a Twilio webhook receiver will need a small web framework once
+# the networking/exposure story is decided).

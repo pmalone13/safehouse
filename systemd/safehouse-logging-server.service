@@ -1,0 +1,14 @@
+[Unit]
+Description=safehouse central logging server (127.0.0.1:9020)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/safehouse
+ExecStart=/usr/bin/python3 /home/ubuntu/safehouse/logging_server.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
