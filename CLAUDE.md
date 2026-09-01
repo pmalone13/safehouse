@@ -38,3 +38,9 @@ is described in your prompt for this turn. Your only job this turn:
    more than the note's content.
 5. Stop. Don't do anything beyond the above -- there's no real project
    to work on yet.
+
+## Test log
+
+- 2026-09-01: hello-world pipeline test succeeded -- email from Paul arrived
+  via queue id 1, replied by email (message id 1a05d5b430ac84a4), no texting
+  attempted, checkpoint committed.
