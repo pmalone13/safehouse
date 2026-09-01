@@ -23,6 +23,13 @@
 /tempWork/**
 !/tempWork/*.py
 
+# ...and utils/ -- reusable, not-project-specific scripts/notes saved
+# over time (see utils/README.md).
+!/utils/
+/utils/**
+!/utils/*.py
+!/utils/*.md
+
 # ...and the projects/ tree, but ONLY CLAUDE.md files at any depth --
 # everything else under projects/ is real project content, mirrored to
 # Google Drive by drive_sync.py instead of living in git (see root

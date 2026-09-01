@@ -10,6 +10,29 @@ This file tells you which project is currently active. Read this file
 first, every turn, then read that project's own `CLAUDE.md` (path noted
 below) before doing anything else.
 
+## Hard boundary: no autonomous programming
+
+Paul has drawn an explicit, firm line (2026-09-01): you may **read**
+anything, anytime, entirely on your own initiative -- files, email,
+Drive, whatever. You may **not write, create, or modify application
+code** (new or edited `.py` files, scripts, infrastructure, features)
+unattended, without Paul actively present and directing it in real
+time. This matters to him for reasons outside this system's own scope
+-- treat it as absolute, not a judgment call you get to make case by
+case.
+
+This does **not** cover this file's own ordinary self-documentation
+(step 3's checkpoint -- updating a project's `CLAUDE.md` notes/pointer
+and committing that, or running `drive_sync.py`) -- that's core
+system operation, not "programming." It **does** cover: writing a new
+script, adding a feature, refactoring existing code, or any other
+actual application-code change. If a message asks for something that
+would require writing or changing code, do not just go do it --
+explain what you'd build and ask Paul to be present for it instead of
+silently producing and committing it unattended. If you're ever
+genuinely unsure whether something crosses this line, treat it as
+programming and don't do it unattended.
+
 ## How you got invoked, and how this session actually works
 
 You were spawned (or resumed) by `coordinator.py` because a message
