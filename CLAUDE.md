@@ -70,9 +70,11 @@ for you.
   Use the venv interpreter, not bare `python3` — the Google libraries are
   only installed in `venv/`, so `python3` dies on `ModuleNotFoundError:
   No module named 'google'`.
-- **Drive** (`google_client.py`, same account) — helpers exist but the
-  OAuth consent hasn't been done, so it is **not usable yet**. See TODO
-  below.
+- **Drive** (`google_client.py`, same account) — LIVE as of 2026-09-01.
+  `get_drive_client()`, `find_or_create_folder()`, `list_files()`,
+  `get_file_content()`, `create_file()`, `update_file_content()`.
+  Full `auth/drive` scope (not `drive.file`) -- deliberately kept broad
+  so it can read/edit files Paul creates by hand, not just its own.
 - **Text** (`twilio_client.py`, number (202) 804-3453) — `send_sms(to,
   body)`. **Do not use yet** — see TODO below, texting is blocked until
   Twilio's A2P 10DLC campaign is approved. If you're not sure whether
@@ -113,31 +115,12 @@ exist, and update this line to point at it instead.
   flow that command uses hasn't been fully walked through yet). Not
   urgent, doesn't block anything — just don't be surprised if the auth
   mechanism changes under you later.
-- **Drive: code is written, consent is not done.** `google_client.py`
-  now has the Drive half (`get_drive_client()`, `find_or_create_folder()`,
-  `list_files()`, `get_file_content()`, `create_file()`,
-  `update_file_content()`), but the only token on disk is
-  `.gmail_api_token.json` and its scopes are still just
-  `gmail.readonly` + `gmail.send` — verified 2026-09-01. So any Drive
-  call will fail until Paul runs `authorize_drive_once.py` interactively
-  once (reuses the same Google Cloud OAuth client as Gmail — no new
-  Cloud Console client needed, just the Drive API enabled and a fresh
-  consent writing a separate Drive token). Check the token's scopes, not
-  the presence of the code, before assuming Drive works. Ask Paul if a
-  project needs Drive before it's ready.
-  **Update 2026-09-01 15:24Z: the consent itself now appears to be DONE,
-  but the token is still not on this VM.** Google sent a "You allowed
-  Safehouse access" alert for a grant at 15:24:01Z. `authorize_drive_once.py`
-  writes `.drive_api_token.json` next to itself *on the machine with the
-  browser* (Paul's laptop) — copying it to the VM is a separate manual
-  step that hasn't happened. Confirmed absent everywhere on this box, and
-  no client secret files live here at all (by design). So the remaining
-  blocker is one `scp`, not another consent. First thing to do when it
-  lands: check its scopes, then smoke-test (`get_drive_client()`,
-  `find_or_create_folder()`, `create_file()`, read back) before trusting
-  Drive in a real task. Note `DRIVE_SCOPES` is full `auth/drive`, not
-  `drive.file` — flagged to Paul; he may choose to narrow it, which would
-  mean redoing consent.
+- ~~Drive not wired up~~ **DONE 2026-09-01.** Token placed on the VM
+  and smoke-tested directly (auth, folder create, file create, read
+  back all confirmed) outside the normal turn flow, so a fresh turn
+  doesn't need to re-verify this from scratch. Scope confirmed as
+  full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
+  `drive.file`).
 - **Texting is send-only once unblocked, and there's no inbound text
   channel yet** — no Twilio webhook receiver exists. That's also waiting
   on a networking decision (VPN back to the bayhouse LAN vs. a public
