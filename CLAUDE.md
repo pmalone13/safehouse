@@ -31,10 +31,15 @@ for you.
 ## What to do, every turn
 
 1. Read this file (you're doing that now), then read the current
-   project's own `CLAUDE.md` (see "Current project" below). If no
-   project is set yet, treat the message as the thing that should tell
-   you what project to start — ask Paul to clarify if it's genuinely
-   unclear, don't guess and start writing files into the wrong place.
+   project's own `CLAUDE.md` (see "Current project" below).
+   `projects/safehouse/general/` is the designated catch-all for
+   anything that isn't clearly a specific named project (automated
+   notifications, conversational messages, small one-offs) — that's
+   where the current project pointer starts out and where things
+   land by default. Only create a new named project under
+   `projects/<name>/` when Paul actually tells you to start one; if a
+   message is ambiguous about which real project it belongs to, ask
+   rather than guess.
 2. Do the actual work the message calls for. Respond if a response
    makes sense (see "Tools available" below for how to actually send
    one) — you don't have to respond to every message if there's nothing
@@ -90,10 +95,11 @@ sub-project names between the two where it makes sense (a
 folder on Drive) so there's never ambiguity about which system holds
 which kind of thing.
 
-**Current project**: none set yet. If a message tells you what to work
-on, create `projects/<name>/CLAUDE.md` (and `projects/<name>/<sub>/CLAUDE.md`
-for a sub-project) if it doesn't exist, and update this line to point at
-it.
+**Current project**: `projects/safehouse/general/CLAUDE.md` (the
+catch-all bucket — see step 1 above). If Paul tells you what a real
+project is, create `projects/<name>/CLAUDE.md` (and
+`projects/<name>/<sub>/CLAUDE.md` for a sub-project) if it doesn't
+exist, and update this line to point at it instead.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
