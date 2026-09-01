@@ -119,6 +119,19 @@ it.
   consent writing a separate Drive token). Check the token's scopes, not
   the presence of the code, before assuming Drive works. Ask Paul if a
   project needs Drive before it's ready.
+  **Update 2026-09-01 15:24Z: the consent itself now appears to be DONE,
+  but the token is still not on this VM.** Google sent a "You allowed
+  Safehouse access" alert for a grant at 15:24:01Z. `authorize_drive_once.py`
+  writes `.drive_api_token.json` next to itself *on the machine with the
+  browser* (Paul's laptop) — copying it to the VM is a separate manual
+  step that hasn't happened. Confirmed absent everywhere on this box, and
+  no client secret files live here at all (by design). So the remaining
+  blocker is one `scp`, not another consent. First thing to do when it
+  lands: check its scopes, then smoke-test (`get_drive_client()`,
+  `find_or_create_folder()`, `create_file()`, read back) before trusting
+  Drive in a real task. Note `DRIVE_SCOPES` is full `auth/drive`, not
+  `drive.file` — flagged to Paul; he may choose to narrow it, which would
+  mean redoing consent.
 - **Texting is send-only once unblocked, and there's no inbound text
   channel yet** — no Twilio webhook receiver exists. That's also waiting
   on a networking decision (VPN back to the bayhouse LAN vs. a public
@@ -146,3 +159,33 @@ it.
   Gotcha found: `python3` can't import `google` — the deps are in the
   venv. Use `./venv/bin/python` (or `venv/bin/python3`) for anything
   touching `google_client.py`.
+- 2026-09-01: third turn (resumed session 6a2aefb8, same session as the
+  self-description turn). Trigger was **not** from Paul: queue id 2 was an
+  automated Google "Security alert — You allowed Safehouse access to some
+  of your Google Account data" for tedassistent@gmail.com. Handled it as a
+  verification job rather than a message to answer:
+  * **Authenticity**: pulled the raw headers via the Gmail API instead of
+    trusting the body — `dkim=pass header.i=@accounts.google.com`,
+    `spf=pass` (gaia.bounces.google.com, 209.85.220.73), `dmarc=pass
+    (p=REJECT)`. Genuine Google, not a phishing lookalike. Clicked
+    nothing (no web access in this config anyway).
+  * **When**: the alert URL embeds the event epoch `1788276241000` ms =
+    2026-09-01T15:24:01Z — a fresh grant ~7 min after Paul's last email,
+    not a delayed notice about the 14:28Z Gmail consent. Attributed to
+    Paul acting on the Drive question in my previous reply.
+  * **Effect on the VM: none.** No `.drive_api_token.json` anywhere on the
+    box; no client secret files here at all; `.gmail_api_token.json`
+    touched at 15:24:42 but that was only a routine access-token refresh
+    (expiry 16:24:41, same two Gmail scopes). So Drive is still dead here
+    — see the updated Drive TODO above.
+  Emailed Paul: alert is real, it's presumably him, Drive needs the token
+  `scp`'d over, and asked him to eyeball the account's connections page to
+  confirm the granted scopes (I can't see that page). Also flagged the
+  full-`auth/drive`-vs-`drive.file` scope tradeoff as a now-or-never
+  choice, with the honest caveat that `drive.file` would stop me from
+  reading anything Paul creates by hand — which likely defeats the
+  shared-deliverables design. Re-asked for the first real project.
+  **Still no project set**; `projects/` still empty. Lesson for future
+  turns: not every queued message is from Paul or needs a reply, but an
+  automated security alert is worth actually verifying rather than
+  assuming it's our own doing.
