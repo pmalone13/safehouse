@@ -139,10 +139,38 @@ exist, and update this line to point at it instead.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is send-only once unblocked, and there's no inbound text
-  channel yet** — no Twilio webhook receiver exists. That's also waiting
-  on a networking decision (VPN back to the bayhouse LAN vs. a public
-  port) that hasn't been made.
+- **Texting is blocked on Twilio A2P campaign review — being watched
+  automatically, don't poll it yourself.** See the "tempWork" section
+  below for the cron watcher; check `tempWork/a2p_status_state.json`
+  if Paul asks about status rather than hitting the Twilio API fresh.
+  Also: send-only even once unblocked, no inbound text channel yet —
+  no Twilio webhook receiver exists. That's waiting on a networking
+  decision (VPN back to the bayhouse LAN vs. a public port) that
+  hasn't been made.
+
+## tempWork
+
+Temporary, disposable infrastructure that isn't part of the real
+system -- exists only until a specific external thing resolves, then
+gets torn down. Kept in its own directory on purpose so it's obvious
+what's throwaway vs. permanent; don't build real features in here.
+
+- **A2P 10DLC campaign status watcher**
+  (`tempWork/check_a2p_status.py`, cron entry
+  `/etc/cron.d/safehouse-a2p-check`, every 30 min). Twilio's SMS Brand
+  is approved, but the Campaign itself (the thing that actually
+  unblocks texting on this number) is still `IN_PROGRESS` as of
+  2026-09-01 -- Paul has had to alter and resubmit it before, so this
+  polls `campaign_status` and logs any CHANGE (not every check) to
+  `tempWork/a2p_status_changes.log`; current known status is always in
+  `tempWork/a2p_status_state.json`. Plain cron, no Claude/coordinator
+  involvement -- this is routine polling, not a judgment call.
+  **When `campaign_status` is no longer `IN_PROGRESS`**: check the
+  change log for what it became; if approved, retest a real send
+  (`twilio_client.send_sms`), tell Paul, then retire this watcher --
+  `sudo rm /etc/cron.d/safehouse-a2p-check`, and archive or delete
+  `tempWork/` (ask Paul which). Update the TODO section's texting
+  note once this is done, and remove this tempWork entry.
 
 ## Test log
 

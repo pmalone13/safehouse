@@ -13,6 +13,16 @@
 !/systemd/
 !/systemd/*.service
 
+# ...and tempWork/ scripts -- runtime state (logs, status files) stays
+# ignored, only the code is tracked. See root CLAUDE.md's "tempWork"
+# section: this whole directory is meant to be short-lived, archived or
+# deleted once whatever it exists for resolves. Same two-step pattern as
+# projects/ below: unignore the directory for traversal, re-deny
+# everything inside, then selectively re-allow just *.py.
+!/tempWork/
+/tempWork/**
+!/tempWork/*.py
+
 # ...and the projects/ tree, but ONLY CLAUDE.md files at any depth --
 # everything else under projects/ is real project content, mirrored to
 # Google Drive by drive_sync.py instead of living in git (see root
