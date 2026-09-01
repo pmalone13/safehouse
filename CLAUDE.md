@@ -50,11 +50,16 @@ for you.
    project" pointer, if Paul just told you to switch), then:
    ```
    git add -A && git commit -m "<short, real description of what this turn did>" && git push origin main
+   ./venv/bin/python drive_sync.py
    ```
    Do this every turn, not just when something feels important — it's
    what lets this system recover cleanly if the VM bounces mid-session.
    A generic commit message is a worse outcome than a slow turn; take
-   the extra few seconds to say what actually happened.
+   the extra few seconds to say what actually happened. The `drive_sync.py`
+   run mirrors the whole repo to a "safehouse" folder on Drive (one-way,
+   local -> Drive, incremental via content hash) — it's how Paul checks
+   what you're doing without SSH, so it belongs in the same checkpoint as
+   the git push, not a separate/optional step.
 4. Stop. The coordinator handles noticing the next message — you don't
    need to poll for anything yourself.
 
@@ -75,6 +80,15 @@ for you.
   `get_file_content()`, `create_file()`, `update_file_content()`.
   Full `auth/drive` scope (not `drive.file`) -- deliberately kept broad
   so it can read/edit files Paul creates by hand, not just its own.
+  **Two distinct uses, don't conflate them**: (1) `drive_sync.py`
+  (below) is an automatic, one-way, whole-repo OUTPUT mirror you run
+  every checkpoint, not something you call file-by-file yourself; (2)
+  reading FROM Drive is a one-off, on-demand action — if Paul says
+  something like "I made a folder called X in Drive, go read it," use
+  `list_files()`/`get_file_content()` right then to pull that content
+  in (e.g. to bootstrap a new project's `CLAUDE.md`). There is no
+  automatic Drive -> local sync; a pull only happens when a turn is
+  explicitly asked to do one.
 - **Text** (`twilio_client.py`, number (202) 804-3453) — `send_sms(to,
   body)`. **Do not use yet** — see TODO below, texting is blocked until
   Twilio's A2P 10DLC campaign is approved. If you're not sure whether
@@ -88,14 +102,18 @@ with its own `CLAUDE.md` holding that project's context, decisions, and
 running history — the same idea as this file, scoped narrower. Example
 shape Paul described: `projects/accounting/ledger/CLAUDE.md`.
 
-This repo (git) is **your own workspace** — working files, notes, code,
-whatever you generate or need to track your own state. **Shared
-deliverables — the things that are actually "Paul and Claude's," not
-scratch — live on Google Drive**, not in this repo. Mirror project/
-sub-project names between the two where it makes sense (a
-`projects/accounting/ledger/` here pairs with an `accounting/ledger`
-folder on Drive) so there's never ambiguity about which system holds
-which kind of thing.
+This repo (git) is **your own workspace** for writing — fast local
+Read/Write/Edit, no API round-trip per file. But git itself only
+tracks code, this file, and every project/sub-project's own
+`CLAUDE.md` — as of 2026-09-01, everything else under `projects/` is
+gitignored on purpose. **The actual durable copy of project content is
+Drive**, kept in sync automatically by `drive_sync.py` (see step 3) —
+write locally like normal, the checkpoint pushes it out. Folder names
+on Drive mirror this repo's own structure exactly (same relative
+paths, under a root "safehouse" folder), so there's never ambiguity
+about where something landed. This is also how Paul looks at what
+you're doing without SSH access — treat the Drive mirror as something
+a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` (the
 catch-all bucket — see step 1 above). If Paul tells you what a real
