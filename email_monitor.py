@@ -16,7 +16,7 @@ import os
 import time
 from pathlib import Path
 
-import gmail_client
+import google_client
 import queue_db
 from safehouse_logging import get_logger
 
@@ -31,7 +31,7 @@ _seeded = False
 
 def _poll_once(service) -> None:
     global _seeded
-    messages = gmail_client.list_new_messages(service, query="in:inbox", max_results=25)
+    messages = google_client.list_new_messages(service, query="in:inbox", max_results=25)
     new_ids = [m["id"] for m in messages if m["id"] not in _seen_ids]
 
     if not _seeded:
@@ -44,7 +44,7 @@ def _poll_once(service) -> None:
         return
 
     for message_id in reversed(new_ids):  # oldest-of-the-new first
-        detail = gmail_client.get_message_detail(service, message_id)
+        detail = google_client.get_message_detail(service, message_id)
         body = f"Subject: {detail['subject']}\n\n{detail['body_text']}"
         queue_db.enqueue("email", detail["sender"], body)
         _seen_ids.add(message_id)
@@ -63,7 +63,7 @@ def main() -> None:
     log.info(f"email monitor starting (poll={POLL_INTERVAL_SECONDS}s)")
     while True:
         try:
-            service = gmail_client.get_client()
+            service = google_client.get_client()
             _poll_once(service)
         except FileNotFoundError as e:
             log.error(f"{e} -- sleeping and will retry")
