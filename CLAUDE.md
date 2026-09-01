@@ -61,9 +61,12 @@ for you.
 - **Email** (`google_client.py` in this directory, account
   `tedassistent@gmail.com`) — `get_client()`, `list_new_messages()`,
   `get_message_detail()`, `send_message(service, to, subject, body_text)`.
-  Simplest from a turn: a `python3 -c "..."` one-liner via Bash, same as
-  the pipeline test that got this file replaced used.
-- **Drive** (`google_client.py`, same account) — TODO, not live yet, see
+  Simplest from a turn: a `./venv/bin/python -c "..."` one-liner via Bash.
+  Use the venv interpreter, not bare `python3` — the Google libraries are
+  only installed in `venv/`, so `python3` dies on `ModuleNotFoundError:
+  No module named 'google'`.
+- **Drive** (`google_client.py`, same account) — helpers exist but the
+  OAuth consent hasn't been done, so it is **not usable yet**. See TODO
   below.
 - **Text** (`twilio_client.py`, number (202) 804-3453) — `send_sms(to,
   body)`. **Do not use yet** — see TODO below, texting is blocked until
@@ -104,13 +107,18 @@ it.
   flow that command uses hasn't been fully walked through yet). Not
   urgent, doesn't block anything — just don't be surprised if the auth
   mechanism changes under you later.
-- **Drive access isn't wired up yet.** `google_client.py` today only has
-  Gmail scopes (`gmail.readonly`, `gmail.send`). Adding Drive needs one
-  more one-time OAuth consent (reusing the same Google Cloud OAuth
-  client already set up for Gmail — no new Cloud Console client needed,
-  just the Drive API enabled on that project and a fresh consent
-  producing a new token). Ask Paul if a project needs Drive before it's
-  ready.
+- **Drive: code is written, consent is not done.** `google_client.py`
+  now has the Drive half (`get_drive_client()`, `find_or_create_folder()`,
+  `list_files()`, `get_file_content()`, `create_file()`,
+  `update_file_content()`), but the only token on disk is
+  `.gmail_api_token.json` and its scopes are still just
+  `gmail.readonly` + `gmail.send` — verified 2026-09-01. So any Drive
+  call will fail until Paul runs `authorize_drive_once.py` interactively
+  once (reuses the same Google Cloud OAuth client as Gmail — no new
+  Cloud Console client needed, just the Drive API enabled and a fresh
+  consent writing a separate Drive token). Check the token's scopes, not
+  the presence of the code, before assuming Drive works. Ask Paul if a
+  project needs Drive before it's ready.
 - **Texting is send-only once unblocked, and there's no inbound text
   channel yet** — no Twilio webhook receiver exists. That's also waiting
   on a networking decision (VPN back to the bayhouse LAN vs. a public
@@ -122,3 +130,19 @@ it.
   -> Claude session -> email reply -> self-checkpoint). Confirmed the
   whole mechanism works before this file was replaced with the real
   version above.
+- 2026-09-01: second live turn, first one under this (real) root file.
+  Paul emailed "nice and well done. Describe yourself in a reply" (queue
+  id 1). Replied by email with a self-description: what I am, the
+  episodic spawn/resume-ticket shape of a session and why the CLAUDE.md
+  checkpoint is the only continuity that exists, what's working (files,
+  email, git) vs. blocked (Drive consent, Twilio A2P), the metered-API-key
+  billing caveat, and my limits. Closed by asking him to name the first
+  real project. **Still no project set** — the message was conversational,
+  not an assignment, so nothing was created under `projects/` (correct
+  per step 1: don't guess). Note for the next turn: the reply asked a
+  direct question, so Paul's next message is likely the project name —
+  create `projects/<name>/CLAUDE.md` and update the "Current project"
+  line above when it lands.
+  Gotcha found: `python3` can't import `google` — the deps are in the
+  venv. Use `./venv/bin/python` (or `venv/bin/python3`) for anything
+  touching `google_client.py`.
