@@ -1,12 +1,12 @@
 [Unit]
-Description=safehouse central logging server (127.0.0.1:9020)
+Description=safehouse email monitor (tedassistent@gmail.com -> queue)
 After=network.target
 
 [Service]
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/safehouse
-ExecStart=/home/ubuntu/safehouse/venv/bin/python3 /home/ubuntu/safehouse/logging_server.py
+ExecStart=/home/ubuntu/safehouse/venv/bin/python3 /home/ubuntu/safehouse/email_monitor.py
 Restart=on-failure
 RestartSec=5
 
