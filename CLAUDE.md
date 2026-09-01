@@ -247,3 +247,19 @@ what's throwaway vs. permanent; don't build real features in here.
   turns: not every queued message is from Paul or needs a reply, but an
   automated security alert is worth actually verifying rather than
   assuming it's our own doing.
+  **Stale-as-written warning:** this entry's "Drive is still dead here"
+  finding was true at 15:27 and false by 15:38 — the token was placed and
+  smoke-tested later the same hour (see the Drive TODO above, and commit
+  `9aaeabc`). Left as written because it's an accurate record of the
+  turn; just don't read it as current state.
+- 2026-09-01 ~16:27: session `6a2aefb8` wrap-up turn (idle window elapsed,
+  no new message). No outstanding work — both queued messages `done`,
+  working tree clean, and the five commits that landed mid-session
+  (catch-all bucket, Drive token, `drive_sync.py`, tempWork watcher, the
+  no-autonomous-programming boundary) were already committed by the turns
+  that made them. Logged this session's two turns into
+  `projects/safehouse/general/CLAUDE.md`, whose Log section was still
+  empty, and ran the checkpoint — the Drive mirror was stale
+  (`.drive_sync_state.json` 15:48 vs. repo changes at 16:17–16:24), so the
+  sync was the substantive part rather than a formality. No email sent:
+  nothing new to tell Paul that he doesn't already know.
