@@ -13,16 +13,19 @@
 !/systemd/
 !/systemd/*.service
 
-# ...and the projects/ tree, recursively -- each project/sub-project's own
-# CLAUDE.md plus whatever working files it accumulates. This is Claude's
-# own workspace; shared/deliverable content lives on Google Drive instead,
-# not in this repo (see root CLAUDE.md).
+# ...and the projects/ tree, but ONLY CLAUDE.md files at any depth --
+# everything else under projects/ is real project content, mirrored to
+# Google Drive by drive_sync.py instead of living in git (see root
+# CLAUDE.md's Projects section). Directories need traversal explicitly
+# allowed even though their other files stay ignored, hence the
+# trailing-slash line.
 !/projects/
-!/projects/**
+/projects/**
+!/projects/**/
+!/projects/**/CLAUDE.md
 
 /__pycache__/
 *.pyc
-/projects/**/__pycache__/
 
 # Runtime/ephemeral state -- deliberately NOT backed up via git, unlike
 # bayhouse's own tracked .db files. queue.db is a transient work queue
