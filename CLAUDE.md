@@ -162,10 +162,19 @@ exist, and update this line to point at it instead.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is blocked on Twilio A2P campaign review — being watched
-  automatically, don't poll it yourself.** See the "tempWork" section
-  below for the cron watcher; check `tempWork/a2p_status_state.json`
-  if Paul asks about status rather than hitting the Twilio API fresh.
+- **Texting is blocked, and as of 2026-09-02 the campaign is
+  `FAILED`, not merely pending.** Campaign `CM3e5f...0437` was
+  rejected for the third time (error 30915, sole-prop classification)
+  and is now waiting on a decision only Paul can make: stay sole prop
+  and scrub every trace of the LLC from what reviewers see, or
+  register the LLC as a new STANDARD / LOW_VOLUME_STANDARD brand
+  (which means a *new* brand + campaign — brand_type can't be changed
+  in place). Nothing on this VM can move it forward; don't try to
+  edit or resubmit the registration, that's a representation about
+  Paul's business to the carriers and it's his to make. The watcher
+  is still running and will catch a resubmission going APPROVED —
+  check `tempWork/a2p_status_state.json` if Paul asks about status
+  rather than hitting the Twilio API fresh.
   Also: send-only even once unblocked, no inbound text channel yet —
   no Twilio webhook receiver exists. That's waiting on a networking
   decision (VPN back to the bayhouse LAN vs. a public port) that
@@ -182,18 +191,24 @@ what's throwaway vs. permanent; don't build real features in here.
   (`tempWork/check_a2p_status.py`, cron entry
   `/etc/cron.d/safehouse-a2p-check`, every 30 min). Twilio's SMS Brand
   is approved, but the Campaign itself (the thing that actually
-  unblocks texting on this number) is still `IN_PROGRESS` as of
-  2026-09-01 -- Paul has had to alter and resubmit it before, so this
-  polls `campaign_status` and logs any CHANGE (not every check) to
-  `tempWork/a2p_status_changes.log`; current known status is always in
-  `tempWork/a2p_status_state.json`. Plain cron, no Claude/coordinator
-  involvement -- this is routine polling, not a judgment call.
-  **When `campaign_status` is no longer `IN_PROGRESS`**: check the
-  change log for what it became; if approved, retest a real send
-  (`twilio_client.send_sms`), tell Paul, then retire this watcher --
-  `sudo rm /etc/cron.d/safehouse-a2p-check`, and archive or delete
-  `tempWork/` (ask Paul which). Update the TODO section's texting
-  note once this is done, and remove this tempWork entry.
+  unblocks texting on this number) went `IN_PROGRESS` -> `FAILED` on
+  2026-09-02 -- Paul has had to alter and resubmit it repeatedly, so
+  this polls `campaign_status` and logs any CHANGE (not every check)
+  to `tempWork/a2p_status_changes.log`; current known status is always
+  in `tempWork/a2p_status_state.json`. Plain cron, no
+  Claude/coordinator involvement -- this is routine polling, not a
+  judgment call. Note the API can lag the rejection email by tens of
+  minutes (2026-09-02: email 11:53Z, API still `IN_PROGRESS` at the
+  11:30 tick, `FAILED` on a fresh read at 11:54Z) -- if the two
+  disagree, one fresh read to reconcile them is fine.
+  **Only retire this on `APPROVED`**, not on any change away from
+  `IN_PROGRESS`: `FAILED` means another resubmission is coming and the
+  watcher is still the thing that will notice it clearing. On
+  `APPROVED`: retest a real send (`twilio_client.send_sms`), tell
+  Paul, then retire the watcher -- `sudo rm
+  /etc/cron.d/safehouse-a2p-check`, and archive or delete `tempWork/`
+  (ask Paul which). Update the TODO section's texting note once this
+  is done, and remove this tempWork entry.
 
 ## Test log
 
@@ -263,3 +278,35 @@ what's throwaway vs. permanent; don't build real features in here.
   (`.drive_sync_state.json` 15:48 vs. repo changes at 16:17–16:24), so the
   sync was the substantive part rather than a formality. No email sent:
   nothing new to tell Paul that he doesn't already know.
+- 2026-09-02 ~11:54: fresh session, queue id 3 -- an automated Twilio
+  email, "campaign ... was rejected." Handled like the Google alert:
+  verify first, then work out what it actually means, then hand Paul
+  only the decision that's his.
+  * **Authenticity**: `dkim=pass header.i=@twilio.com`, `spf=pass`,
+    delivered via Twilio's own SendGrid. Clicked nothing.
+  * **History matters more than the single email.** Pulled the two
+    earlier rejections out of Gmail: Aug 12 was 30896 + 30886 (opt-in
+    flow / use-case description), Aug 13 was 30915 ("Ideal Federal LLC"
+    in the message flow), and this one is 30915 *again* -- the reviewer
+    pulled up the website and found "Ideal Federal Technologies, LLC".
+    Third rejection, second for the same root cause.
+  * **Read the API, not just the mail**: campaign `campaign_status` is
+    now `FAILED`; brand `BN257b...1afc` is `brand_type =
+    SOLE_PROPRIETOR`, APPROVED/VERIFIED. That's the whole problem in one
+    line -- a sole-prop brand with an LLC's identity hanging off it. The
+    11:30 cron tick still said `IN_PROGRESS`, so I did one deliberate
+    fresh read to reconcile email vs API (see the amended tempWork note
+    about that lag).
+  * **Emailed Paul** the two mutually exclusive paths (scrub the LLC and
+    stay sole prop, vs. register the LLC as a new STANDARD /
+    LOW_VOLUME_STANDARD brand -- brand_type can't be flipped in place,
+    so it's a new brand + new campaign), recommended the latter, and
+    flagged two things he'll want to fix while editing either way:
+    message sample #3 is literally "Any message....", and
+    `has_embedded_links`/`has_embedded_phone` are both true while none
+    of the samples contain a link or phone.
+  * **Deliberately did not** edit or resubmit the registration. It's a
+    representation about Paul's business made to carriers, and the A-vs-B
+    classification question is his to answer -- not a gap for me to fill
+    because I happen to hold API credentials. Watcher left running:
+    `FAILED` is not `APPROVED`, so it still has a job.
