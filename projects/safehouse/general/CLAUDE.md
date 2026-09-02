@@ -51,3 +51,36 @@ ongoing work, that's the signal to spin it out into its own
   — wait for Paul, don't invent one; (2) A2P campaign still
   `IN_PROGRESS`, watcher running every 30 min, don't poll it by hand;
   (3) still no inbound text channel, pending the VPN-vs-public-port call.
+
+- **2026-09-02 ~11:54 — queue id 3, automated Twilio A2P rejection.**
+  Fresh session (the 2026-09-01 resume ticket had long expired). Another
+  textbook case for this bucket: an automated notification that needed
+  verifying and interpreting, not answering.
+  * Verified the mail was really Twilio (`dkim=pass @twilio.com`,
+    `spf=pass`, via Twilio's SendGrid), clicked no links.
+  * Went past the single email: dug the two earlier rejections out of
+    Gmail and read the campaign + brand objects from the Twilio API. The
+    shape of it is that this is the **third** rejection and the **second**
+    for error 30915 — a `SOLE_PROPRIETOR` brand with an LLC's identity
+    visible to reviewers (this time on the website they pulled up:
+    "Ideal Federal Technologies, LLC"). `campaign_status` is now `FAILED`.
+  * Emailed Paul the decision, not a status update: two mutually exclusive
+    paths (scrub the LLC and stay sole prop vs. register the LLC as a new
+    STANDARD / LOW_VOLUME_STANDARD brand, which can't be done in place),
+    my recommendation of the latter and why, plus two concrete defects in
+    the current campaign he should fix while editing either way.
+  * Did **not** edit or resubmit the registration despite holding working
+    API credentials. Filing a business classification with carriers is
+    Paul's representation to make; the whole question the rejection poses
+    is one only he can answer. Worth remembering as the general shape:
+    having the credentials to do a thing is not the same as it being mine
+    to do.
+  * Left the watcher running and amended the root file's teardown rule —
+    it previously said to retire the watcher when status left
+    `IN_PROGRESS`, which would have been wrong here. `FAILED` means
+    another resubmission is coming; only `APPROVED` retires it. Also
+    recorded the email-vs-API lag (email 11:53Z, API still `IN_PROGRESS`
+    at the 11:30 tick, `FAILED` at 11:54Z).
+  Open thread: waiting on Paul's A-vs-B answer. Until then texting stays
+  blocked and there is nothing further to do on it from this VM.
+
