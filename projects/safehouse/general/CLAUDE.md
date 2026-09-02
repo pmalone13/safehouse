@@ -98,3 +98,51 @@ ongoing work, that's the signal to spin it out into its own
   `APPROVED`; (3) still no inbound text channel, pending the
   VPN-vs-public-port call.
 
+
+- **2026-09-02 ~16:20 — queue id 4, automated Twilio "resubmission
+  received."** Fresh session. On its face a no-action-needed
+  acknowledgement; treating it that way would have missed the actual
+  problem. Verified authentic (`dkim=pass @twilio.com`, `spf=pass`),
+  clicked nothing.
+  * **What Paul did between turns:** he never answered the A-vs-B email,
+    he just went and executed **path A** — commit `89dcd6f` (16:04Z)
+    added a standalone Flask site for idealfed.com (About/Privacy/Terms,
+    gunicorn on 127.0.0.1:8091 behind nginx), deliberately free of LLC
+    branding, then resubmitted the campaign with new Privacy/T&C URLs.
+    API confirms: same brand `BN257b...1afc`, still `SOLE_PROPRIETOR`,
+    `campaign_status` back to `IN_PROGRESS`, `errors` now empty. The
+    scrub itself checks out — no "LLC"/"Ideal Federal" anywhere in
+    `idealfed_site/`, description reads "Paul Malone of Tracys Landing MD".
+  * **The finding: idealfed.com was unreachable from the internet.**
+    Certbot issued a valid cert at 15:17Z and rewrote the `:80` server
+    block to `return 301 https://...`, but inbound 443 is not open.
+    Evidence chain: port 80 OPEN / port 443 times out (tested against the
+    VM's own public IP 3.238.63.42); `curl --resolve idealfed.com:443:
+    127.0.0.1 https://idealfed.com/privacy` returns **200**, so nginx and
+    the cert are fine and only the packets are missing; `ufw` inactive and
+    `iptables INPUT` an empty ACCEPT chain, so it's not the host — it's the
+    AWS security group (instance `i-066d2ff2bfd9cf3c9`). No http fallback
+    either, since :80 301s to the dead port. So every URL on the domain was
+    a black hole starting ~the moment he resubmitted, and the reviewer who
+    opens the privacy/terms URL gets a timeout — a near-certain 4th
+    rejection after burning 1–3 business days.
+  * **Did not fix it.** Opening a security-group port is an infrastructure
+    change and lands on the wrong side of the hard boundary. Emailed Paul
+    the diagnosis with the evidence, the one-line verification
+    (`curl -sI https://idealfed.com/privacy | head -1`), and the SG names.
+    Same principle as this morning's turn: holding the credentials to do a
+    thing isn't the same as it being mine to do.
+  * **Re-flagged, still unfixed:** "Fields updated" lists only the two URLs,
+    and the API confirms `message_samples[2]` is still literally
+    "Any message...." and `has_embedded_links`/`has_embedded_phone` are both
+    true with no link or phone in any sample. Told him I don't know whether
+    Twilio permits a mid-review edit vs. forcing submission #7 — that's a
+    console question — but weighed against a guaranteed rejection.
+  * Noted a red herring for future turns: both the email and the API report
+    the campaign date as `2026-08-10T13:32:28Z`. That's the original
+    creation date echoing through, **not** today's resubmission time.
+  * Watcher untouched and still correct: 16:00 tick read `FAILED`, the
+    16:30 tick will log `FAILED -> IN_PROGRESS`. Retire only on `APPROVED`.
+  Open threads: (1) 443 closed — blocking, only Paul can clear it;
+  (2) the two campaign defects, his call; (3) still no *named* project;
+  (4) still no inbound text channel.
