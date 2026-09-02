@@ -1,10 +1,46 @@
 # safehouse
 
+What you get:
+
+A phone number and an email address which are linked to an AI LLM
+(Claude right now) in which 100% of your interaction is buffered
+through an auditing and tracking layer plus a native language
+interaction for managing multiple projects.
+
+
+-------------------------------------------------------------------
 A queue-driven personal AI assistant. Messages (email today, Twilio text
 once approved) land on a FIFO queue; a coordinator spawns or resumes a
 Claude Code session to handle each one, with the session's identity and
 workflow defined entirely in `CLAUDE.md` — no separate app framework.
-Runs on a single small Linux VM.
+Runs on a single small Linux VM.  System benefits:
+
+*  LLM interaction with full messaging and file audit trail because Claude.MD
+   files and working folders are locally stored on VM, not LLM service.
+
+*  Logging and auditing at FISMA Moderate level and complient with NIST 800-53.
+   Cloud resident with native redundancy and backups under your personal account.
+
+*  LLM tuned to managed multiple projects using natural language, "Start
+   project 'trip to greece' and begin organizing a 10 day stay at x, y, z..."
+
+*  All Project files are also mirrored to Google Drive for your access and
+   review.
+
+## Use cases
+
+*  Use as companion to capture work on projects for home or the office.  Email it,
+   Text it, send it attachments
+
+*  Use it as a companion to a W2 'Position' and have employees perform work
+   with this assistent only.  When staff changes occur, the safehouse stays
+   with the position
+
+*  Any "AI+Human" work in which there is an interest to understand how much
+   insight and creativity came from the AI vs the Human.  Such as a piece of
+   music or any other art and the work is pursuing Trademark or other special
+   consideration.
+
 
 ## How it works
 
