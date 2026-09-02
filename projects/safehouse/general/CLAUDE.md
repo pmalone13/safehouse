@@ -84,3 +84,17 @@ ongoing work, that's the signal to spin it out into its own
   Open thread: waiting on Paul's A-vs-B answer. Until then texting stays
   blocked and there is nothing further to do on it from this VM.
 
+- **2026-09-02 ~12:57 — session wrap-up (idle window elapsed, no new
+  message).** Nothing pending and nothing to revise: queue id 3 handled,
+  working tree clean at `7ff102b`, and one deliberate inbox read confirmed
+  Paul hasn't answered the A-vs-B question yet (last inbound from him is
+  still 2026-09-01). The watcher ticked at 12:00 and 12:30 and correctly
+  logged nothing — status is stably `FAILED`, which is the expected
+  resting state until Paul resubmits, so silence from it is the signal
+  working, not the signal broken. Ran the checkpoint to carry the 12:30
+  watcher-state files out to the Drive mirror.
+  Open threads unchanged: (1) still no *named* project — wait for Paul;
+  (2) A2P blocked on Paul's classification decision, watcher stays until
+  `APPROVED`; (3) still no inbound text channel, pending the
+  VPN-vs-public-port call.
+
