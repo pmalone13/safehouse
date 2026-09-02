@@ -173,3 +173,52 @@ ongoing work, that's the signal to spin it out into its own
   ("Any message...." sample, mismatched embedded-link/phone flags),
   his call; (3) still no *named* project — wait for Paul; (4) still no
   inbound text channel, pending the VPN-vs-public-port decision.
+
+- **2026-09-02 ~18:35 — queue id 5, Paul: "Waiting on dns to ripple. Email
+  me when u can resolve name."** Fresh session. Short message, but checking
+  the premise overturned yesterday's diagnosis.
+  * **The correction: the 16:20Z "443 closed in the AWS security group"
+    finding was wrong.** This instance's public IP is **54.88.172.94**
+    (EC2 IMDS, `i-066d2ff2bfd9cf3c9`), and `uptime -s` / `last reboot`
+    show no reboot since 2026-08-09 — so it has held that address the
+    whole time. `idealfed.com` resolves to **3.238.63.42**, which was
+    never this box. The previous turn dialed the DNS answer, found 443
+    dead, and attributed the timeout to our security group; it was
+    port-scanning an unrelated host. **Lesson: when a name is unreachable,
+    confirm the resolved IP is actually yours before diagnosing anything
+    downstream of it.** The whole evidence chain (80 open / 443 timeout /
+    loopback 200 / ufw+iptables clean) was individually true and led
+    somewhere false because step zero went unchecked.
+  * **443 is open.** Proof is the nginx access log, not a port dial: outside
+    hosts complete TLS (34.23.210.195 at 17:47, 150.107.38.85 at 18:31,
+    both 200) and a 200 can only come from the TLS vhost, since `:80`
+    returns 301 unconditionally. Can't tell whether Paul opened it after
+    the email or it was never shut; said so plainly rather than guessing.
+  * **Real state: DNS mid-propagation, registrar side nearly done.**
+    Repeated direct queries return a mix — ns35.worldnic.com gave
+    3.238.63.42 once in four, ns36 once in four; ~3 of 4 authoritative
+    answers already correct. The lag is downstream caches: 8.8.8.8/8.8.4.4,
+    1.1.1.1, 9.9.9.9, OpenDNS and Verisign all serve the old IP, record TTL
+    **7200**. Google cached its stale copy ~18:32Z (TTL observed
+    decrementing 7173 -> 7161), so it serves the dead address until roughly
+    **20:30Z** regardless of worldnic. Lowering TTL now can't help — the
+    7200 is already downstream. Told Paul: self-clears within ~2h; if not
+    by ~21:00Z it's a Network Solutions problem, not propagation.
+  * **Server verified ready** against 54.88.172.94 via `--resolve`: `/`,
+    `/privacy`, `/terms` and the `www` host all 200; cert CN=idealfed.com,
+    SANs idealfed.com + www.idealfed.com, good to Dec 1. So DNS is the only
+    thing between a reviewer and the pages. (`/about` 404s but nothing
+    links to it — the About copy lives on `/`.)
+  * **Couldn't satisfy the literal ask** ("email me when u can resolve
+    name") — I only run when a message arrives, so no turn exists between
+    now and 20:30Z. Gave him two routes: email me anything after ~20:45Z
+    and I'll verify end to end, or say the word and I'll build a small cron
+    watcher **with him present**, since a new script is on the wrong side
+    of the hard boundary. Did not build it unattended.
+  * Re-read the campaign from the API: `IN_PROGRESS`, `errors` empty, and
+    both defects unchanged — `message_samples[2]` still "Any message...."
+    and `has_embedded_links`/`has_embedded_phone` still true with no link
+    or phone in any sample. Re-flagged briefly; still his call.
+  Open threads: (1) DNS ripple, ETA ~20:30Z, no action available from here;
+  (2) offered DNS watcher awaiting Paul's go-ahead; (3) the two campaign
+  defects; (4) still no *named* project; (5) still no inbound text channel.

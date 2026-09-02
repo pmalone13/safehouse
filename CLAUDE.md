@@ -171,18 +171,37 @@ exist, and update this line to point at it instead.
   `BN257b...1afc` is unchanged and still `SOLE_PROPRIETOR`; the
   campaign's `errors` array is now empty. Reviews take 1-3 business
   days.
-  **Blocking problem, unresolved as of 17:21Z: idealfed.com is
-  unreachable from the internet, so the reviewer will hit a dead URL.**
-  Certbot issued a valid cert at 15:17Z and rewrote nginx's `:80` block
-  to `return 301 https://...`, but inbound 443 is closed in the AWS
-  security group (instance `i-066d2ff2bfd9cf3c9`). Port 80 answers, 443
-  times out, and `curl --resolve idealfed.com:443:127.0.0.1
-  https://idealfed.com/privacy` returns 200 -- nginx and the cert are
-  fine, the packets never arrive. Not the host: `ufw` inactive,
-  `iptables INPUT` an empty ACCEPT chain. No http fallback either, since
-  :80 redirects to the dead port. Paul was emailed the diagnosis at
-  16:20Z and has not acted yet. **Opening that port is an infrastructure
-  change -- it's his to make, not a gap to fill because you can.**
+  **Blocking problem as of 18:35Z: idealfed.com still resolves to the
+  wrong address, so a reviewer opening the privacy/terms URL gets a dead
+  host.** This is DNS, and only DNS -- *not* the security group. The
+  16:20Z "inbound 443 is closed in the AWS SG" diagnosis was **wrong**;
+  don't act on it. This instance's public IP is **54.88.172.94** (EC2
+  IMDS; no reboot since 2026-08-09, so it has always been that), while
+  `idealfed.com` answers **3.238.63.42** -- an unrelated host. The
+  earlier turn dialed the DNS answer, found 443 dead there, and blamed
+  our security group. **Rule of thumb it cost us: before diagnosing
+  anything downstream of an unreachable name, confirm the resolved IP is
+  actually yours.**
+  443 *is* open -- proven from `/var/log/nginx/access.log`, not a port
+  dial: external hosts complete TLS and get 200s, and a 200 can only come
+  from the TLS vhost since `:80` returns 301 unconditionally. The site
+  itself is verified ready against 54.88.172.94 (`/`, `/privacy`,
+  `/terms`, and the `www` host all 200; cert CN=idealfed.com with SANs
+  for both names, valid to Dec 1).
+  Paul edited the A record at Network Solutions and is waiting it out.
+  At 18:33Z the authoritative servers were ~3-in-4 correct (ns35 and
+  ns36 each still returned 3.238.63.42 on about one query in four), but
+  every major public resolver (Google, Cloudflare, Quad9, OpenDNS,
+  Verisign) had cached the stale answer at TTL **7200**. Google cached
+  its copy ~18:32Z, so it serves the dead IP until roughly **20:30Z**
+  regardless of the registrar. Lowering the TTL now cannot help. If it
+  hasn't converged by ~21:00Z it stops being propagation and becomes a
+  Network Solutions problem. Nothing to do from this VM either way.
+  Paul asked to be emailed "when u can resolve name" -- there is no turn
+  between now and then unless a message arrives, so he was told to ping
+  after ~20:45Z, and offered a small cron watcher that would email him on
+  the flip. **That watcher is a new script: build it only with Paul
+  present.**
   Two campaign defects also remain unfixed (the resubmission touched only
   the two URLs): `message_samples[2]` is literally "Any message....", and
   `has_embedded_links`/`has_embedded_phone` are both true while no sample
