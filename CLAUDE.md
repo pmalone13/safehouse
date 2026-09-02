@@ -162,19 +162,39 @@ exist, and update this line to point at it instead.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is blocked, and as of 2026-09-02 the campaign is
-  `FAILED`, not merely pending.** Campaign `CM3e5f...0437` was
-  rejected for the third time (error 30915, sole-prop classification)
-  and is now waiting on a decision only Paul can make: stay sole prop
-  and scrub every trace of the LLC from what reviewers see, or
-  register the LLC as a new STANDARD / LOW_VOLUME_STANDARD brand
-  (which means a *new* brand + campaign — brand_type can't be changed
-  in place). Nothing on this VM can move it forward; don't try to
-  edit or resubmit the registration, that's a representation about
-  Paul's business to the carriers and it's his to make. The watcher
-  is still running and will catch a resubmission going APPROVED —
-  check `tempWork/a2p_status_state.json` if Paul asks about status
-  rather than hitting the Twilio API fresh.
+- **Texting is still blocked. As of 2026-09-02 16:14Z the campaign is
+  back to `IN_PROGRESS` (submission #6), under review after its third
+  rejection.** Paul resolved the sole-prop-vs-LLC question by *doing*
+  rather than replying: he took the stay-sole-prop path, stood up
+  idealfed.com with LLC-free About/Privacy/Terms pages (commit
+  `89dcd6f`), and resubmitted with new Privacy/T&C URLs. Brand
+  `BN257b...1afc` is unchanged and still `SOLE_PROPRIETOR`; the
+  campaign's `errors` array is now empty. Reviews take 1-3 business
+  days.
+  **Blocking problem, unresolved as of 17:21Z: idealfed.com is
+  unreachable from the internet, so the reviewer will hit a dead URL.**
+  Certbot issued a valid cert at 15:17Z and rewrote nginx's `:80` block
+  to `return 301 https://...`, but inbound 443 is closed in the AWS
+  security group (instance `i-066d2ff2bfd9cf3c9`). Port 80 answers, 443
+  times out, and `curl --resolve idealfed.com:443:127.0.0.1
+  https://idealfed.com/privacy` returns 200 -- nginx and the cert are
+  fine, the packets never arrive. Not the host: `ufw` inactive,
+  `iptables INPUT` an empty ACCEPT chain. No http fallback either, since
+  :80 redirects to the dead port. Paul was emailed the diagnosis at
+  16:20Z and has not acted yet. **Opening that port is an infrastructure
+  change -- it's his to make, not a gap to fill because you can.**
+  Two campaign defects also remain unfixed (the resubmission touched only
+  the two URLs): `message_samples[2]` is literally "Any message....", and
+  `has_embedded_links`/`has_embedded_phone` are both true while no sample
+  contains a link or phone. Either is an independent rejection reason.
+  Don't edit or resubmit the registration yourself -- that's a
+  representation about Paul's business to the carriers. The watcher is
+  running and will catch `APPROVED`; check
+  `tempWork/a2p_status_state.json` if Paul asks about status rather than
+  hitting the Twilio API fresh.
+  Red herring: both the rejection email and the API report the campaign
+  date as `2026-08-10T13:32:28Z`. That's the original creation date
+  echoing through, not a resubmission timestamp.
   Also: send-only even once unblocked, no inbound text channel yet —
   no Twilio webhook receiver exists. That's waiting on a networking
   decision (VPN back to the bayhouse LAN vs. a public port) that
@@ -191,8 +211,10 @@ what's throwaway vs. permanent; don't build real features in here.
   (`tempWork/check_a2p_status.py`, cron entry
   `/etc/cron.d/safehouse-a2p-check`, every 30 min). Twilio's SMS Brand
   is approved, but the Campaign itself (the thing that actually
-  unblocks texting on this number) went `IN_PROGRESS` -> `FAILED` on
-  2026-09-02 -- Paul has had to alter and resubmit it repeatedly, so
+  unblocks texting on this number) has bounced around --
+  `IN_PROGRESS` -> `FAILED` (2026-09-02 11:54Z, third rejection) ->
+  `IN_PROGRESS` again (16:30Z tick, after Paul's resubmission). Paul has
+  had to alter and resubmit it repeatedly, so
   this polls `campaign_status` and logs any CHANGE (not every check)
   to `tempWork/a2p_status_changes.log`; current known status is always
   in `tempWork/a2p_status_state.json`. Plain cron, no
