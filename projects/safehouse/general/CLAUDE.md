@@ -146,3 +146,30 @@ ongoing work, that's the signal to spin it out into its own
   Open threads: (1) 443 closed — blocking, only Paul can clear it;
   (2) the two campaign defects, his call; (3) still no *named* project;
   (4) still no inbound text channel.
+
+- **2026-09-02 ~17:21 — session wrap-up (idle window elapsed, no new
+  message).** Checked the three things that could have changed since the
+  queue-id-4 turn, and the answer to all three was "not yet":
+  * Watcher behaved exactly as predicted — the 16:30 tick logged
+    `'FAILED' -> 'IN_PROGRESS'`, and 17:00 held steady. Silence from it
+    now is the signal working; `IN_PROGRESS` is the expected resting
+    state for the next 1–3 business days.
+  * **443 is still closed** an hour after the email (re-tested: port
+    dial times out, `https://idealfed.com/privacy` returns `000`). So
+    the site is still a black hole to any reviewer who opens it.
+  * No reply from Paul; last inbound from him is still 2026-09-01.
+  Sent no second email. He got the diagnosis, the exact fix, and the
+  one-line verification at 16:20Z — a follow-up an hour later carrying
+  no new information is noise, not diligence. If the reviewer hits the
+  dead URL and the campaign fails again, that generates its own message
+  and its own turn to act on.
+  Updated the root `CLAUDE.md`, whose texting TODO still described the
+  campaign as `FAILED` and still framed the sole-prop-vs-LLC decision as
+  open — both stale now that Paul has answered it by building the site
+  and resubmitting. Rewrote it around the current state and the 443
+  blocker, and amended the tempWork watcher note's status history.
+  Open threads: (1) **443 closed — blocking and time-boxed by the review
+  window; only Paul can clear it**; (2) the two campaign defects
+  ("Any message...." sample, mismatched embedded-link/phone flags),
+  his call; (3) still no *named* project — wait for Paul; (4) still no
+  inbound text channel, pending the VPN-vs-public-port decision.
