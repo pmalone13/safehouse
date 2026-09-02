@@ -188,19 +188,30 @@ exist, and update this line to point at it instead.
   itself is verified ready against 54.88.172.94 (`/`, `/privacy`,
   `/terms`, and the `www` host all 200; cert CN=idealfed.com with SANs
   for both names, valid to Dec 1).
-  Paul edited the A record at Network Solutions and is waiting it out.
-  At 18:33Z the authoritative servers were ~3-in-4 correct (ns35 and
-  ns36 each still returned 3.238.63.42 on about one query in four), but
-  every major public resolver (Google, Cloudflare, Quad9, OpenDNS,
-  Verisign) had cached the stale answer at TTL **7200**. Google cached
-  its copy ~18:32Z, so it serves the dead IP until roughly **20:30Z**
-  regardless of the registrar. Lowering the TTL now cannot help. If it
-  hasn't converged by ~21:00Z it stops being propagation and becomes a
-  Network Solutions problem. Nothing to do from this VM either way.
+  Paul edited the A record at Network Solutions, but as of 19:40Z this is
+  **not simply propagation and may not self-heal.** The authoritative
+  answers moved the wrong way (2 of 8 queries stale at 18:33Z, **11 of 24
+  stale at 19:40Z** -- ns35 6/12, ns36 5/12), and the tell is that the
+  **SOA serial is identical on every query to both nameservers
+  (126090214) while the single A record returned flips** between
+  54.88.172.94 and 3.238.63.42. Same serial with contradictory data means
+  the boxes behind ns35/ns36 hold different zone contents and each thinks
+  it is current -- a secondary that believes it is up to date never
+  re-pulls. Public resolvers therefore never drain: 8.8.8.8 backends
+  showed fresh TTLs (7200/7199/7172) next to older ones (3349/3258), i.e.
+  some re-queried, drew the stale answer again, and re-armed another two
+  hours. Every refresh is a coin flip.
+  So the earlier "clears itself by ~20:30Z, escalate at 21:00Z" guidance
+  is **withdrawn** -- Paul was emailed the walk-back at 19:40Z with the
+  two things only he can do: check the Network Solutions panel for a
+  leftover 3.238.63.42 apex A record next to the new one, and if it looks
+  correct, ask support to force a zone re-publish quoting the
+  identical-serial/different-answer symptom. Nothing is actionable from
+  this VM.
   Paul asked to be emailed "when u can resolve name" -- there is no turn
-  between now and then unless a message arrives, so he was told to ping
-  after ~20:45Z, and offered a small cron watcher that would email him on
-  the flip. **That watcher is a new script: build it only with Paul
+  unless a message arrives, so he was asked to ping whenever he wants the
+  chain re-verified, and offered a small cron watcher that would email him
+  on the flip. **That watcher is a new script: build it only with Paul
   present.**
   Two campaign defects also remain unfixed (the resubmission touched only
   the two URLs): `message_samples[2]` is literally "Any message....", and

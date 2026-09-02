@@ -222,3 +222,50 @@ ongoing work, that's the signal to spin it out into its own
   Open threads: (1) DNS ripple, ETA ~20:30Z, no action available from here;
   (2) offered DNS watcher awaiting Paul's go-ahead; (3) the two campaign
   defects; (4) still no *named* project; (5) still no inbound text channel.
+
+- **2026-09-02 ~19:40 — session wrap-up (idle window elapsed, no new
+  message).** Not a formality this time: re-checking DNS invalidated the
+  ETA I'd emailed an hour earlier, so this turn sent a second email.
+  * **The ~20:30Z "it clears itself" estimate was wrong.** It assumed the
+    authoritative side was converging. It went the other way: 2 of 8
+    queries stale at 18:33Z, **11 of 24 stale at 19:40Z** (ns35 6/12,
+    ns36 5/12) — hovering near a coin flip an hour later.
+  * **The diagnostic that reframes it:** every response carries exactly
+    one A record, and the SOA serial is **identical on every query to
+    both nameservers (126090214)** while the A answer flips between
+    54.88.172.94 and 3.238.63.42. Same serial, contradictory data ⇒ the
+    machines behind ns35/ns36 serve different zone contents while each
+    believes it's current, and a secondary that thinks it's current has
+    no trigger to re-pull. So there is **no timer on which this
+    necessarily self-heals** — it stopped being "propagation."
+  * **Why the caches never drain:** ten queries to 8.8.8.8 returned a mix
+    of TTLs (7200/7199/7172 next to 3349/3258), i.e. some Google backends
+    re-queried within the last minute, drew the stale answer again, and
+    re-armed another 2 hours. Cloudflare uniformly 7200. Every refresh is
+    a fresh coin flip, so waiting doesn't monotonically improve.
+  * **Emailed Paul** the walk-back plus the two things worth doing *now*
+    instead of waiting for the 21:00Z threshold I'd given him: (1) eyeball
+    the Network Solutions panel for a leftover 3.238.63.42 apex A record
+    beside the new one (I can't see that page); (2) if it looks right,
+    ask support to force a zone re-publish, quoting the symptom verbatim
+    — "SOA serial 126090214 identical on ns35 and ns36 but queries return
+    two different A records" — which is specific enough to get past a
+    tier-1 "wait 48 hours" script.
+  * Confirmed unchanged: no reply from Paul (last inbound is still the
+    18:31Z one that opened this session), server still 200 on `/`,
+    `/privacy`, `/terms` at 54.88.172.94, campaign still `IN_PROGRESS`
+    with empty `errors`, watcher ticking correctly (19:30, no change
+    logged — `IN_PROGRESS` is the expected resting state).
+  * **Precedent worth keeping:** last hour's wrap-up turn deliberately
+    sent nothing, on the grounds that a follow-up carrying no new
+    information is noise. That was right then and wrong now — the
+    difference is that I had put a specific number in front of him
+    (20:30Z) and a specific decision rule (wait until 21:00Z), and both
+    turned out to be wrong. Correcting a prediction someone is acting on
+    is not noise.
+  Open threads: (1) **DNS unresolved and possibly not self-healing** —
+  needs Paul at the registrar, nothing available from this VM; (2) the
+  offered cron watcher still awaiting his go-ahead (new script, requires
+  him present); (3) the two campaign defects ("Any message...." sample,
+  mismatched embedded-link/phone flags); (4) still no *named* project;
+  (5) still no inbound text channel.
