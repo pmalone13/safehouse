@@ -13,6 +13,12 @@
 !/systemd/
 !/systemd/*.service
 
+# ...and idealfed_site/ -- the standalone About/Privacy/Terms Flask app
+# for idealfed.com, unrelated to the assistant itself but living on the
+# same VM.
+!/idealfed_site/
+!/idealfed_site/*.py
+
 # ...and tempWork/ scripts -- runtime state (logs, status files) stays
 # ignored, only the code is tracked. See root CLAUDE.md's "tempWork"
 # section: this whole directory is meant to be short-lived, archived or
