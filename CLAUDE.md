@@ -138,11 +138,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` (the
-catch-all bucket — see step 1 above). If Paul tells you what a real
-project is, create `projects/<name>/CLAUDE.md` (and
-`projects/<name>/<sub>/CLAUDE.md` for a sub-project) if it doesn't
+**Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-03
+when Paul emailed the `alliecar` package (queue id 8). Helping him buy a
+used car for his daughter Allie; dealer visits were scheduled for
+2026-09-04. Read that file first, it carries its own full history.
+
+Two things about it a future turn should know:
+- **Its H1 says "sub-project of finPlan"** but its own folder-structure
+  block says `projects/alliecar/`, and Paul's email called it "alliecar
+  project." Placed flat at `projects/alliecar/` as the two-out-of-three
+  reading and asked Paul which he wants; moving it to
+  `projects/finPlan/alliecar/` later is a `git mv` plus this pointer.
+  Don't invent a `finPlan` project on your own.
+- **Sessions 1-2 of that project ran somewhere with web access. This VM
+  has none.** Don't promise to check listings, recalls or VIN histories
+  from here.
+
+When Paul names a different project, create `projects/<name>/CLAUDE.md`
+(and `projects/<name>/<sub>/CLAUDE.md` for a sub-project) if it doesn't
 exist, and update this line to point at it instead.
+`projects/safehouse/general/CLAUDE.md` remains the catch-all bucket for
+anything that isn't a specific named project — the A2P/idealfed work and
+the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
