@@ -211,7 +211,10 @@ exist, and update this line to point at it instead.
   suggested wording *for him to verify* is fine; filing it is not.
   The watcher is running and will catch the next `IN_PROGRESS` and then
   `APPROVED`; check `tempWork/a2p_status_state.json` if Paul asks about
-  status rather than hitting the Twilio API fresh.
+  status rather than hitting the Twilio API fresh. (It logged
+  `IN_PROGRESS -> FAILED` at 13:30Z on 2026-09-03 and read `FAILED` at
+  14:00Z, so the state file is current — as of then Paul had not yet
+  resubmitted.)
   Red herring: both the rejection email and the API report the campaign
   date as `2026-08-10T13:32:28Z`. That's the original creation date
   echoing through, not a resubmission timestamp.

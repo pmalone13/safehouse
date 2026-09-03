@@ -342,3 +342,40 @@ ongoing work, that's the signal to spin it out into its own
   needs to read the privacy-policy URL field back from console, since I
   can't; (3) the two stale campaign defects; (4) still no *named*
   project; (5) still no inbound text channel.
+
+- **2026-09-03 ~14:17 — session wrap-up (idle window elapsed, no new
+  message).** Checked the four things that could have moved since the
+  queue-id-6 turn; all four confirmed rather than changed anything.
+  * **Watcher did exactly what I predicted, on time**: the 13:30 tick
+    logged `'IN_PROGRESS' -> 'FAILED'`, and 14:00 held at `FAILED`. The
+    email-vs-API lag is now a reliably observed pattern across two
+    rejections (2026-09-02 and today), not a one-off.
+  * **DNS is stable, not a momentary blip** — re-queried an hour later:
+    ns35 and ns36 both 3/3 correct, 8.8.8.8 correct, `/privacy` and
+    `/terms` still 200 over real DNS. Worth having re-checked, given
+    yesterday's convergence turned out to be a coin flip that reversed.
+  * **No reply from Paul** — last inbound from him is still the 18:31Z
+    message on 2026-09-02. My analysis email went out 13:14Z.
+  * Queue clean (id 6 `status=done`, no error), working tree clean at
+    `c90e679`.
+  * **Sent no second email.** Nothing has happened in the hour since that
+    he doesn't already know, and the whole content would be "the watcher
+    logged the transition I told you it would." Deliberately the opposite
+    call from last night's wrap-up, and for the stated reason: that turn
+    emailed because a *specific prediction he was acting on* (the 20:30Z
+    DNS ETA) had turned out wrong. Correcting a live prediction is worth
+    a message; confirming one isn't.
+  * Incidental find while checking the queue: queue id 4's body records
+    "Submission count: 6" and "Fields updated: Privacy policy URL, Terms
+    and conditions URL" — which independently confirms the rejected
+    submission was #6 and that Paul touched *only* those two URL fields,
+    leaving the "Any message...." sample and the embedded-link/phone
+    flags untouched. Also a caution for future turns: reading full rows
+    out of `queue.db` dumps entire raw emails, which is expensive —
+    select specific columns.
+  Open threads unchanged: (1) **campaign needs a rewritten `message_flow`
+  plus a real opt-in URL — Paul's call, and the `/sms-optin` page needs
+  him present**; (2) he still needs to read the privacy-policy URL field
+  back from console, since the API doesn't expose it; (3) the two stale
+  campaign defects; (4) still no *named* project; (5) still no inbound
+  text channel.
