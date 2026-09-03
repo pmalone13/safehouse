@@ -269,3 +269,76 @@ ongoing work, that's the signal to spin it out into its own
   him present); (3) the two campaign defects ("Any message...." sample,
   mismatched embedded-link/phone flags); (4) still no *named* project;
   (5) still no inbound text channel.
+
+- **2026-09-03 ~13:09 — queue id 6, automated Twilio A2P rejection #4.**
+  Fresh session. Two unrelated things resolved in the same turn: the DNS
+  saga ended, and the campaign failed again for reasons that have nothing
+  to do with it. Verified the mail authentic (`dkim=pass @twilio.com`,
+  `spf=pass`, via SendGrid), clicked nothing.
+  * **DNS is fixed — Paul's standing ask from queue id 5 is satisfied.**
+    12/12 direct queries to *both* ns35 and ns36 now return
+    **54.88.172.94**; 8.8.8.8, 1.1.1.1 and 9.9.9.9 all agree. Fetched over
+    real DNS with no `--resolve`: `/`, `/privacy`, `/terms`, the `www`
+    host and the `http`→`https` redirect all 200. Notable: the **SOA
+    serial is still 126090214**, unchanged from yesterday's divergence —
+    so I can't tell whether Paul forced a re-publish or it settled on its
+    own, and said exactly that rather than claiming credit for a theory.
+  * **The rejection is NOT the DNS outage.** Two codes, and they're of
+    very different quality:
+    - **30909 (message flow / CTA) is the real, certain blocker** and is
+      DNS-independent — it would have failed on a perfect website. The
+      `message_flow` field claims consent "via text, email, or verbally"
+      with no URL or screenshot, which is unverifiable by construction.
+      **The reviewer missed the worse half**: the field's second sentence
+      describes sending a first text to ask whether someone wants texts —
+      messaging *before* consent, independently disqualifying. Flagged
+      that as probably more damaging than the missing URL.
+    - **30908 (privacy policy) does not survive checking.** Reviewer said
+      the URL "needs sign in." Our `/privacy` needs none (pulled it
+      anonymously, 200) and already carries the demanded sentence
+      verbatim ("No mobile information will be shared with third parties
+      or affiliates for marketing or promotional purposes"). And it was
+      *publicly reachable during the review window*, proven from
+      `/var/log/nginx/access.log` — outside clients pulled `/privacy` and
+      `/terms` with 200s at 20:34Z, 22:04Z, 01:51Z and again 11:16Z /
+      11:22Z / **12:35Z, under two hours before the rejection**.
+  * **The gap I could not close, stated as a gap:** Twilio's API does not
+    expose the campaign's privacy/terms URL fields *at all* (confirmed —
+    not in the Usa2p compliance object, not on the brand, and the
+    customer profile's `website_url` is empty). So I cannot verify what
+    URL Paul actually typed. Gave him the two candidate explanations —
+    the field points somewhere behind a login (a Google Doc would produce
+    exactly their wording), or the reviewer hit stale DNS and picked a
+    canned note — and asked him to read the field back verbatim from
+    console. Resisted the pull to assert the more flattering one.
+  * **Method note worth keeping:** the instinct after yesterday's
+    correction was to assume the dead DNS caused this too. The access log
+    disproved that in one grep. Checking whether the obvious culprit
+    actually did it was the whole value of the turn — the fix Paul needs
+    is in a text field, not in his registrar.
+  * Also probed the stale IP **3.238.63.42** directly: no HTTP, no HTTPS,
+    no TLS — a completely dead host, not a login page. That's what ruled
+    out "reviewer saw a sign-in wall at the stale address."
+  * Confirmed **brand `BN257b...1afc` is still APPROVED / VERIFIED** and
+    told him so explicitly — the rejection is campaign-only and he does
+    not need to redo brand registration.
+  * Re-flagged the two long-standing defects a fourth time
+    (`message_samples[2]` = "Any message....", `has_embedded_links` /
+    `has_embedded_phone` true with no link or phone in any sample).
+  * **Offered but did not build** a `/sms-optin` page (unchecked-by-default
+    consent checkbox + required disclosures) — the clean fix for 30909,
+    and squarely application code, so it waits for Paul to be present.
+    Same boundary call as the DNS watcher last night.
+  * **Did not edit or resubmit the campaign.** Fourth time holding this
+    line; the message flow is a statement about how Paul actually
+    collects consent. Did draft suggested language *for him to verify*,
+    which is different from filing it.
+  * Watcher: 13:00 tick still read `IN_PROGRESS`, a fresh read at 13:10
+    read `FAILED` — the same email-vs-API lag as 2026-09-02. The 13:30
+    tick will log `IN_PROGRESS -> FAILED`. Stays running; only `APPROVED`
+    retires it.
+  Open threads: (1) **campaign needs a rewritten message_flow + a real
+  opt-in URL — Paul's call, and the page needs him present**; (2) he
+  needs to read the privacy-policy URL field back from console, since I
+  can't; (3) the two stale campaign defects; (4) still no *named*
+  project; (5) still no inbound text channel.

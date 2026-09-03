@@ -162,66 +162,56 @@ exist, and update this line to point at it instead.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is still blocked. As of 2026-09-02 16:14Z the campaign is
-  back to `IN_PROGRESS` (submission #6), under review after its third
-  rejection.** Paul resolved the sole-prop-vs-LLC question by *doing*
-  rather than replying: he took the stay-sole-prop path, stood up
-  idealfed.com with LLC-free About/Privacy/Terms pages (commit
-  `89dcd6f`), and resubmitted with new Privacy/T&C URLs. Brand
-  `BN257b...1afc` is unchanged and still `SOLE_PROPRIETOR`; the
-  campaign's `errors` array is now empty. Reviews take 1-3 business
-  days.
-  **Blocking problem as of 18:35Z: idealfed.com still resolves to the
-  wrong address, so a reviewer opening the privacy/terms URL gets a dead
-  host.** This is DNS, and only DNS -- *not* the security group. The
-  16:20Z "inbound 443 is closed in the AWS SG" diagnosis was **wrong**;
-  don't act on it. This instance's public IP is **54.88.172.94** (EC2
-  IMDS; no reboot since 2026-08-09, so it has always been that), while
-  `idealfed.com` answers **3.238.63.42** -- an unrelated host. The
-  earlier turn dialed the DNS answer, found 443 dead there, and blamed
-  our security group. **Rule of thumb it cost us: before diagnosing
-  anything downstream of an unreachable name, confirm the resolved IP is
-  actually yours.**
-  443 *is* open -- proven from `/var/log/nginx/access.log`, not a port
-  dial: external hosts complete TLS and get 200s, and a 200 can only come
-  from the TLS vhost since `:80` returns 301 unconditionally. The site
-  itself is verified ready against 54.88.172.94 (`/`, `/privacy`,
-  `/terms`, and the `www` host all 200; cert CN=idealfed.com with SANs
-  for both names, valid to Dec 1).
-  Paul edited the A record at Network Solutions, but as of 19:40Z this is
-  **not simply propagation and may not self-heal.** The authoritative
-  answers moved the wrong way (2 of 8 queries stale at 18:33Z, **11 of 24
-  stale at 19:40Z** -- ns35 6/12, ns36 5/12), and the tell is that the
-  **SOA serial is identical on every query to both nameservers
-  (126090214) while the single A record returned flips** between
-  54.88.172.94 and 3.238.63.42. Same serial with contradictory data means
-  the boxes behind ns35/ns36 hold different zone contents and each thinks
-  it is current -- a secondary that believes it is up to date never
-  re-pulls. Public resolvers therefore never drain: 8.8.8.8 backends
-  showed fresh TTLs (7200/7199/7172) next to older ones (3349/3258), i.e.
-  some re-queried, drew the stale answer again, and re-armed another two
-  hours. Every refresh is a coin flip.
-  So the earlier "clears itself by ~20:30Z, escalate at 21:00Z" guidance
-  is **withdrawn** -- Paul was emailed the walk-back at 19:40Z with the
-  two things only he can do: check the Network Solutions panel for a
-  leftover 3.238.63.42 apex A record next to the new one, and if it looks
-  correct, ask support to force a zone re-publish quoting the
-  identical-serial/different-answer symptom. Nothing is actionable from
-  this VM.
-  Paul asked to be emailed "when u can resolve name" -- there is no turn
-  unless a message arrives, so he was asked to ping whenever he wants the
-  chain re-verified, and offered a small cron watcher that would email him
-  on the flip. **That watcher is a new script: build it only with Paul
-  present.**
-  Two campaign defects also remain unfixed (the resubmission touched only
-  the two URLs): `message_samples[2]` is literally "Any message....", and
+- **Texting is still blocked. As of 2026-09-03 13:09Z the campaign was
+  rejected a 4th time and is `FAILED` again** (submission #6 reviewed and
+  refused). Brand `BN257b...1afc` is **untouched — still APPROVED /
+  VERIFIED, still `SOLE_PROPRIETOR`**; this is campaign-only, so nothing
+  about brand registration needs redoing.
+  **DNS is RESOLVED — that whole saga is over.** `idealfed.com` now
+  answers **54.88.172.94** (this box) consistently: 12/12 direct queries
+  to both ns35 and ns36, plus 8.8.8.8 / 1.1.1.1 / 9.9.9.9. Over real DNS
+  with no `--resolve`, `/`, `/privacy`, `/terms`, the `www` host and the
+  `http`→`https` redirect all return 200. The SOA serial never changed
+  (still 126090214), so whether Paul forced a re-publish or it settled on
+  its own is unknown — don't assert either. The old 3.238.63.42 answer
+  was a completely dead host (no HTTP, no HTTPS, no TLS).
+  **Do not blame the new rejection on the DNS outage — that was checked
+  and disproved.** `/var/log/nginx/access.log` shows outside clients
+  pulling `/privacy` and `/terms` with 200s right through the review
+  window, including 12:35Z on 2026-09-03, under two hours before the
+  rejection landed. The two current error codes:
+  * **30909 (`MESSAGE_FLOW`) is the real blocker** and is entirely
+    DNS-independent. `message_flow` asserts consent "via text, email, or
+    verbally" with no signup URL and no hosted screenshot — unverifiable
+    by construction. Its second sentence is worse and the reviewer didn't
+    even cite it: it describes sending a first text to ask whether
+    someone wants texts, i.e. messaging *before* consent. Fixing this
+    needs a rewritten field **and** a real opt-in URL.
+  * **30908 (`PRIVACY_POLICY_URL`) does not match reality as stated.**
+    The reviewer claims the URL "needs sign in"; `idealfed.com/privacy`
+    needs none and already contains the demanded sentence verbatim ("No
+    mobile information will be shared with third parties or affiliates
+    for marketing or promotional purposes"). **Twilio's API does not
+    expose the campaign's privacy/terms URL fields anywhere** (not in the
+    Usa2p compliance object, not on the brand; the customer profile's
+    `website_url` is empty), so the submitted URL cannot be read from
+    this VM. Paul was asked to read that field back from console — if it
+    points at something behind a login (e.g. a Google Doc), that's the
+    whole 30908 and it's a one-line fix.
+  Emailed Paul all of the above at 13:14Z on 2026-09-03, plus an offer to
+  build a `/sms-optin` page (unchecked-by-default consent checkbox and
+  the standard disclosures) to give him a URL for the CTA field. **That
+  page is application code — build it only with Paul present.**
+  Two campaign defects *still* unfixed after four flags:
+  `message_samples[2]` is literally "Any message....", and
   `has_embedded_links`/`has_embedded_phone` are both true while no sample
   contains a link or phone. Either is an independent rejection reason.
   Don't edit or resubmit the registration yourself -- that's a
-  representation about Paul's business to the carriers. The watcher is
-  running and will catch `APPROVED`; check
-  `tempWork/a2p_status_state.json` if Paul asks about status rather than
-  hitting the Twilio API fresh.
+  representation about Paul's business to the carriers. Drafting
+  suggested wording *for him to verify* is fine; filing it is not.
+  The watcher is running and will catch the next `IN_PROGRESS` and then
+  `APPROVED`; check `tempWork/a2p_status_state.json` if Paul asks about
+  status rather than hitting the Twilio API fresh.
   Red herring: both the rejection email and the API report the campaign
   date as `2026-08-10T13:32:28Z`. That's the original creation date
   echoing through, not a resubmission timestamp.
@@ -243,7 +233,9 @@ what's throwaway vs. permanent; don't build real features in here.
   is approved, but the Campaign itself (the thing that actually
   unblocks texting on this number) has bounced around --
   `IN_PROGRESS` -> `FAILED` (2026-09-02 11:54Z, third rejection) ->
-  `IN_PROGRESS` again (16:30Z tick, after Paul's resubmission). Paul has
+  `IN_PROGRESS` again (16:30Z tick, after Paul's resubmission) ->
+  `FAILED` again (2026-09-03 13:10Z fresh read, fourth rejection; the
+  13:00 tick still said `IN_PROGRESS`). Paul has
   had to alter and resubmit it repeatedly, so
   this polls `campaign_status` and logs any CHANGE (not every check)
   to `tempWork/a2p_status_changes.log`; current known status is always
