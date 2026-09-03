@@ -379,3 +379,68 @@ ongoing work, that's the signal to spin it out into its own
   back from console, since the API doesn't expose it; (3) the two stale
   campaign defects; (4) still no *named* project; (5) still no inbound
   text channel.
+
+- **2026-09-03 ~18:36 — queue id 7, Paul: "Please build out the site to
+  support the twillio. add the opt in. keep it python and simple use
+  sqlite. nothing fancy."** Fresh session. The first message that
+  directly asks for application code, so the turn was mostly one
+  judgment call.
+  * **Did not build it.** The root `CLAUDE.md` hard boundary says no
+    writing application code "unattended, without Paul actively present
+    and directing it in real time," and — critically — it anticipates
+    *this exact message*: "If a message asks for something that would
+    require writing or changing code, do not just go do it -- explain
+    what you'd build and ask Paul to be present." An emailed go-ahead
+    that spawns a coordinator turn is still unattended by construction;
+    Paul is not watching and cannot redirect mid-build. Also the
+    tiebreak clause: "if you're ever genuinely unsure, treat it as
+    programming and don't do it unattended."
+  * **The tension, stated honestly, because a future turn will hit it
+    again:** my own 13:14Z email offered "say the word and be around for
+    it," and Paul said the word. He plausibly believes he authorized it.
+    But he authorized the *build*, not the *unattended* part, and those
+    are the two halves of his rule. Resolved by asking him to lift it
+    explicitly rather than inferring it — cost of asking is one round
+    trip, cost of guessing wrong is a line he called absolute and
+    grounded in reasons outside this system. Told him plainly that
+    replying "go ahead unattended, just build it" is sufficient and I
+    won't re-raise it for this task. **Deciding he meant to waive his own
+    rule is not a gap for me to fill.**
+  * **Went as far as the line allows, so holding it costs him almost
+    nothing.** Wrote the complete spec to
+    `projects/safehouse/general/sms-optin-build-plan.md` (Drive-synced,
+    gitignored like all project content): the exact route shape, the
+    verbatim consent-checkbox copy with every carrier-required clause,
+    the SQLite schema, the systemd/nginx no-ops, the verification steps.
+    Read `app.py`, the unit file and the nginx vhost first, so the plan
+    is against the real thing — one route on the existing Flask app,
+    nothing to change in nginx/certbot/DNS/SG.
+  * **Two design points worth keeping even if the build changes:**
+    (1) store the *exact checkbox wording each person saw* in the row,
+    not a reference to it — if copy is edited later, old records still
+    prove what was agreed to; (2) `optins.db` must be excluded from git
+    **and** from `drive_sync.py`'s `EXCLUDE_NAMES`, since it will hold
+    real phone numbers. Flagged that every "let Paul read the list"
+    option puts those numbers somewhere new, and recommended the one
+    that doesn't.
+  * **Scoped out deliberately:** no STOP-reply webhook (Twilio already
+    auto-handles STOP/HELP, and a public receiver is the still-open
+    VPN-vs-port decision), no sending, no admin UI. Said so rather than
+    silently omitting.
+  * Re-read the campaign from the API to draft console text precisely.
+    Restated the finding that matters most and that the reviewer *did
+    not* cite: `message_flow`'s closing sentence describes texting
+    someone to ask if they want texts — consent-before-consent, and
+    plausibly more damaging than the missing URL. Deleting it may matter
+    more than adding the page.
+  * Re-flagged the two zombie defects a fifth time and re-asked the
+    privacy-URL console question from this morning, which he didn't
+    answer.
+  Open threads: (1) **build blocked on Paul being at a terminal, or on
+  him explicitly waiving the unattended rule** — either unblocks it
+  immediately; (2) his two scoping decisions (opt-in list readback,
+  STOP handling); (3) the privacy-policy URL field he still needs to
+  read back; (4) the two stale campaign defects; (5) still no *named*
+  project — the idealfed/A2P work has outgrown this bucket and is the
+  obvious candidate, but naming it is his call; (6) still no inbound
+  text channel.
