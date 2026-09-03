@@ -513,3 +513,47 @@ ongoing work, that's the signal to spin it out into its own
   campaign defects, and no inbound text channel. New cross-cutting one:
   **`drive_sync.py` cannot mirror binary files** — worth fixing next
   time Paul is at a terminal.
+
+- **2026-09-03 ~20:05 — session wrap-up (idle window elapsed, no new
+  message).** Session covered queue ids 7 and 8. Checked the usual four
+  things, then did one piece of real verification rather than treating
+  this as a formality.
+  * **Verified the `drive_sync.py` binary-corruption claim instead of
+    leaving it as inference.** In the queue-id-8 turn I told Paul his
+    email was "one of only two intact copies" of the strategy .docx —
+    a consequential statement I had derived by *reading* line 135, not
+    by testing. Pulled the file back off Drive: 53,503 bytes vs 31,060
+    local (~72% inflation, each bad byte becoming a 3-byte U+FFFD),
+    **11,425 replacement characters**, and `BadZipFile: Bad offset for
+    central directory` on open. Claim confirmed. Also checked the trap:
+    the leading `PK\x03\x04` survives because it's valid ASCII, so the
+    file looks healthy in a Drive listing and only fails when opened.
+  * **Also verified the workaround actually works**, which was the part
+    that could have quietly failed and left the content with no backup
+    at all: both `Dads_Used_Car_Buying_Strategy.md` and the project
+    `CLAUDE.md` are **byte-identical** on Drive. So the extraction is a
+    sound copy and the content is safe.
+  * **Promoted the defect from a buried log entry to the root file's
+    TODO section**, with the measurements and the reason it's worse
+    than it sounds (projects/ is gitignored *because* Drive is the
+    durable copy, so binaries have no durable copy anywhere). A future
+    turn that receives a binary attachment needs to hit this before it
+    trusts the mirror, not after.
+  * **Sent no email.** Both checks *confirmed* what I already told Paul
+    at 19:05Z; nothing changed and nothing was wrong. This is the same
+    rule applied at the 14:17 wrap-up and deliberately the opposite of
+    the 2026-09-02 19:40 one: correcting a live prediction someone is
+    acting on is worth a message, confirming one is not. Paul is taking
+    Allie to dealers tomorrow morning — the flags he needs are already
+    in his inbox.
+  * No reply from Paul to either email (last inbound is still the 19:01Z
+    alliecar message). Queue ids 7 and 8 both `done`, no errors, working
+    tree clean at `ad409b1`. Watcher read `FAILED` at 20:00 — the
+    expected resting state until he resubmits, so silence is correct.
+  Open threads carried forward: (1) `/sms-optin` build — needs Paul at a
+  terminal or an explicit waiver of the unattended rule; (2) his two
+  scoping decisions on that page; (3) the privacy-policy URL readback he
+  still owes; (4) the two stale campaign defects; (5) no inbound text
+  channel; (6) **`drive_sync.py` binary handling — now documented in the
+  root TODO, needs him present to fix**; (7) the `finPlan` nesting
+  question for alliecar.

@@ -109,7 +109,16 @@ projects/alliecar/
 
 **Note on the .docx:** `drive_sync.py` reads every file as UTF-8 text and
 uploads it as `text/plain`, so the .docx arrives on the Drive mirror
-byte-mangled and will not open from there. Everything under `projects/`
+byte-mangled and will not open from there. **Verified empirically, not
+just inferred from the code** (2026-09-03 20:0xZ): the Drive copy is
+53,503 bytes against 31,060 local — inflated ~72% because each invalid
+byte becomes a 3-byte U+FFFD — contains **11,425 replacement
+characters**, and fails to open with `BadZipFile: Bad offset for central
+directory`. Its first bytes (`PK\x03\x04`) do survive, so it *looks*
+plausible in a file listing; don't be fooled by that. The two text files
+in this folder were checked the same way and are **byte-identical** on
+Drive, so the `.md` extraction genuinely is a sound backup of the
+content. Everything under `projects/`
 is gitignored, so Drive is meant to be the durable copy — which means the
 only intact originals of the .docx are Paul's own email and this VM's
 local disk. The `.md` extraction exists so the *content* is durably

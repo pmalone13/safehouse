@@ -163,6 +163,24 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **`drive_sync.py` silently corrupts binary files.** Line 135 reads
+  every file with `read_text(encoding="utf-8", errors="replace")` and
+  uploads it as `text/plain`, so any non-text file (.docx, .pdf, images,
+  .zip) lands on Drive unopenable. It does **not** error — the sync
+  reports success. Verified 2026-09-03 against
+  `projects/alliecar/Dads_Used_Car_Buying_Strategy.docx`: 31,060 bytes
+  local vs 53,503 on Drive, 11,425 U+FFFD replacement chars,
+  `BadZipFile` on open. The header bytes survive, so it looks fine in a
+  Drive listing.
+  **Why this is worse than it sounds:** everything under `projects/` is
+  gitignored *on purpose* because "Drive is the durable copy" — so for
+  binaries there is no durable copy anywhere, only local disk. If Paul
+  sends a binary, extract its content to a text sibling (see the
+  alliecar `.md`) and say so, rather than assuming the mirror has it.
+  Fixing the sync to do a real binary upload is a small change to
+  `drive_sync.py` and `google_client.create_file()` — **application
+  code, so it needs Paul present.** Not yet done.
+
 - **Claude auth is currently a metered Anthropic API key** (funded with
   a small test credit, under pmalone13's console.anthropic.com account),
   not Paul's Claude subscription. Paul wants to move to `claude
