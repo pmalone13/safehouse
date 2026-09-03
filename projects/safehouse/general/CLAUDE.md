@@ -444,3 +444,72 @@ ongoing work, that's the signal to spin it out into its own
   project — the idealfed/A2P work has outgrown this bucket and is the
   obvious candidate, but naming it is his call; (6) still no inbound
   text channel.
+
+- **2026-09-03 ~19:01 — queue id 8, Paul: "alliecar project / see attached
+  to add content to project."** Resumed session (same one as queue id 7).
+  First *named* project finally arrives, so the headline is that
+  `projects/` is no longer empty of real projects and the root pointer
+  now aims at `projects/alliecar/CLAUDE.md` instead of this bucket.
+  Detailed history lives in that file; only the cross-cutting bits are
+  here.
+  * Attachment was `alliecar_package.zip` (32KB). Verified the mail
+    genuinely from Paul (`dkim=pass @gmail.com`, `spf=pass`,
+    `dmarc=pass`) before touching it, listed the archive and checked for
+    path traversal *before* extracting, extracted to `/tmp` first, and
+    only then copied into the repo — md5-verified the `.docx` landed
+    byte-identical. Same verify-then-act shape as the Google and Twilio
+    notifications.
+  * Gotcha for future turns: `unzip` is **not installed** on this box.
+    Use Python's `zipfile`. Also, the queue table has no Gmail message
+    id (columns are `id, channel, source, body, received_at, status,
+    claimed_at, error`), so to get at an attachment you have to find the
+    message in Gmail by subject/sender. And don't print an
+    `attachmentId` truncated — the full token is required.
+  * **Real infrastructure defect found:** `drive_sync.py:135` does
+    `read_text(encoding="utf-8", errors="replace")` and uploads as
+    `text/plain`. Binary files therefore arrive on Drive **silently
+    corrupted** — not a crash, just an unopenable file. This matters
+    beyond one .docx: everything under `projects/` is gitignored *by
+    design* because "Drive is the durable copy," so the mirror is the
+    only backup, and it cannot carry binaries. Worked around by
+    extracting the doc's full text to a sibling `.md` (which mirrors
+    fine) and labelling both files. **Did not fix `drive_sync.py`** —
+    application code, needs Paul present. Told him plainly that his
+    email is currently one of only two intact copies of that .docx.
+  * **Substantive work, not just filing.** Read the strategy doc and
+    checked the shortlist against it: two of the six target cars
+    (#4 at 108,078 and #6 at 108,894) exceed the doc's own 106,000-mile
+    MUST HAVE cap, and #6 is both the closest dealer and a flagged
+    standout. The doc had explicitly rejected a Nissan Versa for missing
+    that cap by ~5,000 miles ("We don't change our rules just because a
+    particular car is available"). The $7K→$13K budget change was made
+    deliberately with a stated rationale; the mileage cap is being
+    exceeded case-by-case *without* one. Flagged it as a decision to
+    make tonight rather than on the lot — explicitly not as "don't buy
+    #6." Also ran the remaining-life math (#1 finishes ~151,200 vs #6
+    ~168,900, and #1 is $109 cheaper) and gave per-VIN questions for the
+    dealers (CVT extended-warranty status, the FB25 oil-consumption
+    settlement, CVT fluid history).
+  * **Stated a capability limit rather than papering over it:** sessions
+    1–2 of alliecar ran somewhere with live web access; this VM has
+    none. Told Paul directly that I cannot confirm the six listings are
+    still live, check recalls, or pull VIN histories, and that this is
+    now his or Allie's job in a browser. Recorded the same warning in
+    the project file and the root pointer so a future turn doesn't
+    promise it.
+  * **Ambiguity surfaced, not guessed away:** the imported file's H1
+    says "sub-project of finPlan" while its own folder-structure block
+    says `projects/alliecar/` and Paul's email said "alliecar project."
+    Went flat at `projects/alliecar/` as the two-of-three reading, told
+    him it's a two-minute move, and deliberately did **not** invent a
+    `finPlan` parent project he never described.
+  * Left the A2P/idealfed threads in this bucket where they belong, and
+    added one closing line to the email that the `/sms-optin` build is
+    still waiting on him — without re-arguing it, since the car is
+    plainly today's priority.
+  Open threads for this bucket are unchanged from queue id 7: the
+  opt-in build (needs him present or an explicit waiver), his two
+  scoping decisions, the privacy-policy URL readback, the two stale
+  campaign defects, and no inbound text channel. New cross-cutting one:
+  **`drive_sync.py` cannot mirror binary files** — worth fixing next
+  time Paul is at a terminal.
