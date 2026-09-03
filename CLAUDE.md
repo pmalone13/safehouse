@@ -140,8 +140,14 @@ a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-03
 when Paul emailed the `alliecar` package (queue id 8). Helping him buy a
-used car for his daughter Allie; dealer visits were scheduled for
-2026-09-04. Read that file first, it carries its own full history.
+used car for his daughter Allie; dealer visits are on for the morning of
+2026-09-04, **starting at Farrish Subaru** (car #6) per Paul's "stand by"
+email (queue id 9, 23:45Z). Read that file first, it carries its own full
+history. **If a message arrives from Paul on 2026-09-04, assume it is from
+a dealer lot and time-sensitive** — he may send a VIN, mileage or an
+asking price and want it checked against his own criteria fast. There is
+no web access here, so that means arithmetic and rule-checking against the
+recorded shortlist, not lookups.
 
 Two things about it a future turn should know:
 - **Its H1 says "sub-project of finPlan"** but its own folder-structure
