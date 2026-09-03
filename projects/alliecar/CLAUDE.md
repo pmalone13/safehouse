@@ -183,3 +183,38 @@ reasoning over the doc and the shortlist as recorded, not fresh lookups.
 
 Nothing bought, nothing changed about the plan. Next action is unchanged:
 call ahead, then visit.
+
+## Session 3, turn 2 (2026-09-03 23:46Z): Paul's plan for tomorrow
+
+Paul replied (queue id 9): *"Great. We will start at ferish Subaru
+tomorrow Morning. Stand by."*
+
+- **Plan for 2026-09-04 is set: Farrish Subaru first**, i.e. **car #6**
+  (2014 Forester 2.5i Touring, 108,894 mi, $11,499, Fairfax, 3 mi).
+- He read the three flags and is going to Farrish anyway. **The mileage-cap
+  question (flag 1) is his call and he has now effectively made it by
+  choosing the starting point** — do not re-litigate it with him. It was
+  raised once, clearly, in writing; that was the job.
+- **Neither of my two open questions was answered:** (a) whether
+  `alliecar` should be nested under a `finPlan` project or stay flat at
+  `projects/alliecar/`, and (b) the `/sms-optin` build. Both still open;
+  neither blocks tomorrow. Don't chase them while the car is live.
+
+Replied with one thing that is new and actionable rather than a restatement:
+**Farrish is the only genuine Subaru franchise on the shortlist, so its
+service desk can pull Subaru corporate records by VIN for _any_ Subaru,
+not just its own inventory.** So bringing the other five VINs to that one
+stop gets CVT extended-coverage status, oil-consumption test/repair
+history, Subaru-network service history and open recalls for the whole
+list in one visit, free. Also pushed two #6-specific items: whether the
+CVT fluid has ever been changed, and the cost of a CPO conversion (only a
+franchise can CPO its own car — meaningful on a 108K-mile car).
+
+Told him email (`tedassistent@gmail.com`) is the only live channel
+tomorrow — no web access here, texting still blocked — and that if he
+sends mileage/VIN/asking price from the lot I can run it against his own
+criteria within a couple of minutes. **That is the realistic live role
+tomorrow: arithmetic and criteria-checking on numbers he supplies, not
+lookups.**
+
+Status: standing by. Nothing bought, nothing changed about the plan.
