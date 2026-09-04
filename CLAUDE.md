@@ -290,9 +290,11 @@ the pending `/sms-optin` build still live there.
   at 01:25Z read `IN_PROGRESS` — the documented email-vs-API lag, running
   the other direction this time. The state file was **left alone on
   purpose** so the watcher would log its own `FAILED -> IN_PROGRESS`
-  transition rather than have it silently overwritten. No change means no
-  news here; don't re-read the Twilio API just to confirm what the
-  watcher already polled.)
+  transition rather than have it silently overwritten — **and it did, at
+  01:30:02Z; the state file has read `IN_PROGRESS` on every tick since,
+  so the watcher is confirmed healthy and correctly parked on #7.** No
+  change means no news here; don't re-read the Twilio API just to confirm
+  what the watcher already polled.)
   Red herring: both the rejection email and the API report the campaign
   date as `2026-08-10T13:32:28Z`. That's the original creation date
   echoing through, not a resubmission timestamp.
