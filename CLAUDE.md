@@ -140,20 +140,28 @@ a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-03
 when Paul emailed the `alliecar` package (queue id 8). Helping him buy a
-used car for his daughter Allie; dealer visits are on for the morning of
+used car for his daughter Allie; dealer visits were set for the morning of
 2026-09-04, **starting at Farrish Subaru** (car #6) per Paul's "stand by"
 email (queue id 9, 23:45Z). Read that file first, it carries its own full
-history. **If a message arrives from Paul on 2026-09-04, assume it is from
-a dealer lot and time-sensitive** — he may send a VIN, mileage or an
-asking price and want it checked against his own criteria fast. There is
-no web access here, so that means arithmetic and rule-checking against the
-recorded shortlist, not lookups.
+history. There is no web access here, so any car question means arithmetic
+and rule-checking against the recorded shortlist, not lookups.
 
-**Watch the clock on this one:** these logs are UTC and Paul is in
-Fairfax, VA (Eastern, UTC-4). His "tomorrow morning" is the morning of
-**2026-09-04 local**, i.e. roughly **12:00-16:00Z** that day. A turn
-waking at, say, 02:00Z on 2026-09-04 has not missed anything — it is
-still the evening of the 3rd where Paul is.
+**The visit window has passed with no word — don't act on the old
+"assume it's from a dealer lot" guidance.** As of **2026-09-04 18:17Z**
+(2:17pm Eastern) the morning window (~12:00-16:00Z) is over and Paul's
+last inbound is *still* the 2026-09-03 23:45Z "stand by." Verified by
+inbox read, not assumed. So the visits either happened and he hasn't
+reported back yet, or they slipped. **Draw no conclusion about which.**
+Practical effect for the next turn: his next message is more likely a
+debrief (what he saw, what he's leaning toward) or a reply to the A2P
+email than a live from-the-lot ping — but a lot ping is still entirely
+possible if visits ran long or resume over the weekend. Read what he
+actually sends rather than pattern-matching to either.
+
+**Standing clock note:** these logs are UTC and Paul is in Fairfax, VA
+(Eastern, UTC-4). Convert before concluding anything about timing —
+"tomorrow morning" from him means ~12:00-16:00Z the next day, and an
+early-UTC turn is still the previous evening where he is.
 
 Two things about it a future turn should know:
 - **Its H1 says "sub-project of finPlan"** but its own folder-structure
@@ -279,11 +287,15 @@ the pending `/sms-optin` build still live there.
   representation about Paul's business to the carriers. Drafting
   suggested wording *for him to verify* is fine; filing it is not.
   Emailed Paul all of the above at 17:15Z on 2026-09-04.
-  The watcher is running and will log the `IN_PROGRESS -> FAILED`
-  transition on its next tick (its 17:00Z tick still read `IN_PROGRESS`;
-  the fresh 17:12Z read is the reconciliation, and the state file was
-  **left alone on purpose** so the watcher logs its own transition —
-  same pattern as 2026-09-04 01:30Z, which worked). Check
+  The watcher **did** log the `IN_PROGRESS -> FAILED` transition itself,
+  at **17:30:01Z**, and the 18:00Z tick reads `FAILED` — so it is
+  confirmed healthy and correctly parked on the fifth rejection. (Its
+  17:00Z tick still read `IN_PROGRESS`; the fresh 17:12Z read was the
+  reconciliation, and the state file was **left alone on purpose** so the
+  watcher would log its own transition rather than have it silently
+  overwritten — same pattern as 2026-09-04 01:30Z, and it worked again.)
+  `FAILED` is the expected resting state until Paul resubmits, so silence
+  from the watcher now is the signal working, not broken. Check
   `tempWork/a2p_status_state.json` if Paul asks about status rather than
   hitting the Twilio API fresh.
   Red herring: both the rejection email and the API report the campaign

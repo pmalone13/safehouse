@@ -658,3 +658,35 @@ ongoing work, that's the signal to spin it out into its own
     rejections in, passing the reviewer's test beats winning the
     argument. Worth keeping so a later turn doesn't mistake the
     concession for an oversight.
+
+- **2026-09-04 ~18:17Z — session wrap-up (idle window elapsed, no new
+  message).** One substantive turn this session (queue id 11, above).
+  Nothing pending: tree clean at `b01b60b`, mirror current from that
+  turn's checkpoint. The wrap-up work was verification and two staleness
+  fixes, not filler:
+  * **Confirmed the one prediction I'd left open.** The previous turn
+    deliberately did not overwrite `a2p_status_state.json` so the watcher
+    would log its own transition. It did — `'IN_PROGRESS' -> 'FAILED'` at
+    **17:30:01Z**, with the 18:00Z tick steady on `FAILED`. Watcher is
+    healthy and parked on rejection #5. Recorded as confirmed rather than
+    left as a prediction, so a later turn doesn't have to re-derive it.
+  * **Killed stale time-sensitive guidance in the root file.** It told
+    the next turn to assume any 2026-09-04 message from Paul was a
+    live-from-the-dealer-lot ping. The morning window (~12:00-16:00Z)
+    has now passed and an inbox read confirms his last inbound is *still*
+    the 2026-09-03 23:45Z "stand by" — nothing today. Rewrote the pointer
+    to say the window passed with no word, that the next message is more
+    likely a debrief or an A2P reply, and explicitly **not** to conclude
+    whether the visits happened or slipped. A confident stale instruction
+    is worse than none; this is the second time this project has needed
+    that same correction.
+  * **No email sent.** The A2P situation is fully covered by the 17:15Z
+    email (sent ~1hr ago), Paul hasn't replied, and there is nothing new
+    to tell him — the watcher confirming a transition I already reported
+    is not news. Chasing him for a reply an hour later, on a Friday
+    afternoon when he was out car shopping, would be nagging.
+  Open threads for the next session: (1) the `/sms-optin` fix is ~20
+  lines and **blocked on Paul being present** — it is the only thing
+  standing between here and working SMS; (2) the two cosmetic campaign
+  defects to clean during that same edit; (3) alliecar debrief pending;
+  (4) still no inbound text channel (VPN-vs-public-port undecided).
