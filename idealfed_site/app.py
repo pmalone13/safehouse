@@ -106,8 +106,7 @@ def privacy():
     body = """
 <h1>Privacy Policy</h1>
 <p><em>Last updated: September 2026</em></p>
-<p>This policy covers information collected through
-idealfed.com and any SMS text messaging service operated by Paul Malone.</p>
+<p>This Privacy Policy is issued by <strong>Paul Malone</strong> ("Paul Malone," "we," "us," or "our") and applies to idealfed.com and any SMS text messaging service operated by Paul Malone.</p>
 
 <h2>Information Collected</h2>
 <p>When you interact with our SMS service, we collect your phone number
@@ -143,6 +142,7 @@ def terms():
     body = """
 <h1>Terms of Use</h1>
 <p><em>Last updated: September 2026</em></p>
+<p>These Terms of Use govern your use of services provided by <strong>Paul Malone</strong> ("Paul Malone," "we," "us," or "our"), including idealfed.com and any SMS messaging services.</p>
 
 <h2>SMS Messaging Program</h2>
 <p>By providing your phone number and opting in, you consent to receive
