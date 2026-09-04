@@ -209,11 +209,18 @@ the pending `/sms-optin` build still live there.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is still blocked. As of 2026-09-03 13:09Z the campaign was
-  rejected a 4th time and is `FAILED` again** (submission #6 reviewed and
-  refused). Brand `BN257b...1afc` is **untouched — still APPROVED /
-  VERIFIED, still `SOLE_PROPRIETOR`**; this is campaign-only, so nothing
-  about brand registration needs redoing.
+- **Texting is still blocked, but the campaign is back under review.
+  Paul resubmitted at 2026-09-04 01:24Z — submission #7, `PENDING_REVIEW`
+  per the email and `IN_PROGRESS` per a fresh API read at 01:25Z.**
+  Fields he updated: opt-in flow description, privacy policy URL, terms
+  URL. Twilio says most resubmissions are reviewed in 1-3 business days,
+  so expect an outcome around **2026-09-05 to 2026-09-09**. Do not tell
+  Paul it is still `FAILED`. Brand `BN257b...1afc` is **untouched —
+  still APPROVED / VERIFIED, still `SOLE_PROPRIETOR`**; every round of
+  this has been campaign-only, so nothing about brand registration needs
+  redoing.
+  (Prior round for context: rejected a 4th time at 2026-09-03 13:09Z,
+  submission #6, on errors 30909 + 30908 — both of which #7 attacks.)
   **DNS is RESOLVED — that whole saga is over.** `idealfed.com` now
   answers **54.88.172.94** (this box) consistently: 12/12 direct queries
   to both ns35 and ns36, plus 8.8.8.8 / 1.1.1.1 / 9.9.9.9. Over real DNS
@@ -227,15 +234,26 @@ the pending `/sms-optin` build still live there.
   pulling `/privacy` and `/terms` with 200s right through the review
   window, including 12:35Z on 2026-09-03, under two hours before the
   rejection landed. The two current error codes:
-  * **30909 (`MESSAGE_FLOW`) is the real blocker** and is entirely
-    DNS-independent. `message_flow` asserts consent "via text, email, or
-    verbally" with no signup URL and no hosted screenshot — unverifiable
-    by construction. Its second sentence is worse and the reviewer didn't
-    even cite it: it describes sending a first text to ask whether
-    someone wants texts, i.e. messaging *before* consent. Fixing this
-    needs a rewritten field **and** a real opt-in URL.
-  * **30908 (`PRIVACY_POLICY_URL`) does not match reality as stated.**
-    The reviewer claims the URL "needs sign in"; `idealfed.com/privacy`
+  * **30909 (`MESSAGE_FLOW`) was the real blocker — and #7 appears to
+    have genuinely fixed it.** The old field asserted consent "via text,
+    email, or verbally" with no signup URL, and its second sentence
+    described texting people to ask whether they wanted texts (messaging
+    *before* consent). The rewritten field now points at
+    `https://idealfed.com/sms-optin` — the page Paul built in commit
+    `a5aab13` — and says no message is sent before consent is recorded.
+    **Verified from this VM on 2026-09-04, all five claims hold:** the
+    page returns 200 over real DNS with no login; the consent checkbox
+    carries no `checked` attribute (unchecked by default, as asserted);
+    the checkbox wording on the page matches the campaign's quoted text
+    verbatim; `idealfed_site/app.py`'s POST handler really does persist
+    name, E.164 number, consent text, a UTC timestamp, IP and UA to
+    sqlite, so "consent is stored with a timestamp" is true; and
+    `/privacy` still carries the required sentence. If a future turn
+    needs to re-check this, render the page to text first — see the
+    grep near-miss logged in `projects/safehouse/general/CLAUDE.md`.
+  * **30908 (`PRIVACY_POLICY_URL`) never matched reality as stated, and
+    #7 resubmitted the URL field anyway, which should settle it.**
+    The reviewer claimed the URL "needs sign in"; `idealfed.com/privacy`
     needs none and already contains the demanded sentence verbatim ("No
     mobile information will be shared with third parties or affiliates
     for marketing or promotional purposes"). **Twilio's API does not
@@ -247,23 +265,34 @@ the pending `/sms-optin` build still live there.
     whole 30908 and it's a one-line fix.
   Emailed Paul all of the above at 13:14Z on 2026-09-03, plus an offer to
   build a `/sms-optin` page (unchecked-by-default consent checkbox and
-  the standard disclosures) to give him a URL for the CTA field. **That
-  page is application code — build it only with Paul present.**
-  Two campaign defects *still* unfixed after four flags:
-  `message_samples[2]` is literally "Any message....", and
-  `has_embedded_links`/`has_embedded_phone` are both true while no sample
-  contains a link or phone. Either is an independent rejection reason.
+  the standard disclosures) to give him a URL for the CTA field. **He
+  built it himself — commit `a5aab13`, so that offer is closed out.**
+  **The two campaign defects are STILL unfixed, now through five flags
+  and into submission #7 — they were not in its "fields updated" list,
+  and a fresh read of the compliance object on 2026-09-04 confirms both
+  are live right now.** `message_samples[2]` is literally "Any
+  message....", and `has_embedded_links`/`has_embedded_phone` are both
+  `true` while no sample contains a link or phone. Either is an
+  independent rejection reason on its own. **So if #7 comes back
+  `FAILED`, assume it is these two before theorizing about anything
+  else.** Paul was emailed this at 01:26Z on 2026-09-04 with paste-ready
+  wording (set both flags `false`; replace sample #3 with a real
+  reschedule message in the same format as the other two) and the
+  correct framing: nothing to do mid-review, since Twilio won't accept
+  edits on a campaign that's in the queue.
   Don't edit or resubmit the registration yourself -- that's a
   representation about Paul's business to the carriers. Drafting
   suggested wording *for him to verify* is fine; filing it is not.
-  The watcher is running and will catch the next `IN_PROGRESS` and then
-  `APPROVED`; check `tempWork/a2p_status_state.json` if Paul asks about
-  status rather than hitting the Twilio API fresh. (It logged
-  `IN_PROGRESS -> FAILED` at 13:30Z on 2026-09-03 and has read `FAILED`
-  on every tick since, most recently **00:30Z on 2026-09-04** — so the
-  state file is current and, as of then, Paul had **not** resubmitted.
-  No change means no news here; don't re-read the Twilio API just to
-  confirm what the watcher already polled.)
+  The watcher is running and is now waiting on #7's verdict; check
+  `tempWork/a2p_status_state.json` if Paul asks about status rather than
+  hitting the Twilio API fresh. (Its 01:00Z tick on 2026-09-04 still read
+  `FAILED`; the resubmission landed at 01:24Z and a deliberate fresh read
+  at 01:25Z read `IN_PROGRESS` — the documented email-vs-API lag, running
+  the other direction this time. The state file was **left alone on
+  purpose** so the watcher would log its own `FAILED -> IN_PROGRESS`
+  transition rather than have it silently overwritten. No change means no
+  news here; don't re-read the Twilio API just to confirm what the
+  watcher already polled.)
   Red herring: both the rejection email and the API report the campaign
   date as `2026-08-10T13:32:28Z`. That's the original creation date
   echoing through, not a resubmission timestamp.
@@ -287,7 +316,9 @@ what's throwaway vs. permanent; don't build real features in here.
   `IN_PROGRESS` -> `FAILED` (2026-09-02 11:54Z, third rejection) ->
   `IN_PROGRESS` again (16:30Z tick, after Paul's resubmission) ->
   `FAILED` again (2026-09-03 13:10Z fresh read, fourth rejection; the
-  13:00 tick still said `IN_PROGRESS`). Paul has
+  13:00 tick still said `IN_PROGRESS`) -> `IN_PROGRESS` again
+  (2026-09-04 01:25Z fresh read, after Paul's submission #7 at 01:24Z;
+  the 01:00 tick still said `FAILED`). Paul has
   had to alter and resubmit it repeatedly, so
   this polls `campaign_status` and logs any CHANGE (not every check)
   to `tempWork/a2p_status_changes.log`; current known status is always
