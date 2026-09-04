@@ -56,6 +56,7 @@ EXCLUDE_NAMES = {
     ".drive_api_token.json", ".drive_api_token.lock",
     "queue.db", "queue.db-wal", "queue.db-shm",
     "logs.db", "logs.db-wal", "logs.db-shm",
+    "optins.db", "optins.db-wal", "optins.db-shm",
 }
 EXCLUDE_SUFFIXES = (".pyc",)
 

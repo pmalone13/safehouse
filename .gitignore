@@ -58,6 +58,9 @@
 /queue.db
 /queue.db-wal
 /queue.db-shm
+/idealfed_site/optins.db
+/idealfed_site/optins.db-wal
+/idealfed_site/optins.db-shm
 /logs.db
 /logs/
 
