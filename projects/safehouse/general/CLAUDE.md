@@ -557,3 +557,40 @@ ongoing work, that's the signal to spin it out into its own
   channel; (6) **`drive_sync.py` binary handling — now documented in the
   root TODO, needs him present to fix**; (7) the `finPlan` nesting
   question for alliecar.
+
+- **2026-09-04 ~01:25Z — queue id 10, automated Twilio "resubmission
+  received."** Fifth A2P message handled here. Verified genuine
+  (`dkim=pass @twilio.com`, `spf=pass`, `dmarc=pass` on `p=REJECT`), then
+  did one fresh API read: `campaign_status` is `IN_PROGRESS` (the 01:00Z
+  watcher tick still said `FAILED` — the documented email-vs-API lag, in
+  the other direction this time). Submission count 7. Email's
+  "Resubmitted: 2026-08-10T13:32:28Z" is the known `date_created` red
+  herring; the real signal is the submission counter.
+  **The useful part was checking the campaign's claims against reality
+  instead of the email against reality.** The rewritten `message_flow`
+  now cites `https://idealfed.com/sms-optin` — the page Paul built with
+  commit `a5aab13` — and makes five checkable assertions. All five hold:
+  the three pages return 200 over real DNS with no login (that was the
+  whole 30908 complaint); the consent checkbox has no `checked`
+  attribute; the checkbox wording on the page matches the campaign's
+  quoted text verbatim; `app.py`'s POST handler really does persist name,
+  E.164 number, consent text, UTC timestamp, IP and UA to sqlite, so
+  "consent is stored with a timestamp" is true; and `/privacy` still
+  carries the required sentence.
+  *Near-miss worth remembering:* the first `grep` for that privacy
+  sentence returned nothing and looked like Paul's `cffe678` rewrite had
+  dropped it. It hadn't — the HTML wraps mid-sentence. Rendering the page
+  to text before concluding cost one command and avoided emailing him a
+  false alarm about the exact field he'd just been dinged on.
+  **What is still broken, and it's the same two defects flagged on all
+  four prior rejections:** `message_samples[2]` is still literally "Any
+  message....", and `has_embedded_links`/`has_embedded_phone` are both
+  still `true` with no link or phone in any sample. Neither was in the
+  "fields updated" list. Emailed Paul that, framed as *nothing to do
+  tonight* (Twilio won't accept edits mid-review, so #7 rides as filed)
+  with paste-ready replacement wording for if it bounces a fifth time —
+  drafting for him to verify is fine, filing is not. Kept it short and
+  closed on the Farrish visit; he has a 9am dealer stop.
+  Deliberately did **not** write `a2p_status_state.json` by hand — doing
+  so would have suppressed the watcher's own `FAILED -> IN_PROGRESS` log
+  entry five minutes later.
