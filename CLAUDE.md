@@ -149,6 +149,12 @@ asking price and want it checked against his own criteria fast. There is
 no web access here, so that means arithmetic and rule-checking against the
 recorded shortlist, not lookups.
 
+**Watch the clock on this one:** these logs are UTC and Paul is in
+Fairfax, VA (Eastern, UTC-4). His "tomorrow morning" is the morning of
+**2026-09-04 local**, i.e. roughly **12:00-16:00Z** that day. A turn
+waking at, say, 02:00Z on 2026-09-04 has not missed anything — it is
+still the evening of the 3rd where Paul is.
+
 Two things about it a future turn should know:
 - **Its H1 says "sub-project of finPlan"** but its own folder-structure
   block says `projects/alliecar/`, and Paul's email called it "alliecar
@@ -253,9 +259,11 @@ the pending `/sms-optin` build still live there.
   The watcher is running and will catch the next `IN_PROGRESS` and then
   `APPROVED`; check `tempWork/a2p_status_state.json` if Paul asks about
   status rather than hitting the Twilio API fresh. (It logged
-  `IN_PROGRESS -> FAILED` at 13:30Z on 2026-09-03 and read `FAILED` at
-  14:00Z, so the state file is current — as of then Paul had not yet
-  resubmitted.)
+  `IN_PROGRESS -> FAILED` at 13:30Z on 2026-09-03 and has read `FAILED`
+  on every tick since, most recently **00:30Z on 2026-09-04** — so the
+  state file is current and, as of then, Paul had **not** resubmitted.
+  No change means no news here; don't re-read the Twilio API just to
+  confirm what the watcher already polled.)
   Red herring: both the rejection email and the API report the campaign
   date as `2026-08-10T13:32:28Z`. That's the original creation date
   echoing through, not a resubmission timestamp.
@@ -398,3 +406,29 @@ what's throwaway vs. permanent; don't build real features in here.
     classification question is his to answer -- not a gap for me to fill
     because I happen to hold API credentials. Watcher left running:
     `FAILED` is not `APPROVED`, so it still has a job.
+- 2026-09-04 ~00:48Z: session wrap-up turn (idle window elapsed, no new
+  message). One substantive turn this session: queue id 9, Paul's "we
+  will start at ferish Subaru tomorrow Morning. Stand by." Replied with
+  the one thing that was actually new rather than restating the prior
+  email — **Farrish is the only real Subaru franchise on the shortlist,
+  so its service desk can pull Subaru corporate records by VIN for _any_
+  Subaru**, which turns the six-car verification problem (CVT coverage,
+  oil-consumption test, service history, recalls) into one free stop.
+  That is the useful shape of an answer from this VM: it routes around
+  the no-web-access limit instead of apologizing for it.
+  Deliberately **did not** re-argue the mileage cap. It was raised once,
+  clearly, in writing; Paul choosing #6 as the starting point *is* him
+  answering it. Re-raising a decision already made and acknowledged is
+  nagging, not diligence. Also did not chase his two unanswered
+  questions (finPlan nesting, `/sms-optin`) — neither blocks tomorrow and
+  the car is the live thing.
+  Wrap-up itself: tree was already clean and the mirror already current
+  (sync 23:47Z, no repo changes after), so nothing to re-push from the
+  earlier turn. The real work here was two staleness fixes to this file
+  that would have misled tomorrow's turn: the A2P watcher note now
+  reflects the 00:30Z 2026-09-04 tick (still `FAILED`, Paul has not
+  resubmitted), and the Current-project block now spells out that these
+  logs are UTC while Paul is Eastern — so "tomorrow morning" is ~12:00-
+  16:00Z and an early-UTC turn has not missed the visit.
+  No email sent: the A2P status has not changed and there is nothing to
+  tell Paul the night before that he does not already have.
