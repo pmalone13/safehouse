@@ -594,3 +594,28 @@ ongoing work, that's the signal to spin it out into its own
   Deliberately did **not** write `a2p_status_state.json` by hand — doing
   so would have suppressed the watcher's own `FAILED -> IN_PROGRESS` log
   entry five minutes later.
+
+- **2026-09-04 ~02:28Z — session wrap-up (idle window elapsed, no new
+  message).** Nothing outstanding: queue id 10 handled, tree clean at
+  `4d8d3ff`, Drive mirror current from that turn's sync (01:28Z, no repo
+  changes after it).
+  The one thing worth verifying was the prediction made an hour earlier:
+  the watcher logged `'FAILED' -> 'IN_PROGRESS'` at **01:30:02Z** by
+  itself, and has read `IN_PROGRESS` on every tick since. So declining to
+  hand-write `a2p_status_state.json` preserved the transition record
+  instead of silently eating it — worth repeating next time the API and
+  the state file disagree. Amended the root file to say the watcher is
+  *confirmed* healthy and parked on #7, so a future turn doesn't burn a
+  Twilio read finding that out.
+  No email sent. Nothing has changed since the 01:26Z one, and #7's
+  verdict is 1-3 business days out (~2026-09-05 to 09-09).
+  Open threads unchanged: (1) A2P waiting on #7, watcher retires only on
+  `APPROVED`, and the two known defects are the first suspects if it
+  bounces; (2) still no inbound text channel, pending VPN-vs-public-port;
+  (3) two questions to Paul still unanswered — `finPlan` nesting for
+  alliecar, and `drive_sync.py`'s binary corruption (needs him present,
+  it's application code).
+  **Next turn is likely the car, not this.** Paul's dealer visits start
+  the morning of 2026-09-04 Eastern (~12:00-16:00Z), beginning at Farrish
+  Subaru; read `projects/alliecar/CLAUDE.md` and expect time-sensitive
+  arithmetic against the recorded shortlist, not lookups — no web here.
