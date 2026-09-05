@@ -289,11 +289,17 @@ the pending `/sms-optin` build still live there.
   Watcher state: it tracked the rebuild by itself (it polls the
   *messaging service*, and the MG SID never changed) — logged
   `'FAILED' -> None` at 16:30:01Z during the gap when the old brand was
-  deleted, and should log `None -> 'IN_PROGRESS'` on the 17:00 tick. The
-  state file was left alone on purpose so the watcher logs its own
-  transition — same pattern as 09-04 01:30Z and 17:30Z, worked both
-  times. Check `tempWork/a2p_status_state.json` if Paul asks about
-  status rather than hitting the Twilio API fresh.
+  deleted, then `None -> 'IN_PROGRESS'` at **17:00:02Z**, confirmed, with
+  17:30Z steady. Healthy and parked on #8. Check
+  `tempWork/a2p_status_state.json` if Paul asks about status rather than
+  hitting the Twilio API fresh.
+  **Reviewer POST had NOT happened as of 2026-09-05 17:38Z** — nginx
+  shows nothing on `/sms-optin` since submission except my own 16:35:15
+  curl and a 17:22:36 `AhrefsBot/7.0` GET. **Ahrefs is a commercial SEO
+  backlink crawler, not a reviewer** — a real review hit looks like the
+  09-04 pattern (one IP walking `/sms-optin` + `/privacy` + `/terms`,
+  then POSTing). Don't misread a crawler as the test having run and
+  passed.
   Also: send-only even once unblocked, no inbound text channel yet —
   no Twilio webhook receiver exists. That's waiting on a networking
   decision (VPN back to the bayhouse LAN vs. a public port) that

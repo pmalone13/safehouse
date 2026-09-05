@@ -743,3 +743,35 @@ ongoing work, that's the signal to spin it out into its own
     16:30:01Z (the gap while the old brand was deleted) and should log
     `None -> 'IN_PROGRESS'` on the 17:00 tick. State file left alone on
     purpose again, same pattern as 09-04.
+
+- **2026-09-05 ~17:38Z — session wrap-up (idle window elapsed, no new
+  message).** One substantive turn this session (queue id 12, above).
+  Tree was already clean at `987429c` and the mirror current from that
+  turn's checkpoint, so the work here was closing open loops:
+  * **The one prediction I left open is confirmed.** The previous turn
+    deliberately did not overwrite `a2p_status_state.json` so the watcher
+    would log its own transition across the brand rebuild. It did:
+    `None -> 'IN_PROGRESS'` at **17:00:02Z**, with 17:30Z steady on
+    `IN_PROGRESS`. That's the third time this hands-off pattern has
+    worked (09-04 01:30Z, 09-04 17:30Z, now). The watcher is healthy,
+    needed no edit for the brand swap, and is parked on #8.
+  * **No reviewer POST yet, and a lookalike worth pre-dismissing.**
+    nginx shows nothing on `/sms-optin` since submission except my own
+    16:35:15 curl and a single `AhrefsBot/7.0` GET at 17:22:36 — a
+    commercial SEO backlink crawler, not compliance review. Recorded it
+    in the root file explicitly, because "the page got hit and nothing
+    bad happened" is exactly the wrong conclusion for a future turn to
+    draw. A real review hit looks like 09-04: one IP walking
+    `/sms-optin` + `/privacy` + `/terms`, then POSTing the form.
+  * **No email sent.** Paul hasn't replied to the 16:36Z message (~1
+    hour, Saturday lunchtime Eastern). Everything actionable is already
+    in it, and the watcher confirming a transition I'd already told him
+    to expect is not news. Emailing again an hour later would be
+    nagging, not diligence — same call as 09-04.
+  Open threads for the next session, unchanged in substance but now
+  time-sensitive: (1) the `/sms-optin` fix is ~20 lines and **blocked on
+  Paul being present** — and until it lands the filing contains a claim
+  the reviewer can disprove in one POST, so this is the whole ballgame;
+  (2) the two cosmetic campaign defects to clean during that same edit;
+  (3) alliecar debrief still pending, two days silent; (4) still no
+  inbound text channel (VPN-vs-public-port undecided).
