@@ -146,17 +146,16 @@ email (queue id 9, 23:45Z). Read that file first, it carries its own full
 history. There is no web access here, so any car question means arithmetic
 and rule-checking against the recorded shortlist, not lookups.
 
-**The visit window has passed with no word — don't act on the old
-"assume it's from a dealer lot" guidance.** As of **2026-09-04 18:17Z**
-(2:17pm Eastern) the morning window (~12:00-16:00Z) is over and Paul's
-last inbound is *still* the 2026-09-03 23:45Z "stand by." Verified by
-inbox read, not assumed. So the visits either happened and he hasn't
-reported back yet, or they slipped. **Draw no conclusion about which.**
-Practical effect for the next turn: his next message is more likely a
-debrief (what he saw, what he's leaning toward) or a reply to the A2P
-email than a live from-the-lot ping — but a lot ping is still entirely
-possible if visits ran long or resume over the weekend. Read what he
-actually sends rather than pattern-matching to either.
+**alliecar has been silent for two days — the pointer is stale but
+deliberately not moved.** As of **2026-09-05 16:35Z**, Paul's last
+inbound of any kind is *still* the 2026-09-03 23:45Z "stand by"
+(verified by inbox read, not assumed). The 09-04 morning visit window
+came and went with no debrief. **Draw no conclusion about whether the
+visits happened, slipped, or are resuming this weekend** — and don't
+open with a guess about it. The live work is A2P, which lives in
+`projects/safehouse/general/`; the pointer stays on alliecar because
+only Paul moves it, so read *both* files. If his next message is a car
+debrief, everything needed is in the alliecar file.
 
 **Standing clock note:** these logs are UTC and Paul is in Fairfax, VA
 (Eastern, UTC-4). Convert before concluding anything about timing —
@@ -217,90 +216,84 @@ the pending `/sms-optin` build still live there.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is still blocked. Campaign #7 was REJECTED at 2026-09-04
-  17:11Z — the fifth rejection — on a single, brand-new error code:
-  30923 `MESSAGE_FLOW`, "Forced Consent Violation."** Fresh API read at
-  17:12Z confirms `campaign_status = FAILED`, and the `errors` array now
-  contains **only** 30923.
-  **The good news is real and should be stated first: #7's rewrite
-  worked.** 30909 (`MESSAGE_FLOW`) and 30908 (`PRIVACY_POLICY_URL`) —
-  the two errors that killed #6 — are **gone from the errors array**.
-  The `/sms-optin` page and the privacy-URL resubmission did their job.
-  Do not re-litigate either; they are closed.
-  **What 30923 means here is not a guess — the nginx logs caught the
-  reviewer running the test.** IP `167.103.4.201` (desktop Chrome)
-  appears in the entire access log exactly once, in a 13-second burst
-  ending 27 seconds before the rejection email:
-  ```
-  17:10:36  GET  /sms-optin
-  17:10:39  GET  /privacy
-  17:10:42  GET  /terms
-  17:10:49  POST /sms-optin   -> 200, 1123 bytes
-  17:11:16  rejection email sent
-  ```
-  That POST is the finding. Reproduced both branches against the live
-  site on 2026-09-04: blank form = 1071 bytes gzipped, the
-  "You must check the consent box to sign up." error page = 1110 (+39),
-  and the success page is much *smaller* (it drops the whole form). The
-  reviewer's own pair was 1083 -> 1123, a +40 delta — the error branch.
-  **So: they entered a name and phone, deliberately left the consent box
-  unchecked, submitted, and were blocked.** That is exactly the test
-  30923 exists to run, and their action note says so: consumers must get
-  "an explicit skip option ... allowing them to decline messaging and
-  still utilize your business services."
-  **The defect is form mechanics, not wording.** `idealfed_site/app.py`'s
-  POST handler returns an error unless `consent == "yes"`, so the form
-  cannot be completed while declining SMS. Note the honest counter-
-  argument (recorded so a future turn doesn't rediscover it): on a page
-  whose *only* purpose is SMS signup there is no other service being
-  gated, so this isn't really forced consent. Five rejections in, that
-  argument is not worth making — pass the test instead.
-  **The fix is application code, so it needs Paul present — NOT done.**
-  Proposed and emailed to him: make `/sms-optin` a general contact/
-  updates signup. Name and phone stay required; the SMS checkbox becomes
-  genuinely optional; unchecked + submit **succeeds**, records the
-  contact, records no SMS consent, and confirms "you will not receive
-  text messages"; checked + submit behaves exactly as today. ~20 lines.
-  The weaker option (keep it SMS-only, add "this is optional" copy) was
-  considered and rejected — it still fails the submit-without-consent
-  test the reviewer actually ran.
-  Draft `message_flow` addition was emailed for Paul to file **after**
-  the page behaves that way (the reviewer verifies): states the opt-in is
-  voluntary, not required to contact/hire/receive service, submittable
-  with the box unchecked, and not bundled into the Terms of Use.
-  **Correction to the prior turn's prediction, kept deliberately:** the
-  root file previously said "if #7 comes back `FAILED`, assume it is
-  these two" (the `message_samples[2]` = "Any message...." string and the
-  `has_embedded_links`/`has_embedded_phone` flags). **That was wrong.**
-  Neither was cited. Both are **still live** in the compliance object as
-  of 2026-09-04 17:12Z, and have now gone **uncited through five
-  reviews** — so they are housekeeping to clean up during the next edit,
-  **not** a leading suspect. Don't let a future turn re-promote them.
-  Brand `BN257b...1afc` is **untouched — still APPROVED / VERIFIED, still
-  `SOLE_PROPRIETOR`**; every round of this has been campaign-only, so
-  nothing about brand registration needs redoing.
+- **Texting is still blocked, but the whole registration was rebuilt on
+  2026-09-05 and submission #8 is under review.** Paul deleted the old
+  brand and campaign outright and re-registered from scratch. Fresh API
+  read 2026-09-05 16:35Z:
+  * **One brand on the account now:**
+    `BNeac1cae7426eebe4c150c7c2c072e0d8`, created 16:22:02Z, already
+    `APPROVED` / `identity_status: VERIFIED`, TCR id `BDBJL0X`, and
+    **still `brand_type: SOLE_PROPRIETOR`**. The old
+    `BN257b...1afc` is **gone** — don't look for it. **The
+    sole-prop-vs-LLC fork from 2026-09-02 is settled as sole prop;
+    stop offering it as a choice.**
+  * **Campaign** `CMa5f18a55d462aeea41cc130422532849` / compliance
+    `QE2c6890da8086d771620e9b13fadeba0b`, submitted 16:34:06Z,
+    `campaign_status: IN_PROGRESS`, `errors: []`.
+  * **`errors: []` does not mean this is fine.** See below.
+  **THE LIVE DEFECT: the filing claims something the site does not do.**
+  `opt_in_message` now contains *"The signup form can be submitted with
+  the SMS consent checkbox left unchecked."* **It cannot.** Verified by
+  POSTing the live form at 2026-09-05 16:35:13Z with name + phone and no
+  consent — still returns `You must check the consent box to sign up.`
+  `idealfed_site/app.py:216` is unchanged. This is **strictly worse than
+  #7's position**: #7 failed a test; #8 makes a claim the reviewer
+  disproves with the *same single POST* that generated error 30923 on
+  2026-09-04. Do not let a future turn read the empty errors array as
+  "we're fine."
+  **The fix is unchanged and still needs Paul present** (~20 lines,
+  application code, hard boundary): make `/sms-optin` a general
+  contact/updates signup — name and phone stay required, the SMS
+  checkbox becomes genuinely optional, unchecked + submit **succeeds**
+  (records the contact, records no SMS consent, confirms "you will not
+  receive text messages"), checked + submit behaves as today. The weaker
+  option (keep it SMS-only, add "this is optional" copy) was considered
+  and rejected — it still fails the submit-without-consent test.
+  **Timing, from nginx — hours of runway, not days.** TCR's automated URL
+  check ran 16:33:08-16:33:12, one minute *before* submission: GETs on
+  `/privacy`, `/terms`, `/sms-optin` from AWS IPs (13.216.156.71,
+  3.216.230.219, 100.57.197.137; python-requests then a Chrome UA).
+  **GETs only, no POST** — the automated pre-check passed, and the POST
+  test is the later/deeper review step. On #7 that came ~16h after
+  submission.
+  **What #8 genuinely fixed, don't re-litigate:** the `"Any message...."`
+  sample is **gone** (two clean samples left, both carrying STOP
+  language). `message_flow` names the URL, the default-unchecked box, the
+  verbatim consent sentence, the privacy/terms links and timestamped
+  storage — **every one of those claims was checked against the live site
+  and app.py and is true**. Errors 30909 (`MESSAGE_FLOW`) and 30908
+  (`PRIVACY_POLICY_URL`) have stayed gone since #7. All closed.
+  **Housekeeping for the same editing session** (uncited through six
+  reviews now — **not** suspects, don't re-promote them):
+  `has_embedded_links` and `has_embedded_phone` are both still `true`
+  while neither sample contains a link or phone; and `opt_in_message`
+  has a typo, "remove yourself from discribution" → "distribution".
+  **Noise, pre-dismissed:** the acknowledgment email calls the use case
+  `STARTER` while the API says `SOLE_PROPRIETOR`. Console labeling for
+  the same sole-prop tier — not a mismatch to chase.
   **DNS is RESOLVED — that whole saga is over.** `idealfed.com` answers
-  **54.88.172.94** (this box) consistently. Never blame a rejection on
-  DNS; it was checked and disproved, and the 17:10Z reviewer hits above
-  are fresh proof the site is reachable from outside.
-  Don't edit or resubmit the registration yourself -- that's a
+  **54.88.172.94** (this box) consistently, and the 16:33Z TCR hits are
+  fresh proof the site is reachable from outside. Never blame a rejection
+  on DNS.
+  Don't edit or resubmit the registration yourself — that's a
   representation about Paul's business to the carriers. Drafting
   suggested wording *for him to verify* is fine; filing it is not.
-  Emailed Paul all of the above at 17:15Z on 2026-09-04.
-  The watcher **did** log the `IN_PROGRESS -> FAILED` transition itself,
-  at **17:30:01Z**, and the 18:00Z tick reads `FAILED` — so it is
-  confirmed healthy and correctly parked on the fifth rejection. (Its
-  17:00Z tick still read `IN_PROGRESS`; the fresh 17:12Z read was the
-  reconciliation, and the state file was **left alone on purpose** so the
-  watcher would log its own transition rather than have it silently
-  overwritten — same pattern as 2026-09-04 01:30Z, and it worked again.)
-  `FAILED` is the expected resting state until Paul resubmits, so silence
-  from the watcher now is the signal working, not broken. Check
-  `tempWork/a2p_status_state.json` if Paul asks about status rather than
-  hitting the Twilio API fresh.
-  Red herring: both the rejection email and the API report the campaign
-  date as `2026-08-10T13:32:28Z`. That's the original creation date
-  echoing through, not a resubmission timestamp.
+  Emailed Paul all of the above at 2026-09-05 16:36Z, leading with the
+  false-claim problem and the narrow window.
+  **Rejection history for context** (all campaign-only, brand was never
+  the problem): #1 Aug 12 = 30896 + 30886; #2 Aug 13 = 30915; #3
+  2026-09-02 = 30915 again (LLC name on the site); #4 2026-09-03; #5
+  2026-09-04 17:11Z = 30923 `MESSAGE_FLOW` "Forced Consent Violation",
+  caught in the nginx logs as reviewer IP `167.103.4.201` POSTing the
+  form with the box unchecked at 17:10:49, 27s before the rejection mail.
+  Watcher state: it tracked the rebuild by itself (it polls the
+  *messaging service*, and the MG SID never changed) — logged
+  `'FAILED' -> None` at 16:30:01Z during the gap when the old brand was
+  deleted, and should log `None -> 'IN_PROGRESS'` on the 17:00 tick. The
+  state file was left alone on purpose so the watcher logs its own
+  transition — same pattern as 09-04 01:30Z and 17:30Z, worked both
+  times. Check `tempWork/a2p_status_state.json` if Paul asks about
+  status rather than hitting the Twilio API fresh.
   Also: send-only even once unblocked, no inbound text channel yet —
   no Twilio webhook receiver exists. That's waiting on a networking
   decision (VPN back to the bayhouse LAN vs. a public port) that
@@ -325,7 +318,14 @@ what's throwaway vs. permanent; don't build real features in here.
   (2026-09-04 01:25Z fresh read, after Paul's submission #7 at 01:24Z;
   the 01:00 tick still said `FAILED`) -> `FAILED` again (2026-09-04
   17:12Z fresh read, fifth rejection, error 30923; the 17:00 tick still
-  said `IN_PROGRESS`). Paul has
+  said `IN_PROGRESS`) -> `None` (2026-09-05 16:30:01Z tick, while Paul
+  had the old brand+campaign deleted and nothing filed yet) ->
+  `IN_PROGRESS` again (submission #8 at 16:34:06Z under the **new** brand
+  `BNeac1cae...`). **The watcher survived the rebuild untouched and needs
+  no edit** -- it polls the messaging service's compliance endpoint and
+  `MESSAGING_SERVICE_SID` (`MGfd44b828...`) never changed, so a brand
+  swap is invisible to it. A `None` in the log means "no campaign filed
+  at all right now," not a bug. Paul has
   had to alter and resubmit it repeatedly, so
   this polls `campaign_status` and logs any CHANGE (not every check)
   to `tempWork/a2p_status_changes.log`; current known status is always
