@@ -690,3 +690,56 @@ ongoing work, that's the signal to spin it out into its own
   standing between here and working SMS; (2) the two cosmetic campaign
   defects to clean during that same edit; (3) alliecar debrief pending;
   (4) still no inbound text channel (VPN-vs-public-port undecided).
+
+- **2026-09-05 ~16:34Z — queue id 12, Twilio "campaign received, review
+  in progress" (submission #8).** Paul rebuilt the whole A2P registration
+  from scratch overnight/this morning and refiled. Email verified
+  authentic (`dkim=pass header.i=@twilio.com`, `spf=pass` via SendGrid).
+  Everything below is from a fresh API read at 16:35Z, not the mail.
+  * **The brand was replaced, not edited.** Old brand `BN257b...1afc` is
+    **gone from the account entirely** — `GET /a2p/BrandRegistrations`
+    returns exactly one brand now:
+    `BNeac1cae7426eebe4c150c7c2c072e0d8`, created 16:22:02Z, already
+    `APPROVED` / `identity_status: VERIFIED`, TCR id `BDBJL0X`. Still
+    `brand_type: SOLE_PROPRIETOR`. **So the sole-prop-vs-LLC fork from
+    2026-09-02 is settled as sole prop** — stop offering it as a choice.
+    New campaign `CMa5f18a55...` / compliance `QE2c6890...`, submitted
+    16:34:06Z, `campaign_status: IN_PROGRESS`, `errors: []`.
+  * **The rewrite is real and mostly good.** The `"Any message...."`
+    sample is **gone** (two clean samples left, both carrying STOP
+    language). `message_flow` now names the URL, the default-unchecked
+    box, the verbatim consent sentence, the privacy/terms links and
+    timestamped storage — every one of those claims checked against the
+    live site and app.py, and **all of them are true**.
+  * **The finding: the filing asserts something the site does not do.**
+    `opt_in_message` now says *"The signup form can be submitted with the
+    SMS consent checkbox left unchecked."* It cannot. POSTed the live
+    form at **16:35:13Z** with name+phone and no consent — still
+    `You must check the consent box to sign up.` (`app.py:216`
+    unchanged). This is **strictly worse than #7's position**: #7 failed
+    a test, #8 makes a claim the reviewer disproves with the *same single
+    POST* that produced 30923. Do not let a future turn read "errors: []"
+    as "we're fine."
+  * **Timing window, from nginx.** TCR's automated URL check ran at
+    **16:33:08-16:33:12**, one minute *before* submission — GETs on
+    `/privacy`, `/terms`, `/sms-optin` from AWS IPs (13.216.156.71,
+    3.216.230.219, 100.57.197.137; python-requests then a Chrome UA).
+    **GETs only, no POST** — so the automated pre-check passed and the
+    POST test is the later/deeper review step. On #7 that came ~16h after
+    submission. Hours of runway, not days. (The 16:35:15 POST in the log
+    is my own curl, not a reviewer.)
+  * **Did not touch `app.py`.** Same ~20-line fix, same rule: Paul
+    present. Emailed him at 16:36Z leading with the false-claim problem
+    and the hours-not-days window, then the good news, then the two
+    cosmetics (`has_embedded_links`/`has_embedded_phone` still true with
+    no link or phone in either sample; `"discribution"` typo in
+    `opt_in_message`).
+  * **Noise, pre-dismissed:** the ack email calls the use case `STARTER`
+    while the API says `SOLE_PROPRIETOR` — console labeling for the same
+    sole-prop tier, not a mismatch to chase.
+  * **Watcher needed no change** and got none. It polls the *messaging
+    service* compliance endpoint, and the MG SID is unchanged, so it
+    tracked the rebuild by itself: logged `'FAILED' -> None` at
+    16:30:01Z (the gap while the old brand was deleted) and should log
+    `None -> 'IN_PROGRESS'` on the 17:00 tick. State file left alone on
+    purpose again, same pattern as 09-04.
