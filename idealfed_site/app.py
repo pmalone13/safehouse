@@ -213,15 +213,18 @@ def sms_optin_submit():
         return _render_optin_form(name=name, phone=phone_raw,
                                    error="Please enter a valid 10-digit US mobile number.")
 
-    if not consented:
-        return _render_optin_form(name=name, phone=phone_raw,
-                                   error="You must check the consent box to sign up.")
+    # Consent is NOT a condition of submission -- Twilio error 30923
+    # "Forced Consent Violation" (2026-09-04, rejection #5): the form must
+    # let someone submit their info either way. Checking the box only
+    # decides whether they get enrolled for SMS, never whether the
+    # submission itself succeeds.
+    status = "opted_in" if consented else "declined_sms"
 
     _init_db()
     conn = sqlite3.connect(str(DB_PATH))
     conn.execute(
-        "INSERT INTO optins (name, phone_e164, consent_text, consented_at, ip, user_agent) "
-        "VALUES (?, ?, ?, ?, ?, ?)",
+        "INSERT INTO optins (name, phone_e164, consent_text, consented_at, ip, user_agent, status) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?)",
         (
             name,
             phone_e164,
@@ -229,17 +232,26 @@ def sms_optin_submit():
             datetime.now(timezone.utc).isoformat(),
             request.remote_addr,
             request.headers.get("User-Agent", ""),
+            status,
         ),
     )
     conn.commit()
     conn.close()
 
-    body = """
+    if consented:
+        body = """
 <h1>You're signed up</h1>
 <p>Thanks -- you'll start receiving text updates at the number you provided.
 Reply STOP at any time to opt out.</p>
 """
-    return PAGE_SHELL.format(title="Signed Up", body=body)
+    else:
+        body = """
+<h1>Thanks</h1>
+<p>We've saved your information. Since the text-updates box wasn't
+checked, you won't receive SMS messages -- you can sign up for those
+any time from this page.</p>
+"""
+    return PAGE_SHELL.format(title="Thanks", body=body)
 
 
 _init_db()
