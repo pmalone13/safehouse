@@ -775,3 +775,57 @@ ongoing work, that's the signal to spin it out into its own
   (2) the two cosmetic campaign defects to clean during that same edit;
   (3) alliecar debrief still pending, two days silent; (4) still no
   inbound text channel (VPN-vs-public-port undecided).
+
+- **2026-09-06 ~13:53Z — queue id 13, Paul: "10am, let's do it."** The
+  reply to Friday's 16:36Z email, and the first inbound from him since
+  2026-09-03. Short, but it's the unblock: he's naming a time to be
+  present for the `/sms-optin` code change. 13:52Z arrival = **9:52am
+  Eastern**, so "10am" is ~14:00Z, eight minutes out — this is a
+  right-now message, not a scheduling note for later.
+  * **Read the state before doing anything, and the news is good.** The
+    reviewer **still has not POSTed the form**, 21 hours after
+    submission. Only POST to `/sms-optin` since 16:34Z Friday is my own
+    16:35:15 curl. Campaign still `IN_PROGRESS`, `errors: []`, watcher's
+    13:30Z tick agreeing. We are past #7's ~16h mark and got lucky.
+  * **New lookalike, pre-dismissed like the Ahrefs one:** 18:31:25-32Z
+    Friday, IP `100.28.14.21` walked `/sms-optin` + `/terms` +
+    `/privacy` with the *exact* TCR pre-check signature
+    (AWS IP, `python-requests` then a Chrome UA with a google.com
+    referer). **GETs only, no POST** — a second automated sweep, not the
+    forced-consent test. Don't read it as the test having run and passed.
+  * **Staged the fix; did NOT apply it.** Built the patch as
+    `tempWork/app_staged.py` (+ `tempWork/sms_optin_fix.diff`), compiled
+    it, then ran it in a sandbox on `127.0.0.1:8099` against a *copy* of
+    the real db. Verified: unchecked+submit → HTTP 200, "You will not
+    receive text messages"; checked+submit → unchanged behaviour, full
+    consent text + UTC timestamp; missing name / bad phone still
+    rejected; checkbox still has no `checked=` attribute; consent
+    sentence byte-identical to the one quoted in the filed
+    `message_flow`; `/privacy` + `/terms` still linked. Killed the
+    sandbox, re-confirmed live `app.py` untouched and the live POST
+    still returning "You must check the consent box to sign up."
+  * **Why staged and not applied.** He said 10am; the hard boundary
+    wants him actively directing, not merely having said yes in advance.
+    A staged-and-proven patch turns his "go" into a 60-second apply,
+    which is the whole value — the boundary costs nothing here because
+    all the slow work is legitimately doable ahead of him arriving.
+  * **Emailed at 13:56:54Z**, i.e. 9:56am his time, on his 10am. Led
+    with "no reviewer POST yet, window still open," then the diff, the
+    test results, and an explicit "reply go."
+  * **Included one uninvited extra, flagged as droppable:** the form
+    reflected `name`/`phone` into the HTML unescaped, so
+    `name=<script>alert(1)</script>` rendered a live tag. Two lines of
+    `html.escape()`. Same function we're already editing, public form —
+    told him plainly it's unrelated to A2P and he can veto it.
+  * **The call that matters for the filing: do not resubmit.** Once the
+    code ships, `opt_in_message`'s claim becomes true on its own. Editing
+    the campaign would restart the clock on a review currently sitting
+    with an empty errors array. Told him so, and parked the two cosmetic
+    items ("discribution" typo, the two embedded-link/phone flags) on the
+    same reasoning — uncited through six reviews, not worth touching a
+    live submission for.
+  Open threads: (1) **waiting on Paul's "go" — the patch is staged and
+  the live site is still broken until he sends it**; (2) after applying:
+  restart `idealfed-site.service` and re-run the reviewer's POST against
+  the real domain to prove it; (3) alliecar debrief still pending, three
+  days silent; (4) still no inbound text channel.
