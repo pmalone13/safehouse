@@ -200,16 +200,30 @@ the pending `/sms-optin` build still live there.
   `drive_sync.py` and `google_client.create_file()` — **application
   code, so it needs Paul present.** Not yet done.
 
-- **Claude auth is currently a metered Anthropic API key** (funded with
-  a small test credit, under pmalone13's console.anthropic.com account),
-  not Paul's Claude subscription. Paul wants to move to `claude
-  setup-token` (a long-lived token against the Pro/Max subscription,
-  avoiding per-token billing) once that's worked out headlessly — an
-  interactive `claude /login`-style flow needs a real TTY, which is
-  fiddly over plain SSH (tmux gets you a PTY; the actual device-code-ish
-  flow that command uses hasn't been fully walked through yet). Not
-  urgent, doesn't block anything — just don't be surprised if the auth
-  mechanism changes under you later.
+- ~~Claude auth was a metered Anthropic API key~~ **DONE 2026-09-07.**
+  Switched to `claude setup-token` — a long-lived (1-year) OAuth token
+  against Paul's actual Claude Pro subscription, not per-token metered
+  billing. Root cause of the switch: the coordinator silently died for
+  over a day (two failed turns, id=13 on 2026-09-06 and id=14 on
+  2026-09-07, both `'Credit balance is too low'`) because the test
+  credit funding the old API key ran out — Paul's explicit instruction
+  afterward: "no metered service for anything we purchase online" as a
+  general rule, not just for this key. Mechanism: `claude setup-token`
+  needs a real interactive OAuth approval (open a URL, log in, paste
+  back a short code) — done via a `tmux` session on the VM so the flow
+  survives a dropped SSH connection, with Paul completing the browser
+  half live. The resulting token goes in `.env` as
+  `CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...` (replacing
+  `ANTHROPIC_API_KEY` entirely), loaded the same way via
+  `EnvironmentFile=` in `safehouse-coordinator.service`. Confirmed live:
+  `claude -p` authenticates and responds with `ANTHROPIC_API_KEY`
+  explicitly unset, coordinator restarted clean, no errors since.
+  **Caveat carried forward**: subscription-based usage shares Claude
+  Code's account-wide rate limits with everything else Paul does under
+  that login (unlike the API key, which was cleanly separate/metered on
+  its own). Token expires in 1 year (2027-09-07) — will need to be
+  regenerated the same way (`claude setup-token` in a tmux session, a
+  fresh interactive login) before then.
 - ~~Drive not wired up~~ **DONE 2026-09-01.** Token placed on the VM
   and smoke-tested directly (auth, folder create, file create, read
   back all confirmed) outside the normal turn flow, so a fresh turn
