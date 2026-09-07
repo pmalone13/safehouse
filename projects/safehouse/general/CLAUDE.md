@@ -930,3 +930,44 @@ ongoing work, that's the signal to spin it out into its own
   Settings > Usage page (or the Claude app) as the only place that's
   actually visible. Didn't guess at a number or pretend to check
   something I can't reach.
+
+- **2026-09-07 ~21:56Z — session wrap-up (idle window elapsed, no new
+  message).** Covered queue ids 28-33, all in a tight ~5-minute burst
+  of separate voice/text messages from Paul. Working tree clean at
+  `07bcbc4`, every turn already committed/pushed/synced individually
+  as it happened, so nothing to catch up — this entry is just the
+  cross-turn summary a wrap-up is for.
+  * **Message-ordering gotcha worth remembering:** queue ids 30 and 31
+    arrived only 51s apart (21:53:55Z, 21:55:22Z), and it was tempting
+    to assume id 31 ("No that looks good, that's what we're doing")
+    answered the alliecar "which car" question from id 30. Checking
+    actual Twilio `date_created` timestamps on my own outbound
+    messages (not just queue arrival order) showed the alliecar
+    confirm-question text didn't go out until 21:55:55Z — *after* id
+    31 arrived — so id 31 could only be answering the earlier Paris
+    read-back (sent 21:54:10Z). Verified via a raw Twilio Messages API
+    GET rather than trusting sequence. Worth repeating whenever two
+    of my own outbound texts are in flight close together: check send
+    times, don't assume queue order maps to which question is being
+    answered.
+  * **Three projects now genuinely live simultaneously**, more than at
+    any prior point: `paris-september-2026` (new, current-project
+    pointer, trip confirmed accurate by Paul), `alliecar` (car
+    purchase now fully closed out — confirmed as the rebuilt-title
+    2012 Forester, a deliberate MUST-HAVE departure, not relitigated),
+    and this bucket. Root `CLAUDE.md`'s Current-project block was
+    restructured this session specifically to list all three without
+    implying only one is active.
+  Open threads across all three, for whoever picks this up next:
+  (1) **Paris** — lodging unbooked, Normandy dates/itinerary
+  unspecified, Christine's return date uncertain (26th-28th) — all
+  Paul's to fill in, nothing to chase; (2) **alliecar** — whether/how
+  the purchase gets reflected in household `accounting/` books (open
+  since Session 1, never raised with Paul), and the original 09-04
+  Farrish/six-car visit debrief that never came and may never come;
+  (3) **general** — `tempWork/` archive-or-delete question from
+  2026-09-07 still unanswered; the `drive_sync.py` binary-corruption
+  fix and the `/sms-optin` two cosmetic defects both still parked,
+  needing Paul present (application code). No email sent — everything
+  this session was handled over text, and there's nothing new for the
+  inbox.
