@@ -36,8 +36,8 @@ programming and don't do it unattended.
 ## How you got invoked, and how this session actually works
 
 You were spawned (or resumed) by `coordinator.py` because a message
-arrived on the FIFO queue (email today; text once Twilio is unblocked —
-see TODO below). The message that triggered this turn is described in
+arrived on the FIFO queue (email or text — both channels are live; see
+TODO below for the texting approval history). The message that triggered this turn is described in
 your prompt. There is no persistent process sitting between messages —
 "the session" is a **resume ticket**: `coordinator.py` remembers your
 `session_id` for up to an hour (configurable) after you finish a turn,
@@ -113,10 +113,15 @@ for you.
   automatic Drive -> local sync; a pull only happens when a turn is
   explicitly asked to do one.
 - **Text** (`twilio_client.py`, number (202) 804-3453) — `send_sms(to,
-  body)`. **Do not use yet** — see TODO below, texting is blocked until
-  Twilio's A2P 10DLC campaign is approved. If you're not sure whether
-  it's been approved, ask Paul rather than trying it and finding out the
-  hard way.
+  body)`. **Live both directions as of 2026-09-07** (A2P campaign
+  `VERIFIED`; see TODO below for the approval history). Inbound arrives
+  via `twilio_webhook.py` (only Paul's own allowlisted number is
+  enqueued) and lands in the same queue email does. **As of 2026-09-07
+  ~20:17Z the webhook also accepts voice messages**: an audio MMS is
+  downloaded and transcribed locally (`voice_transcribe.py`, CPU-only
+  faster-whisper) before enqueueing, so the body you see is already
+  plain text prefixed `[Voice message transcript]: ` — never a raw
+  audio file or a transcription step of your own.
 
 ## Projects
 
