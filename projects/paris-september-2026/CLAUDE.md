@@ -72,3 +72,13 @@ blocked" or "assumed will definitely work."
     file. `alliecar` and `safehouse/general` remain live threads —
     same three-projects-at-once situation as when alliecar and general
     were both active on 09-07; don't drop either.
+
+- **2026-09-07 ~21:55Z — queue id 31, Paul: "No that looks good. That's
+  that's what we're doing."** Confirmed by message timing (his reply
+  arrived 21:55:22Z, 72s after my 21:54:10Z read-back text and *before*
+  the next SMS I sent on an unrelated thread went out at 21:55:55Z) —
+  this is his answer to the read-back, not to anything later. All the
+  facts recorded above (travelers, JetBlue 09-13, no lodging yet,
+  Paris week + Normandy by train, Paul back ~25th for a party the
+  26th, Christine back 26th-28th) are **confirmed correct as
+  transcribed**, not garbled. No reply needed — nothing new to say.
