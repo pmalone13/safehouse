@@ -314,10 +314,12 @@ the pending `/sms-optin` build still live there.
   09-04 pattern (one IP walking `/sms-optin` + `/privacy` + `/terms`,
   then POSTing). Don't misread a crawler as the test having run and
   passed.
-  Also: send-only even once unblocked, no inbound text channel yet —
-  no Twilio webhook receiver exists. That's waiting on a networking
-  decision (VPN back to the bayhouse LAN vs. a public port) that
-  hasn't been made.
+  Also: still **send-only** — outbound texting stays blocked until the
+  A2P campaign is `APPROVED`. But the inbound side of that networking
+  decision is now resolved: see the 2026-09-07 16:07Z test-log entry —
+  Paul built and deployed an inbound webhook receiver himself, present
+  at the terminal, choosing the public-port path (nginx on `idealfed.com`)
+  over a VPN back to the bayhouse LAN.
 
 ## tempWork
 
@@ -490,3 +492,51 @@ what's throwaway vs. permanent; don't build real features in here.
   16:00Z and an early-UTC turn has not missed the visit.
   No email sent: the A2P status has not changed and there is nothing to
   tell Paul the night before that he does not already have.
+- 2026-09-07 ~16:08Z: fresh session, queue id 15, text channel, body
+  "webhook self-test, please ignore" from +12026181308. An inbound text
+  is new — CLAUDE.md said no receiver existed — so treated it as a
+  verification job before treating the "ignore" at face value, same
+  posture as past automated-alert turns.
+  * **Found `twilio_webhook.py` untracked at repo root**, created
+    2026-09-07 16:00:10Z (minutes before the message), never committed.
+    It's a real Flask inbound-SMS receiver: Twilio HMAC-SHA1 signature
+    validation (fails closed if `~/.keys/twilioAuthToken` is missing or
+    the signature doesn't match) plus a sender allowlist that only
+    enqueues messages from one hardcoded number — which is exactly the
+    sender of this message.
+  * **This is squarely "application code" under the hard boundary**, so
+    the live question was who wrote it and whether Paul was actually
+    present, not whether the code itself looks reasonable.
+  * **Verified rather than assumed**: `systemctl status
+    safehouse-twilio-webhook.service` shows it enabled and running
+    since 16:00:19Z; nginx's `idealfed.com` vhost has a new `/twilio/`
+    location proxying to `127.0.0.1:8092` (the `/` location, port 8091,
+    is the pre-existing `idealfed_site`); the gunicorn log shows the
+    webhook rejecting a request at 16:00:42Z for a missing auth token,
+    then `~/.keys/twilioAuthToken` was created at 16:07Z, then the
+    self-test enqueued cleanly at 16:07:50Z (`sid=SMselftest0001` — not
+    a real Twilio SID shape, consistent with a hand-crafted curl POST
+    used to test the receiver rather than a real carrier-relayed text).
+    `auth.log` shows unbroken SSH sessions from **69.243.98.210** on key
+    fingerprint `SHA256:fGvd9c...MxIs` — the same source IP as every
+    prior confirmed Paul login back to Aug 9 — from before 16:00 through
+    16:09, including the `sudo` calls needed to install the systemd unit
+    and edit the nginx vhost. Conclusion: Paul, present and hands-on,
+    built and self-tested this in real time. Correct use of the
+    boundary, not a violation of it.
+  * **Sent no reply** — the message said "please ignore" and there's
+    nothing he doesn't already know.
+  * **Housekeeping gap noticed, not fixed**: the other four live
+    services (`idealfed-site`, `safehouse-coordinator`,
+    `safehouse-email-monitor`, `safehouse-logging-server`) all have a
+    matching unit file checked into the repo's `systemd/` folder;
+    `safehouse-twilio-webhook.service` doesn't. Left as-is rather than
+    added it myself — copying a live unit into the repo wasn't asked
+    for and the file itself is Paul's to decide belongs in version
+    control, not mine to add speculatively.
+  * Updated the texting TODO above: inbound is no longer blocked on a
+    networking decision, Paul picked the public-port path. Outbound is
+    still gated on A2P approval, unchanged.
+  * Committed `twilio_webhook.py` as part of this turn's normal
+    checkpoint (`git add -A`) — that's persisting a file Paul already
+    wrote and ran, not me authoring code.
