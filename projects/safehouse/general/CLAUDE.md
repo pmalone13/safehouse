@@ -870,3 +870,8 @@ ongoing work, that's the signal to spin it out into its own
     this turn's normal checkpoint — persisting Paul's own live-written
     and already-running code, same posture as the original webhook
     commit, not authoring it myself.
+
+- **2026-09-07 ~20:20Z — queue id 26, text channel, "Great."** Verified
+  genuine (real Twilio SID `SMa7e6fc...` in the webhook log). Paul
+  closing the loop on the voice-transcription test from queue id 25 —
+  nothing to do, no reply needed.
