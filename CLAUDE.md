@@ -143,25 +143,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-03
-when Paul emailed the `alliecar` package (queue id 8). Helping him buy a
-used car for his daughter Allie; dealer visits were set for the morning of
-2026-09-04, **starting at Farrish Subaru** (car #6) per Paul's "stand by"
-email (queue id 9, 23:45Z). Read that file first, it carries its own full
-history.
+**Current project**: `projects/paris-september-2026/CLAUDE.md` — set
+2026-09-07 ~21:53Z when Paul created it by voice message (queue id 29):
+trip planning for him and Christine, Paris + Normandy, departing
+2026-09-13. Read that file first, it carries the trip facts and open
+items.
 
-**Correction, 2026-09-07: "no web access" was wrong, or at least
-untested.** `WebFetch` successfully pulled a live cars.com listing this
-session (see alliecar Session 4) — try it for any car-listing/URL
-question before reciting the old limitation.
+**Two other projects remain simultaneously live — don't drop them just
+because this pointer moved:**
 
-**alliecar went quiet 09-03 to 09-07, then resumed live over text on
-09-07 ~16:34Z** (queue id 20) — Paul sent a new cars.com listing outside
-the original shortlist and asked about accident history. No debrief was
-ever given on the planned 09-04 Farrish visit; don't assume what
-happened there, and don't open by asking — follow his lead. The A2P/
-texting work in `projects/safehouse/general/` finished today too (see
-that file), so both projects are now simultaneously live; read both.
+- `projects/alliecar/CLAUDE.md` — set 2026-09-03 when Paul emailed the
+  `alliecar` package (queue id 8). Helping him buy a used car for his
+  daughter Allie; dealer visits were set for the morning of 2026-09-04,
+  **starting at Farrish Subaru** (car #6) per Paul's "stand by" email
+  (queue id 9, 23:45Z).
+  **Correction, 2026-09-07: "no web access" was wrong, or at least
+  untested.** `WebFetch` successfully pulled a live cars.com listing this
+  session (see alliecar Session 4) — try it for any car-listing/URL
+  question before reciting the old limitation.
+  **alliecar went quiet 09-03 to 09-07, then resumed live over text on
+  09-07 ~16:34Z** (queue id 20) — Paul sent a new cars.com listing outside
+  the original shortlist and asked about accident history. No debrief was
+  ever given on the planned 09-04 Farrish visit; don't assume what
+  happened there, and don't open by asking — follow his lead.
+- `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
+  texting build finished 2026-09-07 (both directions live, plus voice
+  transcription as of ~20:17Z the same day).
 
 **Standing clock note:** these logs are UTC and Paul is in Fairfax, VA
 (Eastern, UTC-4). Convert before concluding anything about timing —

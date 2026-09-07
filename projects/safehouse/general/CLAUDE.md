@@ -897,3 +897,16 @@ ongoing work, that's the signal to spin it out into its own
   the newer listing) and safehouse/general (mostly the texting/A2P
   build, now live). No CLAUDE.md content changed beyond this log entry
   — read-only question, same as id 19.
+
+- **2026-09-07 ~21:53Z — queue id 29, text channel, voice message:
+  Paul created a third named project, "Paris September 2026"** (trip
+  with Christine, departing 09-13, Paris + Normandy). Full detail lives
+  in the new `projects/paris-september-2026/CLAUDE.md`; noting here
+  only because it changes the root pointer and the "how many projects
+  are live" answer just given two minutes earlier in queue id 28. Root
+  `CLAUDE.md`'s Current-project block now points at the new project
+  and restructured to list `alliecar` and `safehouse/general` as the
+  two others still live, rather than one. No code involved — pure
+  folder/CLAUDE.md creation, outside the hard boundary. Replied by SMS
+  confirming creation and reading back the extracted facts so Paul can
+  correct any transcription errors.
