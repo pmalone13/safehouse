@@ -253,3 +253,15 @@ this answers; deeper digging (mechanic inspection, full history report)
 is the pre-purchase checklist's job if he decides to pursue it anyway.
 
 Status: waiting on Paul's reply — skip, or pursue with the checklist.
+
+**Follow-up (queue id 21, ~16:40Z): "Can u hunt for photos of accident?"**
+Tried `WebSearch` on the bare VIN, then targeted guesses at the known
+public Copart/IAAI salvage-auction aggregators (Bidfax, AutoAStat,
+AutoAuctionHistory, stat.vin, vininspect) both via search and direct
+URL fetch — no match on any of them for `JF2SHAEC8CH456274`. Either
+this car wasn't sold through a major public salvage auction, or it's
+just not indexed by these aggregators. Reported that back to Paul
+plainly rather than guessing, and pointed out the one real lead: the
+cars.com listing itself says the dealer can provide pre-repair photos
+on request — but that means Paul calling the dealer, not something
+fetchable from here.

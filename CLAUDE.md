@@ -605,3 +605,11 @@ what's throwaway vs. permanent; don't build real features in here.
   block to stop citing "no web access" as settled fact. Full reasoning
   and the corrected capability note live in the alliecar file — don't
   duplicate it here.
+- 2026-09-07 ~16:40Z: same session, queue id 21, text channel, "Can u
+  hunt for photos of accident?" Tried `WebSearch` on the VIN plus
+  targeted fetches against the known public Copart/IAAI salvage-auction
+  photo aggregators (Bidfax, AutoAStat, AutoAuctionHistory, stat.vin,
+  vininspect) — no match anywhere for this VIN. Reported that plainly
+  by SMS rather than guessing, and pointed at the one real lead (the
+  dealer said they can provide pre-repair photos on request — a phone
+  call only Paul can make). Detail in alliecar Session 4.
