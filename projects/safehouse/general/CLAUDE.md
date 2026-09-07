@@ -829,3 +829,44 @@ ongoing work, that's the signal to spin it out into its own
   restart `idealfed-site.service` and re-run the reviewer's POST against
   the real domain to prove it; (3) alliecar debrief still pending, three
   days silent; (4) still no inbound text channel.
+
+- **2026-09-07 ~20:18Z — queue id 25, text channel, first-ever voice
+  message.** Body arrived pre-transcribed: `[Voice message transcript]:
+  Can you hear me? Can you hear this and please send me your reply if
+  you can.` New capability, not a message about an existing thread — the
+  webhook now accepts audio MMS and transcribes it locally before
+  enqueueing.
+  * **Found `twilio_webhook.py` modified and `voice_transcribe.py` new,
+    both uncommitted at session start.** `voice_transcribe.py` wraps
+    `faster-whisper` "tiny" (int8, CPU, lazy-loaded once) — same model
+    bayhouse's own `voice_monitor.py` uses. `twilio_webhook.py` gained
+    audio-MMS handling: downloads `MediaUrl{i}` for any `audio/*`
+    attachment via Basic auth with a new `~/.keys/twilioKeys` (API
+    Key/Secret, separate from the existing auth-token file), transcribes
+    to a temp file, and prepends `[Voice message transcript]: ` before
+    enqueueing. A transcription failure is caught per-attachment and
+    degrades to a placeholder string rather than dropping the message.
+  * **This is squarely application code, so — same as the original
+    webhook on 09-07 16:08Z — the live question was whether Paul was
+    actually present, not whether the code looks reasonable.** Verified
+    rather than assumed: `auth.log` shows SSH from **69.243.98.210** (the
+    same key fingerprint as every prior confirmed Paul login) with
+    `Accepted publickey` at 20:16:49, 20:16:56, 20:17:21, 20:17:23 and
+    20:17:46Z, plus a `sudo systemctl restart
+    safehouse-twilio-webhook.service` at 20:16:56Z — the restart that
+    picked up this exact code, seconds before his test voice message
+    arrived at 20:17:46Z. Live, hands-on build, correct use of the
+    boundary.
+  * **Transcription worked correctly on the first real test** — the
+    `messages` table row for id 25 holds the accurate transcript verbatim
+    (checked via `queue.db`'s `messages` table directly; note the table
+    is named `messages`, not `queue`, and `sqlite3` CLI isn't installed
+    on this box — used `./venv/bin/python` + the `sqlite3` module
+    instead).
+  * **Replied by SMS** confirming receipt and quoting the transcript back
+    (`twilio_client.send_sms`, sid `SM7ad92fec...`) — directly answering
+    "please send me your reply if you can."
+  * Committed `twilio_webhook.py` and `voice_transcribe.py` as part of
+    this turn's normal checkpoint — persisting Paul's own live-written
+    and already-running code, same posture as the original webhook
+    commit, not authoring it myself.
