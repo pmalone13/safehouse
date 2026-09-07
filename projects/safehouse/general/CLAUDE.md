@@ -910,3 +910,23 @@ ongoing work, that's the signal to spin it out into its own
   folder/CLAUDE.md creation, outside the hard boundary. Replied by SMS
   confirming creation and reading back the extracted facts so Paul can
   correct any transcription errors.
+
+- **2026-09-07 ~21:55Z — queue id 32, Paul: "is there a way you could
+  tell me my usage... how many credits I have... this $20 a month
+  subscription."** Checked for any local way to answer before replying
+  — `claude --help` has no usage/account subcommand, `~/.claude/`
+  holds only `policy-limits.json` (tool-restriction policy, not usage
+  data) and `remote-settings.json` (empty), and there's no cached
+  usage/quota file anywhere in `~/.claude/`. **No tool available to
+  this VM (or to a Claude Code session generally) exposes his
+  claude.ai Pro subscription's usage/limit state** — that's console-
+  side account data, not something exposed to the CLI or API.
+  Replied by SMS explaining the real distinction: this used to run on
+  a metered `ANTHROPIC_API_KEY` (a literal dollar-credit balance,
+  retired 2026-09-07 per the root TODO after it silently ran out and
+  killed the coordinator for a day) but now runs on his actual Pro
+  subscription via `claude setup-token`, which uses rolling rate-limit
+  windows rather than a balance — and pointed him at claude.ai's own
+  Settings > Usage page (or the Claude app) as the only place that's
+  actually visible. Didn't guess at a number or pretend to check
+  something I can't reach.
