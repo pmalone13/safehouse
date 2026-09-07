@@ -140,13 +140,35 @@ def _walk_parts_for_body(part: dict, body_chunks: list) -> None:
         _walk_parts_for_body(sub_part, body_chunks)
 
 
+def _walk_parts_for_attachments(part: dict, attachments: list) -> None:
+    """Collects {filename, mime_type, attachment_id} for any part that
+    represents a real attachment (has a filename and either an
+    attachmentId or inline data) -- deliberately does not download
+    anything itself, just enumerates what's there."""
+    filename = part.get("filename", "")
+    body = part.get("body", {})
+    if filename and (body.get("attachmentId") or body.get("data")):
+        attachments.append({
+            "filename": filename,
+            "mime_type": part.get("mimeType", ""),
+            "attachment_id": body.get("attachmentId"),
+            "inline_data": body.get("data") if not body.get("attachmentId") else None,
+        })
+    for sub_part in part.get("parts", []) or []:
+        _walk_parts_for_attachments(sub_part, attachments)
+
+
 def get_message_detail(service, message_id: str) -> dict:
     """Headers (from/subject/date) + plain-text body (falls back to raw
-    HTML if no text/plain part exists)."""
+    HTML if no text/plain part exists), plus an "attachments" list
+    (metadata only -- see download_attachment() to actually fetch
+    one's bytes)."""
     msg = service.users().messages().get(userId="me", id=message_id, format="full").execute()
     headers = {h["name"].lower(): h["value"] for h in msg.get("payload", {}).get("headers", [])}
     body_chunks: list = []
     _walk_parts_for_body(msg.get("payload", {}), body_chunks)
+    attachments: list = []
+    _walk_parts_for_attachments(msg.get("payload", {}), attachments)
     return {
         "message_id": message_id,
         "thread_id": msg.get("threadId"),
@@ -154,7 +176,22 @@ def get_message_detail(service, message_id: str) -> dict:
         "subject": headers.get("subject", ""),
         "date": headers.get("date", ""),
         "body_text": "\n".join(body_chunks),
+        "attachments": attachments,
     }
+
+
+def download_attachment(service, message_id: str, attachment: dict) -> bytes:
+    """Returns the raw bytes of one attachment (an entry from
+    get_message_detail()'s "attachments" list). Small attachments Gmail
+    inlines directly into the message payload (inline_data); larger
+    ones need a separate attachments.get() call keyed by attachment_id
+    -- this handles both transparently."""
+    if attachment.get("inline_data"):
+        return base64.urlsafe_b64decode(attachment["inline_data"].encode("utf-8") + b"===")
+    resp = service.users().messages().attachments().get(
+        userId="me", messageId=message_id, id=attachment["attachment_id"]
+    ).execute()
+    return base64.urlsafe_b64decode(resp["data"].encode("utf-8") + b"===")
 
 
 def send_message(service, to: str, subject: str, body_text: str) -> str:

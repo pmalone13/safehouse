@@ -13,11 +13,13 @@ Run standalone, long-lived (systemd unit: safehouse-email-monitor.service):
     python email_monitor.py
 """
 import os
+import tempfile
 import time
 from pathlib import Path
 
 import google_client
 import queue_db
+import voice_transcribe
 from safehouse_logging import get_logger
 
 log = get_logger(Path(__file__).stem)
@@ -27,6 +29,36 @@ MAX_SEEN_IDS = 2000
 
 _seen_ids: set[str] = set()
 _seeded = False
+
+
+def _transcribe_audio_attachments(service, message_id: str, attachments: list) -> list[str]:
+    """Downloads and transcribes every audio attachment on a message.
+    Same Python-message-processing convention as the Twilio webhook's
+    voice handling -- transcription happens here, before the message
+    ever reaches a spawned Claude session, which only ever sees plain
+    text. A single attachment's failure is logged and skipped, never
+    allowed to drop the rest of the message."""
+    transcripts = []
+    for attachment in attachments:
+        if not attachment["mime_type"].startswith("audio/"):
+            continue
+        try:
+            data = google_client.download_attachment(service, message_id, attachment)
+            suffix = Path(attachment["filename"]).suffix or ".audio"
+            fd, tmp_path = tempfile.mkstemp(suffix=suffix)
+            try:
+                with open(fd, "wb") as f:
+                    f.write(data)
+                text = voice_transcribe.transcribe(tmp_path)
+                if text:
+                    transcripts.append(text)
+            finally:
+                Path(tmp_path).unlink(missing_ok=True)
+        except Exception as e:
+            log.warning(f"voice transcription failed for attachment "
+                        f"{attachment['filename']!r} on message {message_id}: {e}")
+            transcripts.append("[voice message received but could not be transcribed]")
+    return transcripts
 
 
 def _poll_once(service) -> None:
@@ -46,6 +78,8 @@ def _poll_once(service) -> None:
     for message_id in reversed(new_ids):  # oldest-of-the-new first
         detail = google_client.get_message_detail(service, message_id)
         body = f"Subject: {detail['subject']}\n\n{detail['body_text']}"
+        for transcript in _transcribe_audio_attachments(service, message_id, detail["attachments"]):
+            body += f"\n\n[Voice message transcript]: {transcript}"
         queue_db.enqueue("email", detail["sender"], body)
         _seen_ids.add(message_id)
         log.info(f"enqueued email from={detail['sender']!r} subject={detail['subject']!r} "
