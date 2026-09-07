@@ -540,3 +540,11 @@ what's throwaway vs. permanent; don't build real features in here.
   * Committed `twilio_webhook.py` as part of this turn's normal
     checkpoint (`git add -A`) — that's persisting a file Paul already
     wrote and ran, not me authoring code.
+- 2026-09-07 ~16:26Z: same session, queue id 16, identical body ("webhook
+  self-test, please ignore") from the same number, 18 min after id 15.
+  Re-verified rather than assumed a repeat: fresh `Accepted publickey`
+  from 69.243.98.210 on the same key at 16:25:34-41Z, and the webhook's
+  own log shows `sid=SMselftest0002` (incrementing from `...0001`) plus
+  an interim `signature mismatch` rejection at 16:18:31Z — Paul
+  iterating on his manual test client between runs. Still no reply
+  needed.
