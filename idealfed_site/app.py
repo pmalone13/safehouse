@@ -9,6 +9,7 @@ placeholder business details, keep those specific clauses.
 Run via systemd (idealfed-site.service), proxied by nginx on 80/443 --
 this process itself only listens on localhost.
 """
+import html
 import re
 import sqlite3
 from datetime import datetime, timezone
@@ -39,12 +40,17 @@ def _init_db() -> None:
           phone_e164    TEXT NOT NULL,
           consent_text  TEXT NOT NULL,
           consented_at  TEXT NOT NULL,
+          submitted_at  TEXT,
           ip            TEXT,
           user_agent    TEXT,
           status        TEXT NOT NULL DEFAULT 'opted_in'
         )
         """
     )
+    # The table predates submitted_at; CREATE TABLE IF NOT EXISTS won't add it.
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(optins)")}
+    if "submitted_at" not in columns:
+        conn.execute("ALTER TABLE optins ADD COLUMN submitted_at TEXT")
     conn.commit()
     conn.close()
 
@@ -77,6 +83,9 @@ PAGE_SHELL = """<!doctype html>
   .consent-row {{ display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1.2rem; }}
   .consent-row input {{ margin-top: 0.3rem; }}
   .error {{ color: #b00020; }}
+  .optional-tag {{ font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;
+                   color: #555; border: 1px solid #bbb; border-radius: 3px;
+                   padding: 0 0.35rem; margin-top: 0.25rem; white-space: nowrap; }}
   button {{ margin-top: 1.5rem; padding: 0.5rem 1.2rem; }}
 </style>
 </head>
@@ -286,10 +295,17 @@ In a nutshell, I believe that from now on, each one of us should build our "AI H
 
 
 def _render_optin_form(name: str = "", phone: str = "", error: str = "") -> str:
-    error_html = f'<p class="error">{error}</p>' if error else ""
+    error_html = f'<p class="error">{html.escape(error)}</p>' if error else ""
+    name = html.escape(name, quote=True)
+    phone = html.escape(phone, quote=True)
     body = f"""
-<h1>Get Text Updates</h1>
-<p>Sign up to receive SMS reminders and updates from Paul Malone.</p>
+<h1>Sign Up for Updates</h1>
+<p>Enter your name and mobile number to be added to Paul Malone's contact
+list.</p>
+<p>Receiving SMS text messages is <strong>entirely optional and is not
+required</strong> to sign up, to contact, or to hire Paul Malone. Leave the
+box below unchecked and your signup will still go through -- you simply
+will not receive any text messages.</p>
 {error_html}
 <form method="post" action="/sms-optin">
   <label>Name
@@ -300,6 +316,7 @@ def _render_optin_form(name: str = "", phone: str = "", error: str = "") -> str:
   </label>
   <div class="consent-row">
     <input type="checkbox" name="consent" id="consent" value="yes">
+    <span class="optional-tag">Optional</span>
     <label for="consent" style="margin-top:0;">{CONSENT_TEXT}</label>
   </div>
   <button type="submit">Sign up</button>
@@ -327,26 +344,22 @@ def sms_optin_submit():
         return _render_optin_form(name=name, phone=phone_raw,
                                    error="Please enter a valid 10-digit US mobile number.")
 
-    # Consent is NOT a condition of submission -- Twilio error 30923
-    # "Forced Consent Violation" (2026-09-04, rejection #5): the form must
-    # let someone submit their info either way. Checking the box only
-    # decides whether they get enrolled for SMS, never whether the
-    # submission itself succeeds.
-    status = "opted_in" if consented else "declined_sms"
-
     _init_db()
+    now = datetime.now(timezone.utc).isoformat()
     conn = sqlite3.connect(str(DB_PATH))
     conn.execute(
-        "INSERT INTO optins (name, phone_e164, consent_text, consented_at, ip, user_agent, status) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO optins (name, phone_e164, consent_text, consented_at, "
+        "submitted_at, ip, user_agent, status) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
         (
             name,
             phone_e164,
-            CONSENT_TEXT,
-            datetime.now(timezone.utc).isoformat(),
+            CONSENT_TEXT if consented else "NO SMS CONSENT GIVEN",
+            now if consented else "",
+            now,
             request.remote_addr,
             request.headers.get("User-Agent", ""),
-            status,
+            "opted_in" if consented else "contact_only",
         ),
     )
     conn.commit()
@@ -360,12 +373,14 @@ Reply STOP at any time to opt out.</p>
 """
     else:
         body = """
-<h1>Thanks</h1>
-<p>We've saved your information. Since the text-updates box wasn't
-checked, you won't receive SMS messages -- you can sign up for those
-any time from this page.</p>
+<h1>You're signed up</h1>
+<p>Thanks -- your contact details have been recorded.</p>
+<p><strong>You will not receive text messages.</strong> You left the SMS
+consent box unchecked, so no SMS consent was recorded and no text messages
+will be sent to your number. If you change your mind, sign up again at any
+time with the box checked.</p>
 """
-    return PAGE_SHELL.format(title="Thanks", body=body)
+    return PAGE_SHELL.format(title="Signed Up", body=body)
 
 
 _init_db()
