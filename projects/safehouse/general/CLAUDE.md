@@ -883,3 +883,17 @@ ongoing work, that's the signal to spin it out into its own
   this restart carried no code change, unlike the 20:16:57Z one that
   shipped the voice-transcription feature. No reply, per "please
   ignore."
+
+- **2026-09-07 ~21:51Z — queue id 28, text channel, second voice
+  message: "Icloth. Hey, can you send me a list of the projects that we
+  have right now?"** Same question as queue id 19 (16:33Z), this time
+  via voice. The leading "Icloth" reads as a transcription artifact
+  (stray word/misfire at the start of the recording), not a real word
+  to act on — ignored it rather than guessing at intent. Confirmed
+  `projects/` still holds exactly the same two entries as this
+  morning (`alliecar`, `safehouse/general`) before answering, and
+  replied by SMS (`sid=SM8ecfe761...`) naming both with a one-line
+  status each: alliecar (last update: accident/rebuilt-title finding on
+  the newer listing) and safehouse/general (mostly the texting/A2P
+  build, now live). No CLAUDE.md content changed beyond this log entry
+  — read-only question, same as id 19.
