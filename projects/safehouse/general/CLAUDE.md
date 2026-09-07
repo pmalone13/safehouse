@@ -875,3 +875,11 @@ ongoing work, that's the signal to spin it out into its own
   genuine (real Twilio SID `SMa7e6fc...` in the webhook log). Paul
   closing the loop on the voice-transcription test from queue id 25 —
   nothing to do, no reply needed.
+
+- **2026-09-07 ~20:20:50Z — queue id 27, text channel, "webhook
+  self-test, please ignore."** Same shape as queue ids 15/16 earlier
+  today: webhook service restarted 20:20:34-35Z, self-test client posted
+  `sid=SMselftest0001` at 20:20:50Z. Tree was clean (no new diff) —
+  this restart carried no code change, unlike the 20:16:57Z one that
+  shipped the voice-transcription feature. No reply, per "please
+  ignore."
