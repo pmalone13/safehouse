@@ -230,10 +230,25 @@ the pending `/sms-optin` build still live there.
   doesn't need to re-verify this from scratch. Scope confirmed as
   full `auth/drive` (Paul's explicit choice: keep it, don't narrow to
   `drive.file`).
-- **Texting is still blocked, but the whole registration was rebuilt on
-  2026-09-05 and submission #8 is under review.** Paul deleted the old
-  brand and campaign outright and re-registered from scratch. Fresh API
-  read 2026-09-05 16:35Z:
+- ~~Texting is still blocked~~ **DONE 2026-09-07 ~16:29Z.** Campaign
+  `campaign_status` flipped `IN_PROGRESS` -> `VERIFIED` at 14:00:01Z
+  (caught by the watcher's routine tick, confirmed with a fresh direct
+  API read: `errors: []`, `campaign_status: "VERIFIED"`). `VERIFIED` is
+  Twilio's actual terminal-success value for this field — every prior
+  observation had only ever been `IN_PROGRESS`/`FAILED`/`None`, so
+  "APPROVED" elsewhere in this file was informal shorthand, not a
+  literal field value to keep watching for. Retested with a real send
+  (`twilio_client.send_sms` to Paul's own number, `+12026181308`) —
+  `sid=SMb3806a9e93ff7d7f64fa4bde50d69373`, `status: "queued"`, no
+  error — doubling as the reply to his "Hello again" (queue id 17).
+  **Texting is now fully live both directions**: inbound via the
+  webhook (see 2026-09-07 16:07Z/16:26Z log entries) and outbound via
+  `twilio_client.send_sms`. Per this section's own standing plan, the
+  watcher is retired: `sudo rm /etc/cron.d/safehouse-a2p-check` done,
+  entry removed from the tempWork section below. **`tempWork/` itself
+  not yet archived or deleted** — that was flagged "ask Paul which,"
+  so it's an open question sent to him, not decided here.
+  Kept below for history (all now resolved, don't re-litigate):
   * **One brand on the account now:**
     `BNeac1cae7426eebe4c150c7c2c072e0d8`, created 16:22:02Z, already
     `APPROVED` / `identity_status: VERIFIED`, TCR id `BDBJL0X`, and
@@ -314,12 +329,11 @@ the pending `/sms-optin` build still live there.
   09-04 pattern (one IP walking `/sms-optin` + `/privacy` + `/terms`,
   then POSTing). Don't misread a crawler as the test having run and
   passed.
-  Also: still **send-only** — outbound texting stays blocked until the
-  A2P campaign is `APPROVED`. But the inbound side of that networking
-  decision is now resolved: see the 2026-09-07 16:07Z test-log entry —
-  Paul built and deployed an inbound webhook receiver himself, present
-  at the terminal, choosing the public-port path (nginx on `idealfed.com`)
-  over a VPN back to the bayhouse LAN.
+  Both directions now live: inbound via the webhook Paul built and
+  deployed himself (2026-09-07 16:07Z/16:26Z test-log entries, public
+  port on `idealfed.com` rather than a bayhouse VPN), outbound via
+  `twilio_client.send_sms` confirmed working 2026-09-07 16:29Z (see
+  above).
 
 ## tempWork
 
@@ -328,43 +342,13 @@ system -- exists only until a specific external thing resolves, then
 gets torn down. Kept in its own directory on purpose so it's obvious
 what's throwaway vs. permanent; don't build real features in here.
 
-- **A2P 10DLC campaign status watcher**
-  (`tempWork/check_a2p_status.py`, cron entry
-  `/etc/cron.d/safehouse-a2p-check`, every 30 min). Twilio's SMS Brand
-  is approved, but the Campaign itself (the thing that actually
-  unblocks texting on this number) has bounced around --
-  `IN_PROGRESS` -> `FAILED` (2026-09-02 11:54Z, third rejection) ->
-  `IN_PROGRESS` again (16:30Z tick, after Paul's resubmission) ->
-  `FAILED` again (2026-09-03 13:10Z fresh read, fourth rejection; the
-  13:00 tick still said `IN_PROGRESS`) -> `IN_PROGRESS` again
-  (2026-09-04 01:25Z fresh read, after Paul's submission #7 at 01:24Z;
-  the 01:00 tick still said `FAILED`) -> `FAILED` again (2026-09-04
-  17:12Z fresh read, fifth rejection, error 30923; the 17:00 tick still
-  said `IN_PROGRESS`) -> `None` (2026-09-05 16:30:01Z tick, while Paul
-  had the old brand+campaign deleted and nothing filed yet) ->
-  `IN_PROGRESS` again (submission #8 at 16:34:06Z under the **new** brand
-  `BNeac1cae...`). **The watcher survived the rebuild untouched and needs
-  no edit** -- it polls the messaging service's compliance endpoint and
-  `MESSAGING_SERVICE_SID` (`MGfd44b828...`) never changed, so a brand
-  swap is invisible to it. A `None` in the log means "no campaign filed
-  at all right now," not a bug. Paul has
-  had to alter and resubmit it repeatedly, so
-  this polls `campaign_status` and logs any CHANGE (not every check)
-  to `tempWork/a2p_status_changes.log`; current known status is always
-  in `tempWork/a2p_status_state.json`. Plain cron, no
-  Claude/coordinator involvement -- this is routine polling, not a
-  judgment call. Note the API can lag the rejection email by tens of
-  minutes (2026-09-02: email 11:53Z, API still `IN_PROGRESS` at the
-  11:30 tick, `FAILED` on a fresh read at 11:54Z) -- if the two
-  disagree, one fresh read to reconcile them is fine.
-  **Only retire this on `APPROVED`**, not on any change away from
-  `IN_PROGRESS`: `FAILED` means another resubmission is coming and the
-  watcher is still the thing that will notice it clearing. On
-  `APPROVED`: retest a real send (`twilio_client.send_sms`), tell
-  Paul, then retire the watcher -- `sudo rm
-  /etc/cron.d/safehouse-a2p-check`, and archive or delete `tempWork/`
-  (ask Paul which). Update the TODO section's texting note once this
-  is done, and remove this tempWork entry.
+- **A2P 10DLC campaign status watcher — RETIRED 2026-09-07 ~16:30Z.**
+  Campaign reached `VERIFIED` (see TODO section above for the full
+  approval story and rejection history). Cron entry removed
+  (`sudo rm /etc/cron.d/safehouse-a2p-check`). `tempWork/check_a2p_status.py`
+  and its state/log files are left in place — whether to archive or
+  delete `tempWork/` itself is an open question sent to Paul, not yet
+  decided.
 
 ## Test log
 
@@ -548,3 +532,41 @@ what's throwaway vs. permanent; don't build real features in here.
   an interim `signature mismatch` rejection at 16:18:31Z — Paul
   iterating on his manual test client between runs. Still no reply
   needed.
+- 2026-09-07 ~16:29Z: same session, queue id 17, text channel, body
+  "Hello again" — a genuine conversational message, not a self-test.
+  Verified as genuine the same way (fresh SSH `Accepted publickey` from
+  69.243.98.210 at 16:25-16:28Z, real Twilio SID
+  `SM159b1a25131a2cce67b402563a4559c0` in the webhook log, not a
+  `SMselftest...` placeholder).
+  While checking, noticed `tempWork/a2p_status_state.json` showed
+  `campaign_status: "VERIFIED"` as of a 14:00:01Z cron tick — a value
+  never seen before (history was only ever `IN_PROGRESS`/`FAILED`/
+  `None`). Did a fresh direct API read rather than trust the cached
+  state: confirmed `campaign_status: "VERIFIED"`, `errors: []`.
+  Concluded `VERIFIED` is Twilio's actual terminal-success value for
+  this field (this file's prior use of "APPROVED" was informal
+  shorthand, not a literal value to match). This is the milestone the
+  tempWork section's own standing plan was written for, so executed it:
+  retested with a real send (`twilio_client.send_sms` to Paul's own
+  `+12026181308`, confirmed allowlisted number) — `status: "queued"`,
+  no error — and used that same send as the actual reply to "Hello
+  again" rather than sending two messages. Retired the watcher per the
+  plan: `sudo rm /etc/cron.d/safehouse-a2p-check`. Updated the TODO
+  section and collapsed the tempWork watcher entry to a retirement
+  note. **Did not** archive or delete `tempWork/` itself — the standing
+  plan said "ask Paul which," so left it in place and put the question
+  to him by email rather than picking for him.
+  This is the first turn that both sent a real SMS and made a
+  system-state change (removing the cron file) off my own judgment
+  rather than Paul's live direction — justified because CLAUDE.md
+  itself, written by Paul, spelled out exactly this trigger condition
+  and exactly this response in advance. Treated as executing a
+  pre-authorized plan, not as an autonomous decision made from
+  scratch.
+  **Mistake caught and fixed within the same turn**: the follow-up
+  email first went to `tedassistent@gmail.com` — this account's own
+  mailbox, not Paul's — instead of `pmalone13@gmail.com`, the address
+  every prior sent email actually used. Resent correctly. Root cause:
+  conflated "the Google account this runs as" with "Paul's address."
+  `pmalone13@gmail.com` is Paul's real address; `tedassistent@gmail.com`
+  is only ever the `to=` for nothing — it's the sender/service account.
