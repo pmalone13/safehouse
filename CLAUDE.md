@@ -581,3 +581,14 @@ what's throwaway vs. permanent; don't build real features in here.
   `1a07cb4f555876f1` to `pmalone13@gmail.com`) and already logged. No
   reply sent (would just loop again). Logged only so a future turn
   doesn't mistake this for a fresh item needing a response.
+- 2026-09-07 ~16:33Z: same session, queue id 19, text channel, "Nice.
+  List projects we have." Verified genuine (real Twilio SID in the
+  webhook log, not a self-test placeholder). Answered by SMS (first
+  reply sent over real two-way texting, not email) rather than digging
+  further — the two active items are exactly what `projects/` and this
+  file's own "Current project" section already show: `alliecar` (car
+  purchase for Allie, stalled since the 09-04 dealer visit with no
+  debrief) and `safehouse/general` (the catch-all, mostly the A2P/
+  texting build that just finished today). No CLAUDE.md content
+  changed by this turn beyond this log entry — the message was a
+  read-only question.
