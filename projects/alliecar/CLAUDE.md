@@ -306,3 +306,23 @@ how/whether this should be reflected in the household `accounting/`
 books").
 Status: **car purchased**, delivery to Allie targeted 2026-09-10 or
 09-11. Awaiting Paul's confirmation of which car for the record.
+
+**Confirmed (queue id 33, 2026-09-07 ~21:56Z, 19 seconds after my
+question went out):** Paul replied with the exact cars.com URL from
+Session 4 —
+`https://www.cars.com/vehicledetail/67e2b155-41a9-410f-9ebc-520094ace64f/`
+(same listing UUID, different `sid` tracking param). **This is the
+rebuilt-title 2012 Subaru Forester 2.5X, 81,900 mi, VIN
+JF2SHAEC8CH456274, originally listed $7,999.** Paul knowingly bought a
+salvage-rebuilt-title car — a direct, deliberate departure from the
+strategy doc's own MUST HAVE ("clean title, no significant accident
+history"), flagged clearly in Session 4 before purchase. Decision made
+and executed; not relitigating it now. Price math from Session 5 (list
+$7,999 + tax/fees ≈ the reported $9,400-9,500 out-the-door) holds up.
+**Open item carried forward from Session 1, still undecided:** how/
+whether this purchase gets reflected in the household `accounting/`
+books.
+Status: **closed on the "which car" question.** Remaining open items:
+accounting treatment (Paul's call, not yet raised), and whether the
+original 09-04 Farrish/six-car shortlist visit ever happened (still
+unresolved, not chasing it).

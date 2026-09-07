@@ -163,11 +163,13 @@ because this pointer moved:**
   question before reciting the old limitation.
   **Car purchased, 2026-09-07 ~21:54Z (queue id 30)** — Paul: paid
   retail, ~$9,400-9,500 out the door, "great shape," bought a missing
-  backseat part, delivery to Allie targeted 09-10/09-11. Likely (not
-  confirmed) the rebuilt-title 2012 Forester flagged in Session 4 —
-  see that project's Session 5 for the price reasoning. No debrief was
-  ever given on the original 09-04 Farrish/six-car shortlist visit;
-  this message doesn't resolve whether that happened or was bypassed.
+  backseat part, delivery to Allie targeted 09-10/09-11. **Confirmed
+  2026-09-07 ~21:56Z (queue id 33)**: it's the rebuilt-title 2012
+  Forester 2.5X flagged in Session 4 (VIN JF2SHAEC8CH456274) — Paul
+  knowingly bought a salvage-title car, a deliberate departure from the
+  strategy doc's own clean-title MUST HAVE. No debrief was ever given
+  on the original 09-04 Farrish/six-car shortlist visit; this doesn't
+  resolve whether that happened or was bypassed.
 - `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
   texting build finished 2026-09-07 (both directions live, plus voice
   transcription as of ~20:17Z the same day).
