@@ -570,3 +570,14 @@ what's throwaway vs. permanent; don't build real features in here.
   conflated "the Google account this runs as" with "Paul's address."
   `pmalone13@gmail.com` is Paul's real address; `tedassistent@gmail.com`
   is only ever the `to=` for nothing — it's the sender/service account.
+- 2026-09-07 ~16:31Z: same session, queue id 18, email channel, from
+  "Ted Bayhouse <tedassistent@gmail.com>" — this account's own name,
+  body identical to the "A2P campaign VERIFIED" email above. Verified
+  via Gmail message IDs rather than assumed: it's the exact misdirected
+  copy (`1a07cb4aff35c88d`) sent to `tedassistent@gmail.com` itself in
+  the immediately preceding turn, now surfaced by the email monitor as
+  "new" because it landed in this account's own inbox. Not a message
+  from Paul, nothing new to do — already corrected (resent as
+  `1a07cb4f555876f1` to `pmalone13@gmail.com`) and already logged. No
+  reply sent (would just loop again). Logged only so a future turn
+  doesn't mistake this for a fresh item needing a response.
