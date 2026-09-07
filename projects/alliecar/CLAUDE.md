@@ -218,3 +218,38 @@ tomorrow: arithmetic and criteria-checking on numbers he supplies, not
 lookups.**
 
 Status: standing by. Nothing bought, nothing changed about the plan.
+
+## Session 4 (2026-09-07 ~16:35Z): capability change — web access works now, and a rebuilt-title catch
+
+**Correction to Session 3's "this VM has no web access" note: that's no
+longer true, or at least not the whole story.** This turn's `WebFetch`
+tool successfully fetched a live cars.com URL and extracted real listing
+content (verified against a car whose accident history was checked below
+— the tool's output matched what Paul already suspected). Whether this
+is a platform capability that simply wasn't tried before, or something
+that changed, is unknown — but don't repeat the blanket "I can't open
+links from here" line without testing `WebFetch` first. Treat lookups
+as available again, per-URL, going forward.
+
+**Paul, by text (queue id 20), same project, a car outside the original
+six-car shortlist:**
+`https://www.cars.com/vehicledetail/67e2b155-41a9-410f-9ebc-520094ace64f/`
+— "This car was in accident. Can u find details on it?"
+
+WebFetch result: **2012 Subaru Forester 2.5X, 81,900 mi, $7,999,
+VIN JF2SHAEC8CH456274.** Title is **rebuilt**, not clean — seller's own
+listing text: "This Vehicle has been purchased by us from an insurance
+company. The previous owner was paid off by the Insurance company,"
+with pre-repair damage photos available on request. It passed Maryland
+MVA/State Police rebuilt-title inspection (a legal requirement to
+title/sell it at all, not evidence of repair quality). No AutoCheck
+report content was visible in the fetched page, only a link to pull one.
+
+**This directly violates the strategy doc's own MUST HAVE**: "Clean
+title, no significant accident history." Replied to Paul by SMS with
+the finding and asked if he wants to skip it. Did not editorialize
+further or fetch the AutoCheck report — he asked "find details," which
+this answers; deeper digging (mechanic inspection, full history report)
+is the pre-purchase checklist's job if he decides to pursue it anyway.
+
+Status: waiting on Paul's reply — skip, or pursue with the checklist.

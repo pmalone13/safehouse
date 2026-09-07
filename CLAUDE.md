@@ -143,19 +143,20 @@ when Paul emailed the `alliecar` package (queue id 8). Helping him buy a
 used car for his daughter Allie; dealer visits were set for the morning of
 2026-09-04, **starting at Farrish Subaru** (car #6) per Paul's "stand by"
 email (queue id 9, 23:45Z). Read that file first, it carries its own full
-history. There is no web access here, so any car question means arithmetic
-and rule-checking against the recorded shortlist, not lookups.
+history.
 
-**alliecar has been silent for two days — the pointer is stale but
-deliberately not moved.** As of **2026-09-05 16:35Z**, Paul's last
-inbound of any kind is *still* the 2026-09-03 23:45Z "stand by"
-(verified by inbox read, not assumed). The 09-04 morning visit window
-came and went with no debrief. **Draw no conclusion about whether the
-visits happened, slipped, or are resuming this weekend** — and don't
-open with a guess about it. The live work is A2P, which lives in
-`projects/safehouse/general/`; the pointer stays on alliecar because
-only Paul moves it, so read *both* files. If his next message is a car
-debrief, everything needed is in the alliecar file.
+**Correction, 2026-09-07: "no web access" was wrong, or at least
+untested.** `WebFetch` successfully pulled a live cars.com listing this
+session (see alliecar Session 4) — try it for any car-listing/URL
+question before reciting the old limitation.
+
+**alliecar went quiet 09-03 to 09-07, then resumed live over text on
+09-07 ~16:34Z** (queue id 20) — Paul sent a new cars.com listing outside
+the original shortlist and asked about accident history. No debrief was
+ever given on the planned 09-04 Farrish visit; don't assume what
+happened there, and don't open by asking — follow his lead. The A2P/
+texting work in `projects/safehouse/general/` finished today too (see
+that file), so both projects are now simultaneously live; read both.
 
 **Standing clock note:** these logs are UTC and Paul is in Fairfax, VA
 (Eastern, UTC-4). Convert before concluding anything about timing —
@@ -592,3 +593,15 @@ what's throwaway vs. permanent; don't build real features in here.
   texting build that just finished today). No CLAUDE.md content
   changed by this turn beyond this log entry — the message was a
   read-only question.
+- 2026-09-07 ~16:35Z: same session, queue id 20, text channel, "Same
+  project. This car was in accident. Can u find details on it?" plus a
+  cars.com URL not on the original alliecar shortlist. Tried `WebFetch`
+  on the URL despite the alliecar file's standing "no web access" note
+  — it worked, pulling real listing content. Found a rebuilt title
+  (insurance total-loss buyback), which breaks the strategy doc's own
+  clean-title MUST HAVE. Replied by SMS with the finding, updated
+  `projects/alliecar/CLAUDE.md` (Session 4) with the full detail and
+  the capability correction, and updated this file's Current-project
+  block to stop citing "no web access" as settled fact. Full reasoning
+  and the corrected capability note live in the alliecar file — don't
+  duplicate it here.
