@@ -265,3 +265,44 @@ plainly rather than guessing, and pointed out the one real lead: the
 cars.com listing itself says the dealer can provide pre-repair photos
 on request — but that means Paul calling the dealer, not something
 fetchable from here.
+
+## Session 5 (2026-09-07 ~21:54Z): purchase debrief — car bought
+
+**Queue id 30, voice message:** "And... We bought the this car and I
+think it's going to be okay. I did. I just paid retail for it. We're
+going to get it. Probably landed about $9,400 9,500 after taxes and
+everything and it's in great shape. I bought a part for it that's
+missing from the backseat and then we're going to get it to Allie
+probably Thursday or Friday." (Thursday/Friday this week = 2026-09-10 /
+09-11.)
+
+**Which car this is, is not stated explicitly, but the price points
+strongly at the rebuilt-title 2012 Forester from Session 4** (asking
+$7,999; a $9,400-9,500 out-the-door number fits VA sales tax + dealer
+doc/title/tag fees on that asking price, whereas every car on the
+original six-car shortlist listed at $11,390-$12,973 — tax and fees on
+any of those would land well above $9,500). "Paid retail" (no
+negotiation) is also consistent with the Session 4 listing rather than
+a franchise-dealer negotiation. **Not certain — didn't ask for
+confirmation before logging, flagged it in the SMS reply instead.**
+If it *is* that car, Paul has knowingly bought a car with a rebuilt
+(salvage-buyback) title, which the strategy doc's own MUST HAVE
+explicitly rules out ("Clean title, no significant accident history").
+That was flagged clearly in Session 4 and is his decision to make, not
+mine to relitigate now that it's done — same posture as the Session 3
+mileage-cap flag: raise once, in writing, then follow his lead once he
+acts.
+**No debrief was ever given on the original 2026-09-04 Farrish/six-car
+shortlist visit** — this message doesn't resolve that either way (did
+those visits happen and fall through, or did this rebuilt-title car
+simply come first). Not chasing it; if it matters it'll surface on its
+own.
+Replied by SMS: congratulated, asked him to confirm which car (the
+rebuilt-title 2012 Forester vs. one of the six-car shortlist) so the
+project record is accurate, and didn't relitigate the title question.
+**Next steps once confirmed:** update the pre-purchase-checklist /
+accounting-books open item (still unresolved from Session 1 — "decide
+how/whether this should be reflected in the household `accounting/`
+books").
+Status: **car purchased**, delivery to Allie targeted 2026-09-10 or
+09-11. Awaiting Paul's confirmation of which car for the record.

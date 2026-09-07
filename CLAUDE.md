@@ -161,11 +161,13 @@ because this pointer moved:**
   untested.** `WebFetch` successfully pulled a live cars.com listing this
   session (see alliecar Session 4) — try it for any car-listing/URL
   question before reciting the old limitation.
-  **alliecar went quiet 09-03 to 09-07, then resumed live over text on
-  09-07 ~16:34Z** (queue id 20) — Paul sent a new cars.com listing outside
-  the original shortlist and asked about accident history. No debrief was
-  ever given on the planned 09-04 Farrish visit; don't assume what
-  happened there, and don't open by asking — follow his lead.
+  **Car purchased, 2026-09-07 ~21:54Z (queue id 30)** — Paul: paid
+  retail, ~$9,400-9,500 out the door, "great shape," bought a missing
+  backseat part, delivery to Allie targeted 09-10/09-11. Likely (not
+  confirmed) the rebuilt-title 2012 Forester flagged in Session 4 —
+  see that project's Session 5 for the price reasoning. No debrief was
+  ever given on the original 09-04 Farrish/six-car shortlist visit;
+  this message doesn't resolve whether that happened or was bypassed.
 - `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
   texting build finished 2026-09-07 (both directions live, plus voice
   transcription as of ~20:17Z the same day).
