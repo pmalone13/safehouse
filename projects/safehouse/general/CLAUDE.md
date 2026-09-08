@@ -989,3 +989,25 @@ ongoing work, that's the signal to spin it out into its own
   probe library return shapes by re-invoking a real side-effecting
   send to Paul's own number — check the source (`grep def send_sms`)
   or use a throwaway number/dry run instead.
+
+- **2026-09-08 ~12:44Z — queue id 35, text, day plan + multi-instance
+  FYI.** Same session, 3 min after id 34. Verified genuine (real SID
+  `SMdd3b54577d83e191bb2522534ea324f8`, len=960 matching the long
+  body). Paul's day: oyster planting on the bay ~11:30, DMV
+  appointment 2:15pm (car registration + driver's license), then
+  office work in the afternoon, possibly starting a new project he
+  may or may not hand to this instance.
+  **New architectural fact, worth carrying forward**: Paul runs
+  **three separate Claude Code instances** — this one (personal
+  assistant, only one with text+email), one on his office computer
+  (business/accounting), one in his basement (engineering/software
+  development — used to build safehouse itself). Same models, scoped
+  differently. Recorded in the root `CLAUDE.md` (new paragraph after
+  the intro) and in persistent memory
+  (`user_three_claude_instances.md`) since this is exactly the kind of
+  cross-session context worth keeping. Deliberately did **not** create
+  a new `projects/` folder for the project he alluded to — he said
+  "maybe I'll give you the project," not that he was doing so now;
+  per root `CLAUDE.md` step 1, wait for an actual assignment.
+  Replied by SMS wishing him well on the day and inviting him to hand
+  off the project whenever it's decided.
