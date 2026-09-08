@@ -19,6 +19,11 @@ with them and track open issues.
   management agreement (and if so, whether Paul has a copy of it), and
   whether any/all of the ~$2,000 in work was pre-approved.
 
+- **Communication channel:** Richie Property Management has an app that
+  Paul and Christine use to communicate with them (not email/phone as
+  the primary channel) — mentioned 2026-09-08 ~12:47Z (queue id 37).
+  No name/login details given yet.
+
 ## Open items (his to resolve, not mine to guess)
 
 - Outcome of today's call with Richie Property Management.
@@ -47,3 +52,13 @@ with them and track open issues.
   for the maintenance breakdown, or language referencing the $500
   clause). Replied by SMS confirming the project was created and
   wishing him luck on the call.
+
+- **2026-09-08 ~12:47Z — queue id 37, Paul, text.** Mostly a
+  restatement of the three-Claude-instance setup (see root `CLAUDE.md`
+  and `user_three_claude_instances` memory — logged there, not
+  duplicated here), plus one fact relevant to this project: **Richie
+  Property Management has an app that they use to communicate with**
+  — added to the facts section above. No login/name details given. He
+  didn't say whether he wants this instance to have access to that
+  app (likely not possible from here regardless — no browser/mobile
+  app access), so left as a fact to track, not an action item.
