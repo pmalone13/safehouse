@@ -152,16 +152,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — set
-2026-09-08 ~12:58Z when Paul created it by text (queue id 38): an
-open-ended "keep an eye out" search for a replacement tow vehicle
-(large SUV, capable of towing his 24-ft boat) for his aging 2004 Ford
-Expedition. Read that file first, it carries the criteria and open
-items.
+**Current project**: `projects/personal/CLAUDE.md` — set 2026-09-08
+~17:22Z when Paul created it by text (queue id 41): a catch-all for his
+own personal documents/records not tied to another named project.
+First item: a photo of his Social Security card, sent as an MMS
+attachment on the same message. **Read that file first** — it also
+documents a deliberate deviation from this turn's normal checkpoint
+(Drive sync skipped for that one file, given the known binary-corruption
+bug and the sensitivity of an SSN document) that a future turn should
+not "fix" by just running `drive_sync.py` on it without thinking.
 
-**Four other projects remain simultaneously live — don't drop them just
+**Five other projects remain simultaneously live — don't drop them just
 because this pointer moved:**
 
+- `projects/suv-replacement/CLAUDE.md` — set 2026-09-08 ~12:58Z when
+  Paul created it by text (queue id 38): an open-ended "keep an eye
+  out" search for a replacement tow vehicle (large SUV, capable of
+  towing his 24-ft boat) for his aging 2004 Ford Expedition.
 - `projects/richie-property-management/CLAUDE.md` — set 2026-09-08
   ~12:45Z when Paul created it by text (queue id 36): organizing
   communication with the company that manages his Arlington property,
