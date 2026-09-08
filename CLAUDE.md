@@ -224,6 +224,42 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **LIVE, as of this session's wrap-up (2026-09-08 ~17:26Z): both
+  Google integrations are down.** Email (`google_client.get_client()`)
+  and Drive (`get_drive_client()`) both fail identically —
+  `google.auth.exceptions.RefreshError: invalid_grant: Token has been
+  expired or revoked.` — on `creds.refresh()`. Not a scope problem, not
+  a missing-file problem: both token files
+  (`.gmail_api_token.json`, `.drive_api_token.json`) exist and parse
+  fine, they just can no longer be refreshed. **Discovered as a
+  side-effect of this turn's checkpoint**, not reported by Paul — the
+  routine `drive_sync.py` run threw this instead of syncing (caught
+  *before* any upload attempt, so nothing was corrupted/partially
+  written — see the entry below on top of this).
+  **Working theory, not confirmed**: the OAuth client is probably still
+  in Google Cloud Console's "Testing" publishing status, which caps
+  refresh-token lifetime at 7 days regardless of use. The Drive token
+  was placed/smoke-tested 2026-09-01 (per this file's own Test Log) —
+  almost exactly 7 days before this failure. If that's right, the fix
+  is either (a) re-run the interactive OAuth flow again (same
+  tmux-session + browser-approval shape as the Claude `setup-token`
+  fix below) — a recurring 7-day chore, not a real fix — or (b) publish
+  the OAuth consent screen to Production in the Cloud Console, which
+  should remove the 7-day cap. Neither is something this turn could do
+  — (a) needs an interactive browser login only Paul can complete, (b)
+  is a Google Cloud Console change to account-level config, not a file
+  this VM can edit. **Flagged to Paul by text** (the one channel still
+  working) rather than left silent, since a future turn might otherwise
+  spend a while debugging what's actually a known, simple-to-explain
+  outage.
+  **Impact**: no email can be sent or read, and `drive_sync.py` cannot
+  run at all, until this is fixed. Texting (Twilio) is unaffected — a
+  completely separate credential. Two files
+  (`projects/personal/ssa.png`, `projects/personal/passport.jpg`) are
+  sitting local-only with no Drive copy for reasons unrelated to this
+  (see `projects/personal/CLAUDE.md`) — this outage means *no* project
+  content can reach Drive right now, not just those two.
+
 - **`drive_sync.py` silently corrupts binary files.** Line 135 reads
   every file with `read_text(encoding="utf-8", errors="replace")` and
   uploads it as `text/plain`, so any non-text file (.docx, .pdf, images,
@@ -654,3 +690,26 @@ what's throwaway vs. permanent; don't build real features in here.
   by SMS rather than guessing, and pointed at the one real lead (the
   dealer said they can provide pre-repair photos on request — a phone
   call only Paul can make). Detail in alliecar Session 4.
+- 2026-09-08 ~17:26Z: session wrap-up turn (idle window elapsed, no new
+  message). Two real turns this session: queue id 41 (created the
+  `personal` project, fetched Paul's SSA card photo from Twilio's Media
+  API since the webhook only handles audio MMS) and queue id 42
+  (same, for a second attachment that turned out to be his passport
+  photo page, not a duplicate). Both already committed/pushed by the
+  turns that made them; working tree was clean at wrap-up.
+  The substantive thing this wrap-up turn did: attempted the routine
+  `drive_sync.py` checkpoint (deliberately withheld during both live
+  turns given the two sensitive images sitting in `projects/personal/`
+  — temporarily moved them out to `/tmp` first so the rest of the
+  repo's legitimate changes could still sync, planning to move them
+  back after) and hit a hard failure: **both Gmail and Drive OAuth
+  refresh tokens are dead** (`invalid_grant`). Moved the two images
+  back immediately (confirmed still present, still gitignored) and did
+  not retry — this isn't a transient error, it needs real re-auth.
+  Wrote up the full finding and working theory (likely the 7-day
+  refresh-token cap for OAuth apps in Google Cloud Console "Testing"
+  status — timing lines up almost exactly with the 2026-09-01 Drive
+  setup) in the TODO section above. **Texted Paul** rather than
+  emailing (email is one of the two things that's broken) — first time
+  this system has had to fall back to SMS as the *only* channel rather
+  than a preferred one.
