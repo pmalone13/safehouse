@@ -971,3 +971,21 @@ ongoing work, that's the signal to spin it out into its own
   needing Paul present (application code). No email sent — everything
   this session was handled over text, and there's nothing new for the
   inbox.
+
+- **2026-09-08 ~12:41Z — queue id 34, text, "Morning."** Fresh session
+  (prior idle window had elapsed). Verified genuine via the webhook
+  log (real SID `SMccb384a65bdc42bfab91bba15eadfca0`, len=7 matching
+  "Morning"), not a self-test placeholder. No specific ask — replied
+  with a brief greeting plus current status (alliecar delivery to
+  Allie still targeted 9/10-9/11, Paris facts confirmed) and an
+  open-ended offer to dig into anything.
+  **Self-inflicted noise this turn, logged so it isn't mistaken for
+  anything real:** while confirming `send_sms`'s return type (it
+  returns a dict, not an object with `.sid`) I re-ran the call with a
+  literal `'test-dedup-check'` body instead of using a local/mocked
+  call — that sent an actual stray text to Paul's phone. Caught
+  immediately and followed up with a one-line "ignore that, debug
+  artifact" text rather than leaving it unexplained. Lesson: don't
+  probe library return shapes by re-invoking a real side-effecting
+  send to Paul's own number — check the source (`grep def send_sms`)
+  or use a throwaway number/dry run instead.
