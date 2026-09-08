@@ -24,6 +24,18 @@ planning, etc). Created 2026-09-08 ~17:22Z by text (queue id 41).
   Source message: sid `MM3fcdd254b158c15dfa4170d66d4ddabc`, media sid
   `ME9820701ed71e93dc15e068f58471581c`, received 2026-09-08 17:21:58Z.
 
+- `passport.jpg` — Paul's US passport photo page (signature + data
+  page), sent ~2 min later (queue id 42, "same put in personal").
+  **Checked the actual image rather than assume "same" meant another
+  copy of the SSA card** — it's a different document: passport #
+  58357..., issued 22 May 2018, expires 21 May 2028. Fetched the same
+  way as `ssa.png` (Twilio REST Media API, same message sid
+  `MMea6faccd066bafc403851e7da29e23a9` / media sid
+  `ME16eb6600c309b0e41d2a42e2b32aff91`), confirmed intact (`file`
+  reports valid JPEG, 1600x1200, 350,455 bytes). Same storage
+  treatment and same Drive-sync caveat as `ssa.png` below — read
+  "same" as "handle it the same way," not "same file."
+
 ## Storage decision — deliberately NOT sent to Drive yet
 
 Given what this document is (an SSN card / SSA record — about as
@@ -62,3 +74,9 @@ purpose:
   above. Replied by text confirming it's saved and flagging that Drive
   sync was deliberately skipped for this file, asking how he wants it
   stored longer-term.
+- 2026-09-08 ~17:25Z: queue id 42, "same put in personal" with a second
+  MMS attachment. Fetched and saved as `passport.jpg` per above — same
+  local-only, no-Drive-sync treatment as `ssa.png`, same reasoning
+  (binary corruption bug + sensitivity). Replied by text confirming
+  it's saved and identifying what it actually is (passport photo page,
+  not a duplicate SSA card) rather than assuming.
