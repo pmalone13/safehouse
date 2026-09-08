@@ -1011,3 +1011,46 @@ ongoing work, that's the signal to spin it out into its own
   per root `CLAUDE.md` step 1, wait for an actual assignment.
   Replied by SMS wishing him well on the day and inviting him to hand
   off the project whenever it's decided.
+
+- **2026-09-08 ~13:18Z — session wrap-up (idle window elapsed, no new
+  message).** Covered queue ids 34-38, a burst of five texts over
+  ~17 minutes. Working tree already clean at `6b8dbba` — every turn
+  committed/pushed/synced individually as it happened — so this entry
+  is just the cross-turn summary.
+  * **Two new projects created this session**, taking the simultaneous
+    live-project count to five: `richie-property-management` (id 36,
+    Arlington property manager dispute over a $500 approval threshold
+    on ~$2k of maintenance; they communicate via an app per id 37) and
+    `suv-replacement` (id 38, open-ended search for an old, ~100k-mi,
+    good-shape full-size SUV to replace Paul's ailing 2004 Expedition
+    for towing his 24-ft boat — a stated age inconsistency, 15 vs 20
+    years, was flagged back to Paul rather than silently resolved).
+    Current-project pointer now sits on `suv-replacement` (last one
+    created), but per the root file's own framing this isn't
+    "the" project — all five are genuinely live.
+  * **New durable fact recorded outside any single project**: Paul
+    runs three separate Claude Code instances (this one, a
+    business/accounting one on a physical office machine, an
+    engineering one on a physical basement machine) — this one
+    specifically runs on an AWS Lightsail cloud VM. Saved to root
+    `CLAUDE.md` and to persistent cross-session memory
+    (`user_three_claude_instances.md`) since it's genuinely durable
+    identity/scope context, not project-specific.
+  * **One self-inflicted slip, already caught and disclosed**: id 34's
+    turn sent a stray literal test SMS ("test-dedup-check") to Paul's
+    real number while checking `send_sms`'s return type, followed
+    immediately with a corrective "ignore that" text. Logged under id
+    34 above with the lesson (don't probe a function's return shape by
+    re-invoking a real side-effecting send).
+  Open threads for whoever picks this up next, across all five
+  projects: (1) **suv-replacement** — the 15-vs-20-year age
+  clarification, still unanswered; (2) **richie-property-management**
+  — outcome of today's call, whether a written agreement with the
+  $500 clause exists; (3) **Paris** — lodging, Normandy dates,
+  Christine's return date, all still open; (4) **alliecar** —
+  accounting treatment and the never-happened 09-04 Farrish debrief;
+  (5) **general** — `tempWork/` archive-or-delete question still
+  unanswered, `drive_sync.py` binary-corruption fix and the
+  `/sms-optin` cosmetic defects still parked pending Paul being
+  present. No email sent — everything this session ran over text and
+  there's nothing new for the inbox.
