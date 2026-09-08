@@ -32,12 +32,17 @@ car over time, no deadline given.
   not something to silently pick one on his behalf.
   Rough target either way: an old (15-20 yr), high-mileage-ish
   (~100k mi) but good-condition full-size SUV.
-- No budget or specific timeline mentioned yet.
+- **2026-09-08 ~14:53Z, queue id 39, text: "Low miles and less than
+  7k."** Read as: wants low mileage, budget ceiling ~$7,000. This is
+  in tension with the original ask (~100k mi, 15-20 yr old) — flagged
+  to Paul rather than silently reconciled; see log entry below. No
+  confirmation yet on which one governs.
 
 ## Open items (his to resolve, not mine to guess)
 
 - Clarify 15 vs 20 years old as the actual target age range.
-- Budget.
+- Budget vs. mileage tension (see 2026-09-08 ~14:53Z log entry) — is
+  the $7k ceiling firm with mileage flexible, or vice versa?
 - Whether there's any urgency beyond "the Expedition is on its last
   legs" (no hard deadline stated, unlike the original alliecar search).
 
@@ -75,3 +80,24 @@ than assuming it's blocked.
   Replied by SMS confirming the project, and asked the one clarifying
   question worth asking now (15 vs 20 years) rather than silently
   picking one.
+- **2026-09-08 ~14:53Z — queue id 39, Paul, text: "Low miles and less
+  than 7k."** No URL, no VIN — read as new/refined search criteria for
+  this project (the only live thread this fits; alliecar is closed —
+  car bought and confirmed 2026-09-07 — and nothing else open involves
+  car shopping), not a specific listing to look up.
+  **Flagged the same reality-check pattern seen in `alliecar` Session
+  2**: a 15-20-year-old full-size SUV (Suburban/Tahoe class) with
+  genuinely low mileage essentially doesn't exist under ~$7,000 —
+  that combination is what made the original alliecar $7K sedan target
+  jump to $13K once the model narrowed to Forester/Crosstrek. Same
+  shape of problem here, one class up in vehicle size, so likely a
+  bigger gap, not a smaller one. Didn't just accept the criteria and
+  start hunting for something that mostly won't exist; didn't silently
+  revise his numbers for him either.
+  Replied by SMS naming the tension and asking whether $7K is the firm
+  constraint (mileage flexible) or low mileage is (price flexible) —
+  same open question as the earlier 15-vs-20-year ask, still
+  unanswered. **Did not run a live listings search** — no fixed
+  make/model/price bar to search against yet without that answer, and
+  the alliecar precedent says searching first and reality-checking
+  after wastes a round trip.
