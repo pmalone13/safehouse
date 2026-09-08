@@ -40,11 +40,18 @@ car over time, no deadline given.
 
 ## Open items (his to resolve, not mine to guess)
 
-- Clarify 15 vs 20 years old as the actual target age range.
-- Budget vs. mileage tension (see 2026-09-08 ~14:53Z log entry) — is
-  the $7k ceiling firm with mileage flexible, or vice versa?
-- Whether there's any urgency beyond "the Expedition is on its last
-  legs" (no hard deadline stated, unlike the original alliecar search).
+- Clarify 15 vs 20 years old as the actual target age range — still
+  unanswered (asked 2026-09-08, not addressed by the 15:33Z reply
+  either).
+- ~~Budget vs. mileage tension~~ **Answered 2026-09-08 ~15:33Z: he has
+  flexibility on both** — not "one is firm, one flexible" as the
+  question assumed, just soft on the whole combination. Don't treat
+  $7k or "low miles" as hard filters when a candidate comes up.
+- ~~Urgency~~ **Answered 2026-09-08 ~15:33Z: no rush.** Plans to keep
+  driving the Expedition for **~6 more months** (i.e. roughly through
+  early 2027-03). This is genuinely "keep an eye out," not "actively
+  hunting" — don't escalate pace or start proactive listing searches
+  without a reason to.
 
 ## Capability note
 
@@ -101,3 +108,17 @@ than assuming it's blocked.
   make/model/price bar to search against yet without that answer, and
   the alliecar precedent says searching first and reality-checking
   after wastes a round trip.
+- **2026-09-08 ~15:33Z — queue id 40, Paul, text: "yeah i have
+  flexibility but will likely stay with expadition for another 6
+  months."** Answers both open questions from the prior turn, but not
+  the way the question was framed — he's not picking $7k-firm vs.
+  mileage-firm, he's flexible on the combination generally. Also
+  volunteers a soft timeline that wasn't asked for: Expedition stays
+  in service ~6 more months (~through early 2027-03), so this is
+  low-urgency "keep an eye out," not active hunting. The 15-vs-20-year
+  question from queue id 38 is still unanswered — didn't re-ask it
+  this turn since he's already answered two questions unprompted and
+  it's not blocking anything ("keep an eye out" mode doesn't need it
+  yet). Replied by SMS acknowledging, no further question sent. No
+  listings search run — nothing concrete to search against, and this
+  message doesn't ask for one.
