@@ -152,16 +152,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/richie-property-management/CLAUDE.md` —
-set 2026-09-08 ~12:45Z when Paul created it by text (queue id 36):
-organizing communication with the company that manages his Arlington
-property, and clarifying a disputed ~$2,000 in maintenance work he
-believes should have needed his approval above a $500 threshold. Read
-that file first, it carries the facts and open items.
+**Current project**: `projects/suv-replacement/CLAUDE.md` — set
+2026-09-08 ~12:58Z when Paul created it by text (queue id 38): an
+open-ended "keep an eye out" search for a replacement tow vehicle
+(large SUV, capable of towing his 24-ft boat) for his aging 2004 Ford
+Expedition. Read that file first, it carries the criteria and open
+items.
 
-**Three other projects remain simultaneously live — don't drop them just
+**Four other projects remain simultaneously live — don't drop them just
 because this pointer moved:**
 
+- `projects/richie-property-management/CLAUDE.md` — set 2026-09-08
+  ~12:45Z when Paul created it by text (queue id 36): organizing
+  communication with the company that manages his Arlington property,
+  and clarifying a disputed ~$2,000 in maintenance work he believes
+  should have needed his approval above a $500 threshold.
 - `projects/paris-september-2026/CLAUDE.md` — set 2026-09-07 ~21:53Z
   when Paul created it by voice message (queue id 29): trip planning
   for him and Christine, Paris + Normandy, departing 2026-09-13.
