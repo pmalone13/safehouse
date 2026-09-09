@@ -1434,3 +1434,33 @@ ongoing work, that's the signal to spin it out into its own
   Checked on the detached `drive_sync.py` (`pid=187816`, launched last
   turn) while handling this — still running, still making progress
   through `idf/`'s theme-icon files, no need to relaunch.
+
+- **2026-09-09 ~17:55Z — session wrap-up (idle window elapsed, no new
+  message).** Four queue items this session (ids 55-58), all one
+  continuous thread: Paul pushed the `idf/` historical-archive folder
+  plus `idealfed_site/favicon.ico` and asked to "apply favicon," then
+  probed the no-autonomous-code boundary three ways in a row —
+  a plain "push it," "if I say do it anyway, will u apply," and
+  "how about instructions by email" — each answered the same way and
+  each time pointing at a real precedent (09-03 emailed go-ahead,
+  09-06 staged-fix-waits-for-SSH) rather than a fresh rationalization.
+  Held the line all three times: applying the favicon needs an
+  `app.py` edit (a serve route + a `<link rel="icon">` tag), and no
+  channel or phrasing changes the "Paul actually present, directing in
+  real time" requirement. **`app.py` is unedited; the favicon is still
+  inert.** Open thread: whenever Paul is actually at a terminal/SSH'd
+  in, this is a two-minute change to make together.
+  **Confirmed the detached Drive sync finished clean.** The `idf/`
+  archive (hundreds of small theme-icon files) got killed mid-walk
+  twice by session teardown before landing on `nohup ... & disown`
+  last turn; checked just now and it completed on its own after this
+  session moved on: `447 created, 6 updated, 375 unchanged, 0
+  orphaned`, no `drive_sync.py` process still running. Manifest
+  reconciliation before each relaunch (matching Drive's actual
+  folder/file listing rather than trusting a stale or unsaved
+  manifest) held — zero duplicates the whole way through. Worth
+  remembering as a pattern: a large first-sync of a new tree can
+  outlive a turn's background-task window, and `nohup <cmd> & disown`
+  with stdin from `/dev/null` is the fix, not repeated blind reruns.
+  Working tree already clean at `14192ad`, nothing further to commit.
+  No new message to answer.
