@@ -820,3 +820,12 @@ what's throwaway vs. permanent; don't build real features in here.
   same mechanism as the original 2026-09-01 setup — over pasting the
   token JSON into a text, to avoid sending a live refresh token through
   SMS/Twilio unnecessarily. Waiting on him to copy the files over.
+- 2026-09-09 ~14:12Z: same session, queue id 48, text channel, "tried
+  sending via text. I think they got filtered. going to ssh. stand by."
+  Checked rather than trusted his theory: a direct Twilio Messages API
+  query found his 13:54Z attempt with `status=failed`,
+  `error_code=21617` — Twilio's hard 1600-char SMS body cap, not
+  carrier filtering; the message never sent. Corrected that back to
+  him by SMS (so he doesn't try chunking the token over text instead)
+  and confirmed SSH/scp is the right move either way. Standing by for
+  the file copy, no other changes this turn.
