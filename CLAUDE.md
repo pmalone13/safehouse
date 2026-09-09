@@ -849,3 +849,19 @@ what's throwaway vs. permanent; don't build real features in here.
   of SMS), so the balance isn't at risk soon at current volume.
   Reported by SMS. Full breakdown in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-09-09 ~14:21Z: same session, queue id 51, text channel, "If I
+  want to have a group text with you and other parties. Do each of
+  those parties need to register on our site?" Read
+  `twilio_webhook.py` rather than answer from memory: inbound sender
+  checking is a hardcoded single number
+  (`ALLOWED_SENDER_DIGITS="12026181308"`, Paul's own) — anyone else
+  texting the number is acknowledged but never enqueued, silently
+  dropped. Corrected the frame: `/sms-optin` is A2P carrier compliance
+  for Paul's own registered use case, not a gate other people pass to
+  be added — adding people means expanding the webhook allowlist,
+  application code, needs him present. Also flagged this isn't a true
+  group-MMS thread (1:1 with the number, not a shared conversation) and
+  named the real open question (TCPA consent from whoever else would be
+  texted, separate from A2P paperwork). Asked who he has in mind before
+  guessing at a design. Full detail in
+  `projects/safehouse/general/CLAUDE.md`.

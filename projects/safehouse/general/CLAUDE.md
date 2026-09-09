@@ -1176,3 +1176,41 @@ ongoing work, that's the signal to spin it out into its own
   Reported by SMS. No project pointer change (system/meta, same as the
   rest of this session's thread), no code written, no state changed —
   a pure read query.
+
+- **2026-09-09 ~14:21Z — queue id 51, text, "If I want to have a group
+  text with you and other parties. Do each of those parties need to
+  register on our site?"** Read the actual code rather than answer
+  from memory of what the system is supposed to do.
+  * **`twilio_webhook.py:62,165`**: `ALLOWED_SENDER_DIGITS =
+  "12026181308"` (Paul's number, hardcoded) and any inbound message
+  whose sender digits don't match that gets **acknowledged with empty
+  TwiML and explicitly *not* enqueued** — logged as "unrecognized
+  number ... acknowledged, not enqueued." So today, anyone else texting
+  the Twilio number is silently dropped: no reply, and I never see the
+  message. That's the real, technical answer, not a policy one.
+  * **Corrected the frame of the question**: "register on our site"
+  (`/sms-optin`) is the A2P 10DLC carrier-compliance opt-in for Paul's
+  own registered use case — proving to Twilio/carriers how *his*
+  business collects consent — not a technical gate that adds a person
+  to who can text in. Adding other people is purely a matter of
+  expanding `ALLOWED_SENDER_DIGITS` (or replacing it with a real
+  allowlist) in `twilio_webhook.py` — **application code, needs Paul
+  present.**
+  * **Flagged something Paul's question implied but didn't ask**: this
+  isn't built as a true group-MMS thread (one conversation where every
+  participant sees every reply) — it's 1:1 texting between Paul and the
+  number. Even with the allowlist expanded, the shape would be "several
+  people can each text this number and I see all of them," not a
+  shared group conversation, unless a real broadcast/relay feature were
+  built — also application code, also needs him present, and not yet
+  discussed at all as a design.
+  * **Named the actual open legal/compliance question rather than
+  waving at it**: texting people other than Paul through this system
+  raises a TCPA consent question (did *they* agree to receive texts
+  from this number) — a different thing from the A2P `/sms-optin`
+  paperwork, and not something I resolved or should resolve on my own.
+  * Asked who he actually has in mind (family? something else?) since
+  that changes both the compliance answer and whether it's worth
+  building at all — didn't guess at a design without knowing the real
+  use case.
+  Reported by SMS. No code changed, no project pointer change.
