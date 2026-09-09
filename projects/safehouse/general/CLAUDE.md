@@ -1336,3 +1336,38 @@ ongoing work, that's the signal to spin it out into its own
   scratch unless `invalid_grant` actually reappears (in which case the
   same 7-day Testing-mode-cap theory and same scp fix mechanics still
   apply). No email/SMS sent this wrap-up — nothing new to tell Paul.
+
+- **2026-09-09 ~17:29Z — queue id 55, text channel, "just pushed
+  safehouse. added old idealfed sit for hist. added favicon. apply
+  favicon."** Fresh session. Pulled origin/main (fast-forward,
+  `d3ae4bb`) to see what he'd actually pushed rather than trusting the
+  summary: a new top-level `idf/` directory (the old, pre-Flask
+  idealfed.com static site — HTML/CSS/JS/images/worklogs, historical
+  archive, inert, nothing references it) and
+  `idealfed_site/favicon.ico` (6490 bytes) sitting next to `app.py`.
+  * **"Apply favicon" needs an `app.py` edit, so I didn't do it.**
+    `idealfed_site/app.py` has no `static/` folder and no
+    `send_file`/static route at all — every page is a hardcoded HTML
+    string via `PAGE_SHELL.format(...)`. Flask does **not**
+    auto-serve `/favicon.ico` from the directory `app.py` lives in;
+    dropping the file there is inert until something adds (a) a route
+    that serves it (e.g. `send_file` or a static folder) and (b) a
+    `<link rel="icon" href="/favicon.ico">` in `PAGE_SHELL`'s `<head>`.
+    That's a `.py` edit — squarely the hard boundary's "new or edited
+    `.py` files... features," even though it's only ~2-4 lines. Same
+    call as every other code ask that's landed here by text (queue id
+    45's cron job, queue id 7's original `/sms-optin` ask): explain
+    what's needed, don't build it off an async message.
+  * **Replied by SMS** with the concrete shape of the fix and asked
+    him to be present for it, same as the original webhook build.
+  * Noted in passing, not acted on: `app.py`'s live `/sms-optin` POST
+    handler already implements the optional-consent-checkbox behavior
+    that this file's own root TODO section still describes as "not
+    yet done, needs Paul present" (unchecked+submit now succeeds,
+    records `status='contact_only'`). Paul evidently shipped that
+    himself at some point outside a logged turn. Didn't chase down
+    when — not this turn's task — but a future turn should trust
+    `app.py` over that stale TODO paragraph if the two ever disagree
+    again.
+  Open thread: waiting on Paul to be at a terminal for the favicon
+  `app.py` edit.
