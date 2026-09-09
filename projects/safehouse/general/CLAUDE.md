@@ -1107,3 +1107,24 @@ ongoing work, that's the signal to spin it out into its own
   for no real benefit. Offered to retest the moment he confirms the
   files are copied. Nothing else changed this turn; still waiting on
   him.
+
+- **2026-09-09 ~14:12Z — queue id 48, text, "tried sending via text. I
+  think they got filtered. going to ssh. stand by."** He went ahead and
+  tried texting the token content despite the prior turn's advice
+  against it. Checked rather than took his "filtered" theory at face
+  value: `journalctl` on `safehouse-twilio-webhook` shows nothing
+  arrived at the webhook between the two turns except this message and
+  the prior one, but a direct Twilio Messages API query (filtered to
+  messages *to* our own number, i.e. his outbound sends) turned up a
+  **`status=failed`, `error_code=21617`** entry at 13:54:05Z with a
+  body starting "for now use these. They only last 7 days I believe.
+  I'll c..." — that's his attempt. **21617 is Twilio's hard cap on
+  concatenated SMS body length (1600 chars)**, not carrier-side
+  filtering — the message never sent at all, Twilio rejected it
+  outright. Corrected the theory back to him by SMS rather than let
+  him debug the wrong problem (e.g. trying to chunk it smaller over
+  text, which would still route a live credential through SMS
+  unnecessarily) — he's moving to SSH/scp anyway, which is the right
+  call regardless of the actual cause. Told him I'm standing by and
+  will retest the moment the token files land. Nothing else to do this
+  turn; no project pointer change.
