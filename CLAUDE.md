@@ -829,3 +829,10 @@ what's throwaway vs. permanent; don't build real features in here.
   him by SMS (so he doesn't try chunking the token over text instead)
   and confirmed SSH/scp is the right move either way. Standing by for
   the file copy, no other changes this turn.
+- 2026-09-09 ~14:16Z: same session, queue id 49, text channel, "I have
+  cert on my side for SSH. what is ssh command to use." Confirmed the
+  connection details fresh (IMDSv2: `54.88.172.94`,
+  `i-066d2ff2bfd9cf3c9`, unchanged since 2026-09-02; user `ubuntu`;
+  default port 22) and texted the `ssh` command plus the two matching
+  `scp` commands with the exact token-file target paths, closing the
+  loop from queue id 47/48. Standing by to retest once copied.
