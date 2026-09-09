@@ -1237,3 +1237,31 @@ ongoing work, that's the signal to spin it out into its own
   No email sent (still can't — that's the very outage in question). No
   SMS sent either: nothing new to tell Paul that he doesn't already
   have from the last several replies.
+
+- **2026-09-09 ~16:03Z — queue id 52, email channel, subject blank,
+  body blank (just Paul's name/email/phone signature block).** Almost
+  certainly Paul's own test of whether email is back, sent right after
+  he said "going to ssh, stand by" — didn't ask him to confirm that
+  guess, just tested directly.
+  * **Checked token mtimes before anything else**:
+    `.gmail_api_token.json` had jumped to today 16:02Z (was 09-08
+    13:31Z) — a fresh file landed. `.drive_api_token.json` was still
+    09-08 15:34Z, unchanged.
+  * **Tested both directly**: `get_client()` succeeded (fetched the
+    Gmail profile cleanly) — **Gmail/email is back**. `get_drive_client()`
+    still threw the identical `invalid_grant` — **Drive is still down**.
+    So Paul copied the Gmail token over but not the Drive one yet (two
+    separate files, two separate `authorize_*_once.py` runs).
+  * **Replied by email** (first outbound email since the 09-08 outage
+    began) confirming Gmail works and spelling out that Drive still
+    needs its own token copied to `.drive_api_token.json`, same
+    mechanism (`authorize_drive_once.py` on a machine with a browser,
+    then scp to the VM).
+  * Moved the root CLAUDE.md TODO entry and Current-project pointer to
+    reflect "Gmail fixed, Drive still broken" rather than leaving the
+    stale "both down" framing — a future turn checking that section
+    needs the split, not the old all-or-nothing state.
+  * **Did not attempt `drive_sync.py`** as part of this turn's
+    checkpoint — it will still fail on the Drive half. Ran `git
+    push` only; the repo mirror to Drive stays stale until the Drive
+    token lands.
