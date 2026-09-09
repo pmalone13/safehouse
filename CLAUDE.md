@@ -152,18 +152,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-09
-~13:31Z when Paul texted "Alliecar: ..." (queue id 45), asking for a
-cron-triggered daily search for Subaru Foresters near Fairfax. **Not
-built** — it's a new script + cron job, squarely application code under
-the hard boundary above, and a text is the "unattended" case that
-boundary exists for. See that file's Session 6 for what I proposed
-instead and the two open questions sent back to him (live-together
-build, and the actual search criteria) — still unanswered as of the
-pointer move.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-09-09 ~13:38Z for queue id 46 (Paul asking about Remote
+Control and whether re-enabling email/Drive worked) — system/meta, not
+tied to any named project. **Tested email/Drive on request: both still
+fail with the same `invalid_grant` error as the 2026-09-08 outage.**
+Token files on the VM are unchanged since 2026-09-08 (before the outage
+was even found), so whatever Paul did to "re-enable" hasn't produced a
+fresh token here — see the TODO entry below and that file's own log for
+the real fix (an interactive OAuth flow on a machine with a browser,
+token copied to the VM). Still down as of this pointer move.
 
-**Six other projects remain simultaneously live — don't drop them just
-because this pointer moved:**
+**Seven other projects remain simultaneously live — don't drop them
+just because this pointer moved:**
 
 - `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
   `Project 'movies'` (queue id 43): a catch-all for "what movie/show is
@@ -210,6 +211,13 @@ because this pointer moved:**
   strategy doc's own clean-title MUST HAVE. No debrief was ever given
   on the original 09-04 Farrish/six-car shortlist visit; this doesn't
   resolve whether that happened or was bypassed.
+  **New ask, 2026-09-09 ~13:31Z (queue id 45):** a cron-triggered daily
+  search for Subaru Foresters near Fairfax matching agreed criteria —
+  possibly a clean-title backup for the salvage-title car above, not
+  confirmed. **Not built** — new script + cron job, application code,
+  needs Paul present. See that file's Session 6 for what was proposed
+  instead and two open questions (live-together build, and the actual
+  search criteria) — still unanswered.
 - `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
   texting build finished 2026-09-07 (both directions live, plus voice
   transcription as of ~20:17Z the same day).
@@ -274,6 +282,22 @@ the pending `/sms-optin` build still live there.
   sitting local-only with no Drive copy for reasons unrelated to this
   (see `projects/personal/CLAUDE.md`) — this outage means *no* project
   content can reach Drive right now, not just those two.
+  **Re-tested 2026-09-09 ~13:38Z at Paul's request** ("I've re-enabled
+  email and drive, please test") — **still the identical failure.**
+  Checked the token file mtimes, not just the error message: both
+  `.gmail_api_token.json` and `.drive_api_token.json` are still
+  timestamped 2026-09-08, before this outage was even discovered — so
+  whatever Paul did to "re-enable" (Google Cloud Console setting? account
+  permissions page?) has not produced a new token file on this VM.
+  Per `google_client.py`'s own module docstring, the actual fix is: run
+  `authorize_gmail_once.py` / `authorize_drive_once.py` **on a machine
+  with a browser** (not this VM — same shape as the original 2026-09-01
+  Drive setup), sign in as `tedassistent@gmail.com`, then copy the
+  resulting token JSON to this VM at the existing paths. Those two
+  scripts are **not in this repo** (by design — they're meant to run
+  locally, never on the VM), so a future turn searching for them here
+  won't find them. Told Paul this plainly by SMS and offered to walk
+  through it. Still down as of this entry.
 
 - **`drive_sync.py` silently corrupts binary files.** Line 135 reads
   every file with `read_text(encoding="utf-8", errors="replace")` and
@@ -771,3 +795,19 @@ what's throwaway vs. permanent; don't build real features in here.
   salvage-title Forester or a separate search, and what the actual
   criteria (radius/price/mileage/year/trim) should be. Full detail in
   `projects/alliecar/CLAUDE.md` Session 6.
+- 2026-09-09 ~13:38Z: same session, queue id 46, text channel, two asks
+  — "can I enable remote control on your session so I don't have to
+  SSH?" and "I've re-enabled email and drive, please test." Moved the
+  Current-project pointer to `safehouse/general` (system/meta, not tied
+  to any named project). Remote control: answered honestly that this
+  headless, coordinator-spawned session may not support Claude Code's
+  Remote Control the same way a normal interactive session would, and
+  pointed him at Claude Code's own settings rather than guessing.
+  Email/Drive: tested both immediately — **still the identical
+  `invalid_grant` failure**, and the token files on this VM are
+  unchanged since 2026-09-08 (before the outage was even found), so
+  whatever he did to "re-enable" hasn't produced a fresh token here.
+  Explained the real fix (run the local `authorize_*_once.py` OAuth
+  flow on a machine with a browser, copy the resulting token to the
+  VM) and offered to walk through it. Full detail in
+  `projects/safehouse/general/CLAUDE.md`.

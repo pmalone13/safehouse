@@ -1054,3 +1054,38 @@ ongoing work, that's the signal to spin it out into its own
   `/sms-optin` cosmetic defects still parked pending Paul being
   present. No email sent — everything this session ran over text and
   there's nothing new for the inbox.
+
+- **2026-09-09 ~13:38Z — queue id 46, text, two asks: "can I enable
+  remote control on your session so I don't have to SSH?" and "I've
+  re-enabled email and drive, please test."** Moved the Current-project
+  pointer here from `alliecar` — this message is system/meta, exactly
+  this bucket's purpose, not car-shopping content.
+  * **Remote control: answered honestly rather than guessing.** This
+    session runs headless, spawned by `coordinator.py` via `claude
+    --resume`, not a normal interactive terminal session — told Paul I
+    don't know whether Claude Code's Remote Control feature (linking
+    another device to a running session) applies the same way to this
+    invocation shape, and to check Claude Code's own account/device
+    settings directly rather than take my guess.
+  * **Email/Drive test: ran both immediately, both still fail
+    identically** — same `invalid_grant: Token has been expired or
+    revoked.` on `creds.refresh()` as the 2026-09-08 ~17:26Z discovery,
+    unchanged. **Checked the token file mtimes rather than just
+    re-running the call**: `.gmail_api_token.json` and
+    `.drive_api_token.json` are both still timestamped 2026-09-08 —
+    *before* the outage was even found — so whatever Paul did to
+    "re-enable" (most likely something on the Google Cloud Console or
+    account-permissions side) has not produced a fresh token file on
+    this VM. Per `google_client.py`'s own docstring, the actual fix
+    needs `authorize_gmail_once.py` / `authorize_drive_once.py` run on
+    a machine *with a browser* (not this VM — same shape as the
+    original Drive setup), then the resulting token JSON copied here to
+    replace the two existing files. Told him this plainly by SMS rather
+    than reporting a vague "still broken," and offered to walk through
+    it. **Neither script exists in this repo** (per the docstring
+    they're meant to be run locally, not checked in) — a future turn
+    that goes looking for them here won't find them; that's expected,
+    not a missing-file bug.
+  Status: **still down**, real fix not yet applied. Waiting on Paul
+  either to run the local authorize script and copy the token over, or
+  to say what he actually did so I can figure out why it didn't take.
