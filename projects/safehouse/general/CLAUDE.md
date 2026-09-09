@@ -1214,3 +1214,26 @@ ongoing work, that's the signal to spin it out into its own
   building at all — didn't guess at a design without knowing the real
   use case.
   Reported by SMS. No code changed, no project pointer change.
+
+- **2026-09-09 ~14:36Z — session wrap-up (idle window elapsed, no new
+  message).** Busy session, queue ids 43-51 (nine messages), spanning
+  three projects: `movies` (created, two clip-ID attempts), `alliecar`
+  (declined an unattended cron-script build, per the hard boundary),
+  and this bucket (Remote Control question, the ongoing Google OAuth
+  outage troubleshooting, a Twilio usage report, and a group-text
+  capabilities question). Working tree was already clean and every
+  turn's commit/push had already landed individually — nothing to
+  re-push.
+  **Re-verified the one open thread rather than assume it was still
+  true**: emailed/Drive tokens were still `.gmail_api_token.json`
+  09-08 13:31Z / `.drive_api_token.json` 09-08 15:34Z (unchanged), and a
+  fresh direct call to both `get_client()` and `get_drive_client()`
+  still throws the identical `invalid_grant`. Paul said "going to ssh,
+  stand by" at 14:12Z and got the exact `ssh`/`scp` commands at 14:16Z,
+  but the session idled out before he reported back or the token files
+  changed — so this is genuinely still open, not resolved-but-
+  unconfirmed. Next turn (whenever it lands) should retest before
+  assuming either way, since this is a fast-moving thread.
+  No email sent (still can't — that's the very outage in question). No
+  SMS sent either: nothing new to tell Paul that he doesn't already
+  have from the last several replies.

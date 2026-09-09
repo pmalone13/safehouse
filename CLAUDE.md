@@ -865,3 +865,13 @@ what's throwaway vs. permanent; don't build real features in here.
   texted, separate from A2P paperwork). Asked who he has in mind before
   guessing at a design. Full detail in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-09-09 ~14:36Z: session wrap-up (idle window elapsed, no new
+  message). Nine messages this session (queue ids 43-51) across
+  `movies`, `alliecar`, and `safehouse/general`; working tree already
+  clean, every turn already committed/pushed individually. Re-verified
+  rather than assumed the one open thread: Gmail/Drive token files
+  still unchanged since 2026-09-08 and a fresh direct call to both
+  still throws `invalid_grant` — Paul was mid-SSH-troubleshooting
+  ("going to ssh, stand by") when the session idled out, so this is
+  genuinely still open, not silently resolved. No email sent (can't —
+  that's the outage), no SMS sent (nothing new since the last reply).
