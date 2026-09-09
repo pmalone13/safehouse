@@ -1128,3 +1128,16 @@ ongoing work, that's the signal to spin it out into its own
   call regardless of the actual cause. Told him I'm standing by and
   will retest the moment the token files land. Nothing else to do this
   turn; no project pointer change.
+
+- **2026-09-09 ~14:16Z — queue id 49, text, "I have cert on my side for
+  SSH. what is ssh command to use."** Confirmed the connection details
+  fresh rather than relying on memory of the earlier 2026-09-02 finding:
+  IMDSv2 query gave `public-ipv4=54.88.172.94`, `instance-id=
+  i-066d2ff2bfd9cf3c9` — unchanged from that session, and `whoami`/`$HOME`
+  confirm the user is `ubuntu`; sshd has no custom `Port` line, so
+  default 22. Texted him `ssh -i /path/to/your/key ubuntu@54.88.172.94`
+  plus the two matching `scp` commands (with the exact target paths
+  `~/safehouse/.gmail_api_token.json` and
+  `~/safehouse/.drive_api_token.json`) so the reply directly closes the
+  loop from queue id 47/48 rather than making him re-derive the paths.
+  Standing by to retest email/Drive once he's copied the files.
