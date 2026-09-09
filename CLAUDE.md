@@ -152,17 +152,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — set 2026-09-09
-~12:40Z when Paul texted `Project 'movies'` (queue id 43): a catch-all
-for "what movie/show is this clip from" and other movie-related
-questions. First item: a YouTube Shorts link he wanted identified —
-see that file's Log for how it went (short answer: couldn't confirm
-it, see also this session's TODO/note pattern of not trusting
-web-search-summarizer guesses as fact).
+**Current project**: `projects/alliecar/CLAUDE.md` — set 2026-09-09
+~13:31Z when Paul texted "Alliecar: ..." (queue id 45), asking for a
+cron-triggered daily search for Subaru Foresters near Fairfax. **Not
+built** — it's a new script + cron job, squarely application code under
+the hard boundary above, and a text is the "unattended" case that
+boundary exists for. See that file's Session 6 for what I proposed
+instead and the two open questions sent back to him (live-together
+build, and the actual search criteria) — still unanswered as of the
+pointer move.
 
 **Six other projects remain simultaneously live — don't drop them just
 because this pointer moved:**
 
+- `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
+  `Project 'movies'` (queue id 43): a catch-all for "what movie/show is
+  this clip from" and other movie-related questions. Two clips
+  identified so far with mixed confidence — see that file's Log; don't
+  trust a web-search-summarizer's confident-sounding guess as fact
+  without independent corroboration (learned the hard way on the first
+  one, queue id 43).
 - `projects/personal/CLAUDE.md` — set 2026-09-08 ~17:22Z when Paul
   created it by text (queue id 41): a catch-all for his own personal
   documents/records not tied to another named project. Holds a photo
@@ -746,3 +755,19 @@ what's throwaway vs. permanent; don't build real features in here.
   guess (couldn't watch the clip to confirm the actor), naming both
   versions rather than picking one blind. Detail in
   `projects/movies/CLAUDE.md`.
+- 2026-09-09 ~13:31Z: same session, queue id 45, text channel, "Alliecar:
+  is it possible for you to add a python started by cron that will wake
+  you up daily (am) and search for Suburu Foresters within some
+  distance from Fairfax VA that fit a criteria we decide on?" A new
+  script plus a new cron job is squarely application code under the
+  hard boundary, and an inbound text is exactly the unattended case
+  that boundary is written for — **did not build it.** Moved the
+  Current-project pointer to `alliecar` (Paul named it explicitly) and
+  replied by SMS explaining what I'd build (most likely: a cron entry
+  that enqueues a daily search task the same way a text does, waking a
+  session to run `WebSearch`/`WebFetch` and text back matches) and
+  asked him to be present live to build it, plus two open questions:
+  whether this is a clean-title backup for Allie's already-purchased
+  salvage-title Forester or a separate search, and what the actual
+  criteria (radius/price/mileage/year/trim) should be. Full detail in
+  `projects/alliecar/CLAUDE.md` Session 6.

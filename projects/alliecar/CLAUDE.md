@@ -326,3 +326,33 @@ Status: **closed on the "which car" question.** Remaining open items:
 accounting treatment (Paul's call, not yet raised), and whether the
 original 09-04 Farrish/six-car shortlist visit ever happened (still
 unresolved, not chasing it).
+
+## Session 6 (2026-09-09 ~13:31Z): request for a daily automated Forester search — declined to build unattended
+
+**Queue id 45, text:** "Alliecar: is it possible for you to add a python
+started by cron that will wake you up daily (am) and search for Suburu
+Foresters within some distance from Fairfax VA that fit a criteria we
+decide on?"
+
+This is a new script plus a new cron job — squarely "application code"
+under the root CLAUDE.md's hard boundary (no autonomous programming
+unattended, Paul must be present and directing it live). A text message
+landing on the queue is exactly the "unattended" case that boundary
+exists for, so **did not write or install anything.** Replied by SMS
+explaining what I'd build (most likely shape: a cron entry that enqueues
+a daily search task the same way a text/email does, waking a session
+like this one to run `WebSearch`/`WebFetch` against listings and text
+back matches — reuses the existing queue/coordinator machinery rather
+than a bare scraping script with no reasoning ability) and asked him to
+be present live to actually set it up.
+Also asked two open questions rather than assuming: **(1) is this a
+clean-title backup/replacement for Allie's car**, given the salvage-
+title Forester purchased in Session 5 was a deliberate departure from
+the strategy doc's own MUST HAVE, or a separate search entirely; **(2)
+what criteria** — search radius from Fairfax, price range, mileage/year
+range, trim. Neither answered yet.
+Switched the root file's Current-project pointer back to `alliecar`,
+since Paul named the project explicitly ("Alliecar:") and the root
+file's own rule is to follow whatever project he names next.
+Status: **waiting on Paul** — both whether he wants to do this live and
+what the criteria should be. Nothing built.
