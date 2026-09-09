@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<title>Ideal Federal Technologies - Ideal Forms - Getting Started</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96445715-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+						<!-- Logo -->
+							<div id="logo"  class="logoClass">
+								 <a href="index.html"><img width=100 height=100 src="images/idf.png"></a>
+								 							<span style="font-size:16pt;vertical-align:top;font-weight:bold">Ideal Federal Technologies</span>
+
+							</div>
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Welcome</a></li>
+									<li><a href="products.html">Products</a></li>
+									<li><a href="support.html">Support</a></li>
+									<li><a href="about.html">About</a></li>
+
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row 200%">
+							<div class="3u 12u$(medium)">
+								<div id="sidebar">
+
+									<div class="inner">
+
+									<!-- Menu -->
+										<nav id="menu">
+											<header class="major">
+												<h2></h2>
+											</header>
+											<ul>
+											<hr></hr>
+												<li><a href="products.html">Products</a></li>
+												<hr></hr>
+												<li><a href="idealForms.html">About</a></li>
+												<hr></hr>
+												<li class="current"><a href="idealFormsGS.html">Getting Started</a></li>
+												<hr></hr>
+												<li><a href="idealFormsLibrary.html">Library</a></li>
+												<hr></hr>
+												<li><a href="idealFormsCR.html">Advanced Topics</a></li>
+												<hr></hr>
+											</ul>
+										</nav>
+									</div>
+
+								</div>
+							</div>
+							<div class="9u 12u$(medium) important(medium)">
+								<div id="content">
+
+									<!-- Content -->
+										<section>
+											<h2>Ideal Forms for Jira</h2>
+ 									</section>
+
+									<!-- Content -->
+										<article>
+
+											<h2 id=topics>Getting Started</h2>
+											<p>Ideal Forms (iforms) for Jira are custom web forms that run on top of your Jira software.  Ideal Forms are similar to MS Access forms in that they are point and click configurable with properties and events etc.
+											 If you think of Jira Project as the database then the iforms are just wired up visual representations of the Project data.
+											 To get started:<br>
+											<br>
+											<b>1. Install Ideal Forms for Jira:</b> Found in the <a href="https://marketplace.atlassian.com/plugins/com.idealfed.poc.idealforms/server/overview" target="_blank">Jira Marketplace</a>, if you have difficulty finding it please contact us.<br>
+											<b>2. Refresh and Run:</b> Once installed, refresh your browser, you will see an "Ideal Forms Admin" link in the Add-Ons screen.<br>
+											<b>3. <a href="#formGroupSettings">Create a Form Group:</a></b> All forms must be in a "Form Group" to help organize iforms.  Click Add on upper left side of administration window.<br>
+											<b>4. Create a Form:</b> Click Add Form at bottom of screen, name it and select your form group, save. <br>
+											<b>5. <a href="#formDesign">Design Form:</a></b> Select your new form and click "Design Form".<br>
+											<b>6. Run Form:</b> Double click form or select form and click "Open".<br>
+<br>
+<b>Tip:</b>  <a href="downloadUpload.html">Click here for importing and exporting forms instructions.</a>
+
+										</article>
+
+										<article>
+
+											<h2 id=formGroupSettings>Form Group Settings</h2> <a href="#topics">back to topics</a>
+
+											<p>iForms are organized by "Form Groups."  All forms must be in one and only one Form Group.  This concept helps organized forms around particular
+											use cases, and it gives us a container to hold Javascript business rules for the Form Group.  It also allows us to set a 'default' form for
+											a form group to allow a 'Done' button a place to navigate.  Settings are:<br>
+											<br>
+											<b>Group Name:</b> A descriptive name for your form group.<br>
+											<b>Project:</b> A selected Project from your Jira instance.  This is required for Add forms to set Issue types.<br>
+											<b>Default Form:</b> This is the name of a Form to open when a user clicks "Done" in any form of the group.<br>
+											<b>Change Style:</b> This overrides the CSS change style for changed fields.  It defaults to a blue bar on the right.
+											An example is:</b>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{border:solid red 2px}<br>
+											<b>Anon Username:</b> This is the Jira username to use for anonymous form access. (Obviously, be careful with what permissions you grant this account)<br>
+											<b>Anon Password:</b> This is the anonymous username's password.<br>
+											<b>Jira Decorated:</b> This determines if the form will include a Jira background when open from the administrator.<br>
+
+											 </p>
+
+											<h3>Adding and Editing a Form Group</h3>
+											<p>From the main Ideal Forms for Jira Administration screen click the "Add" button to Add a Form Group or click the "Edit" button if you want to edit.
+											<br>
+											<img src=/images/addFormSet.PNG>
+											</p>
+										</article>
+
+										<article>
+
+											<h2 id=formSettings>Form Definitions</h2>
+											<a href="#topics">back to topics</a>
+
+											<p>iForms are defined from the administration menu with a few over arching configurations.<br>Configuration settings are:
+											<br><br>
+											<b>Form Group:</b> This is the form group the form will be a member of.<br>
+											<b>Form Name:</b> A name for the form.  Forms can have any names but should not have special characters and it is a good practice to name them "Form_[function]" or "SubForm_[function]".<br>
+											<b>Form Type:</b> [Edit, Add, List]. This defines the expected behavior of a form and helps iForms load the correct Jira metadata when rendering.<br>
+											<b>Issue Type:</b> [Required for Add type forms]. This sets the issue type for Add forms.  The issue types are determined by the Form Group Project.<br>
+											<b>Test Issue:</b> [Required for Edit type forms]. This provides the form designer an Issue to use when designing the form.<br>
+
+											 </p>
+
+											<h3>Adding and Editing a Form</h3>
+											<p>From the main Ideal Forms for Jira Administration screen click the "Add" button to Add a Form or select a form click the "Edit" button if you want to edit.
+											<br>
+											<img src=/images/addForm.PNG>
+											</p>
+										</article>
+
+										<article>
+
+											<h2 id=formDesign>Form Design</h2>
+											<a href="#topics">back to topics</a>
+
+											<p>Once you have created a form from the administration screen you can then design it.
+											Designing a form is done by selecting your form and clicking the 'Design Form' button.
+											This will open the form in the Form Design mode like the following.
+											<br>
+											<img src=/images/designForm.PNG>
+											 </p>
+
+											<h3 id=formDesignCommands>Form Design Commands</h3>
+											<p>The form design dialog provides a configuration approach similar to other form designers like MS Access.  The commands
+											at the top along with the top accordion section provide the following:
+											<br><br>
+											<b>Preview Form:</b> Will re-render the form to the body of the browser<br>
+											<b>Preview Layout:</b> Will show you the cell layout of the form.<br>
+											<b>Open Form:</b> Will pop a new window and render your form from the saved settings.<br>
+											<b>Save Settings:</b> Will save your settings to the Ideal Forms store within Jira.<br>
+											<b>Form Name:</b> Is the name you set from the administration menu.<br>
+											<b>Issue Type:</b> Issue type is set from the administration menu and defines the type of issue for an Add type form.<br>
+											<b>Test Issue:</b> Test issue is the issue used to open the designer for Edit type forms.<br>
+											<b>Form Type:</b> Determines if it is an Add or Edit form.  (Note, Add type forms will behave like Edit type forms if opened with an Issue key.<br>
+											<b>Form Group:</b> Is the group the form belongs to.  Groups link to Project and hold Javascript business rules.<br>
+											<b>Upload Form:</b> Will open a form file from your computer and load into this browser window.  Uploading does not save to the Jira instance.<br>
+											<b>Download Form:</b> Will save this form settings to a file on your computer (typically in 'downloads').<br>
+											<br>
+											<img src=/images/formSettings1.PNG>
+											</p>
+
+											<h3 id=formLayout>Form Layout</h3>
+											<a href="#topics">back to topics</a>
+											<p>Form settings configure the layout of the form.  Basically, forms are laid out as a table with
+											a number of rows and a number of columns, with one additional section at the top for a header.  Each cell of the table
+											will house a single control element or a subform.  The
+											cells of the table can be merged using the span setting.  (Hint, use the 'Preview Layout' to see the
+											cells you are constructing.) The following are the settings and their meaning.
+											<br><br>
+											<b>Row Count:</b> Number of rows in your form.<br>
+											<b>Column Count:</b> Number of columns in your form.<br>
+											<b>Column Spans:</b> This allows you to merge cells in the same row.  The syntax is a ";" concatenated list of "x,y,z" where x,y is the cell address and "z" is the number of cells to merge including the starting cell.  For example, for an 8 x 8 table
+									        , to set row two as two cells spanned for four cells each is "2,1,4;3,5,4"<br>
+											<b>Column Widths:</b> Sets the widths of each of the form columns.  Syntax is a ";" concatenated list of "x:y" where x is the column and y is the width.  For example
+											to set a 3 column table with 300px columns is "1:300px;2:300px;3:300px".  Percentages can also be used.<br>
+											<b>Head Left:</b> Above the table is a header row, this is the left hand side. *<br>
+											<b>Head Center:</b> This is the center of the header row. *<br>
+											<b>Head Right:</b> This is the right hand side of the header row. *.<br>
+											<b>Outer Style:</b> This is an outer containing DIV including title, all styles are CSS such as "background:blue;border: solid red 1px"<br>
+											<b>Inner Style:</b> This is an inner containing DIV, all styles are CSS such as "background:blue;border: solid red 1px"<br>
+											<b>Head Sytle:</b> This is the header DIV. CSS<br>
+											<b>Tab Title:</b> This sets the value of the browser TAB containing the form.<br>
+											<b>On Load:</b> This sets a javascript function to call at the on load event.**<br>
+											<br>
+											* Hint.  All text entries for the header can include replacement directives to display values from the issue.  The syntax is:  #{name} where name is the issue field such as Summary.
+									        There also a few additional directives such as #{datetime} and #{user}<br>
+									        ** Please see the section on Ideal Forms javascript programming
+									        <br>
+									        <br>
+											<img src=/images/formSettings2.PNG>
+											</p>
+
+
+											<h3 id=formFields>Form Fields</h3>
+											<a href="#topics">back to topics</a>
+											<p>Form Fields set the controls to be placed in each cell of the form.  The left hand side of the dialog shows each field and its cell assignment and
+											once selected a field's properties are shown on the right side.
+											<br><br>
+											Generally speaking, each field is rendered to the page using this structure:
+											<br>
+											<img src=/images/field.PNG>
+											<br>
+											<br>
+											The following are summary descriptions of a field properties, note, many of these
+											settings do not apply for all control types.
+											<br><br>
+											<b>Caption:</b> This is the label of the field or button or link.  If you leave blank the label will be derived from Data Source.  If you enter "none", no label will show. <br>
+											<b>Control Type:</b> Control Type is a selection of what object to render to the screen such as textbox or radio group.  Note, for the control to render properly, the control type must be appropriate for
+											the selected Data Source, if there is a missmatch it will not render.  <a href="controlReference.html">Control Reference</a> provides details on valid settings.<br>
+											<b>Cell:</b> Address of the cell (row,column) to contain the field.<br>
+											<b>Data Source:</b> The data value to bind or with control, this list is determined by the test issue in the designer.  Note, if control type is HTML, then this contains the HTML to render to the screen.<br>
+											<b>Data Reference:</b> This field is used by some control types when additional parameters are required.<br>
+											<b>Outer Style:</b> Standard CSS that sets the outer container style of the control.<br>
+											<b>Inner Style:</b>  Standard CSS that sets the inner container style of the control.<br>
+											<b>Field Style:</b>  Standard CSS that sets the field container style of the control.<br>
+											<b>Label Style:</b>  Standard CSS that sets the label container style of the control.<br>
+											<b>Reference Filter:</b> Settings for some controls to set filtering on the data.<br>
+											<b>RegEx Valid:</b> Standard regular expression settings that will be used to validate the value of a field.<br>
+											<b>RegEx Mess.:</b> A message that will display to the user if the regular expression fails to validate.<br>
+											<b>Tb. Col. Widths:</b> For "itemlist" this optionally sets the widths of each column.<br>
+											<b>Tb. Col. Heads:</b> For "itemlist" this optionally overrides the column headings.<br>
+											<b>Tb. Dbl Clk:</b> Double click event for "itemlist", either:  a form name that will open on the double click, passing the issue key.  Or it calls a javascript business rule.<br>
+											<b>On Change:</b> The on change event for the field.  Named javascript function.<br>
+											<b>Tool Tip:</b> A description that will show when hovering on a field.<br>
+											<b>Data Ref2:</b> Additional reference information used by some fields.<br>
+											<b>Render If:</b> A javascript function call that returns true or false.  Result will hide or un-hide the field.<br>
+											<b>Before Render:</b> A javascript function that fires before render.<br>
+											<b>After Render:</b>  A javascript function that fires after render.<br>
+											<br>
+
+									        <br>
+									        <br>
+											<img src=/images/formSettings3.png>
+											</p>
+											<h3 id=customTypes>Custom Types</h3>
+											<a href="#topics">back to topics</a>
+											<p>Custom Types allow you to create data elements not supported by Jira and data reference containers for
+											use within your forms.  The following summarizes the kind of types you can create.
+											<br><br>
+											<b>REFERENCE:</b>This is text used to configure reference lists used by your forms in combo boxes or GRID dropdowns<br>
+											The format of the value is text in either CSV form or JSON form.<br>
+											<b>GRID:</b> This defines an EXTJS GRID for use within your forms.<br>
+											<b>FILE:</b> This allows you to upload a BINARY file for use in your forms.  Currently the only built in feature<br>
+											that uses this function is the report button that reads a Word binary and replaces tags with Jira values.
+									        <br>
+
+											</p>
+
+										</article>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+						<div id="footer-wrapper">
+							<footer id="footer" class="container">
+								<div class="row">
+																<div class="4u 6u(medium) 12u$(small)">
+
+																	<!-- Links -->
+																		<section class="widget links">
+																			<h3>Related Links</h3>
+																			<ul class="style2">
+																				<li><a href="https://www.atlassian.com/" target="_blank">Atlassian</a></li>
+																				<li><a href="https://www.atlassian.com/software/jira" target="_blank">Atlassian Jira</a></li>
+																				<li><a href="https://marketplace.atlassian.com/" target="_blank">Atlassian Marketplace</a></li>
+																			</ul>
+																		</section>
+
+																</div>
+																<div class="4u 6u$(medium) 12u$(small)">
+
+																	<!-- Links -->
+																		<section class="widget links">
+																		<h3>IFT Links</h3>
+																		<ul class="style2">
+																		<li><a href="products.html">Products</a></li>
+																		<li><a href="about.html">About</a></li>
+																		<li><a href="support.html">Support</a></li>
+
+																		</ul>
+																		</section>
+
+																</div>
+																<div class="4u 6u(medium) 12u$(small)">
+
+							</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<div id="copyright">
+											<ul class="menu">
+												<li>&copy; Ideal Federal Technologies, LLC All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+
+					</div>
+
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

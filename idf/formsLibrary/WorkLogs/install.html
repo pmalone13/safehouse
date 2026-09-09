@@ -1,0 +1,43 @@
+<html>
+
+<body>
+<div style="height:540px;width:978px;border: 2px solid darkblue; border-radius: 5px;overflow:auto;padding:10px;">
+<h2>Work Log Reporting - Installation</h2>
+<table borders=0 style="">
+<tr>
+<td><a href="index.html">Back to Summary</a></td>
+<td>&nbsp;</td>
+<td><a href="/formsLibrary/">Back to Library</a>
+</td>
+</tr>
+</table>
+<br />
+<span style="font-weight:bold;font-decoration:underline">Requirements:</span>
+<br />Scriptrunner - common JIRA plugin, provides a button link on Jira search screen.
+<br />
+<br /><span style="font-weight:bold;font-decoration:underline">Installation Steps:</span>
+<br />Step 1:  Install form group:
+<ol>
+	<li>Download form group - <a href="Ideal Forms Worklog Report.json" download>worklog form group</a></li>
+	<li>Click "Forms Admin", and install the form group using "Upload Group".
+</ol>
+Step 2:  Add button to Issue search screen using Scriptrunner:
+<ol>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Add web "Fragments" from Scriptrunner menu</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Click "Create Script Fragments"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Click "Custom web item"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Name= "Worklog Report"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Section for button= "jira.navigator.pluggable.items"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Key= "ifj-worklog-report"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Menu text= "Worklog"</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;Set link to be the following * </li>
+</ol>
+
+
+* The link item needs to navigat to the form and pass to it the current JQL or filter if set.  This is done with this line of code:
+
+<pre>
+javascript:if(jql.value){window.location="/plugins/servlet/iforms?decorator=general&formId=Worklog%20Report&jql=" + jql.value} else {window.location="/plugins/servlet/iforms?decorator=general&formId=Worklog%20Report&jql=" + window.location.search.replace("?","")}
+</pre>
+
+</div>

@@ -1,0 +1,48 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <xhtml-macro name="IDF Page Imager" class="com.idealfed.pageimager.ImagerMacro" key="com-idealfed-pageimager-ImagerMacro">
+        <description>Manages page copying from sources</description>
+    </xhtml-macro>
+    
+    <resource type="velocity" name="imager-macro-vm" location="/imagermacro.vm"/>
+
+    <!-- add our i18n resource -->
+    <resource type="download" name="images/" location="/images"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="imager-resources" name="Imager Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+
+    <resource type="download" name="theme-crisp-all_1.css" location="/css/theme-crisp-all_1.css"/>
+    <resource type="download" name="theme-crisp-all_2.css" location="/css/theme-crisp-all_2.css"/>     
+
+    <resource type="download" name="confluenceHtmlStyles.css" location="/css/confluenceHtmlStyles.css"/>   
+
+    <resource type="download" name="ext-all.js" location="/js/ext-all.js"/>
+    <resource type="download" name="FileSaver.min.js" location="/js/FileSaver.min.js"/>
+    <resource type="download" name="moment.js" location="/js/moment.js"/>
+    <resource type="download" name="diff.js" location="/js/diff.js"/> 
+        
+        <resource type="download" name="Imager.css" location="/css/Imager.css"/>
+        <resource type="download" name="Imager.js" location="/js/Imager.js"/>
+        <resource type="download" name="ImagerExt.js" location="/js/ImagerExt.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>com-idealfed-pageimager-ImagerMacro</context>
+    </web-resource>
+               
+    <!-- import from the product container -->
+ <component-import key="applicationLinkService" interface="com.atlassian.applinks.api.ApplicationLinkService"/>
+ <component-import key="pluginSettingsFactory" interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory"/>     
+ <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties"/>
+   <rest name="Utils" i18n-name-key="utils.name" key="utils" path="/utils" version="1.0">
+    <description key="utils.description">The Utils Plugin</description>
+  </rest>                           
+</atlassian-plugin>

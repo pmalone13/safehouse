@@ -1,0 +1,17 @@
+#requireResource("confluence.web.resources:jquery")
+#requireResource("com.idealfed.pageimager.imager:imager-resources")
+<a href="/spaces/flyingpdf/flyingpdf.action?key=ID" target="_blank">Click to open Confluence Space Export Tools</a><br>
+<div class="imagerSettingsDiv">
+    <fieldset class="parameters hidden">
+            <input type="hidden" class="imagerSettings" value="$imagerSettings">
+    </fieldset>
+    <div id="imagerOuterDivId" style="width:100%"> 	    
+	    <div id="imagerDivTopId" style="width:100%"> 	    
+	    </div>
+	    <div id="imagerDivMiddleId" style="width:100%">  
+	    </div>
+	    <div id="imagerDivBottomId" style="width:100%"> 	    
+	    </div>   
+    </div>        
+</div>
+

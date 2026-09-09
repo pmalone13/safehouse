@@ -1,0 +1,919 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<title>Ideal Federal Technologies - Ideal Forms - Control Reference</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96445715-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo"  class="logoClass">
+								 <a href="index.html"><img width=100 height=100 src="/images/idf.png"></a>
+								 							<span style="font-size:16pt;vertical-align:top;font-weight:bold">Forms for Jira</span>
+
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="index.html">Welcome</a></li>
+									<li><a href="products.html">Products</a></li>
+									<li><a href="support.html">Support</a></li>
+									<li><a href="about.html">About</a></li>
+
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row 200%">
+							<div class="4u 12u$(medium)">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+									<div class="inner">
+
+									<!-- Menu -->
+										<nav id="menu">
+											<header class="major">
+												<h2></h2>
+											</header>
+											<ul>
+											<hr></hr>
+												<li><a href="products.html">Products</a></li>
+												<hr></hr>
+												<li><a href="idealForms.html">About</a></li>
+												<hr></hr>
+												<li><a href="idealFormsGS.html">Getting Started</a></li>
+												<hr></hr>
+												<li><a href="idealFormsLibrary.html">Library</a></li>
+												<hr></hr>
+												<li class="current"><a href="idealFormsCR.html">Advanced Topics</a></li>
+												<hr></hr>
+											</ul>
+										</nav>
+									</div>
+										<section>
+											<h3 id="topics">Topics</h3>
+											<ul class="style2">
+												<li><a href="#attachmentList">Attachment List</a></li>
+												<li><a href="#attachmentListGrid">Attachment List Grid</a></li>
+												<li><a href="#attachmentManaged">Attachment Managed</a></li>
+												<li><a href="#attachmentUpload">Attachment Upload</a></li>
+												<li><a href="#button">Button</a></li>
+												<li><a href="#checkbox">Checkbox</a></li>
+												<li><a href="#commentList">Comment List</a></li>
+												<li><a href="#datebox">Datebox</a></li>
+												<li><a href="#dropdown">Dropdown</a></li>
+												<li><a href="#gridsection">GRID</a></li>
+												<li><a href="#htmlsection">HTML</a></li>
+												<li><a href="#historyList">History List</a></li>
+												<li><a href="#iframsection">iFrame</a></li>
+												<li><a href="#itemList">Item List</a></li>
+												<li><a href="#itemTree">Item Tree</a></li>
+												<li><a href="#formButtons">Form Buttons</a></li>
+												<li><a href="#formButtonsForPopup">Form Buttons for Popup</a></li>
+												<li><a href="#multiselect">Multiselect</a></li>
+												<li><a href="#navigatetoform">Navigate to Form</a></li>
+												<li><a href="#subform">Sub Form</a></li>
+												<li><a href="#openurl">Open URL</a></li>
+												<li><a href="#popform">Popup Form</a></li>
+												<li><a href="#radio">Radio Group</a></li>
+												<li><a href="#reportsection">Report Button</a></li>
+												<li><a href="#tabmenu">Tab Menu</a></li>
+												<li><a href="#textareaid">Text Area</a></li>
+												<li><a href="#textboxid">Text Box</a></li>
+												<li><a href="#userpicker">User Picker</a></li>
+												<li><a href="#checkbox">Checkbox</a></li>
+												<li><a href="controlReference.html">Control Reference</a></li>
+											</ul>
+										</section>
+
+								</div>
+							</div>
+							<div class="8u 12u$(medium) important(medium)">
+								<div id="content">
+
+									<!-- Content -->
+										<article>
+
+											<h2 id=quickStart>Ideal Forms Control Reference</h2>
+											<p>Ideal Forms decouple the Jira data from the form presentation.  Fundamentally, to create a form you add a "field" and set its "control type".  The control type
+											will render a specific control to the form, and it will attempt to bind it to the "Data Source".  The following describes each control type and its behaviors.
+
+
+
+
+
+										</article>
+
+										<article>
+
+											<h2 id=attachmentList>Attachment List (attachmentlist)</h2>
+
+											<p>Attachment list will display a list of attachments in a table format.  The layout is done with DIVs and the
+											DIVs all have CSS classes assigned to them.  To alter the default layout of the table you can alter the styles by adding a custom type named "style"
+											and entering standard CSS in the custom type value.<br>
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "attachmentlist"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> "Attachment"<br>
+											<b>Outer Style:</b> CSS that will style the outer container.<br>
+											<b>Inner Style:</b> CSS that will style the inner container.<br>
+											<b>Default Styles:</b> The attachments are layed out in a DIV table with styles.  The default styles are:
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											<pre>
+				CSS Reference:
+				.ijfAttachList{
+					border-top:solid lightblue 1px;
+					border-right:solid lightblue 1px;
+					border-bottom:solid lightblue 1px;
+					border-left:solid lightblue 1px;
+					border-spacing: 0;
+					width:100%;
+				}
+				.ijfAttachListHead{
+					display: table-row;
+					background:lightblue;
+					font-weight:bold;
+					width:100%;
+				}
+				.ijfAttachListHeadName{
+					display: table-cell;
+					text-align:center;
+					width:50%;
+				}
+				.ijfAttachListHeadAuthor{
+					display: table-cell;
+					text-align:center;
+					width:25%;
+				}
+				.ijfAttachListHeadDate{
+					display: table-cell;
+					text-align:center;
+					width:25%
+				}
+				.ijfAttachListRow{
+					display: table-row;
+					width:100%;
+				}
+				.ijfAttachListName{
+					display: table-cell;
+					text-align:left;
+					width:50%;
+				}
+				.ijfAttachListAuthor{
+					display: table-cell;
+					text-align:left;
+					width:25%;
+				}
+				.ijfAttachListDate{
+					display: table-cell;
+					text-align:left;
+					width:25%;
+				}
+
+
+											</pre>
+											</p>
+										</article>
+
+
+										<article>
+
+											<h2 id=attachmentListGrid>Attachment List Grid(attachmentlistgrid)</h2>
+											<a href="#topics">back to topics</a>
+											<p>Attachment list will display a list of attachments in a table format.  The layout is done with a grid control
+											and optionally, you can have a delete file action.<br>
+											<br>
+																						<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "attachmentlistgrid"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> "Attachment"<br>
+											<b>Outer Style:</b> CSS that will style the outer container.<br>
+											<b>Inner Style:</b> CSS that will style the inner container.<br>
+											<b>Field Styles:</b> CSS that will style the inner container, "delete:true" for the delete option<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+
+											</p>
+										</article>
+
+										<article>
+
+											<h2 id=attachmentManaged>Attachment Managed(attachmentmanaged)</h2>
+											<a href="#topics">back to topics</a>
+											<p>Attachment managed will render a single control that manages one single file, by name.  This effectively gives you
+											versioning.  Meaning, you name the file you want uploaded and this will manage all the file uploads in a single
+											control.<br>
+											<br>
+													<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "attachmentmanaged"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> NAME OF THE FILE, WITH EXTENSION, YOU WANT LOADED<br>
+											<b>Outer Style:</b> CSS that will style the outer container.<br>
+											<b>Inner Style:</b> CSS that will style the inner container.<br>
+											<b>Field Styles:</b> CSS that will style the inner container.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+
+											</p>
+										</article>
+
+										<article>
+											<h2 id=attachmentUpload>Attachment Upload (attachmentupload)</h2>
+											<a href="#topics">back to topics</a>
+											<p>Attachment upload adds a button to the page that when clicked will allow the user to select a file to upload.
+											<br>
+													<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The text of the button<br>
+											<b>Control Type:</b> "attachmentupload"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> "Attachment"<br>
+											<b>Styles:</b> Under development, right now this style is fixed.<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=button>Button (button)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A Button is just a simple button or link that when clicked will fire the on change event.
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The text of the button<br>
+											<b>Control Type:</b> "button"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Label Style:</b> If "link" then this button will display as a URL link<br>
+											<b>On Change:</b> if set, function called on click.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=checkbox>Checkbox (checkbox)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A checkbox is a standard multi select control using checkboxes for the options.
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "checkbox"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  checkbox or multiselect.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, and optionally "columns:x" where x is number of columns.  "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+
+											<h2 id=historyList>History List (commentlist)</h2>
+											<a href="#topics">back to topics</a>
+											<p>History list will display a list of item changes in a table format. The layout is done with DIVs and the
+											DIVs all have CSS classes assigned to them, this control uses the same DIVs as the Comment list so alter those divs to change.
+											To alter the default layout of the table you can alter the styles by using
+											the <a href="javascriptReference.html#styleReference">style override</a> in the javascript business rules section.<br>
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "commentlist"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> "Comment"<br>
+											<b>Outer Style:</b> CSS that will style the outer container.<br>
+											<b>Inner Style:</b> CSS that will style the inner container.<br>
+											<b>Default Styles:</b> The attachments are layed out in a DIV table with styles.  The default styles are:
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+										</p>
+										</article>
+										<article>
+
+											<h2 id=commentList>Comment List (commentlist)</h2>
+											<a href="#topics">back to topics</a>
+											<p>Comment list will display a list of comments in a table format.  The layout is done with DIVs and the
+											DIVs all have CSS classes assigned to them.  To alter the default layout of the table you can alter the styles by using
+											the <a href="javascriptReference.html#styleReference">style override</a> in the javascript business rules section.<br>
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "commentlist"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> "Comment"<br>
+											<b>Outer Style:</b> CSS that will style the outer container.<br>
+											<b>Inner Style:</b> CSS that will style the inner container.<br>
+											<b>Default Styles:</b> The attachments are layed out in a DIV table with styles.  The default styles are:
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											<pre>
+			.ijfCommentList{
+			    border-top:solid lightblue 1px;
+			    border-right:solid lightblue 1px;
+			    border-bottom:solid lightblue 1px;
+			    border-left:solid lightblue 1px;
+			    border-spacing: 0;
+			    width:100%;
+			    max-height:200px;
+			    overflow-y:auto;
+			}
+			.ijfCommentListHead{
+			    display: table-row;
+			    background:lightblue;
+			    font-weight:bold;
+			    width:100%;
+			}
+			.ijfCommentListHeadName{
+			    display: table-cell;
+			    text-align:center;
+			    width:70%;
+			}
+			.ijfCommentListHeadAuthor{
+			    display: table-cell;
+			    text-align:center;
+			    width:15%;
+			}
+			.ijfCommentListHeadDate{
+			    display: table-cell;
+			    text-align:center;
+			    width:15%
+			}
+			.ijfCommentListRow{
+			    display: table-row;
+			    width:100%;
+			}
+			.ijfCommentListName{
+			    display: table-cell;
+			    text-align:left;
+			    width:70%;
+			}
+			.ijfCommentListAuthor{
+			    display: table-cell;
+			    text-align:left;
+			    width:15%;
+			}
+			.ijfCommentListDate{
+			    display: table-cell;
+			    text-align:left;
+			    width:15%;
+			}
+
+											</pre>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=datebox>Datebox (datebox)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A datebox is a standard date selector.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "datebox"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  date or datetime.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>RegEx Valid:</b> Standard regular expression not including the outer "/"<br>
+											<b>RegEx Mess:</b> The message to display to the user if the regular expression is invalid<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=dropdown>Dropdown (dropdown)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A dropdown is a standard combo or dropdown control.  It can show single select custom fields and single select system fields.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "dropdown"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  single select list or checkbox type.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, and optionally "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=gridsection>GRID (GRID)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This is the EXTJS GRID panel control implemented using a custom type definition.  The GRID definition is done at the <br>
+											main administration menu in "Custom Types".  Creating a custom type of type GRID will allow you to define columns and types <br>
+											and validation rules for your values.<br>
+											Also you must tell the Custom Type what field you will storing the data in.  This field must be jira type TEXT MULTILINE and the<br>
+											field must be available to the issue. Ideal Forms will store the JSON representation of the table in that Jira field.  <br>
+											<br>Note: the underlying database type is CLOB.<br>
+											Note: do not name the custom type the same name as the Jira Field storing the contents
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "GRID"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the CUSTOM TYPE you created from the main screen<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=reportsection>Report Button</h2>
+											<a href="#topics">back to topics</a>
+											<p>Forms has a report function that allows you to download a Word file with dynamically embedded values from your issues.
+											The word reports are stored as "Custom Types" from the main administration form.  The Word file is a normal docx word file
+											in which you include tags to output your issue values.  The syntax for tags is {tagname} and you can format the tags however
+											you would like.  Example tags include:<br>
+											<br>{Summary}
+											<br>{Description}
+											<br>{Due Date}
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b>reportbutton<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the CUSTOM TYPE you created from the main screen<br>
+											<b>Outer Style:</b> NA<br>
+											<b>Inner Style:</b> NA<br>
+											<b>Field Style:</b> NA<br>
+											<b>Label Style:</b> NA<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=htmlsection>HTML (html)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This is just simple HTML entered into the Data Source.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "html"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> HTML to display.  Optionally include tags to display values, example:  #{Summary}.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+
+										<article>
+											<h2 id=iframsection>iFrame (iframe)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This is an iframe control that will attempt to display the target.  Depending on your server you may
+											not have much success getting it to render.  Your server (Jira server) must be set to allow iframes to render.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "iframe"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> url to display<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that will set size of the iFrame as well as scrolling etc.<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=itemList>Item List (itemlist)</h2>
+											<a href="#topics">back to topics</a>
+											<p>The item list is an important control for displaying items in a table form.  Item lists can be
+											from a standard Jira JQL query, or they can be child issues or related issues.  In all cases item lists
+											can call a javascript function to filter the results after the primary list has been created.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "itemlist"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> a JQL query, or "children" for child issues or "related" for related issues<br>
+											The JQL here is very powerful.  Jira includes many functions you can include.  Anything you can write in <br>
+											JQL can be used here, and you can use memory variables in your query. (similar to SQL parameter binding.)<br>
+											Example helpful JQLs:  PARENT IN (#{key}) -> this will use the memory variable "key" and pull all children<br>
+											Example helpful JQLs:  project = PMM and cf[13819] = "#{EPMD Project}" -> this pulls PMM issues where custom field 13819 = form value "EPMD Project"<br>
+											You can also set the number rows to return with a &maxResults=200 at the end of your JQL.
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS and optionally "paging", Ex:  paging:10<br>
+											Paging is important if your return list has a lot of rows.  Paging will display the number of entries<br>
+											on a page with controls to page forward and backward.  You can also use paging to prevent paging from happening<br>
+											by setting it to a very high number like 1000.  Note, Jira's maximum return is 1000 rows in one page.  <br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>Tb. Col. Widths:</b> A comma delimited list of widths for the display<br>
+											<b>Tb. Col. Heads:</b> Overrides for the column headers<br>
+											<b>Tb. Dbl Clk:</b> A form name or a javascript function.  Will be invoked on a row double click<br>
+											<b>On Change:</b> A form name or a javascript function.  Will be invoked on a row single click<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=itemTree>Item Tree (itemtree)</h2>
+											<a href="#topics">back to topics</a>
+											<p>The item tree is a control for displaying items in a tree format.  The tree nodes are determined by
+											the "links" of the Issue.  The item tree control helps create links between issues using a right mouse click
+											to add children.  Functionally, the objective is to add a tree structure from which you hang child nodes
+											that model data for your use case.  This control can be used in a similar way to the Gantt chart of a project
+											management tool.  The links are created to the same project, issue type.
+											<br>
+											<br>
+											Note:  you have to include a custom field, type number, called "taskOrder" for the nodes to automatically order like a gantt chart
+											and for the "move up" and "move down" menu options to appear.
+
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "itemtree"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> a JQL query<br>
+											JQL is used here, and you can use memory variables in your query. (similar to SQL parameter binding.)<br>
+											Example helpful JQLs:  PARENT IN (#{key}) -> this will use the memory variable "key" and pull all children<br>
+											Example helpful JQLs:  project = PMM and cf[13819] = "#{EPMD Project}" -> this pulls issues where custom field 13819 = form value "EPMD Project"<br>
+											You can also set the number rows to return with a &maxResults=200 at the end of your JQL.
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS and optionally "paging", Ex:  paging:10<br>
+											Paging is not enabled for this control yet, so the max results must be used to pull up to 1000 issues<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>Tb. Col. Widths:</b> A comma delimited list of widths for the display<br>
+											<b>Tb. Col. Heads:</b> Overrides for the column headers<br>
+											<b>Tb. Dbl Clk:</b> A form name or a javascript function.  Will be invoked on a row double click<br>
+											<b>On Change:</b> A form name or a javascript function.  Will be invoked on a row single click<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=formButtons>Form Buttons (formbuttons)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This places a set of three buttons on the screen:  Save, Reload and Done.  Any of these can be renamed
+											and hidden.  The Save will save changed fields.  Reload will reload the issue and rerender the form and
+											Done will navigate to the Form Group "default" form or it will render the form set in "Data Source".  Note, this button is not
+											to be used for Pop-Up forms, use formbuttonsforpopup for that.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "formbuttons"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> A form to open when "Done" is clicked, if blank default form from Form Group will be rendered<br>
+											<b>Outer Style:</b> A comma separated list of labels to override names.  Also used to suppress a button.  Example:  ",,Home" will show
+											one button "Home" that will invoke the "Done" function<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+
+										<article>
+											<h2 id=formButtonsForPopup>Form Buttons for Popup(formbuttonsforpopup)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This places a set of three buttons on the screen:  Save, Save/Done and Done. These buttons are only
+											for use on popup forms because their behavior is specific to popup form behavior.  The behavior is:<br>
+											<b>Save:</b> Saves the form, does not close.  If the form is an Add type, it will switch behavior to an Edit type<br>
+											<b>Save/Done:</b> Saves the form and closes dialog.<br>
+											<b>Done:</b> Closes the form with no save.<br>
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "formbuttonsforpopup"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> A form to open when "Done" is clicked, if blank default form from Form Group will be rendered<br>
+											<b>Outer Style:</b> A comma separated list of labels to override names.  Also used to suppress a button.  Example:  ",,Home" will show
+											one button "Home" that will invoke the "Done" function<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=multiselect>Multiselect (multiselect)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A multi select is a control that allows multiple value selection.  This control can show custom multi select fields as well as
+											system fields like Version and Component.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "multiselect"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  multi select or checkbox.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, and optionally "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=navigatetoform>Navigate to Form (navigatetoform)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A Button or link that when clicked will render a form.  If a "navigatetoform" button is rendered
+											on a form, and that button's target form is the same as the one rendering, then the button will render highlighted.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The text of the button<br>
+											<b>Control Type:</b> "navigatetoform"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Label Style:</b> If "link" then this button will display as a URL link<br>
+											<b>On Change:</b> if set, function called on click.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=subform>Sub Form (subform)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A subform is a field that renders another form within this form.  Subforms are any other form.  Sub forms can have sub forms.  Sub forms are
+											rendered seamlessly by default, optionally you can add style directives that will wrap the subform in an accordion with title.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "subform"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the form to render.<br>
+											<b>Outer Style:</b> custom styles that optionally style the subform, the default is seamless.  For example the following sets a containing accordian:<br>
+											collapsible:true;panelTitle:Expand for the #{key} comments;collapsed:true<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, and optionally "required:true" if required<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=openurl>Open URL (openurl)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A simple button or link that when clicked will open a new window to a URL.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The text of the button<br>
+											<b>Control Type:</b> "openurl"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Label Style:</b> If "link" then this button will display as a URL link<br>
+											<b>On Change:</b> if set, function called on click.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=popform>Pop Form (popform)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A popform is a button that when clicked opens another form in a popup window the context of the popform is the same as the owning window.  Size and other
+											characterstics are determined by the form being popped up.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Control Type:</b> "openpopform"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the form to pop up.  The target form will set the size and style of the popup<br>
+											<b>Label Style:</b> If "link" then this button will display as a URL link<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=radio>Radio Group (radio)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A radio is a standard single select control using radio group for the options.  Radios can also control
+											system single select fields like Status and Priority.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "radio"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  radio or dropdown.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, and optionally "columns:x" where x is number of columns.  "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+										<article>
+											<h2 id=tabmenu>Tab Menu (tabmenu)</h2>
+											<a href="#topics">back to topics</a>
+											<p>Tab menu renders a set of tab buttons.  Each tab button will function as a navigate to form or a javascript entry point.  The syntax of the
+											buttons uses JSON in the "Data Source" field.  The following example uses this settings:
+											<br>
+											[["List","Simple Form Item List"],["Run Function","snippet:helloWorld"],["Simple Form","Simple Form with Subform"],["Another Form","Simple Form Multi Select"]]
+
+
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "tabmenu"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> JSON buttons and settings<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=textareaid>Text Area (textarea)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A text area is a standard text area that shows multiple lines of text.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "textarea"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  date or datetime.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>RegEx Valid:</b> Standard regular expression not including the outer "/"<br>
+											<b>RegEx Mess:</b> The message to display to the user if the regular expression is invalid<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=textboxid>Text Box (textbox)</h2>
+											<a href="#topics">back to topics</a>
+											<p>A text area is a standard text area that shows single line of text.
+											<br>
+											<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "textbox"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  date or datetime.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>RegEx Valid:</b> Standard regular expression not including the outer "/"<br>
+											<b>RegEx Mess:</b> The message to display to the user if the regular expression is invalid<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+										<article>
+											<h2 id=userpicker>User Picker (userpicker)</h2>
+											<a href="#topics">back to topics</a>
+											<p>This control provides a picklist of users.  It can set a custom user picker field or the Assignee.  If
+											the target list will be limited to the allowed assignees or open for a general picker.
+											<br>
+												<b><u>Valid Properties</u></b><br>
+											<b>Caption:</b> The label for the control, or "none" for nothing, or blank to inherit Jira label.<br>
+											<b>Control Type:</b> "userpicker"<br>
+											<b>Cell:</b> "row,column" in which to put the field.  Example "5,2"<br>
+											<b>Data Source:</b> Name of the Jira field to bind, option types:  date or datetime.<br>
+											<b>Outer Style:</b> CSS that styles the outer container<br>
+											<b>Inner Style:</b> CSS that styles the inner container<br>
+											<b>Field Style:</b> CSS that styles the field container, "required:true" if required<br>
+											<b>Label Style:</b> CSS that styles the label<br>
+											<b>RegEx Valid:</b> Standard regular expression not including the outer "/"<br>
+											<b>RegEx Mess:</b> The message to display to the user if the regular expression is invalid<br>
+											<b>On Change:</b> if set, function called on change.<br>
+											<b>renderIf:</b> if set, function called that returns true or false, if false will be hidden.<br>
+											<b>Before Render:</b> function called just before rendering.<br>
+											<b>After Render:</b> function called just after rendering.<br>
+											</p>
+										</article>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<!-- Footer -->
+					<div id="footer-wrapper">
+						<footer id="footer" class="container">
+							<div class="row">
+															<div class="4u 6u(medium) 12u$(small)">
+
+																<!-- Links -->
+																	<section class="widget links">
+																		<h3>Related Links</h3>
+																		<ul class="style2">
+																			<li><a href="https://www.atlassian.com/" target="_blank">Atlassian</a></li>
+																			<li><a href="https://www.atlassian.com/software/jira" target="_blank">Atlassian Jira</a></li>
+																			<li><a href="https://marketplace.atlassian.com/" target="_blank">Atlassian Marketplace</a></li>
+																		</ul>
+																	</section>
+
+															</div>
+															<div class="4u 6u$(medium) 12u$(small)">
+
+																<!-- Links -->
+																	<section class="widget links">
+																	<h3>IFT Links</h3>
+																	<ul class="style2">
+																	<li><a href="products.html">Products</a></li>
+																	<li><a href="about.html">About</a></li>
+																	<li><a href="support.html">Support</a></li>
+
+																	</ul>
+																	</section>
+
+															</div>
+															<div class="4u 6u(medium) 12u$(small)">
+
+							</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<div id="copyright">
+										<ul class="menu">
+											<li>&copy; Ideal Federal Technologies, LLC All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div>
+
+				</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
