@@ -1322,3 +1322,17 @@ ongoing work, that's the signal to spin it out into its own
   and both are working, including a full clean `drive_sync.py` run.
   No new state change — this message is Paul's own confirmation
   arriving slightly behind the turn that already found it.
+
+- **2026-09-09 ~16:07Z: session wrap-up (idle window elapsed, no new
+  message).** Short session, three queue items (ids 52-54), all on the
+  one live thread: the 2026-09-08 Google OAuth outage. Gmail came back
+  first (id 52), Drive followed minutes later mid-checkpoint (id 53),
+  and Paul's own confirmation text (id 54) arrived slightly behind the
+  turn that had already caught both fixes. Working tree was already
+  clean and every turn's commit/push had landed individually — nothing
+  to re-push. **The 2026-09-08 Google OAuth outage is closed.** Both
+  root CLAUDE.md's TODO entry and Current-project block now say so
+  plainly; no future turn needs to re-litigate or re-verify this from
+  scratch unless `invalid_grant` actually reappears (in which case the
+  same 7-day Testing-mode-cap theory and same scp fix mechanics still
+  apply). No email/SMS sent this wrap-up — nothing new to tell Paul.
