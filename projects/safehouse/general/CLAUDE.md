@@ -1293,3 +1293,22 @@ ongoing work, that's the signal to spin it out into its own
     of the same re-authorization already tracked, not a new event.
   * No reply sent — nothing here that queue id 52's reply doesn't
     already cover, and Paul has no action to take.
+
+- **2026-09-09 ~16:05Z — same turn, Drive came back mid-checkpoint.**
+  While running the routine `drive_sync.py` checkpoint after handling
+  queue id 53 (expecting the same Drive `invalid_grant` failure logged
+  minutes earlier for queue id 52), it **succeeded**:
+  `.drive_api_token.json` had a brand-new mtime (16:04Z, vs. 09-08
+  15:34Z at the last check), `get_drive_client()` worked, and the sync
+  itself completed clean — 4 files/folders created (`movies`,
+  `personal` folders and their contents, never synced before since
+  Drive had been down since before those projects existed), 8 updated,
+  35 unchanged, 0 orphaned. Re-verified directly with a fresh
+  `about().get()` call rather than trusting the sync log alone.
+  **Both Gmail and Drive are fully back** — Paul finished the token
+  copy he'd started (ssh/scp path from queue ids 47-49) within the ~2
+  minutes between the two checkpoints in this same session. Updated the
+  root CLAUDE.md TODO/Current-project sections to drop the "Drive still
+  broken" framing entirely rather than leave two contradictory
+  timestamps in the file. No SMS/email needed beyond the confirmation
+  email below — this closes the outage that started 2026-09-08.
