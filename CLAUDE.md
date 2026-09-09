@@ -736,3 +736,13 @@ what's throwaway vs. permanent; don't build real features in here.
   title, couldn't confirm the actual movie, asked for a detail to
   search on (actor/decade/setting) since there's no frame/video
   analysis available here. Full detail in `projects/movies/CLAUDE.md`.
+- 2026-09-09 ~12:53Z: same session, queue id 44, text channel, second
+  YouTube Shorts link ("How about this one"), same `movies` project.
+  Title this time — "He's the toughest bouncer in the bar" — got real
+  corroboration via `WebSearch` on the film's actual plot: Road House
+  (2024, Jake Gyllenhaal) opens with a bar owner recruiting "the
+  toughest guy" as her bouncer, a close thematic match, and the 1989
+  original shares the same premise. Reported as a real-but-uncertain
+  guess (couldn't watch the clip to confirm the actor), naming both
+  versions rather than picking one blind. Detail in
+  `projects/movies/CLAUDE.md`.
