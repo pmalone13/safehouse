@@ -1312,3 +1312,13 @@ ongoing work, that's the signal to spin it out into its own
   broken" framing entirely rather than leave two contradictory
   timestamps in the file. No SMS/email needed beyond the confirmation
   email below — this closes the outage that started 2026-09-08.
+
+- **2026-09-09 ~16:04Z — queue id 54, text channel, "keys should be
+  updated."** Fresh session spawn, but arrived just after the prior
+  session had already independently discovered and confirmed both
+  fixes (queue ids 52-53). Re-verified rather than assumed stale
+  context: fresh direct calls to `get_client()` and `get_drive_client()`
+  both succeeded again. Replied by SMS confirming it was already caught
+  and both are working, including a full clean `drive_sync.py` run.
+  No new state change — this message is Paul's own confirmation
+  arriving slightly behind the turn that already found it.
