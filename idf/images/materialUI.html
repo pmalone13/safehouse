@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<title>Ideal Federal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+						<!-- Logo -->
+							<div id="logo"  class="logoClass">
+								 <a href="index.html"><img width=100 height=100 src="/images/idf.png"></a>
+								 							<span style="font-size:16pt;vertical-align:top;font-weight:bold">Material UI for JIRA Forms</span>
+
+							</div>
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+
+									<li><a href="index.html">Welcome</a></li>
+									<li><a href="support.html">Support</a></li>
+									<li><a href="controlReference.html">Reference</a></li>
+									<li><a href="help.html">Help</a></li>
+									<li><a href="about.html">About</a></li>
+
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row 200%">
+							<div class="4u 12u$(medium)">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+										<section>
+											<h3>Support</h3>
+
+											<footer>
+												<a href="help.html" class="button icon fa-info-circle">Help</a><br><br>
+												<a href="videos.html" class="button icon fa-info-circle">Videos</a>
+											</footer>
+										</section>
+
+										<section>
+											<h3 id="topics">Topics</h3>
+											<ul class="style2">
+												<li><a href="#overview">Ideal Reports Overview</a></li>
+												<li><a href="#wordtagging">Creating Word Output</a></li>
+												<li><a href="#querytool">Reports Query Tool</a></li>
+												<li><a href="#running">Running a Report</a></li>
+
+											</ul>
+										</section>
+
+								</div>
+							</div>
+							<div class="8u 12u$(medium) important(medium)">
+								<div id="content">
+
+									<!-- Content -->
+										<article>
+											<h2 id=overview>Ideal Forms using Material UI Overview</h2>
+											Ideal Forms has now implemented Material UI in additiona to Sencha's ExtJS for customer JIRA forms.
+											<br>The specific Material UI implementation is the <a href="https://material-ui.com/" target-"_blank">React Material UI framework</a>.
+											<br>Example screen:<br>
+											<br><img width="50%" height="50%" src=/images/nhr.PNG>
+											</p>
+										</article>
+										<article>
+											<h2 id=overview>Helpful JQL Links</h2>
+											<a href="https://confluence.atlassian.com/jiracoreserver073/searching-for-issues-861257157.html" target="_blank">Advanced JQL Help</a>
+											<br><a href="https://confluence.atlassian.com/jiracoreserver073/advanced-searching-functions-reference-861257222.html" target="_blank">JQL Function Reference</a>
+											</p>
+										</article>
+										<article>
+
+											<h2 id=wordtagging>Creating Word Output</h2> <a href="#topics">back to topics</a>
+											<p>Creating a word template is simply creating a standard "docx" file and adding tags to it.<br>
+											Your data will contain "Arrays" of records, for example, the results of a JQL query.  These
+											records can be looped using the loop syntax below.  The DEFAULT array name = "issues" so if you run
+											a report with a default JQL, or JQL from the URL, you can loop your issues with {#issues}....{/issues}<br>
+
+											<br><b>Simple Tag Syntax:</b> {fieldname}
+											<br><b>Field Reference:</b> The query tool has a button that displays all fields and their syntax.
+											<br><b>Looping Tag Syntax:</b> begin of loop = {#contextName} then end of loop = {/contextName}
+											<br>&nbsp;&nbsp;&nbsp;&nbsp;* contextName = name of the data set.  The FIRST contextName is "issues" and is the 'default' jql data.
+											<br>&nbsp;&nbsp;&nbsp;&nbsp;as such, inside the loop you can access fields like:  {issues.Summary}
+											<br><b>Within Loop Tag Syntax:</b> Loops have a "name", the first is "issues".  To reference tags of a loop row use {[loop name].[field name]}.  Ex:  {issues.Summary}
+											<br><b>Dynamic Looping:</b> Within the Word document you can augment your data by running an inline query that will query JIRA at that point in the document
+											and add to your data model.  Syntax is JSON and the settings are:<br>
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "action": "query" - this is tells the engine you are doing an action of type query
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "jql": "[actual JQL to run]" - this is the JQL that will run.  You can embed bind variables in your string using "$[fieldname] (like SQL binding)
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "path": "[somename]" - this is the name of this query, it is used to reference field names using:  {[path name].[field name]}
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "fields": "[comma separated list of fields to query]"
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "snippet": "[snippet name]" - if running within Forms, this snippet will be called with the returned dataset to perform transformation
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; Example:
+											<br>&nbsp;&nbsp;&nbsp;&nbsp;{"action":"query","jql":" issuetype = Strategy and issue in linkedIssues($issues.key)","path":"sr","fields":"Strategy ID Number,Recommended Strategy"}
+											<br>
+											<br>&nbsp;&nbsp;&nbsp;&nbsp;Now you can reference inner loop fields with:  {sr.Summary}
+
+
+											</p>
+										</article>
+
+										<article>
+
+											<h2 id=querytool>Reports Query Tool</h2> <a href="#topics">back to topics</a>
+											<p>Ideal Reports provides a handy JQL query tool to dynamcially create JQL and verify result sets.  The settings work as follows:<br>
+											<br>
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Default Issue": This issue's data queried prior to report running.  If report is run from URL with issue key identified, the URL key will be queried.
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Default JQL": This query will run prior to report running.  If report is run from a URL, the URL JQL will be queried
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Default Fields": The fields for the JQL, if report is run from a URL, URL Fields will be used.
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Debug MOde": Tells the report engine what to do if a NULL field is rendered.  false = show nothing, true = show a no data found message
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Test Query": Show the issue and query results on this screen
+											<br>&nbsp;&nbsp;&nbsp;&nbsp; "Generate Report": Generate report using the default key and jql
+											<br><img src=/images/query.PNG>
+											</p>
+										</article>
+										<article>
+
+											<h2 id=running>Running a Report</h2> <a href="#topics">back to topics</a>
+											<p>Reports can be run fromt the query tool by setting the JQL and the Issue.  You can also run the reports in these ways:
+											<br>
+											    <br><b>By URL:</b> You can generate the report by calling it explicitly with the following URL.
+											    <br>&nbsp;&nbsp;&nbsp;&nbsp; /plugins/servlet/iforms?mode=report&reportName=myreportname&jql=project&issue=DJP-1
+												<br><b>JIRA Issue Screen:</b> Using "Scriptrunner", add a button to the Issue screen and set URL to dynamically grab issue key
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Scriptrunner - add a "Script Fragment"
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Scriptrunner - set section to "jira.issue.tools"
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Set URL = javascript:window.location="/plugins/servlet/iforms?mode=report&reportName=myreportname&jql=project&issue="+JIRA.Issue.getIssueId()
+												<br><b>JIRA Search Screen:</b> Using "Scriptrunner", add a button to the search screen and set URL to dynamically grab the JQL
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Scriptrunner - add a "Script Fragment"
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Scriptrunner - set section to "jira.navigator.pluggable.items"
+												<br>&nbsp;&nbsp;&nbsp;&nbsp; Set URL = javascript:window.location="/plugins/servlet/iforms?mode=report&reportName=myreportname&jql=+"jql.value
+												<br><b>Ideal Forms:</b> Ideal Forms includes a control "runreport" that runs Ideal Reports.  When called the default issue will be the current contxt
+												issue and the default JQL will be the JQL configured in the query tool.  The default JQL can contain bind params that reference the default issue.
+
+
+
+											</p>
+										</article>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+						<div id="footer-wrapper">
+							<footer id="footer" class="container">
+								<div class="row">
+									<div class="3u 6u(medium) 12u$(small)">
+
+										<!-- Links -->
+											<section class="widget links">
+												<h3>Related Links</h3>
+												<ul class="style2">
+													<li><a href="https://www.atlassian.com/" target="_blank">Atlassian</a></li>
+													<li><a href="https://www.atlassian.com/software/jira" target="_blank">Atlassian JIRA</a></li>
+													<li><a href="https://marketplace.atlassian.com/" target="_blank">Atlassian Marketplace</a></li>
+													<li><a href="https://www.sencha.com/" target="_blank">Sencha</a></li>
+													<li><a href="https://www.sencha.com/legal/gpl/" target="_blank">Sencha Extjs GPL</a></li>
+
+												</ul>
+											</section>
+
+									</div>
+									<div class="3u 6u$(medium) 12u$(small)">
+
+										<!-- Links -->
+											<section class="widget links">
+											<h3>Idealfed Links</h3>
+											<ul class="style2">
+											<li><a href="faq.html">FAQ</a></li>
+											<li><a href="support.html">Support</a></li>
+											<li><a href="controlReference.html">Control Reference</a></li>
+											<li><a href="javascriptReference.html">Javascript Reference</a></li>
+											<li><a href="javascriptReference.html">Style Reference</a></li>
+											</ul>
+											</section>
+
+									</div>
+									<div class="3u 6u(medium) 12u$(small)">
+
+										<!-- Links -->
+											<section class="widget links">
+												<h3>Quick Examples</h3>
+												<ul class="style2">
+													<li><a href="http://jira.idealfed.com/plugins/servlet/iforms?itemId=DJP-1&formId=Simple%20Form%20Item%20List%20for%20Popup" target="_blank">Simple Form</a></li>
+													<li><a href="http://jira.idealfed.com/plugins/servlet/iforms?itemId=DJP-1&formId=Complex%20Form%20with%20Children" target="_blank">Complex Form</a></li>
+													<li><a href="http://jira.idealfed.com/plugins/servlet/iforms?itemId=IFQ-1&formId=IFQ%20List%20Mobile" target="_blank">Mobile Form</a></li>
+
+												</ul>
+											</section>
+
+									</div>
+									<div class="3u 6u$(medium) 12u$(small)">
+
+										<!-- Contact -->
+											<section class="widget contact last">
+												<h3>Contact Us</h3>
+												<p><a href="http://www.idealfed.com/help.html" class="button icon fa-info-circle">Contact</a><br /><br />
+												support@idealfed.com</p>
+											</section>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<div id="copyright">
+											<ul class="menu">
+												<li>&copy; Ideal Federal LLC All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+
+					</div>
+
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

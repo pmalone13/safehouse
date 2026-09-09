@@ -18,6 +18,7 @@
 # same VM.
 !/idealfed_site/
 !/idealfed_site/*.py
+!/idf/
 
 # ...and tempWork/ scripts -- runtime state (logs, status files) stays
 # ignored, only the code is tracked. See root CLAUDE.md's "tempWork"
