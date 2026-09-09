@@ -155,16 +155,14 @@ a human is actually going to read, not just a backup nobody opens.
 **Current project**: `projects/safehouse/general/CLAUDE.md` — moved
 here 2026-09-09 ~13:38Z for queue id 46 (Paul asking about Remote
 Control and whether re-enabling email/Drive worked) — system/meta, not
-tied to any named project. **Update 2026-09-09 ~16:03Z (queue id 52):
-Gmail is fixed.** `.gmail_api_token.json` was refreshed (new mtime
-16:02Z) — presumably Paul scp'd a fresh token per the 09-09 14:16Z
-ssh/scp instructions — and `get_client()` now works cleanly (read this
-very email through it, replied through it). **Drive is still down**:
-`.drive_api_token.json` is untouched since 09-08 15:34Z, so only the
-Gmail token made it over so far; `get_drive_client()` still throws the
-identical `invalid_grant`. Told Paul this by email (email works again,
-so that's the channel now) and asked him to scp the Drive token too.
-See the TODO entry below for the fix mechanics.
+tied to any named project. **Update 2026-09-09 ~16:05Z: both Google
+integrations are back.** Gmail fixed first (~16:02Z, queue id 52 —
+`.gmail_api_token.json` refreshed, `get_client()` confirmed working).
+Drive followed minutes later (~16:04Z — `.drive_api_token.json`
+refreshed, `get_drive_client()` confirmed working, and a full
+`drive_sync.py` run succeeded clean: 4 created, 8 updated, 35
+unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
+this entry — Paul finished copying both tokens over.
 
 **Seven other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
@@ -301,19 +299,16 @@ the pending `/sms-optin` build still live there.
   locally, never on the VM), so a future turn searching for them here
   won't find them. Told Paul this plainly by SMS and offered to walk
   through it. Still down as of this entry.
-  **Gmail half fixed 2026-09-09 ~16:03Z (queue id 52).**
-  `.gmail_api_token.json` mtime jumped to today 16:02Z and
-  `get_client()` now succeeds — confirmed by reading and replying to
-  this very email through it. **Drive is still broken**:
-  `.drive_api_token.json` mtime is unchanged (09-08 15:34Z),
-  `get_drive_client()` still throws the identical `invalid_grant`. So
-  only the Gmail token has been copied over so far — same fix still
-  needed for Drive (run `authorize_drive_once.py` on a machine with a
-  browser, scp the resulting token to `.drive_api_token.json` on the
-  VM). Told Paul by email (now working again) and asked him to do the
-  same for Drive. **`drive_sync.py` still cannot run** until that
-  lands — don't assume the whole outage is resolved just because email
-  is back.
+  **RESOLVED 2026-09-09 ~16:05Z.** Gmail fixed first (~16:02Z, queue id
+  52 — `.gmail_api_token.json` refreshed, `get_client()` confirmed).
+  Drive followed minutes later (~16:04Z — `.drive_api_token.json`
+  refreshed, `get_drive_client()` confirmed, `drive_sync.py` ran clean:
+  4 created, 8 updated, 35 unchanged, 0 orphaned). Paul copied both
+  tokens over via the ssh/scp path from queue id 47-49. **Both Gmail
+  and Drive are live again as of this entry** — a future turn does not
+  need to re-verify this from scratch, though if `invalid_grant`
+  reappears, the same 7-day-cap theory above is still the leading
+  explanation and the same fix mechanics apply.
 
 - **`drive_sync.py` silently corrupts binary files.** Line 135 reads
   every file with `read_text(encoding="utf-8", errors="replace")` and
