@@ -811,3 +811,12 @@ what's throwaway vs. permanent; don't build real features in here.
   flow on a machine with a browser, copy the resulting token to the
   VM) and offered to walk through it. Full detail in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-09-09 ~13:50Z: same session, queue id 47, text channel, "can I
+  simply run the two commands and push? or should I copy paste here."
+  Follow-up on the OAuth fix. Confirmed via `git check-ignore -v` that
+  both token files are covered by `.gitignore`, so git isn't the right
+  channel either way (and shouldn't be, for live credentials).
+  Recommended `scp` straight onto the VM at the existing token paths —
+  same mechanism as the original 2026-09-01 setup — over pasting the
+  token JSON into a text, to avoid sending a live refresh token through
+  SMS/Twilio unnecessarily. Waiting on him to copy the files over.

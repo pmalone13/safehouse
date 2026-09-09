@@ -1089,3 +1089,21 @@ ongoing work, that's the signal to spin it out into its own
   Status: **still down**, real fix not yet applied. Waiting on Paul
   either to run the local authorize script and copy the token over, or
   to say what he actually did so I can figure out why it didn't take.
+
+- **2026-09-09 ~13:50Z — queue id 47, text, "can I simply run the two
+  commands and push? or should I copy paste here."** Follow-up on the
+  above — he's asking how to get the fresh token files from wherever he
+  runs the local OAuth flow onto this VM. **Confirmed rather than
+  assumed** that "push" shouldn't mean git: `git check-ignore -v` on
+  both `.gmail_api_token.json` and `.drive_api_token.json` shows they're
+  covered by the repo's own `.gitignore` (`/*` pattern at line 2), so
+  git wouldn't carry them either way, and they're live credentials that
+  shouldn't go through version control regardless. Recommended `scp`
+  straight onto the VM at the existing paths
+  (`~/safehouse/.gmail_api_token.json`,
+  `~/safehouse/.drive_api_token.json`) — same mechanism as the original
+  2026-09-01 Drive token placement — over pasting the JSON into a text,
+  since that would put a live OAuth refresh token through SMS/Twilio
+  for no real benefit. Offered to retest the moment he confirms the
+  files are copied. Nothing else changed this turn; still waiting on
+  him.
