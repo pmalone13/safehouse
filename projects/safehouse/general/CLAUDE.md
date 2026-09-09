@@ -1265,3 +1265,31 @@ ongoing work, that's the signal to spin it out into its own
     checkpoint — it will still fail on the Drive half. Ran `git
     push` only; the repo mirror to Drive stays stale until the Drive
     token lands.
+
+- **2026-09-09 ~16:02Z — queue id 53, email channel, automated Google
+  "Security alert — You allowed Safehouse access to some of your Google
+  Account data" for `tedassistent@gmail.com`.** Same pattern as the
+  2026-09-01 alert (queue id 2): verify first, don't just answer it.
+  * **Authenticity confirmed via raw headers** (not the body): `dkim=pass
+    header.i=@accounts.google.com`, `spf=pass` (gaia.bounces.google.com,
+    209.85.220.73), `dmarc=pass (p=REJECT)` — genuine Google, not
+    phishing. Clicked nothing.
+  * **Timing**: the alert's embedded event epoch is `1788961019000` ms =
+    **2026-09-09T13:36:59Z** — a fresh OAuth grant made ~2 min before
+    Paul's queue id 46 text ("I've re-enabled email and drive, please
+    test," 13:38Z). But the queue-arrival timestamp on this email is
+    16:02:40Z, matching queue id 52 almost exactly — because email
+    itself was down (`invalid_grant`) from 09-08 until this session's
+    Gmail fix landed at 16:02Z (see the entry above), this alert was
+    sitting unread in the inbox the whole time and only surfaced once
+    `get_client()` started working again.
+  * **Reconciles a gap, doesn't reopen one**: at 13:38Z (queue id 46) the
+    token files were confirmed unchanged and the call still failed — so
+    Paul's 13:37Z action (presumably running `authorize_gmail_once.py`
+    locally, which is what actually triggers this kind of Google
+    consent-grant alert) produced a token on his own machine at 13:37Z
+    but didn't reach the VM via scp until later, landing as the 16:02Z
+    token-file mtime already logged above. This alert is a side effect
+    of the same re-authorization already tracked, not a new event.
+  * No reply sent — nothing here that queue id 52's reply doesn't
+    already cover, and Paul has no action to take.
