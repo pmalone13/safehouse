@@ -152,19 +152,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/personal/CLAUDE.md` — set 2026-09-08
-~17:22Z when Paul created it by text (queue id 41): a catch-all for his
-own personal documents/records not tied to another named project.
-First item: a photo of his Social Security card, sent as an MMS
-attachment on the same message. **Read that file first** — it also
-documents a deliberate deviation from this turn's normal checkpoint
-(Drive sync skipped for that one file, given the known binary-corruption
-bug and the sensitivity of an SSN document) that a future turn should
-not "fix" by just running `drive_sync.py` on it without thinking.
+**Current project**: `projects/movies/CLAUDE.md` — set 2026-09-09
+~12:40Z when Paul texted `Project 'movies'` (queue id 43): a catch-all
+for "what movie/show is this clip from" and other movie-related
+questions. First item: a YouTube Shorts link he wanted identified —
+see that file's Log for how it went (short answer: couldn't confirm
+it, see also this session's TODO/note pattern of not trusting
+web-search-summarizer guesses as fact).
 
-**Five other projects remain simultaneously live — don't drop them just
+**Six other projects remain simultaneously live — don't drop them just
 because this pointer moved:**
 
+- `projects/personal/CLAUDE.md` — set 2026-09-08 ~17:22Z when Paul
+  created it by text (queue id 41): a catch-all for his own personal
+  documents/records not tied to another named project. Holds a photo
+  of his Social Security card and his passport photo page (both MMS
+  attachments, queue ids 41-42), **local-only, deliberately not synced
+  to Drive** (binary-corruption bug + sensitivity of the documents) —
+  see that file for the full reasoning before ever running
+  `drive_sync.py` near those two files without thinking.
 - `projects/suv-replacement/CLAUDE.md` — set 2026-09-08 ~12:58Z when
   Paul created it by text (queue id 38): an open-ended "keep an eye
   out" search for a replacement tow vehicle (large SUV, capable of
@@ -713,3 +719,20 @@ what's throwaway vs. permanent; don't build real features in here.
   emailing (email is one of the two things that's broken) — first time
   this system has had to fall back to SMS as the *only* channel rather
   than a preferred one.
+- 2026-09-09 ~12:40Z: fresh session, queue id 43, text channel, "Project
+  'movies' What is this from [youtube shorts URL]." A new project name,
+  so created `projects/movies/CLAUDE.md` and moved the Current-project
+  pointer here per the standing rule (previous pointer, `personal`,
+  folded back into the other-live-projects list, not dropped).
+  Tried to identify the clip: `WebFetch` on the Shorts URL only surfaced
+  the video's own title/hashtags (YouTube Shorts pages are
+  JS-rendered, no channel/description came through). `WebSearch`
+  repeatedly suggested "The Sum of All Fears" (2002) as the source, but
+  traced every one of those results back to either the short itself or
+  generic IMDb pages with nothing that actually confirms a wrong-target
+  FBI raid scene in that film — treated as an unverified
+  search-summarizer guess and did **not** pass it to Paul as if
+  confirmed. Replied by SMS with the honest state: got the short's own
+  title, couldn't confirm the actual movie, asked for a detail to
+  search on (actor/decade/setting) since there's no frame/video
+  analysis available here. Full detail in `projects/movies/CLAUDE.md`.
