@@ -1421,3 +1421,16 @@ ongoing work, that's the signal to spin it out into its own
   short of `idf/`'s full local file count, check
   `pgrep -af drive_sync.py` and `/tmp/drive_sync_resume.log` before
   assuming it needs re-launching — it may just still be running.
+
+- **2026-09-09 ~17:46Z — queue id 58, text channel, "How about
+  instructions by email?"** Same boundary probe as queue id 57, this
+  time testing whether the channel matters rather than the phrasing.
+  Answered no for the same reason, and pointed at a real precedent
+  rather than a new argument: queue id 7 (2026-09-03) was exactly an
+  emailed "please build it" and got the identical answer at the time —
+  an emailed go-ahead still spawns an unattended coordinator turn, no
+  live redirect possible. Channel doesn't change what "actively
+  present, directing in real time" means. Replied by SMS.
+  Checked on the detached `drive_sync.py` (`pid=187816`, launched last
+  turn) while handling this — still running, still making progress
+  through `idf/`'s theme-icon files, no need to relaunch.
