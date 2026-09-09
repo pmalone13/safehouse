@@ -1141,3 +1141,38 @@ ongoing work, that's the signal to spin it out into its own
   `~/safehouse/.drive_api_token.json`) so the reply directly closes the
   loop from queue id 47/48 rather than making him re-derive the paths.
   Standing by to retest email/Drive once he's copied the files.
+
+- **2026-09-09 ~14:18Z — queue id 50, text, "can you ping twillio and
+  find out our message usage? we are metered there and I need to
+  monitor."** A genuine new ask (read-only, no code/boundary issue) —
+  used the same Twilio API credentials `twilio_client.py` already holds
+  to query usage rather than sending, and reported real numbers rather
+  than a vague "it's fine."
+  * **Balance**: `GET /Balance.json` → **$17.7854 USD** remaining.
+  * **All-time total spend is $41.37**, but the breakdown (pulled full
+    `Usage/Records.json`, 322 records across categories, not just the
+    top-level rollups) shows it's **almost entirely one-time A2P 10DLC
+    setup cost, not per-message usage**: `a2p-10dlc-registrationfees-
+    campaignvetting` $30 + `-brandregistration` $8 (= the $38 one-time
+    total) + `-monthly` $2 (recurring, charged once so far) +
+    `-campaigncharges` $2. Actual `sms` category all-time: **7 messages,
+    $0.1411** (before this session's sends). `phonenumbers`: $1.15
+    (number purchase/first-period rental).
+  * **This month (Sept 1-9) broken out separately**: `sms` $0.1743 / 9
+    messages (i.e. essentially the cost of this session's own texting
+    activity); a further **$21 in `a2p-registration-fees` landed in
+    September**, not August — consistent with the 2026-09-05 brand
+    rebuild (`BN257b...1afc` deleted, new brand
+    `BNeac1cae7426eebe4c150c7c2c072e0d8` created) re-incurring part of
+    the registration cost. Not a new/unexplained charge — ties directly
+    to a rebuild already documented in this file's TODO/A2P history.
+  * **The actionable framing for Paul**: forward-looking recurring cost
+    is small and predictable — ~$2/mo A2P monthly registration fee +
+    ~$1/mo number rental + SMS at roughly $0.02/message — so at current
+    volume the $17.79 balance is not something to worry about burning
+    through soon. Told him this rather than just the raw balance
+    number, since "monitor" implies he wants to know if it's trending
+    toward a problem, not just the current figure.
+  Reported by SMS. No project pointer change (system/meta, same as the
+  rest of this session's thread), no code written, no state changed —
+  a pure read query.
