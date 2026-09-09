@@ -836,3 +836,16 @@ what's throwaway vs. permanent; don't build real features in here.
   default port 22) and texted the `ssh` command plus the two matching
   `scp` commands with the exact token-file target paths, closing the
   loop from queue id 47/48. Standing by to retest once copied.
+- 2026-09-09 ~14:18Z: same session, queue id 50, text channel, "can you
+  ping twillio and find out our message usage? we are metered there
+  and I need to monitor." Read-only Twilio Usage API query (no
+  boundary issue — no code written). Balance: $17.79. All-time spend
+  $41.37, but that's almost entirely one-time A2P 10DLC registration
+  setup cost (~$38 one-time + $2 recurring monthly fee), not per-
+  message usage — actual SMS cost is trivial (9 messages this month,
+  $0.17). A $21 A2P charge landed in September, tied to the known
+  2026-09-05 brand rebuild, not a new mystery charge. Forward-looking
+  burn rate is small (~$2/mo A2P fee + ~$1/mo number rental + pennies
+  of SMS), so the balance isn't at risk soon at current volume.
+  Reported by SMS. Full breakdown in
+  `projects/safehouse/general/CLAUDE.md`.
