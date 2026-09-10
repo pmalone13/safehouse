@@ -152,10 +152,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
-here 2026-09-09 ~13:38Z for queue id 46 (Paul asking about Remote
-Control and whether re-enabling email/Drive worked) — system/meta, not
-tied to any named project. **Update 2026-09-09 ~16:05Z: both Google
+**Current project**: `projects/alliecar/CLAUDE.md` — moved here
+2026-09-10 when Paul opened a direct terminal session with "project
+alliecar" and pasted a second candidate VIN (2015 Forester,
+JF2SJADC8FH459899, clean title, 85,684 mi) to evaluate against a car
+already purchased for Allie on a salvage title. See that file's Session
+7 — waiting on price/location/purpose. Previous pointer,
+`safehouse/general`, folded back into the other-live-projects list
+below, not dropped.
+
+**Note on this turn's channel**: unlike prior turns, this one arrived
+as a direct interactive terminal session (visible git log shows prior
+turns already using this shape for queue ids 55-58), not a queued
+email/SMS forwarded by the coordinator — so no queue id, and no
+email/SMS reply was owed back, just a direct response in the session.
+
+**Older update, still true: 2026-09-09 ~16:05Z — both Google
 integrations are back.** Gmail fixed first (~16:02Z, queue id 52 —
 `.gmail_api_token.json` refreshed, `get_client()` confirmed working).
 Drive followed minutes later (~16:04Z — `.drive_api_token.json`

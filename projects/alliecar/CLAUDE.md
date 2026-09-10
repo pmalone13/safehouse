@@ -356,3 +356,41 @@ since Paul named the project explicitly ("Alliecar:") and the root
 file's own rule is to follow whatever project he names next.
 Status: **waiting on Paul** — both whether he wants to do this live and
 what the criteria should be. Nothing built.
+
+## Session 7 (2026-09-10): second candidate VIN, clean title — vs. the salvage-title car already bought
+
+Paul pasted listing attributes for a car outside the queue system (direct
+terminal session, not through the coordinator): **2015 Subaru Forester,
+VIN JF2SJADC8FH459899**, condition excellent, 4-cyl, 4WD, gas, 85,684 mi,
+green, **clean title**, automatic, SUV. No price given.
+
+**Verified via NHTSA vPIC VIN decode** (`WebFetch` on
+`https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/`) rather than trusting
+the pasted attributes at face value — clean decode, check digit valid, and
+every field matches: 2015 Subaru Forester 2.5i **Premium+Moonroof**, 2.5L
+FB25 4-cyl boxer, AWD, CVT automatic, SUV/wagon body, assembled at Subaru's
+Yajima (Gunma) plant.
+
+**Against the doc's MUST HAVE list**, this beats every car looked at in
+this project so far on paper: 2015 (newest), 85,684 mi (lowest mileage
+seen, under the 106K cap with room to spare), and **clean title** — the
+one criterion the car actually purchased for Allie in Session 5 (2012
+Forester, JF2SHAEC8CH456274, rebuilt/salvage title) fails outright.
+
+Flagged two engine/trans risks specific to this car's era, both already
+named in the doc/Session 3: the FB25 2.5i had a documented oil-consumption
+class-action issue (worth asking if the consumption test/fix was done);
+and while mileage is well under the CVT's 10yr/100K extended-coverage
+threshold, at ~11 years old the car is likely past the *time* half of that
+window regardless of miles.
+
+**No price supplied — can't assess against the (soft) $7K target or the
+$13K ceiling Paul actually raised to in Session 2.** Also don't know
+location/distance from Fairfax or dealer vs. private party.
+
+**Open question carried over from Session 6, still unanswered: is this a
+clean-title backup/replacement candidate for the salvage-title car Allie
+already has, or an unrelated search?** Asked Paul directly rather than
+guessing. Nothing bought, nothing changed about Allie's car.
+
+Status: **waiting on price + location + purpose from Paul.**
