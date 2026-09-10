@@ -393,4 +393,22 @@ clean-title backup/replacement candidate for the salvage-title car Allie
 already has, or an unrelated search?** Asked Paul directly rather than
 guessing. Nothing bought, nothing changed about Allie's car.
 
-Status: **waiting on price + location + purpose from Paul.**
+**Price/location supplied: $10,800, Arlington, VA. Paul has pinged the
+seller to confirm availability.**
+
+Assessed against both the doc's $13K ceiling and the existing shortlist:
+comfortably under $13K even after VA tax/tags (likely lands ~$12,200-
+12,500 out the door, by the same fee math implied by the original
+shortlist's tax deltas), and **cheaper than all six original shortlist
+cars ($11,390-$12,973) while beating all of them on mileage** (85,684 vs.
+91,164-108,894) and tying/beating most on year (2015 vs. 2014-2016
+mixed). Best on-paper candidate this project has surfaced.
+Vs. the car actually purchased for Allie (~$9,400-9,500 OTD for the 2012
+salvage-title car, 81,900 mi): this one costs ~$2,700-3,000 more but adds
+a newer year and, critically, a clean title.
+Purpose still unresolved — replacement/upgrade for Allie's current car
+vs. backup vs. something else. Not blocking the availability check.
+
+Status: **waiting on seller availability response.** Pre-purchase
+checklist (history report, oil-consumption/CVT-fluid records, independent
+inspection) still applies if it's available.
