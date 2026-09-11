@@ -37,6 +37,11 @@ ongoing work, that's the signal to spin it out into its own
     and was smoke-tested; Paul chose to keep full `auth/drive`. So the
     "Drive is dead here" statements in my turn-3 email and in the root
     log are now **stale** — Drive is live. Don't act on them.
+- **2026-09-11 ~17:12Z, queue id 60, text:** "Thanks, that's it for now.
+  I'm going to a concert tonight, forgot who. Will tell you shortly."
+  Purely conversational, no action needed. Replied by SMS with a short
+  acknowledgment. Nothing to track — logged only so this turn isn't
+  mistaken for a dropped/unhandled message later.
 
 - **2026-09-01 ~16:27 — session wrap-up (idle timeout, no new message).**
   Nothing pending: queue ids 1 and 2 both `done`, working tree clean.
