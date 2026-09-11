@@ -1468,4 +1468,32 @@ ongoing work, that's the signal to spin it out into its own
   outlive a turn's background-task window, and `nohup <cmd> & disown`
   with stdin from `/dev/null` is the fix, not repeated blind reruns.
   Working tree already clean at `14192ad`, nothing further to commit.
+
+- **2026-09-11, direct session (no queue id, same shape as the 09-10
+  alliecar terminal turn — not a queued email/SMS).** Paul asked for a
+  new poller that watches a Google Drive folder for audio recordings
+  and feeds them through the same transcription pipeline text/email
+  already use (`voice_transcribe.py`, confirmed live 2026-09-07, queue
+  ids 25-26). **Not built** — a new long-running script plus a new
+  systemd service is squarely application code under the root
+  boundary, needing Paul present and directing in real time; this
+  entry is the documentation half only (explicitly not covered by the
+  boundary — see root `CLAUDE.md`'s own carve-out for ordinary
+  self-documentation).
+  Worth deciding before building, not blockers: (1) this VM is
+  memory-constrained (414MB + 1GB swap, per `voice_transcribe.py`'s own
+  comment) and already runs five systemd services — a new poller should
+  probably reuse an existing process's lazily-loaded `faster-whisper`
+  model rather than start a fresh one, to avoid a third in-memory copy
+  of the model; (2) which Drive folder to watch — a dedicated
+  "safehouse/voice-drop" folder under the existing `drive_sync.py`
+  mirror root is the natural fit, not yet decided; (3) how to track
+  already-processed files across a poller restart (Drive file IDs,
+  durably — `email_monitor.py`'s in-memory seen-ids reset-on-restart
+  pattern would silently re-transcribe everything already in the
+  folder on every restart, worse here than for email since Drive files
+  don't disappear the way a mail poller's baseline naturally does).
+  Logged in bayhouse's own memory too
+  (`project_safehouse_drive_audio_poller_todo`) so a future session
+  there also knows this is open.
   No new message to answer.
