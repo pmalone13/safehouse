@@ -412,3 +412,10 @@ vs. backup vs. something else. Not blocking the availability check.
 Status: **waiting on seller availability response.** Pre-purchase
 checklist (history report, oil-consumption/CVT-fluid records, independent
 inspection) still applies if it's available.
+
+## Session 8 (2026-09-11 ~17:10Z): check-in
+
+Queue id 59, text, "Hi, are you there?" — no new info, just a presence
+check. Replied confirming presence plus a one-line status recap (still
+waiting on seller availability for the 2015 Forester, Arlington, $10,800,
+clean title). Nothing else changed.
