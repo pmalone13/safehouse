@@ -899,3 +899,13 @@ what's throwaway vs. permanent; don't build real features in here.
   ("going to ssh, stand by") when the session idled out, so this is
   genuinely still open, not silently resolved. No email sent (can't —
   that's the outage), no SMS sent (nothing new since the last reply).
+- 2026-09-13 ~00:5x: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 61 (Paul landed in Paris,
+  asked for first-day recommendations near his now-confirmed Airbnb at
+  41 Rue Lepic). Already fully handled and pushed as commit `b962a00`
+  before this wrap-up fired — Gmail tested live and used to reply,
+  Paris project file updated (lodging open item resolved), root
+  Current-project pointer moved to `paris-september-2026`, Drive synced
+  clean (6 updated, 822 unchanged, 0 orphaned). Nothing outstanding:
+  working tree confirmed clean at wrap-up, so this entry is the only
+  change this turn makes.
