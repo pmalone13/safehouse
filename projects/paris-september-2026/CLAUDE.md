@@ -125,3 +125,23 @@ blocked" or "assumed will definitely work."
   actually asking Paul to confirm the real arrival date rather than
   answering a third time — this is the second ask that assumes he
   hasn't landed yet.
+
+- **2026-09-13 ~17:37Z — queue id 64, text, "let's just have all the
+  not I mean just for the next few weeks the project is Paris... We're
+  on route now. Flying standby all the way there because our son works
+  for JetBlue."** Two things:
+  * **Confirms the project stays `paris-september-2026`** as the active
+    pointer for the next few weeks — already the case, no change needed
+    to the root `CLAUDE.md` pointer.
+  * **Solves the arrival-date puzzle flagged at the end of the queue id
+    63 entry above.** They're flying standby (son works for JetBlue),
+    so "arriving tomorrow" shifting across messages isn't a
+    transcription error or confusion — it's genuinely unresolved because
+    standby seating means they may not get on the flight(s) they expect
+    and the actual arrival keeps moving. Don't chase this as an
+    inconsistency in future turns; it's an accurate reflection of real
+    uncertainty. Expect possibly more day-to-day schedule flux for the
+    same reason (Normandy leg, return flights) since none of it may be
+    firmly booked in advance.
+  Replied by SMS: project confirmed staying Paris, standby explanation
+  acknowledged, safe travels.
