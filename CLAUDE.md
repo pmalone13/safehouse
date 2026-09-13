@@ -152,14 +152,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/alliecar/CLAUDE.md` — moved here
-2026-09-10 when Paul opened a direct terminal session with "project
-alliecar" and pasted a second candidate VIN (2015 Forester,
-JF2SJADC8FH459899, clean title, 85,684 mi) to evaluate against a car
-already purchased for Allie on a salvage title. See that file's Session
-7 — waiting on price/location/purpose. Previous pointer,
-`safehouse/general`, folded back into the other-live-projects list
-below, not dropped.
+**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
+here 2026-09-13 ~00:49Z (queue id 61, email, "Paris trip") when Paul
+landed in Paris and asked for first-day recommendations. Lodging is
+now confirmed (41 Rue Lepic, 75018, Montmartre) — that project's one
+remaining open item is the Normandy leg (no dates/itinerary yet) and
+Christine's return date. Previous pointer, `alliecar`, folded back
+into the other-live-projects list below, not dropped — see that
+project's own file for where it stood (Session 7, price/location
+confirmed 2026-09-10/11, no new developments as of queue ids 59-60).
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior

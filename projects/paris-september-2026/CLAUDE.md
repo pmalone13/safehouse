@@ -12,8 +12,8 @@ per Paul's own naming in the message that created it (queue id 29,
   first words on the voice message said "Paris October 2026" then
   immediately self-corrected to "Paris September 2026" — the project
   name and all dates here use the correction, not the false start.)
-- **Lodging:** none booked yet. Plan is to "wing it" and rent something
-  (Airbnb-style, unspecified) for about a week in Paris itself.
+- **Lodging:** booked — 41 Rue Lepic, 75018 Paris (Montmartre), an
+  Airbnb-style rental. Confirmed by queue id 61 (2026-09-13 ~00:49Z).
 - **Side trip:** Normandy, by train, dates not yet specified — after
   the Paris week, before the return leg.
 - **Return — Paul:** ~September 25, 2026, timed to make a party back
@@ -23,7 +23,6 @@ per Paul's own naming in the message that created it (queue id 29,
 
 ## Open items (his to resolve, not mine to guess)
 
-- Paris lodging — nothing booked as of this writing.
 - Normandy leg — no dates, no specific itinerary (which sites, how
   many nights) yet.
 - Christine's actual return date/flight.
@@ -82,3 +81,25 @@ blocked" or "assumed will definitely work."
   Paris week + Normandy by train, Paul back ~25th for a party the
   26th, Christine back 26th-28th) are **confirmed correct as
   transcribed**, not garbled. No reply needed — nothing new to say.
+
+- **2026-09-13 ~00:49Z — queue id 61, Paul, email, "Paris trip."**
+  Landed on travel day: "Arriving 10am tomorrow. Taxi to Air BNB, 41
+  Rue Lepic, 75018 Paris, France" plus a request for first-day
+  recommendations after the red-eye. This resolves the "Paris lodging"
+  open item above — booked, in Montmartre, address recorded. Gmail
+  tested working first (`get_client()` succeeded) before replying, so
+  no repeat of the 2026-09-08/09 OAuth outage.
+  Replied by email (same channel) with a Montmartre-scoped, jet-lag-
+  aware plan: stay local to the flat rather than crossing the city,
+  prioritize outdoor/daylight activity over resting, cap any nap at
+  60-90 min, keep dinner early, push bedtime to a normal local hour.
+  Named specific nearby spots (Sacre-Coeur, Place du Tertre, Rue des
+  Abbesses/Rue Lepic bakeries, Cafe des Deux Moulins on Rue Lepic
+  itself, the I Love You Wall at Square Jehan Rictus) and explicitly
+  advised against ticketed/far-flung sights (Louvre, Versailles) on
+  day one. No web lookup needed — this is general jet-lag/Montmartre
+  knowledge, not a live-availability question, so the "try it live"
+  capability note above didn't come into play this turn.
+  Root `CLAUDE.md` Current-project pointer moved back here from
+  `alliecar` (Paul's message was explicitly about this project);
+  alliecar folded back into the other-live-projects list, not dropped.
