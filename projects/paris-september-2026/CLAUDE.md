@@ -109,3 +109,19 @@ blocked" or "assumed will definitely work."
   friendly how's-it-going and an offer to help with the two still-open
   items (Normandy dates, Christine's return date) rather than digging
   for a hidden task in a one-line greeting. No project facts changed.
+
+- **2026-09-13 ~12:29Z — queue id 63, text, "Arriving at about 11am
+  tomorrow and staying at 41 Rue Lepic... Give me three suggestions for
+  things to do this first day while we are tired."** Same address
+  already on file, but the arrival framing ("tomorrow," 11am) doesn't
+  line up with queue id 61 (email, ~00:49Z same calendar day, "Arriving
+  10am tomorrow" — answered as if he'd already landed and asked for
+  day-1 plans hours ago). Didn't chase the discrepancy since it doesn't
+  change the answer either way — replied by SMS with a condensed
+  3-item version of the same jet-lag-friendly Montmartre plan (Sacre-
+  Coeur/Place du Tertre, Rue des Abbesses/Rue Lepic cafes, Square Jehan
+  Rictus + vineyard), same nap/dinner/bedtime advice as before. If a
+  future turn sees yet another "arriving tomorrow" message, worth
+  actually asking Paul to confirm the real arrival date rather than
+  answering a third time — this is the second ask that assumes he
+  hasn't landed yet.
