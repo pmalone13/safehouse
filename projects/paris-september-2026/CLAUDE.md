@@ -179,3 +179,8 @@ blocked" or "assumed will definitely work."
   the Latin Quarter for lunch, then Eiffel Tower/Trocadero in the late
   afternoon for the light. No web lookup needed — general Paris
   itinerary knowledge, not a live-availability question.
+
+- **2026-09-14 ~09:05Z — queue id 68, text, "R there ubers in paris."**
+  Quick factual question, no web lookup needed. Replied by SMS: yes,
+  Uber operates normally in Paris; also mentioned Bolt/FreeNow as
+  alternatives (sometimes cheaper) and G7 as the major taxi company.
