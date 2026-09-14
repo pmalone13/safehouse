@@ -203,3 +203,15 @@ blocked" or "assumed will definitely work."
   de Montmartre church (~12th c.) and the old windmills like Moulin de
   la Galette (17th-18th c.) — and noted Sacre-Coeur itself is newer
   than it looks (built 1875-1914).
+
+- **2026-09-14 ~19:06Z — queue id 71, text, "Can you list and describe
+  famous Paris cemeteries."** General knowledge question, no web lookup
+  needed. Replied by SMS with four: Pere Lachaise (20th, largest/most
+  visited - Morrison, Chopin, Wilde, Piaf, Moliere), Montmartre Cemetery
+  (closest to his flat, sits in an old quarry - Degas, Truffaut, Dalida,
+  Nijinsky), Montparnasse (14th - Sartre/de Beauvoir, Baudelaire,
+  Gainsbourg), Passy (16th, near Trocadero - Debussy, Manet). Also
+  mentioned the Catacombs as a related-but-different (ossuary, not a
+  cemetery, needs advance tickets) option. Flagged Montmartre Cemetery
+  as the practical pick given his location and offered walking
+  directions.
