@@ -167,3 +167,15 @@ blocked" or "assumed will definitely work."
 
 - **2026-09-14 ~07:45Z — queue id 66, text, "👍."** Acknowledgment of
   the photo reply above, 79s later. No reply needed, no facts changed.
+
+- **2026-09-14 ~08:28Z — queue id 67, text, "Do you have recommendations
+  for our 2nd day? Today will be local stuff. Versailles will be later
+  in week."** Day 1 (today, landing day) is the local Montmartre plan
+  already sent (queue ids 61/63); this is day 2, one step further out
+  than staying local but explicitly not Versailles. Replied by SMS with
+  a classic central-Paris metro loop: Louvre or Orsay in the morning
+  (flagged Orsay as the lighter option if still jet-lagged), Ile de la
+  Cite (Notre-Dame exterior + Sainte-Chapelle) plus a Seine walk into
+  the Latin Quarter for lunch, then Eiffel Tower/Trocadero in the late
+  afternoon for the light. No web lookup needed — general Paris
+  itinerary knowledge, not a live-availability question.
