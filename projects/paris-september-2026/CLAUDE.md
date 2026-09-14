@@ -145,3 +145,22 @@ blocked" or "assumed will definitely work."
     firmly booked in advance.
   Replied by SMS: project confirmed staying Paris, standby explanation
   acknowledged, safe travels.
+
+- **2026-09-14 ~07:44Z — queue id 65, text, "Just about to land. Flew
+  business class, first time in a long time. Can u see this pic?"**
+  The photo itself arrived as a **separate** MMS (`MM5b88...`, empty
+  body, 1 media item, sent ~20s after the text) rather than attached to
+  the text body — `twilio_webhook.py` only transcribes `audio/*` media
+  into the enqueued body (see its own docstring), so an image MMS never
+  shows up in the queued text at all; had to go find it. Queried the
+  Twilio Messages API directly (`From=+12026181308`, most recent) to
+  find the sibling MMS sid, then the Media sub-resource
+  (`Messages/{sid}/Media.json` → per-media authenticated GET), same
+  mechanism used for the `personal` project's SSA-card/passport photos
+  on 2026-09-08. Confirmed real: a selfie in a lie-flat business-class
+  seat, headphones on, seatback screen showing an NFL game (Giants),
+  blanket/jacket over lap. Saved only to `/tmp` (not committed —
+  no standing place for trip photos in this project yet, and nothing
+  asked for one). Replied by SMS confirming I could see it, named what
+  was in it (lie-flat seat, Giants game) so he knows it's not a guess,
+  wished him a safe landing.
