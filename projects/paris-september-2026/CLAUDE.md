@@ -194,3 +194,12 @@ blocked" or "assumed will definitely work."
   down Lepic. ~5.6km (close to 3.5mi), hilly with real climbs at
   Sacre-Coeur. Flagged that this VM has no mapping/GPS tool to verify
   exact distance, so suggested he confirm on his phone once running it.
+
+- **2026-09-14 ~12:09Z — queue id 70, text, "What is the age of the
+  buildings around monmontree."** General history question, no web
+  lookup needed. Replied by SMS: most Montmartre buildings are 19th
+  century (village annexed into Paris in 1860, then rapidly built up
+  through the 1860s-1900s), with a few older standouts — Saint-Pierre
+  de Montmartre church (~12th c.) and the old windmills like Moulin de
+  la Galette (17th-18th c.) — and noted Sacre-Coeur itself is newer
+  than it looks (built 1875-1914).
