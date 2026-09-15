@@ -233,3 +233,15 @@ blocked" or "assumed will definitely work."
   pricing, and a heads-up to arrive 30min early since boats leave on a
   fixed schedule. Offered to help pick a tier if he wants to go
   further.
+
+- **2026-09-15 ~15:33Z — queue id 73, text, "How about no food."**
+  Follow-up on queue id 72 — wants a plain sightseeing cruise, not the
+  dinner cruise just recommended. Searched further: standard 1-hour
+  no-meal sightseeing cruises (Vedettes du Pont Neuf, Bateaux Parisiens'
+  own sightseeing option) run frequently through the evening (every
+  30-45min) into the 10-10:30pm range in September, cost ~€15-20, and
+  don't need advance reservation the way the dinner cruise does. Named
+  two walk-up spots: Vedettes du Pont Neuf (Square du Vert Galant, near
+  Pont Neuf/Louvre) and the Bateaux Parisiens dock at the foot of the
+  Eiffel Tower. Replied by SMS: just show up ~15min before a departure,
+  no booking needed.
