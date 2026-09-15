@@ -245,3 +245,13 @@ blocked" or "assumed will definitely work."
   Pont Neuf/Louvre) and the Bateaux Parisiens dock at the foot of the
   Eiffel Tower. Replied by SMS: just show up ~15min before a departure,
   no booking needed.
+
+- **2026-09-15 ~16:45Z — queue id 74, text, "History of louve."** General
+  knowledge question (Louvre history), no web lookup needed. Replied by
+  SMS: 1190 fortress (Philip II) -> 1360s royal residence (Charles V) ->
+  1540s Renaissance rebuild (Francis I) -> expanded over centuries
+  (Catherine de Medici's Tuileries wing) -> court moved to Versailles
+  1682 (Louis XIV), Louvre left mostly for art/academies -> opened as
+  public museum 1793 during the Revolution -> collection greatly
+  expanded under Napoleon -> I.M. Pei glass pyramid added 1989 -> now
+  world's most-visited museum (Mona Lisa, Venus de Milo).
