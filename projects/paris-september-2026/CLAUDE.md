@@ -215,3 +215,21 @@ blocked" or "assumed will definitely work."
   cemetery, needs advance tickets) option. Flagged Montmartre Cemetery
   as the practical pick given his location and offered walking
   directions.
+
+- **2026-09-15 ~15:31Z — queue id 72, text, "Can u help me find an
+  evening boat cruise for tonight 8pm or later."** Live-availability
+  question, so tried web tools per the capability note rather than
+  assuming blocked. `WebSearch` plus `WebFetch` on `cometoparis.com`
+  (the `bateauxparisiens.com` site itself returned empty/blank content
+  to `WebFetch`, likely JS-rendered) confirmed Bateaux Parisiens runs an
+  8:30pm dinner cruise **every day**, near the Eiffel Tower, 2h30,
+  tiers €115-245 (Star/Discovery/Privilege/Premier). General search
+  results also surfaced Bateaux Mouches as a same-slot cheaper
+  alternative. Couldn't confirm actual seat availability for tonight
+  specifically (no live booking-engine access) — said so rather than
+  promising a seat, and pointed him to book directly at
+  `bateauxparisiens.com` / `bateaux-mouches.fr` ASAP since dinner
+  cruises want advance reservations. Replied by SMS with both options,
+  pricing, and a heads-up to arrive 30min early since boats leave on a
+  fixed schedule. Offered to help pick a tier if he wants to go
+  further.
