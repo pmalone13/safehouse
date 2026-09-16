@@ -319,3 +319,12 @@ blocked" or "assumed will definitely work."
   Rue Saint-Jacques (traces the Roman cardo through the Latin Quarter).
   Noted the first three cluster in the Latin Quarter/Ile de la Cite and
   pair naturally with a Notre-Dame stop.
+
+- **2026-09-16 ~13:43Z — queue id 81, text, "Can u give me map of first
+  3."** Follow-up on queue id 80, wants a map for the three
+  Latin-Quarter ruins (Arenes de Lutece, Thermes de Cluny, Crypte
+  Archeologique). No live-mapping tool on this VM, but a Google Maps
+  multi-stop directions URL is just a constructed link, not a lookup —
+  built one (`/maps/dir/?api=1&origin=...&waypoints=...&destination=...
+  &travelmode=walking`) in visiting order and sent by SMS, with an
+  estimated ~25-30min total walking time between the three.
