@@ -302,3 +302,10 @@ blocked" or "assumed will definitely work."
   LED. Replied by SMS with the reasoning and a practical tell (color at
   night: white/blue = LED, orange = older high-pressure sodium) since
   the photo alone can't confirm without seeing it lit.
+
+- **2026-09-16 ~11:15Z — queue id 79, text, "Florescent."** Third
+  guess in the same run (arrived 19s after queue id 78, likely typed in
+  quick succession rather than after reading that reply). Same
+  reasoning applies: fluorescent is also a glass tube, ruled out for the
+  same opaque-metal-housing reason. Replied by SMS reiterating the
+  sealed-LED-fixture conclusion.
