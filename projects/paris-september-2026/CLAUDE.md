@@ -265,3 +265,10 @@ blocked" or "assumed will definitely work."
   (Musee Carnavalet or Picasso Museum), ending at Place de la Bastille,
   with the Promenade Plantee flagged as an optional extension further
   east. ~2-2.5hr easy walk, flat terrain.
+
+- **2026-09-16 ~09:50Z — queue id 76, text, "What year did young
+  Napoleon fire Cannon on Paris rebels."** General history question, no
+  web lookup needed. Replied by SMS: 1795 (13 Vendemiaire, Oct 5) —
+  26-year-old Napoleon used cannon ("whiff of grapeshot") to crush a
+  royalist uprising against the revolutionary government, defending the
+  Tuileries area; the event that launched his rapid rise.
