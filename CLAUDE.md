@@ -927,3 +927,25 @@ what's throwaway vs. permanent; don't build real features in here.
   clean (6 updated, 822 unchanged, 0 orphaned). Nothing outstanding:
   working tree confirmed clean at wrap-up, so this entry is the only
   change this turn makes.
+- 2026-09-16 ~15:2xZ: session wrap-up (idle window elapsed, no new
+  message). Five turns this session, all `paris-september-2026`, queue
+  ids 80-84, all general knowledge/logistics Qs answered by SMS and
+  already committed/pushed individually: top 5 Roman ruins (80), a
+  constructed Google Maps walking-route link for the first 3 (81), why
+  Paris buildings are typically 7 floors / Haussmann codes (82), an MMS
+  photo Paul sent that the webhook doesn't forward (same known
+  image-MMS gap as queue ids 65/77) — fetched directly via Twilio Media
+  API and identified as likely Thermes de Cluny (83), confirmed correct
+  plus a next-stop pointer (84). Working tree was already clean at
+  wrap-up — nothing to add here beyond this log entry.
+  **Also found and flagged mid-session (queue id 80's checkpoint): a
+  new, different Drive outage** — `invalid_grant` again, but Gmail
+  unaffected this time (unlike the 2026-09-08 both-down event), and the
+  Drive token had refreshed successfully just ~2.5h before failing, so
+  the old 7-day-cap theory doesn't cleanly explain it. Texted Paul,
+  logged in the TODO section above. **Confirmed still down at this
+  wrap-up** — `drive_sync.py` failed identically on every one of this
+  session's five checkpoints (80-84), same `invalid_grant`. Git
+  push has been unaffected throughout; only the Drive mirror is stale.
+  Not re-texting Paul again this wrap-up — already flagged once this
+  session, nothing new to add.
