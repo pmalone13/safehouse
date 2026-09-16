@@ -309,3 +309,13 @@ blocked" or "assumed will definitely work."
   reasoning applies: fluorescent is also a glass tube, ruled out for the
   same opaque-metal-housing reason. Replied by SMS reiterating the
   sealed-LED-fixture conclusion.
+
+- **2026-09-16 ~13:41Z — queue id 80, text, "Top five Roman ruins
+  Paris?"** General history/sightseeing question, no web lookup needed.
+  Replied by SMS with five: Arenes de Lutece (amphitheater, 5th arr),
+  Thermes de Cluny (Roman baths, Musee de Cluny), Crypte Archeologique
+  (Gallo-Roman remains under the Notre-Dame parvis), Musee Carnavalet's
+  Lutetia collection (incl. a Roman-era dugout boat from the Seine), and
+  Rue Saint-Jacques (traces the Roman cardo through the Latin Quarter).
+  Noted the first three cluster in the Latin Quarter/Ile de la Cite and
+  pair naturally with a Notre-Dame stop.
