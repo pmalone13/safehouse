@@ -272,3 +272,21 @@ blocked" or "assumed will definitely work."
   26-year-old Napoleon used cannon ("whiff of grapeshot") to crush a
   royalist uprising against the revolutionary government, defending the
   Tuileries area; the event that launched his rapid rise.
+
+- **2026-09-16 ~11:09Z — queue id 77, text, "What kind of light is
+  this" with an MMS photo attached.** Unlike queue id 65 (photo arrived
+  as a separate MMS from the text), this one had the image attached
+  directly to the same message (`MM9be687a0...`, `num_media=1`) — the
+  webhook only ever forwards typed text, never media, into the queued
+  body (see `_build_body` in `twilio_webhook.py`, audio-only
+  transcription), so the photo itself doesn't reach the session
+  automatically either way. Fetched it via the Twilio Media sub-resource
+  (`Messages/{sid}/Media.json` -> per-media authenticated GET), same
+  mechanism as queue id 65. Image: a long tapered cylindrical metal
+  lamp housing suspended on cables strung across a narrow street between
+  two buildings, shot looking straight up. Identified as a
+  catenary-mounted (cable-suspended) street lamp — common in old
+  European streets, including Montmartre, where fixtures hang from wires
+  between buildings instead of standing on poles. Saved only to `/tmp`
+  (not committed, same as queue id 65 — no standing place for trip
+  photos in this project). Replied by SMS with the identification.
