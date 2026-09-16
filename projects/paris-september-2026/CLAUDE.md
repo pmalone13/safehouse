@@ -290,3 +290,15 @@ blocked" or "assumed will definitely work."
   between buildings instead of standing on poles. Saved only to `/tmp`
   (not committed, same as queue id 65 — no standing place for trip
   photos in this project). Replied by SMS with the identification.
+
+- **2026-09-16 ~11:15Z — queue id 78, text, "Halogen, neon?"** Follow-up
+  on queue id 77, asking about the bulb/lamp technology rather than the
+  mounting style just answered. Re-examined the same photo
+  (`/tmp/paris_light_q77.jpg`): the housing is a fully enclosed, opaque
+  metal tube with no visible glass or light-emitting element. Ruled out
+  neon (needs a visible glass tube) and halogen (doesn't come in that
+  elongated shape for street lighting) on that basis, and named the
+  enclosed-cylindrical-suspended-fixture style as almost always modern
+  LED. Replied by SMS with the reasoning and a practical tell (color at
+  night: white/blue = LED, orange = older high-pressure sodium) since
+  the photo alone can't confirm without seeing it lit.
