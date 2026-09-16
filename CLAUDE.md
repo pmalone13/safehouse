@@ -949,3 +949,21 @@ what's throwaway vs. permanent; don't build real features in here.
   push has been unaffected throughout; only the Drive mirror is stale.
   Not re-texting Paul again this wrap-up — already flagged once this
   session, nothing new to add.
+- 2026-09-16 ~17:2xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 85, `paris-september-2026`,
+  "earliest estimate of homo sapien living in the Paris region... any
+  other humanoid like neandrethal." Used `WebSearch` (worked fine this
+  turn) rather than answer a specific-region question from memory
+  alone: no sapiens fossils in Paris itself, earliest French sapiens
+  ~54,000ya (Grotte Mandrin, Rhone valley), Paris Basin specifically
+  ~40-45,000ya (contested Chatelperronian layers) with clear sapiens by
+  ~38,000ya; Neanderthals/Homo heidelbergensis much older —
+  Levallois-Perret technique ~300-200,000ya, Soucy site Acheulean tools
+  ~340-370,000ya. Replied by SMS, already committed/pushed (`2a1da69`)
+  before this wrap-up fired. Drive sync retried as part of that turn's
+  checkpoint — **still the same `invalid_grant` failure**, unchanged
+  from the outage first flagged at queue id 80's checkpoint earlier
+  today; git push unaffected. Working tree confirmed clean at wrap-up,
+  so this entry is the only change this turn makes. Not re-texting Paul
+  about the Drive outage again — already flagged once today, nothing
+  new to add.
