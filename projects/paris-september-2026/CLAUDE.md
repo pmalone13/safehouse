@@ -255,3 +255,13 @@ blocked" or "assumed will definitely work."
   public museum 1793 during the Revolution -> collection greatly
   expanded under Napoleon -> I.M. Pei glass pyramid added 1989 -> now
   world's most-visited museum (Mona Lisa, Venus de Milo).
+
+- **2026-09-16 ~09:19Z — queue id 75, text, "Morning on walking tour
+  starting city hall and east."** General itinerary request, no web
+  lookup needed. Replied by SMS with a Hotel de Ville -> Marais route:
+  Hotel de Ville itself, into the Marais via Rue des Archives/Rue des
+  Francs-Bourgeois, Place des Vosges (Victor Hugo's house), Rue des
+  Rosiers (Jewish quarter, L'As du Fallafel), an optional indoor stop
+  (Musee Carnavalet or Picasso Museum), ending at Place de la Bastille,
+  with the Promenade Plantee flagged as an optional extension further
+  east. ~2-2.5hr easy walk, flat terrain.
