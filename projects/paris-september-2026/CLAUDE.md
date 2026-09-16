@@ -337,3 +337,18 @@ blocked" or "assumed will definitely work."
   set-back mansard attic floor (the 7th, behind the sloped zinc roof).
   That uniform cornice line + mansard floor is the classic Haussmannian
   look across central Paris.
+
+- **2026-09-16 ~15:02Z — queue id 83, text, "Did u get pic?"** A photo
+  MMS (`MMbe6cb...`, empty body, 1 media item) had arrived 12min earlier
+  at 14:50Z but never reached the queue — same known gap as queue ids
+  65/77 (`twilio_webhook.py` only transcribes `audio/*` media, images
+  never get forwarded into the enqueued body). Fetched it directly via
+  the Twilio Media sub-resource (same mechanism as those prior turns).
+  Image: striped Roman brick-and-stone "opus mixtum" ruin walls with a
+  modern museum wing visible behind — consistent with the Thermes de
+  Cluny (Roman baths), #2 on the top-5 list sent for queue id 80, and
+  right after the walking-route map sent for queue id 81. Saved only to
+  `/tmp` (`/tmp/paris_pic_q83.jpg`, not committed — same no-standing-
+  place-for-trip-photos situation as queue ids 65/77). Replied by SMS
+  confirming receipt, named what's in it, and asked him to confirm it's
+  Cluny rather than assuming.
