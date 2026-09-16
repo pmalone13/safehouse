@@ -328,3 +328,12 @@ blocked" or "assumed will definitely work."
   built one (`/maps/dir/?api=1&origin=...&waypoints=...&destination=...
   &travelmode=walking`) in visiting order and sent by SMS, with an
   estimated ~25-30min total walking time between the three.
+
+- **2026-09-16 ~14:15Z — queue id 82, text, "Why 7 floors in Paris
+  buildings?"** General history question, no web lookup needed. Replied
+  by SMS: Haussmann-era (1850s-70s) building codes capped height
+  relative to street width (cornice height roughly = street width, up
+  to ~20m on major boulevards) -> ground floor + 5 upper floors + a
+  set-back mansard attic floor (the 7th, behind the sloped zinc roof).
+  That uniform cornice line + mansard floor is the classic Haussmannian
+  look across central Paris.
