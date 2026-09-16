@@ -359,3 +359,24 @@ blocked" or "assumed will definitely work."
   Replied by SMS with a quick tip (frigidarium hall is the highlight)
   and pointed him to the next stop on the queue id 81 walking route
   (Crypte Archeologique, ~10min walk east under the Notre-Dame parvis).
+
+- **2026-09-16 ~17:20Z — queue id 85, text, "what is the earliest
+  estimate of homo sapien living in the Paris region. Same for any
+  other humanoid like neandrethal."** General prehistory question, used
+  `WebSearch` (available this session) rather than answering from
+  memory alone given the specific-region framing. Findings: no Homo
+  sapiens fossils found in Paris itself; earliest sapiens presence in
+  France overall is ~54,000ya (Grotte Mandrin, Rhone valley, a
+  temporary incursion later reversed by Neanderthals); in the Paris
+  Basin specifically the evidence is Chatelperronian-layer tools
+  ~40-45,000ya (contested whether Neanderthal or sapiens made them),
+  with clear/undisputed sapiens presence by ~38,000ya (Aurignacian).
+  Older hominins go back much further: Levallois-Perret (a Paris
+  suburb) gave its name to the Levallois stone-tool technique used by
+  Neanderthals in the region ~300-200,000ya; earlier still, the Soucy
+  site in the Seine/Paris Basin has Acheulean tools dated
+  ~340-370,000ya, attributed to Homo heidelbergensis (a Neanderthal
+  ancestor) — so archaic humans occupied the Paris region on and off
+  for 300,000+ years before sapiens arrived. Replied by SMS with this
+  breakdown. No web-access issue this turn (WebSearch worked fine,
+  separate from the ongoing Drive-only outage below).
