@@ -352,3 +352,10 @@ blocked" or "assumed will definitely work."
   place-for-trip-photos situation as queue ids 65/77). Replied by SMS
   confirming receipt, named what's in it, and asked him to confirm it's
   Cluny rather than assuming.
+
+- **2026-09-16 ~15:07Z — queue id 84, text, "Yes. Now here .."**
+  Confirms queue id 83's guess: he's at Thermes de Cluny. No new media
+  on this message (checked the Twilio Messages API, `num_media=0`).
+  Replied by SMS with a quick tip (frigidarium hall is the highlight)
+  and pointed him to the next stop on the queue id 81 walking route
+  (Crypte Archeologique, ~10min walk east under the Notre-Dame parvis).
