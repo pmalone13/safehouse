@@ -413,3 +413,10 @@ blocked" or "assumed will definitely work."
   -> Coronation of Napoleon -> Venus de Milo -> Great Sphinx of Tanis
   -> Code of Hammurabi. Replied by SMS with room/wing locations and a
   tip to book a timed slot given midday Mona Lisa crowds.
+
+- **2026-09-17 ~12:34Z — queue id 89, text, "What year was winged
+  victory carved."** Follow-up on #2 from queue id 88's route. Used
+  `WebSearch` rather than memory alone for the specific date range:
+  ~190 BC (Hellenistic era, Parian marble; sources cite a range of
+  roughly 200-175 BC), artist unknown, discovered in fragments on
+  Samothrace in 1863, reconstructed in the Louvre. Replied by SMS.
