@@ -967,3 +967,19 @@ what's throwaway vs. permanent; don't build real features in here.
   so this entry is the only change this turn makes. Not re-texting Paul
   about the Drive outage again — already flagged once today, nothing
   new to add.
+- 2026-09-17 ~08:3xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 86, `paris-september-2026`,
+  "Is the Frenchman L'enfaunt who met Franklin in Paris circa 1777 the
+  same man who designed DC." Used `WebSearch` to check the specific
+  "met Franklin" claim rather than confirm purely from memory — answer:
+  yes, same man, Pierre Charles L'Enfant, designer of the 1791
+  Washington DC plan, but the Paris-1777 recruitment is credited in
+  sources to Silas Deane and Beaumarchais, not documented as a personal
+  Franklin meeting (Franklin was a fellow commissioner in Paris at the
+  time). Replied by SMS, already committed/pushed (`90db77f`) before
+  this wrap-up fired. Drive sync retried as part of that turn's
+  checkpoint — **still the same `invalid_grant` failure**, unchanged
+  from the outage first flagged 2026-09-16; git push unaffected.
+  Working tree confirmed clean at wrap-up, so this entry is the only
+  change this turn makes. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times, nothing new to add.
