@@ -23,8 +23,10 @@ per Paul's own naming in the message that created it (queue id 29,
 
 ## Open items (his to resolve, not mine to guess)
 
-- Normandy leg — no dates, no specific itinerary (which sites, how
-  many nights) yet.
+- Normandy leg — dates now partly known (see queue id 93 below: depart
+  Paris Mon 9/21, WWII beaches day tour Tue 9/22 from Bayeux). Still
+  open: which train/tour he actually books, how many nights in Bayeux,
+  and the rest of the itinerary beyond the beaches day.
 - Christine's actual return date/flight.
 - Return flight(s) for Paul — only the target date (25th) is known,
   not a booked flight.
@@ -455,3 +457,35 @@ blocked" or "assumed will definitely work."
   itself isn't hit by its standing Tuesday closure. Replied by SMS:
   Napoleon rooms worth doing, crown jewels room is walkable but has
   nothing to actually see right now.
+
+- **2026-09-17 ~22:06Z — queue id 93, text, "Help book tour September
+  22nd leaving from bayou doing a day full day trip to world war II
+  beaches. And I need to book train tickets to leave Monday 21st of
+  September to go to bayou from Paris. We think gar St lizard is our
+  local train station."** Dictation garble decoded correctly:
+  "bayou" = Bayeux, "gar St lizard" = Gare Saint-Lazare — and Saint-
+  Lazare genuinely is the right Paris station for the Bayeux/Caen/
+  Cherbourg line, confirmed via `WebSearch`, not just accepted at face
+  value. First real dates for the long-open Normandy leg: depart Paris
+  Mon 9/21, WWII beaches day tour Tue 9/22 from Bayeux.
+  Researched both legs live (`WebSearch` + `WebFetch`; SNCF Connect
+  itself 403'd WebFetch, Trainline didn't):
+  * **Train**: Paris St-Lazare → Bayeux, ~14 trains/day 6:12am-10:15pm,
+    fastest 2h12m (some routes involve a change, ~3h), fares from
+    ~€20-50 one-way rising closer to the date. Book at sncf-connect.com
+    or thetrainline.com.
+  * **Tour**: Bayeux Shuttle's "American D-Day Experience" (Omaha
+    Beach, US Cemetery, Pointe du Hoc, Airborne Museum, Ste-Mere-Eglise,
+    Utah Beach) — €135/pp, bookable at bayeuxshuttle.com or by phone
+    (+33 607 195 405, M-F 9-6). Viator/GetYourGuide list comparable
+    full-day tours (~$168/pp) with instant online card booking; their
+    specific tour-page WebFetches 403'd, so couldn't confirm live
+    9/22 seat availability on those, only the general offering.
+  **Important capability note, said plainly rather than implied**:
+  this VM has no browser-automation or payment capability, so it
+  cannot actually execute either purchase (enter cards, hold seats) —
+  only research and hand over booking links/numbers. Not a hard-
+  boundary application-code issue, just a tooling gap. Replied by SMS
+  with both sets of options/links and this limitation up front, and
+  asked whether he wants more digging (exact train time, comparing
+  tour operators) before he books himself.
