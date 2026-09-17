@@ -380,3 +380,17 @@ blocked" or "assumed will definitely work."
   for 300,000+ years before sapiens arrived. Replied by SMS with this
   breakdown. No web-access issue this turn (WebSearch worked fine,
   separate from the ongoing Drive-only outage below).
+
+- **2026-09-17 ~08:31Z — queue id 86, text, "Is the Frenchman
+  L'enfaunt who met Franklin in Paris circa 1777 the same man who
+  designed DC."** Confirmed yes — Pierre Charles L'Enfant. Used
+  `WebSearch` rather than answer purely from memory since the specific
+  "met Franklin" claim needed checking: the recruitment-in-Paris-1777
+  credit in sources found (Wikipedia, Journal of the American
+  Revolution, Founders Archives) goes to envoy Silas Deane (who signed
+  L'Enfant's contract) and arms-dealer/playwright Beaumarchais, not
+  documented as a personal Franklin connection — Franklin was a fellow
+  American commissioner in Paris at the same time, so plausible but not
+  confirmed as stated. Flagged that distinction rather than just
+  confirming the premise outright. Same L'Enfant later designed the
+  1791 Washington DC street plan for Washington. Replied by SMS.
