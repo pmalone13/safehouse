@@ -420,3 +420,13 @@ blocked" or "assumed will definitely work."
   ~190 BC (Hellenistic era, Parian marble; sources cite a range of
   roughly 200-175 BC), artist unknown, discovered in fragments on
   Samothrace in 1863, reconstructed in the Louvre. Replied by SMS.
+
+- **2026-09-17 ~13:34Z — queue id 90, text, "Outline charlamain's
+  career."** General history question, no web lookup needed. Replied
+  by SMS with a career outline: born c.747 -> co-king 768 (with
+  Carloman I) -> sole king 771 -> conquers Lombards 774 -> Saxon Wars
+  772-804 -> Roncevaux Pass defeat 778 (Song of Roland) -> crushes Avar
+  Khaganate by 796 -> crowned Holy Roman Emperor by Pope Leo III,
+  Christmas 800 -> Carolingian Renaissance (Alcuin of York, Aachen
+  palace school) -> dies 814 at Aachen, empire split among grandsons at
+  Verdun 843.
