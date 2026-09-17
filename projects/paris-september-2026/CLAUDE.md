@@ -23,12 +23,12 @@ per Paul's own naming in the message that created it (queue id 29,
 
 ## Open items (his to resolve, not mine to guess)
 
-- Normandy leg — shape now mostly known (see queue ids 93-94 below):
-  Mon 9/21 Paris->Bayeux, Tue 9/22 D-Day beaches tour, Wed 9/23
-  Bayeux->Pontorson/Mont-St-Michel (unconfirmed guess at the garbled
-  destination name), Thu 9/24 Pontorson->Paris. Still open: whether
-  the Pontorson guess is right, which specific train/tour he actually
-  books, and any lodging in Bayeux/Pontorson.
+- Normandy leg — itinerary shape **confirmed** (queue id 95, after
+  queue ids 93-94): Mon 9/21 Paris->Bayeux, Tue 9/22 D-Day beaches
+  tour, Wed 9/23 Bayeux->Pontorson/Mont-St-Michel, Thu 9/24
+  Pontorson->Paris (Montparnasse). He's booking trains/tour himself.
+  Still open: actual booked times/confirmations, and any lodging in
+  Bayeux/Pontorson.
 - Christine's actual return date/flight.
 - Return flight(s) for Paul — only the target date (25th) is known,
   not a booked flight.
@@ -516,3 +516,13 @@ blocked" or "assumed will definitely work."
   9/23 Bayeux->Pontorson/Mont-St-Michel, Thu 9/24 Pontorson->Paris
   (Montparnasse) — pending his confirmation on the Pontorson guess and
   actual bookings.
+
+- **2026-09-17 ~22:11Z — queue id 95, text, "All perfect, thanks. I'll
+  book in am."** Confirms the Pontorson/Mont-St-Michel guess from
+  queue id 94 was correct, and that all the researched times/links for
+  both legs (Paris->Bayeux 9/21, D-Day tour 9/22, Bayeux->Pontorson
+  9/23, Pontorson->Paris 9/24) checked out well enough that he's
+  booking himself rather than asking for more digging. No reply needed
+  — he's closing the loop, not asking anything new. Normandy itinerary
+  above can now be treated as confirmed shape, not a guess, pending
+  only the actual ticket/tour purchases (his to do) and lodging.
