@@ -983,3 +983,22 @@ what's throwaway vs. permanent; don't build real features in here.
   Working tree confirmed clean at wrap-up, so this entry is the only
   change this turn makes. Not re-texting Paul about the Drive outage
   again — already flagged multiple times, nothing new to add.
+- 2026-09-17 ~15:2xZ: session wrap-up (idle window elapsed, no new
+  message). Five turns this session, all `paris-september-2026`, queue
+  ids 87-92, all already committed/pushed individually: resent the
+  Louvre history outline (87, a repeat of queue id 74), a top-10
+  Louvre-pieces walking route ordered by wing/floor (88), the Winged
+  Victory's carving date via `WebSearch` (89), a Charlemagne career
+  outline (90), what counts as "prehistory" date-wise (91), and
+  current open/closed status for the Napoleon III Apartments and
+  Crown Jewels (92) — the latter surfaced a real Oct 19, 2025 Louvre
+  heist (8 crown jewel pieces stolen, still unrecovered) via
+  `WebSearch`, worth knowing for a future turn: the Apollo Gallery
+  reopened July 2026 but sits empty, no jewels on display yet. Drive
+  sync retried on every one of this session's five checkpoints —
+  **still the same `invalid_grant` failure**, unchanged from the
+  outage first flagged 2026-09-16; git push unaffected throughout.
+  Working tree confirmed clean at wrap-up, so this entry is the only
+  change this turn makes. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times this week, nothing new to
+  add.
