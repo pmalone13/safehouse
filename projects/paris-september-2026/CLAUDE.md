@@ -394,3 +394,11 @@ blocked" or "assumed will definitely work."
   confirmed as stated. Flagged that distinction rather than just
   confirming the premise outright. Same L'Enfant later designed the
   1791 Washington DC street plan for Washington. Replied by SMS.
+
+- **2026-09-17 ~11:52Z — queue id 87, text, "Give outline of louve
+  history."** Same question as queue id 74 (2026-09-15), likely just
+  forgotten/wanted again rather than a new ask. Resent the identical
+  outline (1190 fortress -> 1360s royal residence -> 1540s Renaissance
+  rebuild -> Louis XIV moves to Versailles 1682 -> public museum 1793
+  -> Napoleon-era expansion -> 1989 pyramid -> today's most-visited
+  museum) by SMS rather than re-researching from scratch.
