@@ -526,3 +526,21 @@ blocked" or "assumed will definitely work."
   — he's closing the loop, not asking anything new. Normandy itinerary
   above can now be treated as confirmed shape, not a guess, pending
   only the actual ticket/tour purchases (his to do) and lodging.
+
+- **2026-09-17 ~22:2xZ — session wrap-up** (idle window elapsed, no new
+  message). Three turns this session, queue ids 93-95, all already
+  committed/pushed individually: researched and sent train (Paris
+  St-Lazare->Bayeux) and D-Day tour options for the newly-dated
+  Normandy leg (93); decoded a garbled "ponto Arizona" as
+  Pontorson-Mont-St-Michel and researched the Bayeux->Pontorson->Paris
+  return leg, flagged as an unconfirmed guess (94); guess confirmed
+  correct, Paul booking everything himself (95). Full Normandy
+  itinerary now settled in shape: Mon 9/21 Paris->Bayeux, Tue 9/22
+  D-Day tour, Wed 9/23 Bayeux->Pontorson/Mont-St-Michel, Thu 9/24
+  Pontorson->Paris (Montparnasse). Drive sync retried on every one of
+  this session's checkpoints — **still the same `invalid_grant`
+  failure**, unchanged from the outage first flagged 2026-09-16; git
+  push unaffected throughout. Working tree confirmed clean at
+  wrap-up, so this entry is the only change this turn makes. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
