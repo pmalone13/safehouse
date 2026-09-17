@@ -23,10 +23,12 @@ per Paul's own naming in the message that created it (queue id 29,
 
 ## Open items (his to resolve, not mine to guess)
 
-- Normandy leg — dates now partly known (see queue id 93 below: depart
-  Paris Mon 9/21, WWII beaches day tour Tue 9/22 from Bayeux). Still
-  open: which train/tour he actually books, how many nights in Bayeux,
-  and the rest of the itinerary beyond the beaches day.
+- Normandy leg — shape now mostly known (see queue ids 93-94 below):
+  Mon 9/21 Paris->Bayeux, Tue 9/22 D-Day beaches tour, Wed 9/23
+  Bayeux->Pontorson/Mont-St-Michel (unconfirmed guess at the garbled
+  destination name), Thu 9/24 Pontorson->Paris. Still open: whether
+  the Pontorson guess is right, which specific train/tour he actually
+  books, and any lodging in Bayeux/Pontorson.
 - Christine's actual return date/flight.
 - Return flight(s) for Paul — only the target date (25th) is known,
   not a booked flight.
@@ -489,3 +491,28 @@ blocked" or "assumed will definitely work."
   with both sets of options/links and this limitation up front, and
   asked whether he wants more digging (exact train time, comparing
   tour operators) before he books himself.
+
+- **2026-09-17 ~22:08Z — queue id 94, text, "And we need train tickets
+  back from by you to actually to ponto Arizona on the 23rd of
+  September... early in the morning like 9:00... then the next day
+  we're going to head back to Paris."** Arrived 2 min after queue id
+  93, same thread. Decoded the garbled destination as a guess, not a
+  fact: "ponto Arizona" ≈ **Pontorson-Mont-St-Michel**, the actual train
+  station serving Mont Saint-Michel — corroborated by `WebSearch`
+  (real station name, real Bayeux<->Pontorson route exists) and by fit
+  (classic next stop after a Bayeux D-Day day, matches "see the town"
+  + heading back to Paris the day after). Explicitly flagged this as
+  unconfirmed and asked him to verify, rather than asserting it — same
+  posture as unverified-guess handling in the `movies` project.
+  Researched assuming the guess is right: **Wed 9/23 Bayeux->Pontorson**
+  (~4 trains/day, earliest weekday ~6:23am, 2h17m-3h30m depending on
+  connection — an 8-9am departure should exist); **Thu 9/24
+  Pontorson->Paris** lands at **Gare Montparnasse**, not Saint-Lazare
+  (~4/day, ~4hrs, first ~8:44am) — worth remembering if he later asks
+  about the return-to-Paris station. Same booking-capability
+  limitation as queue id 93 restated briefly rather than re-explained
+  at length. Replied by SMS. Normandy itinerary is now shaping up as:
+  Mon 9/21 Paris(St-Lazare)->Bayeux, Tue 9/22 D-Day beaches tour, Wed
+  9/23 Bayeux->Pontorson/Mont-St-Michel, Thu 9/24 Pontorson->Paris
+  (Montparnasse) — pending his confirmation on the Pontorson guess and
+  actual bookings.
