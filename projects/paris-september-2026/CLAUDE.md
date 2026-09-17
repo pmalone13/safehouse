@@ -402,3 +402,14 @@ blocked" or "assumed will definitely work."
   rebuild -> Louis XIV moves to Versailles 1682 -> public museum 1793
   -> Napoleon-era expansion -> 1989 pyramid -> today's most-visited
   museum) by SMS rather than re-researching from scratch.
+
+- **2026-09-17 ~12:04Z — queue id 88, text, "Louve map walking guide to
+  hit top ten pieces."** Follow-up to queue id 87. General art/museum-
+  layout knowledge, no web lookup needed. Built a practical walking
+  route by actual Louvre wing/floor (start at Pyramid, Denon wing first
+  then Sully) rather than just listing famous pieces unordered:
+  Michelangelo's Slaves -> Winged Victory of Samothrace -> Mona Lisa ->
+  Wedding at Cana -> Liberty Leading the People -> Raft of the Medusa
+  -> Coronation of Napoleon -> Venus de Milo -> Great Sphinx of Tanis
+  -> Code of Hammurabi. Replied by SMS with room/wing locations and a
+  tip to book a timed slot given midday Mona Lisa crowds.
