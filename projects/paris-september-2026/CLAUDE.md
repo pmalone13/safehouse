@@ -439,3 +439,19 @@ blocked" or "assumed will definitely work."
   when writing appears locally (Sumer/Mesopotamia ~3200 BC earliest,
   Egypt ~3000 BC, Britain not until the Roman conquest AD 43, some
   regions not until European contact centuries later).
+
+- **2026-09-17 ~14:54Z — queue id 92, text, "Are crown jewels or
+  Napoleon rooms open now?"** Live-availability question, tried
+  `WebSearch` per the capability note rather than answering from stale
+  general knowledge. Found something the general-knowledge answer
+  would've missed: an **Oct 19, 2025 Louvre heist** — 8 French Crown
+  Jewels pieces stolen from the Apollo Gallery, still unrecovered.
+  Gallery itself reopened July 22, 2026 but currently **empty** — no
+  jewels on display (remaining pieces to eventually go on view
+  elsewhere in the museum, not yet done as of the sources found).
+  Napoleon III Apartments: open, no current closure (last renovation
+  was 2023-24, fully reopened June 2024). Also confirmed via a quick
+  `date` check that today (2026-09-17) is a Thursday, so the museum
+  itself isn't hit by its standing Tuesday closure. Replied by SMS:
+  Napoleon rooms worth doing, crown jewels room is walkable but has
+  nothing to actually see right now.
