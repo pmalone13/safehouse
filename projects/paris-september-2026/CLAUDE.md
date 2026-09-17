@@ -430,3 +430,12 @@ blocked" or "assumed will definitely work."
   Christmas 800 -> Carolingian Renaissance (Alcuin of York, Aachen
   palace school) -> dies 814 at Aachen, empire split among grandsons at
   Verdun 843.
+
+- **2026-09-17 ~14:26Z — queue id 91, text, "What is considered pre-
+  history date wise."** General knowledge question, no web lookup
+  needed. Replied by SMS: prehistory = before written records, not a
+  fixed universal date — starts with earliest stone tools ~3.3mya (or
+  Homo genus emergence ~2.5mya); end date varies by region depending on
+  when writing appears locally (Sumer/Mesopotamia ~3200 BC earliest,
+  Egypt ~3000 BC, Britain not until the Roman conquest AD 43, some
+  regions not until European contact centuries later).
