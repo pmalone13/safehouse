@@ -619,3 +619,16 @@ blocked" or "assumed will definitely work."
   (that's Napoleon, sons, marshals) and gave rough travel time/mode
   from central Paris plus noted the chateau itself is a museum worth
   pairing with the visit.
+
+- **2026-09-18 ~13:3xZ — session wrap-up** (idle window elapsed, no new
+  message). Three turns this session, queue ids 99-101, all already
+  committed/pushed individually: Les Invalides top-10 walking route
+  (99), regimental-flags detail at Eglise Saint-Louis (100), where
+  Josephine is buried — Rueil-Malmaison, not Les Invalides (101). All
+  general knowledge, no web lookups needed. Drive sync retried on
+  every checkpoint this session — **still the same `invalid_grant`
+  failure**, unchanged from the outage first flagged 2026-09-16; git
+  push unaffected throughout. Working tree confirmed clean at
+  wrap-up, so this entry is the only change this turn makes. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
