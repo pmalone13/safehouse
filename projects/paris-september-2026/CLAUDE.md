@@ -586,3 +586,14 @@ blocked" or "assumed will definitely work."
   clean at wrap-up, so this entry is the only change this turn makes.
   Not re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add.
+
+- **2026-09-18 ~12:25Z — queue id 99, text, "How about top ten things
+  to see at les invalid and order in which to walk."** General
+  sightseeing/museum-layout question, same shape as the earlier Louvre
+  walking route (queue id 88) — no web lookup needed. Replied by SMS
+  with a top-10 ordered for the actual building layout: Cour d'Honneur
+  -> Eglise Saint-Louis -> Musee de l'Armee armor/weapons wing -> Dome
+  des Invalides/Napoleon's Tomb (centerpiece) -> Marshal Foch's tomb ->
+  WWI galleries -> Charles de Gaulle wing/WWII galleries -> Historial
+  Charles de Gaulle -> Musee de l'Ordre de la Liberation -> Musee des
+  Plans-Reliefs (top floor, last). Budgeted 2.5-3hrs.
