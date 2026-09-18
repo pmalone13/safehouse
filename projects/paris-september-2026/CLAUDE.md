@@ -672,3 +672,13 @@ blocked" or "assumed will definitely work."
   asked him to clarify rather than run with an unconfirmed guess this
   time — lower confidence than the Pontorson decode, and worth
   getting right before doing more research.
+
+- **2026-09-18 ~19:01Z — queue id 105, text, "Spelled wrong. What fair
+  is adraba."** Resolves queue id 104: "etrien" was a mis-transcription
+  and not the real question — the real question is "what fare
+  [cuisine] is Adraba," asked from the table. Answered from research
+  already done for queue id 102, no new lookup needed: Levantine/
+  Middle Eastern cuisine (Lebanese/Syrian/Israeli-influenced), Chef
+  Elior Benarosh, mezze/grilled meats/flatbread style. Replied by SMS,
+  also noted sister restaurant Zoutra (queue id 103) is the same style
+  if he wants a repeat visit later in the trip.
