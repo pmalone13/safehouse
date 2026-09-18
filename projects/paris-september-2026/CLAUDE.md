@@ -573,3 +573,16 @@ blocked" or "assumed will definitely work."
   reaction to the 1795/Barras answer, sent as a quoted-text SMS rather
   than a native reaction (plain SMS has no reaction protocol). No
   question, no reply needed, no facts changed.
+
+- **2026-09-18 ~10:2xZ — session wrap-up** (idle window elapsed, no new
+  message). Three turns this session, queue ids 96-98, all already
+  committed/pushed individually: Paul confirmed the D-Day tour booked
+  (96, no reply needed); answered the 1795 cannon-into-crowds
+  year+chain-of-command question with `WebSearch` corroboration (97);
+  a 😢 tapback reaction to that answer, no reply needed (98). Drive
+  sync retried on every checkpoint this session — **still the same
+  `invalid_grant` failure**, unchanged from the outage first flagged
+  2026-09-16; git push unaffected throughout. Working tree confirmed
+  clean at wrap-up, so this entry is the only change this turn makes.
+  Not re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
