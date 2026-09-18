@@ -544,3 +544,13 @@ blocked" or "assumed will definitely work."
   wrap-up, so this entry is the only change this turn makes. Not
   re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add.
+
+- **2026-09-18 ~10:05Z — queue id 96, text, "Booked tour.  Thanks."**
+  Closes the loop from queue id 95 — the D-Day beaches tour (and
+  presumably the Normandy train legs researched in queue ids 93-94)
+  is now actually booked by Paul. Just an acknowledgment, no question
+  embedded, nothing new to research. No reply needed. Normandy leg
+  open item can now be treated as booked, not just "confirmed shape
+  pending booking." Still open: exact confirmations/times not shared
+  here, any lodging in Bayeux/Pontorson, and Christine's/Paul's actual
+  return flights.
