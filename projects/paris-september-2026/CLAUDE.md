@@ -608,3 +608,14 @@ blocked" or "assumed will definitely work."
   building with the Dome (Napoleon's Tomb) via a common apse — Louis
   XIV had Hardouin-Mansart build them as a linked soldiers-church/
   royal-church pair.
+
+- **2026-09-18 ~13:24Z — queue id 101, text, "Where is Josephine
+  buried."** General history question, likely prompted by the
+  Napoleon-related Les Invalides thread (queue ids 99-100), no web
+  lookup needed. Replied by SMS: Eglise Saint-Pierre-Saint-Paul in
+  Rueil-Malmaison (western Paris suburb), next to Chateau de Malmaison
+  where she lived after the divorce until her 1814 death; daughter
+  Hortense also buried there. Clarified she's not at Les Invalides
+  (that's Napoleon, sons, marshals) and gave rough travel time/mode
+  from central Paris plus noted the chateau itself is a museum worth
+  pairing with the visit.
