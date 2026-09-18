@@ -567,3 +567,9 @@ blocked" or "assumed will definitely work."
   and picked Napoleon (then 26) to lead the defense; grapeshot used on
   ~25,000 royalist rebels near the Tuileries, ~300 killed. Replied by
   SMS (`SM4bceb0cc3a99446aa230ae496a0f9c7b`, queued).
+
+- **2026-09-18 ~10:13Z — queue id 98, text, a 😢 tapback/reaction quoting
+  the queue id 97 reply verbatim.** Not a new message — an emoji
+  reaction to the 1795/Barras answer, sent as a quoted-text SMS rather
+  than a native reaction (plain SMS has no reaction protocol). No
+  question, no reply needed, no facts changed.
