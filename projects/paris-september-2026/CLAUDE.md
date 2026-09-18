@@ -700,3 +700,19 @@ blocked" or "assumed will definitely work."
   (`/tmp/paris_beer_q106.jpg`, not committed — same no-standing-place
   -for-trip-photos situation as queue ids 65/77/83). Replied by SMS
   with the identification and background.
+
+- **2026-09-18 ~19:1xZ — session wrap-up** (idle window elapsed, no
+  new message). Five turns this session, queue ids 102-106, all
+  already committed/pushed individually: Montmartre restaurant
+  recommendations near 41 Rue Lepic (102), Zoutra/Nemesis as Adraba
+  alternatives when Adraba was full (103), Adraba worked out after
+  all + asked to clarify a garbled "etrien" (104), resolved as "what
+  cuisine/fare is Adraba" — Levantine, Chef Elior Benarosh (105), and
+  identified a photo of the NA beer he was drinking (Kronenbourg 1664
+  0.0%) with brand history (106). Drive sync retried on every
+  checkpoint this session — **still the same `invalid_grant`
+  failure**, unchanged from the outage first flagged 2026-09-16; git
+  push unaffected throughout. Working tree confirmed clean at
+  wrap-up, so this entry is the only change this turn makes. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
