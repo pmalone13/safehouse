@@ -632,3 +632,18 @@ blocked" or "assumed will definitely work."
   wrap-up, so this entry is the only change this turn makes. Not
   re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add.
+
+- **2026-09-18 ~18:35Z — queue id 102, text, "Any thoughts on
+  restaurants near our Paris place. Ie: unique or special. Walking.
+  Less than $150."** Live/current-recommendation question, used
+  `WebSearch` (TripAdvisor, TheFork, Michelin guide, EuroCheapo, etc.)
+  rather than answer purely from memory given the specificity
+  (walking distance, price cap, "unique"). Replied by SMS with five,
+  all a 5-15min walk of 41 Rue Lepic: La Mascotte (1889 seafood
+  brasserie, Rue des Abbesses), Le Coq & Fils (all-poultry
+  bistronomic concept, Chef Antoine Westermann, Rue Durantin), Le
+  Moulin de la Galette (restaurant in the old windmill/Impressionist
+  site), Adraba (Levantine small plates, less touristy), and Le
+  Basilic on Rue Lepic itself as a budget/no-effort option (~€16
+  three-course menu). All comfortably under $150/pp. Offered to help
+  narrow to one and think through reservations.
