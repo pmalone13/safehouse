@@ -597,3 +597,14 @@ blocked" or "assumed will definitely work."
   WWI galleries -> Charles de Gaulle wing/WWII galleries -> Historial
   Charles de Gaulle -> Musee de l'Ordre de la Liberation -> Musee des
   Plans-Reliefs (top floor, last). Budgeted 2.5-3hrs.
+
+- **2026-09-18 ~13:11Z — queue id 100, text, "Describe regimental
+  flags."** Follow-up on item #2 (Eglise Saint-Louis) from queue id
+  99's list. General knowledge, no web lookup needed. Replied by SMS:
+  hundreds of French/foreign military flags and standards (mostly
+  17th-19th c. battle trophies, many Napoleonic) hang from the nave
+  ceiling/walls — faded tattered silk on poles with gilt eagle/spear
+  finials, tied to specific units/battles. Noted the church shares its
+  building with the Dome (Napoleon's Tomb) via a common apse — Louis
+  XIV had Hardouin-Mansart build them as a linked soldiers-church/
+  royal-church pair.
