@@ -554,3 +554,16 @@ blocked" or "assumed will definitely work."
   pending booking." Still open: exact confirmations/times not shared
   here, any lodging in Bayeux/Pontorson, and Christine's/Paul's actual
   return flights.
+
+- **2026-09-18 ~10:08Z — queue id 97, text, "What year did Napoleon
+  fire Cannon into crowds. Who was he working for."** Follow-up/repeat
+  of queue id 76's question (2026-09-16, year only) plus a new part
+  ("who was he working for"). Used `WebSearch` to confirm the chain of
+  command rather than answer from memory alone, since that detail
+  wasn't checked last time: 1795 (13 Vendemiaire, Oct 5) — Napoleon was
+  acting for the French Republic's National Convention (the
+  revolutionary government), directly under General Paul Barras, who'd
+  been appointed to defend the Convention against a royalist uprising
+  and picked Napoleon (then 26) to lead the defense; grapeshot used on
+  ~25,000 royalist rebels near the Tuileries, ~300 killed. Replied by
+  SMS (`SM4bceb0cc3a99446aa230ae496a0f9c7b`, queued).
