@@ -682,3 +682,21 @@ blocked" or "assumed will definitely work."
   Elior Benarosh, mezze/grilled meats/flatbread style. Replied by SMS,
   also noted sister restaurant Zoutra (queue id 103) is the same style
   if he wants a repeat visit later in the trip.
+
+- **2026-09-18 ~19:07Z — queue id 106, text+photo, "I don't drink
+  alcohol but I like na beer. This is a good one. Do u have info
+  about?"** Image arrived as an MMS with `num_media=1` attached
+  directly to the text (same shape as queue id 77, not a separate
+  message like queue id 65) — fetched via the Twilio Media
+  sub-resource, same mechanism as prior photo turns. Image: a bottle
+  labeled "1664", "France", "0,0%", "La Biere Blonde Francaise Sans
+  Alcool" — the classic blonde lager (not the wheat "Blanc" variant),
+  alcohol-free. Used `WebSearch` to confirm brand history/profile
+  rather than answer from memory alone: Kronenbourg founded 1664 in
+  Strasbourg, flagship 1664 blonde lager launched 1952, now
+  Carlsberg-owned; the 0.0% is dealcoholized post-brewing, generally
+  well-regarded among mainstream French NA lagers (crisp, light malt,
+  minimal bitterness). Saved image only to `/tmp`
+  (`/tmp/paris_beer_q106.jpg`, not committed — same no-standing-place
+  -for-trip-photos situation as queue ids 65/77/83). Replied by SMS
+  with the identification and background.
