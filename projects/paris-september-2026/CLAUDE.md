@@ -647,3 +647,13 @@ blocked" or "assumed will definitely work."
   Basilic on Rue Lepic itself as a budget/no-effort option (~€16
   three-course menu). All comfortably under $150/pp. Offered to help
   narrow to one and think through reservations.
+
+- **2026-09-18 ~18:41Z — queue id 103, text, "Adraba is full tonight.
+  Other similar around?"** Follow-up on queue id 102. `WebSearch`
+  turned up the best possible match: **Zoutra** (6 Rue Aristide
+  Bruant, Montmartre) is literally Adraba's own sister restaurant —
+  same ownership/chef (ARBA Hospitality Group), same Levantine style,
+  opened Oct 2025, small (35 seats). Gave that as the top pick, plus
+  **Nemesis** (Rue Caulaincourt) as a casual Lebanese kebab backup.
+  Replied by SMS, flagged Zoutra is new/small so worth calling ahead,
+  offered to check walk-in-vs-reservation policy if wanted.
