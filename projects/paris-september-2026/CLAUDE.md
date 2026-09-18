@@ -657,3 +657,18 @@ blocked" or "assumed will definitely work."
   **Nemesis** (Rue Caulaincourt) as a casual Lebanese kebab backup.
   Replied by SMS, flagged Zoutra is new/small so worth calling ahead,
   offered to check walk-in-vs-reservation policy if wanted.
+
+- **2026-09-18 ~18:58Z — queue id 104, text, "We got in adraba. Where
+  is etrien?"** Confirms Adraba worked out after all (queue id 103's
+  alternatives weren't needed). "Etrien" doesn't match anything
+  established in this project or a clean phonetic decode the way
+  "ponto Arizona"->Pontorson did (queue id 94) — checked `WebSearch`
+  for both a literal "Etrien Paris" (only hit: L'Étrier de Paris, a
+  16th-arrondissement equestrian club, weak fit) and Étretat (the
+  well-known Normandy cliffs town, ~2hrs from Paris, off their
+  current Bayeux/D-Day/Mont-St-Michel route). Neither is confident
+  enough to assert as fact, so replied by SMS naming Étretat as the
+  best guess (fits the live Normandy-planning thread) but explicitly
+  asked him to clarify rather than run with an unconfirmed guess this
+  time — lower confidence than the Pontorson decode, and worth
+  getting right before doing more research.
