@@ -789,3 +789,17 @@ blocked" or "assumed will definitely work."
   briefly acknowledging and offered to find alternatives if he doesn't
   hear back. Massage-spa thread (114-118) can be treated as resolved
   pending Caudalie's response.
+
+- **2026-09-19 ~11:5xZ — session wrap-up** (idle window elapsed, no new
+  message). Five turns this session, queue ids 114-118, all
+  `paris-september-2026`, all already committed/pushed individually:
+  Swedish-massage spa picks near 41 Rue Lepic (114); "Claudio" turned
+  out to have no match anywhere on file, asked for context (115);
+  resolved as a mis-transcription of "Caudalie," sent contact info
+  (116); clarified the recommended location is Abbesses, not
+  Saint-Sulpice or Le Marais (117); Paul called/emailed directly since
+  the location isn't set up for online booking (118). Working tree
+  already clean at wrap-up. Drive sync retried — **still the same
+  `invalid_grant` failure**, unchanged from the outage first flagged
+  2026-09-16; git push unaffected. Not re-texting Paul about the Drive
+  outage again — already flagged multiple times, nothing new to add.
