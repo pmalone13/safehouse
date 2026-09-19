@@ -152,19 +152,14 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
-here 2026-09-19 ~09:16Z (queue id 112, text) when Paul explicitly
-labeled his message "Topic general": a request for a state-by-state
-conservative/liberal chart (Cook PVI), unrelated to Richey. Delivered
-by email as a PNG attachment (no MMS capability in this system to
-send an image over text) plus a text summary. Previous pointer,
-`richie-property-management`, folded back into the other-live-projects
-list below, not dropped — that project is mid-conversation (Paul
-switched to texting because email is hard on his phone, and is
-drafting a meeting-request email to Richey himself tonight using a
-contact distro I gave him; nothing further needed from this side
-unless he asks). Digest and full history are in that project's own
-file.
+**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
+here 2026-09-19 ~09:44Z (queue id 113, text, "Topic Paris") when Paul
+asked for today's Versailles fountain schedule. Turns out today (Sat
+9/19) is the last night of the season's Grandes Eaux Nocturnes — see
+that project's own file for the full answer. Previous pointer,
+`safehouse/general`, folded back into the other-live-projects list
+below, not dropped — the Cook PVI chart request from queue id 112 is
+fully delivered, nothing outstanding there.
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior
@@ -203,14 +198,14 @@ just because this pointer moved:**
   Paul created it by text (queue id 38): an open-ended "keep an eye
   out" search for a replacement tow vehicle (large SUV, capable of
   towing his 24-ft boat) for his aging 2004 Ford Expedition.
-- `projects/paris-september-2026/CLAUDE.md` — set 2026-09-07 ~21:53Z
-  when Paul created it by voice message (queue id 29): trip planning
-  for him and Christine, Paris + Normandy, departing 2026-09-13.
-  Lodging confirmed (41 Rue Lepic, 75018, Montmartre); remaining open
-  items are the Normandy leg (no dates/itinerary yet) and Christine's
-  return date. Most recent turns (queue ids 80-92, 09-16 through
-  09-17) have been general trip-logistics/history Q&A, all answered
-  and logged in that file.
+- `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
+  texting build finished 2026-09-07 (both directions live, plus voice
+  transcription as of ~20:17Z the same day). Most recent addition
+  2026-09-19: a state-by-state conservative/liberal chart (Cook PVI),
+  delivered by email as a PNG attachment since this system has no way
+  to send an image over text (`send_sms`/`send_message` are both
+  text-only, no MMS/attachment support) — fully delivered, nothing
+  outstanding.
 - `projects/alliecar/CLAUDE.md` — set 2026-09-03 when Paul emailed the
   `alliecar` package (queue id 8). Helping him buy a used car for his
   daughter Allie; dealer visits were set for the morning of 2026-09-04,
