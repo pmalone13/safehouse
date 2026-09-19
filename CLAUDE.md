@@ -152,17 +152,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/richie-property-management/CLAUDE.md` —
-moved here 2026-09-19 ~07:40Z (queue id 107, text) when Paul texted
-"Project: house rental or Richie property mng. Going to email
-messages. Need u to digest and help with something." As of this
-pointer move, **the promised email(s) had not yet arrived** (checked
-Gmail live, newest inbox item was still the 09-12 Paris email) — a
-future turn should check for new mail from `pmalone13@gmail.com`
-before doing anything else on this project. Previous pointer,
-`paris-september-2026`, folded back into the other-live-projects list
-below, not dropped — that project's Normandy-leg and Christine's-
-return-date open items are still open, see that project's own file.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-09-19 ~09:16Z (queue id 112, text) when Paul explicitly
+labeled his message "Topic general": a request for a state-by-state
+conservative/liberal chart (Cook PVI), unrelated to Richey. Delivered
+by email as a PNG attachment (no MMS capability in this system to
+send an image over text) plus a text summary. Previous pointer,
+`richie-property-management`, folded back into the other-live-projects
+list below, not dropped — that project is mid-conversation (Paul
+switched to texting because email is hard on his phone, and is
+drafting a meeting-request email to Richey himself tonight using a
+contact distro I gave him; nothing further needed from this side
+unless he asks). Digest and full history are in that project's own
+file.
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior
@@ -179,7 +181,7 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Six other projects remain simultaneously live — don't drop them
+**Seven other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
 - `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
@@ -234,9 +236,18 @@ just because this pointer moved:**
   needs Paul present. See that file's Session 6 for what was proposed
   instead and two open questions (live-together build, and the actual
   search criteria) — still unanswered.
-- `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
-  texting build finished 2026-09-07 (both directions live, plus voice
-  transcription as of ~20:17Z the same day).
+- `projects/richie-property-management/CLAUDE.md` — set 2026-09-08
+  ~12:45Z when Paul created it by text (queue id 36). Reactivated
+  2026-09-19 after a large forwarded email digest revealed both his
+  usual Richey contacts (Calvin McGettigan, Geoff Clopton) are gone;
+  he's now drafting a meeting-request email to Richey himself tonight
+  using a contact distro (Bill Cahill + PMinfo@richeypm.com) provided
+  by text — nothing further needed unless he asks. Property address
+  (4403 19th St N, Arlington) and ownership structure (Bon Holdings,
+  LLC) confirmed from the digest; see that file for the full history.
+  The original ~$2,000/$500-approval-threshold dispute from project
+  creation is still the only concrete contractor-charge issue on
+  record.
 
 **Standing clock note:** these logs are UTC and Paul is in Fairfax, VA
 (Eastern, UTC-4). Convert before concluding anything about timing —
