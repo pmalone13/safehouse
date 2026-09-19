@@ -152,15 +152,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
-here 2026-09-13 ~00:49Z (queue id 61, email, "Paris trip") when Paul
-landed in Paris and asked for first-day recommendations. Lodging is
-now confirmed (41 Rue Lepic, 75018, Montmartre) — that project's one
-remaining open item is the Normandy leg (no dates/itinerary yet) and
-Christine's return date. Previous pointer, `alliecar`, folded back
-into the other-live-projects list below, not dropped — see that
-project's own file for where it stood (Session 7, price/location
-confirmed 2026-09-10/11, no new developments as of queue ids 59-60).
+**Current project**: `projects/richie-property-management/CLAUDE.md` —
+moved here 2026-09-19 ~07:40Z (queue id 107, text) when Paul texted
+"Project: house rental or Richie property mng. Going to email
+messages. Need u to digest and help with something." As of this
+pointer move, **the promised email(s) had not yet arrived** (checked
+Gmail live, newest inbox item was still the 09-12 Paris email) — a
+future turn should check for new mail from `pmalone13@gmail.com`
+before doing anything else on this project. Previous pointer,
+`paris-september-2026`, folded back into the other-live-projects list
+below, not dropped — that project's Normandy-leg and Christine's-
+return-date open items are still open, see that project's own file.
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior
@@ -177,7 +179,7 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Seven other projects remain simultaneously live — don't drop them
+**Six other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
 - `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
@@ -199,14 +201,14 @@ just because this pointer moved:**
   Paul created it by text (queue id 38): an open-ended "keep an eye
   out" search for a replacement tow vehicle (large SUV, capable of
   towing his 24-ft boat) for his aging 2004 Ford Expedition.
-- `projects/richie-property-management/CLAUDE.md` — set 2026-09-08
-  ~12:45Z when Paul created it by text (queue id 36): organizing
-  communication with the company that manages his Arlington property,
-  and clarifying a disputed ~$2,000 in maintenance work he believes
-  should have needed his approval above a $500 threshold.
 - `projects/paris-september-2026/CLAUDE.md` — set 2026-09-07 ~21:53Z
   when Paul created it by voice message (queue id 29): trip planning
   for him and Christine, Paris + Normandy, departing 2026-09-13.
+  Lodging confirmed (41 Rue Lepic, 75018, Montmartre); remaining open
+  items are the Normandy leg (no dates/itinerary yet) and Christine's
+  return date. Most recent turns (queue ids 80-92, 09-16 through
+  09-17) have been general trip-logistics/history Q&A, all answered
+  and logged in that file.
 - `projects/alliecar/CLAUDE.md` — set 2026-09-03 when Paul emailed the
   `alliecar` package (queue id 8). Helping him buy a used car for his
   daughter Allie; dealer visits were set for the morning of 2026-09-04,
