@@ -207,3 +207,15 @@ with them and track open issues.
   contractor charges to raise) in SMS-length form rather than making
   him read/reply to email on mobile. **Next turn: watch for his answer
   by text, not email, and don't re-ask by email.**
+
+- **2026-09-19 ~08:37Z — queue id 111, Paul, text, "I need distro for
+  email with Richey mng. I can draft email. Will do tonight."**
+  Answers half of the open question by redirecting the drafting itself
+  to Paul — he just needs the address list. Sent by text: Bill Cahill
+  (bill@richeypm.com, last known active contact) and
+  PMinfo@richeypm.com (general/monitored inbox) as the recommended
+  send-to distro, with Calvin's and Geoff's addresses named but
+  flagged as no longer current. **Still open: which contractor
+  charges he wants to raise** — he didn't answer that half, and since
+  he's drafting the email himself tonight he may not need my input on
+  content at all. Nothing else to do this turn.
