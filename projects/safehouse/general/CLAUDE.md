@@ -1602,3 +1602,21 @@ ongoing work, that's the signal to spin it out into its own
   project created yet — still just a logged idea in this bucket, will
   likely become its own named project once he's back in MD and ready
   to start.
+
+- **2026-09-19 ~19:02Z — queue id 122, text, "And, how about Google
+  maps. Can I export where I have been?"** General how-to question,
+  not tied to a specific project (loosely adjacent to the recording-
+  app thread — same theme of personal-data logging — but answerable
+  standalone). Used `WebSearch` since this is a 2024-era Google
+  product change, not something to answer from static knowledge:
+  since 2024 Timeline (formerly Location History) lives **on-device
+  only**, not synced to the Google account, so export is done from the
+  phone itself (Android: Settings > Location > Location Services >
+  Timeline > Export Timeline data; iOS: Maps app > profile icon >
+  Timeline). For anything from before the 2024 migration, Google
+  Takeout (takeout.google.com, select "Location History (Timeline)")
+  still has it — Takeout no longer covers current data since Timeline
+  isn't on Desktop/synced anymore. Replied by SMS, confirmed delivered
+  (`SMdc9d7a9273df3445dc2854d30884fbc6`, checked status directly given
+  the queue id 119/120 silent-delivery-failure lesson from earlier
+  this session).
