@@ -1588,3 +1588,17 @@ ongoing work, that's the signal to spin it out into its own
   France/consent flag, custom = needs him present — via
   `SM7137e23a02d821e9109c294f271485ba`, confirmed `status: delivered`
   this time before ending the turn.
+
+- **2026-09-19 ~19:01Z — queue id 121, text, "Not now. Key is it runs
+  in background. We wil work when back to MD."** Closes the loop on
+  the recording-app thread (119/120) for now: Paul's not choosing an
+  existing app or starting a build tonight, just flagging the one
+  requirement that matters to him — always-on background operation —
+  and deferring the actual work (build-together session, consistent
+  with the hard boundary's "needs him present" answer from queue id
+  119) until he's back home in Maryland. Nothing to build, nothing to
+  research further right now. Replied by SMS acknowledging and
+  confirming the deferral (`SM2cc341ba2acd49123b4c027a219ee91e`). No
+  project created yet — still just a logged idea in this bucket, will
+  likely become its own named project once he's back in MD and ready
+  to start.
