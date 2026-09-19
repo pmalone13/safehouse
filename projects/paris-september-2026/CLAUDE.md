@@ -762,3 +762,12 @@ blocked" or "assumed will definitely work."
   asking who Claudio is and which context (Richey, alliecar, Paris,
   other) so a search can actually be targeted. No project file changed
   besides this log entry — nothing to attach the answer to yet.
+
+- **2026-09-19 ~11:18Z — queue id 116, text, "Claudalie :)"** Resolves
+  queue id 115 — "Claudio" was a mis-transcription of "Caudalie," the
+  spa recommended for queue id 114, not an unknown contact. Looked up
+  and confirmed via the official Caudalie page
+  (`us.caudalie.com/boutique-caudalie-abesses-paris`): 30 Rue des
+  Abbesses phone +33 1 42 57 04 51, email
+  boutique.abbesses@caudalie.com, open 10am-7pm daily. Replied by SMS
+  with both.
