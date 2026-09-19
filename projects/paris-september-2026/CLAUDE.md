@@ -716,3 +716,27 @@ blocked" or "assumed will definitely work."
   wrap-up, so this entry is the only change this turn makes. Not
   re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add.
+
+- **2026-09-19 ~09:44Z — queue id 113, text, "Topic Paris. Can u find
+  the fountain schedule for today?"** A live-availability question, so
+  used `WebSearch`/`WebFetch` against the official
+  chateauversailles-spectacles.fr rather than guessing from general
+  knowledge of Versailles hours. Turns out today matters more than a
+  routine schedule lookup: **Saturday 9/19 is the final night of the
+  2026 season's Grandes Eaux Nocturnes** (the evening
+  fountains-plus-fireworks show, which runs Saturday evenings mid-June
+  through 9/19 only). Two consequences worth having caught: (1) the
+  gardens close early at 5:30pm today specifically to prep for the
+  night show, so there's **no normal daytime fountain display today**
+  even though the regular daytime "Grandes Eaux Musicales" season
+  itself runs April-November; (2) the night show itself: Grand
+  Perspective fountains 8:30-11:05pm, the Groves 8:35-10:45pm,
+  fireworks finale ~10:50-11:05pm, tickets ~€32 adult/€10 child
+  (6-17), timed entry. Flagged that being the season's actual finale
+  night it's likely to be in higher demand than a typical Saturday, so
+  worth checking ticket availability promptly rather than assuming
+  walk-up entry. Replied by SMS with all of this. Not otherwise
+  confirmed whether Versailles was already on today's itinerary (the
+  09-14 exchange only said "Versailles will be later in the week," no
+  specific date was ever pinned down in this file) — didn't ask, since
+  the schedule answer stands regardless of which day they'd picked.
