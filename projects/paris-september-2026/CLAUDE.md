@@ -752,3 +752,13 @@ blocked" or "assumed will definitely work."
   by name (not just generic "massage"), ~15min walk/1 metro stop, open
   9am-8pm, phone +33 1 84 74 08 30. Replied by SMS with both, prices,
   distances, and a note to book ahead for weekend slots.
+
+- **2026-09-19 ~11:16Z — queue id 115, text, "Contact info for claudio."**
+  No "Claudio" anywhere: grepped every project file/CLAUDE.md in the
+  repo (no match) and searched Gmail (`q=claudio`, 0 results — Gmail
+  itself working fine, this isn't the Drive-outage issue). Rather than
+  guess at a phonetic match (no obvious candidate the way "ponto
+  Arizona"->Pontorson or "etrien"->fare was decodable), replied by SMS
+  asking who Claudio is and which context (Richey, alliecar, Paris,
+  other) so a search can actually be targeted. No project file changed
+  besides this log entry — nothing to attach the answer to yet.
