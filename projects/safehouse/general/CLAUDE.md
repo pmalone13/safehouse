@@ -1503,3 +1503,13 @@ ongoing work, that's the signal to spin it out into its own
   from here. Offered to redo it with a different measure (e.g.
   Gallup's self-identified ideology poll) if PVI wasn't the source he
   had in mind — no confirmation yet on whether this landed right.
+
+- **2026-09-19 ~09:5xZ — session wrap-up (idle window elapsed, no new
+  message).** This session's other turn (queue id 113, the Versailles
+  fountain schedule) moved the Current-project pointer on to
+  `paris-september-2026` before this window elapsed, so nothing more
+  belongs in this file this session. Working tree was already clean
+  and every commit already pushed at wrap-up time — nothing to add
+  beyond this note. Drive sync retried as part of the routine
+  checkpoint, same `invalid_grant` failure as the whole week; not
+  re-texting Paul about it again.
