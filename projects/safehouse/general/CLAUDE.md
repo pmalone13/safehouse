@@ -1620,3 +1620,14 @@ ongoing work, that's the signal to spin it out into its own
   (`SMdc9d7a9273df3445dc2854d30884fbc6`, checked status directly given
   the queue id 119/120 silent-delivery-failure lesson from earlier
   this session).
+
+- **2026-09-19 ~19:05Z — queue id 123, text, identical body to queue
+  id 122** ("And, how about Google maps. Can I export where I have
+  been?"), 2 minutes later. Since the queue id 122 reply had already
+  been confirmed `delivered` via the Twilio API (not just `queued`),
+  this reads as Paul re-sending because he hadn't yet seen the answer
+  land on his end (SMS delivery lag) rather than a genuinely new
+  question. Didn't repeat the full answer — replied briefly noting
+  it was already answered and asked if the earlier text actually came
+  through, confirmed this reply itself delivered
+  (`SM4eaada4ca7060aee963b1f95cf5362ac`).
