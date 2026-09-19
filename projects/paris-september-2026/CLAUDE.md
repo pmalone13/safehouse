@@ -781,3 +781,11 @@ blocked" or "assumed will definitely work."
   (6th) and Le Marais (3rd, 8 Rue des Francs-Bourgeois) are separate
   locations across the river, 25-35min by metro — not walkable, not
   the recommendation. Replied by SMS pointing him back to Abbesses.
+
+- **2026-09-19 ~11:47Z — queue id 118, text, "Not on website...called
+  and emailed."** Closing the Caudalie thread — the Abbesses location
+  isn't set up for online booking, so Paul used the phone/email from
+  queue id 116 directly. Just a status update, no question. Replied
+  briefly acknowledging and offered to find alternatives if he doesn't
+  hear back. Massage-spa thread (114-118) can be treated as resolved
+  pending Caudalie's response.
