@@ -771,3 +771,13 @@ blocked" or "assumed will definitely work."
   Abbesses phone +33 1 42 57 04 51, email
   boutique.abbesses@caudalie.com, open 10am-7pm daily. Replied by SMS
   with both.
+
+- **2026-09-19 ~11:34Z — queue id 117, text, "Is it Saint-sulspice or
+  le Marais. Location."** Paul likely found other Caudalie boutique
+  locations searching online and got confused about which one was
+  recommended. Clarified: neither — the one given (queue id 116) is
+  the Abbesses location (18th, Montmartre, ~8min walk from 41 Rue
+  Lepic). Confirmed via the official Caudalie site that Saint-Sulpice
+  (6th) and Le Marais (3rd, 8 Rue des Francs-Bourgeois) are separate
+  locations across the river, 25-35min by metro — not walkable, not
+  the recommendation. Replied by SMS pointing him back to Abbesses.
