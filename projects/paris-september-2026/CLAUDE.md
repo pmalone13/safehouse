@@ -740,3 +740,15 @@ blocked" or "assumed will definitely work."
   09-14 exchange only said "Versailles will be later in the week," no
   specific date was ever pinned down in this file) — didn't ask, since
   the schedule answer stands regardless of which day they'd picked.
+
+- **2026-09-19 ~11:12Z — queue id 114, text, "Thanks. Paris, around appt.
+  Looking for good swedish massage. Spa. Hopefully not too far."** Live
+  local-recommendation question, used `WebSearch` rather than general
+  knowledge given the "not too far" (walking-distance) constraint from
+  41 Rue Lepic. Two picks: Caudalie Boutique Spa (30 Rue des Abbesses,
+  75018) — well-known French spa brand, ~8min walk, ~€80/50min, open
+  10am-7pm daily; and Hotel Artemisia Montmartre Spa (11 Rue Fromentin,
+  75009, near Pigalle) — explicitly confirmed to offer Swedish massage
+  by name (not just generic "massage"), ~15min walk/1 metro stop, open
+  9am-8pm, phone +33 1 84 74 08 30. Replied by SMS with both, prices,
+  distances, and a note to book ahead for weekend slots.
