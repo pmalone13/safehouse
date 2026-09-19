@@ -188,3 +188,13 @@ with them and track open issues.
   behalf — first time this project would involve emailing a third
   party rather than just Paul, so treating it as worth a check-in
   rather than guessing at a name and dollar amount and sending it.
+
+- **2026-09-19 ~08:32Z — queue id 109, Paul, text, "On its way."**
+  Landed a few seconds after a second copy of the digest email hit the
+  inbox (message-id `1a0b8c8125b8d0e1`, subject "Richey," ~412KB body)
+  — checked it against the one already digested above and it's
+  identical content, same minute, so a duplicate send rather than new
+  material (likely his mail client double-sending the forward, not a
+  second/different message). Did not re-digest or send a second email
+  reply — replied by text confirming it's a duplicate and that the
+  email reply already sent covers it.
