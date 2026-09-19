@@ -1565,3 +1565,26 @@ ongoing work, that's the signal to spin it out into its own
   unchanged from the outage first flagged 2026-09-16; git push
   unaffected. Not re-texting Paul about the Drive outage again —
   already flagged multiple times this week, nothing new to add.
+
+- **2026-09-19 ~18:42Z — queue id 120, text, "?"** — a bare nudge, no
+  visible context. Didn't answer it literally; checked Twilio's
+  message log first (`Messages.json` on the account) rather than
+  guess, and found the actual cause: the queue id 119 reply (the
+  audio-memory-app recommendation, sent 15:54:11Z, SID
+  `SM1d4626a9898ae35c4aeb72838358d201`) **never delivered** —
+  `status: undelivered`, `error_code: 30007` ("Carrier violation"),
+  `num_segments: 6`. Paul's "?" was him waiting on an answer to his
+  own question that silently vanished, not a new question. Root cause
+  is very likely the length (6 concatenated SMS segments, ~1085
+  chars) tripping a carrier spam/content filter — `send_sms` itself
+  has no length guard or delivery-status check, it just returns
+  whatever Twilio's initial `queued` response says, so a `send_sms`
+  call succeeding (no `TwilioError` raised) does **not** mean the
+  text actually arrived. Worth remembering for any future long reply:
+  check `status`/`error_code` on the message resource a few seconds
+  after sending, don't just trust the initial queued response.
+  Resent a condensed version (3 segments, 366 chars) covering the same
+  points — existing apps (Bee/Limitless/Otter/Google Recorder), the
+  France/consent flag, custom = needs him present — via
+  `SM7137e23a02d821e9109c294f271485ba`, confirmed `status: delivered`
+  this time before ending the turn.
