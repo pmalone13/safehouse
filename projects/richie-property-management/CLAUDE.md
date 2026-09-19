@@ -198,3 +198,12 @@ with them and track open issues.
   second/different message). Did not re-digest or send a second email
   reply — replied by text confirming it's a duplicate and that the
   email reply already sent covers it.
+
+- **2026-09-19 ~08:36Z — queue id 110, Paul, text, "Let's chat here.
+  Hard for me to do email on pbone."** (typo for "phone.") Switching
+  the whole conversation to text rather than email going forward on
+  this project — re-sent the same two open questions from the email
+  reply (who to address a Richey meeting request to, and which
+  contractor charges to raise) in SMS-length form rather than making
+  him read/reply to email on mobile. **Next turn: watch for his answer
+  by text, not email, and don't re-ask by email.**
