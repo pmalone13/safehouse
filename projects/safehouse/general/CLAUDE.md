@@ -1555,3 +1555,13 @@ ongoing work, that's the signal to spin it out into its own
     wants to dig into which existing app fits best before considering
     a custom build. No project created — nothing named yet, and the
     message itself was asking for a recommendation, not assigning work.
+
+- **2026-09-19 ~16:1xZ — session wrap-up (idle window elapsed, no new
+  message).** One turn this session, queue id 119 (above), already
+  committed/pushed before this window elapsed. Current-project pointer
+  deliberately left on `paris-september-2026`, not moved here — see
+  that entry's own reasoning. Working tree confirmed clean at wrap-up.
+  Drive sync retried — **still the same `invalid_grant` failure**,
+  unchanged from the outage first flagged 2026-09-16; git push
+  unaffected. Not re-texting Paul about the Drive outage again —
+  already flagged multiple times this week, nothing new to add.
