@@ -53,6 +53,20 @@ with them and track open issues.
   clause). Replied by SMS confirming the project was created and
   wishing him luck on the call.
 
+- **2026-09-19 ~07:40Z — queue id 107, Paul, text, project reactivated.**
+  Full message: "Project: house rental or Richie property mng. Going
+  to email messages. Need u to digest and help with something." First
+  activity on this project since it was created 2026-09-08 — no
+  outcome from the original $500-threshold call was ever reported, so
+  this may be a continuation of that or something new (he didn't say
+  which). Moved the root `CLAUDE.md` Current-project pointer back
+  here. Checked Gmail live before doing anything else: **the promised
+  email(s) had not arrived yet** — newest inbox item was still the
+  09-12 Paris trip email, nothing from `pmalone13@gmail.com` today.
+  Replied by SMS confirming the project and that I'm standing by for
+  the email. **Next turn on this project: check for new mail first,
+  don't assume this text's email already landed and was missed.**
+
 - **2026-09-08 ~12:47Z — queue id 37, Paul, text.** Mostly a
   restatement of the three-Claude-instance setup (see root `CLAUDE.md`
   and `user_three_claude_instances` memory — logged there, not
