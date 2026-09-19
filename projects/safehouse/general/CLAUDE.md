@@ -1513,3 +1513,45 @@ ongoing work, that's the signal to spin it out into its own
   beyond this note. Drive sync retried as part of the routine
   checkpoint, same `invalid_grant` failure as the whole week; not
   re-texting Paul about it again.
+
+- **2026-09-19 ~15:52Z — queue id 119, text: "I got the massage booked.
+  Thank you... is there an application somebody's written... or I could
+  just write it myself or you and I could write it together... running
+  in the background on my phone and listen to all audio around me and
+  myself for the sole purpose of translating into texts... stored and
+  then I would send it to you daily... digest it and kind of review
+  things I may have said or committed to."** A genuinely new topic
+  (a personal-memory/life-logging assistant), unrelated to the Paris
+  trip, and not yet a named project — textbook fit for this bucket.
+  Deliberately did **not** move the Current-project pointer off
+  `paris-september-2026` (he's mid-trip and still texting about it) —
+  logging here instead, per this bucket's own stated purpose
+  ("conversational messages... too small to deserve their own project
+  ... yet").
+  * **This is exploratory, not a build request** ("what do you think") —
+    answered with a recommendation and tradeoffs, didn't start building
+    anything, consistent with how exploratory questions get handled.
+  * **Existing apps already do exactly this**: Bee (bee.computer),
+    Limitless AI, Plaud Note, Otter.ai, Google Recorder (w/ Gemini
+    summarize) all do continuous-listen -> transcribe -> AI digest
+    already, and get the genuinely hard part (reliable always-on
+    background mic capture, especially on iOS, which aggressively kills
+    backgrounded apps; battery drain) for free. Recommended trying one
+    of those before building custom.
+  * **Legal/privacy flag, worth having raised proactively**: "listen to
+    all audio around me" captures other people's conversations, not
+    just his own. Virginia (Fairfax, his home base) is one-party
+    consent — fine for conversations he's a party to — but two-party-
+    consent US states and **France, where he is right now**, are
+    stricter about recording third parties without their consent. Named
+    this explicitly rather than only answering the technical question.
+  * **If custom is wanted later, named it plainly as real new
+    application code** — a phone app plus a server-side ingestion/
+    digest pipeline — squarely on the wrong side of the hard boundary
+    if built unattended. Said it needs him at a terminal, live, same as
+    every other build-it-together offer this project has made
+    (`/sms-optin`, the alliecar cron search). Did not start any code.
+  * Replied by SMS (`SM1d4626a9...`) with the above, asked whether he
+    wants to dig into which existing app fits best before considering
+    a custom build. No project created — nothing named yet, and the
+    message itself was asking for a recommendation, not assigning work.
