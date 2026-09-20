@@ -155,11 +155,13 @@ a human is actually going to read, not just a backup nobody opens.
 **Current project**: `projects/travel/CLAUDE.md` — moved here
 2026-09-20 ~08:17Z (queue id 124, text, "project 'travel'") when Paul
 shared a Google Drive link ("the from maps") and asked to ingest and
-store it. **Blocked**: Drive API is still down with the same
-`invalid_grant` failure first flagged 2026-09-16 (see TODO section
-below) — confirmed again this turn, and the share link itself also
-401s on an unauthenticated fetch since it's not a public link. Nothing
-ingested yet; queued to retry once Drive is fixed. Previous pointer,
+store it. **Initially blocked** on the standing Drive outage, then
+**unblocked mid-session** (queue id 125, ~08:29Z) when Paul
+re-authorized Drive — see TODO section below, now resolved. Pulled the
+file once Drive came back: it's a Google Maps Takeout export that
+turned out to contain no actual location data (just Google's own
+archive-browser summary page) — see that project's file for the full
+finding and the question put back to Paul. Previous pointer,
 `paris-september-2026`, folded back into the other-live-projects list
 below, not dropped.
 
@@ -276,22 +278,23 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
-- **LIVE, discovered 2026-09-16 ~13:43Z (queue id 80 checkpoint): Drive
-  is down again, `invalid_grant`, same error shape as the 2026-09-08
-  outage below — but Gmail is fine this time (`get_client()` succeeds
-  clean), so this is Drive-only, not the same both-down event repeating.**
-  Also doesn't cleanly fit the old "7-day Testing-status cap" theory:
-  `.drive_api_token.json`'s mtime is **11:10Z today** — i.e. it
-  refreshed successfully just ~2.5h before this failure, not 7 days
-  ago. Retried once deliberately (not assumed transient) — same
-  `invalid_grant` both times. Git commit/push for this turn's checkpoint
-  succeeded fine (unaffected); only `drive_sync.py` failed, so the repo
-  itself is not behind, just the Drive mirror. Texted Paul rather than
-  silently retrying next turn, since this is a different failure
-  pattern than the documented one and he may want to check the Cloud
-  Console / re-auth. Same fix mechanism as before if it needs a real
-  token refresh: `authorize_drive_once.py` on a machine with a browser,
-  `scp` the token to `.drive_api_token.json` on this VM.
+- ~~Drive down again, `invalid_grant`, discovered 2026-09-16~~
+  **RESOLVED 2026-09-20 ~08:29Z.** Discovered 2026-09-16 ~13:43Z (queue
+  id 80 checkpoint), same error shape as the 2026-09-08 outage but
+  Drive-only that time (Gmail was fine). Stayed broken through every
+  checkpoint from 9/16 through 9/19 (see Test Log entries for those
+  dates) — never self-healed, needed real re-auth. **Fixed when Paul
+  re-ran the OAuth flow and both token files refreshed at 08:28-08:29Z**
+  (`.gmail_api_token.json`, `.drive_api_token.json`), surfaced to this
+  session via a genuine Google security-alert email (queue id 125,
+  verified via DKIM/SPF/DMARC pass, same authenticity pattern as the
+  2026-09-01 alert) that landed right as the tokens changed.
+  `get_drive_client()` confirmed working immediately after, and used
+  live within the same turn to pull the `travel` project's Maps file
+  (queue id 124/125 — see `projects/travel/CLAUDE.md`). If
+  `invalid_grant` reappears, same fix: `authorize_drive_once.py` /
+  `authorize_gmail_once.py` on a machine with a browser, `scp` the
+  resulting token to this VM at the existing paths.
 
 - **RESOLVED (as of 2026-09-09, see below) but kept for history — LIVE
   as of this session's wrap-up (2026-09-08 ~17:26Z): both
