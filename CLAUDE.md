@@ -152,14 +152,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
-here 2026-09-19 ~09:44Z (queue id 113, text, "Topic Paris") when Paul
-asked for today's Versailles fountain schedule. Turns out today (Sat
-9/19) is the last night of the season's Grandes Eaux Nocturnes — see
-that project's own file for the full answer. Previous pointer,
-`safehouse/general`, folded back into the other-live-projects list
-below, not dropped — the Cook PVI chart request from queue id 112 is
-fully delivered, nothing outstanding there.
+**Current project**: `projects/travel/CLAUDE.md` — moved here
+2026-09-20 ~08:17Z (queue id 124, text, "project 'travel'") when Paul
+shared a Google Drive link ("the from maps") and asked to ingest and
+store it. **Blocked**: Drive API is still down with the same
+`invalid_grant` failure first flagged 2026-09-16 (see TODO section
+below) — confirmed again this turn, and the share link itself also
+401s on an unauthenticated fetch since it's not a public link. Nothing
+ingested yet; queued to retry once Drive is fixed. Previous pointer,
+`paris-september-2026`, folded back into the other-live-projects list
+below, not dropped.
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior
@@ -176,9 +178,14 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Seven other projects remain simultaneously live — don't drop them
+**Eight other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
+- `projects/paris-september-2026/CLAUDE.md` — Paul and Christine's
+  Paris trip, in progress as of this pointer moving (they were mid-trip,
+  Normandy leg 9/21-9/24 per that file's own itinerary). Nothing
+  outstanding was flagged when the pointer moved to `travel` — see that
+  file's own Log for the latest exchange.
 - `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
   `Project 'movies'` (queue id 43): a catch-all for "what movie/show is
   this clip from" and other movie-related questions. Two clips
