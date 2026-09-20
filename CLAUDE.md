@@ -157,11 +157,18 @@ a human is actually going to read, not just a backup nobody opens.
 shared a Google Drive link ("the from maps") and asked to ingest and
 store it. **Initially blocked** on the standing Drive outage, then
 **unblocked mid-session** (queue id 125, ~08:29Z) when Paul
-re-authorized Drive — see TODO section below, now resolved. Pulled the
-file once Drive came back: it's a Google Maps Takeout export that
-turned out to contain no actual location data (just Google's own
-archive-browser summary page) — see that project's file for the full
-finding and the question put back to Paul. Previous pointer,
+re-authorized Drive — see TODO section below, now resolved. The first
+two exports he shared turned out empty or near-empty (just Google's
+archive-browser page, then a broader-but-still-no-GPS export); tracing
+that down found location reporting was switched off on all 3 of his
+devices. He turned it back on and shared the real on-device
+`Timeline.json` (queue id 133) — 37MB, full GPS history June-Sept
+2026 — which finally answered his original question, confirming a
+9/19 Versailles visit that matches the `paris-september-2026`
+project's own fountain-show note. A follow-up Google Photos album
+share (queue id 136) hit a hard wall: no Photos API integration exists
+here (same gap as the Recorder share, queue id 128) — flagged, not
+built. See that project's file for full detail. Previous pointer,
 `paris-september-2026`, folded back into the other-live-projects list
 below, not dropped.
 
