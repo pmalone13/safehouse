@@ -152,25 +152,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — moved here
-2026-09-20 ~08:17Z (queue id 124, text, "project 'travel'") when Paul
-shared a Google Drive link ("the from maps") and asked to ingest and
-store it. **Initially blocked** on the standing Drive outage, then
-**unblocked mid-session** (queue id 125, ~08:29Z) when Paul
-re-authorized Drive — see TODO section below, now resolved. The first
-two exports he shared turned out empty or near-empty (just Google's
-archive-browser page, then a broader-but-still-no-GPS export); tracing
-that down found location reporting was switched off on all 3 of his
-devices. He turned it back on and shared the real on-device
-`Timeline.json` (queue id 133) — 37MB, full GPS history June-Sept
-2026 — which finally answered his original question, confirming a
-9/19 Versailles visit that matches the `paris-september-2026`
-project's own fountain-show note. A follow-up Google Photos album
-share (queue id 136) hit a hard wall: no Photos API integration exists
-here (same gap as the Recorder share, queue id 128) — flagged, not
-built. See that project's file for full detail. Previous pointer,
-`paris-september-2026`, folded back into the other-live-projects list
-below, not dropped.
+**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
+back here 2026-09-21 ~11:11Z (queue id 140, text, "In Bayeux France
+now. First day. Can u outline a walking tour for downtown") — the
+Normandy leg (Mon 9/21 Paris->Bayeux, confirmed since queue id 95) has
+started, so trip logistics are live again here rather than under
+`travel`. Replied with a WebSearch-grounded downtown walking loop
+(cathedral, tapestry museum, River Aure, old town) anchored at their
+Bayeux address, explicitly leaving the D-Day beaches tour for
+tomorrow's already-booked day. See that project's Log for detail.
+
+Previous pointer, `projects/travel/CLAUDE.md` — moved there 2026-09-20
+~08:17Z (queue id 124, text, "project 'travel'") when Paul shared a
+Google Drive link ("the from maps") and asked to ingest and store it.
+**Initially blocked** on the standing Drive outage, then **unblocked
+mid-session** (queue id 125, ~08:29Z) when Paul re-authorized Drive —
+see TODO section below, now resolved. The first two exports he shared
+turned out empty or near-empty (just Google's archive-browser page,
+then a broader-but-still-no-GPS export); tracing that down found
+location reporting was switched off on all 3 of his devices. He turned
+it back on and shared the real on-device `Timeline.json` (queue id
+133) — 37MB, full GPS history June-Sept 2026 — which finally answered
+his original question, confirming a 9/19 Versailles visit that matches
+the `paris-september-2026` project's own fountain-show note. A
+follow-up Google Photos album share (queue id 136) hit a hard wall: no
+Photos API integration exists here (same gap as the Recorder share,
+queue id 128) — flagged, not built. See that project's file for full
+detail. Folded back into the other-live-projects list below, not
+dropped — nothing outstanding on it.
 
 **Note on this turn's channel**: unlike prior turns, this one arrived
 as a direct interactive terminal session (visible git log shows prior
@@ -190,11 +199,11 @@ this entry — Paul finished copying both tokens over.
 **Eight other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
-- `projects/paris-september-2026/CLAUDE.md` — Paul and Christine's
-  Paris trip, in progress as of this pointer moving (they were mid-trip,
-  Normandy leg 9/21-9/24 per that file's own itinerary). Nothing
-  outstanding was flagged when the pointer moved to `travel` — see that
-  file's own Log for the latest exchange.
+- `projects/travel/CLAUDE.md` — the Google Maps Timeline ingest work
+  (see the previous-pointer note above for the full arc). Nothing
+  outstanding was flagged when the pointer moved back to
+  `paris-september-2026` — see that file's own Log for the latest
+  exchange.
 - `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
   `Project 'movies'` (queue id 43): a catch-all for "what movie/show is
   this clip from" and other movie-related questions. Two clips
