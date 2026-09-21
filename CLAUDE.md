@@ -1036,3 +1036,17 @@ what's throwaway vs. permanent; don't build real features in here.
   change this turn makes. Not re-texting Paul about the Drive outage
   again — already flagged multiple times this week, nothing new to
   add.
+- 2026-09-21 ~11:2xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 140, "In Bayeux France
+  now. First day. Can u outline a walking tour for downtown," already
+  fully handled and pushed as commit `3fed336` before this wrap-up
+  fired — WebSearch-grounded Bayeux downtown walking loop sent by SMS,
+  Current-project pointer moved back to `paris-september-2026` from
+  `travel` (Normandy leg underway), `paris-september-2026/CLAUDE.md`
+  logged. Drive sync in that same turn ran clean (0 created, 6
+  updated, 859 unchanged, 0 orphaned) — the `invalid_grant` outage
+  flagged repeatedly through 2026-09-16/09-17 is resolved (last fixed
+  2026-09-20 ~08:29Z per the TODO section, holding since). Working
+  tree confirmed clean at wrap-up, so this entry is the only change
+  this turn makes. No email or SMS sent — nothing new since the last
+  reply.
