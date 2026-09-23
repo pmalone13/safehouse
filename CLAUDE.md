@@ -1158,10 +1158,11 @@ what's throwaway vs. permanent; don't build real features in here.
     --prune=now --aggressive` to drop the old objects from this
     machine's own `.git` too (the backup bundle is the only remaining
     local copy of the pre-purge history, by design).
-  * Replied by SMS confirming the purge, and named the three caveats
-    now written into the Projects section above: the local backup
-    bundle still exists, root `CLAUDE.md`'s own text still has some
-    personal detail, and GitHub's own object GC timing (not
+  * Replied by SMS (`SM2190a2169d3bc32c432c50256c1af0cb`) confirming
+    the purge, and named the three caveats now written into the
+    Projects section above: the local backup bundle still exists
+    (asked if he wants it deleted), root `CLAUDE.md`'s own text still
+    has some personal detail, and GitHub's own object GC timing (not
     verifiable from here) may mean the old commits aren't
     instantaneously gone from their servers even though the branch
     itself is clean now.
