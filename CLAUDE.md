@@ -1194,3 +1194,25 @@ what's throwaway vs. permanent; don't build real features in here.
   beyond this entry. Good illustration of the 2026-09-23 tracking
   change working as intended: four consecutive project-only turns,
   each one a real Drive sync with zero git noise.
+- 2026-09-23 ~19:5xZ — session wrap-up (idle window elapsed, no new
+  message). Two turns this session, queue ids 149-150, both
+  `paris-september-2026`, both already synced to Drive individually:
+  Paul, arriving Gare Montparnasse ~10pm Thu 9/24 ahead of a Friday
+  flight home from CDG, asked for a hotel near CDG reachable by
+  "metro" (149) — replied with the real route (Metro 6 to
+  Denfert-Rochereau, transfer to RER B, ~60min/€13, corrected that CDG
+  isn't actually on the Metro) and hotel picks clustered at the
+  Roissypole/"Aeroport Charles de Gaulle 1" RER stop (citizenM,
+  Novotel, Ibis, Radisson Blu). Follow-up named the actual terminal,
+  2B, and a ~$140 budget (150) — caught that 2B sits in CDG's separate
+  Terminal-2 zone ("Aeroport CDG 2 TGV" RER stop), a CDGVAL ride away
+  from the cluster just recommended, and corrected course rather than
+  forcing the wrong picks to fit: Novotel Paris CDG Airport and
+  Courtyard by Marriott Paris CDG Central Airport as the two in-budget
+  T2-zone picks (~$126-150), ibis Styles CDG as a cheaper backup.
+  Good example of why "close to CDG" isn't one answer — the airport's
+  two terminal zones aren't mutually walkable, so the specific
+  terminal matters before recommending a hotel, not after.
+  Both turns only touched the gitignored project file, already synced
+  to Drive after each; root `CLAUDE.md` untouched until this wrap-up
+  entry, so `git status` was clean going into this checkpoint too.
