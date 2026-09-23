@@ -140,10 +140,21 @@ running history — the same idea as this file, scoped narrower. Example
 shape Paul described: `projects/accounting/ledger/CLAUDE.md`.
 
 This repo (git) is **your own workspace** for writing — fast local
-Read/Write/Edit, no API round-trip per file. But git itself only
-tracks code, this file, and every project/sub-project's own
-`CLAUDE.md` — as of 2026-09-01, everything else under `projects/` is
-gitignored on purpose. **The actual durable copy of project content is
+Read/Write/Edit, no API round-trip per file. Git itself tracks code and
+this root file. **As of 2026-09-23 (queue id 143, Paul: "too much
+personal info making it there"), `projects/` — including every
+project/sub-project's own `CLAUDE.md`, previously tracked — is fully
+gitignored, no carve-out.** Before that, project CLAUDE.md files were
+the one exception to "everything under `projects/` is gitignored";
+that exception is gone. The eight existing project CLAUDE.md files were
+untracked with `git rm -r --cached` (working-tree copies untouched,
+still on local disk and still syncing to Drive) — **this does not purge
+them from git history**; every past commit on `origin/main` still
+contains their old contents. Paul did not ask for a history rewrite
+(`git filter-repo` + force-push), which is a separate, more destructive
+step with its own remote-history implications — flag that distinction
+if he brings this up again rather than assuming today's fix reached the
+old commits too. **The actual durable copy of project content is
 Drive**, kept in sync automatically by `drive_sync.py` (see step 3) —
 write locally like normal, the checkpoint pushes it out. Folder names
 on Drive mirror this repo's own structure exactly (same relative
@@ -1050,3 +1061,39 @@ what's throwaway vs. permanent; don't build real features in here.
   tree confirmed clean at wrap-up, so this entry is the only change
   this turn makes. No email or SMS sent — nothing new since the last
   reply.
+- 2026-09-23 ~08:33Z: fresh session, queue id 143, text channel, "Leaving
+  Bayeux and going to pontorson. On another subject I need u to alter
+  git. Please remove /project as a whole from git. Too much personal
+  info making it there. Remove and add to gitignore." Two things in one
+  text; handled the git request as ordinary repo hygiene (not "write,
+  create, or modify application code" under the hard boundary — no
+  `.py`/script/feature touched, just git tracking state and
+  `.gitignore`), so did it directly rather than asking Paul to be
+  present:
+  * `git rm -r --cached projects/` — untracked all 8 project `CLAUDE.md`
+    files (the only things under `projects/` git had ever tracked; see
+    this file's own Projects section, pre-2026-09-23 wording). Working
+    -tree copies untouched — still on local disk, still syncing to
+    Drive via `drive_sync.py` exactly as before.
+  * Rewrote `.gitignore`'s `projects/` block: removed the
+    `!/projects/**/CLAUDE.md` carve-out entirely. `projects/` is now
+    fully covered by the file's own top `/*` default-deny, no explicit
+    re-ignore line needed — verified with `git check-ignore -v`.
+  * **Flagged, not silently assumed away**: this stops *future* commits
+    from carrying project `CLAUDE.md` content, but does **not** purge
+    it from git history — every prior commit on `origin/main` still has
+    the old file contents. Paul asked to "remove and add to gitignore,"
+    which reads as stopping ongoing tracking, not a history rewrite
+    (`git filter-repo` + force-push to scrub old commits) — a materially
+    more destructive, harder-to-reverse operation on a shared remote
+    that this turn did not take unprompted. Left as an open question for
+    Paul rather than guessed at.
+  * Updated this file's own Projects section (the "This repo (git) is
+    your own workspace..." paragraph) to describe the new state, and
+    added a matching log entry to `projects/paris-september-2026/
+    CLAUDE.md` (the active project) pointing back here for detail
+    rather than duplicating it.
+  * Travel half of the text (Pontorson — gateway town for
+    Mont-Saint-Michel) was a plain status update, no question attached
+    — no reply sent for that half; replied by SMS only to confirm the
+    git cleanup was done.

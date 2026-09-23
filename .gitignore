@@ -37,16 +37,12 @@
 !/utils/*.py
 !/utils/*.md
 
-# ...and the projects/ tree, but ONLY CLAUDE.md files at any depth --
-# everything else under projects/ is real project content, mirrored to
-# Google Drive by drive_sync.py instead of living in git (see root
-# CLAUDE.md's Projects section). Directories need traversal explicitly
-# allowed even though their other files stay ignored, hence the
-# trailing-slash line.
-!/projects/
-/projects/**
-!/projects/**/
-!/projects/**/CLAUDE.md
+# ...and projects/ -- as of 2026-09-23 this is fully ignored, including
+# CLAUDE.md files (previously those were tracked; see root CLAUDE.md's
+# Projects section for why that changed). No carve-out needed: the
+# top-level `/*` rule above already covers it. Google Drive
+# (drive_sync.py) is now the only durable copy of anything under
+# projects/ -- local disk is the sole source for git-tracked recovery.
 
 /__pycache__/
 *.pyc
