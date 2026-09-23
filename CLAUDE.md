@@ -1096,4 +1096,6 @@ what's throwaway vs. permanent; don't build real features in here.
   * Travel half of the text (Pontorson — gateway town for
     Mont-Saint-Michel) was a plain status update, no question attached
     — no reply sent for that half; replied by SMS only to confirm the
-    git cleanup was done.
+    git cleanup was done (`SM518a0d32500655d91256da8aa83ae746`),
+    including the history-not-purged caveat above and an offer to do
+    the bigger history-rewrite step if he wants it.
