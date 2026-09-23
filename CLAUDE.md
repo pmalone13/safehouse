@@ -148,13 +148,35 @@ gitignored, no carve-out.** Before that, project CLAUDE.md files were
 the one exception to "everything under `projects/` is gitignored";
 that exception is gone. The eight existing project CLAUDE.md files were
 untracked with `git rm -r --cached` (working-tree copies untouched,
-still on local disk and still syncing to Drive) — **this does not purge
-them from git history**; every past commit on `origin/main` still
-contains their old contents. Paul did not ask for a history rewrite
-(`git filter-repo` + force-push), which is a separate, more destructive
-step with its own remote-history implications — flag that distinction
-if he brings this up again rather than assuming today's fix reached the
-old commits too. **The actual durable copy of project content is
+still on local disk and still syncing to Drive). **Update, same day,
+queue id 144, Paul: "Please purge from github"** — the history rewrite
+flagged above as a separate/bigger step was then explicitly requested
+and done: `git-filter-repo` (installed into `venv/` via pip, not a
+system package) stripped every `projects/` path from all 202 commits,
+`origin` (removed by filter-repo itself as a safety default) was
+re-added, and `git push --force origin main` overwrote GitHub's
+history — confirmed after with `git log --all -- projects/` returning
+zero commits. **Caveats a future turn should know, not silently
+resolved:**
+  * A local-only safety backup of the pre-purge history exists at
+    `/home/ubuntu/safehouse-pre-purge-backup-20260923.bundle` (a
+    `git bundle --all`, made before the rewrite in case something went
+    wrong) — it still has the old personal-info content. Not synced
+    anywhere, but Paul should know it's there if the goal is "gone
+    everywhere," not just off GitHub's default branch.
+  * **This root file itself still carries some personal detail in its
+    own Test Log/Projects prose** (e.g. Allie's car VIN,
+    `JF2SHAEC8CH456274`, in the alliecar summary above) — root
+    `CLAUDE.md` was deliberately never in scope of either purge (it's
+    the one file git is *supposed* to track), so this wasn't touched.
+    Flagged to Paul rather than assumed fine; redacting it would be a
+    content-editing judgment call, not something to do unprompted.
+  * GitHub may retain the old commits as unreferenced/dangling objects
+    for some period after a force-push (their own GC timing, not
+    instant) — the branch itself is clean immediately, but "purged"
+    isn't necessarily "unrecoverable within the minute" on GitHub's
+    side. Not something this VM can control or verify further.
+**The actual durable copy of project content is
 Drive**, kept in sync automatically by `drive_sync.py` (see step 3) —
 write locally like normal, the checkpoint pushes it out. Folder names
 on Drive mirror this repo's own structure exactly (same relative
@@ -1099,3 +1121,47 @@ what's throwaway vs. permanent; don't build real features in here.
     git cleanup was done (`SM518a0d32500655d91256da8aa83ae746`),
     including the history-not-purged caveat above and an offer to do
     the bigger history-rewrite step if he wants it.
+- 2026-09-23 ~08:42Z: same session, queue id 144, text channel, "Please
+  purge from github" — direct follow-through on the offer made minutes
+  earlier at the end of queue id 143. Took this as explicit
+  authorization for the history-rewrite + force-push step, which I'd
+  deliberately withheld doing unprompted last turn given how much more
+  destructive/harder-to-reverse it is than a plain untrack. Still
+  repo-hygiene, not "application code" under the hard boundary.
+  * Took one precaution before the irreversible part: `git bundle
+    create` a full local backup of every ref (`/home/ubuntu/
+    safehouse-pre-purge-backup-20260923.bundle`) in case anything went
+    wrong — recorded above in the Projects section since it's a
+    standing fact about the repo now, not just a one-turn detail.
+  * `git-filter-repo` wasn't preinstalled and `pip3 install --user`
+    failed (`externally-managed-environment`, PEP 668) — installed it
+    into the existing `venv/` instead (`./venv/bin/pip install
+    git-filter-repo`) rather than `--break-system-packages` or `apt
+    install` with sudo, to avoid touching anything system-wide for a
+    tool only needed once.
+  * `./venv/bin/git-filter-repo --path projects/ --invert-paths
+    --force` rewrote all 202 commits, stripping every `projects/` path;
+    it removes the `origin` remote as its own safety default, so
+    re-added it (`git remote add origin
+    git@github.com:pmalone13/safehouse.git`) before `git push --force
+    origin main`, which succeeded (`ea65812...6081378 main -> main
+    (forced update)`).
+  * **Verified rather than assumed clean**: `git log --all --oneline
+    -- projects/` returns zero commits post-rewrite. Also grepped full
+    history for a known personal identifier (Allie's car VIN) as a
+    spot-check — it still matched once, traced to **this root
+    `CLAUDE.md` file itself** (never in scope of the purge — root
+    `CLAUDE.md` is the one file git is supposed to keep). Didn't touch
+    it; flagged it to Paul as a separate, still-open fact rather than
+    letting "purge done" read as "all personal info gone from git."
+  * Ran a local `git reflog expire --expire=now --all && git gc
+    --prune=now --aggressive` to drop the old objects from this
+    machine's own `.git` too (the backup bundle is the only remaining
+    local copy of the pre-purge history, by design).
+  * Replied by SMS confirming the purge, and named the three caveats
+    now written into the Projects section above: the local backup
+    bundle still exists, root `CLAUDE.md`'s own text still has some
+    personal detail, and GitHub's own object GC timing (not
+    verifiable from here) may mean the old commits aren't
+    instantaneously gone from their servers even though the branch
+    itself is clean now.
