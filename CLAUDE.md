@@ -1166,3 +1166,31 @@ what's throwaway vs. permanent; don't build real features in here.
     verifiable from here) may mean the old commits aren't
     instantaneously gone from their servers even though the branch
     itself is clean now.
+- 2026-09-23 ~09:5xZ: session wrap-up (idle window elapsed, no new
+  message). Same session as queue ids 143-144 above; four more turns
+  landed after those, all `paris-september-2026`, all travel-emergency
+  logistics rather than repo work: queue id 145 (their Bayeux→Pontorson
+  train was cancelled by a labour action, asked for ideas — `WebSearch`
+  found the real driving distance is only ~100km/1h22m, so recommended
+  taxi over the cited 5h bus, ~€130-180 estimate from a generic
+  per-km calculator); queue id 146 (worried the same disruption could
+  hit Thursday's Pontorson→Paris return and cost them their flight
+  home — real research this time found it's not a scheduled strike at
+  all but a *droit de retrait* over actual rail-safety defects on the
+  Caen–Rennes line serving Pontorson, no announced end time, but also
+  no national strike calendared for Thursday specifically — told Paul
+  plainly that this is a safety situation that can recur without
+  warning rather than a checkable calendar risk, recommended real
+  buffer given the flight is on the line); queue id 147 (booked the
+  taxi at €250, asked if that's fair — fixed-rate transfer research
+  showed €252-283 is the actual average for this route, so €250 is
+  fine, and corrected the record: queue id 145's €130-180 metered
+  estimate was the wrong comparison once a real driver quoted a fixed
+  price); queue id 148 ("Tks," acknowledgment, no reply needed). All
+  four already logged in `projects/paris-september-2026/CLAUDE.md` as
+  they happened; none touched root `CLAUDE.md` or any git-tracked
+  file, so `git status` was already clean at wrap-up and Drive was
+  already current from each turn's own sync — nothing new to push
+  beyond this entry. Good illustration of the 2026-09-23 tracking
+  change working as intended: four consecutive project-only turns,
+  each one a real Drive sync with zero git noise.
