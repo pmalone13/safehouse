@@ -17,7 +17,22 @@ deliberate choice, since Claude needs to read/edit files Paul already
 created on Drive, not just files it creates itself. Revisit if that
 proves too broad in practice.
 
-One-time setup for EITHER, MUST be done from a machine with a browser
+PHOTOS, added 2026-09-25 (Paul, airport, live) -- third independent
+credential pair, same pattern as Drive: one new consent, same
+underlying Cloud OAuth client, its own token file. Scope:
+`photoslibrary.readonly`, intended for albums Paul explicitly shares
+with tedassistent@gmail.com via Google Photos' own sharing feature
+(NOT full-library access -- Google locked that down in a 2025 policy
+change; readonly now mostly only surfaces app-created content unless
+the item is something explicitly shared with this account, e.g. a
+shared album). Untested as of writing -- verify a real shared album
+actually shows up in list_shared_albums() before relying on this.
+Uses direct REST calls (google.auth.transport.requests.AuthorizedSession)
+instead of googleapiclient.discovery.build() -- Google deprecated the
+photoslibrary discovery document in 2025, so the usual build()-based
+pattern Gmail/Drive use here no longer works for this API.
+
+One-time setup for ANY of these, MUST be done from a machine with a browser
 (this VM is headless):
   1. Create/select a Google Cloud project, enable the relevant API
      (Gmail API / Drive API), create a "Desktop app" OAuth client,
@@ -36,7 +51,7 @@ import time
 from email.message import EmailMessage
 from pathlib import Path
 
-from google.auth.transport.requests import Request
+from google.auth.transport.requests import AuthorizedSession, Request
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload, MediaIoBaseUpload
@@ -59,6 +74,12 @@ DRIVE_SCOPES = ["https://www.googleapis.com/auth/drive"]
 DRIVE_CLIENT_SECRET_PATH = REPO_ROOT / ".drive_api_client_secret.json"
 DRIVE_TOKEN_PATH = REPO_ROOT / ".drive_api_token.json"
 DRIVE_TOKEN_LOCK_PATH = REPO_ROOT / ".drive_api_token.lock"
+
+PHOTOS_SCOPES = ["https://www.googleapis.com/auth/photoslibrary.readonly"]
+PHOTOS_CLIENT_SECRET_PATH = REPO_ROOT / ".photos_api_client_secret.json"
+PHOTOS_TOKEN_PATH = REPO_ROOT / ".photos_api_token.json"
+PHOTOS_TOKEN_LOCK_PATH = REPO_ROOT / ".photos_api_token.lock"
+PHOTOS_API_BASE = "https://photoslibrary.googleapis.com/v1"
 
 _LOCK_STALE_SECONDS = 15.0
 _LOCK_WAIT_TIMEOUT_SECONDS = 10.0
@@ -91,7 +112,7 @@ def _release_lock(lock_path: Path) -> None:
     lock_path.unlink(missing_ok=True)
 
 
-def _get_client(token_path: Path, lock_path: Path, scopes: list, api: str, version: str):
+def _get_credentials(token_path: Path, lock_path: Path, scopes: list) -> Credentials:
     if not token_path.exists():
         raise FileNotFoundError(
             f"{token_path} not found -- complete the one-time OAuth consent "
@@ -108,6 +129,11 @@ def _get_client(token_path: Path, lock_path: Path, scopes: list, api: str, versi
                 token_path.write_text(creds.to_json())
         finally:
             _release_lock(lock_path)
+    return creds
+
+
+def _get_client(token_path: Path, lock_path: Path, scopes: list, api: str, version: str):
+    creds = _get_credentials(token_path, lock_path, scopes)
     return build(api, version, credentials=creds, cache_discovery=False)
 
 
@@ -289,3 +315,66 @@ def update_file_content(service, file_id: str, content: str, mime_type: str = "t
     media = MediaIoBaseUpload(io.BytesIO(content.encode("utf-8")), mimetype=mime_type)
     service.files().update(fileId=file_id, media_body=media).execute()
     log.info(f"updated Drive file id={file_id}")
+
+
+# --------------------------------------------------------------- Photos --
+
+def get_photos_session() -> AuthorizedSession:
+    """Returns a requests.Session-like object with the Photos OAuth
+    credentials attached (auto-refreshing). Direct REST, not
+    googleapiclient.discovery.build() -- see this module's docstring
+    for why."""
+    creds = _get_credentials(PHOTOS_TOKEN_PATH, PHOTOS_TOKEN_LOCK_PATH, PHOTOS_SCOPES)
+    return AuthorizedSession(creds)
+
+
+def list_shared_albums(session: AuthorizedSession) -> list:
+    """Returns raw album dicts (id, title, mediaItemsCount, shareInfo,
+    ...) for every album shared with tedassistent@gmail.com. Paginates
+    internally."""
+    albums = []
+    page_token = None
+    while True:
+        params = {"pageSize": 50}
+        if page_token:
+            params["pageToken"] = page_token
+        resp = session.get(f"{PHOTOS_API_BASE}/sharedAlbums", params=params)
+        resp.raise_for_status()
+        data = resp.json()
+        albums.extend(data.get("sharedAlbums", []))
+        page_token = data.get("nextPageToken")
+        if not page_token:
+            break
+    return albums
+
+
+def list_album_media_items(session: AuthorizedSession, album_id: str) -> list:
+    """Returns raw mediaItem dicts (id, filename, mimeType, baseUrl,
+    ...) for every item in the given album. baseUrl is short-lived
+    (~60 min) -- fetch it right before calling download_media_item(),
+    don't cache it."""
+    items = []
+    page_token = None
+    while True:
+        body = {"albumId": album_id, "pageSize": 100}
+        if page_token:
+            body["pageToken"] = page_token
+        resp = session.post(f"{PHOTOS_API_BASE}/mediaItems:search", json=body)
+        resp.raise_for_status()
+        data = resp.json()
+        items.extend(data.get("mediaItems", []))
+        page_token = data.get("nextPageToken")
+        if not page_token:
+            break
+    return items
+
+
+def download_media_item(session: AuthorizedSession, media_item: dict) -> bytes:
+    """Downloads one mediaItem's original bytes. Photos' base-URL
+    download convention: append =d for photos, =dv for videos (plain
+    =d truncates video to a thumbnail)."""
+    is_video = media_item.get("mimeType", "").startswith("video/")
+    suffix = "=dv" if is_video else "=d"
+    resp = session.get(media_item["baseUrl"] + suffix)
+    resp.raise_for_status()
+    return resp.content
