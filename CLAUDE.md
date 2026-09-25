@@ -185,7 +185,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/paris-september-2026/CLAUDE.md` — moved
+**Current project**: `projects/spanish/CLAUDE.md` — set 2026-09-25
+~18:48Z (queue id 160, text, "New project: Spanish. I want to learn
+conversational Spanish. I have no formal training. How do you
+recommend I start"). New named project, so created
+`projects/spanish/CLAUDE.md` and moved the pointer here. Replied by
+SMS with a starting plan: Language Transfer's free "Complete Spanish"
+audio course plus spaced-repetition vocab (Anki) as the immediate
+first-week action, then real speaking practice (italki/Tandem) and
+Dreaming Spanish comprehensible-input video layered in once he has
+enough vocabulary. See that project's Log for the full writeup.
+
+Previous pointer, `projects/paris-september-2026/CLAUDE.md` — moved
 back here 2026-09-21 ~11:11Z (queue id 140, text, "In Bayeux France
 now. First day. Can u outline a walking tour for downtown") — the
 Normandy leg (Mon 9/21 Paris->Bayeux, confirmed since queue id 95) has
@@ -194,6 +205,10 @@ started, so trip logistics are live again here rather than under
 (cathedral, tapestry museum, River Aure, old town) anchored at their
 Bayeux address, explicitly leaving the D-Day beaches tour for
 tomorrow's already-booked day. See that project's Log for detail.
+Folded back into the other-live-projects list below, not dropped —
+the trip is still ongoing (last update: Pontorson, 2026-09-23) and
+CDG-return logistics (queue ids 149-150) are the most recent open
+thread.
 
 Previous pointer, `projects/travel/CLAUDE.md` — moved there 2026-09-20
 ~08:17Z (queue id 124, text, "project 'travel'") when Paul shared a
@@ -229,9 +244,13 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Eight other projects remain simultaneously live — don't drop them
+**Nine other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
+- `projects/paris-september-2026/CLAUDE.md` — the France trip, still
+  in progress as of the last exchange (queue ids 149-150, 2026-09-23,
+  a CDG-area hotel search ahead of a Friday flight home). See the
+  previous-pointer note above for the full recent arc.
 - `projects/travel/CLAUDE.md` — the Google Maps Timeline ingest work
   (see the previous-pointer note above for the full arc). Nothing
   outstanding was flagged when the pointer moved back to
