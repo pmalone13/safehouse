@@ -327,6 +327,51 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **Google Photos API access is built but blocked by Google, not by
+  us — don't re-attempt without a plan for the actual gate.** Added
+  2026-09-25 (Paul, live, airport): a third OAuth credential pair in
+  `google_client.py` (`PHOTOS_SCOPES` = `photoslibrary.readonly`,
+  `.photos_api_token.json`, direct REST via `AuthorizedSession` since
+  Google deprecated the `photoslibrary` discovery doc in 2025) plus
+  `authorize_photos_once.py`. Code confirmed working end-to-end
+  mechanically — token authorizes and refreshes fine — but every real
+  call (`list_shared_albums()`) returns **403 `PERMISSION_DENIED`,
+  "Request had insufficient authentication scopes"** even with the
+  correct scope on the token. This is Google's 2025 policy change:
+  `photoslibrary.readonly` for broad/shared-content reads now needs a
+  separate, Photos-specific access grant from Google on top of normal
+  app/OAuth-client verification — enabling the API and consenting to
+  the scope isn't sufficient anymore, and this is true even for a
+  fully verified Production app, not just apps stuck in Testing mode.
+  Google is deliberately steering integrations toward the **Photos
+  Picker API** instead (`photospicker.mediaitems.readonly` — user
+  manually selects items in a picker UI each session; no standing
+  read access, so not usable for passively watching a shared album).
+  **Decision for now (Paul, same session): don't chase Google's access
+  request.** Recordings and photos both go the manual route instead —
+  Paul exports/shares a file directly (email attachment, text/MMS,
+  Drive share) rather than this system pulling from Photos on its
+  own. Photos code is left in place, dormant, not ripped out, in case
+  Paul decides later to pursue Google's approval process or try the
+  Picker API. Full session detail (including the Recorder-app finding
+  below) in `projects/safehouse/general/CLAUDE.md`.
+
+- **Recorder-app "recordings" are a closed system — not an API gap
+  we can close, don't re-investigate.** Same 2026-09-25 session:
+  Pixel Recorder's cloud backup does **not** land as Drive files (Paul
+  couldn't find them despite the phone reporting "synced") — they live
+  in Google's own private Recorder backend/web portal, with no public
+  API and no Drive-visible representation at all. No scope, no
+  sharing setting, no API enablement fixes this — there is nothing to
+  enable. **Workaround (manual, already works today, nothing to
+  build)**: Paul exports/downloads the individual recording as an
+  audio file from the Recorder app or its web portal, then sends it
+  the normal way (email attachment, or text — auto-transcribes via
+  `voice_transcribe.py` same as any voice MMS). This is the same gap
+  flagged unresolved at queue ids 128/136 (see the old `travel`
+  project pointer note above) — now actually explained rather than
+  just "not built."
+
 - ~~Drive down again, `invalid_grant`, discovered 2026-09-16~~
   **RESOLVED 2026-09-20 ~08:29Z.** Discovered 2026-09-16 ~13:43Z (queue
   id 80 checkpoint), same error shape as the 2026-09-08 outage but
