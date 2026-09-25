@@ -327,6 +327,32 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **Fixed same-session mistake, keep for history: `drive_sync.py`
+  briefly leaked `.photos_api_token.json` (a live OAuth refresh
+  token) to Drive.** When the three new Photos credential filenames
+  were added in `google_client.py` this session, they weren't added
+  to `drive_sync.py`'s `EXCLUDE_NAMES` (the list that already protects
+  the Gmail/Drive tokens for exactly this reason) — an oversight, not
+  a design decision. The very next checkpoint's `drive_sync.py` run
+  synced `.photos_api_token.json` to Drive for real. Caught
+  immediately after (noticed the sync log's own "created" line naming
+  that file). Fixed within the same turn: added
+  `.photos_api_client_secret.json` / `.photos_api_token.json` /
+  `.photos_api_token.lock` to `EXCLUDE_NAMES`, deleted the uploaded
+  file from Drive via the Drive API directly (not just
+  ignored-going-forward — the exposure needed actually undoing), and
+  hand-removed its stale entry from `.drive_sync_state.json` so the
+  manifest doesn't carry a dangling reference. Re-ran `drive_sync.py`
+  after the fix to confirm: not re-uploaded, no orphan warning. The
+  token itself was never expired/rotated as a precaution — the file
+  only lived on Drive briefly, in the tedassistent account's own
+  private Drive (not publicly shared), and Photos API calls are
+  blocked anyway (see the entry below) so there's nothing live an
+  exposure could actually do. **Lesson for a future turn**: any new
+  credential filename added to `google_client.py` needs a matching
+  `EXCLUDE_NAMES` entry in the same turn, not as an afterthought —
+  treat it as one change, not two.
+
 - **Google Photos API access is built but blocked by Google, not by
   us — don't re-attempt without a plan for the actual gate.** Added
   2026-09-25 (Paul, live, airport): a third OAuth credential pair in
