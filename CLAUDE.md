@@ -1306,3 +1306,17 @@ what's throwaway vs. permanent; don't build real features in here.
   Both turns only touched the gitignored project file, already synced
   to Drive after each; root `CLAUDE.md` untouched until this wrap-up
   entry, so `git status` was clean going into this checkpoint too.
+- 2026-09-25 ~18:5xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 160, text channel, "New
+  project: Spanish. I want to learn conversational Spanish. I have no
+  formal training. How do you recommend I start." Already fully
+  handled and pushed as commit `1e44f12` before this wrap-up fired —
+  created `projects/spanish/CLAUDE.md`, moved the Current-project
+  pointer here from `paris-september-2026` (folded back into the
+  other-live-projects list, not dropped — trip still ongoing per the
+  CDG-hotel thread at queue ids 149-150), replied by SMS with a
+  starting plan (Language Transfer's free audio course + Anki now,
+  italki/Tandem speaking practice and Dreaming Spanish layered in
+  later), and ran `drive_sync.py` clean (1 created, 5 updated, 861
+  unchanged, 0 orphaned). Working tree confirmed clean at this
+  wrap-up, so this entry is the only change this turn makes.
