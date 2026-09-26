@@ -185,7 +185,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/spanish/CLAUDE.md` — set 2026-09-25
+**Current project**: `projects/movies/CLAUDE.md` — moved here
+2026-09-26 ~01:06Z (queue id 161, text, "Topic movies: Can you give me
+a good top ten WWII movies"). Paul named the project explicitly.
+Straightforward opinion/general-knowledge ask (not a clip-ID puzzle
+like the project's two prior entries), so answered directly by SMS
+with no WebSearch needed: Saving Private Ryan, Schindler's List, Come
+and See, Das Boot, The Pianist, Dunkirk, Band of Brothers, Grave of
+the Fireflies, The Bridge on the River Kwai, Inglourious Basterds. See
+that project's Log for the full entry.
+
+Previous pointer, `projects/spanish/CLAUDE.md` — set 2026-09-25
 ~18:48Z (queue id 160, text, "New project: Spanish. I want to learn
 conversational Spanish. I have no formal training. How do you
 recommend I start"). New named project, so created
@@ -194,7 +204,9 @@ SMS with a starting plan: Language Transfer's free "Complete Spanish"
 audio course plus spaced-repetition vocab (Anki) as the immediate
 first-week action, then real speaking practice (italki/Tandem) and
 Dreaming Spanish comprehensible-input video layered in once he has
-enough vocabulary. See that project's Log for the full writeup.
+enough vocabulary. See that project's Log for the full writeup. Folded
+back into the other-live-projects list below, not dropped — nothing
+outstanding on it.
 
 Previous pointer, `projects/paris-september-2026/CLAUDE.md` — moved
 back here 2026-09-21 ~11:11Z (queue id 140, text, "In Bayeux France
@@ -244,7 +256,7 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Nine other projects remain simultaneously live — don't drop them
+**Eight other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
 - `projects/paris-september-2026/CLAUDE.md` — the France trip, still
@@ -256,13 +268,9 @@ just because this pointer moved:**
   outstanding was flagged when the pointer moved back to
   `paris-september-2026` — see that file's own Log for the latest
   exchange.
-- `projects/movies/CLAUDE.md` — set 2026-09-09 ~12:40Z when Paul texted
-  `Project 'movies'` (queue id 43): a catch-all for "what movie/show is
-  this clip from" and other movie-related questions. Two clips
-  identified so far with mixed confidence — see that file's Log; don't
-  trust a web-search-summarizer's confident-sounding guess as fact
-  without independent corroboration (learned the hard way on the first
-  one, queue id 43).
+- `projects/spanish/CLAUDE.md` — see the previous-pointer note above
+  for the full writeup. Nothing outstanding was flagged when the
+  pointer moved to `movies`.
 - `projects/personal/CLAUDE.md` — set 2026-09-08 ~17:22Z when Paul
   created it by text (queue id 41): a catch-all for his own personal
   documents/records not tied to another named project. Holds a photo
