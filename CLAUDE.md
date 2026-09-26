@@ -158,12 +158,11 @@ re-added, and `git push --force origin main` overwrote GitHub's
 history — confirmed after with `git log --all -- projects/` returning
 zero commits. **Caveats a future turn should know, not silently
 resolved:**
-  * A local-only safety backup of the pre-purge history exists at
-    `/home/ubuntu/safehouse-pre-purge-backup-20260923.bundle` (a
-    `git bundle --all`, made before the rewrite in case something went
-    wrong) — it still has the old personal-info content. Not synced
-    anywhere, but Paul should know it's there if the goal is "gone
-    everywhere," not just off GitHub's default branch.
+  * ~~A local-only safety backup of the pre-purge history exists at
+    `/home/ubuntu/safehouse-pre-purge-backup-20260923.bundle`~~
+    **DELETED 2026-09-26 ~14:44Z** (queue id 163, Paul: "delete git
+    backup bundle," answering the question this bullet raised). No
+    local copy of the pre-purge history remains anywhere on this VM.
   * **This root file itself still carries some personal detail in its
     own Test Log/Projects prose** (e.g. Allie's car VIN,
     `JF2SHAEC8CH456274`, in the alliecar summary above) — root
@@ -334,13 +333,16 @@ just because this pointer moved:**
 "tomorrow morning" from him means ~12:00-16:00Z the next day, and an
 early-UTC turn is still the previous evening where he is.
 
-Two things about it a future turn should know:
+One thing about it a future turn should know:
 - **Its H1 says "sub-project of finPlan"** but its own folder-structure
-  block says `projects/alliecar/`, and Paul's email called it "alliecar
-  project." Placed flat at `projects/alliecar/` as the two-out-of-three
-  reading and asked Paul which he wants; moving it to
-  `projects/finPlan/alliecar/` later is a `git mv` plus this pointer.
-  Don't invent a `finPlan` project on your own.
+  block says `projects/alliecar/`. **Settled 2026-09-26 (queue id 163,
+  Paul: "leave allie car folder in projects"): staying flat at
+  `projects/alliecar/`, not moving under `finPlan/`.** Don't ask again
+  or invent a `finPlan` project on your own. Also as of that same
+  message the car hunt for Allie is **active again** — the 2015
+  Forester candidate from the `alliecar` file's Session 7 sold to
+  another buyer, so this isn't a closed project; see that file's
+  Session 9 for detail.
 - **Sessions 1-2 of that project ran somewhere with web access. This VM
   has none.** Don't promise to check listings, recalls or VIN histories
   from here.
@@ -661,18 +663,15 @@ the pending `/sms-optin` build still live there.
 
 ## tempWork
 
-Temporary, disposable infrastructure that isn't part of the real
-system -- exists only until a specific external thing resolves, then
-gets torn down. Kept in its own directory on purpose so it's obvious
-what's throwaway vs. permanent; don't build real features in here.
-
-- **A2P 10DLC campaign status watcher — RETIRED 2026-09-07 ~16:30Z.**
-  Campaign reached `VERIFIED` (see TODO section above for the full
-  approval story and rejection history). Cron entry removed
-  (`sudo rm /etc/cron.d/safehouse-a2p-check`). `tempWork/check_a2p_status.py`
-  and its state/log files are left in place — whether to archive or
-  delete `tempWork/` itself is an open question sent to Paul, not yet
-  decided.
+**RETIRED AND DELETED 2026-09-26 ~14:44Z** (queue id 163, Paul: "delete
+tempWork" — answering the open question this section used to carry).
+`tempWork/` (the retired A2P 10DLC campaign status watcher —
+`check_a2p_status.py` plus its state/log files, dead since the campaign
+reached `VERIFIED` 2026-09-07, see the TODO section above for the full
+approval story) is gone from the filesystem. This directory heading and
+its convention (throwaway infra, separate from the real system, torn
+down once its external trigger resolves) is kept here for the *next*
+thing that needs it, not because anything currently lives under it.
 
 ## Test log
 
