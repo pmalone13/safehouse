@@ -1328,3 +1328,14 @@ what's throwaway vs. permanent; don't build real features in here.
   later), and ran `drive_sync.py` clean (1 created, 5 updated, 861
   unchanged, 0 orphaned). Working tree confirmed clean at this
   wrap-up, so this entry is the only change this turn makes.
+- 2026-09-26 ~01:07Z: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 161, text channel, "Topic
+  movies: Can you give me a good top ten WWII movies." Already fully
+  handled and pushed as commit `cda44b6` before this wrap-up fired —
+  plain opinion/general-knowledge ask, answered directly by SMS with
+  no WebSearch needed, Current-project pointer moved to `movies`
+  (`spanish` folded back into the live-projects list, nothing
+  outstanding on it), `projects/movies/CLAUDE.md` logged, Drive synced
+  clean (0 created, 6 updated, 861 unchanged, 0 orphaned). Working
+  tree confirmed clean at this wrap-up, so this entry is the only
+  change this turn makes.
