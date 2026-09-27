@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — moved here
+**Current project**: `projects/books/CLAUDE.md` — created and moved
+here 2026-09-27 ~15:30Z (queue id 164, text, "Project 'books' Just
+Follet's fall of giants. What are other two books in series"). New
+named project, so created `projects/books/CLAUDE.md` and moved the
+pointer here. Straightforward general-knowledge ask, answered
+directly by SMS with no WebSearch needed: "Fall of Giants" is Book 1
+of Ken Follett's Century Trilogy; the other two are "Winter of the
+World" (Book 2) and "Edge of Eternity" (Book 3). See that project's
+Log for the full entry.
+
+Previous pointer, `projects/movies/CLAUDE.md` — moved here
 2026-09-26 ~01:06Z (queue id 161, text, "Topic movies: Can you give me
 a good top ten WWII movies"). Paul named the project explicitly.
 Straightforward opinion/general-knowledge ask (not a clip-ID puzzle
@@ -192,7 +202,9 @@ like the project's two prior entries), so answered directly by SMS
 with no WebSearch needed: Saving Private Ryan, Schindler's List, Come
 and See, Das Boot, The Pianist, Dunkirk, Band of Brothers, Grave of
 the Fireflies, The Bridge on the River Kwai, Inglourious Basterds. See
-that project's Log for the full entry.
+that project's Log for the full entry. Folded back into the
+other-live-projects list below, not dropped — nothing outstanding on
+it.
 
 Previous pointer, `projects/spanish/CLAUDE.md` — set 2026-09-25
 ~18:48Z (queue id 160, text, "New project: Spanish. I want to learn
@@ -255,9 +267,12 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Eight other projects remain simultaneously live — don't drop them
+**Nine other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
+- `projects/movies/CLAUDE.md` — see the previous-pointer note above
+  for the full writeup (top-10 WWII list, queue id 161). Nothing
+  outstanding was flagged when the pointer moved to `books`.
 - `projects/paris-september-2026/CLAUDE.md` — the France trip, still
   in progress as of the last exchange (queue ids 149-150, 2026-09-23,
   a CDG-area hotel search ahead of a Friday flight home). See the
