@@ -1442,3 +1442,18 @@ thing that needs it, not because anything currently lives under it.
   managed-settings re-read of root `CLAUDE.md` happened again this
   turn too — again identical content to what was just committed,
   nothing to reconcile.
+- 2026-09-27 ~22:5xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, all `alliecar`, queue ids
+  166-168: the second Forester purchase (166, 2014 2.5i Limited, 62k
+  mi, $11k — best mileage this project has seen, replied with that
+  comparison plus title-status and service-record questions), an
+  X-MODE explainer (167, tied to the new car via context rather than
+  treated as an unrelated question, verified via `WebSearch`), and a
+  plain confirmation needing no reply (168). All three already
+  committed/pushed individually (`b42458c`, `a1362be`, `d6e2baf`);
+  working tree confirmed clean at this wrap-up, so this Test Log entry
+  is the only change this turn makes. Drive sync retried here too —
+  still the same `invalid_grant` failure first flagged at queue id
+  164's checkpoint, unchanged across all three of this session's
+  turns; git push unaffected throughout. Not re-texting Paul about it
+  again — already flagged multiple times, nothing new to add.
