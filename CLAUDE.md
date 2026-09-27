@@ -1434,3 +1434,11 @@ thing that needs it, not because anything currently lives under it.
   re-read content was identical to what queue id 166's checkpoint had
   just written, so nothing to reconcile; flagging only so a future
   turn doesn't wonder whether an out-of-band edit happened.
+- 2026-09-27 ~22:36Z: same session, queue id 168, text channel, "It's a
+  button in dash" — Paul confirming he found the X-Mode button
+  himself, 13 seconds after the prior reply, not a new question. No
+  SMS sent back (same posture as a plain acknowledgment). Logged in
+  `projects/alliecar/CLAUDE.md` Session 11 for the record. Same
+  managed-settings re-read of root `CLAUDE.md` happened again this
+  turn too — again identical content to what was just committed,
+  nothing to reconcile.
