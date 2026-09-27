@@ -184,7 +184,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/books/CLAUDE.md` — created and moved
+**Current project**: `projects/alliecar/CLAUDE.md` — moved here
+2026-09-27 ~22:33Z (queue id 166, text, "Just bought: 2014 Forester
+2.5i limited. 62k miles. Garage kept. $11k. What do u think"). Paul
+named the project explicitly ("Alliecar:" convention from prior
+turns; this text is a straight continuation of that project's active
+search, reopened at Session 9). Best mileage this project has ever
+seen (62k vs. 85k-109k on every prior candidate), garage kept, $11k
+under the $13K ceiling — replied by SMS with that comparison plus two
+things worth confirming (title status, unstated; oil-consumption/CVT
+service records for the same FB25 engine flagged before). See that
+project's Session 10 for the full entry. `books` folded back into the
+other-live-projects list below, not dropped — nothing outstanding on
+it.
+
+Previous pointer, `projects/books/CLAUDE.md` — created and moved
 here 2026-09-27 ~15:30Z (queue id 164, text, "Project 'books' Just
 Follet's fall of giants. What are other two books in series"). New
 named project, so created `projects/books/CLAUDE.md` and moved the
@@ -305,31 +319,9 @@ just because this pointer moved:**
   to send an image over text (`send_sms`/`send_message` are both
   text-only, no MMS/attachment support) — fully delivered, nothing
   outstanding.
-- `projects/alliecar/CLAUDE.md` — set 2026-09-03 when Paul emailed the
-  `alliecar` package (queue id 8). Helping him buy a used car for his
-  daughter Allie; dealer visits were set for the morning of 2026-09-04,
-  **starting at Farrish Subaru** (car #6) per Paul's "stand by" email
-  (queue id 9, 23:45Z).
-  **Correction, 2026-09-07: "no web access" was wrong, or at least
-  untested.** `WebFetch` successfully pulled a live cars.com listing this
-  session (see alliecar Session 4) — try it for any car-listing/URL
-  question before reciting the old limitation.
-  **Car purchased, 2026-09-07 ~21:54Z (queue id 30)** — Paul: paid
-  retail, ~$9,400-9,500 out the door, "great shape," bought a missing
-  backseat part, delivery to Allie targeted 09-10/09-11. **Confirmed
-  2026-09-07 ~21:56Z (queue id 33)**: it's the rebuilt-title 2012
-  Forester 2.5X flagged in Session 4 (VIN JF2SHAEC8CH456274) — Paul
-  knowingly bought a salvage-title car, a deliberate departure from the
-  strategy doc's own clean-title MUST HAVE. No debrief was ever given
-  on the original 09-04 Farrish/six-car shortlist visit; this doesn't
-  resolve whether that happened or was bypassed.
-  **New ask, 2026-09-09 ~13:31Z (queue id 45):** a cron-triggered daily
-  search for Subaru Foresters near Fairfax matching agreed criteria —
-  possibly a clean-title backup for the salvage-title car above, not
-  confirmed. **Not built** — new script + cron job, application code,
-  needs Paul present. See that file's Session 6 for what was proposed
-  instead and two open questions (live-together build, and the actual
-  search criteria) — still unanswered.
+- `projects/books/CLAUDE.md` — see the previous-pointer note above for
+  the full writeup (Century Trilogy answer, queue id 164). Nothing
+  outstanding was flagged when the pointer moved to `alliecar`.
 - `projects/richie-property-management/CLAUDE.md` — set 2026-09-08
   ~12:45Z when Paul created it by text (queue id 36). Reactivated
   2026-09-19 after a large forwarded email digest revealed both his
@@ -1406,3 +1398,22 @@ thing that needs it, not because anything currently lives under it.
   `invalid_grant` failure**, unchanged since queue id 164's checkpoint;
   git push unaffected throughout. Not re-texting Paul again this
   wrap-up — already flagged once this session, nothing new to add.
+- 2026-09-27 ~22:33Z: fresh session, queue id 166, text channel,
+  "Just bought: 2014 Forester 2.5i limited. 62k miles. Garage kept.
+  $11k. What do u think." Paul named the project ("Alliecar:" pattern
+  from prior turns), so moved the Current-project pointer here from
+  `books` (folded back into the live-projects list, nothing
+  outstanding on it). Assessed against the project's own criteria and
+  history rather than answering blind: 62k miles beats every prior
+  candidate this project has looked at by a wide margin (best-prior
+  was 85,684 mi in Session 7; the car actually bought for Allie in
+  Session 5 was 81,900 mi on a salvage title), Limited trim, garage
+  kept fits the doc's own "exceptionally well-preserved" MUST HAVE,
+  $11k is under the $13K ceiling. Replied by SMS: called it the best
+  car the project has seen, flagged two things to confirm (title
+  status — not stated, and matters since Allie's current Forester is
+  salvage-title; oil-consumption/CVT-fluid service records, same FB25
+  engine flagged repeatedly before). Logged in `projects/alliecar/
+  CLAUDE.md` Session 10. Drive sync retried as part of this
+  checkpoint — still the `invalid_grant` failure first flagged at
+  queue id 164, unchanged; git push unaffected.
