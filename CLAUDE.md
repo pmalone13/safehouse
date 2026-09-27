@@ -1387,3 +1387,22 @@ thing that needs it, not because anything currently lives under it.
   individually (commit `beeec45`) and Drive-synced clean before this
   wrap-up fired; working tree confirmed clean here, so this Test Log
   entry is the only change this turn makes.
+- 2026-09-27 ~15:3xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session: queue id 164 (text, "Project
+  'books' Just Follet's fall of giants. What are other two books in
+  series" — created `projects/books/CLAUDE.md`, moved the
+  Current-project pointer here from `movies` (folded back into the
+  live-projects list, nothing outstanding on it), answered by SMS with
+  no WebSearch needed: "Fall of Giants" is Book 1 of Ken Follett's
+  Century Trilogy, the other two are "Winter of the World" (Book 2)
+  and "Edge of Eternity" (Book 3); that checkpoint also found Drive
+  freshly broken — `invalid_grant`, Gmail unaffected, token had
+  refreshed under 24h earlier so the old 7-day-cap theory doesn't
+  explain this one either — logged in the TODO section and flagged to
+  Paul by text) and queue id 165 (a plain "👍" acknowledging the books
+  answer, no reply needed). Both already committed/pushed individually
+  (commits `faf48ae`, `6aba9fd`); working tree confirmed clean at this
+  wrap-up. **Re-tried `drive_sync.py` here — still the identical
+  `invalid_grant` failure**, unchanged since queue id 164's checkpoint;
+  git push unaffected throughout. Not re-texting Paul again this
+  wrap-up — already flagged once this session, nothing new to add.
