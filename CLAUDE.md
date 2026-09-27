@@ -1417,3 +1417,20 @@ thing that needs it, not because anything currently lives under it.
   CLAUDE.md` Session 10. Drive sync retried as part of this
   checkpoint — still the `invalid_grant` failure first flagged at
   queue id 164, unchanged; git push unaffected.
+- 2026-09-27 ~22:36Z: same session, queue id 167, text channel, "What
+  is X mode?" No context given, but read it against the message three
+  minutes earlier (queue id 166, the new 2014 Forester 2.5i Limited
+  purchase) rather than treating it as unrelated: Subaru's X-MODE,
+  which debuted on the redesigned 2014 Forester's CVT-equipped trims —
+  his car qualifies. Verified via `WebSearch` rather than recited from
+  memory (console button, traction/throttle/transmission tuning for
+  snow/mud/gravel, hill descent control ~13mph, engages under 18mph).
+  Replied by SMS. Still `alliecar` project, no pointer move needed.
+  Logged in `projects/alliecar/CLAUDE.md` Session 11. Drive sync
+  retried as part of this checkpoint — still the same `invalid_grant`
+  failure first flagged at queue id 164; git push unaffected.
+  **Also noted**: this turn's system context included a re-read of
+  root `CLAUDE.md` triggered by an org managed-settings change — the
+  re-read content was identical to what queue id 166's checkpoint had
+  just written, so nothing to reconcile; flagging only so a future
+  turn doesn't wonder whether an out-of-band edit happened.
