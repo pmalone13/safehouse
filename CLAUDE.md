@@ -1474,3 +1474,12 @@ thing that needs it, not because anything currently lives under it.
   Allie) as worth a call to VA DMV rather than guessed at. Full
   detail in `projects/alliecar/CLAUDE.md` Session 12. Pure research/
   advisory — no code, no filings.
+- 2026-09-28 ~13:1xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 169, already fully
+  handled, logged, committed, and pushed (`db24ea2`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up, so this
+  entry is the only change this turn makes. Drive sync retried —
+  still the same `invalid_grant` failure first flagged at queue id
+  164's checkpoint, unchanged; git push unaffected. Not re-texting
+  Paul about it again — already flagged multiple times, nothing new
+  to add.
