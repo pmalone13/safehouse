@@ -434,19 +434,29 @@ the pending `/sms-optin` build still live there.
   project pointer note above) — now actually explained rather than
   just "not built."
 
-- **Drive down again, `invalid_grant`, discovered 2026-09-27 ~15:31Z**
-  (queue id 164 checkpoint). Same error shape as the 2026-09-16 outage
-  below — Drive-only, Gmail unaffected (`get_client()` confirmed
-  working immediately after, fetched fine, token last refreshed
-  2026-09-27 15:09). Drive's own token
+- ~~Drive down again, `invalid_grant`, discovered 2026-09-27 ~15:31Z~~
+  **RESOLVED 2026-09-28 ~15:42Z.** Discovered at queue id 164's
+  checkpoint (2026-09-27 ~15:31Z). Same error shape as the 2026-09-16
+  outage below — Drive-only, Gmail unaffected (`get_client()`
+  confirmed working immediately after, fetched fine, token last
+  refreshed 2026-09-27 15:09). Drive's own token
   (`.drive_api_token.json`) last refreshed 2026-09-26 15:48 (per its
   mtime) — under 24h before this failure, so this isn't the 7-day-cap
   theory either; same open question as the 09-16 event, never
-  resolved. Fix is the same mechanics as every prior occurrence:
-  `authorize_drive_once.py` on a machine with a browser, `scp` the
-  resulting token to this VM at the existing path. Flagged to Paul by
-  text. Git push is unaffected — only the Drive mirror is stale
-  starting from this checkpoint.
+  resolved (and still never resolved — no new evidence this time
+  either). Stayed broken through every checkpoint from queue id 164
+  through queue id 169 (2026-09-27 through 2026-09-28). **Fixed when
+  Paul texted "try Drive again" (queue id 170, 2026-09-28 ~15:41Z)** —
+  `get_drive_client()` confirmed working immediately (a plain
+  `files().list()` call succeeded), and a full `drive_sync.py` run
+  caught up the backlog clean: 1 created (the `books` project, which
+  had never made it to Drive since it was created mid-outage), 7
+  updated, 856 unchanged, 0 orphaned. No token file was touched by
+  this VM to fix it — same pattern as every prior resolution, Paul
+  re-authorized on his end and this session just needed to retest.
+  Confirmed to Paul by text. If `invalid_grant` reappears, same fix
+  mechanics as always: `authorize_drive_once.py` on a machine with a
+  browser, `scp` the resulting token to this VM at the existing path.
 
 - ~~Drive down again, `invalid_grant`, discovered 2026-09-16~~
   **RESOLVED 2026-09-20 ~08:29Z.** Discovered 2026-09-16 ~13:43Z (queue
@@ -1483,3 +1493,15 @@ thing that needs it, not because anything currently lives under it.
   164's checkpoint, unchanged; git push unaffected. Not re-texting
   Paul about it again — already flagged multiple times, nothing new
   to add.
+- 2026-09-28 ~15:42Z: fresh session, queue id 170, text channel, "try
+  Drive again." Tested directly (`get_drive_client()` + a plain
+  `files().list()` call) rather than just re-running the sync blind —
+  succeeded. Ran the full `drive_sync.py` checkpoint: 1 created (the
+  `books` project's `CLAUDE.md`, which had never made it to Drive
+  since the project was created mid-outage at queue id 164), 7
+  updated, 856 unchanged, 0 orphaned. Confirmed to Paul by SMS. Marked
+  the outage resolved in the TODO section above — was live since queue
+  id 164 (2026-09-27 ~15:31Z), so this closes a gap that spanned
+  queue ids 164-169 (six turns' worth of stale mirror, all already
+  correct on git, now caught up on Drive too). No project-file changes
+  this turn — pure infra retest, no pointer move (still `alliecar`).
