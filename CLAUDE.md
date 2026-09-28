@@ -1457,3 +1457,20 @@ thing that needs it, not because anything currently lives under it.
   164's checkpoint, unchanged across all three of this session's
   turns; git push unaffected throughout. Not re-texting Paul about it
   again — already flagged multiple times, nothing new to add.
+- 2026-09-28 ~13:0xZ: fresh session, queue id 169, text channel,
+  `alliecar` project, DE→MD→VA titling/tax question for the new
+  Forester (title signed to Christine, Allie will drive it in VA,
+  family lives in MD). Used `WebSearch` to check VA/MD DMV rules
+  rather than answer from memory given real tax dollars were at
+  stake: VA registration follows the resident driver (so leaving
+  title in Christine's — an MD resident, non-driver's — name and
+  having Allie "just register" in VA likely doesn't work); VA has a
+  genuine $0 parent-to-biological/adopted-child gift sales-tax
+  exemption (Form SUT3) that a $1 "sale" doesn't qualify for and
+  which VA could override with NADA book-value tax anyway. Replied
+  with two SMS recommending a true $0 gift for the Christine→Allie
+  leg, and flagged one genuinely unresolved question (whether MD
+  requires Christine to title there first before reassigning to
+  Allie) as worth a call to VA DMV rather than guessed at. Full
+  detail in `projects/alliecar/CLAUDE.md` Session 12. Pure research/
+  advisory — no code, no filings.
