@@ -184,7 +184,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+**Current project**: `projects/new-england/CLAUDE.md` — moved here
+2026-09-29 ~14:06Z (queue id 172, text, "I need to work a few hours
+on java plugins but later I would like to work on the New England
+Trip. Summarize where we are on that trip"). Paul named the trip
+explicitly. Replied by SMS with a status summary pulled from the
+project file: the current v3 6-stop outline with dates, and the four
+open items (busy/relaxed rebalance proposal still "sleep on it,"
+history-theme game concept still tabled, Airbnb booking is his to do,
+drive route/stopovers not yet planned). No new research this turn —
+pure read-and-summarize. `safehouse/general` folded back into the
+other-live-projects list below, not dropped — nothing outstanding on
+it.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — moved
 here 2026-09-29 ~14:04Z (queue id 171, text, "Good morning"). Plain
 conversational greeting, no topic named, so treated as the catch-all
 case per this file's own step-1 rule rather than guessed onto
