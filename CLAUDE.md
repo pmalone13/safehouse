@@ -1600,3 +1600,13 @@ thing that needs it, not because anything currently lives under it.
   list, two items still deferred to "tomorrow" per that entry).
   Re-sent the existing top-10 WWII list from queue id 161 verbatim, no
   new research needed. Logged in `projects/movies/CLAUDE.md`.
+- 2026-09-29 (same session, continued): Paul briefly raised a
+  history-theme idea for the new-england trip ("is there a possible
+  theme we could employ, specifically around history? let's table
+  until tomorrow") — logged as an open item with a quick head-start
+  note in `projects/new-england/CLAUDE.md`, no research done, pointer
+  left on `movies` since he immediately pivoted back with a movies
+  question. Then asked for a description of "Come and See" (from the
+  WWII list just re-sent) — answered from general film knowledge, no
+  WebSearch needed. Logged in `projects/movies/CLAUDE.md`. Current
+  project pointer unchanged (stayed `movies` throughout this exchange).
