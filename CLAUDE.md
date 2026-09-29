@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — moved here
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-09-29 (same interactive session), Paul explicitly named it:
+"topic: general -- using u like this is very helpful. Lovely in
+fact." Unprompted positive feedback on the standing conversational,
+multi-project assistant style — also saved as a feedback memory in
+the auto-memory system (`feedback_conversational_multiproject_value.md`)
+since it's a confirmation worth carrying across sessions, not just
+this repo. `movies` folded back into the other-live-projects list
+below, not dropped — nothing outstanding on it.
+
+Previous pointer, `projects/movies/CLAUDE.md` — moved here
 2026-09-29 (same interactive session as the `new-england` work, no
 queue id), Paul: "different topic: movies. can you relist the ten wwii
 movies." Re-sent the same list from queue id 161 (already on file, no
@@ -192,8 +202,9 @@ new research needed): Saving Private Ryan, Schindler's List, Come and
 See, Das Boot, The Pianist, Dunkirk, Band of Brothers, Grave of the
 Fireflies, The Bridge on the River Kwai, Inglourious Basterds.
 `new-england` folded back into the other-live-projects list below,
-not dropped — the busy/relaxed rebalance proposal and the housing
-research are both still open, explicitly deferred by Paul to "tomorrow."
+not dropped — the busy/relaxed rebalance proposal, housing research,
+and the history-theme game concept are all still open, deferred by
+Paul to "tomorrow."
 
 Previous pointer, `projects/new-england/CLAUDE.md` — created and
 moved here 2026-09-29 in a direct interactive terminal session (no
@@ -344,14 +355,10 @@ just because this pointer moved:**
   Paul created it by text (queue id 38): an open-ended "keep an eye
   out" search for a replacement tow vehicle (large SUV, capable of
   towing his 24-ft boat) for his aging 2004 Ford Expedition.
-- `projects/safehouse/general/CLAUDE.md` — the catch-all; the A2P/
-  texting build finished 2026-09-07 (both directions live, plus voice
-  transcription as of ~20:17Z the same day). Most recent addition
-  2026-09-19: a state-by-state conservative/liberal chart (Cook PVI),
-  delivered by email as a PNG attachment since this system has no way
-  to send an image over text (`send_sms`/`send_message` are both
-  text-only, no MMS/attachment support) — fully delivered, nothing
-  outstanding.
+- `projects/movies/CLAUDE.md` — see the previous-pointer note above
+  for the full writeup (top-10 WWII list re-sent, Come and See
+  description). Nothing outstanding was flagged when the pointer
+  moved to `safehouse/general`.
 - `projects/books/CLAUDE.md` — see the previous-pointer note above for
   the full writeup (Century Trilogy answer, queue id 164). Nothing
   outstanding was flagged when the pointer moved to `alliecar`.
@@ -1622,3 +1629,12 @@ thing that needs it, not because anything currently lives under it.
   seasonal-closure research is context not a blocker. Both saved to
   `projects/new-england/CLAUDE.md`. Pure research/writing, no code
   touched.
+- 2026-09-29 (same session, continued): Paul, topic "general" —
+  "using u like this is very helpful. Lovely in fact." Moved the
+  Current-project pointer here from `movies` (folded back into the
+  live-projects list, nothing outstanding). Saved this as a feedback
+  memory in the cross-session auto-memory system
+  (`feedback_conversational_multiproject_value.md`) since it's an
+  unprompted confirmation of the standing assistant style, worth
+  carrying beyond just this repo's own log. Logged in
+  `projects/safehouse/general/CLAUDE.md`.
