@@ -1610,3 +1610,15 @@ thing that needs it, not because anything currently lives under it.
   WWII list just re-sent) — answered from general film knowledge, no
   WebSearch needed. Logged in `projects/movies/CLAUDE.md`. Current
   project pointer unchanged (stayed `movies` throughout this exchange).
+- 2026-09-29 (same session, continued): two more new-england follow-ups
+  from Paul while pointer was on `movies` (not switched — brief asides
+  on the tabled topic, not a full pivot): (1) clarified the history
+  theme is a hidden throughline for Christine to guess, not overt
+  study; proposed two candidate threads (Colonial/Revolutionary-era
+  New England as the strong fit, maritime New England as backup),
+  both still tabled. (2) noted they'll discover open/closed status
+  real-time per town rather than needing it pre-confirmed — logged as
+  a standing planning philosophy: keep the outline skeleton-level, the
+  seasonal-closure research is context not a blocker. Both saved to
+  `projects/new-england/CLAUDE.md`. Pure research/writing, no code
+  touched.
