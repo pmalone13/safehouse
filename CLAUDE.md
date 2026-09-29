@@ -184,7 +184,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/alliecar/CLAUDE.md` — moved here
+**Current project**: `projects/new-england/CLAUDE.md` — created and
+moved here 2026-09-29 in a direct interactive terminal session (no
+queue id — same shape as the 2026-09-09 note below about this
+session type), Paul: "new project, like paris, this is a travel
+project for new england." New named project, so created
+`projects/new-england/CLAUDE.md`. No trip details given yet (dates,
+travelers, specific destinations, lodging) — asked Paul for those in
+the same session rather than guessing. `alliecar` folded back into
+the other-live-projects list below, not dropped — the title-status
+and service-record questions from Session 12/the 2014 Forester
+purchase are still open.
+
+Previous pointer, `projects/alliecar/CLAUDE.md` — moved here
 2026-09-27 ~22:33Z (queue id 166, text, "Just bought: 2014 Forester
 2.5i limited. 62k miles. Garage kept. $11k. What do u think"). Paul
 named the project explicitly ("Alliecar:" convention from prior
@@ -281,9 +293,16 @@ refreshed, `get_drive_client()` confirmed working, and a full
 unchanged, 0 orphaned). The 2026-09-08 outage is fully resolved as of
 this entry — Paul finished copying both tokens over.
 
-**Nine other projects remain simultaneously live — don't drop them
+**Ten other projects remain simultaneously live — don't drop them
 just because this pointer moved:**
 
+- `projects/alliecar/CLAUDE.md` — see the previous-pointer note above
+  for the full recent arc (2014 Forester 2.5i Limited purchase, queue
+  id 166). Two things still open as of Session 12: title-status
+  confirmation and oil-consumption/CVT service records, plus an
+  unresolved MD-titling question (does Christine need to title in MD
+  first before reassigning to Allie in VA) flagged to Paul, not yet
+  answered.
 - `projects/movies/CLAUDE.md` — see the previous-pointer note above
   for the full writeup (top-10 WWII list, queue id 161). Nothing
   outstanding was flagged when the pointer moved to `books`.
@@ -1505,3 +1524,11 @@ thing that needs it, not because anything currently lives under it.
   queue ids 164-169 (six turns' worth of stale mirror, all already
   correct on git, now caught up on Drive too). No project-file changes
   this turn — pure infra retest, no pointer move (still `alliecar`).
+- 2026-09-29: fresh direct interactive terminal session (no queue id),
+  Paul: "new project, like paris, this is a travel project for new
+  england." Created `projects/new-england/CLAUDE.md` and moved the
+  Current-project pointer here (`alliecar` folded back into the
+  other-live-projects list, two items still open there per that
+  entry). No trip facts given yet — asked Paul for dates, travelers,
+  and specific destinations rather than guessing, same posture as the
+  original `paris-september-2026`/`alliecar` project creations.
