@@ -1554,3 +1554,14 @@ thing that needs it, not because anything currently lives under it.
   Vermont (Vermont now likely past peak and thinning toward ski season
   by weeks 3-4). v1 kept in the project file for reference. Pure
   research/writing, no code touched.
+- 2026-09-29 (same session, continued): Paul asked to cut the
+  new-england outline down to 6 stops with more time each, based on
+  the season, still hitting good sights. Consolidated v2's 8 stops by
+  merging Manchester VT into a single Vermont stop (Stowe/central VT
+  chosen over Manchester for denser sights) and Bristol RI into
+  Newport as a day trip, keeping the same Acadia-2nd/work-south route
+  logic. ~10 days per stop now (60 of 66 days), ~6 days slack. Added a
+  per-stop "good sights" list and one new caveat (Portsmouth's
+  Mt. Washington day trip is weather-dependent that late). v1/v2
+  tables kept for reference in the project file. Pure research/
+  writing, no code touched.
