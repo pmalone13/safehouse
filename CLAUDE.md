@@ -1544,3 +1544,13 @@ thing that needs it, not because anything currently lives under it.
   in-session (no queue id, no SMS/email owed) and asked Paul to
   confirm/adjust before he does actual lodging research. Pure
   research/writing, no code touched.
+- 2026-09-29 (same session, continued): Paul: "yes, refactor with
+  Acadia first or 2nd, then work our way down." Revised the
+  `new-england` outline to v2 — Portland ME week 1, Acadia week 2 (the
+  natural driving order up the coast, satisfies "2nd"), then Vermont
+  Mountains/Manchester weeks 3-4, then Portsmouth/Salem/Bristol/Newport
+  unchanged from v1. Flagged honestly that this doesn't remove the
+  foliage/seasonal-closure tradeoff, it just shifts it from Acadia to
+  Vermont (Vermont now likely past peak and thinning toward ski season
+  by weeks 3-4). v1 kept in the project file for reference. Pure
+  research/writing, no code touched.
