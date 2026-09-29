@@ -1532,3 +1532,15 @@ thing that needs it, not because anything currently lives under it.
   entry). No trip facts given yet — asked Paul for dates, travelers,
   and specific destinations rather than guessing, same posture as the
   original `paris-september-2026`/`alliecar` project creations.
+- 2026-09-29 (same session as project creation): Paul followed up with
+  the full trip brief — driving trip w/ wife and dog Nala, Airbnbs,
+  ~week-long stays with day trips, fall-foliage focus, window
+  10/15-12/20ish, 8 candidate locations. Built a draft week-by-week
+  outline in `projects/new-england/CLAUDE.md` reasoning about foliage
+  timing (north-to-south peak progression) and seasonal closures
+  (Vermont ski towns / Bar Harbor-Acadia both thin out post-Columbus
+  Day) to sequence VT/ME first, coastal cities later, ending in
+  Newport for "Christmas at the Newport Mansions." Presented directly
+  in-session (no queue id, no SMS/email owed) and asked Paul to
+  confirm/adjust before he does actual lodging research. Pure
+  research/writing, no code touched.
