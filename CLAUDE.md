@@ -184,7 +184,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — created and
+**Current project**: `projects/movies/CLAUDE.md` — moved here
+2026-09-29 (same interactive session as the `new-england` work, no
+queue id), Paul: "different topic: movies. can you relist the ten wwii
+movies." Re-sent the same list from queue id 161 (already on file, no
+new research needed): Saving Private Ryan, Schindler's List, Come and
+See, Das Boot, The Pianist, Dunkirk, Band of Brothers, Grave of the
+Fireflies, The Bridge on the River Kwai, Inglourious Basterds.
+`new-england` folded back into the other-live-projects list below,
+not dropped — the busy/relaxed rebalance proposal and the housing
+research are both still open, explicitly deferred by Paul to "tomorrow."
+
+Previous pointer, `projects/new-england/CLAUDE.md` — created and
 moved here 2026-09-29 in a direct interactive terminal session (no
 queue id — same shape as the 2026-09-09 note below about this
 session type), Paul: "new project, like paris, this is a travel
@@ -303,9 +314,12 @@ just because this pointer moved:**
   unresolved MD-titling question (does Christine need to title in MD
   first before reassigning to Allie in VA) flagged to Paul, not yet
   answered.
-- `projects/movies/CLAUDE.md` — see the previous-pointer note above
-  for the full writeup (top-10 WWII list, queue id 161). Nothing
-  outstanding was flagged when the pointer moved to `books`.
+- `projects/new-england/CLAUDE.md` — see the previous-pointer note
+  above for the full recent arc (6-stop outline v3, busy/relaxed
+  seasonal-closure check, Airbnb budget research). Two things
+  explicitly deferred by Paul to "tomorrow": the busy/relaxed
+  rebalance proposal (trim Acadia/VT/Portsmouth, extend Salem/Newport)
+  and the actual lodging research.
 - `projects/paris-september-2026/CLAUDE.md` — the France trip, still
   in progress as of the last exchange (queue ids 149-150, 2026-09-23,
   a CDG-area hotel search ahead of a Friday flight home). See the
@@ -1580,3 +1594,9 @@ thing that needs it, not because anything currently lives under it.
   11,500 all-in for the trip), flagging the sources as host-analytics
   sites, not renter quotes. Both saved to the project file. Pure
   research, no code touched.
+- 2026-09-29 (same session, continued): Paul switched topics — "movies.
+  can you relist the ten wwii movies" — moved the Current-project
+  pointer here from `new-england` (folded back into the live-projects
+  list, two items still deferred to "tomorrow" per that entry).
+  Re-sent the existing top-10 WWII list from queue id 161 verbatim, no
+  new research needed. Logged in `projects/movies/CLAUDE.md`.
