@@ -184,8 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
-here 2026-09-29 (same interactive session), Paul explicitly named it:
+**Current project**: `projects/movies/CLAUDE.md` — moved here
+2026-09-29 (same interactive session), Paul: "topic movie: please
+describe that movie again." Ambiguous "that movie" — assumed Come and
+See (the last one discussed) since this is a continuous session; gave
+the same description again and asked him to say if he meant a
+different film. `safehouse/general` folded back into the
+other-live-projects list below, not dropped — nothing outstanding on
+it.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — moved here
+2026-09-29 (same interactive session), Paul explicitly named it:
 "topic: general -- using u like this is very helpful. Lovely in
 fact." Unprompted positive feedback on the standing conversational,
 multi-project assistant style — also saved as a feedback memory in
@@ -355,10 +364,9 @@ just because this pointer moved:**
   Paul created it by text (queue id 38): an open-ended "keep an eye
   out" search for a replacement tow vehicle (large SUV, capable of
   towing his 24-ft boat) for his aging 2004 Ford Expedition.
-- `projects/movies/CLAUDE.md` — see the previous-pointer note above
-  for the full writeup (top-10 WWII list re-sent, Come and See
-  description). Nothing outstanding was flagged when the pointer
-  moved to `safehouse/general`.
+- `projects/safehouse/general/CLAUDE.md` — the catch-all; see the
+  previous-pointer note above (positive feedback on the assistant
+  style, also saved as a cross-session memory). Nothing outstanding.
 - `projects/books/CLAUDE.md` — see the previous-pointer note above for
   the full writeup (Century Trilogy answer, queue id 164). Nothing
   outstanding was flagged when the pointer moved to `alliecar`.
@@ -1638,3 +1646,9 @@ thing that needs it, not because anything currently lives under it.
   unprompted confirmation of the standing assistant style, worth
   carrying beyond just this repo's own log. Logged in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-09-29 (same session, continued): Paul, "topic movie: please
+  describe that movie again" — moved the Current-project pointer back
+  to `movies` from `safehouse/general` (folded back into the live
+  list, nothing outstanding). Assumed "that movie" meant Come and See
+  (last discussed), re-sent the description, offered to correct if he
+  meant something else. Logged in `projects/movies/CLAUDE.md`.
