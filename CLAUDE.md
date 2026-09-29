@@ -1565,3 +1565,18 @@ thing that needs it, not because anything currently lives under it.
   Mt. Washington day trip is weather-dependent that late). v1/v2
   tables kept for reference in the project file. Pure research/
   writing, no code touched.
+- 2026-09-29 (same session, continued): Paul asked whether the 6-stop/
+  10-day-each plan would feel busy or relaxed. Verified real seasonal
+  closure dates via WebSearch (Stowe gondola, Smugglers' Notch Rd, Mt
+  Washington Auto Road/Cog Railway, Jordan Pond House) rather than
+  guessing — found Acadia/Vermont/Portsmouth will have more downtime
+  than planned since several headline attractions close right around
+  when he'd be there; proposed trimming those three and extending
+  Salem/Newport, deferred by Paul ("not yet, sleep on it"). Also asked
+  about Airbnb housing research (1BR/kitchenette, dog-friendly,
+  cheap) — answered honestly that live listing search isn't possible
+  (same JS-rendering gap as YouTube Shorts), but pulled typical
+  market-rate data via WebSearch for a budget ballpark (~$9,500-
+  11,500 all-in for the trip), flagging the sources as host-analytics
+  sites, not renter quotes. Both saved to the project file. Pure
+  research, no code touched.
