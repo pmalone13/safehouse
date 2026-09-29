@@ -184,7 +184,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — moved here
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-09-29 ~14:04Z (queue id 171, text, "Good morning"). Plain
+conversational greeting, no topic named, so treated as the catch-all
+case per this file's own step-1 rule rather than guessed onto
+`movies`. Replied by SMS with a friendly greeting plus a status note
+(nothing pending, last topic was movies/Come and See) and an open
+invitation. `movies` folded back into the other-live-projects list
+below, not dropped — nothing outstanding on it.
+
+Previous pointer, `projects/movies/CLAUDE.md` — moved here
 2026-09-29 (same interactive session), Paul: "topic movie: please
 describe that movie again." Ambiguous "that movie" — assumed Come and
 See (the last one discussed) since this is a continuous session; gave
