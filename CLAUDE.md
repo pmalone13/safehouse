@@ -1738,3 +1738,9 @@ thing that needs it, not because anything currently lives under it.
   avoiding Fri/Sat check-in at Newport during the Mansions event), and
   offered to dig deeper on a specific stop if wanted. No new research
   performed — advice drawn from facts already on file.
+- 2026-10-03 ~16:40Z: same session, queue id 175, text channel, "Let
+  me get computer so we can do some research." Plain status update,
+  no question asked — Paul switching to his computer, presumably for
+  the Airbnb research flagged in queue id 174. Replied by SMS with a
+  short acknowledgment ("standing by"). No pointer move (still
+  `new-england`), no research performed this turn.
