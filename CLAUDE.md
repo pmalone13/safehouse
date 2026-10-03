@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — moved here
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-10-03 ~16:32Z (queue id 173, text, "Hi"). Plain
+conversational greeting, no topic named, so treated as the catch-all
+case per this file's own step-1 rule rather than staying on
+`new-england`. Replied by SMS with a friendly greeting plus a status
+note (nothing pending, last topic was new-england trip planning, same
+open items as that project's file). `new-england` folded back into
+the other-live-projects list below, not dropped — nothing new since
+queue id 172's summary.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — moved here
 2026-09-29 ~14:06Z (queue id 172, text, "I need to work a few hours
 on java plugins but later I would like to work on the New England
 Trip. Summarize where we are on that trip"). Paul named the trip
@@ -1689,3 +1699,11 @@ thing that needs it, not because anything currently lives under it.
   working tree confirmed clean at this wrap-up, so this Test Log entry
   is the only change this turn makes. No Drive outage this session —
   both syncs ran clean.
+- 2026-10-03 ~16:32Z: fresh session, queue id 173, text channel, "Hi."
+  Same shape as queue id 171 — plain greeting, no topic named, so
+  moved the Current-project pointer to `safehouse/general` per the
+  standing catch-all rule (`new-england` folded back into the
+  other-live-projects list, nothing new since queue id 172's
+  summary). Replied by SMS with a greeting plus a status note
+  (nothing pending, last topic was new-england trip planning, same
+  open items as that project's file). No other action needed.
