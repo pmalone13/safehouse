@@ -184,7 +184,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+**Current project**: `projects/new-england/CLAUDE.md` — moved here
+2026-10-03 ~16:37Z (queue id 174, text, "I've been sick several days.
+On ne trip, we will do the riches tour. I will book places next week.
+Housing Prices are ok but would like to be lower. Seems like air BNB
+is best option."). Paul named the trip explicitly ("ne trip"). "The
+riches tour" decodes as theme #3 ("How New England got rich") from
+that project's 2026-09-30 three-theme research — now locked as an
+actual decision, not the working assumption it was before. Replied by
+SMS acknowledging his health, confirming the theme lock, and giving
+three concrete tips for lowering the Airbnb cost he flagged as a
+concern. `safehouse/general` folded back into the other-live-projects
+list below, not dropped — nothing outstanding on it.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — moved
 here 2026-10-03 ~16:32Z (queue id 173, text, "Hi"). Plain
 conversational greeting, no topic named, so treated as the catch-all
 case per this file's own step-1 rule rather than staying on
@@ -1707,3 +1720,21 @@ thing that needs it, not because anything currently lives under it.
   summary). Replied by SMS with a greeting plus a status note
   (nothing pending, last topic was new-england trip planning, same
   open items as that project's file). No other action needed.
+- 2026-10-03 ~16:37Z: same session, queue id 174, text channel, "I've
+  been sick several days. On ne trip, we will do the riches tour. I
+  will book places next week. Housing Prices are ok but would like to
+  be lower. Seems like air BNB is best option." Moved the
+  Current-project pointer to `new-england` (Paul named the trip).
+  Decoded "the riches tour" as theme #3 ("How New England got rich")
+  from that project's own 2026-09-30 research — read against the
+  project file rather than guessed cold, since "riches tour" isn't a
+  phrase used verbatim anywhere until now. Marked the theme decision
+  resolved in that file's open-items list (previously just a "working
+  assumption"). Logged the booking timeline (next week), the platform
+  confirmation (Airbnb), and the soft price concern. Replied by SMS:
+  acknowledged his health, confirmed the theme lock, gave three
+  concrete tips for lowering Airbnb cost (weekly-discount check given
+  the 7-14 night stays, shifting check-in off hard week boundaries,
+  avoiding Fri/Sat check-in at Newport during the Mansions event), and
+  offered to dig deeper on a specific stop if wanted. No new research
+  performed — advice drawn from facts already on file.
