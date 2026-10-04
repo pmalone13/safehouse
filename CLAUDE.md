@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — moved here
+**Current project**: `projects/new-england/CLAUDE.md` — moved here
+2026-10-04, same interactive session, Paul: "change to topic New
+England trip." Plain topic switch, no new facts given — read the
+project file and replied in-session with a quick status recap (theme
+#3/"riches tour" locked, v4 6-stop outline set, Airbnb confirmed,
+booking planned "next week," the three cost-lowering tips already
+given, drive-route/stopovers still unplanned) rather than waiting for
+him to re-ask. `movies` folded back into the other-live-projects list
+below, not dropped — nothing outstanding on it.
+
+Previous pointer, `projects/movies/CLAUDE.md` — moved here
 2026-10-04, same interactive session, Paul: "list clooney movies in
 order in which he stared." Clooney had come up two turns earlier in a
 `safehouse/general` best-looking-actors list; this ask is squarely
