@@ -184,7 +184,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — moved here
+**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+here 2026-10-04, interactive session, Paul: "topic general: who, in
+your opinion is the best looking, today, US male actor born from 1962
+to 1965. give me a top ten list." Topic explicitly named. Pure opinion/
+general-knowledge ask, answered directly with a ranked top-ten list
+(Brad Pitt, Rob Lowe, John Stamos, Johnny Depp, Tom Cruise, Matt
+Dillon, Dermot Mulroney, Nicolas Cage, William Baldwin, Charlie Sheen),
+framed explicitly as subjective. `new-england` folded back into the
+other-live-projects list below, not dropped — nothing new since the
+2026-10-03 theme-lock/Airbnb-tips exchange.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — moved here
 2026-10-03 ~16:37Z (queue id 174, text, "I've been sick several days.
 On ne trip, we will do the riches tour. I will book places next week.
 Housing Prices are ok but would like to be lower. Seems like air BNB
