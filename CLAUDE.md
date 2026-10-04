@@ -184,14 +184,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — moved
+**Current project**: `projects/movies/CLAUDE.md` — moved here
+2026-10-04, same interactive session, Paul: "list clooney movies in
+order in which he stared." Clooney had come up two turns earlier in a
+`safehouse/general` best-looking-actors list; this ask is squarely
+movie content, not conversational, so moved here rather than treating
+it as general. Used `WebSearch` to get the chronology and years right
+(filmography facts are checkable, unlike the opinion lists), cross-
+referenced two searches against each other to catch one bad/
+uncorroborated result, and gave the full chronological filmography
+with sources plus a callout for three director-only (non-acting)
+titles. `safehouse/general` folded back into the other-live-projects
+list below, not dropped — nothing outstanding on it.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — moved
 here 2026-10-04, interactive session, Paul: "topic general: who, in
 your opinion is the best looking, today, US male actor born from 1962
 to 1965. give me a top ten list." Topic explicitly named. Pure opinion/
 general-knowledge ask, answered directly with a ranked top-ten list
 (Brad Pitt, Rob Lowe, John Stamos, Johnny Depp, Tom Cruise, Matt
 Dillon, Dermot Mulroney, Nicolas Cage, William Baldwin, Charlie Sheen),
-framed explicitly as subjective. `new-england` folded back into the
+framed explicitly as subjective. Followed up same session by widening
+the range to birth years 1959-1966 (Paul: "expand the age from 59 to
+66," then clarified "1959 to 1966" before the clarifying question even
+returned) — revised list: Val Kilmer, George Clooney, Brad Pitt, Rob
+Lowe, John Stamos, Patrick Dempsey, David Duchovny, Johnny Depp, Tom
+Cruise, Matthew Fox. `new-england` folded back into the
 other-live-projects list below, not dropped — nothing new since the
 2026-10-03 theme-lock/Airbnb-tips exchange.
 
