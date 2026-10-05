@@ -1889,3 +1889,15 @@ thing that needs it, not because anything currently lives under it.
   ~19:23Z, see TODO section); git push unaffected. Not re-texting Paul
   about it again this turn — already flagged once this session,
   nothing new to add.
+- 2026-10-05 ~19:5xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 177, the Newport-date
+  workbook correction, already fully handled, logged, committed, and
+  pushed (`bc5fe88`, plus a same-session Test Log correction at
+  `a03ca26` after the first drive_sync retry turned out to still be
+  failing) before this wrap-up fired. Working tree confirmed clean at
+  wrap-up, so this entry is the only change this turn makes.
+  Re-tried `drive_sync.py` once more here — still the identical
+  `invalid_grant` failure, unchanged since this session's first
+  checkpoint (2026-10-05 ~19:23Z, queue id 176); git push unaffected
+  throughout. Not re-texting Paul again — already flagged twice this
+  session, nothing new to add.
