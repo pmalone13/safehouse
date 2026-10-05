@@ -1883,5 +1883,9 @@ thing that needs it, not because anything currently lives under it.
   `projects/new-england/CLAUDE.md` logged under a new "Workbook
   correction: Newport dates" section; root Current-project pointer
   note rewritten to point at this turn (old note moved to "Previous
-  pointer note," same project, not dropped). No Drive outage this
-  turn — sync ran as part of this checkpoint.
+  pointer note," same project, not dropped). Drive sync retried as
+  part of this checkpoint — **still the same `invalid_grant` failure**
+  first flagged at this session's prior checkpoint (2026-10-05
+  ~19:23Z, see TODO section); git push unaffected. Not re-texting Paul
+  about it again this turn — already flagged once this session,
+  nothing new to add.
