@@ -566,6 +566,20 @@ the pending `/sms-optin` build still live there.
   project pointer note above) — now actually explained rather than
   just "not built."
 
+- **Drive down again, `invalid_grant`, discovered 2026-10-05 ~19:23Z**
+  (this turn's checkpoint, queue id 176). Same error shape as every
+  prior Drive-only outage: Gmail unaffected (used successfully this
+  same turn to send the NE-trip workbook email, and its own token
+  refreshed cleanly at 18:28Z today); Drive's token
+  (`.drive_api_token.json`) last refreshed 2026-10-04 17:39 — under
+  26h before this failure, so neither the old 7-day-cap theory nor
+  the "just refreshed" pattern from the 2026-09-27 event cleanly
+  explains the timing; still an open question. Git push succeeded
+  fine, only the Drive mirror is stale as of this entry. Texted Paul
+  rather than silently retrying. Same fix as always if/when he
+  re-authorizes: `authorize_drive_once.py` on a machine with a
+  browser, `scp` the resulting token to this VM.
+
 - ~~Drive down again, `invalid_grant`, discovered 2026-09-27 ~15:31Z~~
   **RESOLVED 2026-09-28 ~15:42Z.** Discovered at queue id 164's
   checkpoint (2026-09-27 ~15:31Z). Same error shape as the 2026-09-16
