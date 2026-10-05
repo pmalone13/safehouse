@@ -184,7 +184,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — moved here
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 177,
+2026-10-05 ~19:38Z, email, Paul: "Dates and locations are correct in
+this picture. Can you please update excel for these names and
+dates," with a screenshot of his Airbnb trip view attached. Diffed
+the 6 reservation cards in the screenshot against the workbook sent
+that morning (queue id 176): 5 stops matched, Newport didn't — real
+dates are Nov 22-Dec 3 (11 nights), not 11/27-12/11 (14 nights),
+which also closes the 5-night Salem->Newport gap flagged that
+morning (now resolved, not a question). Renamed the Summary sheet's
+stop names to the short Airbnb names (Portland, Bar Harbor, Dorset,
+Eliot, Salem, Newport). Couldn't carry forward a cost for the
+corrected Newport stay (old $5,177 was priced for 14 nights) — left
+"TBD - confirm" and asked Paul for the real number rather than guess.
+Rebuilt the same one-off `/tmp/ne_work/build_workbook.py` script from
+that morning (edited in place, still not committed — a generated
+deliverable, not a repo feature) and emailed the corrected workbook
+back in the same thread. See that project's new "Workbook correction:
+Newport dates" section for full detail. Treated as the same class of
+one-off task as the original xlsx build (not "application code" under
+the hard boundary) since no new permanent script or system feature
+was added.
+
+Previous pointer note, same `new-england` project — moved here
 2026-10-04, same interactive session, Paul: "change to topic New
 England trip." Plain topic switch, no new facts given — read the
 project file and replied in-session with a quick status recap (theme
@@ -1842,3 +1864,24 @@ thing that needs it, not because anything currently lives under it.
   `WebFetch`/`git-filter-repo`/ad-hoc Twilio Media API calls), not as
   "writing application code" under the hard boundary — no new
   permanent script or feature was added to the repo itself.
+- 2026-10-05 ~19:4xZ: fresh session, queue id 177, email channel, Paul
+  replied to the workbook with an Airbnb trip-view screenshot: "Dates
+  and locations are correct in this picture. Can you please update
+  excel for these names and dates." Downloaded the attachment via
+  `get_message_detail`/`download_attachment` and read it directly
+  (image Read tool) rather than guess at its contents. Diffed all 6
+  cards against the workbook sent hours earlier: 5 stops matched
+  exactly, Newport didn't — real dates Nov 22-Dec 3 (11 nights), not
+  11/27-12/11 (14 nights), which also resolves the 5-night Salem-
+  Newport gap flagged that morning (not a question anymore, just
+  wrong in the original spreadsheet). Edited the same
+  `/tmp/ne_work/build_workbook.py` in place (short Airbnb-style stop
+  names on the Summary sheet, corrected Newport dates/nights, cost
+  left "TBD - confirm" since the old $5,177 was priced for the wrong
+  night count and no new figure was given), reran it, emailed the
+  corrected `NE_Trip_Planner.xlsx` back in the same Gmail thread.
+  `projects/new-england/CLAUDE.md` logged under a new "Workbook
+  correction: Newport dates" section; root Current-project pointer
+  note rewritten to point at this turn (old note moved to "Previous
+  pointer note," same project, not dropped). No Drive outage this
+  turn — sync ran as part of this checkpoint.
