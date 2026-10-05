@@ -1793,3 +1793,38 @@ thing that needs it, not because anything currently lives under it.
   `ec8763f`); working tree confirmed clean at this wrap-up, so this
   Test Log entry is the only change this turn makes. No Drive outage
   this session — all three syncs ran clean.
+- 2026-10-05 ~19:1xZ: fresh session, queue id 176, email channel,
+  subject "project: NE Trip" — Paul attached his actual booked
+  Airbnb reservations (`ne_planner.xlsx`) and asked for a reformat: a
+  "Summary" sheet matching his basics table, plus one narrative
+  worksheet per stop with things-to-see/do and URL links, audience
+  "friends that may visit us at these locations," emailed back.
+  Pointer already on `new-england` (Paul named the trip), no move
+  needed. Downloaded the attachment via `get_message_detail`/
+  `download_attachment`, read it with `openpyxl` (installed into
+  `venv/` for this one-off task, same precedent as `git-filter-repo`
+  on 2026-09-23) — found the real booked dates/addresses/costs, which
+  differ from the planning-outline assumptions in two ways: the
+  Vermont stop is actually **Dorset**, not Stowe (different area,
+  different sights — the project's existing Vermont research doesn't
+  apply), and there's an **unexplained 5-night gap** between Salem
+  (ends 11/22) and Newport (starts 11/27). Ran `WebSearch` to confirm
+  real, mostly-official URLs (NPS, museum sites, Preservation Society
+  of Newport County, etc.) for each stop's attractions before writing
+  the narrative content. Built the new workbook with a one-off
+  `openpyxl` script at `/tmp/ne_work/build_workbook.py` (not committed
+  — a generated deliverable, not a safehouse system feature) and
+  emailed it back to `pmalone13@gmail.com` as an attachment —
+  `google_client.send_message()` doesn't support attachments, so
+  built the MIME message with `EmailMessage.add_attachment()` and
+  sent it directly via the already-authorized Gmail service in the
+  same one-off script shape, rather than modifying that shared
+  function. Flagged both discrepancies (Dorset-not-Stowe, the Salem-
+  Newport gap) plus the Eliot/Portsmouth address note in the reply
+  body rather than silently smoothing them over. Full detail in
+  `projects/new-england/CLAUDE.md`'s new "Booked trip & friends-facing
+  workbook" section. Treated the xlsx-generation and direct-Gmail-API
+  send as one-off task execution (same class as past uses of
+  `WebFetch`/`git-filter-repo`/ad-hoc Twilio Media API calls), not as
+  "writing application code" under the hard boundary — no new
+  permanent script or feature was added to the repo itself.
