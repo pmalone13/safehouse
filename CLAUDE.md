@@ -184,10 +184,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 177,
-2026-10-05 ~19:38Z, email, Paul: "Dates and locations are correct in
-this picture. Can you please update excel for these names and
-dates," with a screenshot of his Airbnb trip view attached. Diffed
+**Current project**: `projects/boating/CLAUDE.md` — queue id 178,
+2026-10-06 ~21:4xZ, text, Paul: `Project "boating". What is Mr current
+tide at this location`. New named project, so created
+`projects/boating/CLAUDE.md`. No location was given for the tide
+question — "this location" implies one he has in mind, but nothing
+was named in the text and there's no attached GPS data to fall back
+on. Tide times/heights are per-harbor (NOAA Tides & Currents stations),
+so guessing would likely be wrong. Replied by SMS asking him to name
+the location (marina/town, or coordinates) before doing the lookup.
+Noted a possible tie to the 24-ft boat referenced in
+`projects/suv-replacement/CLAUDE.md` (not confirmed, just the only
+existing reference point). `new-england` folded back into the
+other-live-projects list below, not dropped — nothing new since queue
+id 177.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — moved here queue
+id 177, 2026-10-05 ~19:38Z, email, Paul: "Dates and locations are
+correct in this picture. Can you please update excel for these names
+and dates," with a screenshot of his Airbnb trip view attached. Diffed
 the 6 reservation cards in the screenshot against the workbook sent
 that morning (queue id 176): 5 stops matched, Newport didn't — real
 dates are Nov 22-Dec 3 (11 nights), not 11/27-12/11 (14 nights),
@@ -1901,3 +1916,14 @@ thing that needs it, not because anything currently lives under it.
   checkpoint (2026-10-05 ~19:23Z, queue id 176); git push unaffected
   throughout. Not re-texting Paul again — already flagged twice this
   session, nothing new to add.
+- 2026-10-06 ~21:4xZ: fresh session, queue id 178, text channel,
+  `Project "boating". What is Mr current tide at this location`.
+  New named project ("boating"), so created
+  `projects/boating/CLAUDE.md` and moved the Current-project pointer
+  here (`new-england` folded back into the live-projects list,
+  nothing new since queue id 177). No location was named in the text
+  — "this location" implies Paul has one in mind, but tide data is
+  per-harbor (NOAA Tides & Currents stations), so a lookup without a
+  named spot would likely be wrong. Replied by SMS asking him to name
+  the location rather than guess. No WebSearch/WebFetch performed
+  this turn — nothing to look up yet.
