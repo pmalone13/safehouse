@@ -184,7 +184,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/boating/CLAUDE.md` — queue id 178,
+**Current project**: `projects/boating/CLAUDE.md` — queue id 179,
+2026-10-06 ~21:51Z, text, Paul: "At location I sent." He had sent a
+location, but as a picture MMS the webhook doesn't forward (image
+MMS land with empty body and get dropped — same known gap as the
+Paris-trip photos, e.g. queue ids 65/77/83; only audio MMS
+auto-transcribe). Fetched it directly via the Twilio Media API: a
+marine GPS screen reading N 38°38.397' W076°24.088' (38.6400,
+-76.4015), mid-Chesapeake Bay off Calvert County, MD, between
+Chesapeake Beach and Plum Point. Pulled real tide predictions from
+NOAA's own CO-OPS API for the nearest station (Chesapeake Beach, MD,
+8576363, ~8mi away): falling/ebb tide at message time, ~0.6ft and
+dropping toward a 7:19pm EDT low (0.50ft), last high 1:03pm (1.28ft).
+Replied by SMS with the reading, tide state, and the ~8mi-estimate
+caveat. Full detail (including why the ~0.6ft figure is an
+interpolation, not a station-reported value) in
+`projects/boating/CLAUDE.md`.
+
+Previous pointer note, same `boating` project — queue id 178,
 2026-10-06 ~21:4xZ, text, Paul: `Project "boating". What is Mr current
 tide at this location`. New named project, so created
 `projects/boating/CLAUDE.md`. No location was given for the tide
@@ -1931,3 +1948,26 @@ thing that needs it, not because anything currently lives under it.
   flagged 2026-10-05 (queue id 176); git push unaffected. Not
   re-texting Paul about it again — already flagged multiple times,
   nothing new to add.
+- 2026-10-06 ~21:51Z: same session, queue id 179, text, "At location I
+  sent." He had sent an image MMS at 21:49:12Z that the webhook
+  silently dropped (same known image-MMS gap as queue ids 65/77/83) —
+  fetched it directly via the Twilio Media API (`Messages/{sid}/
+  Media.json` then the media URI itself, both with the standard
+  Basic-Auth) and read it with the Read tool: a marine GPS/
+  chartplotter screen reading N 38°38.397' W076°24.088'. Converted to
+  decimal (38.6400, -76.4015) and used `WebSearch` to place it
+  (mid-Chesapeake Bay off Calvert County, MD, between Chesapeake Beach
+  and Plum Point — open water, no exact place name) and to find the
+  nearest NOAA tide-prediction station (Chesapeake Beach, MD,
+  8576363). Pulled real predictions straight from NOAA's own CO-OPS
+  API via `curl` (confirmed this VM has real outbound internet access
+  beyond just the WebFetch/WebSearch tools — worth remembering for
+  future turns that need a specific public API rather than a search
+  summary): falling/ebb tide at message time (~5:51pm EDT), last high
+  1:03pm (1.28ft MLLW), next low 7:19pm (0.50ft). Replied by SMS with
+  the location, tide state, and an explicit ~8mi-estimate caveat
+  rather than presenting it as exact for his precise position. Full
+  detail in `projects/boating/CLAUDE.md`. Noticed in passing (checking
+  the raw Twilio log for the missing MMS) that a third text, "I'm out
+  fishing," had also arrived — not acted on here, it's its own queue
+  item.
