@@ -1971,3 +1971,9 @@ thing that needs it, not because anything currently lives under it.
   the raw Twilio log for the missing MMS) that a third text, "I'm out
   fishing," had also arrived — not acted on here, it's its own queue
   item.
+- 2026-10-06 ~21:51Z: same session, queue id 180, text, "I'm out
+  fishing." The third message already noticed in passing at queue id
+  179's checkpoint. Plain status update, no question — replied with a
+  short friendly acknowledgment plus an open offer for a later tide/
+  next-high-low check, since he's actually out on the water and might
+  want a follow-up reading. No pointer move (still `boating`).
