@@ -197,6 +197,18 @@ guessed, same posture as every other project's initial creation.
 `boating` folded back into the other-live-projects list below, not
 dropped — nothing new since queue id 180.
 
+Same turn, queue id 182, text, "Need to book a visits to test drive
+the Hyundai and the Kia. Tomorrow in Annapolis Maryland are there
+dealers I can go and test drive. I'd like to test drive one or
+2-year-old models." Used `WebSearch` to find real dealers (Annapolis
+Hyundai in Edgewater; Johnson Kia Annapolis and Fitzgerald Kia of
+Annapolis, both actually in Annapolis on West St.) rather than guess
+names — gave names/addresses/phones by SMS and flagged that this
+system can't place calls to book anything (SMS/email only), so Paul
+needs to call himself, plus a heads-up to confirm used 1-2yr-old
+Palisade/Telluride stock is actually on the lot before driving out.
+Full detail in `projects/chris-car/CLAUDE.md`.
+
 Previous pointer, `projects/boating/CLAUDE.md` — queue id 179,
 2026-10-06 ~21:51Z, text, Paul: "At location I sent." He had sent a
 location, but as a picture MMS the webhook doesn't forward (image
