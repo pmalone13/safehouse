@@ -1926,4 +1926,8 @@ thing that needs it, not because anything currently lives under it.
   per-harbor (NOAA Tides & Currents stations), so a lookup without a
   named spot would likely be wrong. Replied by SMS asking him to name
   the location rather than guess. No WebSearch/WebFetch performed
-  this turn — nothing to look up yet.
+  this turn — nothing to look up yet. Drive sync retried as part of
+  this checkpoint — still the same `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176); git push unaffected. Not
+  re-texting Paul about it again — already flagged multiple times,
+  nothing new to add.
