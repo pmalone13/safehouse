@@ -184,7 +184,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/chris-car/CLAUDE.md` — queue id 181,
+**Current project**: `projects/dinner/CLAUDE.md` — queue id 183,
+2026-10-06 ~23:35Z, text, Paul: "Project dinner. Ok got chicken
+sausages onion garlic cilantro pepper. Egg noodle. All spices you
+could want. Dinner me." New named project, so created
+`projects/dinner/CLAUDE.md`. Gave a one-pan skillet recipe built from
+his on-hand ingredients (seared chicken sausage, sautéed onion/garlic,
+tossed with boiled egg noodles, smoked paprika + cumin + black pepper
++ chili flake, finished with fresh cilantro) by SMS. `chris-car` folded
+back into the other-live-projects list below, not dropped — the dealer
+visit tomorrow and the open items (who Chris is, Volvo trade-in
+details, budget, timeline) are still unanswered.
+
+Previous pointer, `projects/chris-car/CLAUDE.md` — queue id 181,
 2026-10-06 ~22:04Z, text, Paul: "New project: Chris car. Will trade in
 Volvo for Hyundai palisade or Kia telluride." New named project, so
 created `projects/chris-car/CLAUDE.md`. Pulled a quick Palisade-vs-
