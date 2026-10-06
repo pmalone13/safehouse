@@ -184,7 +184,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/boating/CLAUDE.md` — queue id 179,
+**Current project**: `projects/chris-car/CLAUDE.md` — queue id 181,
+2026-10-06 ~22:04Z, text, Paul: "New project: Chris car. Will trade in
+Volvo for Hyundai palisade or Kia telluride." New named project, so
+created `projects/chris-car/CLAUDE.md`. Pulled a quick Palisade-vs-
+Telluride comparison via `WebSearch` (base MSRP, real-world TrueCar
+averages, key differentiators) rather than answer from stale memory,
+and replied by SMS with that plus a list of open items (who Chris is,
+Volvo trade-in details, new/used target, budget, timeline,
+must-haves) — none of which were given yet, so asked rather than
+guessed, same posture as every other project's initial creation.
+`boating` folded back into the other-live-projects list below, not
+dropped — nothing new since queue id 180.
+
+Previous pointer, `projects/boating/CLAUDE.md` — queue id 179,
 2026-10-06 ~21:51Z, text, Paul: "At location I sent." He had sent a
 location, but as a picture MMS the webhook doesn't forward (image
 MMS land with empty body and get dropped — same known gap as the
