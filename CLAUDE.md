@@ -184,7 +184,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+188, 2026-10-07 ~23:10Z, text, Paul: "General: Is there an MVA in MD
+that will print actual car title when registering." Paul explicitly
+named the topic ("General:"), so moved the pointer here from
+`suv-replacement` (folded back into the other-live-projects list,
+nothing new since queue id 187). Likely motivated by the still-open
+MD-titling question in `projects/alliecar/CLAUDE.md` Session 12
+(whether Christine needs to title the 2014 Forester in MD before
+reassigning to Allie in VA) — cross-referenced in both files rather
+than treated as unrelated. Used `WebSearch`: standard MD MVA
+registration mails the title (often a few weeks), not printed on the
+spot; full-service branches can do same-day title printing/pickup by
+appointment; licensed third-party MVA agents (AAA, MD Express Tag &
+Title, MD Speedy Tags) routinely guarantee same-day on-site printing
+for a fee. Replied by SMS with that summary and a call-ahead
+recommendation. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 187, 2026-10-07 ~21:30Z, text, Paul: "New project my car: my Ford
 expedition 2004 with 105,000 mi on it failed Maryland inspection with
 a body work issue and a back brake rotor... Can you look around for
@@ -2198,3 +2215,17 @@ thing that needs it, not because anything currently lives under it.
   (queue id 176), unchanged across queue ids 176-187; git push
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times, nothing new to add.
+- 2026-10-07 ~23:1xZ: fresh session, queue id 188, text channel,
+  "General: Is there an MVA in MD that will print actual car title
+  when registering." Paul named the topic explicitly, so moved the
+  Current-project pointer to `safehouse/general` from
+  `suv-replacement` (folded back into the live-projects list, nothing
+  new since queue id 187). Used `WebSearch` rather than guess: regular
+  MD MVA registration mails the title (weeks), full-service branches
+  can do same-day printing by appointment, and licensed third-party
+  MVA agents (AAA, MD Express Tag & Title, MD Speedy Tags) routinely
+  guarantee same-day on-site printing for a fee. Replied by SMS.
+  Cross-referenced the likely motivation — the still-open MD-titling
+  question in `projects/alliecar/CLAUDE.md` Session 12 — in both
+  project files. Re-tried `drive_sync.py` as part of this checkpoint;
+  see this entry's own commit for the result.
