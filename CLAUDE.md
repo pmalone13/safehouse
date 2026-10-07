@@ -2085,3 +2085,28 @@ thing that needs it, not because anything currently lives under it.
   not a new/different failure mode. Git push unaffected throughout.
   Not re-texting Paul about it again — already flagged multiple times
   this week, nothing new to add.
+- 2026-10-07 ~13:55Z: fresh session, queue id 185, text channel,
+  "Chris car: what is trade in value for 2017 Volvo c90. Not hybrid.
+  75k miles." Current-project pointer was already `chris-car`, no
+  move needed. Caught that Volvo has no "C90" model and assumed XC90
+  (the "not hybrid" note matches XC90's T8 hybrid trim exactly) —
+  flagged the assumption rather than silently guessing. Pulled real
+  KBB trade-in figures via `WebSearch`: ~$8,200-$10,100 for non-hybrid
+  T5/T6 trims at ~75k miles, condition-dependent. First SMS send
+  attempt had the dollar amounts stripped out by a bash
+  variable-expansion bug (`$8` etc. inside a double-quoted `python -c`
+  string got swallowed as a shell positional-parameter expansion) —
+  caught immediately from the echoed Twilio response body, fixed by
+  writing the send to a temp script file instead, resent correctly.
+  Full figures in `projects/chris-car/CLAUDE.md`. Re-tried
+  `drive_sync.py` — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged across queue ids
+  176-185; git push unaffected (nothing to push this turn — only the
+  gitignored project file changed). Not re-texting Paul about the
+  Drive outage again — already flagged multiple times, nothing new to
+  add. **Lesson for future turns**: when sending SMS bodies containing
+  `$` via a bash `python -c "..."` one-liner inside double quotes,
+  either escape every `$` as `\$` correctly or (safer) write the
+  script to a file first and run that — a double-quoted heredoc/`-c`
+  string lets bash's own variable expansion silently eat `$digit`
+  sequences before Python ever sees them.
