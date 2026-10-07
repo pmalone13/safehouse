@@ -2129,3 +2129,17 @@ thing that needs it, not because anything currently lives under it.
   needed this entry (identical ongoing `invalid_grant` failure first
   flagged 2026-10-05, nothing new to add); git push carries this
   entry's own root-file change.
+- 2026-10-07 ~14:1xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session, queue ids 185-186, both
+  `chris-car`, both already committed/pushed individually (`8c7cf99`,
+  `f48bc18`) before this wrap-up fired: the Volvo trade-in lookup that
+  first assumed XC90 (185, also catching and fixing a bash
+  dollar-sign-stripping bug in the SMS send), then Paul's one-word
+  correction "S90" (186) that re-ran the lookup for the right model
+  and applied the prior turn's escaping lesson cleanly. Working tree
+  confirmed clean at this wrap-up, so this Test Log entry is the only
+  change this turn makes. Re-tried `drive_sync.py` — still the
+  identical `invalid_grant` failure first flagged 2026-10-05 (queue id
+  176), unchanged across queue ids 176-186; git push unaffected
+  throughout. Not re-texting Paul about it again — already flagged
+  multiple times, nothing new to add.
