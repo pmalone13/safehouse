@@ -2110,3 +2110,22 @@ thing that needs it, not because anything currently lives under it.
   script to a file first and run that — a double-quoted heredoc/`-c`
   string lets bash's own variable expansion silently eat `$digit`
   sequences before Python ever sees them.
+- 2026-10-07 ~13:58Z: same session, queue id 186, text channel, "S90."
+  Paul correcting queue id 185's XC90 guess — the car is actually the
+  **S90 sedan** (which, same as XC90, has a T8 plug-in-hybrid trim, so
+  "not hybrid" alone couldn't have disambiguated the two). Current-
+  project pointer stayed on `chris-car`, no move needed. Re-ran
+  `WebSearch` for the correct model: KBB/CarMax trade-in for a 2017
+  S90 non-hybrid (T5/T6) at ~75k miles runs roughly $9,150-$12,300
+  depending on trim/condition, with CarMax's real recent trade-in
+  offers at similar mileage (~73k) landing around $10,000 — called
+  that out as the most useful single number. Replied by SMS, applying
+  the lesson from queue id 185 immediately: wrote straight to a temp
+  script file from the start rather than a bash `-c` one-liner, so no
+  repeat of the dollar-sign-stripping bug. Updated
+  `projects/chris-car/CLAUDE.md`'s "Volvo trade-in value" section with
+  the corrected figures (XC90 numbers kept, marked superseded, not
+  deleted — explains the Log's own history). No Drive outage check
+  needed this entry (identical ongoing `invalid_grant` failure first
+  flagged 2026-10-05, nothing new to add); git push carries this
+  entry's own root-file change.
