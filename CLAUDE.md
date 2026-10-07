@@ -184,7 +184,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/chris-car/CLAUDE.md` — queue id 184,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+187, 2026-10-07 ~21:30Z, text, Paul: "New project my car: my Ford
+expedition 2004 with 105,000 mi on it failed Maryland inspection with
+a body work issue and a back brake rotor... Can you look around for
+a used Eddie Bauer Ford expedition 2006 to 2010 ish with less than
+100,000 mi on it anywhere in Maryland?" Paul called this "new
+project my car," but it's the same 2004 Expedition Eddie Bauer and
+the same open-ended replacement search already tracked under
+`suv-replacement` since 2026-09-08 — kept it as one project rather
+than creating a duplicate `projects/my-car/`, flagged that merge
+decision to Paul by SMS with an offer to split if he'd rather. The
+real news is the failed MD inspection, which turns "keep an eye out,
+no rush" into an active search. Ran `WebSearch`/`WebFetch` (cars.com,
+CarGurus) for 2006-2010 Eddie Bauer Expeditions under 100k mi near
+Maryland — results were thin and the live-dealer-inventory search
+limitation from past projects held here too (cars.com's radius/model
+filters didn't visibly narrow results, CarGurus 403'd): one real MD
+hit (wrong trim, 2010 Limited, Essex MD), one unconfirmed national
+Eddie Bauer lead (2006, 99,388 mi, MD title history, no listing URL).
+Reported both plus the search-reliability caveat by SMS and asked
+whether to keep periodically checking or let Paul run cars.com/
+Autotrader himself. Full detail in `projects/suv-replacement/
+CLAUDE.md`. `chris-car` folded back into the other-live-projects list
+below, not dropped — nothing new since queue id 186.
+
+Previous pointer, `projects/chris-car/CLAUDE.md` — queue id 184,
 2026-10-07 ~00:45Z, text, Paul: "Chris car: can u give me map link
 that shows all three." Built and sent a single Google Maps
 multi-stop directions link chaining the three Annapolis-area dealers
@@ -545,10 +570,6 @@ just because this pointer moved:**
   to Drive** (binary-corruption bug + sensitivity of the documents) —
   see that file for the full reasoning before ever running
   `drive_sync.py` near those two files without thinking.
-- `projects/suv-replacement/CLAUDE.md` — set 2026-09-08 ~12:58Z when
-  Paul created it by text (queue id 38): an open-ended "keep an eye
-  out" search for a replacement tow vehicle (large SUV, capable of
-  towing his 24-ft boat) for his aging 2004 Ford Expedition.
 - `projects/safehouse/general/CLAUDE.md` — the catch-all; see the
   previous-pointer note above (positive feedback on the assistant
   style, also saved as a cross-session memory). Nothing outstanding.
@@ -2143,3 +2164,28 @@ thing that needs it, not because anything currently lives under it.
   176), unchanged across queue ids 176-186; git push unaffected
   throughout. Not re-texting Paul about it again — already flagged
   multiple times, nothing new to add.
+- 2026-10-07 ~21:3xZ: fresh session, queue id 187, text channel, "New
+  project my car: my Ford expedition 2004 with 105,000 mi on it failed
+  Maryland inspection with a body work issue and a back brake rotor...
+  Can you look around for a used Eddie Bauer Ford expedition 2006 to
+  2010 ish with less than 100,000 mi on it anywhere in Maryland?"
+  Recognized this as the same car/search already tracked under
+  `suv-replacement` (created 2026-09-08) rather than creating a
+  duplicate `projects/my-car/` — moved the Current-project pointer
+  there (`chris-car` folded back into the live list, nothing new since
+  queue id 186) and flagged the merge decision to Paul by SMS with an
+  offer to split if he'd rather have it separate. Ran `WebSearch` +
+  `WebFetch` (cars.com with a Baltimore zip/radius, CarGurus) for
+  2006-2010 Eddie Bauer Expeditions under 100k mi — hit the same
+  live-dealer-inventory unreliability flagged in past projects
+  (cars.com's filters didn't visibly narrow results regardless of
+  radius param; CarGurus returned a flat 403). Found one real MD
+  listing (wrong trim: 2010 Limited, Essex MD, $15,294, 74,090 mi) and
+  one unconfirmed national Eddie Bauer lead (2006, 99,388 mi, MD title
+  history, no listing URL) via `WebSearch`. Reported both plus the
+  reliability caveat by SMS, asked whether to keep periodically
+  checking or let Paul run cars.com/Autotrader directly himself.
+  `projects/suv-replacement/CLAUDE.md` updated: current-vehicle section
+  now reflects the failed inspection, urgency flipped from "no rush"
+  to active search, and criteria refined to the explicit
+  trim/year/location given this turn. Full detail there.
