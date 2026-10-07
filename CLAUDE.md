@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/dinner/CLAUDE.md` — queue id 183,
+**Current project**: `projects/chris-car/CLAUDE.md` — queue id 184,
+2026-10-07 ~00:45Z, text, Paul: "Chris car: can u give me map link
+that shows all three." Built and sent a single Google Maps
+multi-stop directions link chaining the three Annapolis-area dealers
+already found at queue id 182 (Annapolis Hyundai, Johnson Kia
+Annapolis, Fitzgerald Kia of Annapolis) — no new research, just
+composed the URL from addresses on file. `dinner` folded back into
+the other-live-projects list below, not dropped — nothing new since
+queue id 183.
+
+Previous pointer, `projects/dinner/CLAUDE.md` — queue id 183,
 2026-10-06 ~23:35Z, text, Paul: "Project dinner. Ok got chicken
 sausages onion garlic cilantro pepper. Egg noodle. All spices you
 could want. Dinner me." New named project, so created
