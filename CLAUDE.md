@@ -2251,3 +2251,12 @@ thing that needs it, not because anything currently lives under it.
   must show $0 consideration (not a nominal $1 sale), filed with the
   VA title/registration application, generally notarized. Replied by
   SMS. Logged in `projects/safehouse/general/CLAUDE.md`.
+- 2026-10-08 ~12:56Z: same channel/pointer, queue id 190, text, "Can u
+  email me a blank sut 3." Direct follow-up to queue id 189. Fetched
+  the real blank form straight from Virginia DMV's own domain
+  (`transactions-t.dmv.virginia.gov/webdoc/pdf/sut3.pdf`, verified a
+  genuine 607KB PDF) and emailed it as an attachment to
+  `pmalone13@gmail.com` via the direct-Gmail-API `EmailMessage`
+  pattern used for the NE-trip workbook (`google_client.send_message()`
+  has no attachment support). Confirmed by SMS. Logged in
+  `projects/safehouse/general/CLAUDE.md`.
