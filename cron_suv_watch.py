@@ -46,16 +46,19 @@ MESSAGE_BODY = """suv-replacement project (automated cron watch, not a text/emai
 Paul directly -- but handle it exactly like one of his messages, same as \
 any other queued item).
 
-Search Craigslist for an older SUV, roughly pre-2012, with high mileage \
-(roughly 100k+ miles as a ballpark, not a hard cutoff -- use judgment \
-the way you would on any of his other car-search asks). Washington DC \
+Search Craigslist for an older SUV, roughly pre-2012, with UNDER \
+110,000 miles (changed 2026-10-08 -- Paul's original build spec said \
+"high miles" and the first on-demand run searched min_auto_miles=100000 \
+accordingly, but he corrected it same-day to a mileage CEILING, not a \
+floor: he wants lower-mileage cars, not higher-mileage ones. Don't \
+revert to the old "high miles" framing.). Washington DC \
 and Annapolis are SEPARATE Craigslist regions, not one site with a \
 sub-area -- search both: https://washingtondc.craigslist.org/search/cta \
 and https://annapolis.craigslist.org/search/cta (confirmed via \
 geo.craigslist.org/iso/us/md's own site list, 2026-10-08). Use a plain \
 `curl`/`requests` fetch of that URL (not WebFetch's AI-summarized \
 version -- it silently drops filters) with query params \
-`max_auto_year=2012&min_auto_miles=100000&query=SUV`, then parse the \
+`max_auto_year=2012&max_auto_miles=110000&query=SUV`, then parse the \
 `<script type="application/ld+json" id="ld_searchpage_results">` block \
 in the raw HTML for name/price/location -- mileage and title status \
 are NOT on the search-results page, only on each listing's own page \

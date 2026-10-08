@@ -1074,6 +1074,22 @@ the pending `/sms-optin` build still live there.
   rediscover any of it live. Full detail in
   `projects/suv-replacement/CLAUDE.md`.
 
+- 2026-10-08 ~17:1xZ: same live session, Paul: "looks good. please
+  change the miles threshold for <110k." Ambiguous (floor-raise vs.
+  ceiling) enough that different readings would produce opposite
+  results, so asked rather than guessed -- confirmed ceiling: now
+  wants UNDER 110,000 miles, reversing the original "high miles"
+  framing from hours earlier. Updated `cron_suv_watch.py`'s
+  `MESSAGE_BODY` (`min_auto_miles=100000` -> `max_auto_miles=110000`,
+  with an explicit same-day-reversal note baked in so a future
+  triggered session doesn't revert to "high miles"). Also answered a
+  mid-turn question, "can I invoke this from a text... send a text to
+  have you check and email?" -- yes, already works with no new code:
+  any text from his allowlisted number lands in the same `queue_db`
+  table the cron script writes to, and this project's own `CLAUDE.md`
+  now carries the full search recipe either way. Full detail in
+  `projects/suv-replacement/CLAUDE.md`.
+
 ## tempWork
 
 **RETIRED AND DELETED 2026-09-26 ~14:44Z** (queue id 163, Paul: "delete
