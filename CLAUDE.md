@@ -2318,3 +2318,19 @@ thing that needs it, not because anything currently lives under it.
   `richie-property-management` if relevant later). Replied by SMS.
   Logged in `projects/suv-replacement/CLAUDE.md`. Same pointer
   (`suv-replacement`), no move needed.
+- 2026-10-08 ~14:1xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 191-193, all
+  `suv-replacement`: a radiator core-support repair cost estimate
+  (191, email, moved the pointer here from `safehouse/general`), a
+  Fairfax VA garage recommendation list (192, follow-up by text), and
+  a correction once Paul clarified he's actually at the bayhouse —
+  re-ran the garage search for Tracys Landing/Deale/Prince Frederick
+  MD instead, and captured his exact bayhouse address (6640 Eleanore
+  Ave, Tracys Landing, MD 20779) for future reference (193). All
+  three already committed/pushed individually (`a23a910`, `3d7dc22`,
+  `cbafbfe`); working tree confirmed clean at this wrap-up, so this
+  entry is the only change this turn makes. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged across queue ids 176-193; git push
+  unaffected throughout. Not re-texting Paul about it again — already
+  flagged multiple times this week, nothing new to add.
