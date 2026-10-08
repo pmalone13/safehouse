@@ -185,6 +185,24 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+194, 2026-10-08 ~16:30Z, text, Paul: "my car: can you read
+craigslist.org? Could I work with you to add a cronjob that wakes up
+and checks it periodically... I can SSH and we can build together...
+I want to watch for an older SUV on a truck body like my expedition.
+<2010, high miles." Tested Craigslist readability live with
+`WebFetch` (worked — real DC-area listings came back, including a
+2005 Eddie Bauer 4WD, $4,450, Woodbridge, a strong match for his
+criteria). Declined to build the cron job/script itself from this
+queued text — a new Python script plus a cron entry is application
+code under this file's own hard boundary, same call made at queue id
+45 for the earlier `alliecar` cron idea — and told him so by SMS,
+describing what we'd build together once he SSHes in live: a script
+searching Craigslist for pre-2010 high-mileage body-on-frame SUVs,
+deduped against prior results, that drops a message into the same
+FIFO queue texts/emails use so a session wakes and reports matches.
+Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 191, 2026-10-08 ~13:57Z, email, subject "my car:", Paul: "can you
 estimate the labor and cost for paying a garage/body shop to: replace
 the front radiator Core support because mine is rusted." Moved the
@@ -2334,3 +2352,27 @@ thing that needs it, not because anything currently lives under it.
   (queue id 176), unchanged across queue ids 176-193; git push
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times this week, nothing new to add.
+- 2026-10-08 ~16:3xZ: fresh session, queue id 194, text channel, "my
+  car: can you read craigslist.org? Could I work with you to add a
+  cronjob that wakes up and checks it periodically... I can SSH and we
+  can build together... I want to watch for an older SUV on a truck
+  body like my expedition. <2010, high miles." Tested Craigslist
+  readability live with `WebFetch` before answering rather than
+  guessing — it worked, returning real current DC-area listings
+  including a 2005 Eddie Bauer 4WD, $4,450, Woodbridge, a strong match
+  for his criteria (unlike cars.com/CarGurus at queue id 187, which
+  were unreliable/blocked). Declined to build the cron job + Python
+  script itself: that's application code under the root hard
+  boundary, and this arrived as an unattended queued text, not a live
+  session — same call made for the `alliecar` cron idea at queue id
+  45. Paul explicitly offered the right path himself ("I can SSH and
+  we can build together"), so replied by SMS confirming Craigslist is
+  readable, explaining the boundary, and describing what we'd build
+  together once he's live over SSH (a script searching Craigslist for
+  pre-2010 high-mileage body-on-frame SUVs, deduped against prior
+  results, dropping a message into the same FIFO queue texts/emails
+  use). Logged in `projects/suv-replacement/CLAUDE.md`. Re-tried
+  `drive_sync.py` as part of this checkpoint — see this entry's own
+  commit for the result; if still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), not re-texting Paul
+  about it again, already flagged multiple times this week.
