@@ -2229,3 +2229,12 @@ thing that needs it, not because anything currently lives under it.
   question in `projects/alliecar/CLAUDE.md` Session 12 — in both
   project files. Re-tried `drive_sync.py` as part of this checkpoint;
   see this entry's own commit for the result.
+- 2026-10-08 ~00:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 188, already fully
+  handled, logged, committed, and pushed (`a4e9575`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up, so this
+  entry is the only change this turn makes. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged across queue ids 176-188; git push
+  unaffected throughout. Not re-texting Paul about it again — already
+  flagged multiple times this week, nothing new to add.
