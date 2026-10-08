@@ -184,7 +184,35 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — live direct
+interactive session, 2026-10-08 ~16:4xZ, Paul SSHed in exactly as
+offered at the end of queue id 194 (below) and specified a cron design
+himself: wake, enqueue a message, let the normal "handle message" turn
+do the actual work. Built `cron_suv_watch.py` (repo root) together —
+Paul present and directing in real time, so this is the hard
+boundary's explicit carve-out, not an unattended build. The script
+does no scraping itself; it only calls `queue_db.enqueue(...)` exactly
+like a real text/email would, which the already-running coordinator
+picks up within 5s. Runs hourly via the `ubuntu` user's own crontab (no
+sudo/`/etc/cron.d` needed) but only actually enqueues at 9am/6pm
+`America/New_York` — checked in Python via `zoneinfo`, not baked into
+cron's own schedule fields, since this box's `cron` package runs on
+`Etc/UTC` and (confirmed via `man 5 crontab`) does not honor a per-job
+`TZ=` for scheduling, only for the executed command's own environment;
+hardcoding UTC times would drift an hour every DST transition, this
+doesn't. The enqueued message tells whichever session wakes to search
+DC+Annapolis Craigslist via `WebFetch`/`WebSearch`, dedup against a new
+`projects/suv-replacement/craigslist_watch_results.md` ledger, and
+email `pmalone13@gmail.com` for anything new under $10,000 (price, not
+mileage — the one ambiguity in Paul's spec, stated as an assumption
+live rather than blocked on since he was right there). Dry-run tested
+at an off-schedule hour: clean no-op, queue untouched. First real fire
+will be 6pm Eastern today or 9am tomorrow — worth checking that result
+rather than assuming the plumbing working means the search+email+dedup
+chain works end to end. Full detail in
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 194, 2026-10-08 ~16:30Z, text, Paul: "my car: can you read
 craigslist.org? Could I work with you to add a cronjob that wakes up
 and checks it periodically... I can SSH and we can build together...
@@ -1013,6 +1041,18 @@ the pending `/sms-optin` build still live there.
   port on `idealfed.com` rather than a bayhouse VPN), outbound via
   `twilio_client.send_sms` confirmed working 2026-09-07 16:29Z (see
   above).
+
+- 2026-10-08 ~16:4xZ: live direct interactive session (no queue id),
+  Paul SSHed in to build the Craigslist cron watch planned at the end
+  of queue id 194. Built `cron_suv_watch.py` + a user crontab entry
+  with Paul present and directing in real time -- the hard boundary's
+  own explicit carve-out, not an unattended build (he specified the
+  design: cron wakes, enqueues a message, the normal message-handling
+  turn does the actual work -- no scraper, no new notification path).
+  Full build detail (including the `man 5 crontab` TZ finding and the
+  "<10k means price, not mileage" assumption, stated live) in
+  `projects/suv-replacement/CLAUDE.md`'s newest entry; root pointer
+  moved to it. Checkpoint commit follows this same turn.
 
 ## tempWork
 
