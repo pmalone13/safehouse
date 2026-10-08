@@ -184,7 +184,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — live direct
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+195, 2026-10-08 ~22:00Z, channel `cron`, source `suv-replacement-watch`.
+**First real scheduled fire of `cron_suv_watch.py` (6pm Eastern) — the
+end-to-end chain (cron enqueue -> coordinator pickup -> live session
+search+email+dedup) worked exactly as designed**, closing the "worth
+checking" caveat left open below. Fetched both Craigslist regions via
+direct `curl` (not `WebFetch`, which drops query-string filters) with
+`max_auto_year=2012&max_auto_miles=110000&query=SUV`, parsed the
+`ld_searchpage_results` JSON-LD for name/price/location, paired
+entries positionally with listing URLs from the raw HTML (JSON-LD has
+no URL field), shortlisted 9 genuine body-on-frame/full-size SUV
+matches (crossovers like RAV4/CR-V/Escape excluded as off-class), and
+verified mileage + clean title on each listing's own page before
+reporting. Zero overlap with the 8 listings already in
+`craigslist_watch_results.md` from this afternoon's on-demand run —
+one candidate (2007 Mercedes GL450, Herndon VA) did overlap and was
+correctly skipped as already-reported. All 9 new finds were under
+$10,000, so all 9 were emailed to `pmalone13@gmail.com` and appended
+to the ledger. Standout: a 2005 Chevrolet Suburban 2500 ($5,000,
+98,000 mi, District Heights MD) — Paul explicitly named "the
+Suburban" as a liked example back at project creation (queue id 38).
+Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — live direct
 interactive session, 2026-10-08 ~16:4xZ, Paul SSHed in exactly as
 offered at the end of queue id 194 (below) and specified a cron design
 himself: wake, enqueue a message, let the normal "handle message" turn
@@ -206,11 +229,8 @@ DC+Annapolis Craigslist via `WebFetch`/`WebSearch`, dedup against a new
 email `pmalone13@gmail.com` for anything new under $10,000 (price, not
 mileage — the one ambiguity in Paul's spec, stated as an assumption
 live rather than blocked on since he was right there). Dry-run tested
-at an off-schedule hour: clean no-op, queue untouched. First real fire
-will be 6pm Eastern today or 9am tomorrow — worth checking that result
-rather than assuming the plumbing working means the search+email+dedup
-chain works end to end. Full detail in
-`projects/suv-replacement/CLAUDE.md`.
+at an off-schedule hour: clean no-op, queue untouched. **First real
+fire result now confirmed above, not left open.**
 
 Previous pointer, same project — queue id
 194, 2026-10-08 ~16:30Z, text, Paul: "my car: can you read
@@ -2470,3 +2490,23 @@ thing that needs it, not because anything currently lives under it.
   happened yet — the on-demand run proved the search+email+dedup
   chain works, but the cron's own wake-enqueue-handle round trip
   through the coordinator is still unverified end to end.
+
+- 2026-10-08 ~22:0xZ: fresh session, queue id 195, channel `cron`,
+  source `suv-replacement-watch` — the first real scheduled fire of
+  `cron_suv_watch.py` (6pm Eastern), the end-to-end test flagged
+  unverified since the live build session earlier today. Confirmed the
+  whole chain works: cron wrote the queue row, the coordinator picked
+  it up, a fresh session ran the Craigslist search exactly per the
+  message's own recipe. Used direct `curl` + JSON-LD parsing against
+  both DC and Annapolis regions with the real filter params, found a
+  new regex gotcha (the `ld_searchpage_results` script tag has a
+  space before its closing `>`), shortlisted 9 genuine body-on-frame/
+  full-size SUV matches (excluding compact crossovers), verified
+  mileage + clean title on each listing page, deduped against the 8
+  listings already in `craigslist_watch_results.md` (one overlap
+  correctly skipped), emailed all 9 new under-$10k finds to
+  `pmalone13@gmail.com`, and appended them to the ledger. Standout:
+  a 2005 Chevrolet Suburban 2500 — a direct hit on Paul's own named
+  preference from project creation. Full detail in
+  `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
+  Eastern tomorrow (2026-10-09).
