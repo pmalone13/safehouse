@@ -2238,3 +2238,16 @@ thing that needs it, not because anything currently lives under it.
   (queue id 176), unchanged across queue ids 176-188; git push
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times this week, nothing new to add.
+- 2026-10-08 ~12:5xZ: fresh session, queue id 189, text channel,
+  "General: What va State form is needed to gift a car to Mt
+  daughter." Paul named the topic explicitly ("General:"), pointer
+  stayed on `safehouse/general` (already there since queue id 188) —
+  `suv-replacement` stays folded into the live-projects list, nothing
+  new since queue id 187. Clearly tied to the open MD/VA car-gifting
+  question in `projects/alliecar/CLAUDE.md` Session 12 (Christine
+  gifting the 2014 Forester to Allie). Used `WebSearch` to confirm:
+  Virginia Form SUT 3, "Purchaser's Statement of Tax Exemption," is
+  the form for the parent-to-child vehicle gift sales-tax exemption —
+  must show $0 consideration (not a nominal $1 sale), filed with the
+  VA title/registration application, generally notarized. Replied by
+  SMS. Logged in `projects/safehouse/general/CLAUDE.md`.
