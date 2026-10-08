@@ -184,7 +184,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+191, 2026-10-08 ~13:57Z, email, subject "my car:", Paul: "can you
+estimate the labor and cost for paying a garage/body shop to: replace
+the front radiator Core support because mine is rusted." Moved the
+pointer here from `safehouse/general` — subject line "my car:"
+matches the queue id 187 merge decision (same 2004 Expedition Eddie
+Bauer tracked under `suv-replacement`, not a new/separate subject).
+Used `WebSearch` to ground a real cost estimate rather than guess:
+~$700-$1,200 typical total (parts $100-150 aftermarket or $400-950
+OEM, labor 4-8 hrs for a straightforward swap), rising to $1,500+ if
+rust has spread into the frame rails requiring cutting/welding —
+flagged that as the real cost driver and recommended an in-person
+shop inspection before committing, plus the obvious adjacent point
+that he's already shopping a replacement for this same car. Replied
+by email (inbound channel), not SMS. Full detail in
+`projects/suv-replacement/CLAUDE.md`. `safehouse/general` folded
+back into the other-live-projects list below, not dropped — nothing
+new since queue id 190.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 188, 2026-10-07 ~23:10Z, text, Paul: "General: Is there an MVA in MD
 that will print actual car title when registering." Paul explicitly
 named the topic ("General:"), so moved the pointer here from
@@ -2260,3 +2279,17 @@ thing that needs it, not because anything currently lives under it.
   pattern used for the NE-trip workbook (`google_client.send_message()`
   has no attachment support). Confirmed by SMS. Logged in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-10-08 ~13:57Z: fresh session, queue id 191, email channel,
+  subject "my car:", Paul asked for a labor/cost estimate to replace
+  the rusted front radiator core support on the 2004 Expedition.
+  Moved the Current-project pointer to `suv-replacement` from
+  `safehouse/general` (subject matches the queue id 187 merge
+  decision). Used two `WebSearch` queries (Expedition-specific forum
+  data plus general body-shop labor/cost data) rather than guess:
+  parts ~$100-150 aftermarket / $400-950 OEM, labor 4-8 hrs typical
+  (12-20+ if frame rust requires cutting/welding), total ~$700-$1,200
+  typical, $1,500+ if rust has spread into the frame. Recommended an
+  in-person inspection and flagged the adjacent question (worth
+  repairing at all given he's already shopping a replacement SUV).
+  Replied by email in the same thread. Logged in
+  `projects/suv-replacement/CLAUDE.md`.
