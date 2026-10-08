@@ -2304,3 +2304,17 @@ thing that needs it, not because anything currently lives under it.
   that frame/rust repair is a different capability than basic dent/
   paint work, worth confirming when he calls. Replied by SMS. Logged
   in `projects/suv-replacement/CLAUDE.md`.
+- 2026-10-08 ~14:02Z: same session, queue id 193, text channel, "I'm
+  at the bayhouse. Locations around 6640 Eleanore Ave tracys landing
+  md 20779." Correction to queue id 192 — the garage recommendations
+  had been for Fairfax VA (his stated home), but he's actually at the
+  bayhouse right now, so re-ran `WebSearch` for shops near Tracys
+  Landing/Deale/Prince Frederick MD instead: Nealey Tire & Auto
+  (Deale, closest), J.T. Restorations (Deale), Calvert Body Works and
+  Harold's Body Shop (Prince Frederick), Annapolis Radiator & Body
+  Shop. Also captured a new fact worth keeping: his exact bayhouse
+  address, 6640 Eleanore Ave, Tracys Landing, MD 20779, not previously
+  recorded anywhere (cross-reference for `boating`/
+  `richie-property-management` if relevant later). Replied by SMS.
+  Logged in `projects/suv-replacement/CLAUDE.md`. Same pointer
+  (`suv-replacement`), no move needed.
