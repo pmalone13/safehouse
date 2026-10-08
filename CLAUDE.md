@@ -2436,3 +2436,21 @@ thing that needs it, not because anything currently lives under it.
   commit for the result; if still the identical `invalid_grant`
   failure first flagged 2026-10-05 (queue id 176), not re-texting Paul
   about it again, already flagged multiple times this week.
+- 2026-10-08 ~17:1xZ: session wrap-up (idle window elapsed, no new
+  message). This was the session where Paul SSHed in live and built
+  `cron_suv_watch.py` together (commit `ad6ca0a`), then asked for an
+  on-demand run which found and emailed 8 real Craigslist matches and
+  seeded `projects/suv-replacement/craigslist_watch_results.md` as the
+  dedup baseline (commit `37d201f`) — both already committed/pushed
+  by the live session itself before this wrap-up fired. Working tree
+  confirmed clean at this wrap-up, so this Test Log entry is the only
+  change this turn makes. Re-tried `drive_sync.py` — still the
+  identical `invalid_grant` failure first flagged 2026-10-05 (queue id
+  176), unchanged across queue ids 176-194 and now this live session
+  too; git push unaffected throughout. Not re-texting Paul about it
+  again — already flagged multiple times this week, nothing new to
+  add. **Worth remembering for the next turn**: the first real
+  scheduled cron fire (6pm Eastern today or 9am tomorrow) hasn't
+  happened yet — the on-demand run proved the search+email+dedup
+  chain works, but the cron's own wake-enqueue-handle round trip
+  through the coordinator is still unverified end to end.
