@@ -2293,3 +2293,14 @@ thing that needs it, not because anything currently lives under it.
   repairing at all given he's already shopping a replacement SUV).
   Replied by email in the same thread. Logged in
   `projects/suv-replacement/CLAUDE.md`.
+- 2026-10-08 ~14:00Z: same session, queue id 192, text channel, "on
+  'my car' can you recommend garages who can replace a radiator core
+  support on my expadition 2004." Direct follow-up to queue id 191,
+  same pointer (`suv-replacement`), no move needed. Used `WebSearch`
+  to find real Fairfax VA shops (his stated home location) with
+  structural/frame-repair capability, not just cosmetic body shops:
+  Quality Auto Body & Repair, Fairfax Auto Body, Frames Automotive,
+  Elden Collision Center, NOVA Auto Body (I-CAR Gold Class). Flagged
+  that frame/rust repair is a different capability than basic dent/
+  paint work, worth confirming when he calls. Replied by SMS. Logged
+  in `projects/suv-replacement/CLAUDE.md`.
