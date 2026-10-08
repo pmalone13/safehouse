@@ -2509,4 +2509,9 @@ thing that needs it, not because anything currently lives under it.
   a 2005 Chevrolet Suburban 2500 — a direct hit on Paul's own named
   preference from project creation. Full detail in
   `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
-  Eastern tomorrow (2026-10-09).
+  Eastern tomorrow (2026-10-09). Re-tried `drive_sync.py` at this
+  checkpoint — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged across every session
+  since; git push unaffected (email send used Gmail, which is fine —
+  this outage is Drive-only). Not re-texting Paul about it again —
+  already flagged multiple times this week, nothing new to add.
