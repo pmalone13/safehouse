@@ -1054,6 +1054,26 @@ the pending `/sms-optin` build still live there.
   `projects/suv-replacement/CLAUDE.md`'s newest entry; root pointer
   moved to it. Checkpoint commit follows this same turn.
 
+- 2026-10-08 ~17:0xZ: same live session, Paul: "run now and email
+  me." Ran the search immediately rather than wait for the scheduled
+  9am/6pm fire -- found the right Craigslist filter param names
+  (`auto_year_max` doesn't exist and silently no-ops; the real ones
+  are `min_auto_year`/`max_auto_year`/`min_auto_miles`/
+  `max_auto_miles`, confirmed via `WebSearch`), confirmed Annapolis is
+  its own separate Craigslist region (not a `washingtondc` sub-area,
+  confirmed via `geo.craigslist.org/iso/us/md`'s real site list), and
+  found that mileage/title-status only live on each listing's own page
+  (`class="attr auto_miles"`), not the search-results page. Verified 8
+  real candidates individually (all clean title, all under $10k,
+  109k-260k miles), emailed them to `pmalone13@gmail.com`, and
+  appended all 8 to `projects/suv-replacement/craigslist_watch_results.md`
+  as the dedup baseline. Folded everything learned back into
+  `cron_suv_watch.py`'s own `MESSAGE_BODY` (the correct param names,
+  the two-separate-regions fact, the listing-page-vs-search-page
+  distinction) so the scheduled 9am/6pm fires don't have to
+  rediscover any of it live. Full detail in
+  `projects/suv-replacement/CLAUDE.md`.
+
 ## tempWork
 
 **RETIRED AND DELETED 2026-09-26 ~14:44Z** (queue id 163, Paul: "delete

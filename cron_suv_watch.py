@@ -46,13 +46,25 @@ MESSAGE_BODY = """suv-replacement project (automated cron watch, not a text/emai
 Paul directly -- but handle it exactly like one of his messages, same as \
 any other queued item).
 
-Search Craigslist (Washington DC metro area and the Annapolis area) for \
-an older SUV, roughly pre-2012, with high mileage (roughly 100k+ miles \
-as a ballpark, not a hard cutoff -- use judgment the way you would on \
-any of his other car-search asks). Use WebFetch/WebSearch directly \
-against craigslist.org search URLs -- confirmed readable 2026-10-08 \
-(queue id 194), unlike cars.com/CarGurus which have been unreliable or \
-blocked in this project's past attempts.
+Search Craigslist for an older SUV, roughly pre-2012, with high mileage \
+(roughly 100k+ miles as a ballpark, not a hard cutoff -- use judgment \
+the way you would on any of his other car-search asks). Washington DC \
+and Annapolis are SEPARATE Craigslist regions, not one site with a \
+sub-area -- search both: https://washingtondc.craigslist.org/search/cta \
+and https://annapolis.craigslist.org/search/cta (confirmed via \
+geo.craigslist.org/iso/us/md's own site list, 2026-10-08). Use a plain \
+`curl`/`requests` fetch of that URL (not WebFetch's AI-summarized \
+version -- it silently drops filters) with query params \
+`max_auto_year=2012&min_auto_miles=100000&query=SUV`, then parse the \
+`<script type="application/ld+json" id="ld_searchpage_results">` block \
+in the raw HTML for name/price/location -- mileage and title status \
+are NOT on the search-results page, only on each listing's own page \
+(`class="attr auto_miles"` / `class="attr auto_title_status"`), so \
+fetch individual listing pages for your shortlisted candidates before \
+reporting a mileage/title-status number. All of this was worked out \
+live on 2026-10-08 (the auto_year_max param doesn't exist and silently \
+no-ops -- min_auto_year/max_auto_year/min_auto_miles/max_auto_miles \
+are the real ones); don't rediscover it, just use it.
 
 Before reporting anything, read \
 projects/suv-replacement/craigslist_watch_results.md -- it holds every \
