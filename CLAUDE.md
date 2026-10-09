@@ -2839,3 +2839,26 @@ thing that needs it, not because anything currently lives under it.
   cron fire: 6pm Eastern today (2026-10-09), which will be the first
   one to run under both of today's new criteria (tow rating + crew-cab
   trucks) via the project-file read, not a cron-script edit.
+
+- 2026-10-09 ~17:2xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session, both `safehouse/general` trivia
+  asks, both already sent/logged before this wrap-up fired: queue id
+  204 ("Please give me ages for Dan aykroyd Chevy Chase, John Belushi
+  and Steve Martin" — moved the pointer here from `new-england`, used
+  `WebSearch` to confirm birthdates and did the current-age math
+  myself rather than trust a stale search-snippet calculation, caught
+  one: Chevy Chase's birthday, Oct 8 1943, was literally the day
+  before this message, making him 83 not the 82 a search result
+  claimed; replied by SMS with all four, noting Belushi is deceased
+  rather than giving him a current age) and queue id 205 ("How about
+  Bill Murray?" — direct follow-up, same pointer, no move needed;
+  confirmed 76 via `WebSearch`, no discrepancy this time). Queue id
+  204 already committed/pushed (`42184d4`); queue id 205 touched only
+  the gitignored project file (nothing to commit to git) and was
+  logged there directly. Working tree confirmed clean at this
+  wrap-up, so this entry is the only root-file change this turn
+  makes. Re-tried `drive_sync.py` — still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), unchanged across
+  every session since; git push unaffected throughout. Not re-texting
+  Paul about it again — already flagged multiple times, nothing new
+  to add.
