@@ -185,6 +185,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+202, 2026-10-09 ~15:22Z, email, 42s after queue id 201, Paul: "let's
+add pickup trucks to list. With rule that they must have four doors
+back seat." Reverses the project's original "SUV preferred over
+pickup trucks" framing from creation — pickups are now in scope,
+read "four doors back seat" as crew cab specifically (not extended/
+quad cab or regular cab). Trucks still have to clear the 6,000 lb tow
+gate added by the prior email (queue id 201) — this just widens body
+style, doesn't relax towing. Updated the project's "Replacement
+criteria" section accordingly; relied on the standing step-1 rule
+(every turn, cron fires included, reads the project file first) so
+tonight's 6pm fire applies both of today's changes without a
+cron-script edit. Replied by email asking Paul to correct the
+crew-cab reading if he meant something looser. Full detail in
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 201, 2026-10-09 ~15:22Z, email, subject "Re: SUV watch: new find under
 $10,000," Paul: "Can you please limit responses to SUVs that can tow
 my 6000lb boat. Chevy 2500 can do it, any ford based on f250 or
@@ -2732,3 +2748,17 @@ thing that needs it, not because anything currently lives under it.
   by email in the same thread, surfacing the price-vs-towing tension
   as an open question rather than picking for him. Full detail in
   `projects/suv-replacement/CLAUDE.md`.
+
+- 2026-10-09 ~15:22Z: same thread, 42s later, queue id 202, email,
+  "let's add pickup trucks to list. With rule that they must have
+  four doors back seat." Reverses the project's original "SUV
+  preferred over pickup trucks" framing — pickups now in scope, "four
+  doors back seat" read as crew cab specifically (four full-size
+  doors, real back seat — not extended/quad cab or regular cab).
+  Trucks still have to clear the 6,000 lb tow gate from the prior
+  email; this only widens body style. Updated the project's
+  replacement-criteria section, same "rely on step-1 reading the
+  project file" approach as queue id 201 rather than editing
+  `cron_suv_watch.py` directly. Replied by email asking Paul to
+  correct the crew-cab reading if he meant something looser (e.g.
+  extended cab). Full detail in `projects/suv-replacement/CLAUDE.md`.
