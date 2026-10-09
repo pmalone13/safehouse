@@ -2600,3 +2600,21 @@ thing that needs it, not because anything currently lives under it.
 - 2026-10-09 ~01:39Z: same session, queue id 199, text channel,
   "Fair." Paul acknowledging the decline on queue id 198. No reply
   needed, no pointer move.
+
+- 2026-10-09 ~01:4xZ: session wrap-up (idle window elapsed, no new
+  message). Four turns this session, queue ids 196-199, all
+  `safehouse/general`: the actors-born-60-65 recall (196, answered
+  both candidate ranges, caught/fixed a `send_sms()` dict-vs-object
+  mistake that briefly sent placeholder text to Paul's phone), the
+  same exercise for actresses (197, also fixing a `/tmp`-script
+  import snag), a declined request to generate a simulated composite
+  image of those named actresses (198, declined on both a tooling-gap
+  and a policy ground), and Paul's "Fair" acknowledging the decline
+  (199, no reply needed). All four already committed/pushed
+  individually (`18970f1`, `792cec4`, `3426629`, `2e34fbb`); working
+  tree confirmed clean at this wrap-up, so this entry is the only
+  change this turn makes. Re-tried `drive_sync.py` — still the
+  identical `invalid_grant` failure first flagged 2026-10-05 (queue id
+  176), unchanged across every session since; git push unaffected
+  throughout. Not re-texting Paul about it again — already flagged
+  multiple times this week, nothing new to add.
