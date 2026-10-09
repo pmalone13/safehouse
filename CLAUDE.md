@@ -184,7 +184,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 203,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+204, 2026-10-09 ~17:15Z, text, Paul: "Please give me ages for Dan
+aykroyd Chevy Chase, John Belushi and Steve Martin." Plain general-
+knowledge trivia, no project named, same shape as the prior best-
+looking-actors exercises — moved the pointer here from `new-england`
+(folded back into the live-projects list, nothing new since queue id
+203). Used `WebSearch` to confirm birthdates rather than rely on
+memory, then did the current-age arithmetic myself against today's
+date rather than trust a search snippet — caught a stale calculation
+(a result said Chevy Chase was 82, but his birthday, Oct 8 1943, was
+literally the day before this message, making him 83 today). Replied
+by SMS: Dan Aykroyd 74, Chevy Chase 83, Steve Martin 81, and John
+Belushi — died 1982 at 33, noted rather than given a current age since
+he's deceased. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 203,
 2026-10-09 ~16:04Z, email, subject "Malone NE trip," Paul: "see
 attached. updated: start in portland ME to 10/18, links to sites for
 portland ME and newport RI. Also altered dates in salem and newport.
