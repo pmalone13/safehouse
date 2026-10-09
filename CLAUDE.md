@@ -185,6 +185,20 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+197, 2026-10-09 ~01:33Z, text, Paul: "Do same thing for acresses."
+Direct follow-up to queue id 196, same `safehouse/general` pointer, no
+move needed. Read as "repeat the best-looking top-10 opinion exercise
+for US actresses, same 1959-1966 range just settled." Replied by SMS:
+Halle Berry, Sandra Bullock, Demi Moore, Robin Wright, Courteney Cox,
+Julianne Moore, Meg Ryan, Jennifer Beals, Kyra Sedgwick, Elisabeth
+Shue. Hit and fixed a small tooling snag: a one-off script placed in
+`/tmp` can't `import twilio_client` (that module lives in this repo,
+not on a `/tmp` script's `sys.path`) — switched to piping the same
+code through `python - <<EOF` from the repo's own working directory,
+which works because stdin-executed code gets the invoking cwd on
+`sys.path`. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 196, 2026-10-09 ~01:30Z, text, Paul: "Did I ask about actors born 60 to
 65. And how they look today." A recall question about the
 2026-10-04 best-looking-actors exchange, not a new ask — moved the
@@ -2547,4 +2561,15 @@ thing that needs it, not because anything currently lives under it.
   object with `.sid`) — a debug call with placeholder body text
   actually sent to Paul's phone before the bug surfaced; corrected
   with a real reply plus an apology. Full detail in
+  `projects/safehouse/general/CLAUDE.md`.
+
+- 2026-10-09 ~01:33Z: same session, queue id 197, text channel, "Do
+  same thing for acresses." Direct follow-up to queue id 196 — same
+  1959-1966 range, now for US actresses: Halle Berry, Sandra Bullock,
+  Demi Moore, Robin Wright, Courteney Cox, Julianne Moore, Meg Ryan,
+  Jennifer Beals, Kyra Sedgwick, Elisabeth Shue. Replied by SMS. Hit a
+  minor tooling snag fixed within the turn: a `/tmp`-located one-off
+  script can't `import twilio_client` (not on its `sys.path`); piping
+  the same code through `python - <<EOF` from the repo's own cwd
+  worked instead. Full detail in
   `projects/safehouse/general/CLAUDE.md`.
