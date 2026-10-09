@@ -185,6 +185,16 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+198, 2026-10-09 ~01:38Z, text, Paul: "Can u give me a combined
+simulated picture of the woman as they look today? Email to me and
+text when sone." Same `safehouse/general` pointer, no move needed.
+Declined: no image-generation tool exists in this environment, and
+separately, generating a simulated composite likeness of real, named
+people isn't something to do even if a tool existed — told Paul both
+reasons plainly by SMS rather than just the tooling gap. No email
+sent. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 197, 2026-10-09 ~01:33Z, text, Paul: "Do same thing for acresses."
 Direct follow-up to queue id 196, same `safehouse/general` pointer, no
 move needed. Read as "repeat the best-looking top-10 opinion exercise
@@ -2572,4 +2582,13 @@ thing that needs it, not because anything currently lives under it.
   script can't `import twilio_client` (not on its `sys.path`); piping
   the same code through `python - <<EOF` from the repo's own cwd
   worked instead. Full detail in
+  `projects/safehouse/general/CLAUDE.md`.
+
+- 2026-10-09 ~01:38Z: same session, queue id 198, text channel, "Can u
+  give me a combined simulated picture of the woman as they look
+  today? Email to me and text when sone." Declined on two separate
+  grounds: no image-generation tool exists in this setup, and even if
+  one did, generating a simulated composite likeness of real, named
+  people isn't something to do. Replied by SMS with both reasons; no
+  email sent (nothing to attach). Full detail in
   `projects/safehouse/general/CLAUDE.md`.
