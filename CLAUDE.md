@@ -185,6 +185,10 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+199, 2026-10-09 ~01:39Z, text, Paul: "Fair." Acknowledging the decline
+on queue id 198, no reply needed, no pointer move.
+
+Previous pointer, same project — queue id
 198, 2026-10-09 ~01:38Z, text, Paul: "Can u give me a combined
 simulated picture of the woman as they look today? Email to me and
 text when sone." Same `safehouse/general` pointer, no move needed.
@@ -2592,3 +2596,7 @@ thing that needs it, not because anything currently lives under it.
   people isn't something to do. Replied by SMS with both reasons; no
   email sent (nothing to attach). Full detail in
   `projects/safehouse/general/CLAUDE.md`.
+
+- 2026-10-09 ~01:39Z: same session, queue id 199, text channel,
+  "Fair." Paul acknowledging the decline on queue id 198. No reply
+  needed, no pointer move.
