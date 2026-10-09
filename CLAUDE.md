@@ -185,6 +185,34 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+201, 2026-10-09 ~15:22Z, email, subject "Re: SUV watch: new find under
+$10,000," Paul: "Can you please limit responses to SUVs that can tow
+my 6000lb boat. Chevy 2500 can do it, any ford based on f250 or
+towing package. A core requirement is to tow my boat." Added a hard
+6,000 lb tow-rating gate to the project's replacement criteria
+(researched real per-trim/package tow ratings via WebSearch rather
+than go by model/class alone). Two findings worth knowing: the 2008
+Acura MDX emailed to Paul that same morning (queue id 200) does NOT
+actually clear 6,000 lbs (~5,000 lbs max) — flagged to him directly;
+and three of the five previously-logged-but-not-emailed finds from
+that same run (Lincoln Navigator Limited w/ tow package ~8,500-9,000
+lbs, Hummer H2 ~6,500-7,000 lbs, Audi Q7 w/ tow package ~6,600 lbs) DO
+clear it, despite being over his $10k price cutoff — surfaced that
+price-vs-towing tension and asked which wins if they conflict, rather
+than guessing. Deliberately did **not** edit `cron_suv_watch.py`'s own
+`MESSAGE_BODY` to bake the filter directly into the automated search
+recipe — that's an edit to an existing script, same class of change
+made live with Paul present over SSH at queue id 196 (mileage
+threshold), and this request arrived by email, not a live session.
+Instead relied on the standing step-1 rule (every turn reads the
+project's own CLAUDE.md before acting, cron fires included) — the
+rewritten criteria section there is enough to make tonight's 6pm
+scheduled fire apply the new filter without any code change. Flagged
+to Paul that baking it into the script itself is a good follow-up for
+next time he's live on SSH. Replied by email (inbound channel, same
+thread). Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 200, 2026-10-09 ~13:00Z, channel `cron`, source `suv-replacement-watch`
 — second scheduled fire (9am Eastern) of `cron_suv_watch.py`. Moved
 the pointer here from `safehouse/general` (folded back into the
@@ -2679,3 +2707,28 @@ thing that needs it, not because anything currently lives under it.
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times this week, nothing new to add. Next scheduled
   cron fire: 6pm Eastern today (2026-10-09).
+
+- 2026-10-09 ~15:2xZ: fresh session, queue id 201, email channel,
+  reply to the MDX email, Paul: "Can you please limit responses to
+  SUVs that can tow my 6000lb boat... A core requirement is to tow my
+  boat." Used `WebSearch` to check real per-trim tow ratings (not just
+  model/class) for every vehicle in today's two reports rather than
+  guess, since real dollars/decisions ride on this: found the MDX just
+  emailed that morning doesn't actually clear 6,000 lbs (~5,000 lbs
+  max), while three of the five previously-logged-but-not-emailed
+  finds (Navigator w/ tow package, Hummer H2, Audi Q7 w/ tow package)
+  do clear it despite being over the $10k price cutoff. Rewrote the
+  project's "Replacement criteria" section with the new hard 6,000 lb
+  gate and named acceptable classes (Chevy/GMC 2500, Ford F250-based,
+  or confirmed tow package ≥6,000 lbs). Deliberately did not edit
+  `cron_suv_watch.py`'s own `MESSAGE_BODY` to bake the filter in
+  directly — that's an existing-script edit, same class as the
+  mileage-threshold change made live with Paul present over SSH
+  (queue id 196), and this request arrived by email, not a live
+  session — relied instead on the standing step-1 rule (every turn,
+  cron fires included, reads the project file first) so the filter
+  takes effect tonight's 6pm fire without any code change. Flagged the
+  cron-script bake-in as a good next-live-session follow-up. Replied
+  by email in the same thread, surfacing the price-vs-towing tension
+  as an open question rather than picking for him. Full detail in
+  `projects/suv-replacement/CLAUDE.md`.
