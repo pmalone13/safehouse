@@ -184,7 +184,40 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+206, 2026-10-09 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— third scheduled fire (6pm Eastern), the first to run under both of
+today's new criteria (the 6,000 lb tow-rating gate from queue id 201
+and the crew-cab-pickups-in-scope rule from queue id 202). Moved the
+pointer here from `safehouse/general` (folded back into the
+other-live-projects list, nothing new since queue id 205). Searched
+both Craigslist regions for both `query=SUV` and, new this run,
+`query=truck` (pickups now in scope). **Found and fixed a real bug in
+the standing parsing recipe**: the positional JSON-LD-to-href pairing
+used in every prior run silently misaligned by one slot partway
+through the truck results (an extra, non-JSON-LD-listed spam-looking
+ad inserted between two real cards threw off every later pairing) —
+switched to parsing each result's own `<li class="cl-static-search-
+result">` card directly (title/price/location/href all together),
+which is immune to this. Checked every new genuine SUV/truck-class
+hit against real tow ratings via `WebSearch` rather than body-style
+alone: found one confirmed match (2004 Toyota Tundra Double Cab V8 4WD,
+$7,450, 107,027 mi, Woodbridge VA — "Double Cab" stated in the ad
+itself, ~6,500 lb tow rating confirmed), three caveated maybes where
+tow capacity depends on an unstated factory package or cab detail
+(2000 Ford F-250 Super Duty diesel — cab type not stated; 2008
+Mercedes GL550 and 2008 BMW X5 — tow package not stated), and two
+confirmed-but-over-$10k crew-cab F-250s logged for the record. Emailed
+the Tundra plus the three caveated maybes (with their caveats spelled
+out) to `pmalone13@gmail.com`; all six new listings appended to
+`projects/suv-replacement/craigslist_watch_results.md` regardless of
+price. Several promising-looking candidates were checked and excluded
+on real numbers (GMC Canyon ~5,500 lb max, Tundra V6 trim, Silverado
+WT with ambiguous/unconfirmed tow package) rather than assumed in.
+Full detail in `projects/suv-replacement/CLAUDE.md`. Next scheduled
+fire: 9am Eastern tomorrow (2026-10-10).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 204, 2026-10-09 ~17:15Z, text, Paul: "Please give me ages for Dan
 aykroyd Chevy Chase, John Belushi and Steve Martin." Plain general-
 knowledge trivia, no project named, same shape as the prior best-
@@ -2862,3 +2895,28 @@ thing that needs it, not because anything currently lives under it.
   every session since; git push unaffected throughout. Not re-texting
   Paul about it again — already flagged multiple times, nothing new
   to add.
+
+- 2026-10-09 ~22:0xZ: fresh session, queue id 206, channel `cron`,
+  source `suv-replacement-watch` — third scheduled fire (6pm Eastern),
+  first run under both of today's new criteria (6,000 lb tow gate,
+  crew-cab pickups in scope). Moved the Current-project pointer here
+  from `safehouse/general` (folded back into the live-projects list,
+  nothing new since queue id 205). Searched both regions for both
+  `query=SUV` and (new) `query=truck`. **Caught and fixed a real bug**
+  in the standing positional JSON-LD/href pairing recipe — an extra,
+  non-JSON-LD-listed ad inserted mid-results shifted every later
+  name/url pairing by one slot; switched to parsing each result's own
+  `<li class="cl-static-search-result">` card directly instead, which
+  can't misalign. Checked every new genuine candidate's real tow
+  rating via `WebSearch` (not just body style) and excluded several
+  that looked promising but failed on the numbers (GMC Canyon ~5,500
+  lb max, Tundra V6 trim, a Silverado WT with an unconfirmed/
+  ambiguous tow package). Found one confirmed match (2004 Toyota
+  Tundra Double Cab V8 4WD, $7,450, Woodbridge VA — cab and tow rating
+  both confirmed) plus three caveated maybes (F-250 diesel with
+  unstated cab type; GL550 and X5 with unstated tow packages) and two
+  confirmed-but-over-$10k crew-cab F-250s logged for the record.
+  Emailed the Tundra + three caveated maybes to `pmalone13@gmail.com`;
+  all six appended to `craigslist_watch_results.md`. Full detail in
+  `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
+  Eastern tomorrow (2026-10-10).
