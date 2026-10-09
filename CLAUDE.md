@@ -184,7 +184,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 203,
+2026-10-09 ~16:04Z, email, subject "Malone NE trip," Paul: "see
+attached. updated: start in portland ME to 10/18, links to sites for
+portland ME and newport RI. Also altered dates in salem and newport.
+don't know if you have or not." Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 202) — Paul explicitly named the trip subject.
+Downloaded his attached edited workbook (`NE_Trip_Planner (2).xlsx`)
+and diffed it against the version already on file rather than trust
+his prose summary alone: Portland's start date really did move to
+10/18 (end unchanged at 10/25, so the stay shrank from 10 to 7
+nights, trip now 3 nights shorter overall since nothing downstream
+shifts); Portland and Newport got new Airbnb links; Salem/Newport
+dates in his copy already matched what was on file from the
+2026-10-05 correction, so no new info there. **Found a bug in his own
+edit**: his copy still showed Portland's Nights column as 10 despite
+the new 7-night date range — fixed in the resend. Also noticed his
+copy dropped the Est. Cost column/total entirely, unprompted — kept
+it in the resend and flagged the choice rather than silently losing
+the data. Edited the same one-off `/tmp/ne_work/build_workbook.py`
+script and emailed the corrected `NE_Trip_Planner.xlsx` back in the
+same thread. Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 202, 2026-10-09 ~15:22Z, email, 42s after queue id 201, Paul: "let's
 add pickup trucks to list. With rule that they must have four doors
 back seat." Reverses the project's original "SUV preferred over
@@ -2762,3 +2785,21 @@ thing that needs it, not because anything currently lives under it.
   `cron_suv_watch.py` directly. Replied by email asking Paul to
   correct the crew-cab reading if he meant something looser (e.g.
   extended cab). Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+- 2026-10-09 ~16:04Z: fresh session, queue id 203, email, subject
+  "Malone NE trip" — Paul sent his own edited copy of the trip
+  workbook. Moved the Current-project pointer to `new-england` from
+  `suv-replacement` (folded back into the live list, nothing new
+  since queue id 202). Downloaded and diffed the attachment against
+  the version on file instead of trusting his summary: confirmed
+  Portland's start date really moved to 10/18 (7-night stay now,
+  trip 3 nights shorter overall), new Airbnb links for Portland and
+  Newport, and that Salem/Newport dates already matched what was on
+  file. Caught a bug in his own edit (Nights column still said 10 for
+  the now-7-night Portland stay) and fixed it rather than carry it
+  forward; also noticed his copy dropped the Est. Cost column
+  unprompted and kept it in the resend rather than silently lose that
+  data. Edited `/tmp/ne_work/build_workbook.py` in place (same one-off
+  script from 2026-10-05, still not committed) and emailed the
+  corrected workbook back in the same thread. Full detail in
+  `projects/new-england/CLAUDE.md`.
