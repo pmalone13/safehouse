@@ -2803,3 +2803,24 @@ thing that needs it, not because anything currently lives under it.
   script from 2026-10-05, still not committed) and emailed the
   corrected workbook back in the same thread. Full detail in
   `projects/new-england/CLAUDE.md`.
+
+- 2026-10-09 ~16:1xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 201-203, across
+  `suv-replacement` (201-202) and `new-england` (203): the new 6,000
+  lb tow-rating gate (201, flagged that the MDX just emailed that
+  morning doesn't actually qualify, while three previously-logged-but-
+  over-budget finds do), pickup trucks added to scope with a crew-cab
+  reading (202), and the NE trip workbook correction (203, Portland's
+  start date really moved to 10/18, new Airbnb links, a Nights-column
+  bug in Paul's own edit caught and fixed, the Est. Cost column kept
+  rather than silently dropped). All three already committed/pushed
+  individually (`f8f0f70`, `4d67bde`, `7ad6296`); working tree
+  confirmed clean at this wrap-up, so this entry is the only change
+  this turn makes. Re-tried `drive_sync.py` — still the identical
+  `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
+  unchanged across every session since; git push and Gmail sends both
+  unaffected throughout. Not re-texting Paul about it again — already
+  flagged multiple times, nothing new to add. Next scheduled SUV
+  cron fire: 6pm Eastern today (2026-10-09), which will be the first
+  one to run under both of today's new criteria (tow rating + crew-cab
+  trucks) via the project-file read, not a cron-script edit.
