@@ -184,7 +184,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+200, 2026-10-09 ~13:00Z, channel `cron`, source `suv-replacement-watch`
+— second scheduled fire (9am Eastern) of `cron_suv_watch.py`. Moved
+the pointer here from `safehouse/general` (folded back into the
+other-live-projects list, nothing new since queue id 199). Same
+search recipe as the first scheduled fire (queue id 195): pre-2012,
+under 110,000 mi, both DC and Annapolis Craigslist regions. Hit one
+new wrinkle — Craigslist's `/search/cta` URLs now 301-redirect to a
+`www.craigslist.org/search/area/<region>?cat=cta&...` shape, which
+made a plain non-redirect-following `curl` come back empty until
+`curl -L` fixed it (the query params themselves are unaffected).
+Found 9 genuine SUV-class candidates, 8 of which were new; of those,
+1 (the Suburban) was a dead duplicate already in the ledger from the
+first scheduled fire, leaving 6 genuinely new verified listings: a
+2011 Toyota 4Runner SR5 ($22,999, Manassas VA), a 2011 Lincoln
+Navigator Limited ($12,400, Leesburg VA — the same body-on-frame
+platform as Paul's own Expedition), a 2008 Acura MDX ($7,500, Silver
+Spring MD), a 2012 Audi Q7 Prestige S-Line ($12,999), a 2004 Hummer
+H2 ($24,995, Fairfax VA), and a 1998 Mitsubishi Pajero Japanese
+import ($17,000, Alexandria VA, flagged for possibly-complicated
+import titling). Only the MDX was under the $10,000 email threshold,
+so only it was emailed (with the other 5 summarized in the same email
+for visibility, not as separate messages); all 6 were appended to
+`craigslist_watch_results.md` regardless of price per the standing
+rule. Full detail in `projects/suv-replacement/CLAUDE.md`. Next
+scheduled fire: 6pm Eastern today (2026-10-09).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 199, 2026-10-09 ~01:39Z, text, Paul: "Fair." Acknowledging the decline
 on queue id 198, no reply needed, no pointer move.
 
@@ -2618,3 +2645,26 @@ thing that needs it, not because anything currently lives under it.
   176), unchanged across every session since; git push unaffected
   throughout. Not re-texting Paul about it again — already flagged
   multiple times this week, nothing new to add.
+
+- 2026-10-09 ~13:0xZ: fresh session, queue id 200, channel `cron`,
+  source `suv-replacement-watch` — second scheduled fire (9am
+  Eastern) of `cron_suv_watch.py`. Same recipe as the first scheduled
+  fire (queue id 195). Hit and fixed a new wrinkle: Craigslist's
+  `/search/cta` URLs now 301-redirect to a
+  `www.craigslist.org/search/area/<region>?cat=cta&...` shape — a
+  plain `curl` without `-L` came back as 0 bytes until this was
+  caught; `curl -sL` fixed it, query params unaffected. Parsed
+  `ld_searchpage_results` JSON-LD + paired positionally with `view/d/`
+  anchor hrefs as before (49 DC + 3 Annapolis raw hits). Found 6
+  genuinely new verified SUV-class listings after dedup against
+  `craigslist_watch_results.md` (1 of 9 candidates, the Suburban, was
+  a dead-on duplicate of a queue-id-195 listing): 2011 Toyota 4Runner
+  SR5 ($22,999), 2011 Lincoln Navigator Limited ($12,400, same
+  platform family as Paul's Expedition), 2008 Acura MDX ($7,500 — the
+  only one under $10k), 2012 Audi Q7 Prestige S-Line ($12,999), 2004
+  Hummer H2 ($24,995), 1998 Mitsubishi Pajero import ($17,000). Emailed
+  only the MDX (with the other 5 summarized in the same email body for
+  visibility), appended all 6 to the ledger regardless of price per
+  the standing rule. Full detail in
+  `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 6pm
+  Eastern today.
