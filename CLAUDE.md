@@ -184,7 +184,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+196, 2026-10-09 ~01:30Z, text, Paul: "Did I ask about actors born 60 to
+65. And how they look today." A recall question about the
+2026-10-04 best-looking-actors exchange, not a new ask — moved the
+pointer here from `suv-replacement` (folded back into the
+other-live-projects list, nothing new since queue id 195). "60 to 65"
+doesn't exactly match either range actually used that session
+(1962-1965 originally, widened same-session to 1959-1966), so replied
+by SMS with both: narrower list (Brad Pitt, Rob Lowe, John Stamos,
+Johnny Depp, Tom Cruise, Matt Dillon, Dermot Mulroney, Nicolas Cage,
+William Baldwin, Charlie Sheen) and the final wider 1959-1966 list
+(Val Kilmer, George Clooney, Brad Pitt, Rob Lowe, John Stamos, Patrick
+Dempsey, David Duchovny, Johnny Depp, Tom Cruise, Matthew Fox).
+**Mistake made and fixed same turn**: `twilio_client.send_sms()`
+returns a plain `dict`, not an object with a `.sid` attribute — a
+debug send using `r.sid` as a placeholder-content test threw
+`AttributeError` *after* the placeholder text ("test-ignore-already-
+sent-check") had already gone out to Paul's real phone. Sent the real
+answer right after with an apology folded in. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 195, 2026-10-08 ~22:00Z, channel `cron`, source `suv-replacement-watch`.
 **First real scheduled fire of `cron_suv_watch.py` (6pm Eastern) — the
 end-to-end chain (cron enqueue -> coordinator pickup -> live session
@@ -2515,3 +2536,15 @@ thing that needs it, not because anything currently lives under it.
   since; git push unaffected (email send used Gmail, which is fine —
   this outage is Drive-only). Not re-texting Paul about it again —
   already flagged multiple times this week, nothing new to add.
+
+- 2026-10-09 ~01:3xZ: fresh session, queue id 196, text channel,
+  "Did I ask about actors born 60 to 65. And how they look today."
+  Found the exact prior exchange (2026-10-04, `safehouse/general`
+  Log) via grep rather than guessing from memory: original ask was
+  1962-1965, widened same session to 1959-1966. Replied by SMS with
+  both lists since "60 to 65" matches neither exactly. Caught and
+  fixed a `send_sms()` return-type mistake mid-turn (dict, not an
+  object with `.sid`) — a debug call with placeholder body text
+  actually sent to Paul's phone before the bug surfaced; corrected
+  with a real reply plus an apology. Full detail in
+  `projects/safehouse/general/CLAUDE.md`.
