@@ -185,21 +185,41 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-209, 2026-10-10 ~13:00Z, channel `cron`, source `suv-replacement-
-watch` — fourth scheduled fire (9am Eastern). Pointer already here,
-no move needed. Ran the standing recipe (SUV + truck queries, both
-regions, <=2012, <110,000 mi) plus five diesel-specific queries given
-yesterday's diesel-F250-or-equivalent focus (queue id 208). 66 raw
-not-already-logged listings turned up, but every one failed the
-project's real gates (6,000 lb tow rating; crew cab for non-diesel
-trucks) — verified two ambiguous ones individually (a $5,500 2003
-Tundra turned out to be the V6, not V8; an $8,400 2004 Tacoma turned
-out to be a base 2WD 4-cylinder) rather than guess from the title.
-**No new qualifying candidate this run, no email sent** — first
-"nothing new" scheduled fire since the watch began. Full exclusion
-detail in `projects/suv-replacement/craigslist_watch_results.md`'s
-2026-10-10 9am section and `projects/suv-replacement/CLAUDE.md`. Next
+210, 2026-10-10 ~14:13Z, text, Paul: "Good morning, could you please
+run the SUV search and send me the email." On-demand request, ~75
+min after the 9am scheduled fire (queue id 209, below). Pointer
+already here, no move needed. Ran the identical standing recipe (SUV
++ truck queries + five diesel-specific queries, both regions, <=2012,
+<110,000 mi). 91 unique not-already-logged listings turned up, but
+**again no new qualifying candidate** — same outcome as the 9am run.
+Checked one genuinely ambiguous new listing ("SUV Nissan low
+mileages") individually rather than guess: turned out to be a "2009
+Missan Murano" (typo), an already-excluded unibody crossover class.
+Everything else matched established exclusions or was a re-post of
+an already-logged listing under a fresh URL. **Sent the email Paul
+explicitly asked for even though there was nothing to report** —
+"checked, nothing new" rather than silence — plus a short SMS
+pointing at it, since the request itself arrived by text. Full
+exclusion detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s new
+on-demand section and `projects/suv-replacement/CLAUDE.md`. Next
 scheduled fire: 6pm Eastern today.
+
+Previous pointer note, same project — queue id
+209, 2026-10-10 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — fourth scheduled fire (9am Eastern). Ran the standing recipe
+(SUV + truck queries, both regions, <=2012, <110,000 mi) plus five
+diesel-specific queries given yesterday's diesel-F250-or-equivalent
+focus (queue id 208). 66 raw not-already-logged listings turned up,
+but every one failed the project's real gates (6,000 lb tow rating;
+crew cab for non-diesel trucks) — verified two ambiguous ones
+individually (a $5,500 2003 Tundra turned out to be the V6, not V8;
+an $8,400 2004 Tacoma turned out to be a base 2WD 4-cylinder) rather
+than guess from the title. **No new qualifying candidate this run, no
+email sent** — first "nothing new" scheduled fire since the watch
+began. Full exclusion detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s 2026-10-10
+9am section and `projects/suv-replacement/CLAUDE.md`.
 
 Previous pointer note, same project — queue id
 208, 2026-10-10 ~01:45Z, email, 20 min after queue id 207, Paul: "Ok.
