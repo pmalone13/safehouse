@@ -184,7 +184,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/books/CLAUDE.md` — queue id 214,
+2026-10-10 ~17:36Z, text, Paul: "Topic books: can u recommend a good
+Paris architecture book focused on houserman and the changes made.
+Including politics of change." Paul named the topic explicitly, so
+moved the pointer here from `suv-replacement` (folded back into the
+other-live-projects list below, nothing new since queue id 213). Used
+`WebSearch` to recommend three real books on Haussmann's Paris
+renovation that specifically cover the political dimension he asked
+for, not just architecture: Paris Reborn (Kirkland, most readable),
+Haussmann: His Life and Times (Carmona, deepest on the politics), and
+Transforming Paris (Jordan, classic academic account). Replied by
+SMS. Full detail in `projects/books/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 212, 2026-10-10 ~14:41Z, text, Paul: "Let's keep SUVs in response..."
 Pointer already here, no move needed. Read as: don't let yesterday's
 diesel-F250-or-equivalent focus (queue id 208) crowd SUVs out of
