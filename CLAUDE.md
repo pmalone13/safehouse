@@ -184,7 +184,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 215,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+217, 2026-10-10 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— fifth scheduled fire (6pm Eastern). Moved the pointer here from
+`new-england` (folded back into the other-live-projects list below,
+nothing new since queue id 216). Ran the standing recipe (SUV + truck
+queries + five diesel-specific queries, both regions, <=2012, <110,000
+mi). 69 unique not-already-URL-matched hrefs turned up, but every one
+resolved to either a content-match repost of an already-logged/
+already-excluded listing under a fresh URL (cross-checked by title/
+price/location, not just URL — Craigslist reissues the same ad under a
+new random slug), or an established off-class exclusion category —
+third consecutive "nothing new" run (after queue ids 209 and 210). No
+new qualifying candidate, no email sent. Full exclusion detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s new 2026-10-10
+6pm section and `projects/suv-replacement/CLAUDE.md`. Next scheduled
+fire: 9am Eastern tomorrow (2026-10-11).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 215,
 2026-10-10 ~17:55Z, text, Paul: "New England trip list / Binoculars /
 Rice / Oil / Rice cooker / Knives." Paul named the trip explicitly, so
 moved the pointer here from `books` (folded back into the
@@ -192,7 +209,10 @@ other-live-projects list below, nothing new since queue id 214).
 Plain list-logging task — started a new "Packing / supplies list"
 section in the project file with these five items, replied by SMS
 confirming it's logged and inviting more items as he thinks of them.
-Full detail in `projects/new-england/CLAUDE.md`.
+Full detail in `projects/new-england/CLAUDE.md`. (Queue id 216,
+2026-10-10 ~18:1xZ, text, added fishing pole + small tackle box to the
+same packing list — no pointer move, folded in here rather than given
+its own block.)
 
 Previous pointer, `projects/books/CLAUDE.md` — queue id 214,
 2026-10-10 ~17:36Z, text, Paul: "Topic books: can u recommend a good
@@ -3147,3 +3167,16 @@ thing that needs it, not because anything currently lives under it.
   Paul about it again — already flagged multiple times, nothing new to
   add. Next scheduled SUV/truck cron fire: 6pm Eastern today
   (2026-10-10).
+
+- 2026-10-10 ~22:0xZ: fresh session, queue id 217, channel `cron`,
+  source `suv-replacement-watch` — fifth scheduled fire (6pm Eastern).
+  Pointer moved here from `new-england`. Ran the standing SUV+truck+
+  diesel-query recipe on both regions; 69 unique not-already-URL-
+  matched hrefs, but every one traced back to either a content-match
+  repost (same title/price/location, new random slug) of an already-
+  logged or already-excluded listing, or an established off-class
+  exclusion category — third straight "nothing new" run (after queue
+  ids 209, 210). No new qualifying candidate, no email sent. Full
+  detail in `projects/suv-replacement/craigslist_watch_results.md` and
+  `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
+  Eastern tomorrow (2026-10-11).
