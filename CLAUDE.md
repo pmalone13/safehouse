@@ -185,29 +185,45 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+209, 2026-10-10 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — fourth scheduled fire (9am Eastern). Pointer already here,
+no move needed. Ran the standing recipe (SUV + truck queries, both
+regions, <=2012, <110,000 mi) plus five diesel-specific queries given
+yesterday's diesel-F250-or-equivalent focus (queue id 208). 66 raw
+not-already-logged listings turned up, but every one failed the
+project's real gates (6,000 lb tow rating; crew cab for non-diesel
+trucks) — verified two ambiguous ones individually (a $5,500 2003
+Tundra turned out to be the V6, not V8; an $8,400 2004 Tacoma turned
+out to be a base 2WD 4-cylinder) rather than guess from the title.
+**No new qualifying candidate this run, no email sent** — first
+"nothing new" scheduled fire since the watch began. Full exclusion
+detail in `projects/suv-replacement/craigslist_watch_results.md`'s
+2026-10-10 9am section and `projects/suv-replacement/CLAUDE.md`. Next
+scheduled fire: 6pm Eastern today.
+
+Previous pointer note, same project — queue id
 208, 2026-10-10 ~01:45Z, email, 20 min after queue id 207, Paul: "Ok.
 Let's focus on diesel f250 or equivalent. Don't need crew cab. Kinda
-like idea of shortbes." Same project, pointer already here, no move
-needed. Relaxes the crew-cab rule specifically for the diesel-F250-
-or-equivalent class (reversing the direction added one email earlier)
-and adds bed length as a soft "kinda like" preference, not a hard
-filter. **This immediately reopens the Silver Spring F-250 ($6,500)
-that had just been excluded one email ago for being a SuperCab** —
-led the reply with that reversal rather than bury it. Searched both
-Craigslist regions for diesel F-250/F-350-class trucks (f250/f350
-diesel, duramax, cummins, powerstroke, shortbed-specific queries).
-Honest finding: no new true shortbed diesel turned up under budget —
-most diesel 3/4-ton trucks on the market right now are long-bed
-(8ft), said so plainly rather than force a weak match. Found one new
-under-budget candidate (Ford F350 Super Duty Cabela 6.4L Diesel,
-$9,900, 180,459 mi, Germantown MD, clean title) and one right-at-
-budget truck with two real caveats flagged rather than glossed over
-(1999 F350 SuperCab Dually, $10,500, Millersville MD — long bed, 2WD
-only, and an odd "474K body / 162K engine / 8K transmission" mileage
-claim worth asking about directly). Two more over-budget diesel
-F-350s logged for reference. All findings appended to
-`craigslist_watch_results.md`; replied by email in the same thread.
-Full detail in `projects/suv-replacement/CLAUDE.md`.
+like idea of shortbes." Relaxes the crew-cab rule specifically for the
+diesel-F250-or-equivalent class (reversing the direction added one
+email earlier) and adds bed length as a soft "kinda like" preference,
+not a hard filter. **This immediately reopens the Silver Spring F-250
+($6,500) that had just been excluded one email ago for being a
+SuperCab** — led the reply with that reversal rather than bury it.
+Searched both Craigslist regions for diesel F-250/F-350-class trucks
+(f250/f350 diesel, duramax, cummins, powerstroke, shortbed-specific
+queries). Honest finding: no new true shortbed diesel turned up under
+budget — most diesel 3/4-ton trucks on the market right now are
+long-bed (8ft), said so plainly rather than force a weak match. Found
+one new under-budget candidate (Ford F350 Super Duty Cabela 6.4L
+Diesel, $9,900, 180,459 mi, Germantown MD, clean title) and one
+right-at-budget truck with two real caveats flagged rather than
+glossed over (1999 F350 SuperCab Dually, $10,500, Millersville MD —
+long bed, 2WD only, and an odd "474K body / 162K engine / 8K
+transmission" mileage claim worth asking about directly). Two more
+over-budget diesel F-350s logged for reference. All findings appended
+to `craigslist_watch_results.md`; replied by email in the same
+thread. Full detail in `projects/suv-replacement/CLAUDE.md`.
 
 Previous pointer note, same project — queue id
 207, 2026-10-10 ~01:25Z, email, Paul replying to the 6pm report: "Love
@@ -2997,3 +3013,25 @@ thing that needs it, not because anything currently lives under it.
   throughout. Not re-texting Paul about it again — already flagged
   multiple times, nothing new to add. Next scheduled SUV/truck cron
   fire: 9am Eastern tomorrow (2026-10-10).
+
+- 2026-10-10 ~13:0xZ: fresh session, queue id 209, channel `cron`,
+  source `suv-replacement-watch` — fourth scheduled fire (9am
+  Eastern). Pointer stayed on `suv-replacement`, no move needed. Ran
+  the standing SUV+truck recipe on both regions plus five diesel-
+  specific queries (f250 diesel, f350 diesel, duramax, cummins,
+  powerstroke), matching yesterday's diesel-F250-or-equivalent focus
+  (queue id 208). 66 raw not-already-logged hrefs, all excluded on
+  real specs rather than guessed: fetched two ambiguous listings
+  individually (a $5,500 2003 Toyota Tundra turned out to be the V6,
+  not V8, per its own body text; an $8,400 2004 Toyota Tacoma turned
+  out to be a base 2WD 4-cylinder) and everything else matched
+  already-established exclusion categories (off-class crossovers/
+  sedans/sports cars, every Jeep Wrangler, classic trucks with no
+  stated spec at all, work/commercial trucks, a non-crew-cab non-
+  diesel D150/F150, an unconfirmed-package Silverado WT, and two
+  exact re-posts of already-logged listings under fresh URLs).
+  **No new qualifying candidate, no email sent** — the first
+  "nothing new" scheduled fire since the watch began 2026-10-08. Full
+  detail in `projects/suv-replacement/craigslist_watch_results.md`'s
+  new 2026-10-10 9am section and `projects/suv-replacement/CLAUDE.md`.
+  Next scheduled fire: 6pm Eastern today.
