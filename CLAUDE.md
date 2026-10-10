@@ -3125,3 +3125,25 @@ thing that needs it, not because anything currently lives under it.
   throughout. Not re-texting Paul about it again — already flagged
   multiple times, nothing new to add. Next scheduled SUV/truck cron
   fire: 6pm Eastern today (2026-10-10).
+
+- 2026-10-10 ~18:2xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 214-216: a Haussmann/
+  Paris architecture book recommendation (214, `books` topic named
+  explicitly, used `WebSearch` to find three real titles covering the
+  politics of the renovation as asked — Paris Reborn, Haussmann: His
+  Life and Times, Transforming Paris — replied by SMS, pointer moved
+  here from `suv-replacement`), the start of a New England trip
+  packing list (215, pointer moved to `new-england`, logged binoculars/
+  rice/oil/rice cooker/knives in a new "Packing / supplies list"
+  section), and a follow-up adding fishing gear to that same list (216,
+  fishing pole + small saltwater/freshwater combo tackle box, same
+  pointer, no move needed). All three already committed/pushed or
+  (for 216, which only touched the gitignored project file) logged
+  directly before this wrap-up fired. Working tree confirmed clean at
+  this wrap-up, so this entry is the only root-file change this turn
+  makes. Re-tried `drive_sync.py` — still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), unchanged across
+  every session since; git push unaffected throughout. Not re-texting
+  Paul about it again — already flagged multiple times, nothing new to
+  add. Next scheduled SUV/truck cron fire: 6pm Eastern today
+  (2026-10-10).
