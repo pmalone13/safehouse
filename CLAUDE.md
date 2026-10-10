@@ -185,30 +185,57 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+208, 2026-10-10 ~01:45Z, email, 20 min after queue id 207, Paul: "Ok.
+Let's focus on diesel f250 or equivalent. Don't need crew cab. Kinda
+like idea of shortbes." Same project, pointer already here, no move
+needed. Relaxes the crew-cab rule specifically for the diesel-F250-
+or-equivalent class (reversing the direction added one email earlier)
+and adds bed length as a soft "kinda like" preference, not a hard
+filter. **This immediately reopens the Silver Spring F-250 ($6,500)
+that had just been excluded one email ago for being a SuperCab** —
+led the reply with that reversal rather than bury it. Searched both
+Craigslist regions for diesel F-250/F-350-class trucks (f250/f350
+diesel, duramax, cummins, powerstroke, shortbed-specific queries).
+Honest finding: no new true shortbed diesel turned up under budget —
+most diesel 3/4-ton trucks on the market right now are long-bed
+(8ft), said so plainly rather than force a weak match. Found one new
+under-budget candidate (Ford F350 Super Duty Cabela 6.4L Diesel,
+$9,900, 180,459 mi, Germantown MD, clean title) and one right-at-
+budget truck with two real caveats flagged rather than glossed over
+(1999 F350 SuperCab Dually, $10,500, Millersville MD — long bed, 2WD
+only, and an odd "474K body / 162K engine / 8K transmission" mileage
+claim worth asking about directly). Two more over-budget diesel
+F-350s logged for reference. All findings appended to
+`craigslist_watch_results.md`; replied by email in the same thread.
+Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer note, same project — queue id
 207, 2026-10-10 ~01:25Z, email, Paul replying to the 6pm report: "Love
 this one. And other f250 super duties" (the Silver Spring 2000 F-250
-Super Duty diesel, $6,500). Same project, pointer already here from
-queue id 206, no move needed. **Downloaded and actually looked at that
+Super Duty diesel, $6,500). **Downloaded and actually looked at that
 listing's own photos rather than trust the ad's silence on cab type
 again — confirmed it's a SuperCab (extended cab), not the crew cab his
 own "four doors, back seat" rule requires** (one full front door per
 side plus a small rear quarter window, no second full-size rear door).
 Corrected that to him directly rather than let "love this one" stand
 on a listing that doesn't actually meet his own stated rule; tow rating
-unaffected. Searched both Craigslist regions for "f250 super duty" per
-his second ask, checking each candidate's own listing page for cab
-type and title status (neither shown on search-result cards). Best new
-find: 2012 Ford F-250 Super Duty 6.2L Gas 4x4, $15,300, 137,000 mi,
-Arlington VA — crew cab confirmed by the seller's own description,
-over his $10k mark. Also flagged: a $10,000 2002 F-250 V10 in Harwood
-MD (close to the bayhouse) with ambiguous cab photos and no stated
-mileage/title — worth a call; several confirmed-crew-cab dealer
-listings well over budget, one of which (a 2020 XL, $36,900) turned
-out to have a rebuilt title, disqualifying it outright; and a handful
-of excluded listings (an explicit "Regular Cab" truck, a utility-body
-service truck, a mechanically-troubled $2,250 truck). All findings
-appended to `craigslist_watch_results.md`; replied by email in the
-same thread. Full detail in `projects/suv-replacement/CLAUDE.md`.
+unaffected. **Note: this exclusion was reversed one email later at
+queue id 208 above** when Paul relaxed the crew-cab rule for diesel
+F-250s specifically. Searched both Craigslist regions for "f250 super
+duty" per his second ask, checking each candidate's own listing page
+for cab type and title status (neither shown on search-result cards).
+Best new find: 2012 Ford F-250 Super Duty 6.2L Gas 4x4, $15,300,
+137,000 mi, Arlington VA — crew cab confirmed by the seller's own
+description, over his $10k mark. Also flagged: a $10,000 2002 F-250
+V10 in Harwood MD (close to the bayhouse) with ambiguous cab photos
+and no stated mileage/title — worth a call; several confirmed-crew-cab
+dealer listings well over budget, one of which (a 2020 XL, $36,900)
+turned out to have a rebuilt title, disqualifying it outright; and a
+handful of excluded listings (an explicit "Regular Cab" truck, a
+utility-body service truck, a mechanically-troubled $2,250 truck). All
+findings appended to `craigslist_watch_results.md`; replied by email
+in the same thread. Full detail in `projects/suv-replacement/
+CLAUDE.md`.
 
 Previous pointer note, same project — queue id
 206, 2026-10-09 ~22:00Z, channel `cron`, source `suv-replacement-watch`
