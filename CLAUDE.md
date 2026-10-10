@@ -185,7 +185,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-210, 2026-10-10 ~14:13Z, text, Paul: "Good morning, could you please
+212, 2026-10-10 ~14:41Z, text, Paul: "Let's keep SUVs in response..."
+Pointer already here, no move needed. Read as: don't let yesterday's
+diesel-F250-or-equivalent focus (queue id 208) crowd SUVs out of
+scope or out of the search/email output -- SUVs stay in, alongside
+trucks. Already true in practice (today's two runs, queue ids
+209/210, both searched `query=SUV` and `query=truck` together), so no
+recipe change needed -- just wrote the intent explicitly into the
+project file so a future turn doesn't misread the diesel focus as
+narrowing the whole project to trucks only. Replied by SMS confirming
+that reading and noting the message trailed off with "..." -- asked
+Paul to send more if there was additional intent behind it. (Queue id
+211 was a plain "👍" acknowledging the queue id 210 email/SMS -- no
+reply needed, no pointer move, folded in here rather than given its
+own block.)
+
+Previous pointer note, same project — queue id
 run the SUV search and send me the email." On-demand request, ~75
 min after the 9am scheduled fire (queue id 209, below). Pointer
 already here, no move needed. Ran the identical standing recipe (SUV
