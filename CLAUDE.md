@@ -184,7 +184,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/books/CLAUDE.md` — queue id 214,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 215,
+2026-10-10 ~17:55Z, text, Paul: "New England trip list / Binoculars /
+Rice / Oil / Rice cooker / Knives." Paul named the trip explicitly, so
+moved the pointer here from `books` (folded back into the
+other-live-projects list below, nothing new since queue id 214).
+Plain list-logging task — started a new "Packing / supplies list"
+section in the project file with these five items, replied by SMS
+confirming it's logged and inviting more items as he thinks of them.
+Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/books/CLAUDE.md` — queue id 214,
 2026-10-10 ~17:36Z, text, Paul: "Topic books: can u recommend a good
 Paris architecture book focused on houserman and the changes made.
 Including politics of change." Paul named the topic explicitly, so
