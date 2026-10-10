@@ -185,6 +185,32 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+207, 2026-10-10 ~01:25Z, email, Paul replying to the 6pm report: "Love
+this one. And other f250 super duties" (the Silver Spring 2000 F-250
+Super Duty diesel, $6,500). Same project, pointer already here from
+queue id 206, no move needed. **Downloaded and actually looked at that
+listing's own photos rather than trust the ad's silence on cab type
+again — confirmed it's a SuperCab (extended cab), not the crew cab his
+own "four doors, back seat" rule requires** (one full front door per
+side plus a small rear quarter window, no second full-size rear door).
+Corrected that to him directly rather than let "love this one" stand
+on a listing that doesn't actually meet his own stated rule; tow rating
+unaffected. Searched both Craigslist regions for "f250 super duty" per
+his second ask, checking each candidate's own listing page for cab
+type and title status (neither shown on search-result cards). Best new
+find: 2012 Ford F-250 Super Duty 6.2L Gas 4x4, $15,300, 137,000 mi,
+Arlington VA — crew cab confirmed by the seller's own description,
+over his $10k mark. Also flagged: a $10,000 2002 F-250 V10 in Harwood
+MD (close to the bayhouse) with ambiguous cab photos and no stated
+mileage/title — worth a call; several confirmed-crew-cab dealer
+listings well over budget, one of which (a 2020 XL, $36,900) turned
+out to have a rebuilt title, disqualifying it outright; and a handful
+of excluded listings (an explicit "Regular Cab" truck, a utility-body
+service truck, a mechanically-troubled $2,250 truck). All findings
+appended to `craigslist_watch_results.md`; replied by email in the
+same thread. Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer note, same project — queue id
 206, 2026-10-09 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — third scheduled fire (6pm Eastern), the first to run under both of
 today's new criteria (the 6,000 lb tow-rating gate from queue id 201
