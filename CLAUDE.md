@@ -194,7 +194,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/boating/CLAUDE.md` — queue id 255,
+2026-10-11 ~23:09Z, text, Paul: "And this week I got to rinse my boat
+out." Plain status update, no question attached, same shape as the
+project's own "I'm out fishing" entry (queue id 180) — moved the
+pointer here from `engineering/secure-agent-communication` (folded
+back into the other-live-projects list below, nothing new since queue
+id 237). Replied by SMS with a short friendly acknowledgment. No
+research needed.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 224, 2026-10-11 ~18:32Z, text, Paul: "The more I
 think about it, this is a whole new project. Let's create a project
 under engineering... a subfolder named secure agent communication."
