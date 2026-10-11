@@ -292,8 +292,17 @@ protocol payload (no separate envelope), confirming queue id 227's
 Ted-initiates-only rule concretely, plus a new rule that Bill must
 acknowledge every received sense file ("I got the sense file") —
 the practical mechanism for queue id 225's bilateral audit trail on
-sensor files. Replied by SMS confirming the reading. See the
-queue-id-230 note just below for a one-message detour to
+sensor files. Replied by SMS confirming the reading. Queue id 235,
+2026-10-11 ~19:14Z, text, Paul resolved the queue-228 authentication
+question: certificate-based (X.509-style), with Paul himself as root
+CA issuing identity certs for Ted and Bill and keeping the private
+keys. Confirmed by SMS that the same cert can both sign (authenticate)
+and encrypt (confidentiality), matching the S/MIME email pattern
+already implied by the encrypted-attachment design — and flagged that
+Paul holding both private keys himself is a deliberate departure from
+standard CA practice, consistent with the queue-226 "Bill never holds
+its own keys" principle, asking him to confirm that's intentional.
+See the queue-id-230 note just below for a one-message detour to
 `monitoring-weed-effect` in between.)
 
 Previous pointer, `projects/managing-paul/monitoring-weed-effect/
