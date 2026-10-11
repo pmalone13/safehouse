@@ -229,7 +229,14 @@ action list and strong encryption — and confirmed Bill's current
 model is explicitly frozen (not the same model-experiment idea
 floated for Ted). Two fragments of the message didn't parse
 (transcription-noise-like) and were flagged back rather than guessed
-at. No pointer move, folded in here rather than given its own block.)
+at. No pointer move, folded in here rather than given its own block.
+Queue id 227, 2026-10-11 ~18:39Z, text, Paul decided the protocol is
+unidirectional: Ted always initiates, Bill only ever responds (no
+reverse channel), and Bill — not Ted — holds the authorization
+decision for every request, consistent with the queue-id-226 human-
+pre-approved-action-list principle. Resolves the "who initiates"
+open question carried since queue id 223. No pointer move, folded in
+here rather than given its own block.)
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
