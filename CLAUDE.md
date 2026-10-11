@@ -265,8 +265,22 @@ secure-agent-communication/CLAUDE.md` rather than folded into an
 existing section, since "the voice" hasn't been named/defined in
 this project before now — replied by SMS asking him to confirm what
 device/system "the voice" refers to before the design questions can
-be answered concretely. See the queue-id-230 note just below for a
-one-message detour to `monitoring-weed-effect` in between.)
+be answered concretely. Queue id 232, 2026-10-11 ~19:04Z, text, Paul
+generalized that question from "voice" to **any sensor** (pull
+frequency / review frequency / review purpose / review authority,
+for whatever is collecting data), named the phone's available senses
+(tactile, mechanical, audio, video — no smell), and gave a concrete
+first architecture for voice specifically: an always-on background
+listening app, chunked by a configurable time/size, each chunk
+encrypted and emailed to Bill at a configurable interval (~5 min
+example), gated through a boolean rules engine (e.g. trigger words)
+that flags point-in-time markers for later search without requiring
+content analysis — phase one goal stated as getting raw audio into
+secure permanent storage, analysis deferred. Explicitly framed as a
+Bill+Paul build, not a Ted build. Replied by SMS reflecting the plan
+back and asking him to confirm the default chunk interval. See the
+queue-id-230 note just below for a one-message detour to
+`monitoring-weed-effect` in between.)
 
 Previous pointer, `projects/managing-paul/monitoring-weed-effect/
 CLAUDE.md` — queue id 230, 2026-10-11 ~18:59Z, text, Paul:
