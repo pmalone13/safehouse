@@ -278,7 +278,14 @@ that flags point-in-time markers for later search without requiring
 content analysis — phase one goal stated as getting raw audio into
 secure permanent storage, analysis deferred. Explicitly framed as a
 Bill+Paul build, not a Ted build. Replied by SMS reflecting the plan
-back and asking him to confirm the default chunk interval. See the
+back and asking him to confirm the default chunk interval. Queue id
+233, 2026-10-11 ~19:05Z, text, Paul finalized the audio pipeline:
+capture audio only (no text/metadata bundled in), the queue-232
+rules engine decides when to close/chunk a file, then codec/
+compress, encrypt, email to Bill — "every sense is different," this
+locks in audio's own protocol, not a universal template. One word
+("keep it antelope") didn't parse, flagged rather than guessed.
+Replied by SMS confirming the pipeline understanding. See the
 queue-id-230 note just below for a one-message detour to
 `monitoring-weed-effect` in between.)
 
