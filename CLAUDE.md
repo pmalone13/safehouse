@@ -215,7 +215,13 @@ wrapper so Ted could be used "more effectively" within it. Design-
 only — nothing built, same hard-boundary posture as queue id 223.
 Replied by SMS reflecting back the Ted/Bill split and confirming
 nothing's built yet. Full detail in `projects/engineering/
-secure-agent-communication/CLAUDE.md`.
+secure-agent-communication/CLAUDE.md`. (Queue id 225, 2026-10-11
+~18:33Z, text, Paul agreed this needs a live session and named the
+first concrete design requirement: a "protocol" where both sides keep
+a full, reconstructable audit trail — explicitly modeled on how this
+very system's own git-commit + narrative-log discipline already
+works. No pointer move, folded in here rather than given its own
+block.)
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
