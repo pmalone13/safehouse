@@ -285,7 +285,14 @@ rules engine decides when to close/chunk a file, then codec/
 compress, encrypt, email to Bill — "every sense is different," this
 locks in audio's own protocol, not a universal template. One word
 ("keep it antelope") didn't parse, flagged rather than guessed.
-Replied by SMS confirming the pipeline understanding. See the
+Replied by SMS confirming the pipeline understanding. Queue id 234,
+2026-10-11 ~19:06Z, text, Paul tied the sensor pipeline back to the
+protocol fundamentals: the encrypted attachment itself is the
+protocol payload (no separate envelope), confirming queue id 227's
+Ted-initiates-only rule concretely, plus a new rule that Bill must
+acknowledge every received sense file ("I got the sense file") —
+the practical mechanism for queue id 225's bilateral audit trail on
+sensor files. Replied by SMS confirming the reading. See the
 queue-id-230 note just below for a one-message detour to
 `monitoring-weed-effect` in between.)
 
