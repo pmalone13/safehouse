@@ -204,7 +204,13 @@ Replied by SMS confirming both the project and thread were created,
 summarizing what got logged, and asking him to confirm/clarify the
 "Mark a" label. Full detail in
 `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` and
-`projects/managing-paul/CLAUDE.md`.
+`projects/managing-paul/CLAUDE.md`. (Queue id 221, 2026-10-11
+~18:06:56Z, text, Paul: "That works. I'll send you some other texts
+every time. This is timestamp b" — confirms the convention: he'll
+send a plain text each time he wants a marker logged, lettered
+Timestamp A/B/C/... in arrival order; the queue-id-220 "Mark a" is
+retroactively Timestamp A, this message is Timestamp B. No pointer
+move, folded in here rather than given its own block.)
 
 Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 219, 2026-10-11 ~14:21Z, email, Paul: "Can u make sure your search
