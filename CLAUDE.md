@@ -185,6 +185,30 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+218, 2026-10-11 ~13:00Z, channel `cron`, source `suv-replacement-watch`
+— sixth scheduled fire (9am Eastern). Pointer already here (moved by
+queue id 217 the prior evening), no move needed. Ran the standing
+recipe (SUV + truck + five diesel-specific queries, both regions,
+<=2012, <110,000 mi). 86 unique hrefs, 67 not an exact URL match to the
+ledger. **Ends the three-run "nothing new" streak** (queue ids 209,
+210, 217) with one new find: 2008 Chevrolet Trailblazer LS, 4.2L I6,
+RWD w/4x4, $4,500, 97,800 mi, clean title, Woodbridge VA — body-on-
+frame (GMT360 platform, same family as the already-logged GMC Envoy),
+under budget, but emailed with a real caveat rather than reported
+clean: its I6 tow rating depends on an unstated rear axle ratio,
+5,200-6,400 lbs depending on which (per WebSearch), so it may or may
+not clear the 6,000 lb boat-towing gate. Also individually checked and
+excluded a non-running vehicle (2006 Mercedes-Benz R-Class R500,
+$999, Bowie MD — seller's own ad discloses a suspension issue, "bring
+a tow truck") rather than assume it's just another off-class crossover.
+Everything else was a content-match repost of an already-logged/
+already-excluded listing under a fresh URL, or an established
+off-class exclusion category. Full detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s new
+2026-10-11 9am section and `projects/suv-replacement/CLAUDE.md`. Next
+scheduled fire: 6pm Eastern today (2026-10-11).
+
+Previous pointer note, same project — queue id
 217, 2026-10-10 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — fifth scheduled fire (6pm Eastern). Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
@@ -3191,3 +3215,25 @@ thing that needs it, not because anything currently lives under it.
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times, nothing new to add. Next scheduled SUV/truck
   cron fire: 9am Eastern tomorrow (2026-10-11).
+
+- 2026-10-11 ~13:0xZ: fresh session, queue id 218, channel `cron`,
+  source `suv-replacement-watch` — sixth scheduled fire (9am Eastern).
+  Ran the standing recipe (SUV + truck + five diesel-specific queries,
+  both regions, <=2012, <110,000 mi) via `curl` + the
+  `<li class="cl-static-search-result">` card parser. 86 unique hrefs,
+  67 not an exact URL match to the ledger. **Found one new candidate,
+  ending the three-run "nothing new" streak** (queue ids 209, 210,
+  217): 2008 Chevrolet Trailblazer LS, $4,500, 97,800 mi, clean title,
+  Woodbridge VA — body-on-frame GMT360 platform, under budget, but its
+  I6 tow rating depends on an unstated rear axle ratio (5,200-6,400 lbs
+  per `WebSearch`), so emailed with that caveat spelled out rather than
+  reported as a clean match. Also individually fetched and excluded a
+  2006 Mercedes-Benz R-Class R500 ($999, Bowie MD) on mechanical
+  grounds — the seller's own ad discloses a suspension issue and says
+  "bring a tow truck," non-running, not a viable buy regardless of tow
+  rating. Everything else was a content-match repost of an already-
+  logged/excluded listing under a fresh URL, or an established
+  off-class exclusion category. Full detail in
+  `projects/suv-replacement/craigslist_watch_results.md`'s new
+  2026-10-11 9am section and `projects/suv-replacement/CLAUDE.md`. Next
+  scheduled fire: 6pm Eastern today (2026-10-11).
