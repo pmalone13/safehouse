@@ -221,7 +221,15 @@ first concrete design requirement: a "protocol" where both sides keep
 a full, reconstructable audit trail — explicitly modeled on how this
 very system's own git-commit + narrative-log discipline already
 works. No pointer move, folded in here rather than given its own
-block.)
+block. Queue id 226, 2026-10-11 ~18:36Z, text, Paul added the core
+security principle for Bill: it must never hold the keys to its own
+encapsulation/sandbox, operating in a "bubble" it can't open from the
+inside, with gates to hardware gated behind a human-pre-approved
+action list and strong encryption — and confirmed Bill's current
+model is explicitly frozen (not the same model-experiment idea
+floated for Ted). Two fragments of the message didn't parse
+(transcription-noise-like) and were flagged back rather than guessed
+at. No pointer move, folded in here rather than given its own block.)
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
