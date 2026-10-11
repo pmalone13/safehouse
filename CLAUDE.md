@@ -185,6 +185,33 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+219, 2026-10-11 ~14:21Z, email, Paul: "Can u make sure your search
+covers Baltimore and MD eastern shore." Pointer already here (same
+project thread as queue id 218 below), no move needed. Added
+`baltimore.craigslist.org` and `easternshore.craigslist.org` to the
+standing search recipe (previously only `washingtondc` + `annapolis`)
+— every future run, scheduled cron fires included, now covers all
+four regions via the standing step-1 project-file-read rule.
+`cron_suv_watch.py`'s own `MESSAGE_BODY` still hardcodes just the
+original two region URLs — flagged as a good next-live-SSH-session
+cleanup, deliberately not edited from this email-triggered turn (same
+"existing-script edit needs Paul live" posture as every prior
+criteria change). Ran a one-off verification search of just the two
+new regions: Eastern Shore came back nearly empty, Baltimore surfaced
+two genuine new candidates (2001 GMC Yukon XL 2500 supercharged 8.1L,
+$16,000, 78,000 mi, Fort Meade MD — the exact Chevy/GMC 2500-class
+example Paul named as acceptable; 2008 GMC Sierra 1500 Crew Cab 4WD,
+$12,000, 85,791 mi, Essex MD — crew cab satisfies the four-door rule)
+plus a new exclusion pattern worth knowing: a Houston TX dealer
+cross-posting ~25 diesel trucks onto the Baltimore Craigslist despite
+being physically in Texas, excluded as out-of-area. Both new finds
+over the nominal $10k ceiling but confirmed via WebSearch to clear
+the 6,000 lb tow gate, so emailed for visibility and appended to
+`projects/suv-replacement/craigslist_watch_results.md`. Full detail
+in `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 6pm
+Eastern today (2026-10-11), first run under the four-region recipe.
+
+Previous pointer note, same project — queue id
 218, 2026-10-11 ~13:00Z, channel `cron`, source `suv-replacement-watch`
 — sixth scheduled fire (9am Eastern). Pointer already here (moved by
 queue id 217 the prior evening), no move needed. Ran the standing
@@ -3248,3 +3275,22 @@ thing that needs it, not because anything currently lives under it.
   unaffected throughout. Not re-texting Paul about it again — already
   flagged multiple times, nothing new to add. Next scheduled SUV/truck
   cron fire: 6pm Eastern today (2026-10-11).
+
+- 2026-10-11 ~14:3xZ: fresh session, queue id 219, email channel,
+  Paul: "Can u make sure your search covers Baltimore and MD eastern
+  shore." Added both regions to the project's standing search recipe
+  (`projects/suv-replacement/CLAUDE.md`'s Replacement criteria
+  section) rather than edit `cron_suv_watch.py` itself (existing-
+  script edit, same "needs Paul live on SSH" posture as every prior
+  recipe change) -- relies on the standing step-1 rule instead. Ran a
+  one-off verification search of the two new regions to confirm they
+  work and surface anything already there: Eastern Shore near-empty,
+  Baltimore found two genuine new candidates (2001 GMC Yukon XL 2500
+  supercharged 8.1L, $16,000, Fort Meade MD; 2008 GMC Sierra 1500 Crew
+  Cab 4WD, $12,000, Essex MD) plus a new exclusion pattern (a Houston
+  TX dealer cross-posting ~25 diesel trucks onto Baltimore's
+  Craigslist despite being physically in Texas). Both finds emailed
+  for visibility (over the $10k ceiling but confirmed via WebSearch to
+  clear the 6,000 lb tow gate) and appended to
+  `projects/suv-replacement/craigslist_watch_results.md`. Full detail
+  in `projects/suv-replacement/CLAUDE.md`.
