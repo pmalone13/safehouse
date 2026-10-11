@@ -245,6 +245,14 @@ email transcribed as "PS. Malone13@gmail.com" (almost certainly
 pmalone13@gmail.com, which is otherwise established everywhere else
 as Paul's own personal address, not a separate one for Bill) — both
 flagged back to Paul for confirmation rather than taken as fact. No
+pointer move, folded in here rather than given its own block. Queue
+id 229, 2026-10-11 ~18:52Z, text, Paul: "now that we have the concept
+of Bill and Ted I need to get... Bill rolling step one" — a status
+update, not new design content: he's about to go start working with
+the Bill instance live. No action needed here; replied by SMS
+acknowledging and noting all design notes so far are captured in
+`projects/engineering/secure-agent-communication/CLAUDE.md` for
+whenever he returns to it or cross-references from Bill's side. No
 pointer move, folded in here rather than given its own block.)
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
