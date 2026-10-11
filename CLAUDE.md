@@ -184,7 +184,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/managing-paul/monitoring-weed-effect/
+CLAUDE.md` — queue id 220, 2026-10-11 ~18:03Z, text, Paul: "new
+project managing Paul, that's me. That's the project name. Just start
+a new thread called monitoring weed effect..." New named project
+(`managing-paul`, a catch-all for things about managing Paul himself)
+with its first sub-project thread (`monitoring-weed-effect`, a
+timestamped self-log of cannabis use/effects) created in the same
+message — moved the pointer here from `suv-replacement` (folded back
+into the other-live-projects list below, nothing new since queue id
+219). Logged the first entry close to verbatim: a 4-day tolerance
+break, one small bowl back ("it was great"), and a lights-off/lights-
+on test done ~10 min before the message. **The message cut off
+mid-sentence** — "...just mark that as Mark a" — read as him wanting
+a specific event labeled "Mark A," but logged as a flagged/unconfirmed
+guess rather than assumed, since more labeled markers seem likely in
+this thread and the convention is worth getting right from the start.
+Replied by SMS confirming both the project and thread were created,
+summarizing what got logged, and asking him to confirm/clarify the
+"Mark a" label. Full detail in
+`projects/managing-paul/monitoring-weed-effect/CLAUDE.md` and
+`projects/managing-paul/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 219, 2026-10-11 ~14:21Z, email, Paul: "Can u make sure your search
 covers Baltimore and MD eastern shore." Pointer already here (same
 project thread as queue id 218 below), no move needed. Added
