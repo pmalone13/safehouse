@@ -18,6 +18,16 @@ development — the one used to build this very system). Same
 underlying models, different scopes. Don't assume context from the
 other two carries over here, and don't assume a project Paul mentions
 in passing belongs to this instance until he actually assigns it here.
+**New detail, 2026-10-11 (queue id 223):** that third/basement instance
+also controls home automation (lights/switches) at Paul's house as part
+of its own scope — he nicknamed it "the bay house" (likely the same
+casual name behind this account's own Gmail display name, "Ted
+Bayhouse," not a reference to the physical bayhouse property). It has
+its own separate GitHub repo (not this one) and, per Paul, "he's got
+access to you" — i.e. that instance can see this repo, not the reverse.
+No communication channel between the two exists yet; see
+`projects/safehouse/general/CLAUDE.md`'s queue-id-223 entry for the
+"just a thought" idea Paul floated about building one.
 
 ## Hard boundary: no autonomous programming
 
@@ -184,7 +194,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/managing-paul/monitoring-weed-effect/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
+architecture (this instance + the basement/"bay house" instance that
+also controls home automation) and floated a "just a thought" idea
+about building a communication bridge between the two. System/meta
+topic, no specific project — moved the pointer here from
+`managing-paul/monitoring-weed-effect` (folded back into the
+other-live-projects list below, nothing new since queue id 222). Also
+updated this file's own "one of three Claude Code instances"
+paragraph above with the new detail about that third instance. No
+code built — replied by SMS validating the idea's shape (mirror the
+existing FIFO-queue pattern this instance already uses) while flagging
+it needs Paul live on *both* repos to actually build, and two open
+design questions (auth/initiation direction; that it's a joint build).
+Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/managing-paul/monitoring-weed-effect/
 CLAUDE.md` — queue id 220, 2026-10-11 ~18:03Z, text, Paul: "new
 project managing Paul, that's me. That's the project name. Just start
 a new thread called monitoring weed effect..." New named project
