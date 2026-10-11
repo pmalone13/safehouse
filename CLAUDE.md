@@ -308,7 +308,14 @@ grammatically correct US English, written as if two humans were
 communicating — no shorthand or structured machine codes. Replied by
 SMS confirming the reading and flagging a scope question (text
 content vs. raw sensor payloads like the audio chunks) rather than
-assuming it overrides the queue-233 audio-only rule. See the
+assuming it overrides the queue-233 audio-only rule. Queue id 237,
+2026-10-11 ~19:18Z, text, Paul generalized queue id 236's rule to
+every artifact the system creates — folders, files, certs, queues,
+chunks, agents — each needing a plain-English description of
+purpose, data structure, disposition over time, and cost. Noted his
+own example matches this very system's existing CLAUDE.md narrative
+style, so this extends an already-practiced discipline rather than
+inventing a new one. Replied by SMS confirming the reading. See the
 queue-id-230 note just below for a one-message detour to
 `monitoring-weed-effect` in between.)
 
