@@ -194,7 +194,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 224, 2026-10-11 ~18:32Z, text, Paul: "The more I
+think about it, this is a whole new project. Let's create a project
+under engineering... a subfolder named secure agent communication."
+Direct follow-on to queue id 223's "just a thought" (below) — created
+`projects/engineering/CLAUDE.md` (new parent project, a bucket for
+system-design work about safehouse itself) and
+`projects/engineering/secure-agent-communication/CLAUDE.md` (the
+actual design thread), moved the pointer here from `safehouse/general`
+(folded back into the other-live-projects list below, nothing new
+since queue id 223). **Paul named both instances for the first time**:
+this one is **Ted**, the basement/home-automation instance is **Bill**
+(hardware access, touches the real world, has house sensors — a
+deliberately different, broader trust pattern than Ted's sandboxed
+one). He also floated trying a bigger/different model for Ted
+specifically, and wants the existing informal hard-boundary rules
+turned into something more like a real, verifiable security/trust
+wrapper so Ted could be used "more effectively" within it. Design-
+only — nothing built, same hard-boundary posture as queue id 223.
+Replied by SMS reflecting back the Ted/Bill split and confirming
+nothing's built yet. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
 architecture (this instance + the basement/"bay house" instance that
 also controls home automation) and floated a "just a thought" idea
@@ -208,7 +231,9 @@ code built — replied by SMS validating the idea's shape (mirror the
 existing FIFO-queue pattern this instance already uses) while flagging
 it needs Paul live on *both* repos to actually build, and two open
 design questions (auth/initiation direction; that it's a joint build).
-Full detail in `projects/safehouse/general/CLAUDE.md`.
+Full detail in `projects/safehouse/general/CLAUDE.md`. This thread
+continued one message later, see queue id 224 above, which spun it
+out into its own `engineering/secure-agent-communication` project.
 
 Previous pointer, `projects/managing-paul/monitoring-weed-effect/
 CLAUDE.md` — queue id 220, 2026-10-11 ~18:03Z, text, Paul: "new
