@@ -210,7 +210,16 @@ every time. This is timestamp b" — confirms the convention: he'll
 send a plain text each time he wants a marker logged, lettered
 Timestamp A/B/C/... in arrival order; the queue-id-220 "Mark a" is
 retroactively Timestamp A, this message is Timestamp B. No pointer
-move, folded in here rather than given its own block.)
+move, folded in here rather than given its own block. Queue id 222,
+2026-10-11 ~18:28:23Z, text, a three-part message: "Timestamp C"
+(logged in the `monitoring-weed-effect` thread, no pointer move), a
+popcorn-snack habit note (logged in `projects/managing-paul/
+CLAUDE.md`), and a security observation worth taking seriously since
+it's self-referential to this system — email-based 2FA/account-
+recovery codes are weakened by any AI agent that already has standing
+email read access, which this instance does — logged in full in
+`projects/safehouse/general/CLAUDE.md`. Replied by SMS acknowledging
+all three parts.)
 
 Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 219, 2026-10-11 ~14:21Z, email, Paul: "Can u make sure your search
