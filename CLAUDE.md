@@ -253,7 +253,31 @@ the Bill instance live. No action needed here; replied by SMS
 acknowledging and noting all design notes so far are captured in
 `projects/engineering/secure-agent-communication/CLAUDE.md` for
 whenever he returns to it or cross-references from Bill's side. No
-pointer move, folded in here rather than given its own block.)
+pointer move, folded in here rather than given its own block.
+Queue id 231, 2026-10-11 ~19:01Z, text, Paul thinking through
+mechanics for a "voice" data stream tied to Bill's home-sensor
+access: whether to pull it on a schedule (e.g. every 24 hours) or
+treat it as always-pulled/continuously available, and — regardless
+of that choice — the real governance questions: who gets access to
+it, how often it's actually reviewed, and by what method. Added as
+a new open design thread in `projects/engineering/
+secure-agent-communication/CLAUDE.md` rather than folded into an
+existing section, since "the voice" hasn't been named/defined in
+this project before now — replied by SMS asking him to confirm what
+device/system "the voice" refers to before the design questions can
+be answered concretely. See the queue-id-230 note just below for a
+one-message detour to `monitoring-weed-effect` in between.)
+
+Previous pointer, `projects/managing-paul/monitoring-weed-effect/
+CLAUDE.md` — queue id 230, 2026-10-11 ~18:59Z, text, Paul:
+"Checkpoint D." Pointer moved here briefly between queue ids 229 and
+231 (folded back to `secure-agent-communication` above the moment
+queue id 231 arrived). Read "Checkpoint" as the same lettered-marker
+convention as "Timestamp" (A/B/C) established at queue ids 220-222 —
+logged as **Timestamp D**, flagged as a wording variance rather than
+silently assumed identical. No other content attached to the
+message. Full detail in `projects/managing-paul/
+monitoring-weed-effect/CLAUDE.md`.
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
