@@ -3328,3 +3328,25 @@ thing that needs it, not because anything currently lives under it.
   again — already flagged multiple times, nothing new to add. Next
   scheduled SUV/truck cron fire: 6pm Eastern today (2026-10-11), first
   run under the newly-expanded four-region recipe.
+
+- 2026-10-11 ~18:0xZ: fresh session, queue id 220, text channel, Paul:
+  "new project managing Paul, that's me... start a new thread called
+  monitoring weed effect... I've been out for 4 days... one small
+  bowl... flashed the lights... mark that as Mark a." Created
+  `projects/managing-paul/CLAUDE.md` (parent, a catch-all for things
+  about managing Paul himself) and
+  `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` (first
+  thread, a timestamped self-log of cannabis use/effects), moved the
+  Current-project pointer here from `suv-replacement` (folded back
+  into the live-projects list, nothing new since queue id 219). Logged
+  the first entry close to verbatim (4-day tolerance break, one small
+  bowl "great," a lights-off/lights-on test ~10 min before the
+  message). Message cut off mid-sentence at "mark that as Mark a" —
+  logged as "Mark A" but flagged as unconfirmed rather than guessed
+  past that point, since more labeled markers seem likely in this
+  thread. Replied by SMS confirming the project/thread and asking him
+  to confirm the "Mark a" label. Re-tried `drive_sync.py` — still the
+  identical `invalid_grant` failure first flagged 2026-10-05 (queue id
+  176), unchanged; git push and the SMS send were both unaffected. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
