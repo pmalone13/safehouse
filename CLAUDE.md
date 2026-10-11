@@ -302,7 +302,14 @@ already implied by the encrypted-attachment design — and flagged that
 Paul holding both private keys himself is a deliberate departure from
 standard CA practice, consistent with the queue-226 "Bill never holds
 its own keys" principle, asking him to confirm that's intentional.
-See the queue-id-230 note just below for a one-message detour to
+Queue id 236, 2026-10-11 ~19:16Z, text, Paul added a content
+requirement: all protocol commands/responses must be fully formed,
+grammatically correct US English, written as if two humans were
+communicating — no shorthand or structured machine codes. Replied by
+SMS confirming the reading and flagging a scope question (text
+content vs. raw sensor payloads like the audio chunks) rather than
+assuming it overrides the queue-233 audio-only rule. See the
+queue-id-230 note just below for a one-message detour to
 `monitoring-weed-effect` in between.)
 
 Previous pointer, `projects/managing-paul/monitoring-weed-effect/
