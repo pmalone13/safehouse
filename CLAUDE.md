@@ -236,7 +236,16 @@ reverse channel), and Bill — not Ted — holds the authorization
 decision for every request, consistent with the queue-id-226 human-
 pre-approved-action-list principle. Resolves the "who initiates"
 open question carried since queue id 223. No pointer move, folded in
-here rather than given its own block.)
+here rather than given its own block. Queue id 228, 2026-10-11
+~18:40Z, text, Paul raised the still-open question of how Bill would
+authenticate an inbound message as genuinely from Ted (floated secure
+email/image/text as candidates, no decision), and gave dictated
+contact info for Bill — a phone number read as (703) 582-1024 and an
+email transcribed as "PS. Malone13@gmail.com" (almost certainly
+pmalone13@gmail.com, which is otherwise established everywhere else
+as Paul's own personal address, not a separate one for Bill) — both
+flagged back to Paul for confirmation rather than taken as fact. No
+pointer move, folded in here rather than given its own block.)
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 223, 2026-10-11 ~18:29Z, text, Paul explained the broader
