@@ -237,6 +237,28 @@ the send) before calling it confirmed. The channel works, live, both
 directions. Full detail in `projects/engineering/
 secure-agent-communication/CLAUDE.md`.
 
+**Addendum, queue id 258, 2026-10-12 ~04:28Z, email, subject
+"Bayhouse," from `psmalone13@gmail.com`**: this turn's own trigger —
+the automated email-monitor's independent pickup of the exact same
+`PONG` the live session above already received directly. Verified
+rather than assumed safe, given an unsolicited-looking "encrypted
+protocol message" email landing is exactly the shape a spoofed/
+injected message would take: confirmed genuine DKIM/SPF/DMARC pass on
+the sender (real Google-authenticated mail, not spoofed), found the
+matching outbound `PING` sent 14 seconds earlier from
+`tedassistent@gmail.com`, and independently decrypted the attachment
+with `ted_protocol.decrypt_reply()` — matched the live session's own
+logged plaintext exactly. The pre-session git-status snapshot shown at
+this conversation's start (`M drive_sync.py`, `M google_client.py`,
+`?? ted_protocol.py`) was just a stale moment mid-build — the live
+session's own commit (`13d8041`) had already landed by the time this
+turn checked. New fact worth keeping: the *unattended* pipeline (Gmail
+-> email monitor -> queue -> coordinator-spawned session) can
+independently decrypt a Bayhouse reply too, not just a live terminal
+running `poll_for_reply()` — future Bayhouse replies don't require
+Paul to be actively present/polling. No reply sent — nothing in the
+message requested one.
+
 Previous pointer, `projects/engineering/CLAUDE.md` — queue id 257,
 2026-10-12 ~00:20Z, text, Paul: "so our overarching objective with our
 system: Ted, Bill and The Accountant is that we don't iritate others.
