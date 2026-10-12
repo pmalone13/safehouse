@@ -4503,3 +4503,22 @@ thing that needs it, not because anything currently lives under it.
   entry to revisit before Nov 11, 2026 only if Paul later wants
   Workspace MCP server access. Full detail in `projects/safehouse/
   general/CLAUDE.md`.
+
+- 2026-10-12 ~22:4xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 278, already fully
+  handled, logged, committed, and pushed (`9e4d62e`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up (`git status
+  --short` empty), so this entry is the only change this turn makes.
+  Re-tried `drive_sync.py` — still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), unchanged across
+  every session since; git push and both the email/SMS sends were
+  unaffected. Not re-texting Paul about the Drive outage again —
+  already flagged multiple times, nothing new to add. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the Google Cloud "agentic" OAuth notice needs no action
+  unless Paul later wants Workspace MCP server access (TODO entry
+  above, deadline Nov 11, 2026); Bill is confirmed offline with Paul
+  working on it live as of queue id 276 (worth retesting `STATUS`/
+  `LIST`/`HELP` once that session wraps, plus the `poll_for_reply()`
+  stale-reply bug from queue id 275); and the next scheduled SUV/
+  truck cron fire is 9am Eastern tomorrow (2026-10-13).
