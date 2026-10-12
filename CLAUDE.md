@@ -206,7 +206,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+278, 2026-10-12 ~22:25Z, email, from Google Cloud, "[Action Required]
+Mark AI agent OAuth clients as agentic for Google Workspace MCP by Nov
+11, 2026." Moved the pointer here from `suv-replacement` (folded back
+into the live-projects list below, nothing new since queue id 277). A
+genuine Google Cloud account notification (DKIM/SPF/DMARC all pass for
+google.com) naming GCP project `safehouse-507313` — presumably the
+project backing this instance's own Gmail/Drive OAuth client.
+**Read carefully before flagging**: Google's new `is_agentic` OAuth-
+client setting only gates access to upcoming "Workspace MCP servers";
+the email's own text says apps that only call plain Workspace REST
+APIs (Gmail API, Drive API — exactly what `google_client.py` does)
+are unaffected, even though this is colloquially an AI agent. Since
+nothing here calls a Workspace MCP server today, **no action is
+currently needed**. Flagged to Paul anyway rather than silently filed,
+because marking a client "agentic" is a Cloud Console setting (not
+reachable via any API scope this VM holds, same class as the old
+OAuth-consent-screen-publishing question) and becomes **permanent**
+after Nov 12, 2026 (a new OAuth Client ID would be required to change
+it after that) — a deliberate decision for Paul, not something to
+guess at. Replied by email with the full explanation and a short SMS
+pointing at it. Added a TODO entry below to revisit before the Nov 11
+deadline in case Paul ever wants this system to use Workspace MCP
+servers for something.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 277, 2026-10-12 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — the 6pm Eastern scheduled fire (the real ninth attempt, per the
 fire-numbering correction logged at queue id 260/queue id 259's entry).
@@ -1705,6 +1730,22 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Google Cloud "agentic" OAuth client deadline — Nov 11, 2026, no
+  action needed unless Paul wants Workspace MCP server access.**
+  Flagged by a genuine Google Cloud notification 2026-10-12 (queue id
+  278, full detail in `projects/safehouse/general/CLAUDE.md`): Google
+  is introducing an `is_agentic` flag on OAuth clients, required to
+  call upcoming "Workspace MCP servers." Per the email's own
+  carve-out, apps that only call plain Gmail/Drive REST APIs (which
+  is all this system does) are unaffected — so as of this writing, no
+  action is needed. **Revisit before Nov 11, 2026** only if Paul
+  decides he wants this system to use Workspace MCP servers for
+  something new; if so, marking the OAuth client "agentic" is a
+  Google Cloud Console setting only Paul can make (not reachable from
+  this VM via any held API scope), and it becomes **permanent** after
+  Nov 12, 2026 (changing it after that needs a brand-new OAuth Client
+  ID, i.e. redoing the Gmail/Drive token setup from scratch).
 
 - **Found 2026-10-12 (queue id 275): `ted_protocol.poll_for_reply()`
   can return a stale reply as if it answered the command just sent —
@@ -4440,3 +4481,25 @@ thing that needs it, not because anything currently lives under it.
   re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add. Next scheduled SUV/truck cron
   fire: 9am Eastern tomorrow (2026-10-13).
+
+- 2026-10-12 ~22:3xZ: fresh session, queue id 278, email channel,
+  from Google Cloud, "[Action Required] Mark AI agent OAuth clients
+  as agentic for Google Workspace MCP by Nov 11, 2026." Verified
+  genuine via Gmail headers (`dkim=pass header.i=@google.com`,
+  `spf=pass`, `dmarc=pass (p=REJECT)`) before treating it as anything
+  but spam/phishing. Read the actual mechanism rather than react to
+  the "Action Required" subject line alone: the new `is_agentic`
+  OAuth-client flag only gates access to upcoming "Workspace MCP
+  servers," and the email's own text explicitly carves out apps that
+  only call plain Gmail/Drive REST APIs (exactly what
+  `google_client.py` does) as unaffected. Concluded no action is
+  currently needed, but flagged it to Paul anyway since the Console
+  setting (a) isn't reachable from this VM via any held API scope and
+  (b) becomes permanent after Nov 12, 2026 — a deliberate decision for
+  him, not something to guess at. Replied by email (full explanation)
+  and SMS (pointer). Moved the Current-project pointer to
+  `safehouse/general` from `suv-replacement` (folded back into the
+  live-projects list, nothing new since queue id 277). Added a TODO
+  entry to revisit before Nov 11, 2026 only if Paul later wants
+  Workspace MCP server access. Full detail in `projects/safehouse/
+  general/CLAUDE.md`.
