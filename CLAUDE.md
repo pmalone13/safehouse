@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+259, 2026-10-12 ~13:00Z, channel `cron`, source `suv-replacement-watch`
+— seventh scheduled fire (9am Eastern), first run under the full
+four-region recipe (washingtondc, annapolis, baltimore, easternshore).
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the other-live-projects list below, nothing new
+since queue id 258). Found one new genuinely qualifying candidate: a
+2012 Ford F-350 Super Duty Crew Cab, SRW, 6.7L Powerstroke diesel,
+$26,995, 106,662 mi, clean title, Fredericksburg VA — VIN-decode
+confirmed diesel + crew cab, clears the 6,000 lb tow gate easily.
+Over the $10k ceiling, emailed anyway per the standing over-budget-
+but-qualifying pattern. Checked and excluded four ambiguous truck
+listings individually (a mislabeled 4-cylinder regular-cab Tacoma, an
+extended-cab GMC "X-Cab," an ambiguous-cab Silverado WT, a V6 Tundra).
+Everything else was a content-match repost of an already-logged
+listing, the known Houston-TX-dealer cross-post pattern, or an
+established off-class exclusion category. Full detail in
+`projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 6pm
+Eastern today (2026-10-12).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — live/SSH session, 2026-10-12 ~04:0xZ, no queue id (same
 shape as the cron_suv_watch.py build session). Paul handed Ted a zip,
 `ted_protocol_package_v1.zip`, built by Bayhouse itself: the real
@@ -3727,3 +3747,24 @@ thing that needs it, not because anything currently lives under it.
   "Not yet done / open" note); and the two items still open from
   queue id 257 (Accountant-mapping confirmation, the reflected-back
   system objective) are unchanged.
+
+- 2026-10-12 ~13:1xZ: fresh session, queue id 259, channel `cron`,
+  source `suv-replacement-watch` — seventh scheduled fire (9am
+  Eastern), first run under the full four-region recipe. Ran SUV +
+  truck + five diesel-specific queries across washingtondc,
+  annapolis, baltimore, and easternshore via direct `curl` + the
+  `<li class="cl-static-search-result">` card parser. 144 unique
+  hrefs, 122 not already in the ledger. Found one new genuinely
+  qualifying candidate (2012 Ford F-350 Super Duty Crew Cab diesel,
+  $26,995, 106,662 mi, Fredericksburg VA — VIN-decode confirmed
+  diesel + crew cab, clears the 6,000 lb tow gate), emailed with the
+  usual over-budget-but-qualifying framing. Individually checked and
+  excluded four ambiguous truck listings via VIN decode/posting text
+  (mislabeled regular-cab 4-cyl Tacoma, extended-cab GMC "X-Cab,"
+  ambiguous-cab Silverado WT, V6 Tundra) rather than guess from the
+  search card. Everything else was a repost of an already-logged
+  listing, the known Houston-TX-dealer cross-post pattern, or an
+  established off-class exclusion. Full detail in
+  `projects/suv-replacement/CLAUDE.md` and
+  `craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern
+  today (2026-10-12).
