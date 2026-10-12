@@ -207,15 +207,38 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+272, 2026-10-12 ~18:38Z, text, Paul: "Please look backward in messages
+and see that you've read messages from today. We had an outage for 2
+hours." Pointer already here, no move needed. Paul was right and the
+prior turn's reply (queue id 271, below) was wrong — a fresh
+`queue.db` query found a **second, separate session-limit outage**
+today, ~15:13Z-18:00Z (~2h47m), distinct from yesterday's. Five
+messages (queue ids 266-270) failed identically and were silently
+dropped, same no-retry/no-notify `coordinator.py` gap flagged
+yesterday (queue id 260) — now confirmed **recurring**, elevated in
+the TODO section above. Recovered all five: a plain test message
+(266, no action), a duplicate "Reminder to modify Google account
+settings for email" (267/268, ambiguous which setting, flagged back),
+a cut-off "Project: SUV / Jack at Hyundai uses:" that reads as
+`chris-car` content mislabeled (269, cross-logged in both project
+files, asked which project/what came after the cutoff), and "Chris
+Car Bill if sale" (270, read as a "bill of sale" dictation garble,
+flagged for confirmation). Replied by SMS correcting the prior
+mistake and listing all four open items for Paul to clarify.
+
+Previous pointer, same project — queue id
 271, 2026-10-12 ~18:29Z, text, Paul: "Are you back now?" Pointer
 already here, no move needed. Read against context — this landed
 right after the prior turn's checkpoint-grid email that surfaced the
 2026-10-11 3h50m Claude-session-limit outage — as Paul checking
-whether that outage has recurred, not a new problem. Confirmed no
+whether that outage has recurred, not a new problem. **Confirmed no
 session-limit failures since it cleared on its own ~7pm Eastern
-2026-10-11 (queue id 255 onward, including the full busy stretch of
-queue ids 258-270, all went through clean). Replied by SMS confirming
-responsiveness and asking what he needs.
+2026-10-11** (queue id 255 onward, including the full busy stretch of
+queue ids 258-270, all went through clean). **This was wrong** — see
+queue id 272 above, which caught that a second outage had in fact
+happened that same afternoon; this turn answered from the log's own
+prior summary rather than re-querying `queue.db` fresh. Replied by SMS
+confirming responsiveness and asking what he needs.
 
 Previous pointer, same project — queue id
 265, 2026-10-12 ~15:11Z, text, Paul: "Testing. Vocal text from
@@ -1619,6 +1642,23 @@ the pending `/sms-optin` build still live there.
   `coordinator.py` still won't retry or notify on a failed message —
   that's an application-code change and needs Paul live. Flag it to
   him next live session rather than build it unattended.
+  **Update 2026-10-12 (queue id 272): confirmed recurring, not a
+  one-off.** A second, separate outage hit the same day, ~15:13Z-
+  18:00Z (~2h47m, Paul: "an outage for 2 hours"), dropping 5 more
+  messages (queue ids 266-270) with the identical failure shape
+  (`"You've hit your session limit · resets 6pm (UTC)"`). Found only
+  because Paul explicitly asked this turn to check — the prior turn's
+  own reply (queue id 271, "no failures since yesterday") was **wrong**,
+  having not actually re-queried `queue.db` before answering. Recovered
+  and backfilled into `projects/safehouse/general/CLAUDE.md` (3 items)
+  and cross-logged into `projects/chris-car/CLAUDE.md` and
+  `projects/suv-replacement/CLAUDE.md` (2 ambiguous items, flagged for
+  Paul to clarify). **Lesson for future turns**: "has the outage
+  recurred" is a question to answer by querying `queue.db` fresh, not
+  by recalling what a prior turn's log said — the log can itself be
+  stale/wrong if the turn that wrote it didn't actually check. This
+  coordinator fix is now overdue, not just "worth doing" — two outages
+  in two days, 22 total dropped messages.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
@@ -4110,4 +4150,33 @@ thing that needs it, not because anything currently lives under it.
   `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
   unchanged; git push and the SMS send were unaffected. Not
   re-texting Paul about the Drive outage again — already flagged
-  multiple times, nothing new to add.
+  multiple times, nothing new to add. **This turn's own answer was
+  wrong — see the queue id 272 entry immediately below, which caught
+  it the very next message.**
+
+- 2026-10-12 ~18:38Z: fresh session, queue id 272, text channel, Paul:
+  "Please look backward in messages and see that you've read messages
+  from today. We had an outage for 2 hours." Queried `queue.db` fresh
+  rather than trust the prior turn's own log entry (the mistake that
+  caused this) and found Paul was right: a **second** session-limit
+  outage hit today, ~15:13Z-18:00Z (~2h47m), separate from yesterday's
+  3h50m one. Five messages (queue ids 266-270) failed identically
+  (`"You've hit your session limit · resets 6pm (UTC)"`) and were
+  silently dropped — same `coordinator.py` no-retry/no-notify gap,
+  now confirmed recurring (elevated in the TODO section above, two
+  outages in two days, 22 messages total lost). Recovered all five
+  from the raw queue rows and backfilled: a plain test message (266,
+  `safehouse/general`, no action needed), a duplicate reminder about
+  "Google account settings for email" (267/268, `safehouse/general`,
+  ambiguous which setting, flagged back), a cut-off message labeled
+  "Project: SUV" but containing Hyundai-dealer content that fits
+  `chris-car` better (269, cross-logged in both project files,
+  flagged for Paul to pick one), and "Chris Car Bill if sale" (270,
+  `chris-car`, read as a "bill of sale" dictation garble, flagged for
+  confirmation). Replied by SMS correcting the prior turn's wrong
+  answer and listing all four open items for Paul to clarify. Pointer
+  stayed on `safehouse/general`, no move needed. Re-tried
+  `drive_sync.py` — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged; git push and the SMS
+  send were unaffected. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times, nothing new to add.
