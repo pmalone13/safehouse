@@ -206,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 261, 2026-10-12 ~14:29Z, text, 12 seconds after
+the prior turn's own SMS went out, Paul: "Yeah worried that bill means
+there's a protocol. Now you can send Bill English messages using
+email and your encrypted your certificate." Answers the question the
+prior turn asked: "wired up with Bill" means the Ted<->Bayhouse
+protocol itself going live this morning (the real `PING`/`PONG` round
+trip), not necessarily queue id 254's separate in-person reboot-after-
+power-loss visit — moved the pointer here from `safehouse/general`
+(folded back into the other-live-projects list below, nothing new
+since queue id 260). **Two factual corrections sent back rather than
+left standing**: it's not certificate-based (v1 actually uses one
+shared symmetric Fernet key, which Paul himself confirmed live during
+last night's build — X.509 certs were only the pre-build plan), and
+the live commands aren't full English sentences either (they're short
+keywords — `PING`/`STATUS`/`LIST`/`RUN`/`HELP` — which is exactly the
+"shorthand" his own queue-236/237 rule said not to use; that rule
+isn't actually honored in v1 yet). Replied by SMS with both
+corrections and a direct follow-up: is Bill's power-loss/reboot
+problem from queue id 254 separately resolved, or was last night's
+build session the same visit? Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 260, 2026-10-12 ~14:17Z, text, Paul: "Morning I did a lot yesterday. I
 want two things. First, give me a little grid of checkpoint timings
 from when I texted you... Second... summarize all of the points I
