@@ -207,6 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+271, 2026-10-12 ~18:29Z, text, Paul: "Are you back now?" Pointer
+already here, no move needed. Read against context — this landed
+right after the prior turn's checkpoint-grid email that surfaced the
+2026-10-11 3h50m Claude-session-limit outage — as Paul checking
+whether that outage has recurred, not a new problem. Confirmed no
+session-limit failures since it cleared on its own ~7pm Eastern
+2026-10-11 (queue id 255 onward, including the full busy stretch of
+queue ids 258-270, all went through clean). Replied by SMS confirming
+responsiveness and asking what he needs.
+
+Previous pointer, same project — queue id
 265, 2026-10-12 ~15:11Z, text, Paul: "Testing. Vocal text from
 phone." Pointer already here, no move needed. Confirms a standing
 suspicion rather than raising anything new: Paul dictates these texts
@@ -4085,3 +4096,18 @@ thing that needs it, not because anything currently lives under it.
   push and the SMS send were unaffected. Not re-texting Paul about
   the Drive outage again — already flagged multiple times, nothing
   new to add.
+
+- 2026-10-12 ~18:29Z: fresh session, queue id 271, text channel, Paul:
+  "Are you back now?" Read against context (this landed right after
+  the prior turn's checkpoint-grid email surfacing the 2026-10-11
+  3h50m session-limit outage) as asking whether that outage has
+  recurred. Confirmed no Claude-session-limit failures since it
+  cleared on its own ~7pm Eastern 2026-10-11 — queue id 255 onward,
+  including the full busy stretch of queue ids 258-270, all went
+  through clean. Replied by SMS confirming responsiveness and asking
+  what he needs. Pointer stayed on `safehouse/general`, no move
+  needed. Re-tried `drive_sync.py` — still the identical
+  `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
+  unchanged; git push and the SMS send were unaffected. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
