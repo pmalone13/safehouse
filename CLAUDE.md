@@ -4366,3 +4366,21 @@ thing that needs it, not because anything currently lives under it.
   176), unchanged; git push and the SMS send were unaffected. Not
   re-texting Paul about the Drive outage again — already flagged
   multiple times, nothing new to add.
+
+- 2026-10-12 ~20:3xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 276, already fully
+  handled, logged, committed, and pushed (`9673efd`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up, so this
+  entry is the only change this turn makes. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged; git push and the SMS send were
+  unaffected. Not re-texting Paul about the Drive outage again —
+  already flagged multiple times, nothing new to add. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: Bill is confirmed offline right now with Paul working on it
+  live (queue id 276), and once that session wraps there are two
+  things worth revisiting — retesting `STATUS`/`LIST`/`HELP` against
+  a freshly-rebooted Bill, and fixing the `poll_for_reply()`
+  stale-reply bug found at queue id 275 (both logged in
+  `projects/engineering/secure-agent-communication/CLAUDE.md` and the
+  root TODO section above).
