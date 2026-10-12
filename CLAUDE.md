@@ -206,7 +206,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+277, 2026-10-12 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— the 6pm Eastern scheduled fire (the real ninth attempt, per the
+fire-numbering correction logged at queue id 260/queue id 259's entry).
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the live-projects list below, nothing new since
+queue id 276). Ran the full four-region recipe (SUV + truck + five
+diesel-specific queries, washingtondc/annapolis/baltimore/
+easternshore, `<=2012`/`<110,000 mi`). 145 unique hrefs, 123 not an
+exact URL match to the ledger. **No new qualifying candidate, no
+email sent.** Checked three genuinely ambiguous listings individually:
+a 1999 Toyota Hilux Surf SSR-G JDM import ($19,000, Fort Meade MD) —
+a real body-on-frame 4Runner-equivalent, excluded on two independent
+grounds (WebSearch confirms its diesel tops out at ~4,400-5,500 lbs
+tow, below the 6,000 lb gate; and the ad says it's still mid-import,
+not yet US-titled/registered); "SUV Nissan low mileages" ($7,900,
+Tysons), confirmed via the listing page to be the same already-
+excluded "2009 Missan Murano" typo listing reposted under an
+obfuscated title; and a 1987 UMM Alter 4x4 ($1, Stafford VA) — clean
+title but not currently drivable and far outside the vehicle class.
+Everything else was a content-match repost of an already-logged/
+excluded listing, the known Houston-TX-dealer cross-post pattern, or
+an established off-class/commercial/classic exclusion category. Full
+detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 9am Eastern
+tomorrow (2026-10-13).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 276, 2026-10-12 ~20:29Z, text, Paul: "Right,
 Bill and I are working." Pointer already here, no move needed.
 Confirms the exact explanation given one message earlier (queue id
@@ -4384,3 +4411,32 @@ thing that needs it, not because anything currently lives under it.
   stale-reply bug found at queue id 275 (both logged in
   `projects/engineering/secure-agent-communication/CLAUDE.md` and the
   root TODO section above).
+
+- 2026-10-12 ~22:0xZ: fresh session, queue id 277, channel `cron`,
+  source `suv-replacement-watch` — the 6pm Eastern scheduled fire.
+  Ran the full four-region recipe (SUV + truck + five diesel-specific
+  queries, washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+  `<110,000 mi`) via direct `curl` + the `<li class="cl-static-
+  search-result">` card parser. 145 unique hrefs, 123 not an exact
+  URL match to the ledger. **No new qualifying candidate, no email
+  sent.** Individually checked three ambiguous listings: a 1999
+  Toyota Hilux Surf SSR-G JDM import ($19,000, Fort Meade MD) —
+  genuine body-on-frame 4Runner-equivalent, excluded via `WebSearch`
+  confirming its diesel tops out at ~4,400-5,500 lbs tow (below the
+  6,000 lb gate) and because the ad itself says it's still mid-import,
+  not yet US-titled; "SUV Nissan low mileages" ($7,900, Tysons),
+  confirmed by fetching the listing page to be a repost of the
+  already-excluded "2009 Missan Murano" typo listing under an
+  obfuscated title; and a 1987 UMM Alter 4x4 ($1, Stafford VA) —
+  clean title but not currently drivable, off-class regardless.
+  Everything else was a content-match repost of an already-logged/
+  excluded listing, the known Houston-TX-dealer cross-post pattern,
+  or an established off-class/commercial/classic exclusion category.
+  Full detail in `projects/suv-replacement/CLAUDE.md` and
+  `craigslist_watch_results.md`. Re-tried `drive_sync.py` as part of
+  this checkpoint — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged across every session
+  since; git push unaffected (no email needed this run). Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add. Next scheduled SUV/truck cron
+  fire: 9am Eastern tomorrow (2026-10-13).
