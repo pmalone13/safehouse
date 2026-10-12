@@ -206,13 +206,48 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+260, 2026-10-12 ~14:17Z, text, Paul: "Morning I did a lot yesterday. I
+want two things. First, give me a little grid of checkpoint timings
+from when I texted you... Second... summarize all of the points I
+made yesterday. We should be wired up with Bill and I know my next
+step." A meta/audit request spanning the whole prior day rather than
+one project, so moved the pointer here from `suv-replacement` (folded
+back into the other-live-projects list below, nothing new since queue
+id 259). Pulling exact timestamps from `queue.db` to build the
+requested grid **surfaced a real, previously-undiscovered gap**: a
+3h50m Claude-session-limit outage swallowed 17 of Paul's texts on
+2026-10-11 with zero replies and zero log entries until now — see the
+new TODO entry above for the mechanism and
+`projects/engineering/secure-agent-communication/CLAUDE.md`'s new
+"Recovered" section for the backfilled content (most of it was
+design material for the Ted/Bill/Accountant protocol, including one
+genuinely new fact: queue id 241, not queue id 257, was actually the
+first message to name all three instances together — it just failed
+silently a day before queue id 257 restated the same thing). Also
+recovered: two off-topic messages logged in `safehouse/general` itself
+(an F1/AI-parity musing, a plain "deep coding" status update), and
+confirmation that the `suv-replacement` watch's real 6pm fire on
+2026-10-11 never ran (not a "nothing new" result — logged there with
+a fire-numbering correction). Sent Paul the full checkpoint grid and
+point-by-point summary by email (far too long for SMS), with a short
+SMS flagging the outage, pointing at the email, and responding to his
+closing line about Bill — queue id 254 (recovered from the outage)
+has him naming "get Bill rolling again after a power-loss reboot
+problem, I'll go there in person" as his own topic #1, and nothing on
+record confirms that visit happened, so asked him directly whether
+"wired up with Bill" means that's done rather than assuming it.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 259, 2026-10-12 ~13:00Z, channel `cron`, source `suv-replacement-watch`
-— seventh scheduled fire (9am Eastern), first run under the full
-four-region recipe (washingtondc, annapolis, baltimore, easternshore).
-Moved the pointer here from `engineering/secure-agent-communication`
-(folded back into the other-live-projects list below, nothing new
-since queue id 258). Found one new genuinely qualifying candidate: a
+— seventh scheduled fire (9am Eastern) **(actually the eighth real
+attempt — see the queue-260 correction above and that project's own
+file; the real seventh, queue id 251, silently failed in the outage
+and was never logged)**, first run under the full four-region recipe
+(washingtondc, annapolis, baltimore, easternshore). Moved the pointer
+here from `engineering/secure-agent-communication` (folded back into
+the other-live-projects list below, nothing new since queue id 258).
+Found one new genuinely qualifying candidate: a
 2012 Ford F-350 Super Duty Crew Cab, SRW, 6.7L Powerstroke diesel,
 $26,995, 106,662 mi, clean title, Fredericksburg VA — VIN-decode
 confirmed diesel + crew cab, clears the 6,000 lb tow gate easily.
@@ -1444,6 +1479,35 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-12 (queue id 260): a 3h50m Claude-session-limit
+  outage on 2026-10-11 silently swallowed 17 of Paul's texts, with no
+  retry and no notification — worth a coordinator fix next time Paul
+  is live.** Discovered while building Paul a checkpoint-timing grid
+  he asked for (pulling raw `queue.db` timestamps rather than trusting
+  this file's own approximate log). Every text he sent between
+  3:19:48pm and 6:34:42pm Eastern on 2026-10-11 (queue ids 238-254,
+  plus the `suv-replacement` watch's own 6pm cron fire, queue id 251)
+  failed identically with `claude spawn returned is_error=True:
+  "You've hit your session limit · resets 11pm (UTC)"` — a Claude Code
+  subscription usage cap (see the 2026-09-07 entry below about
+  subscription usage sharing account-wide rate limits; this is that
+  caveat actually costing a real backlog, not just a theoretical
+  risk). Confirmed in `coordinator.py`: a `failed` message is never
+  retried and never triggers a notification, it just sits in the
+  queue marked done. The outage ended on its own when the limit reset
+  at 11pm UTC — queue id 255 is the first message after the gap to go
+  through clean. **Content recovered and backfilled this turn** into
+  `projects/engineering/secure-agent-communication/CLAUDE.md` (most of
+  it — design content for the Ted/Bill/Accountant protocol, including
+  a correction that queue id 241, not queue id 257, was actually the
+  first message to name all three instances together, just inside the
+  failure window) and `projects/safehouse/general/CLAUDE.md` (the two
+  off-topic messages) and `projects/suv-replacement/CLAUDE.md` (the
+  dropped cron fire, with a fire-numbering correction). **Not fixed**:
+  `coordinator.py` still won't retry or notify on a failed message —
+  that's an application-code change and needs Paul live. Flag it to
+  him next live session rather than build it unattended.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
@@ -3780,3 +3844,36 @@ thing that needs it, not because anything currently lives under it.
   Drive outage again — already flagged multiple times, nothing new to
   add. Next scheduled SUV/truck cron fire: 6pm Eastern today
   (2026-10-12).
+
+- 2026-10-12 ~14:3xZ: fresh session, queue id 260, text channel, Paul
+  asked for a checkpoint-timing grid of yesterday's texts plus a full
+  summary of everything he said, closing with "We should be wired up
+  with Bill and I know my next step." Pulled exact timestamps straight
+  from `queue.db` (`messages` table) rather than this file's own
+  approximate "~HH:MMZ" notation, which **surfaced a 3h50m
+  Claude-Code-session-limit outage on 2026-10-11** (3:19:48pm-6:34:42pm
+  Eastern, queue ids 238-254 plus cron queue id 251) that had silently
+  dropped 17 messages with no reply, no retry, and no log entry until
+  this turn went looking — confirmed in `coordinator.py` that a
+  `failed` message is never retried or flagged. Recovered the actual
+  content of all 17 from the raw queue rows and backfilled it into
+  `projects/engineering/secure-agent-communication/CLAUDE.md` (most of
+  it — protocol/Ted-Bill-Accountant design content, including a
+  correction that queue id 241, not queue id 257, was the real first
+  time all three instances were named together, 1h49m earlier, just
+  inside the failure window), `projects/engineering/CLAUDE.md` (same
+  correction, parent-level), `projects/safehouse/general/CLAUDE.md`
+  (the two off-topic recovered messages: an F1/AI prediction, a plain
+  status update), and `projects/suv-replacement/CLAUDE.md` (the
+  dropped 6pm cron fire, with a scheduled-fire-numbering correction —
+  queue id 259 was really the eighth attempt, not the seventh). Moved
+  the Current-project pointer here from `suv-replacement` (folded back
+  into the other-live-projects list, nothing new since queue id 259)
+  and added a TODO entry above flagging the coordinator's no-retry/
+  no-notify behavior as worth fixing next time Paul is live (not built
+  unattended — application code). Sent the full grid and summary by
+  email (`1a13083f89d76bc4`, far too long for SMS), plus a short SMS
+  (`SMdd4bbc45d75f0e022cd97fe1f875dbdd`) flagging the outage, pointing
+  at the email, and asking Paul directly whether "wired up with Bill"
+  means queue id 254's planned in-person reboot visit already
+  happened, since nothing on record confirms it did.
