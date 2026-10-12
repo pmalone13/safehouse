@@ -207,27 +207,45 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 261, 2026-10-12 ~14:29Z, text, 12 seconds after
-the prior turn's own SMS went out, Paul: "Yeah worried that bill means
-there's a protocol. Now you can send Bill English messages using
-email and your encrypted your certificate." Answers the question the
-prior turn asked: "wired up with Bill" means the Ted<->Bayhouse
-protocol itself going live this morning (the real `PING`/`PONG` round
-trip), not necessarily queue id 254's separate in-person reboot-after-
-power-loss visit — moved the pointer here from `safehouse/general`
-(folded back into the other-live-projects list below, nothing new
-since queue id 260). **Two factual corrections sent back rather than
-left standing**: it's not certificate-based (v1 actually uses one
-shared symmetric Fernet key, which Paul himself confirmed live during
-last night's build — X.509 certs were only the pre-build plan), and
-the live commands aren't full English sentences either (they're short
-keywords — `PING`/`STATUS`/`LIST`/`RUN`/`HELP` — which is exactly the
-"shorthand" his own queue-236/237 rule said not to use; that rule
-isn't actually honored in v1 yet). Replied by SMS with both
-corrections and a direct follow-up: is Bill's power-loss/reboot
-problem from queue id 254 separately resolved, or was last night's
-build session the same visit? Full detail in
-`projects/engineering/secure-agent-communication/CLAUDE.md`.
+CLAUDE.md` — queue id 262, 2026-10-12 ~14:32Z, text, 2.5 minutes after
+the prior turn's SMS, Paul: "My next two [to-]dos are first we need to
+get Bill to reboot cleanly into a running [state] and then the second
+is a monitoring app I need." Pointer already here, no move needed —
+directly answers the open question from the prior turn: Bill's power-
+loss/reboot problem (queue id 254) is confirmed **still open**, not
+fixed by last night's protocol build — those really are two separate
+things. Added a "Paul's next two to-dos" section to the project file.
+To-do #2 ("a monitoring app") is genuinely ambiguous — could be the
+audio/sense-capture app already designed in this project, a new app
+to monitor Bill's own uptime/health (which would directly serve
+to-do #1), or something else — flagged back rather than guessed.
+Replied by SMS acknowledging both as standing priorities and asking
+which reading of #2 is right. Neither to-do was built — both are
+application code under the hard boundary, need Paul live. Full detail
+in `projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer note, same project — queue id 261, 2026-10-12
+~14:29Z, text, 12 seconds after queue id 260's own SMS went out, Paul:
+"Yeah worried that bill means there's a protocol. Now you can send
+Bill English messages using email and your encrypted your
+certificate." Answers the question asked at queue id 260: "wired up
+with Bill" means the Ted<->Bayhouse protocol itself going live this
+morning (the real `PING`/`PONG` round trip), not necessarily queue id
+254's separate in-person reboot-after-power-loss visit — moved the
+pointer here from `safehouse/general` (folded back into the
+other-live-projects list below, nothing new since queue id 260).
+**Two factual corrections sent back rather than left standing**: it's
+not certificate-based (v1 actually uses one shared symmetric Fernet
+key, which Paul himself confirmed live during last night's build —
+X.509 certs were only the pre-build plan), and the live commands
+aren't full English sentences either (they're short keywords —
+`PING`/`STATUS`/`LIST`/`RUN`/`HELP` — which is exactly the "shorthand"
+his own queue-236/237 rule said not to use; that rule isn't actually
+honored in v1 yet). Replied by SMS with both corrections and a direct
+follow-up: is Bill's power-loss/reboot problem from queue id 254
+separately resolved, or was last night's build session the same
+visit? **Answered one message later at queue id 262 above**: no, it's
+still open, confirmed as a separate to-do.
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 260, 2026-10-12 ~14:17Z, text, Paul: "Morning I did a lot yesterday. I
