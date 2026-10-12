@@ -4034,3 +4034,21 @@ thing that needs it, not because anything currently lives under it.
   2026-10-05 (queue id 176), unchanged; git push and the SMS send were
   unaffected. Not re-texting Paul about the Drive outage again —
   already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~14:3xZ: fresh session, queue id 264, text channel, Paul:
+  "No that's good thank you. We should actually we will create a
+  daily monitor like the SUV one that'll track Julio and send me an
+  email. Put it down as a note to do." Pure logging request, nothing
+  built — read "Julio" as "Twilio" (context: landed 4m47s after the
+  Twilio check, asking for a daily cron version of it, same
+  `cron_suv_watch.py` shape) and flagged that reading back to Paul
+  rather than silently assumed. Logged the standing to-do in
+  `projects/safehouse/general/CLAUDE.md`, also flagging whether it's
+  the same as queue id 262's ambiguous "monitoring app" or a separate
+  item (read as separate, asked rather than assumed). Replied by SMS
+  (`SM769fe1ba9923ee7178a18c461e0862cb`) with both flags. Pointer
+  stayed on `safehouse/general`, no move needed. Re-tried
+  `drive_sync.py` — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged; git push and the SMS
+  send were unaffected. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times, nothing new to add.
