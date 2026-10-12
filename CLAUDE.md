@@ -207,14 +207,26 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 275, 2026-10-12 ~20:24Z, text, Paul: "Ask Bill
-'How is the system.'" Moved the pointer here from `safehouse/general`
-(folded back into the live-projects list, nothing new since queue id
-274). Read as the protocol's real `STATUS` command (confirmed by
-extracting `ted_protocol_package_v1.zip`'s `COMMANDS.md` read-only).
-Using the already-built, already-tested protocol tooling to send a
-command is not a hard-boundary question — same class as the earlier
-`PING` test, not new code. Sent `STATUS`; **caught a real bug in
+CLAUDE.md` — queue id 276, 2026-10-12 ~20:29Z, text, Paul: "Right,
+Bill and I are working." Pointer already here, no move needed.
+Confirms the exact explanation given one message earlier (queue id
+275): the `STATUS` command got no reply because Bill is offline right
+now with Paul working on it live, not some other failure. No new
+design content — replied by SMS confirming the read and offering to
+retry `STATUS` whenever Paul says Bill's back up. Worth returning to
+once this live session wraps: retest `STATUS`/`LIST`/`HELP` against a
+freshly-rebooted Bill, and consider fixing the `poll_for_reply()`
+stale-reply bug found at queue id 275 while Paul's present.
+
+Previous pointer, same project — queue id
+275, 2026-10-12 ~20:24Z, text, Paul: "Ask Bill 'How is the system.'"
+Moved the pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 274). Read as the
+protocol's real `STATUS` command (confirmed by extracting
+`ted_protocol_package_v1.zip`'s `COMMANDS.md` read-only). Using the
+already-built, already-tested protocol tooling to send a command is
+not a hard-boundary question — same class as the earlier `PING` test,
+not new code. Sent `STATUS`; **caught a real bug in
 `poll_for_reply()`** while verifying — it returned this morning's
 stale `PONG` reply as if it answered `STATUS`, since the function
 never checks whether a found message is actually newer than the
@@ -4339,3 +4351,18 @@ thing that needs it, not because anything currently lives under it.
   flagged 2026-10-05 (queue id 176), unchanged; git push and both SMS
   sends were unaffected. Not re-texting Paul about the Drive outage
   again — already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~20:29Z: fresh session, queue id 276, text channel, Paul:
+  "Right, Bill and I are working." Confirms the exact explanation
+  given one message earlier for `STATUS` getting no reply — Bill is
+  offline right now because Paul is working on it live, not some
+  other failure. No new design content, no code touched, no pointer
+  move (stayed `engineering/secure-agent-communication`). Replied by
+  SMS confirming the read and offering to retry `STATUS` whenever
+  Bill's back up. Logged a note to revisit `STATUS`/`LIST`/`HELP`
+  against a freshly-rebooted Bill and the `poll_for_reply()` bug once
+  this live session wraps. Re-tried `drive_sync.py` — still the
+  identical `invalid_grant` failure first flagged 2026-10-05 (queue id
+  176), unchanged; git push and the SMS send were unaffected. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add.
