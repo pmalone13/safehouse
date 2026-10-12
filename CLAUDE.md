@@ -3876,4 +3876,9 @@ thing that needs it, not because anything currently lives under it.
   (`SMdd4bbc45d75f0e022cd97fe1f875dbdd`) flagging the outage, pointing
   at the email, and asking Paul directly whether "wired up with Bill"
   means queue id 254's planned in-person reboot visit already
-  happened, since nothing on record confirms it did.
+  happened, since nothing on record confirms it did. Re-tried
+  `drive_sync.py` as part of this checkpoint — still the identical
+  `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
+  unchanged across every session since; git push and both Gmail/SMS
+  sends were unaffected. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times, nothing new to add.
