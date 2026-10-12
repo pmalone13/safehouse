@@ -3768,3 +3768,15 @@ thing that needs it, not because anything currently lives under it.
   `projects/suv-replacement/CLAUDE.md` and
   `craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern
   today (2026-10-12).
+
+- 2026-10-12 ~13:2xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 259, already fully
+  handled, logged, committed, and pushed (`959bfa9`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up, so this
+  entry is the only change this turn makes. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged across every session since; git push and
+  the Gmail send were both unaffected. Not re-texting Paul about the
+  Drive outage again — already flagged multiple times, nothing new to
+  add. Next scheduled SUV/truck cron fire: 6pm Eastern today
+  (2026-10-12).
