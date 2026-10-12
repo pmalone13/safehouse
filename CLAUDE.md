@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+274, 2026-10-12 ~19:49Z, text, Paul: "Could we also use WhatsApp to
+chat." Pointer already here, no move needed. A new-capability
+question, not a build request — checked for existing WhatsApp code
+first (none exists). Explained honestly: possible via Twilio's own
+WhatsApp Business API (same account), but a real build — a
+Meta-verified WhatsApp Business sender, approved message templates
+(similar compliance hurdle to the A2P 10DLC SMS work), and a new
+webhook (different payload format than the SMS one). Same
+hard-boundary posture as every other integration — needs Paul live,
+not built unattended. Replied by SMS and asked whether to build it
+next time he's on SSH or whether SMS/email already cover his needs.
+
+Previous pointer, same project — queue id
 273, 2026-10-12 ~19:37Z, text, Paul: "Ted, can you look at all
 messages from yesterday and see if you processed them all? If not,
 simply summarize ones you missed." Pointer already here, no move
@@ -4231,3 +4244,27 @@ thing that needs it, not because anything currently lives under it.
   unchanged; git push and the SMS send were unaffected. Not re-texting
   Paul about the Drive outage again — already flagged multiple times,
   nothing new to add.
+
+- 2026-10-12 ~19:49Z: fresh session, queue id 274, text channel, Paul:
+  "Could we also use WhatsApp to chat." A new-capability question, not
+  a build request. Grepped the repo for existing WhatsApp code/
+  references first (none found — only SMS via Twilio and email via
+  Gmail exist today) rather than assume or guess at feasibility.
+  Explained plainly: WhatsApp is possible through Twilio's own
+  WhatsApp Business API (same account already in use for SMS), but it
+  is a genuine build, not a config flip — needs a Meta-verified
+  WhatsApp Business sender, approved message templates for any
+  business-initiated message (comparable compliance overhead to the
+  A2P 10DLC SMS registration this system already went through), and a
+  new webhook endpoint since WhatsApp's inbound payload shape differs
+  from the existing SMS webhook (`twilio_webhook.py`). Same
+  hard-boundary posture as every other integration build this system
+  has done — needs Paul live and directing, not something to build
+  unattended off a queued text. Replied by SMS with that explanation
+  and asked whether to tackle it next time he's on SSH, or whether
+  SMS/email already cover what he needs. No code touched, no pointer
+  move (stayed `safehouse/general`). Re-tried `drive_sync.py` — still
+  the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged; git push and the SMS send were
+  unaffected. Not re-texting Paul about the Drive outage again —
+  already flagged multiple times, nothing new to add.
