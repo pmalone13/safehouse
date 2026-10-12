@@ -3905,3 +3905,27 @@ thing that needs it, not because anything currently lives under it.
   unchanged across every session since; git push and both Gmail/SMS
   sends were unaffected. Not re-texting Paul about the Drive outage
   again — already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~14:3xZ: fresh session, queue id 261, text channel, 12
+  seconds after the prior turn's SMS went out. Paul answered the
+  "what does 'wired up with Bill' mean" question: it's the Ted<->
+  Bayhouse protocol itself (this morning's live `PING`/`PONG`), not
+  necessarily queue id 254's separate in-person reboot visit. His
+  message also described the mechanism as "your encrypted your
+  certificate" and "English messages" — checked both against the
+  actual Version 1 build detail already on file
+  (`projects/engineering/secure-agent-communication/CLAUDE.md`) rather
+  than let them stand: v1 uses a shared symmetric Fernet key, not
+  X.509 certificates (he confirmed that live during last night's
+  build), and the real commands are short keywords (`PING`/`STATUS`/
+  `LIST`/`RUN`/`HELP`), not the full-English-sentence format his own
+  queue-236/237 rule calls for — that rule isn't honored yet. Replied
+  by SMS (`SMf534ad659b5932c1059d740016bccf86`) with both corrections
+  and a direct question about whether Bill's power-loss/reboot problem
+  is actually fixed. Moved the Current-project pointer to
+  `engineering/secure-agent-communication` from `safehouse/general`.
+  Re-tried `drive_sync.py` — still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), unchanged; git push
+  and the SMS send were unaffected. Not re-texting Paul about the
+  Drive outage again — already flagged multiple times, nothing new to
+  add.
