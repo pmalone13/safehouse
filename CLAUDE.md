@@ -207,6 +207,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+273, 2026-10-12 ~19:37Z, text, Paul: "Ted, can you look at all
+messages from yesterday and see if you processed them all? If not,
+simply summarize ones you missed." Pointer already here, no move
+needed. A broader audit than queue id 272's (today-only) — this one
+covers all of 2026-10-11 (38 messages: 20 `done`, 18 `failed`).
+Cross-checked all 18 `failed` rows against what's already on file
+rather than assume they're unrecovered: all 17 from the known
+3h50m outage (queue ids 238-254) and the 18th, queue id 230
+("Checkpoint D," a separate `'Prompt is too long'` failure), were
+already caught and backfilled by earlier turns (the outage batch
+during yesterday's queue id 260 checkpoint-grid work; "Checkpoint D"
+same-day by the queue-231 turn, commit `1767f0d`). **Good news, not
+new recovery work: nothing from yesterday is actually missing.**
+Replied by SMS with the tally. Logged the useful general lesson: a
+`failed` `queue.db` status doesn't reliably mean "never logged" — a
+later turn can read the raw body directly and recover it without
+ever updating the status column, exactly as happened twice already.
+
+Previous pointer, same project — queue id
 272, 2026-10-12 ~18:38Z, text, Paul: "Please look backward in messages
 and see that you've read messages from today. We had an outage for 2
 hours." Pointer already here, no move needed. Paul was right and the
@@ -4180,3 +4199,35 @@ thing that needs it, not because anything currently lives under it.
   flagged 2026-10-05 (queue id 176), unchanged; git push and the SMS
   send were unaffected. Not re-texting Paul about the Drive outage
   again — already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~19:37Z: fresh session, queue id 273, text channel, Paul:
+  "Ted, can you look at all messages from yesterday and see if you
+  processed them all? If not, simply summarize ones you missed." A
+  broader audit than the prior turn's (today-only) — this covers all
+  of 2026-10-11. Queried `queue.db` fresh for the full day: 38
+  messages, 20 `done`, 18 `failed`. Rather than assume `failed` means
+  "never recovered," cross-checked each of the 18 against the actual
+  project files: 17 (queue ids 238-254) are the already-known 3h50m
+  outage batch, fully backfilled yesterday during queue id 260's own
+  checkpoint-grid work (confirmed present in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`'s "Recovered" section and two
+  entries in `safehouse/general`); the 18th (queue id 230, "Checkpoint
+  D") failed for an unrelated reason (`'Prompt is too long'`, not the
+  session-limit error) but was caught and logged the same day anyway —
+  traced via `git log --grep` to commit `1767f0d`, made at 19:06:13Z
+  on 2026-10-11, right between queue ids 231 and 232, showing the turn
+  handling queue id 231 read queue id 230's raw body directly and
+  logged both together without ever flipping its `failed` status.
+  **Net result: nothing from yesterday is actually missing** — this
+  turn's real job was confirming that, not doing new recovery.
+  Replied by SMS with the full tally and explanation. Logged the
+  general lesson in `safehouse/general`: a `failed` `queue.db` row
+  isn't a reliable signal that content was never captured — a later
+  turn reading the raw body directly (as happened twice now) recovers
+  it without updating the status column, so any future "were there
+  messages I missed" audit needs to check the actual logs, not just
+  the status column. Re-tried `drive_sync.py` — still the identical
+  `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
+  unchanged; git push and the SMS send were unaffected. Not re-texting
+  Paul about the Drive outage again — already flagged multiple times,
+  nothing new to add.
