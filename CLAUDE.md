@@ -3992,3 +3992,26 @@ thing that needs it, not because anything currently lives under it.
   unchanged; git push and the SMS send were unaffected. Not re-texting
   Paul about the Drive outage again — already flagged multiple times,
   nothing new to add.
+
+- 2026-10-12 ~14:3xZ: fresh session, queue id 263, text channel, 49
+  seconds after queue id 262. Paul: "And a big one. We need to check
+  twilio and see what our utilization is. I don't want to be burning
+  dollars." Third item in the same rapid to-do exchange, but general
+  billing hygiene rather than Ted/Bill protocol work, so moved the
+  Current-project pointer to `safehouse/general`. Ran a read-only
+  Twilio Usage/Balance API query (no code touched, same shape as the
+  queue-id-50 check from 2026-09-09): balance $12.39 (down from
+  $17.79 a month ago), this month $3.99 so far, last month $20.86
+  (mostly a one-time $15 A2P re-vetting fee), all-time ~$41,
+  consistent with the prior check. Real recurring cost is ~$3-5/month
+  texting + $1.15/month number rental — not burning fast. Found a
+  gotcha worth remembering: Twilio's bulk usage-category listing
+  silently omits `phonenumbers-local` unless queried directly by
+  category name. Replied by SMS (`SM2095991d4db89da0c46c242799ac2562`)
+  with the full breakdown and a note that auto-recharge settings
+  aren't visible from the API (Console-only). Full detail in
+  `projects/safehouse/general/CLAUDE.md`. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged
+  2026-10-05 (queue id 176), unchanged; git push and the SMS send were
+  unaffected. Not re-texting Paul about the Drive outage again —
+  already flagged multiple times, nothing new to add.
