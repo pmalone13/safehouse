@@ -3947,3 +3947,24 @@ thing that needs it, not because anything currently lives under it.
   and the SMS send were unaffected. Not re-texting Paul about the
   Drive outage again — already flagged multiple times, nothing new to
   add.
+
+- 2026-10-12 ~14:3xZ: fresh session, queue id 262, text channel, 2.5
+  minutes after queue id 261's own reply. Paul: "My next two [to-]dos
+  are first we need to get Bill to reboot cleanly into a running
+  [state] and then the second is a monitoring app I need." Directly
+  answers the open question from the prior turn — Bill's power-loss/
+  reboot problem (queue id 254) is confirmed still open, separate
+  from last night's protocol build. Added a "Paul's next two to-dos"
+  section to `projects/engineering/secure-agent-communication/
+  CLAUDE.md`. To-do #2 ("a monitoring app") is ambiguous — could be
+  the audio/sense-capture app already designed in this project, a new
+  app to monitor Bill's own uptime/health, or something else — so
+  flagged back rather than guessed. Replied by SMS
+  (`SMd483e133733132662d54f28e819c8500`) acknowledging both as
+  standing priorities and asking which reading of #2 is right.
+  Pointer stayed on `engineering/secure-agent-communication`, no move
+  needed. Re-tried `drive_sync.py` — still the identical
+  `invalid_grant` failure first flagged 2026-10-05 (queue id 176),
+  unchanged; git push and the SMS send were unaffected. Not re-texting
+  Paul about the Drive outage again — already flagged multiple times,
+  nothing new to add.
