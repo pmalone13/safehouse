@@ -56,6 +56,7 @@ EXCLUDE_NAMES = {
     ".drive_api_token.json", ".drive_api_token.lock",
     ".photos_api_client_secret.json", ".photos_api_token.json",
     ".photos_api_token.lock",
+    "ted_key.txt",
     "queue.db", "queue.db-wal", "queue.db-shm",
     "logs.db", "logs.db-wal", "logs.db-shm",
     "optins.db", "optins.db-wal", "optins.db-shm",

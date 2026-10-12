@@ -206,7 +206,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/CLAUDE.md` — queue id 257,
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — live/SSH session, 2026-10-12 ~04:0xZ, no queue id (same
+shape as the cron_suv_watch.py build session). Paul handed Ted a zip,
+`ted_protocol_package_v1.zip`, built by Bayhouse itself: the real
+Version 1 implementation package for the Ted<->Bayhouse protocol
+designed in this sub-project (README/PROTOCOL_SPEC/COMMANDS plus a
+Python crypto reference and a shared secret key). Moved the pointer
+here from the `engineering` parent (folded back into the list below,
+nothing new since queue id 257). Confirmed via SSH auth logs that the
+zip was placed by Paul's own verified session (same key/IP as every
+prior confirmed login), not an unknown party, before trusting its
+contents. Three things confirmed with Paul before building: (1) the
+package's Fernet-shared-key crypto, not the earlier-planned X.509
+certs, is the real v1 mechanism — intentional, not a gap; (2)
+Bayhouse's real address is `psmalone13@gmail.com`, resolving the old
+queue-id-228 ambiguity (it was never a mis-transcription of Paul's own
+`pmalone13@gmail.com`); (3) the key file must never reach git — same
+lesson as the 2026-09-25 Photos-token Drive leak, applied here before
+committing anything. Built, live, with Paul directing (the hard
+boundary's explicit carve-out): `drive_sync.py` EXCLUDE_NAMES gained
+`ted_key.txt` first; `google_client.py` gained a reusable
+`send_message_with_attachment()`; new `ted_protocol.py` implements
+`encrypt_command()`/`decrypt_reply()`/`send_command()`/
+`poll_for_reply()`. **Ran a real end-to-end test, not just a local
+crypto check**: sent an encrypted `PING` to Bayhouse, received and
+decrypted a real `PONG` reply ~14 seconds later — verified it wasn't a
+stale leftover (only one matching message existed, delivered after
+the send) before calling it confirmed. The channel works, live, both
+directions. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/CLAUDE.md` — queue id 257,
 2026-10-12 ~00:20Z, text, Paul: "so our overarching objective with our
 system: Ted, Bill and The Accountant is that we don't iritate others.
 Both humans and other AIs. Don't cause friction, just listen and

@@ -232,6 +232,29 @@ def send_message(service, to: str, subject: str, body_text: str) -> str:
     return sent.get("id")
 
 
+def send_message_with_attachment(service, to: str, subject: str, body_text: str,
+                                  attachment_bytes: bytes, filename: str,
+                                  mime_type: str = "application/octet-stream") -> str:
+    """Same as send_message() but with one binary attachment. Added
+    2026-10-12 for ted_protocol.py (encrypted command/reply payloads are
+    sent this way, with subject/body left empty since that protocol
+    never reads them) -- a real recurring need, not a one-off, unlike
+    the earlier ad-hoc EmailMessage.add_attachment() scripts used for
+    the NE-trip workbook and the blank SUT3 form."""
+    maintype, _, subtype = mime_type.partition("/")
+    msg = EmailMessage()
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body_text)
+    msg.add_attachment(attachment_bytes, maintype=maintype, subtype=subtype or "octet-stream",
+                        filename=filename)
+    raw = base64.urlsafe_b64encode(msg.as_bytes()).decode("utf-8")
+    sent = service.users().messages().send(userId="me", body={"raw": raw}).execute()
+    log.info(f"sent message id={sent.get('id')} to={to!r} subject={subject!r} "
+             f"attachment={filename!r} ({len(attachment_bytes)} bytes)")
+    return sent.get("id")
+
+
 # ---------------------------------------------------------------- Drive --
 
 def get_drive_client():
