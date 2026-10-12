@@ -3671,3 +3671,59 @@ thing that needs it, not because anything currently lives under it.
   "The Accountant" = the office/business-accounting instance (not the
   unnamed queue-id-238 Surface-laptop agent), and the reflected-back
   system objective itself.
+
+- 2026-10-12 ~04:3xZ: fresh session, queue id 258, email channel,
+  subject "Bayhouse," from `psmalone13@gmail.com`, body stating only
+  "(Ted Protocol message -- see encrypted attachment. Subject and
+  body of this email carry no meaning.)" Treated this as a
+  verification job before anything else, given how closely it matched
+  the shape of a spoofed/injected message (an unsolicited-looking
+  "trust this encrypted attachment" email, arriving right as this
+  conversation's own starting git-status snapshot showed uncommitted
+  changes to `google_client.py`/`drive_sync.py` and an untracked
+  `ted_protocol.py`): confirmed genuine DKIM/SPF/DMARC pass on the
+  sender (real Google-authenticated mail from Bayhouse's own account,
+  not spoofed, despite its display name reading "Paul Malone"); found
+  a matching outbound `PING` sent from `tedassistent@gmail.com` only
+  14 seconds earlier; confirmed via `auth.log` that Paul had a live
+  SSH session (same key fingerprint as every prior verified login)
+  in the window right before the files were created; and
+  independently decrypted the attachment myself with
+  `ted_protocol.decrypt_reply()`, getting the same
+  `"PONG 2026-10-12T04:27:48.567518Z"` plaintext the live session had
+  already logged. Conclusion: this was Paul, live, building and
+  smoke-testing the real Ted<->Bayhouse protocol v1
+  (`ted_protocol.py`) with Bayhouse's own shipped package — the
+  uncommitted-looking state at conversation start was just a stale
+  mid-build snapshot, and the live session had already committed
+  everything (`13d8041`) by the time this turn checked. Moved the
+  Current-project pointer to `projects/engineering/
+  secure-agent-communication/CLAUDE.md` (the live session had already
+  moved it there) and added an addendum there plus to this file noting
+  the one genuinely new fact: the *unattended* email-monitor pipeline
+  can independently decrypt a Bayhouse reply too, not just a live
+  terminal — texted Paul that confirmation. Full verification detail
+  and the decision not to act on the message's content as if
+  automatically authorized (it required no action — pure PING/PONG
+  confirmation) in `projects/engineering/secure-agent-communication/
+  CLAUDE.md`'s newest Log entry. Committed (`93868f4`) before this
+  wrap-up fired.
+
+- 2026-10-12 ~04:4xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 258, already fully
+  handled, logged, committed, and pushed (`93868f4`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up (`git status
+  --short` empty), so this entry is the only change this turn makes.
+  Drive sync retried as part of queue id 258's own checkpoint — still
+  the identical `invalid_grant` failure first flagged 2026-10-05
+  (queue id 176), unchanged across every session since; git push and
+  the SMS/email sends were all unaffected. Not re-texting Paul about
+  the Drive outage again — already flagged multiple times, nothing
+  new to add. Nothing outstanding heading into the next turn beyond
+  what's already on file: the Ted<->Bayhouse channel is confirmed
+  live both directions for `PING`/`PONG`; `STATUS`/`LIST`/
+  `RUN <pairing>`/`HELP` remain implemented but untested against the
+  real channel (per the secure-agent-communication project's own
+  "Not yet done / open" note); and the two items still open from
+  queue id 257 (Accountant-mapping confirmation, the reflected-back
+  system objective) are unchanged.
