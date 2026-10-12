@@ -207,6 +207,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+264, 2026-10-12 ~14:37Z, text, Paul: "No that's good thank you. We
+should actually we will create a daily monitor like the SUV one
+that'll track Julio and send me an email. Put it down as a note to
+do." Pointer already here, no move needed. A logging-only request
+("put it down as a note to do"), not a build — read "Julio" as
+"Twilio" (no one named Julio has ever come up; this landed 4m47s
+after the Twilio check above, asking for a daily cron version of
+exactly that, same shape as `cron_suv_watch.py`), flagged that
+reading back to Paul rather than silently assumed. Logged as a
+standing to-do (daily cron, enqueue-and-let-a-normal-turn-handle-it
+pattern, checks Twilio balance/usage, emails Paul) — not built, per
+the hard boundary. Also flagged a second open question: whether this
+is the same thing as queue id 262's ambiguous "a monitoring app I
+need" (Bill/Ted protocol context) or a separate item — read as
+separate for now (this one's about Twilio usage, not Bill) but asked
+rather than assumed. Replied by SMS with both flags. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 263, 2026-10-12 ~14:32Z, text, 49 seconds after queue id 262, Paul:
 "And a big one. We need to check twilio and see what our utilization
 is. I don't want to be burning dollars." Third item in the same rapid
