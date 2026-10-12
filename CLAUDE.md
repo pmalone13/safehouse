@@ -206,23 +206,47 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+263, 2026-10-12 ~14:32Z, text, 49 seconds after queue id 262, Paul:
+"And a big one. We need to check twilio and see what our utilization
+is. I don't want to be burning dollars." Third item in the same rapid
+to-do exchange as queue ids 261-262, but this one is general account/
+billing hygiene rather than Ted/Bill protocol work, so moved the
+pointer here from `engineering/secure-agent-communication` (folded
+back into the other-live-projects list below, nothing new since queue
+id 262). Read-only Twilio Usage/Balance API query, no code touched
+(same shape as the queue-id-50 check from 2026-09-09): balance
+$12.39 (down from $17.79 a month ago); this month so far $3.99 total
+($2.84 SMS + $1.15 number rental, 12 days in); last month $20.86, but
+$15 of that was a one-time A2P re-vetting fee, not recurring; all-time
+~$41, consistent with the 2026-09-09 figure. Real recurring run rate
+is ~$3-5/month texting plus $1.15/month rental — not burning fast.
+One gotcha found: Twilio's bulk usage-category listing silently omits
+the phone-number-rental category unless queried directly by name — a
+future cost check should ask for `phonenumbers-local` explicitly
+rather than trust the bulk dump to be complete. No visibility into
+auto-recharge settings from the API (Console-only) — flagged to Paul
+rather than guessed at. Replied by SMS with the full breakdown. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 262, 2026-10-12 ~14:32Z, text, 2.5 minutes after
 the prior turn's SMS, Paul: "My next two [to-]dos are first we need to
 get Bill to reboot cleanly into a running [state] and then the second
-is a monitoring app I need." Pointer already here, no move needed —
-directly answers the open question from the prior turn: Bill's power-
-loss/reboot problem (queue id 254) is confirmed **still open**, not
-fixed by last night's protocol build — those really are two separate
-things. Added a "Paul's next two to-dos" section to the project file.
-To-do #2 ("a monitoring app") is genuinely ambiguous — could be the
-audio/sense-capture app already designed in this project, a new app
-to monitor Bill's own uptime/health (which would directly serve
-to-do #1), or something else — flagged back rather than guessed.
-Replied by SMS acknowledging both as standing priorities and asking
-which reading of #2 is right. Neither to-do was built — both are
-application code under the hard boundary, need Paul live. Full detail
-in `projects/engineering/secure-agent-communication/CLAUDE.md`.
+is a monitoring app I need." Pointer already there at the time, no
+move needed — directly answered the open question from the prior
+turn: Bill's power-loss/reboot problem (queue id 254) is confirmed
+**still open**, not fixed by last night's protocol build — those
+really are two separate things. Added a "Paul's next two to-dos"
+section to the project file. To-do #2 ("a monitoring app") is
+genuinely ambiguous — could be the audio/sense-capture app already
+designed in this project, a new app to monitor Bill's own uptime/
+health (which would directly serve to-do #1), or something else —
+flagged back rather than guessed. Replied by SMS acknowledging both
+as standing priorities and asking which reading of #2 is right.
+Neither to-do was built — both are application code under the hard
+boundary, need Paul live. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
 
 Previous pointer note, same project — queue id 261, 2026-10-12
 ~14:29Z, text, 12 seconds after queue id 260's own SMS went out, Paul:
