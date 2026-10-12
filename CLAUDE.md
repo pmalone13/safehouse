@@ -18,6 +18,18 @@ development — the one used to build this very system). Same
 underlying models, different scopes. Don't assume context from the
 other two carries over here, and don't assume a project Paul mentions
 in passing belongs to this instance until he actually assigns it here.
+**Named, 2026-10-12 (queue id 257):** Paul referred to "our system:
+Ted, Bill and The Accountant," naming all three for the first time
+together — this instance is **Ted**, the basement/home-automation
+instance is **Bill** (named earlier, queue id 224), and the office
+computer's business/accounting instance is **The Accountant**. Flagged
+back to Paul rather than assumed outright, since that's the most
+natural mapping (matches this paragraph's own "business/accounting"
+description) but wasn't stated with 100% explicitness, and there's
+also a separate, still-unnamed fourth node mentioned once
+(queue id 238, a new agent Paul is building on his Surface laptop —
+see `projects/engineering/secure-agent-communication/CLAUDE.md`) that
+could in principle be confused with it.
 **New detail, 2026-10-11 (queue id 223):** that third/basement instance
 also controls home automation (lights/switches) at Paul's house as part
 of its own scope — he nicknamed it "the bay house" (likely the same
@@ -194,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/engineering/CLAUDE.md` — queue id 257,
+2026-10-12 ~00:20Z, text, Paul: "so our overarching objective with our
+system: Ted, Bill and The Accountant is that we don't iritate others.
+Both humans and other AIs. Don't cause friction, just listen and
+audit." A mission-statement-level design principle for the whole
+three-instance system, not just the Ted<->Bill protocol — moved the
+pointer here (the `engineering` parent project, not the narrower
+`secure-agent-communication` sub-project) from `safehouse/general`
+(folded back into the other-live-projects list below, nothing new
+since queue id 256) since this covers all three named instances,
+including The Accountant, which isn't part of that sub-project's
+scope. Also the first time Paul has named the third/office instance
+"The Accountant" (see this file's own "one of three Claude Code
+instances" paragraph above, updated to match) — flagged that mapping
+back to him rather than assumed outright. Direct continuation of queue
+id 256's "nerve cell to something beyond comprehension" musing
+(logged in `safehouse/general`): the same "don't irritate, just
+listen" framing, now stated as this system's actual objective rather
+than abstract philosophy. Replied by SMS reflecting the objective back
+(minimize friction, listen-and-audit over acting, applies to both
+human and AI counterparts) and asking him to confirm the Accountant
+mapping. Full detail in `projects/engineering/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 256, 2026-10-12 ~00:02Z, text, Paul: "If we're really nothing but a
 nerve cell to something that's much much beyond our comprehension,
 then I think we should worry about whether we are irritating it or
