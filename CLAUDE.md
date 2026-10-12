@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 275, 2026-10-12 ~20:24Z, text, Paul: "Ask Bill
+'How is the system.'" Moved the pointer here from `safehouse/general`
+(folded back into the live-projects list, nothing new since queue id
+274). Read as the protocol's real `STATUS` command (confirmed by
+extracting `ted_protocol_package_v1.zip`'s `COMMANDS.md` read-only).
+Using the already-built, already-tested protocol tooling to send a
+command is not a hard-boundary question — same class as the earlier
+`PING` test, not new code. Sent `STATUS`; **caught a real bug in
+`poll_for_reply()`** while verifying — it returned this morning's
+stale `PONG` reply as if it answered `STATUS`, since the function
+never checks whether a found message is actually newer than the
+command just sent. Queried Gmail directly by `internalDate` instead
+and waited ~190s total — no reply ever arrived, versus 14 seconds for
+this morning's real PONG. Reported that honestly to Paul: no answer,
+most likely because Bill isn't actively running right now, directly
+tying to queue id 262's still-open "get Bill rebooting cleanly" to-do.
+`poll_for_reply()`'s bug logged as a TODO (needs Paul live to fix),
+not touched unattended. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 274, 2026-10-12 ~19:49Z, text, Paul: "Could we also use WhatsApp to
 chat." Pointer already here, no move needed. A new-capability
 question, not a build request — checked for existing WhatsApp code
@@ -1645,6 +1666,25 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-12 (queue id 275): `ted_protocol.poll_for_reply()`
+  can return a stale reply as if it answered the command just sent —
+  needs Paul live to fix.** The function only checks whether a
+  decryptable attachment from Bayhouse is new to *this call's own*
+  `seen_ids` set; it never checks the message's actual timestamp
+  against when the command was sent. Caught live: sending `STATUS`
+  and polling returned this morning's `PONG` (from the original
+  queue-258 test, hours earlier) as if it were the `STATUS` answer.
+  Worked around it this turn by querying Gmail directly for
+  `internalDate` newer than the send time instead of trusting the
+  helper — confirmed no real reply ever arrived. **Not fixed**: the
+  real fix (track a high-water-mark timestamp or message id across
+  calls, or at minimum compare `internalDate` against send time
+  inside the function itself) is an edit to existing application
+  code, needs Paul live and present per the hard boundary. Until
+  fixed, any future `send_command`+`poll_for_reply` use should
+  double-check the reply's actual timestamp before trusting it,
+  exactly as done this turn.
 
 - **Found 2026-10-12 (queue id 260): a 3h50m Claude-session-limit
   outage on 2026-10-11 silently swallowed 17 of Paul's texts, with no
@@ -4268,3 +4308,34 @@ thing that needs it, not because anything currently lives under it.
   (queue id 176), unchanged; git push and the SMS send were
   unaffected. Not re-texting Paul about the Drive outage again —
   already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~20:24Z: fresh session, queue id 275, text channel, Paul:
+  "Ask Bill 'How is the system.'" Moved the Current-project pointer
+  to `engineering/secure-agent-communication` from `safehouse/general`
+  (folded back into the live-projects list, nothing new since queue
+  id 274). Confirmed the real protocol command matching "how is the
+  system" by extracting `ted_protocol_package_v1.zip`'s `COMMANDS.md`
+  read-only (deleted the temp extraction after reading): `STATUS`.
+  Sending a command over the already-built, already-tested
+  `ted_protocol.py` tooling is using existing capability, not writing
+  new code — same class as the earlier live `PING` test, not a
+  hard-boundary question. Sent `STATUS` via `send_command()`.
+  **Caught a real bug in `poll_for_reply()`**: it returned this
+  morning's stale `PONG` reply as the apparent answer, since the
+  function has no check that a found message is actually newer than
+  the command just sent — it just returns the first decryptable
+  attachment from Bayhouse it finds. Did not report that stale reply
+  to Paul as real; instead queried Gmail directly by `internalDate`
+  and waited ~190s total for anything newer than the send — nothing
+  arrived (vs. 14 seconds for the real PONG this morning). Reported
+  honestly: no reply, most likely because Bill isn't actively running
+  right now, tying directly to queue id 262's still-open "get Bill
+  rebooting cleanly after power loss" to-do. Logged the
+  `poll_for_reply()` bug as a new TODO entry (needs Paul live to fix,
+  not touched unattended) and the full STATUS-attempt detail in
+  `projects/engineering/secure-agent-communication/CLAUDE.md`. Replied
+  by SMS with the no-reply finding and the likely explanation. Re-tried
+  `drive_sync.py` — still the identical `invalid_grant` failure first
+  flagged 2026-10-05 (queue id 176), unchanged; git push and both SMS
+  sends were unaffected. Not re-texting Paul about the Drive outage
+  again — already flagged multiple times, nothing new to add.
