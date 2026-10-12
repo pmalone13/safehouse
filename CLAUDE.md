@@ -4068,3 +4068,20 @@ thing that needs it, not because anything currently lives under it.
   flagged 2026-10-05 (queue id 176), unchanged; git push and the SMS
   send were unaffected. Not re-texting Paul about the Drive outage
   again — already flagged multiple times, nothing new to add.
+
+- 2026-10-12 ~15:1xZ: fresh session, queue id 265, text channel, Paul:
+  "Testing. Vocal text from phone." Confirms a standing suspicion:
+  these texts are phone dictation sent as plain SMS, not audio MMS
+  (which auto-transcribes with a `[Voice message transcript]:`
+  prefix) — explains the run of odd word substitutions across this
+  session and earlier ones (e.g. "Julio" for "Twilio" at queue id
+  264, "shortbes" for "shortbed" back on 2026-10-10) that arrived as
+  ordinary unflagged texts. Logged in `projects/safehouse/general/
+  CLAUDE.md` as a standing fact worth remembering for future garbled
+  messages. Replied by SMS confirming receipt and the dictation
+  explanation. Pointer stayed on `safehouse/general`, no move needed.
+  Re-tried `drive_sync.py` — still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), unchanged; git
+  push and the SMS send were unaffected. Not re-texting Paul about
+  the Drive outage again — already flagged multiple times, nothing
+  new to add.
