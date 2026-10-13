@@ -207,27 +207,54 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 292, 2026-10-13 ~20:05Z, text, Paul: "Ask Bill
-what is the weather in Deale MD now." Moved the pointer here from
-`safehouse/general` (folded back into the live-projects list below,
-nothing new since queue id 291). Checked the real protocol command set
-first rather than guess — v1 is strictly keyword-only (`PING`/
-`STATUS`/`LIST`/`RUN`/`HELP`, confirmed from the extracted
-`COMMANDS.md`), no free-text query support exists yet, and `STATUS`
-itself only reports process liveness + last bird-capture time, not
-weather or sensor readings. Did not send anything to Bill — it would
-just bounce as `ERROR: unknown command`, a predictable wasted round
-trip. Answered directly instead: pulled a real-time observation from
-the nearest NWS station (KNAK, Annapolis Naval Academy, ~8mi from
-Deale) via `api.weather.gov` — Clear, 77F, NNW ~13mph, 66% humidity,
-as of 2:54pm Eastern today. Caught a stale `WebSearch` result (dated
+CLAUDE.md` — queue id 293, 2026-10-13 ~20:46Z, email, subject "ask
+Bill," Paul: "what is the weather." Pointer already here (no move
+needed) — but the protocol itself changed underneath it in between:
+a live session (Paul + Claude, ~20:37-20:42Z, commit `390a0db`)
+upgraded `ted_protocol.py` to v2, which Bayhouse issued the same
+afternoon. **Purely additive, crypto/transport unchanged** — the one
+real change is Bayhouse's receiving side no longer errors on a
+message that isn't one of the five fixed commands; it now answers a
+genuine free-form question or task directly (slower, "up to a couple
+of minutes" per spec, vs. sub-second for a fixed command).
+`poll_for_reply()`'s default timeout was bumped 90s -> 180s to match.
+This directly closes the gap hit one message earlier at queue id
+292 (below) — that same weather question got no real Bill-side
+answer there because v1 was keyword-only. This turn is the **first
+live test of the new free-form path**: sent "What is the weather
+right now?" verbatim, polled Gmail directly by `internalDate` rather
+than trust `poll_for_reply()` blind (its stale-reply bug, queue id
+275, is still unfixed), got a genuine reply back in ~46 seconds —
+"I don't have access to live weather data from this channel — no
+internet or external sensors here, just Bill's stored project notes.
+You'll need to check a weather app or service directly for current
+conditions." Confirms both that v2 works as documented and that Bill
+really is sandboxed with no outbound internet/sensor access. Replied
+by email (the arrival channel) with Bill's actual answer plus a
+direct NWS reading (same method as queue id 292): Clear, 76F,
+~11mph wind, 67% humidity, nearest station KNAK, as of 2:54pm
+Eastern. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — queue id 292, 2026-10-13 ~20:05Z,
+text, Paul: "Ask Bill what is the weather in Deale MD now." Checked
+the real protocol command set first rather than guess — v1 (the only
+version live at the time) is strictly keyword-only (`PING`/`STATUS`/
+`LIST`/`RUN`/`HELP`, confirmed from the extracted `COMMANDS.md`), no
+free-text query support existed yet, and `STATUS` itself only reports
+process liveness + last bird-capture time, not weather or sensor
+readings. Did not send anything to Bill — it would just bounce as
+`ERROR: unknown command`, a predictable wasted round trip. Answered
+directly instead: pulled a real-time observation from the nearest
+NWS station (KNAK, Annapolis Naval Academy, ~8mi from Deale) via
+`api.weather.gov` — Clear, 77F, NNW ~13mph, 66% humidity, as of
+2:54pm Eastern today. Caught a stale `WebSearch` result (dated
 2026-10-08) before relaying it, same verify-the-timestamp discipline
 as the queue id 179 tide lookup. Replied by SMS with both the reading
-and the protocol-limitation explanation. Flagged for later: a true
-bayhouse-local weather/sensor answer would need a new command on
-Bill's own side, tying into queue id 290's in-progress "status of any
-sensor" work. Full detail in `projects/engineering/
-secure-agent-communication/CLAUDE.md`.
+and the protocol-limitation explanation. **Superseded 41 minutes
+later**: see queue id 293 above — the v2 upgrade means this
+limitation no longer holds for future asks. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 291, 2026-10-13 ~18:50Z, email, subject "Give me," Paul: "a written
