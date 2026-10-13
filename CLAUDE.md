@@ -207,7 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 279, 2026-10-13 ~03:02Z, text, Paul: "ok, both
+CLAUDE.md` — queue id 281, 2026-10-13 ~03:09Z, text, Paul: "ping
+bill." Pointer already here, no move needed. Sent a real `PING`
+synchronously (not backgrounded, after the queue id 279/280
+background poll got killed by a session process-boundary reset) and
+got a genuine `PONG` back in ~25 seconds — close to the original 14s
+baseline and a sharp contrast with `STATUS` getting no reply at all
+earlier today (queue id 275), consistent with Bill being back up
+after Paul's live session. Replied by SMS with that comparison and
+offered to retry `STATUS`/`LIST` now. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — queue id 279, 2026-10-13 ~03:02Z,
+text, Paul: "ok, both
 systems, Ted and Bill can manage a power cycle and recover. Ted,
 please ask Bill to summarize commands I could run." Moved the pointer
 here from `safehouse/general` (folded back into the live-projects list
