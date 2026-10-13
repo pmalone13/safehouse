@@ -207,9 +207,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 293, 2026-10-13 ~20:46Z, email, subject "ask
-Bill," Paul: "what is the weather." Pointer already here (no move
-needed) — but the protocol itself changed underneath it in between:
+CLAUDE.md` — queue id 295, 2026-10-13 ~21:12Z, email, subject "Re: ask
+Bill," Paul: "Let's leave like this tell Bill to create project
+testproject1 and save this file to it." Pointer already here (no
+move needed). Read "this file" as the weather exchange quoted back
+in the thread he was replying to. Sent Bill the full exchange
+verbatim as a free-form task (not just a question) — the **first
+test of v2's note-taking/project-creation capability**, not just
+free-form Q&A. Real reply back in ~33 seconds: "Done -- created the
+new project 'testproject1' and saved today's weather exchange as its
+first note..." Replied by email confirming, and flagged a real
+limitation per the v2 spec: Bill's notes are one-directional, so Ted
+can't read back `testproject1`'s actual saved contents to verify them
+— only trust Bill's own confirmation. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — queue id 293, 2026-10-13 ~20:46Z,
+email, subject "ask Bill," Paul: "what is the weather." Pointer
+already here (no move needed) — but the protocol itself changed
+underneath it in between:
 a live session (Paul + Claude, ~20:37-20:42Z, commit `390a0db`)
 upgraded `ted_protocol.py` to v2, which Bayhouse issued the same
 afternoon. **Purely additive, crypto/transport unchanged** — the one
