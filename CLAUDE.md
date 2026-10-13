@@ -206,19 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+291, 2026-10-13 ~18:50Z, email, subject "Give me," Paul: "a written
+summary of how we work... Describe this for another headless AI. It
+will be a Claude Sonnet. Email back." Moved the pointer here from
+`engineering/secure-agent-communication` (folded back into the
+live-projects list below, nothing new since queue id 290). A meta/
+system-description request, not tied to any specific project — wrote
+a plain-English explanation of the whole system (episodic spawn/
+resume-ticket sessions, the three channels feeding one queue, the
+CLAUDE.md-per-project memory structure, the every-turn checkpoint
+discipline, why git is the real continuity mechanism) addressed to a
+peer headless Claude Sonnet instance reading it cold, and emailed it
+back in the same thread. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 290, 2026-10-13 ~15:28Z, text, Paul: "I need to
 work with Bill. I will have him add on and offs for all individual
-lights. And status of any sendor [sensor]." Pointer already here, no
-move needed. A status update about his own plan, not a command to
-relay — he's going to work with Bill directly to add per-light on/off
-pairings and sensor-status reporting, which directly resolves the
-open question from queue id 288 (no pairing named "Office" existed
-yet). No `LIST`/`RUN` sent this turn; nothing to act on from Ted's
-side until the new pairings exist. Replied by SMS acknowledging and
-offering to re-run `LIST` once Bill's added them, then fire whichever
-pairing Paul wants. Full detail in `projects/engineering/
-secure-agent-communication/CLAUDE.md`.
+lights. And status of any sendor [sensor]." A status update about his
+own plan, not a command to relay — he's going to work with Bill
+directly to add per-light on/off pairings and sensor-status
+reporting, which directly resolves the open question from queue id
+288 (no pairing named "Office" existed yet). No `LIST`/`RUN` sent
+this turn; nothing to act on from Ted's side until the new pairings
+exist. Replied by SMS acknowledging and offering to re-run `LIST`
+once Bill's added them, then fire whichever pairing Paul wants. Full
+detail in `projects/engineering/secure-agent-communication/CLAUDE.md`.
 
 Previous pointer, same project — queue id 288, 2026-10-13 ~15:00Z,
 text, Paul: "Please tell Bill to turn off Office." Moved the pointer
@@ -4800,3 +4814,17 @@ thing that needs it, not because anything currently lives under it.
   himself. No `LIST`/`RUN` sent this turn. Replied by SMS
   acknowledging and offering to re-run `LIST` once the new pairings
   exist.
+- 2026-10-13 ~18:50Z: fresh session, queue id 291, email channel,
+  subject "Give me," Paul asked for a written summary of how this
+  whole system works — multi-project, CLAUDE.md files as storage,
+  everything saved to git for history — addressed to another headless
+  Claude Sonnet instance. Moved the Current-project pointer to
+  `safehouse/general` from `engineering/secure-agent-communication`
+  (folded back into the live-projects list, nothing new since queue
+  id 290). Wrote a plain-English explanation covering the episodic
+  spawn/resume-ticket session shape, the email/SMS/cron channels
+  feeding one queue, the CLAUDE.md-per-project memory structure, the
+  every-turn checkpoint discipline, and why git is the actual
+  continuity mechanism rather than just version control. Emailed back
+  in the same thread (`1a1369b3b27ffb08`). Full detail in
+  `projects/safehouse/general/CLAUDE.md`.
