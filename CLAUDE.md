@@ -4710,3 +4710,11 @@ thing that needs it, not because anything currently lives under it.
   email going forward (a real behavior change, not yet decided).
   Full detail in `projects/engineering/secure-agent-communication/
   CLAUDE.md` and `projects/suv-replacement/CLAUDE.md`.
+- 2026-10-13 ~14:14Z: fresh session, queue id 286, email channel,
+  subject "Bayhouse," from `psmalone13@gmail.com`. Verified rather
+  than assumed safe — confirmed genuine (DKIM/SPF pass) and confirmed
+  it's the exact same Gmail message (`1a1359da2b5bab74`, `internalDate`
+  1791900881000) already received and decrypted directly in the queue
+  id 285 turn immediately before this one — just the email-monitor's
+  own independent pickup of that `STATUS` reply, same pattern as queue
+  id 258/282. No new content, no reply sent.
