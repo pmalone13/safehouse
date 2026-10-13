@@ -4563,3 +4563,47 @@ thing that needs it, not because anything currently lives under it.
   `LIST`/`HELP` once that session wraps, plus the `poll_for_reply()`
   stale-reply bug from queue id 275); and the next scheduled SUV/
   truck cron fire is 9am Eastern tomorrow (2026-10-13).
+
+- 2026-10-13 ~03:1xZ: session wrap-up (idle window elapsed, no new
+  message). Five turns this session, queue ids 279-283, all
+  `engineering/secure-agent-communication`: Paul reported both
+  systems (Ted and Bill) can now power-cycle/recover and asked Ted to
+  relay a command summary from Bill (279) — sent `HELP` over the
+  already-built `ted_protocol` tooling; the real reply arrived
+  independently as the next queued message (280, verified genuinely
+  newer than the send and DKIM/SPF/DMARC-genuine) listing all five
+  commands (`PING`/`STATUS`/`LIST`/`RUN <pairing>`/`HELP`), relayed to
+  Paul by SMS, with a question flagged back about what "Ted can
+  manage a power cycle" meant. Paul then asked to "ping bill" (281) —
+  sent synchronously this time (the prior background poll had been
+  killed by a session process-boundary reset) and got a genuine
+  `PONG` back in ~25s, close to the original 14s baseline and a sharp
+  contrast with `STATUS` getting no reply earlier that day (queue id
+  275) — strong evidence Bill is back up after Paul's live session.
+  Queue id 282 was just the email-monitor's own independent pickup of
+  that same `PONG` (verified by Gmail id/`internalDate` match), no
+  new content. Queue id 283 closed the open question from 279: Paul
+  confirmed "Ted can manage a power cycle" just describes this VM's
+  existing systemd auto-restart resilience, not a new capability
+  built for Ted. All five turns already individually committed/pushed
+  (`1bab2ce`, `ec84363`) or, for 282/283 (gitignored-project-file-only
+  changes), logged directly in `projects/engineering/
+  secure-agent-communication/CLAUDE.md` without a git commit needed.
+  Working tree confirmed clean at this wrap-up, so this entry is the
+  only root-file change this turn makes. Re-tried `drive_sync.py` —
+  still the identical `invalid_grant` failure first flagged
+  2026-10-05 (queue id 176), unchanged across every session since;
+  git push and all SMS sends this session were unaffected. Not
+  re-texting Paul about the Drive outage again — already flagged
+  multiple times, nothing new to add. **Nothing outstanding heading
+  into the next turn**: both halves of the Ted/Bill power-cycle
+  question are resolved (Bill's own recovery implied working, since
+  it answered `PING` again; Ted's is pre-existing VM resilience, not
+  new), Bill is confirmed back up and responding, and `STATUS`/`LIST`
+  still haven't been retested against the live channel (offered to
+  Paul at queue id 281, no response yet) — worth doing next time
+  there's a reason to exercise the protocol again. The
+  `poll_for_reply()` stale-reply bug (queue id 275) and the
+  coordinator no-retry/no-notify gap (queue id 260/272) both remain
+  open, need Paul live to fix. Next scheduled SUV/truck cron fire:
+  9am Eastern tomorrow (2026-10-13).
