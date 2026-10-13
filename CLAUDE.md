@@ -206,9 +206,31 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+284, 2026-10-13 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Moved the
+pointer here from `engineering/secure-agent-communication` (folded
+back into the live-projects list below, nothing new since queue id
+283). Ran the standing four-region recipe (SUV + truck + five
+diesel-specific queries, washingtondc/annapolis/baltimore/
+easternshore, `<=2012`/`<110,000 mi`). 146 unique hrefs, 123 not an
+exact URL match to the ledger. **No new qualifying candidate, no
+email sent.** Checked one ambiguous listing ("1995 Toyota Hilux Surf
+/ 4Runner," $19,000, Fort George G Meade) and found it shares the
+exact same Craigslist posting ID as the already-excluded "1999
+Toyota Hilux Surf SSR-G" from queue id 277 — same post, just a
+changed title year, excluded on the same already-established
+grounds. Everything else was a content-match repost of an already-
+logged/excluded listing, the known Houston-TX-dealer cross-post
+pattern, or an established off-class/commercial/classic exclusion
+category — no new patterns found. Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern
+today (2026-10-13).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 281, 2026-10-13 ~03:09Z, text, Paul: "ping
-bill." Pointer already here, no move needed. Sent a real `PING`
+bill." Sent a real `PING`
 synchronously (not backgrounded, after the queue id 279/280
 background poll got killed by a session process-boundary reset) and
 got a genuine `PONG` back in ~25 seconds — close to the original 14s
@@ -4607,3 +4629,16 @@ thing that needs it, not because anything currently lives under it.
   coordinator no-retry/no-notify gap (queue id 260/272) both remain
   open, need Paul live to fix. Next scheduled SUV/truck cron fire:
   9am Eastern tomorrow (2026-10-13).
+
+- 2026-10-13 ~13:1xZ: fresh session, queue id 284, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. No new qualifying candidate (146 unique hrefs, 123 not
+  an exact URL match to the ledger, all excluded — one ambiguous
+  listing checked individually and found to be the exact same
+  Craigslist posting ID as an already-excluded listing, just a
+  changed title year). No email sent. Re-tried `drive_sync.py` as
+  part of this checkpoint — if still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), not re-texting
+  Paul about it again, already flagged multiple times. Next scheduled
+  SUV/truck cron fire: 6pm Eastern today (2026-10-13).
