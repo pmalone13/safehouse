@@ -2061,19 +2061,34 @@ the pending `/sms-optin` build still live there.
   project pointer note above) — now actually explained rather than
   just "not built."
 
-- **Drive down again, `invalid_grant`, discovered 2026-10-05 ~19:23Z**
-  (this turn's checkpoint, queue id 176). Same error shape as every
-  prior Drive-only outage: Gmail unaffected (used successfully this
-  same turn to send the NE-trip workbook email, and its own token
-  refreshed cleanly at 18:28Z today); Drive's token
-  (`.drive_api_token.json`) last refreshed 2026-10-04 17:39 — under
-  26h before this failure, so neither the old 7-day-cap theory nor
-  the "just refreshed" pattern from the 2026-09-27 event cleanly
-  explains the timing; still an open question. Git push succeeded
-  fine, only the Drive mirror is stale as of this entry. Texted Paul
-  rather than silently retrying. Same fix as always if/when he
-  re-authorizes: `authorize_drive_once.py` on a machine with a
-  browser, `scp` the resulting token to this VM.
+- ~~Drive down again, `invalid_grant`, discovered 2026-10-05 ~19:23Z~~
+  **RESOLVED 2026-10-13 ~20:45Z.** Discovered at queue id 176's
+  checkpoint (2026-10-05 ~19:23Z). Same error shape as every prior
+  Drive-only outage: Gmail unaffected throughout (used successfully
+  the whole time this outage ran); Drive's token
+  (`.drive_api_token.json`) had last refreshed 2026-10-04 17:39 —
+  under 26h before the failure, so neither the old 7-day-cap theory
+  nor the "just refreshed" pattern from the 2026-09-27 event cleanly
+  explained the timing; still never resolved as a root cause. Stayed
+  broken through every checkpoint from queue id 176
+  (2026-10-05) through this session (2026-10-13) — **the longest
+  outage of this recurring issue yet, ~8 days**, spanning the entire
+  `new-england`/`boating`/`chris-car`/`dinner`/`suv-replacement`/
+  `managing-paul`/`engineering` stretch. **Fixed live, Paul present**:
+  he ran `authorize_drive_once.py` on a machine with a browser and
+  `scp`'d the fresh token over (landed 20:45Z, confirmed by mtime).
+  `get_drive_client()` tested immediately (`files().list()`
+  succeeded), then a full `drive_sync.py` catch-up run synced the
+  entire backlog clean: 12 created (whole projects that never made it
+  to Drive at all while this was down — `engineering`,
+  `secure-agent-communication`, `chris-car`, `managing-paul`,
+  `monitoring-weed-effect`, `dinner`, `boating`, plus
+  `cron_suv_watch.log`), 13 updated, 852 unchanged, 0 orphaned. No
+  token file was touched by this VM to fix it — same pattern as every
+  prior resolution, Paul re-authorized on his end and this session
+  just needed to retest. If `invalid_grant` reappears, same fix
+  mechanics as always: `authorize_drive_once.py` on a machine with a
+  browser, `scp` the resulting token to this VM at the existing path.
 
 - ~~Drive down again, `invalid_grant`, discovered 2026-09-27 ~15:31Z~~
   **RESOLVED 2026-09-28 ~15:42Z.** Discovered at queue id 164's
@@ -4869,3 +4884,37 @@ thing that needs it, not because anything currently lives under it.
   no-notify gap (queue id 260/272) both remain open and need Paul
   live to fix. Next scheduled SUV/truck cron fire: 6pm Eastern today
   (2026-10-13).
+
+- 2026-10-13 ~20:3xZ-20:45Z: live direct interactive session
+  (Paul SSHed in). Two things handled: (1) Paul pointed at
+  `ted_protocol_package_v2.zip`, dropped in root mid-session, and
+  asked to replace v1 with it. Verified genuine via `auth.log` (same
+  key/IP as every prior login, file landed 6 min into the live
+  session), extracted and diffed every file against v1 before
+  touching anything: v2 is purely additive (key/crypto/transport
+  byte-identical; the only change is Bayhouse's receiving side now
+  answers free-form questions instead of erroring on anything that
+  isn't one of the five fixed commands). No send-side logic change
+  was required since `ted_protocol.py`'s `encrypt_command()`/
+  `send_command()` already accept arbitrary text — updated the
+  module docstring to describe v2 and bumped `poll_for_reply()`'s
+  default timeout 90s->180s since free-form replies can take up to a
+  couple of minutes per the new spec (committed `390a0db`); deleted
+  the superseded v1 zip (gitignored, never tracked by git — a plain
+  `rm`). Full detail in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`'s newest Log entry. (2) Paul
+  then fixed the Drive outage that had been open since 2026-10-05
+  (queue id 176) — see the TODO section's entry, now marked
+  **RESOLVED 2026-10-13 ~20:45Z**: fresh `authorize_drive_once.py`
+  token `scp`'d over, `get_drive_client()` retested clean, and a full
+  `drive_sync.py` catch-up synced the entire ~8-day backlog (12
+  created — whole projects that never reached Drive while this was
+  down: `engineering`, `secure-agent-communication`, `chris-car`,
+  `managing-paul`, `monitoring-weed-effect`, `dinner`, `boating`,
+  plus `cron_suv_watch.log` — 13 updated, 852 unchanged, 0 orphaned).
+  This is the longest Drive outage of this recurring issue yet
+  (~8 days) and, as always, the root cause (why a token under 26h old
+  would suddenly `invalid_grant`) remains unexplained — not something
+  this VM can diagnose further, only re-authorize around. Both
+  changes already committed/pushed; working tree clean, Drive now
+  current as of this entry.
