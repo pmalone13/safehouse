@@ -4771,3 +4771,11 @@ thing that needs it, not because anything currently lives under it.
   bayhouseAck_nack_logger. No pairing named "Office" exists. Did not
   fire any `RUN` command — relayed the real list to Paul by SMS and
   asked which one he meant.
+- 2026-10-13 ~15:01Z: fresh session, queue id 289, email channel,
+  subject "Bayhouse," from `psmalone13@gmail.com`. Verified genuine
+  (DKIM/SPF pass) and confirmed it's the exact same Gmail message
+  (`1a135c8a0d8f9146`, `internalDate` 1791903700000) already received
+  and decrypted directly in the queue id 288 turn immediately before
+  this one — just the email-monitor's own independent pickup of that
+  `LIST` reply, same pattern as queue id 258/282/286. No new content,
+  no reply sent.
