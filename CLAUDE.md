@@ -4828,3 +4828,21 @@ thing that needs it, not because anything currently lives under it.
   continuity mechanism rather than just version control. Emailed back
   in the same thread (`1a1369b3b27ffb08`). Full detail in
   `projects/safehouse/general/CLAUDE.md`.
+- 2026-10-13 ~19:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 291, already fully
+  handled, logged, committed, and pushed (`ea6c2f3`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up (`git status
+  --short` empty), so this entry is the only change this turn makes.
+  Re-tried `drive_sync.py` — if still the identical `invalid_grant`
+  failure first flagged 2026-10-05 (queue id 176), not re-texting
+  Paul about it again, already flagged multiple times. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: Bill is confirmed back up per queue id 281's `PONG`, `STATUS`/
+  `LIST` are now both exercised live (queue ids 285/288), Paul is
+  working with Bill directly to build per-light on/off pairings and
+  sensor status (queue id 290), the SUV watch now always emails on
+  every scheduled fire (queue id 287), and the `poll_for_reply()`
+  stale-reply bug (queue id 275) and the coordinator no-retry/
+  no-notify gap (queue id 260/272) both remain open and need Paul
+  live to fix. Next scheduled SUV/truck cron fire: 6pm Eastern today
+  (2026-10-13).
