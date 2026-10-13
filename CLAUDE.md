@@ -206,7 +206,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 279, 2026-10-13 ~03:02Z, text, Paul: "ok, both
+systems, Ted and Bill can manage a power cycle and recover. Ted,
+please ask Bill to summarize commands I could run." Moved the pointer
+here from `safehouse/general` (folded back into the live-projects list
+below, nothing new since queue id 278). Used the already-built,
+already-tested `ted_protocol.send_command()` to send `HELP` to
+Bayhouse — using existing protocol tooling, not writing new code, same
+class of action as the earlier `PING`/`STATUS` tests. A background
+poll process got killed mid-wait when this session's process boundary
+reset, but the real reply arrived independently as the very next
+queued message: **queue id 280**, 2026-10-13 ~03:03Z, email from
+`psmalone13@gmail.com`, subject "Bayhouse" — verified genuine
+(DKIM/SPF/DMARC all pass) and genuinely newer than the `HELP` send (by
+~8.1 seconds, not a stale leftover like the bug found at queue id 275)
+before trusting it. Decrypted cleanly: the real `HELP` text, listing
+all five commands (`PING`/`STATUS`/`LIST`/`RUN <pairing>`/`HELP`) with
+their descriptions — **first real live exercise of `HELP`**, closing
+one more piece of the "implemented but untested" gap from the v1
+build (`STATUS` was attempted at queue id 275 but got no reply;
+`LIST`/`RUN` remain untested). Relayed the full command summary to
+Paul by SMS. Also flagged a question back to him rather than assumed:
+the message's claim that "Ted... can manage a power cycle and
+recover" names a capability for this instance that isn't described
+anywhere in this project or in `coordinator.py`/the systemd units —
+asked whether that's something new, or just that the AWS VM/services
+already restart cleanly on their own. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 278, 2026-10-12 ~22:25Z, email, from Google Cloud, "[Action Required]
 Mark AI agent OAuth clients as agentic for Google Workspace MCP by Nov
 11, 2026." Moved the pointer here from `suv-replacement` (folded back
