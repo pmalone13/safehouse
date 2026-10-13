@@ -206,7 +206,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+287, 2026-10-13 ~14:19Z, text, Paul: "yes, always send a 'checked'."
+Direct answer to the question asked at the end of queue id 285.
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the live-projects list below, nothing new since
+queue id 286). Added a new standing rule to the project file's
+"Replacement criteria" section — every scheduled cron fire, from
+tonight's 6pm Eastern fire onward, must email Paul regardless of
+outcome (a real find, or a "checked, nothing new" note), superseding
+the prior convention of emailing only on a real find. Not a code
+change: relying on the standing step-1 rule (every turn, cron fires
+included, reads the project file first) rather than editing
+`cron_suv_watch.py` itself — same posture as every prior criteria
+change in that project. Replied by SMS confirming. Full detail in
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 285, 2026-10-13 ~14:14Z, text, Paul: "Please ask
 Bill Status. Please look at self, I did not get SUV email this am."
 Two-part message, handled both parts. Moved the pointer here from
@@ -4718,3 +4734,12 @@ thing that needs it, not because anything currently lives under it.
   id 285 turn immediately before this one — just the email-monitor's
   own independent pickup of that `STATUS` reply, same pattern as queue
   id 258/282. No new content, no reply sent.
+- 2026-10-13 ~14:2xZ: fresh session, queue id 287, text channel, Paul:
+  "yes, always send a 'checked'." Direct answer to the question asked
+  at queue id 285. Added a new standing rule to
+  `projects/suv-replacement/CLAUDE.md`'s "Replacement criteria"
+  section (not a code edit — relying on the standing step-1 rule,
+  same posture as every prior criteria change in that project): every
+  scheduled cron fire now emails Paul regardless of outcome, a real
+  find or "checked, nothing new," starting with tonight's 6pm fire.
+  Replied by SMS confirming.
