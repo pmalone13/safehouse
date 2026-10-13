@@ -206,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 292, 2026-10-13 ~20:05Z, text, Paul: "Ask Bill
+what is the weather in Deale MD now." Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 291). Checked the real protocol command set
+first rather than guess — v1 is strictly keyword-only (`PING`/
+`STATUS`/`LIST`/`RUN`/`HELP`, confirmed from the extracted
+`COMMANDS.md`), no free-text query support exists yet, and `STATUS`
+itself only reports process liveness + last bird-capture time, not
+weather or sensor readings. Did not send anything to Bill — it would
+just bounce as `ERROR: unknown command`, a predictable wasted round
+trip. Answered directly instead: pulled a real-time observation from
+the nearest NWS station (KNAK, Annapolis Naval Academy, ~8mi from
+Deale) via `api.weather.gov` — Clear, 77F, NNW ~13mph, 66% humidity,
+as of 2:54pm Eastern today. Caught a stale `WebSearch` result (dated
+2026-10-08) before relaying it, same verify-the-timestamp discipline
+as the queue id 179 tide lookup. Replied by SMS with both the reading
+and the protocol-limitation explanation. Flagged for later: a true
+bayhouse-local weather/sensor answer would need a new command on
+Bill's own side, tying into queue id 290's in-progress "status of any
+sensor" work. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 291, 2026-10-13 ~18:50Z, email, subject "Give me," Paul: "a written
 summary of how we work... Describe this for another headless AI. It
 will be a Claude Sonnet. Email back." Moved the pointer here from
