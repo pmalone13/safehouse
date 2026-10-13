@@ -206,7 +206,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 288, 2026-10-13 ~15:00Z, text, Paul: "Please
+tell Bill to turn off Office." Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list below,
+nothing new since queue id 287). Sent `LIST` first rather than guess
+at a `RUN` pairing name — the protocol requires an exact name copied
+from a real `LIST` reply, and this was the **first time `LIST` has
+ever actually been exercised live**, closing one more piece of the
+original "implemented but untested" gap. Real reply back in ~22s:
+the full pairing set is Basement Light Off/On, All Lights Off/On,
+Finish Arming, Test Horn, Security Alert Check, Security Monitor, Arm
+Disarm Command, bayhouseAck_nack_logger — **no pairing named
+"Office" exists**. Did not guess at a closest match or fire any
+`RUN` command; relayed the real list back to Paul by SMS and asked
+which pairing he meant, or whether "Office" refers to something
+outside Bill's home-automation scope entirely. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 287, 2026-10-13 ~14:19Z, text, Paul: "yes, always send a 'checked'."
 Direct answer to the question asked at the end of queue id 285.
 Moved the pointer here from `engineering/secure-agent-communication`
@@ -4743,3 +4761,13 @@ thing that needs it, not because anything currently lives under it.
   scheduled cron fire now emails Paul regardless of outcome, a real
   find or "checked, nothing new," starting with tonight's 6pm fire.
   Replied by SMS confirming.
+- 2026-10-13 ~15:0xZ: fresh session, queue id 288, text channel, Paul:
+  "Please tell Bill to turn off Office." Sent `LIST` rather than
+  guess at a `RUN` pairing name (the protocol requires an exact match
+  from a real `LIST` reply) — real reply back in ~22s, the **first
+  time `LIST` has ever actually been exercised live**. Full pairing
+  set: Basement Light Off/On, All Lights Off/On, Finish Arming, Test
+  Horn, Security Alert Check, Security Monitor, Arm Disarm Command,
+  bayhouseAck_nack_logger. No pairing named "Office" exists. Did not
+  fire any `RUN` command — relayed the real list to Paul by SMS and
+  asked which one he meant.
