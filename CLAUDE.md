@@ -206,21 +206,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+297, 2026-10-13 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— 10th scheduled fire (6pm Eastern). Moved the pointer here from
+`engineering/secure-agent-communication` (folded back into the
+live-projects list below, nothing new since queue id 296). Ran the
+standing four-region recipe (SUV + truck + five diesel-specific
+queries, washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 147 unique hrefs, 123 not an exact URL match to the
+ledger. **No new qualifying candidate.** Checked one ambiguous listing
+individually (2007 Chevrolet Silverado 2500HD 4x4 w/ plow, $5,400,
+Finksburg MD — gas engine, no confirmed crew cab, excluded). Per the
+queue id 287 standing rule, emailed Paul a "checked, nothing new" note
+anyway. Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 9am Eastern
+tomorrow (2026-10-14).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 295, 2026-10-13 ~21:12Z, email, subject "Re: ask
 Bill," Paul: "Let's leave like this tell Bill to create project
-testproject1 and save this file to it." Pointer already here (no
-move needed). Read "this file" as the weather exchange quoted back
-in the thread he was replying to. Sent Bill the full exchange
-verbatim as a free-form task (not just a question) — the **first
-test of v2's note-taking/project-creation capability**, not just
-free-form Q&A. Real reply back in ~33 seconds: "Done -- created the
-new project 'testproject1' and saved today's weather exchange as its
-first note..." Replied by email confirming, and flagged a real
-limitation per the v2 spec: Bill's notes are one-directional, so Ted
-can't read back `testproject1`'s actual saved contents to verify them
-— only trust Bill's own confirmation. Full detail in
-`projects/engineering/secure-agent-communication/CLAUDE.md`.
+testproject1 and save this file to it." Read "this file" as the
+weather exchange quoted back in the thread he was replying to. Sent
+Bill the full exchange verbatim as a free-form task (not just a
+question) — the **first test of v2's note-taking/project-creation
+capability**, not just free-form Q&A. Real reply back in ~33 seconds:
+"Done -- created the new project 'testproject1' and saved today's
+weather exchange as its first note..." Replied by email confirming,
+and flagged a real limitation per the v2 spec: Bill's notes are
+one-directional, so Ted can't read back `testproject1`'s actual saved
+contents to verify them — only trust Bill's own confirmation. Full
+detail in `projects/engineering/secure-agent-communication/CLAUDE.md`.
 
 Previous pointer, same project — queue id 293, 2026-10-13 ~20:46Z,
 email, subject "ask Bill," Paul: "what is the weather." Pointer
