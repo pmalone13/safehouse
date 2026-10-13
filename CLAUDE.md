@@ -206,7 +206,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 285, 2026-10-13 ~14:14Z, text, Paul: "Please ask
+Bill Status. Please look at self, I did not get SUV email this am."
+Two-part message, handled both parts. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list below,
+nothing new since queue id 284). Sent `STATUS` to Bill synchronously,
+polling Gmail directly by `internalDate` against the send time (same
+workaround as queue id 275/281 — `poll_for_reply()`'s stale-reply bug
+is still unfixed). **Real reply back in ~30s, the first time `STATUS`
+has ever actually gotten an answer** (the queue id 275 attempt timed
+out, Bill offline at the time): a real status block —
+birdClipper/dashboard_server/logging_server/text_monitor/
+email_topic_monitor/ted_protocol_monitor all up, `voice_monitor` and
+`virtual_device_bayhouseAck` down, last bird clip captured
+2026-10-13T10:05:02. New fact worth keeping: Bill runs a `birdClipper`
+service not previously mentioned in this project. Relayed verbatim by
+SMS rather than editorializing on the two "down" items, since there's
+no established baseline yet for what's normal. Separately audited
+queue id 284's SUV cron run per Paul's "look at self" ask rather than
+assume a bug: confirmed via `queue.db` it completed `done` with no
+error, and its own log/`craigslist_watch_results.md` entry shows 146
+hrefs checked, all correctly excluded, zero new qualifying
+candidates — **no email was the correct, by-design outcome**, not a
+failure (the standing convention only auto-sends on a real find,
+unless Paul explicitly asks for a "nothing new" email too, as he did
+once before at queue id 210). Replied by SMS with both findings and
+asked whether he'd now prefer every scheduled fire to always send a
+"checked, nothing new" email. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md` and
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 284, 2026-10-13 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Moved the
 pointer here from `engineering/secure-agent-communication` (folded
@@ -4658,3 +4689,24 @@ thing that needs it, not because anything currently lives under it.
   coordinator no-retry/no-notify gap (queue id 260/272) both remain
   open and need Paul live to fix. Next scheduled SUV/truck cron fire:
   6pm Eastern today (2026-10-13).
+- 2026-10-13 ~14:1xZ: fresh session, queue id 285, text channel, Paul:
+  "Please ask Bill Status. Please look at self, I did not get SUV
+  email this am." Sent `STATUS` to Bill synchronously, verified the
+  reply's `internalDate` against the send time rather than trust
+  `poll_for_reply()` (its stale-reply bug from queue id 275 is still
+  unfixed) — real reply back in ~30s, the **first time `STATUS` has
+  ever gotten an actual answer**: birdClipper/dashboard_server/
+  logging_server/text_monitor/email_topic_monitor/ted_protocol_monitor
+  all up, `voice_monitor` and `virtual_device_bayhouseAck` down, last
+  bird clip captured 2026-10-13T10:05:02 — a service name
+  (`birdClipper`) not previously documented anywhere in this project.
+  Separately audited queue id 284's own SUV cron run rather than
+  assume a bug from "I did not get SUV email": confirmed via
+  `queue.db` it finished `done` with no error, and its own log shows
+  146 hrefs checked, all correctly excluded, zero new qualifying
+  finds — **no email was the correct by-design outcome**, not a
+  failure. Replied by SMS with both findings and asked whether Paul
+  wants every scheduled fire to always send a "checked, nothing new"
+  email going forward (a real behavior change, not yet decided).
+  Full detail in `projects/engineering/secure-agent-communication/
+  CLAUDE.md` and `projects/suv-replacement/CLAUDE.md`.
