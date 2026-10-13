@@ -207,18 +207,31 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 288, 2026-10-13 ~15:00Z, text, Paul: "Please
-tell Bill to turn off Office." Moved the pointer here from
-`suv-replacement` (folded back into the live-projects list below,
-nothing new since queue id 287). Sent `LIST` first rather than guess
-at a `RUN` pairing name — the protocol requires an exact name copied
-from a real `LIST` reply, and this was the **first time `LIST` has
-ever actually been exercised live**, closing one more piece of the
-original "implemented but untested" gap. Real reply back in ~22s:
-the full pairing set is Basement Light Off/On, All Lights Off/On,
-Finish Arming, Test Horn, Security Alert Check, Security Monitor, Arm
-Disarm Command, bayhouseAck_nack_logger — **no pairing named
-"Office" exists**. Did not guess at a closest match or fire any
+CLAUDE.md` — queue id 290, 2026-10-13 ~15:28Z, text, Paul: "I need to
+work with Bill. I will have him add on and offs for all individual
+lights. And status of any sendor [sensor]." Pointer already here, no
+move needed. A status update about his own plan, not a command to
+relay — he's going to work with Bill directly to add per-light on/off
+pairings and sensor-status reporting, which directly resolves the
+open question from queue id 288 (no pairing named "Office" existed
+yet). No `LIST`/`RUN` sent this turn; nothing to act on from Ted's
+side until the new pairings exist. Replied by SMS acknowledging and
+offering to re-run `LIST` once Bill's added them, then fire whichever
+pairing Paul wants. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — queue id 288, 2026-10-13 ~15:00Z,
+text, Paul: "Please tell Bill to turn off Office." Moved the pointer
+here from `suv-replacement` (folded back into the live-projects list
+below, nothing new since queue id 287). Sent `LIST` first rather than
+guess at a `RUN` pairing name — the protocol requires an exact name
+copied from a real `LIST` reply, and this was the **first time
+`LIST` has ever actually been exercised live**, closing one more
+piece of the original "implemented but untested" gap. Real reply back
+in ~22s: the full pairing set is Basement Light Off/On, All Lights
+Off/On, Finish Arming, Test Horn, Security Alert Check, Security
+Monitor, Arm Disarm Command, bayhouseAck_nack_logger — **no pairing
+named "Office" exists**. Did not guess at a closest match or fire any
 `RUN` command; relayed the real list back to Paul by SMS and asked
 which pairing he meant, or whether "Office" refers to something
 outside Bill's home-automation scope entirely. Full detail in
@@ -4779,3 +4792,11 @@ thing that needs it, not because anything currently lives under it.
   this one — just the email-monitor's own independent pickup of that
   `LIST` reply, same pattern as queue id 258/282/286. No new content,
   no reply sent.
+- 2026-10-13 ~15:28Z: fresh session, queue id 290, text channel, Paul:
+  "I need to work with Bill. I will have him add on and offs for all
+  individual lights. And status of any sendor." Status update, not a
+  command — resolves the open "no Office pairing" question from queue
+  id 288 by having Bill build out the full per-light pairing set
+  himself. No `LIST`/`RUN` sent this turn. Replied by SMS
+  acknowledging and offering to re-run `LIST` once the new pairings
+  exist.
