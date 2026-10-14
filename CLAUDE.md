@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+308, 2026-10-14 ~14:33Z, text, Paul: "I'm glad about the map
+periodically. I'll send that to you via email and for now I guess
+just save them with the other one in the travel folder." Pointer
+already here, no move needed (a plan statement, not a travel-specific
+task to act on this turn). Paul plans to send more location/map
+exports by email going forward, each saved alongside the existing
+`Timeline.json` in `projects/travel/`. No file attached to this
+message itself — checked Gmail, nothing new. Logged as a standing
+plan in `projects/travel/CLAUDE.md` for whichever future turn
+actually receives one. Replied by SMS confirming. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 307, 2026-10-14 ~14:31Z, text, Paul: "General question, can you
 remember if I ever sent you a file of my location that I downloaded
 from my phone." Pointer already here, no move needed. A genuine
