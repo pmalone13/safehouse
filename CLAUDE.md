@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — live direct interactive session, 2026-10-14 ~02:2xZ, no
+queue id, Paul: "you have a new ted_protocol_package_v3.zip in root.
+please open and apply." Verified via `auth.log` (matching SSH login,
+same key fingerprint as every prior confirmed login, landing right as
+the zip appeared) before touching anything — this is the hard
+boundary's explicit carve-out (Paul live and directing), not an
+unattended build. Moved the pointer here from `suv-replacement`
+(folded back into the live-projects list below, nothing new since
+queue id 297). v3 is purely additive over v2 (transport/crypto/key/
+fixed-commands/free-form-questions all unchanged) — the one new thing
+is Ted can now send a real file (not just text) to Bayhouse to be
+saved into a project, inbound-only, capped at 20MB, bundled into one
+combined reply alongside any free-form text sent in the same email.
+Added `encrypt_file()`/`send_file()` to `ted_protocol.py`, confirmed
+key file is functionally unchanged (CRLF-only diff), ran a local
+crypto sanity check (not a live send to Bayhouse yet). Cleaned up both
+the superseded v2 zip and the now-applied v3 zip (gitignored, never
+tracked). Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 297, 2026-10-13 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — 10th scheduled fire (6pm Eastern). Moved the pointer here from
 `engineering/secure-agent-communication` (folded back into the

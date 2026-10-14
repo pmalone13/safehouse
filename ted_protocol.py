@@ -1,35 +1,53 @@
-"""Ted Protocol v2 -- Ted's send/receive side of the encrypted-attachment
+"""Ted Protocol v3 -- Ted's send/receive side of the encrypted-attachment
 command channel to Bayhouse ("Bill"). v1 spec issued 2026-10-11, v2
-issued by Bayhouse 2026-10-13 (both logged in
+issued 2026-10-13, v3 issued 2026-10-14 by Bayhouse (all logged in
 projects/engineering/secure-agent-communication/CLAUDE.md). Crypto
 construction confirmed against the matching reference script
 (send_side_reference.py, from ted_protocol_package_v1.zip) live with
-Paul 2026-10-12; v2's package (ted_protocol_package_v2.zip) confirms
-the crypto/key/transport are byte-for-byte unchanged from v1 -- no
-code change was required here for that part.
+Paul 2026-10-12; every later package (v2, v3) confirms the crypto/key/
+transport are byte-for-byte unchanged from v1 -- the key
+(ted_key.txt) is unchanged since v1 too.
 
-v2 adds exactly one new capability, purely on Bayhouse's receiving
+v2 added exactly one new capability, purely on Bayhouse's receiving
 side: a message that doesn't start with one of the five fixed command
-words is no longer an error -- Bayhouse now reads it as a genuine
+words is no longer an error -- Bayhouse reads it as a genuine
 free-form question or piece of project work and replies directly.
-Nothing on Ted's sending side has to change to use this: encrypt_command()/
+Nothing on Ted's sending side had to change for that: encrypt_command()/
 send_command() already accept any text, fixed command or not. The one
-real consequence for this module is timing -- a free-form reply can
-take "up to a couple of minutes" per Bayhouse's spec (PROTOCOL_SPEC.md
-v2 Section 5.1), well past v1's fixed-command round trips (observed
-~14-30s) -- see poll_for_reply()'s bumped default timeout below.
+real consequence was timing -- a free-form reply can take "up to a
+couple of minutes" per Bayhouse's spec, well past v1's fixed-command
+round trips (observed ~14-30s) -- see poll_for_reply()'s bumped
+default timeout below.
+
+v3 adds one more capability: sending a real FILE (not just text) to
+Bayhouse, to be saved into a project. Same construction as a command/
+message (gzip then Fernet-encrypt) but skipping the UTF-8-encode step
+since a file's bytes are already raw -- see encrypt_file()/send_file()
+below. Bayhouse tells a file apart from a command/message purely by
+whether the decrypted-and-decompressed bytes decode as UTF-8 (fails ->
+file); the attachment's own filename must be set to the file's real
+original name so Bayhouse knows what to call it once saved (unlike a
+command/message attachment, whose filename is never interpreted).
+Files are capped at 20MB on Bayhouse's end. This is inbound-only --
+Bayhouse cannot send Ted a file back yet, so decrypt_reply() is
+unaffected (a reply is always text). Also new in v3: if a single email
+carries free-form text and/or files together, Bayhouse answers with
+ONE combined reply for all of it, not one reply per attachment --
+irrelevant to this module today since send_command()/send_file() each
+send one attachment per email, but worth knowing if that ever changes.
 
 Plain-English description (per the queue-id-237 rule that every
-artifact needs one): this module's purpose is to send either a fixed
-command (PING, STATUS, LIST, RUN <pairing>, HELP) or, as of v2, a
-free-form English question/task, to Bayhouse, and decrypt its replies.
-Its data structure is a single gzip-then-Fernet-encrypted blob per
-command/message or reply, carried as a raw email attachment with a
-meaningless subject/body (Bayhouse never reads those fields). Its
-disposition: this is standing protocol code, not a one-off script --
-it persists on disk and in git for as long as the Ted<->Bill channel
-is in use. Its cost: ordinary Gmail API send/read quota on the account
-already in use for everything else; no additional expense.
+artifact needs one): this module's purpose is to send a fixed command
+(PING, STATUS, LIST, RUN <pairing>, HELP), a free-form English
+question/task (as of v2), or a real file (as of v3) to Bayhouse, and
+decrypt its replies. Its data structure is a single gzip-then-Fernet-
+encrypted blob per command/message/file or reply, carried as a raw
+email attachment with a meaningless subject/body (Bayhouse never reads
+those fields). Its disposition: this is standing protocol code, not a
+one-off script -- it persists on disk and in git for as long as the
+Ted<->Bill channel is in use. Its cost: ordinary Gmail API send/read
+quota on the account already in use for everything else; no
+additional expense.
 
 ted_key.txt (sibling file in this same directory) is the shared Fernet
 secret that authenticates Ted to Bayhouse on this channel. It is
@@ -61,6 +79,32 @@ def encrypt_command(command_text: str, key: bytes = None) -> bytes:
     key = key or load_key()
     compressed = gzip.compress(command_text.encode("utf-8"))
     return Fernet(key).encrypt(compressed)
+
+
+def encrypt_file(file_bytes: bytes, key: bytes = None) -> bytes:
+    """New in v3. Same construction as encrypt_command(), just skipping
+    the UTF-8-encode step since file_bytes is already raw bytes, not
+    text (PROTOCOL_SPEC.md v3 Section 3.2). Pair with send_file() below
+    rather than calling this directly, so the attachment's own filename
+    is set correctly -- Bayhouse uses that filename (not this function's
+    output) to decide what to call the file once saved."""
+    key = key or load_key()
+    compressed = gzip.compress(file_bytes)
+    return Fernet(key).encrypt(compressed)
+
+
+def send_file(service, file_bytes: bytes, filename: str, key: bytes = None) -> str:
+    """New in v3. Encrypts file_bytes and emails it to Bayhouse with the
+    attachment's own filename set to `filename` (the file's real
+    original name) -- unlike send_command(), where the attachment
+    filename never matters. Returns the sent message id. Capped at 20MB
+    on Bayhouse's end; an oversized file is dropped there with a note
+    in the reply, not rejected here."""
+    attachment_bytes = encrypt_file(file_bytes, key)
+    return google_client.send_message_with_attachment(
+        service, BAYHOUSE_ADDRESS, subject="", body_text="",
+        attachment_bytes=attachment_bytes, filename=filename,
+    )
 
 
 def decrypt_reply(attachment_bytes: bytes, key: bytes = None) -> str:
