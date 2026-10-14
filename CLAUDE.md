@@ -206,7 +206,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 319, 2026-10-14 ~23:27Z, text, Paul: "guess assuming nala weighs
+35lb." Moved the pointer here from `suv-replacement` (folded back
+into the live-projects list below, nothing new since queue id 318).
+Direct follow-up supplying the weight the prior turn (queue id 317)
+asked for — did the arithmetic against the already-researched
+2.5-3.5 mg/lb situational-anxiety range: 35lb -> ~87.5-122.5mg, called
+it roughly 90-120mg / "call it 100mg" given typical tablet sizing,
+well under the 300mg/dose cap. Replied by SMS with the number plus a
+light vet-confirm caveat (sedation level, other meds) rather than
+treat "guess" as full license to drop that caveat for a real
+medication dose. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 318, 2026-10-14 ~22:00Z, channel `cron`, source `suv-replacement-
 watch` — 6pm Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list below,
