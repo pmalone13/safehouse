@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+318, 2026-10-14 ~22:00Z, channel `cron`, source `suv-replacement-
+watch` — 6pm Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 317). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 149 unique hrefs, 122
+not an exact URL match to the ledger. **Found one new qualifying
+candidate**: a 2004 Ford F-250 Super Duty Crew Cab Short-Bed 4x4,
+6.0L Powerstroke diesel, $19,995, 89,000 mi, clean title,
+Fredericksburg VA — clears the 6,000 lb tow gate via the diesel-class
+rule and also genuinely satisfies the crew-cab/four-door rule.
+$9,995 over the nominal ceiling, emailed anyway per the standing
+over-budget-but-qualifying pattern. Checked and excluded one other
+listing individually (a 2005 Chevrolet Silverado 1500, $999, Laurel
+MD — non-running per the seller's own ad, 2WD/4.3L V6, well under the
+tow gate regardless). Full detail in `projects/suv-replacement/
+CLAUDE.md` and `craigslist_watch_results.md`. Next scheduled fire: 9am
+Eastern tomorrow (2026-10-15).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 317, 2026-10-14 ~21:10Z, text, Paul: "Trazodone for nala." Pointer
 already here, no move needed — Nala (the family dog, see
 `new-england`/`planning`) doesn't have a dedicated project, and this
