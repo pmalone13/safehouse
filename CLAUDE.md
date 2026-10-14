@@ -207,6 +207,15 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 320, 2026-10-14 ~23:28Z, text, Paul: "how long does the does
+last" (dictation garble for "dose"). Pointer already here, no move
+needed. Direct follow-up continuing the trazodone thread — used
+`WebSearch` for real duration data: onset 1-2hrs, calming/sedation
+effect typically 4-8hrs, tapering gradually, some sources up to
+6-12hrs depending on metabolism/age. Replied by SMS. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 319, 2026-10-14 ~23:27Z, text, Paul: "guess assuming nala weighs
 35lb." Moved the pointer here from `suv-replacement` (folded back
 into the live-projects list below, nothing new since queue id 318).
