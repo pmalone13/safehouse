@@ -206,7 +206,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+304, 2026-10-14 ~14:07Z, text, Paul: "Yes it was dictation. Just a
+reminder please about a Luke video about desperada." Moved the
+pointer here from `suv-replacement` (folded back into the
+live-projects list below, nothing new since queue id 303). Confirms
+the dictation-garble theory from queue id 302 was right, and
+re-dictates the content — this time dropping "waterman show" and
+"January" entirely, instead giving "a Luke video about desperada"
+(almost certainly "Desperado," either the Eagles song or the 1995
+film). "Luke" still doesn't match anyone/anything on file. Since Paul
+explicitly asked for "just a reminder" this time (a lower bar than
+fully resolving it), logged the reminder as-is rather than pressing
+for a third clarification round, and replied by SMS with two light,
+non-blocking follow-ups: whether the January timing still applies,
+and whether "Luke" is a real name worth spelling correctly. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 303, 2026-10-14 ~13:00Z, channel `cron`, source `suv-replacement-watch`
 — 9am Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list below,
