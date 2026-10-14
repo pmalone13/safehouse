@@ -206,7 +206,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 302, 2026-10-14 ~04:15Z, text, Paul: "I just general remember a
+reminder for me the Luke video about waterman show in January."
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the live-projects list below, nothing new since
+queue id 301). Reads as dictation garble (same confirmed pattern as
+queue id 265) rather than a typo — likely intent is "generally
+remember a reminder for me: the [?] video about [a] Waterman['s]
+show in January," but neither "Luke video" nor "waterman show"
+resolves to anything already on file, and no project was named.
+Didn't guess at a search-based decode since a wrong guess here would
+be worse than asking. Replied by SMS asking him to clarify what
+video (or who "Luke" is), what show, and the specific January date,
+so a real reminder can be set correctly once known. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — same live direct interactive session as the v3-build
 turn below, continuing. Paul: "I will test by initiating from my
 email. stand by," then "email sent." Checked the inbox directly and
