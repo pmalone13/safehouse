@@ -207,6 +207,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 317, 2026-10-14 ~21:10Z, text, Paul: "Trazodone for nala." Pointer
+already here, no move needed — Nala (the family dog, see
+`new-england`/`planning`) doesn't have a dedicated project, and this
+reads as a one-off dosing question rather than the start of ongoing
+work. Used `WebSearch` for general veterinary trazodone dosing
+guidance (situational-anxiety range ~2.5-3.5 mg/lb, up to 4-12 mg/kg
+for a single event, 60-90 min before the trigger, capped at
+300mg/dose and 600mg/24h) rather than answer from memory, since real
+medication safety is involved. Deliberately did not hand Paul a firm
+mg number — Nala's weight isn't recorded anywhere in this repo, and
+actual dosing/safety is a vet call, not a guess to make sight unseen.
+Replied by SMS with the general range, the caveat, and an offer to
+flag it as a vet question or refine the estimate if he has her
+weight. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 316, 2026-10-14 ~19:30Z, text, Paul: "your other IP. 192.168.1.?"
 Follow-up to the IP-address recovery at queue id 315 (he'd asked for
 the public IP's last octet at queue id 311, answered 94/
