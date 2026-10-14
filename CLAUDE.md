@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+305, 2026-10-14 ~14:11Z, text, Paul: "Just put the Luke note in a
+reminder's list." Pointer already here, no move needed. A format
+instruction, not an answer to the two light follow-ups asked at queue
+id 304 — Paul wants a standing, scannable **Reminders** section
+(separate from the Log) rather than the item buried inline. Added
+that section to `projects/safehouse/general/CLAUDE.md`, right above
+the Log, with the Luke/Desperado item as its first entry. Didn't
+chase the January-timing/spelling follow-ups again — left open for
+whenever Paul adds them. Replied by SMS confirming the list exists
+and the item's in it. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 304, 2026-10-14 ~14:07Z, text, Paul: "Yes it was dictation. Just a
 reminder please about a Luke video about desperada." Moved the
 pointer here from `suv-replacement` (folded back into the
