@@ -228,8 +228,15 @@ no protocol meaning. Real combined reply back in ~45s (verified by
 `internalDate`, same stale-reply workaround as every protocol test
 since the `poll_for_reply()` bug was found): "Saved — the file
 fullFamily.jpg has been placed in the 'tedprotocol' project." Replied
-to Paul by email confirming. Full detail in `projects/engineering/
-secure-agent-communication/CLAUDE.md`.
+to Paul by email confirming. **Addendum, queue id 301, 2026-10-14
+~02:46Z**: a second, genuinely new reply (not a duplicate pickup, 50s
+after the first) arrived: "Got it -- fullFamily.jpg has been saved
+into the TedProtocol project. Let me know if you need anything else
+done with it." v3's spec documents one combined reply per send, not
+two — read as a quick ack followed by a completion confirmation once
+the file write actually finished, not an error. Flagged to Paul by
+email since he's actively testing this live right now. Full detail
+in `projects/engineering/secure-agent-communication/CLAUDE.md`.
 
 Previous pointer, same project — live direct interactive session,
 2026-10-14 ~02:2xZ, no queue id, Paul: "you have a new
