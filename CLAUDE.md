@@ -206,7 +206,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/planning/CLAUDE.md` — queue id 315,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 316, 2026-10-14 ~19:30Z, text, Paul: "your other IP. 192.168.1.?"
+Follow-up to the IP-address recovery at queue id 315 (he'd asked for
+the public IP's last octet at queue id 311, answered 94/
+54.88.172.94). Moved the pointer here from `planning` (folded back
+into the live-projects list below, nothing new since queue id 315).
+Checked directly via `hostname -I`/`ip addr` rather than guess at his
+`192.168.x` assumption — the real private IP is `172.26.15.201` (an
+AWS VPC range, not `192.168.x`). Replied by SMS with the real value
+plus the public IP for reference. No other action taken.
+
+Previous pointer, `projects/planning/CLAUDE.md` — queue id 315,
 2026-10-14 ~19:25Z, text, Paul: "I sent a few emails to you on files
 to save and parse and summarize. did you not recieve." Moved the
 pointer here from `safehouse/general` (folded back into the
@@ -5361,3 +5372,12 @@ thing that needs it, not because anything currently lives under it.
   the Current-project pointer to `planning`. Full detail in
   `projects/planning/CLAUDE.md` and the TODO section's updated
   recurring-outage entry above (third instance now on record).
+
+- 2026-10-14 ~19:30Z: fresh session, queue id 316, text channel,
+  Paul: "your other IP. 192.168.1.?" Checked directly via `hostname
+  -I`/`ip addr` rather than guess at his `192.168.x` assumption — the
+  real private IP is `172.26.15.201` (AWS VPC range). Moved the
+  Current-project pointer to `safehouse/general` from `planning`
+  (folded back into the live-projects list, nothing new since queue
+  id 315). Replied by SMS with the real value plus the public IP for
+  reference.
