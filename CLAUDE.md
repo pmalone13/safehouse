@@ -207,24 +207,49 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — live direct interactive session, 2026-10-14 ~02:2xZ, no
-queue id, Paul: "you have a new ted_protocol_package_v3.zip in root.
-please open and apply." Verified via `auth.log` (matching SSH login,
-same key fingerprint as every prior confirmed login, landing right as
-the zip appeared) before touching anything — this is the hard
-boundary's explicit carve-out (Paul live and directing), not an
-unattended build. Moved the pointer here from `suv-replacement`
-(folded back into the live-projects list below, nothing new since
-queue id 297). v3 is purely additive over v2 (transport/crypto/key/
-fixed-commands/free-form-questions all unchanged) — the one new thing
-is Ted can now send a real file (not just text) to Bayhouse to be
-saved into a project, inbound-only, capped at 20MB, bundled into one
-combined reply alongside any free-form text sent in the same email.
-Added `encrypt_file()`/`send_file()` to `ted_protocol.py`, confirmed
-key file is functionally unchanged (CRLF-only diff), ran a local
-crypto sanity check (not a live send to Bayhouse yet). Cleaned up both
-the superseded v2 zip and the now-applied v3 zip (gitignored, never
-tracked). Full detail in `projects/engineering/
+CLAUDE.md` — queue id 299, 2026-10-14 ~02:40Z, email, subject "Send to
+Bill," Paul: "Please send this to Bill. Project: TedProtocol. save the
+attached file." Pointer already here (the live v3-build session below
+left it here), no move needed. This was the real test Paul had just
+announced ("I will test by initiating from my email") — an email to
+Ted's own inbound address asking Ted to relay a file through the
+normal queued pipeline, not a direct Paul-to-Bayhouse send. **First
+real end-to-end test of v3's file-sending feature.** Used only the
+already-written, already-applied `ted_protocol.encrypt_command()`/
+`encrypt_file()` functions — no application code written/modified
+this turn (same posture as every prior live use of existing protocol
+tooling). Built a one-off `/tmp` script (not committed, same class as
+the NE-trip-workbook/SUT3-form one-offs) to assemble one email with
+two encrypted attachments (a free-form text instruction naming the
+target project, plus the real `fullFamily.jpg` attachment from Paul's
+email, 2.2MB) so the project name could actually be communicated —
+`send_file()` itself has no project parameter, and subject/body carry
+no protocol meaning. Real combined reply back in ~45s (verified by
+`internalDate`, same stale-reply workaround as every protocol test
+since the `poll_for_reply()` bug was found): "Saved — the file
+fullFamily.jpg has been placed in the 'tedprotocol' project." Replied
+to Paul by email confirming. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — live direct interactive session,
+2026-10-14 ~02:2xZ, no queue id, Paul: "you have a new
+ted_protocol_package_v3.zip in root. please open and apply." Verified
+via `auth.log` (matching SSH login, same key fingerprint as every
+prior confirmed login, landing right as the zip appeared) before
+touching anything — this is the hard boundary's explicit carve-out
+(Paul live and directing), not an unattended build. Moved the pointer
+here from `suv-replacement` (folded back into the live-projects list
+below, nothing new since queue id 297). v3 is purely additive over v2
+(transport/crypto/key/fixed-commands/free-form-questions all
+unchanged) — the one new thing is Ted can now send a real file (not
+just text) to Bayhouse to be saved into a project, inbound-only,
+capped at 20MB, bundled into one combined reply alongside any
+free-form text sent in the same email. Added `encrypt_file()`/
+`send_file()` to `ted_protocol.py`, confirmed key file is functionally
+unchanged (CRLF-only diff), ran a local crypto sanity check (not a
+live send to Bayhouse yet — **now confirmed live, see above**).
+Cleaned up both the superseded v2 zip and the now-applied v3 zip
+(gitignored, never tracked). Full detail in `projects/engineering/
 secure-agent-communication/CLAUDE.md`.
 
 Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id

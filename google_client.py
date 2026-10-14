@@ -255,6 +255,29 @@ def send_message_with_attachment(service, to: str, subject: str, body_text: str,
     return sent.get("id")
 
 
+def send_message_with_attachments(service, to: str, subject: str, body_text: str,
+                                   attachments: list) -> str:
+    """Same as send_message_with_attachment() but for more than one
+    attachment in a single email. Added 2026-10-14 for ted_protocol.py
+    v3 (a free-form message and a file attachment travel together in
+    one email per PROTOCOL_SPEC.md v3 Section 5.2). `attachments` is a
+    list of dicts: {"bytes": bytes, "filename": str, "mime_type": str
+    (optional, defaults to "application/octet-stream")}."""
+    msg = EmailMessage()
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body_text)
+    for att in attachments:
+        maintype, _, subtype = att.get("mime_type", "application/octet-stream").partition("/")
+        msg.add_attachment(att["bytes"], maintype=maintype, subtype=subtype or "octet-stream",
+                            filename=att["filename"])
+    raw = base64.urlsafe_b64encode(msg.as_bytes()).decode("utf-8")
+    sent = service.users().messages().send(userId="me", body={"raw": raw}).execute()
+    log.info(f"sent message id={sent.get('id')} to={to!r} subject={subject!r} "
+             f"attachments={[a['filename'] for a in attachments]!r}")
+    return sent.get("id")
+
+
 # ---------------------------------------------------------------- Drive --
 
 def get_drive_client():

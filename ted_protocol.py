@@ -107,6 +107,26 @@ def send_file(service, file_bytes: bytes, filename: str, key: bytes = None) -> s
     )
 
 
+def send_file_with_message(service, message_text: str, file_bytes: bytes, filename: str,
+                            key: bytes = None) -> str:
+    """New in v3. Sends a free-form message and a file together in ONE
+    email, each independently encrypted as its own attachment -- the
+    pattern PROTOCOL_SPEC.md v3 Section 5.2 describes for telling
+    Bayhouse which project a file belongs to (say so in the
+    accompanying text). Bayhouse answers both with a single combined
+    reply, not one per attachment. Returns the sent message id."""
+    key = key or load_key()
+    text_attachment = encrypt_command(message_text, key)
+    file_attachment = encrypt_file(file_bytes, key)
+    return google_client.send_message_with_attachments(
+        service, BAYHOUSE_ADDRESS, subject="", body_text="",
+        attachments=[
+            {"bytes": text_attachment, "filename": "message.bin"},
+            {"bytes": file_attachment, "filename": filename},
+        ],
+    )
+
+
 def decrypt_reply(attachment_bytes: bytes, key: bytes = None) -> str:
     """Exact inverse of encrypt_command(). Raises ValueError on any
     failure (wrong key, corrupted bytes, or a valid decrypt that isn't
