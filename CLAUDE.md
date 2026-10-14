@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 309, 2026-10-14 ~14:57Z, email, subject "ask
+Bill," Paul: "his status." Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 308). Sent `STATUS` via the already-built
+protocol tooling, polled Gmail directly by `internalDate` against the
+exact send time rather than trust `poll_for_reply()` (its stale-reply
+bug, queue id 275, is still unfixed) — real reply confirmed genuinely
+newer, ~98s after send. Bayhouse status: everything up except
+`voice_monitor` and `virtual_device_bayhouseAck` (same two as the
+last check, queue id 285 — a stable, repeated pattern, not new),
+last bird clip captured 2026-10-14T09:59:04. Replied by email (the
+arrival channel) with the full reading. Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 308, 2026-10-14 ~14:33Z, text, Paul: "I'm glad about the map
 periodically. I'll send that to you via email and for now I guess
 just save them with the other one in the travel folder." Pointer
