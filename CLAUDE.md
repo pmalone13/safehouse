@@ -5433,3 +5433,25 @@ thing that needs it, not because anything currently lives under it.
   task/owner table is waiting on no particular follow-up (Paul just
   needs to review the emailed write-up); and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-14).
+
+- 2026-10-14 ~22:1xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session, queue ids 317-318, both already
+  fully handled, logged, committed, and pushed (`672f1ee`, `b5e10d8`)
+  before this wrap-up fired: a general trazodone-dosing question for
+  Nala (317, `safehouse/general`, general veterinary range given by
+  SMS without a firm mg number since Nala's weight isn't on file —
+  flagged as a vet call) and the 6pm scheduled SUV/truck cron fire
+  (318, `suv-replacement`, found and emailed one new qualifying
+  candidate — a 2004 Ford F-250 Super Duty Crew Cab diesel, $19,995,
+  89,000 mi, clean title, Fredericksburg VA). Working tree confirmed
+  clean at this wrap-up (`git status --short` empty), so this entry
+  is the only change this turn makes. Drive already synced clean as
+  part of each turn's own checkpoint. Nothing outstanding heading into
+  the next turn beyond what's already on file: the three-outage
+  recurring session-limit bug (TODO section, queue ids 260/272/315)
+  and the v3 file-send session-collision architecture issue both
+  remain open and need Paul live to fix; `poll_for_reply()`'s
+  stale-reply bug (queue id 275) is likewise still unfixed; queue id
+  317's trazodone question is waiting on Paul's reply (vet-question
+  flag vs. Nala's actual weight); and the next scheduled SUV/truck
+  cron fire is 9am Eastern tomorrow (2026-10-15).
