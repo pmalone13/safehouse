@@ -206,13 +206,35 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 314, 2026-10-14 ~19:16Z, text, Paul: "ted?" Plain attention-check,
-no topic named, same shape as past bare greetings (queue ids
-171/173). Moved the pointer here from `engineering/
-secure-agent-communication` (folded back into the live-projects list
-below, nothing new since queue id 309). Replied by SMS confirming
-I'm here and asking what he needs. No other action taken.
+**Current project**: `projects/planning/CLAUDE.md` — queue id 315,
+2026-10-14 ~19:25Z, text, Paul: "I sent a few emails to you on files
+to save and parse and summarize. did you not recieve." Moved the
+pointer here from `safehouse/general` (folded back into the
+live-projects list below, nothing new since queue id 309 besides the
+plain attention-check at queue id 314). Paul was right — a third
+Claude-session-limit outage (~14:59Z-18:00Z, queue ids 310-313, see
+the TODO section's updated entry) silently dropped exactly the two
+emails he meant: "Meeting audio" and "Paul and Chris Planning
+meeting," sharing a 71MB recording and a ~37K-character auto-
+transcript of a real household/financial planning meeting with
+Christine, asking Ted to save them into a new "Planning" project,
+reorganize the transcript into meeting notes with a task/owner table
+at top, and email back. Recovered both emails from Gmail, fetched
+both shared Drive files, read the full transcript, created
+`projects/planning/CLAUDE.md` with the organized notes + tasks table,
+and emailed the full write-up back per his explicit ask. Also
+recovered and answered queue id 311 (a trivial IP-address question,
+also dropped in the same outage) by SMS. Replied to this text
+explaining the outage and that both emails are now processed. Full
+detail in `projects/planning/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
+314, 2026-10-14 ~19:16Z, text, Paul: "ted?" Plain attention-check, no
+topic named, same shape as past bare greetings (queue ids 171/173).
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the live-projects list below, nothing new since
+queue id 309). Replied by SMS confirming I'm here and asking what he
+needs. No other action taken.
 
 Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 309, 2026-10-14 ~14:57Z, email, subject "ask
@@ -2290,6 +2312,34 @@ the pending `/sms-optin` build still live there.
   stale/wrong if the turn that wrote it didn't actually check. This
   coordinator fix is now overdue, not just "worth doing" — two outages
   in two days, 22 total dropped messages.
+  **Update 2026-10-14 (queue id 315): a third instance, and this one
+  had real cost.** ~14:59Z-18:00Z (~3h, resetting at 18:00 UTC per the
+  error text), queue ids 310-313 failed identically. This time the
+  silently-dropped messages weren't just conversational — queue ids
+  312/313 were Paul's two emails ("Meeting audio" / "Paul and Chris
+  Planning meeting") asking Ted to save, parse, and summarize a real
+  financial/family planning-meeting recording and transcript into a
+  new "Planning" project, with a reply owed back. Paul noticed the
+  silence himself (queue id 315: "I sent a few emails... did you not
+  receive") rather than this system catching it. Recovered by pulling
+  both emails directly from Gmail, fetching the two shared Drive files
+  (a 71MB meeting audio file and a ~37K-char auto-transcript Google
+  Doc), reading the full transcript, and doing the actual requested
+  work — created `projects/planning/CLAUDE.md`, organized the
+  transcript into dated meeting notes with a task/owner table at the
+  top, and emailed the full write-up back per Paul's explicit ask.
+  Also recovered queue id 311 (a trivial "what's your IP's last
+  octet" question) and answered it by SMS. Queue id 310 (another
+  "Bayhouse" Ted-protocol email, same subject as queue id 309's
+  already-handled `STATUS` exchange) needed no separate recovery — it
+  matches the established pattern of the email-monitor independently
+  picking up a reply already decrypted/used live within the turn that
+  sent the command (same as queue ids 258/282/286/289), not new
+  content. **Three outages now on record, not two** — the coordinator
+  fix (retry or at minimum notify on a `failed` message) is more
+  overdue with each one; this is the first time the dropped content
+  was itself real, time-sensitive work rather than a question that
+  could be re-asked.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
@@ -5292,3 +5342,22 @@ thing that needs it, not because anything currently lives under it.
   `engineering/secure-agent-communication` (folded back into the
   live-projects list, nothing new since queue id 309). Replied by SMS
   confirming responsiveness and asking what he needs.
+
+- 2026-10-14 ~19:25Z: fresh session, queue id 315, text channel,
+  Paul: "I sent a few emails to you on files to save and parse and
+  summarize. did you not recieve." Queried `queue.db` fresh rather
+  than guess, and found a third Claude-session-limit outage
+  (~14:59Z-18:00Z, queue ids 310-313) had silently dropped exactly
+  the two emails he meant — "Meeting audio" and "Paul and Chris
+  Planning meeting," sharing a 71MB recording and a ~37K-character
+  auto-transcript Google Doc of a real planning meeting with
+  Christine, asking for a new "Planning" project, the transcript
+  reorganized into meeting notes with a task/owner table at top, and
+  an email back. Pulled both emails from Gmail, fetched both Drive
+  files, read the full transcript, created
+  `projects/planning/CLAUDE.md`, and emailed the complete write-up
+  back. Also recovered and SMS-answered queue id 311 (a dropped
+  trivial IP-address question) from the same outage window. Moved
+  the Current-project pointer to `planning`. Full detail in
+  `projects/planning/CLAUDE.md` and the TODO section's updated
+  recurring-outage entry above (third instance now on record).
