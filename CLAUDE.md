@@ -207,6 +207,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+307, 2026-10-14 ~14:31Z, text, Paul: "General question, can you
+remember if I ever sent you a file of my location that I downloaded
+from my phone." Pointer already here, no move needed. A genuine
+recall question, answered by grepping `projects/travel/CLAUDE.md`
+rather than from memory: **yes**, 2026-09-20, project `travel` —
+`Timeline.json`, the real on-device Google Maps Timeline export
+(37MB, 1,720 segments, June-Sep 2026 GPS history), used at the time
+to confirm a 9/19 Versailles visit. Replied by SMS with the date,
+project, filename, and what it was used for. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 306, 2026-10-14 ~14:12Z, text, Paul: "Luke is spelled correctly.
 January doesn't matter." Pointer already here, no move needed.
 Direct answers to both light follow-ups asked at queue id 304 —
