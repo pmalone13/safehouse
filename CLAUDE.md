@@ -206,7 +206,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 314, 2026-10-14 ~19:16Z, text, Paul: "ted?" Plain attention-check,
+no topic named, same shape as past bare greetings (queue ids
+171/173). Moved the pointer here from `engineering/
+secure-agent-communication` (folded back into the live-projects list
+below, nothing new since queue id 309). Replied by SMS confirming
+I'm here and asking what he needs. No other action taken.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 309, 2026-10-14 ~14:57Z, email, subject "ask
 Bill," Paul: "his status." Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list below,
@@ -5277,3 +5285,10 @@ thing that needs it, not because anything currently lives under it.
   exercised live since; queue id 302's reminder request is still
   waiting on Paul's clarification; and the next scheduled SUV/truck
   cron fire is 6pm Eastern today (2026-10-14).
+
+- 2026-10-14 ~19:16Z: fresh session, queue id 314, text channel,
+  Paul: "ted?" Plain attention-check, no topic, no action requested.
+  Moved the Current-project pointer to `safehouse/general` from
+  `engineering/secure-agent-communication` (folded back into the
+  live-projects list, nothing new since queue id 309). Replied by SMS
+  confirming responsiveness and asking what he needs.
