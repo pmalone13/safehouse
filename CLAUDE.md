@@ -207,6 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+306, 2026-10-14 ~14:12Z, text, Paul: "Luke is spelled correctly.
+January doesn't matter." Pointer already here, no move needed.
+Direct answers to both light follow-ups asked at queue id 304 —
+updated the Reminders entry: "Luke" is a real confirmed spelling (not
+dictation garble, still unmatched to anyone else on file), and the
+January timing from the original queue id 302 message is confirmed
+irrelevant, dropped. Only open thread left: what the Desperado/
+Desperada video actually is. Replied by SMS confirming both updates.
+Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 305, 2026-10-14 ~14:11Z, text, Paul: "Just put the Luke note in a
 reminder's list." Pointer already here, no move needed. A format
 instruction, not an answer to the two light follow-ups asked at queue
