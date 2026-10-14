@@ -207,36 +207,40 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 299, 2026-10-14 ~02:40Z, email, subject "Send to
-Bill," Paul: "Please send this to Bill. Project: TedProtocol. save the
-attached file." Pointer already here (the live v3-build session below
-left it here), no move needed. This was the real test Paul had just
-announced ("I will test by initiating from my email") — an email to
-Ted's own inbound address asking Ted to relay a file through the
-normal queued pipeline, not a direct Paul-to-Bayhouse send. **First
-real end-to-end test of v3's file-sending feature.** Used only the
-already-written, already-applied `ted_protocol.encrypt_command()`/
-`encrypt_file()` functions — no application code written/modified
-this turn (same posture as every prior live use of existing protocol
-tooling). Built a one-off `/tmp` script (not committed, same class as
-the NE-trip-workbook/SUT3-form one-offs) to assemble one email with
-two encrypted attachments (a free-form text instruction naming the
-target project, plus the real `fullFamily.jpg` attachment from Paul's
-email, 2.2MB) so the project name could actually be communicated —
-`send_file()` itself has no project parameter, and subject/body carry
-no protocol meaning. Real combined reply back in ~45s (verified by
-`internalDate`, same stale-reply workaround as every protocol test
-since the `poll_for_reply()` bug was found): "Saved — the file
-fullFamily.jpg has been placed in the 'tedprotocol' project." Replied
-to Paul by email confirming. **Addendum, queue id 301, 2026-10-14
-~02:46Z**: a second, genuinely new reply (not a duplicate pickup, 50s
-after the first) arrived: "Got it -- fullFamily.jpg has been saved
-into the TedProtocol project. Let me know if you need anything else
-done with it." v3's spec documents one combined reply per send, not
-two — read as a quick ack followed by a completion confirmation once
-the file write actually finished, not an error. Flagged to Paul by
-email since he's actively testing this live right now. Full detail
-in `projects/engineering/secure-agent-communication/CLAUDE.md`.
+CLAUDE.md` — same live direct interactive session as the v3-build
+turn below, continuing. Paul: "I will test by initiating from my
+email. stand by," then "email sent." Checked the inbox directly and
+found a genuine new email from `pmalone13@gmail.com`, subject "Send
+to Bill," asking Ted to relay an attached photo (`fullFamily.jpg`,
+2.2MB) to Bayhouse under project "TedProtocol" — the real test just
+announced. Added `google_client.send_message_with_attachments()` and
+`ted_protocol.send_file_with_message()` (bundles a free-form message
++ file as two attachments in one email, per v3 §5.2's intended
+pattern) and used them to send the file for real. Got back a genuine
+reply ~47s later: "Got it -- fullFamily.jpg has been saved into the
+TedProtocol project." **First real end-to-end test of v3's
+file-sending feature, confirmed working.**
+**Then found something more important than the test itself**: the
+exact same "Send to Bill" email had *also* been picked up completely
+independently by the normal email-monitor -> `queue.db` -> coordinator
+pipeline (queue id 299), which spawned its own separate session that
+*also* sent the file to Bayhouse (via its own one-off script) and
+*also* got a reply, then emailed Paul directly. Neither session knew
+about the other. **Two independent sends happened for one request**,
+and the autonomous session misread the reply to this live session's
+send as "Bayhouse sent two replies to one request" rather than
+recognizing a second session had acted. Harmless this time (an
+idempotent file save, two slightly-contradicting confirmation emails
+to Paul); would not be harmless for a `RUN <pairing>` command. This
+reveals that a live SSH session and the autonomous pipeline are
+**not** mutually exclusive the way this file's own "How you got
+invoked" section claims — logged as a new TODO above (see "Found
+2026-10-14" entry) rather than fixed unattended, since resolving it is
+a real coordinator-architecture decision that needs Paul live. Full
+incident detail, including the exact queue.db/Sent-mail evidence used
+to piece this together, in `projects/engineering/
+secure-agent-communication/CLAUDE.md`'s 2026-10-14 ~02:5xZ correction
+entry.
 
 Previous pointer, same project — live direct interactive session,
 2026-10-14 ~02:2xZ, no queue id, Paul: "you have a new
@@ -2019,6 +2023,66 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-14: a live interactive SSH session and the autonomous
+  email-monitor/coordinator pipeline are NOT mutually exclusive --
+  they can both process the same inbound email at the same time,
+  causing a real action to fire twice. Needs Paul live to design a
+  fix, not something to guess at unattended.** This file's own "How
+  you got invoked" section claims "the coordinator only ever runs one
+  message through one session at a time, there's no scenario where
+  two sessions could be alive for this project at once... structurally
+  handled for you" -- **true only for coordinator-to-coordinator
+  overlap.** It does not hold when a live SSH session is open at the
+  same time new email arrives: the email-monitor keeps enqueueing
+  independently of whatever a live session is doing, and the
+  coordinator spawns its own session for that queued message
+  regardless of whether a human-directed session is already handling
+  it. Caught live: Paul emailed "Send to Bill" (a file-relay test of
+  the new v3 protocol capability, see `projects/engineering/
+  secure-agent-communication/CLAUDE.md`) while SSHed into a live
+  session with Ted. The live session read the email and acted on it;
+  the SAME email also landed in `queue.db` (id 299) and the coordinator
+  spawned a separate, independent session that also acted on it. Both
+  sessions sent the same file to Bayhouse; Bayhouse answered each with
+  its own reply, and the autonomous session, unaware a second session
+  existed, misread the second reply as "Bayhouse sent two replies to
+  one request" rather than recognizing it as the reply to a different
+  session's send. This time the duplicated action was idempotent (a
+  file/note save) -- harmless beyond Paul getting two slightly-
+  contradicting confirmation emails and the file possibly landing
+  under two different project-name casings. **It would not be
+  harmless for a `RUN <pairing>` command** -- a real device/world
+  action firing twice from two sessions racing on the same inbound
+  trigger. Not fixed -- this needs an actual architecture decision
+  (e.g. a lock/mutex so a live session suppresses the autonomous
+  pipeline while active, or the reverse, or some dedup mechanism keyed
+  on message content/thread) that only Paul can make live, not
+  something to patch from an unattended turn. Full incident detail in
+  `projects/engineering/secure-agent-communication/CLAUDE.md`'s
+  2026-10-14 ~02:5xZ correction entry.
+  **Sharper root cause, found while checking git history to write
+  this entry up**: it's worse than "two sessions acted on one email."
+  Both sessions share the literal same working directory and git repo
+  on disk (not separate clones/worktrees). Proof: this live session
+  added `send_file_with_message()`/`send_message_with_attachments()`
+  to `ted_protocol.py`/`google_client.py` via its own edits, left
+  uncommitted while it ran the live test; the autonomous session's own
+  checkpoint (`git add -A && git commit`, commit `4cf9a08`,
+  02:47:29Z) swept up those uncommitted edits and committed them
+  under *its own* commit message about queue id 299 -- verified via
+  `git show 4cf9a08 -- ted_protocol.py google_client.py`, byte-for-byte
+  identical to what this session had written and not yet committed.
+  No content was lost or corrupted this time (the edit was complete by
+  the time the other session's `git add -A` ran), but this means any
+  two sessions racing on the filesystem can commit each other's
+  in-flight, possibly-incomplete edits under the wrong commit message
+  -- or, if the timing were slightly different, genuinely corrupt a
+  file mid-write (e.g. a `git add -A` firing while an `Edit` call is
+  partway through a multi-step change). This isn't just a message-
+  processing race, it's a shared-mutable-filesystem hazard any time a
+  live session and an autonomous one overlap, for any file in this
+  repo, not only the protocol files touched this time.
 
 - **Google Cloud "agentic" OAuth client deadline — Nov 11, 2026, no
   action needed unless Paul wants Workspace MCP server access.**
