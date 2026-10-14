@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+303, 2026-10-14 ~13:00Z, channel `cron`, source `suv-replacement-watch`
+— 9am Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 302). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 148 unique hrefs, 123
+not an exact URL match to the ledger. **Found one new qualifying
+candidate**: a 2004 GMC Envoy XUV, 5.3L V8, 4x4, $10,300, 86,000 mi,
+clean title, Fairfax VA — body-on-frame GMT360/370 platform (same
+family as the already-logged Envoy Denali/Trailblazer), confirmed via
+`WebSearch` at 6,400 lb tow capacity, clearing the 6,000 lb gate.
+$300 over the nominal $10k ceiling, emailed anyway per the standing
+over-budget-but-qualifying pattern. Checked and excluded two other
+listings individually (a 1997 Chevrolet Tahoe whose odometer sits
+exactly at the 110,000 mi boundary rather than under it; a 2012 Chevy
+Colorado confirmed 4-cylinder, ~3,500 lb tow, well under the gate).
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern today
+(2026-10-14).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 302, 2026-10-14 ~04:15Z, text, Paul: "I just general remember a
 reminder for me the Luke video about waterman show in January."
 Moved the pointer here from `engineering/secure-agent-communication`
@@ -5131,3 +5152,27 @@ thing that needs it, not because anything currently lives under it.
   per queue id 281's `PONG` with `STATUS`/`LIST` both exercised live
   since; and the next scheduled SUV/truck cron fire is 9am Eastern
   today (2026-10-14).
+
+- 2026-10-14 ~13:0xZ: fresh session, queue id 303, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire. Ran
+  the full four-region recipe (SUV + truck + five diesel-specific
+  queries, washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+  `<110,000 mi`) via direct `curl` + the `<li class="cl-static-
+  search-result">` card parser. 148 unique hrefs, 123 not an exact
+  URL match to the ledger. Found one new qualifying candidate (2004
+  GMC Envoy XUV, 5.3L V8, 4x4, $10,300, 86,000 mi, clean title,
+  Fairfax VA — confirmed via `WebSearch` at 6,400 lb tow capacity,
+  clearing the 6,000 lb gate; $300 over the nominal ceiling, emailed
+  anyway per the standing over-budget-but-qualifying pattern). Fetched
+  two listing pages individually to check ambiguous candidates rather
+  than guess from the search card: a 1997 Chevrolet Tahoe (2-door,
+  $8,800, Halethorpe) whose own odometer attribute reads exactly
+  110,000 mi — the strict boundary, not under it — excluded on
+  mileage; and a 2012 Chevy Colorado pickup ($7,000, Fairfax)
+  confirmed via its own attrs to be the 4-cylinder with no crew-cab
+  claim, ~3,500 lb max tow per `WebSearch` — excluded. Emailed the
+  Envoy find to `pmalone13@gmail.com`
+  (`1a13a8313ad80078`); everything found this run appended to
+  `craigslist_watch_results.md` regardless of price. Full detail in
+  `projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 6pm
+  Eastern today (2026-10-14).
