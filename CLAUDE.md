@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/planning/CLAUDE.md` — queue id 323,
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 324, 2026-10-15 ~02:05Z, text, Paul: "Ask Bill
+for status." Moved the pointer here from `planning` (folded back
+into the live-projects list below, nothing new since queue id 323).
+Sent `STATUS` via `ted_protocol.send_command()`, verified the reply's
+`internalDate` against the send time rather than trust
+`poll_for_reply()` (its stale-reply bug, queue id 275, is still
+unfixed) — real reply confirmed genuinely newer, ~39s after send.
+**New development**: `birdClipper` is now down (every prior check had
+it up); `voice_monitor`/`virtual_device_bayhouseAck` still down (the
+familiar stable pattern), everything else up. Last bird clip
+2026-10-14T17:51:37. Replied by SMS with the full reading, flagging
+the birdClipper change. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/planning/CLAUDE.md` — queue id 323,
 2026-10-15 ~01:12Z, text, Paul: "1, 2, 9, 11 Are Christine tasks."
 Pointer already here, no move needed. Direct correction to four items
 in the numbered to-do list just sent at queue id 322 — Forester
