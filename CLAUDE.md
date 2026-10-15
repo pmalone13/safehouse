@@ -5478,3 +5478,24 @@ thing that needs it, not because anything currently lives under it.
   317's trazodone question is waiting on Paul's reply (vet-question
   flag vs. Nala's actual weight); and the next scheduled SUV/truck
   cron fire is 9am Eastern tomorrow (2026-10-15).
+
+- 2026-10-14 ~23:3xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session, queue ids 319-320, both
+  `safehouse/general`, both already fully handled, logged,
+  committed, and pushed (`c733c50`, `9f5eb03`) before this wrap-up
+  fired: Paul supplying Nala's weight (319, calculated ~90-120mg per
+  dose from the already-researched 2.5-3.5 mg/lb range, replied by
+  SMS with a vet-confirm caveat kept rather than dropped) and a
+  direct follow-up asking how long the dose lasts (320, `WebSearch`
+  for real duration data — onset 1-2hrs, effect 4-8hrs typically,
+  tapering gradually, replied by SMS). Working tree confirmed clean
+  at this wrap-up (`git status --short` empty), so this entry is the
+  only change this turn makes. No Drive sync needed beyond each
+  turn's own already-clean run. Nothing outstanding heading into the
+  next turn beyond what's already on file: the trazodone thread looks
+  closed for now (dose + duration both answered, nothing further
+  asked); the three-outage recurring session-limit bug (TODO section,
+  queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, and `poll_for_reply()`'s stale-reply bug (queue
+  id 275) all remain open and need Paul live to fix; and the next
+  scheduled SUV/truck cron fire is 9am Eastern today (2026-10-15).
