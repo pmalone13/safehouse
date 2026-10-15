@@ -5795,3 +5795,21 @@ thing that needs it, not because anything currently lives under it.
 - 2026-10-15 ~15:32Z: fresh session, queue id 335, text channel,
   Paul: "thanks." Plain acknowledgment, no reply needed, no pointer
   move.
+
+- 2026-10-15 ~20:1xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 336, already fully
+  handled, logged, committed, and pushed (`5709962`) before this
+  wrap-up fired — researched real container dimensions across
+  Sterilite/Rubbermaid/IRIS USA/Homz product lines and recommended
+  the Sterilite 18 Qt Ultra Latch Box for Paul's 19"x12.75" recessed
+  hole. Working tree confirmed clean at wrap-up (`git status --short`
+  empty), so this entry is the only change this turn makes. Drive
+  already synced clean as part of that turn's own checkpoint. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the three-outage recurring session-limit bug (TODO section,
+  queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, and `poll_for_reply()`'s stale-reply bug (queue
+  id 275) all remain open and need Paul live to fix; the NE trip
+  departure-date question is resolved (Sunday 10/18, confirmed queue
+  id 331); and the next scheduled SUV/truck cron fire is 6pm Eastern
+  today (2026-10-15).
