@@ -5619,3 +5619,18 @@ thing that needs it, not because anything currently lives under it.
   in `projects/suv-replacement/CLAUDE.md` and
   `craigslist_watch_results.md`'s new 2026-10-15 9am section. Next
   scheduled fire: 6pm Eastern today (2026-10-15).
+
+- 2026-10-15 ~13:1xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 329, already fully
+  handled, logged, committed, and pushed (`d171eec`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up (`git status
+  --short` empty), so this entry is the only change this turn makes.
+  Drive sync already ran clean as part of queue id 329's own
+  checkpoint. Nothing outstanding heading into the next turn beyond
+  what's already on file: the three-outage recurring session-limit
+  bug (TODO section, queue ids 260/272/315), the v3 file-send
+  session-collision architecture issue, and `poll_for_reply()`'s
+  stale-reply bug (queue id 275) all remain open and need Paul live
+  to fix; the trazodone thread looks closed (dose + duration both
+  answered); and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-15).
