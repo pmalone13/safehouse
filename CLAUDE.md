@@ -206,7 +206,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/planning/CLAUDE.md` — queue id 322,
+**Current project**: `projects/planning/CLAUDE.md` — queue id 323,
+2026-10-15 ~01:12Z, text, Paul: "1, 2, 9, 11 Are Christine tasks."
+Pointer already here, no move needed. Direct correction to four items
+in the numbered to-do list just sent at queue id 322 — Forester
+insurance paperwork, Allie's VA emissions-inspection errand, the 457
+plan/Fidelity review, and the possible new Bond Holdings bank
+account/insurance are actually Christine's, not Paul's (overriding
+the transcript-derived task table built at queue id 315). Updated
+the project's task table's Owner column for all four rows. Replied
+by SMS confirming the corrections. Full detail in
+`projects/planning/CLAUDE.md`.
+
+Previous pointer, same project — queue id 322,
 2026-10-15 ~01:09Z, text, Paul: "Can u list Paul's to-dos from
 today's meeting." Moved the pointer here from `safehouse/general`
 (folded back into the live-projects list below, nothing new since
