@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+329, 2026-10-15 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — 9am Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 328). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 150 unique hrefs, 121
+not an exact URL match to the ledger. **No new qualifying candidate.**
+Individually checked two ambiguous search-card titles: one read "BMW
+X5 2012 - 97K miles" but the actual listing is a 2012 BMW X3 ($7,400,
+Fairfax) — already-established off-class exclusion; one read just
+"Clean" but is a 1999 GMC Savana 3500 cargo van, not an SUV/pickup —
+excluded as off-class. Everything else was a content-match repost of
+an already-logged/excluded listing, the Houston-TX-dealer cross-post
+pattern (~30 hits), or an established off-class/unibody/commercial/
+classic exclusion category. Per the standing rule (queue id 287),
+emailed Paul a "checked, nothing new" note anyway. Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_results.md`.
+Next scheduled fire: 6pm Eastern today (2026-10-15).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 328, 2026-10-15 ~02:29Z, text, Paul: "go through all our projects
 one by one, compile an email with summary of each project... for all
 notes and general, create a written description of content... HTML
@@ -5578,3 +5598,24 @@ thing that needs it, not because anything currently lives under it.
   architecture issue, and `poll_for_reply()`'s stale-reply bug (queue
   id 275) all remain open and need Paul live to fix; and the next
   scheduled SUV/truck cron fire is 9am Eastern today (2026-10-15).
+
+- 2026-10-15 ~13:00Z: fresh session, queue id 329, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire. Ran
+  the full four-region recipe (SUV + truck + five diesel-specific
+  queries, washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+  `<110,000 mi`). 150 unique hrefs, 121 not an exact URL match to the
+  ledger. **No new qualifying candidate.** Individually checked two
+  ambiguous search-card titles: one read "BMW X5 2012 - 97K miles"
+  but the actual listing is a 2012 BMW X3, $7,400, Fairfax VA —
+  already-established off-class exclusion applies regardless of the
+  misleading card title; one read just "Clean" (Rockville/Silver
+  Spring, $7,000) but is a 1999 GMC Savana 3500 cargo van, not an
+  SUV/pickup — excluded as off-class. Everything else was a content-
+  match repost of an already-logged/excluded listing under a fresh
+  URL, the Houston-TX-dealer cross-post pattern (~30 hits), or an
+  established off-class/unibody/commercial/classic exclusion
+  category. Per the standing rule (queue id 287), emailed Paul a
+  "checked, nothing new" note anyway (`1a13fa86d3d65cfc`). Full detail
+  in `projects/suv-replacement/CLAUDE.md` and
+  `craigslist_watch_results.md`'s new 2026-10-15 9am section. Next
+  scheduled fire: 6pm Eastern today (2026-10-15).
