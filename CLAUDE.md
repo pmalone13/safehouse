@@ -206,7 +206,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/planning/CLAUDE.md` — queue id 322,
+2026-10-15 ~01:09Z, text, Paul: "Can u list Paul's to-dos from
+today's meeting." Moved the pointer here from `safehouse/general`
+(folded back into the live-projects list below, nothing new since
+queue id 320). Filtered the project's task/owner table down to the
+11 rows owned by Paul (or "Paul to remind/pay" items) rather than
+resend the whole table. Replied by SMS with the numbered list and a
+pointer back to the full write-up already emailed at queue id 315.
+Full detail in `projects/planning/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 321, 2026-10-15 ~00:36Z, text, Paul: "Did u receive my emails with
 meeting files." Pointer already here, no move needed. Checked
 `queue.db` fresh rather than assume — this is the same pair of
