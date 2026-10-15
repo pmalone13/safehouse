@@ -206,7 +206,14 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 330,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 331,
+2026-10-15 ~15:24Z, text, Paul: "no it is Sunday. no change." Direct
+answer to the Monday-vs-Sunday mismatch flagged at the end of queue
+id 330 (below) — departure really is Sunday 10/18, matching the
+project file's own Portland check-in date all along; nothing to
+correct. Replied by SMS acknowledging. No pointer move needed.
+
+Previous pointer, same project — queue id 330,
 2026-10-15 ~15:06Z, text, Paul: "We are leaving on our NE trip Monday.
 Can you go through that project and email any reminders or notes
 about packing that I may have mentioned. Can you also add ideas for
@@ -5694,4 +5701,12 @@ thing that needs it, not because anything currently lives under it.
   is 10/18 (a Sunday) — noted the mismatch in both the email and the
   SMS reply rather than guess which is right. Replied by SMS
   (`SMacdc9994d135cf9f75237c3c6120a5f4`). Full detail in
+  `projects/new-england/CLAUDE.md`.
+
+- 2026-10-15 ~15:24Z: fresh session, queue id 331, text channel,
+  Paul: "no it is Sunday. no change." Direct answer to the departure-
+  date flag raised at the end of queue id 330 — confirms Sunday
+  10/18 is correct, matching the project file's own Portland check-in
+  date. No correction needed anywhere; replied by SMS
+  (`SM9cc3ce8b0992603fe9c234f383e0a85d`) acknowledging. Full detail in
   `projects/new-england/CLAUDE.md`.
