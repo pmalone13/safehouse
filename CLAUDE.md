@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 330,
+2026-10-15 ~15:06Z, text, Paul: "We are leaving on our NE trip Monday.
+Can you go through that project and email any reminders or notes
+about packing that I may have mentioned. Can you also add ideas for
+clothing based on the weather in the locations we will stay. We will
+be outside a lot walking and hiking." Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list below,
+nothing new since queue id 329). Pulled the existing packing list
+(binoculars, rice, oil, rice cooker, knives, fishing pole, tackle box)
+from the project file, then ran six `WebSearch` queries (one per
+booked stop/date range) for real average high/low temps rather than
+guess, since outdoor-hiking comfort was riding on it: Portland
+~54-58°F/35-38°F, Bar Harbor ~47-55°F/36-40°F, Dorset (coldest,
+highest elevation) ~43°F/28°F, Eliot/Portsmouth-area ~44-47°F/
+31-36°F, Salem ~46-52°F/33-36°F, Newport (windy, coldest by early
+Dec) ~41-53°F/28-40°F. Built a layering-based clothing plan (base/
+mid/waterproof-windproof shell, waterproof boots, warm hat/gloves
+from Dorset on, packable rain jacket for every stop, insulated
+jacket for the colder back half) plus a Nala note (dog coat, paw
+protection later in the trip), and emailed it as HTML with a weather
+table alongside the existing packing list (`1a1401c04d41eaba`).
+**Flagged rather than silently resolved**: Paul said "leaving
+Monday" (10/19) but the file's own Portland check-in is 10/18 (a
+Sunday) — noted the mismatch rather than guess which is right.
+Replied by SMS. Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 329, 2026-10-15 ~13:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list below,
@@ -5634,3 +5660,38 @@ thing that needs it, not because anything currently lives under it.
   to fix; the trazodone thread looks closed (dose + duration both
   answered); and the next scheduled SUV/truck cron fire is 6pm
   Eastern today (2026-10-15).
+
+- 2026-10-15 ~15:0xZ: fresh session, queue id 330, text channel,
+  Paul: "We are leaving on our NE trip Monday. Can you go through
+  that project and email any reminders or notes about packing that I
+  may have mentioned. Can you also add ideas for clothing based on
+  the weather in the locations we will stay. We will be outside a lot
+  walking and hiking." Moved the Current-project pointer to
+  `new-england` from `suv-replacement` (folded back into the live
+  list, nothing new since queue id 329). Pulled the existing packing
+  list from the project file's own "Packing / supplies list" section
+  (binoculars, rice, oil, rice cooker, knives, fishing pole, tackle
+  box) rather than re-derive it, and ran six `WebSearch` queries (one
+  per real booked stop/date range) for actual average high/low temps
+  rather than guess, since outdoor-hiking clothing choices were
+  riding on it: Portland ~54-58°F/35-38°F, Bar Harbor ~47-55°F/
+  36-40°F, Dorset (coldest/highest elevation) ~43°F/28°F with ~30%
+  rain-or-snow chance, Eliot/Portsmouth-area ~44-47°F/31-36°F, Salem
+  ~46-52°F/33-36°F, Newport (windy, coldest by early Dec) ~41-53°F/
+  28-40°F. Built a layering-based clothing plan (moisture-wicking
+  base, fleece mid-layer, waterproof+windproof shell, waterproof
+  hiking boots + wool socks, warm hat/gloves/neck gaiter from Dorset
+  on, packable rain jacket for every stop not just Maine, insulated
+  jacket for the colder back half, sunglasses) plus a Nala-specific
+  note (dog coat for colder stops, paw protection once frost/salt
+  appears later in the trip). Sent as an HTML email
+  (`1a1401c04d41eaba`) with a weather table alongside the packing
+  list, built via a one-off `EmailMessage.add_alternative()` script
+  at `/tmp/ne_packing_email.py` (not committed — generated
+  deliverable, same pattern as the queue-id-328 project-summary
+  email). Flagged rather than silently resolved: Paul said "leaving
+  Monday" (10/19) but the project file's own Portland check-in date
+  is 10/18 (a Sunday) — noted the mismatch in both the email and the
+  SMS reply rather than guess which is right. Replied by SMS
+  (`SMacdc9994d135cf9f75237c3c6120a5f4`). Full detail in
+  `projects/new-england/CLAUDE.md`.
