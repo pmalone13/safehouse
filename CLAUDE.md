@@ -5759,3 +5759,13 @@ thing that needs it, not because anything currently lives under it.
   (unlike Ted's episodic-but-ticketed session shape). Replied by SMS
   (`SMda01ff288f5188d2cfe7aa07f13ae24d`). Full detail in
   `projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+- 2026-10-15 ~15:31Z: fresh session, queue id 334, email channel,
+  subject "Bayhouse," from `psmalone13@gmail.com`. Verified genuine
+  (DKIM/SPF pass) and confirmed it's the exact same Gmail message
+  (`1a140304ae031ba0`, `internalDate` 1792078266000) already received
+  and decrypted directly in the queue id 333 turn immediately before
+  this one — just the email-monitor's own independent pickup of that
+  reply, same pattern as queue ids 258/282/286/289/309/325/327. No new
+  content, no reply sent. Pointer stayed on
+  `engineering/secure-agent-communication`, no move needed.
