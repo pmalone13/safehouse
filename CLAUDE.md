@@ -206,7 +206,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 331,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 332, 2026-10-15 ~15:25Z, text, Paul: "what model are you using?
+Sonnet 5?" Moved the pointer here from `new-england` (folded back
+into the live-projects list below, nothing new since queue id 331).
+A system/meta question, not tied to any project — confirmed directly
+from this session's own system context (model id `claude-sonnet-5`,
+Sonnet 5). Replied by SMS confirming.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 331,
 2026-10-15 ~15:24Z, text, Paul: "no it is Sunday. no change." Direct
 answer to the Monday-vs-Sunday mismatch flagged at the end of queue
 id 330 (below) — departure really is Sunday 10/18, matching the
@@ -5710,3 +5718,12 @@ thing that needs it, not because anything currently lives under it.
   date. No correction needed anywhere; replied by SMS
   (`SM9cc3ce8b0992603fe9c234f383e0a85d`) acknowledging. Full detail in
   `projects/new-england/CLAUDE.md`.
+
+- 2026-10-15 ~15:25Z: fresh session, queue id 332, text channel,
+  Paul: "what model are you using? Sonnet 5?" Moved the Current-
+  project pointer to `safehouse/general` from `new-england` (folded
+  back into the live-projects list, nothing new since queue id 331).
+  Confirmed directly from this session's own system context (model
+  id `claude-sonnet-5`, Sonnet 5) — no lookup needed. Replied by SMS
+  (`SM002b14608925c53a962a9e2e67360693`). Full detail in
+  `projects/safehouse/general/CLAUDE.md`.
