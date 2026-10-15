@@ -206,7 +206,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 333, 2026-10-15 ~15:30Z, text, Paul: "can you
+ask Bill what model he is using?" Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list below,
+nothing new since queue id 332, which asked Ted the same question
+about itself). Sent the free-form question via
+`ted_protocol.send_command()`, verified the reply's `internalDate`
+against the send time rather than trust `poll_for_reply()` (its
+stale-reply bug, queue id 275, is still unfixed) — real reply back in
+~41s. **Bill's answer: also Claude Sonnet 5 (`claude-sonnet-5`)**,
+matching this file's own standing "same underlying models, different
+scopes" note. Bill also volunteered that his side runs a fresh
+one-shot model instance per inbound message, no resume window
+(unlike Ted's own episodic-but-ticketed session shape). Replied by
+SMS with both facts. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 332, 2026-10-15 ~15:25Z, text, Paul: "what model are you using?
 Sonnet 5?" Moved the pointer here from `new-england` (folded back
 into the live-projects list below, nothing new since queue id 331).
@@ -5727,3 +5744,18 @@ thing that needs it, not because anything currently lives under it.
   id `claude-sonnet-5`, Sonnet 5) — no lookup needed. Replied by SMS
   (`SM002b14608925c53a962a9e2e67360693`). Full detail in
   `projects/safehouse/general/CLAUDE.md`.
+
+- 2026-10-15 ~15:30Z: fresh session, queue id 333, text channel,
+  Paul: "can you ask Bill what model he is using?" Moved the
+  Current-project pointer to `engineering/secure-agent-communication`
+  from `safehouse/general` (folded back into the live-projects list,
+  nothing new since queue id 332). Sent the free-form question via
+  `ted_protocol.send_command()`, polled Gmail directly by
+  `internalDate` against the send time rather than trust
+  `poll_for_reply()` (its stale-reply bug, queue id 275, is still
+  unfixed) — real reply back in ~41s: Bill is also Claude Sonnet 5
+  (`claude-sonnet-5`), and volunteered that his side runs a fresh
+  one-shot model instance per inbound message with no resume window
+  (unlike Ted's episodic-but-ticketed session shape). Replied by SMS
+  (`SMda01ff288f5188d2cfe7aa07f13ae24d`). Full detail in
+  `projects/engineering/secure-agent-communication/CLAUDE.md`.
