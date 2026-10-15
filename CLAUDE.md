@@ -206,7 +206,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 336, 2026-10-15 ~20:08Z, text, Paul: "can you look at amazon or
+other site and find me a rubbermaid or similar container that will
+nicely fit a recessed hole exactly: 19" x 12 3/4". The container
+needs a lid and a hight of 9" or less." Moved the pointer here from
+`engineering/secure-agent-communication` (folded back into the
+live-projects list, nothing new since queue id 335). Researched real
+outside-dimension specs across Sterilite/Rubbermaid/IRIS USA/Homz
+product lines via `WebSearch`/`WebFetch` rather than guess from
+capacity labels. Best match: **Sterilite 18 Qt. Ultra™ Latch Box**,
+confirmed 18 1/8" L x 12 1/4" W x 7" H (sterilite.com), latching lid,
+widely available. Fits the 19" x 12.75" opening with ~7/8"/~1/2"
+slack, well under the 9" height cap. Ruled out several close-but-
+wrong candidates on real numbers (Sterilite 20 Qt HingeLid too wide
+at 14", Sterilite 30 Qt Ultra Latch right footprint but 11.5" tall,
+IRIS WeatherPro models either too long or too wide, Rubbermaid
+Roughneck 10 gal too big both ways). Replied by SMS with the
+recommendation, exact dimensions, and fallback options, flagging that
+nothing found hits 19"x12.75" to the exact inch — same live-listing-
+browsing limitation noted in `suv-replacement`/`chris-car`. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 333, 2026-10-15 ~15:30Z, text, Paul: "can you
 ask Bill what model he is using?" Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list below,
