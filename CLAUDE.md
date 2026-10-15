@@ -207,16 +207,28 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 324, 2026-10-15 ~02:05Z, text, Paul: "Ask Bill
-for status." Moved the pointer here from `planning` (folded back
-into the live-projects list below, nothing new since queue id 323).
-Sent `STATUS` via `ted_protocol.send_command()`, verified the reply's
-`internalDate` against the send time rather than trust
-`poll_for_reply()` (its stale-reply bug, queue id 275, is still
-unfixed) — real reply confirmed genuinely newer, ~39s after send.
-**New development**: `birdClipper` is now down (every prior check had
-it up); `voice_monitor`/`virtual_device_bayhouseAck` still down (the
-familiar stable pattern), everything else up. Last bird clip
+CLAUDE.md` — queue id 326, 2026-10-15 ~02:07Z, text, Paul: "Ask Bill
+for weather." Pointer already here, no move needed. Sent the
+free-form question "What is the weather right now?" via
+`ted_protocol.send_command()` (v2/v3's free-form capability) — same
+question/same expected sandboxing answer as queue id 292/293. Real
+reply back in ~45s confirming Bill still has no internet/sensor
+access. Pulled a direct NWS reading (KNAK, Annapolis) as backup:
+Mostly Cloudy, 73F, calm, 87% humidity, as of 8:54pm Eastern. Replied
+by SMS with both. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, same project — queue id 324,
+2026-10-15 ~02:05Z, text, Paul: "Ask Bill for status." Moved the
+pointer here from `planning` (folded back into the live-projects list
+below, nothing new since queue id 323). Sent `STATUS` via
+`ted_protocol.send_command()`, verified the reply's `internalDate`
+against the send time rather than trust `poll_for_reply()` (its
+stale-reply bug, queue id 275, is still unfixed) — real reply
+confirmed genuinely newer, ~39s after send. **New development**:
+`birdClipper` is now down (every prior check had it up);
+`voice_monitor`/`virtual_device_bayhouseAck` still down (the familiar
+stable pattern), everything else up. Last bird clip
 2026-10-14T17:51:37. Replied by SMS with the full reading, flagging
 the birdClipper change. Full detail in `projects/engineering/
 secure-agent-communication/CLAUDE.md`.
