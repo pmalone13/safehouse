@@ -206,7 +206,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 328, 2026-10-15 ~02:29Z, text, Paul: "go through all our projects
+one by one, compile an email with summary of each project... for all
+notes and general, create a written description of content... HTML
+for formatting and an outline." Moved the pointer here from
+`engineering/secure-agent-communication` (folded back into the
+live-projects list below, nothing new since queue id 327). A system-
+wide meta request, not tied to one project. Delegated reading/
+summarizing all 19 project `CLAUDE.md` files to a subagent (several
+are long append-only logs) rather than read them all directly, with
+an extra instruction to write a fuller "content description" for this
+file specifically since Paul named "notes and general" and this is
+the catch-all bucket. Built a real HTML email (outline with anchor
+links + one section per project) via a one-off `EmailMessage.
+add_alternative()` script and sent it to `pmalone13@gmail.com`.
+Replied by SMS confirming. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 326, 2026-10-15 ~02:07Z, text, Paul: "Ask Bill
 for weather." Pointer already here, no move needed. Sent the
 free-form question "What is the weather right now?" via
