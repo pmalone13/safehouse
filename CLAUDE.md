@@ -207,6 +207,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 321, 2026-10-15 ~00:36Z, text, Paul: "Did u receive my emails with
+meeting files." Pointer already here, no move needed. Checked
+`queue.db` fresh rather than assume — this is the same pair of
+emails already recovered and fully handled at queue id 315
+(2026-10-14 ~19:25Z, see that entry below): both dropped planning-
+meeting emails were processed into `projects/planning/CLAUDE.md` and
+a full write-up was already emailed back in the same thread. Nothing
+new to do — replied by SMS confirming receipt, naming what was done,
+and offering to resend if the email reply didn't land. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 320, 2026-10-14 ~23:28Z, text, Paul: "how long does the does
 last" (dictation garble for "dose"). Pointer already here, no move
 needed. Direct follow-up continuing the trazodone thread — used
