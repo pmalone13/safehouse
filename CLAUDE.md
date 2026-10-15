@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+337, 2026-10-15 ~22:00Z, channel `cron`, source `suv-replacement-
+watch` — 6pm Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list, nothing
+new since queue id 336). Ran the standing four-region recipe (SUV +
+truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 151 unique hrefs, 120
+not an exact URL match to the ledger. **No new qualifying candidate.**
+Individually checked four distinctive-looking titles: a 2008 Ford
+F-150 4x4 ($2,900, Baltimore) fetched directly — no crew-cab claim or
+cab-type attribute, same established half-ton exclusion as prior
+F150s; a 1971 El Camino and two 2011 BMW X3 listings (same vehicle,
+two URLs) — both already-established off-class categories; a 2012
+Mazda6 sedan — off-class. Everything else was a content-match repost
+of an already-logged/excluded listing or the recurring Houston-TX
+dealer cross-post pattern (~28 hits). Per the standing rule (queue id
+287), emailed Paul a "checked, nothing new" note anyway. Full detail
+in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 9am Eastern
+tomorrow (2026-10-16).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 336, 2026-10-15 ~20:08Z, text, Paul: "can you look at amazon or
 other site and find me a rubbermaid or similar container that will
 nicely fit a recessed hole exactly: 19" x 12 3/4". The container
@@ -5813,3 +5834,13 @@ thing that needs it, not because anything currently lives under it.
   departure-date question is resolved (Sunday 10/18, confirmed queue
   id 331); and the next scheduled SUV/truck cron fire is 6pm Eastern
   today (2026-10-15).
+
+- 2026-10-15 ~22:00Z: fresh session, queue id 337, channel `cron`,
+  source `suv-replacement-watch` — 6pm Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. No new qualifying candidate (151 unique hrefs, 120 not
+  an exact URL match to the ledger, all excluded — four distinctive
+  search-card titles checked individually and confirmed off-class or
+  already-established exclusion categories). Emailed Paul a "checked,
+  nothing new" note per the standing rule. Next scheduled SUV/truck
+  cron fire: 9am Eastern tomorrow (2026-10-16).
