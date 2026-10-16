@@ -206,7 +206,37 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+339, 2026-10-16 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — 9am Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the other-live-projects list
+below, nothing new since queue id 338). Ran the standing four-region
+recipe (SUV + truck + five diesel-specific queries, washingtondc/
+annapolis/baltimore/easternshore, `<=2012`/`<110,000 mi`). 147 unique
+hrefs, 113 not an exact URL match to the ledger. **Found one new
+qualifying candidate**: a 2006 Ford F-350 Super Duty, 4WD, Turbo
+Diesel, $18,499, 63,711 mi, clean title, Vienna VA — clears the
+6,000 lb tow gate automatically per the diesel-F250/F350-class rule
+(queue id 208). Over the $10k nominal ceiling, emailed anyway per the
+standing over-budget-but-qualifying pattern. Individually checked
+several ambiguous/dealer-style listings rather than guess from the
+search card: "SUV Nissan low mileages" ($7,900, McLean) — no VIN/
+model data given, but matches the recurring obfuscated-Murano-repost
+pattern seen before (queue id 277); a "2012 FORD SUPER DUTY F-350...
+Call/Text 540-328-2419" dealer listing ($26,995, Fredericksburg) —
+confirmed via exact posting-ID match to be the identical 2012 F-350
+SRW XLT already logged 2026-10-12 (queue id 259), just resurfacing
+under a different dealer title string; and six other candidates
+(1987 UMM Alter, two Cadillac Escalades, a 2011 Land Rover Range
+Rover, a 2007 Chevy 2500HD w/ plow, a 2000 Ford Explorer, a
+Chevrolet Silverado 1500 4.3L) all confirmed via exact href match to
+already-logged/excluded entries. Everything else was a content-match
+repost or the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern (~34 hits). Full detail in `projects/suv-replacement/
+CLAUDE.md` and `craigslist_watch_results.md`. Next scheduled fire:
+6pm Eastern today (2026-10-16).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 338, 2026-10-16 ~01:16Z, text, Paul: "hey Ted, quick question. What
 was the strategy that Nixon used when selecting Gerald Ford as the
 replacement for Spiro Agnew? What is it did? Did Gerald Ford bring
@@ -5905,3 +5935,18 @@ thing that needs it, not because anything currently lives under it.
   bug (queue id 275) all remain open and need Paul live to fix; and
   the next scheduled SUV/truck cron fire is 9am Eastern today
   (2026-10-16).
+
+- 2026-10-16 ~13:0xZ: fresh session, queue id 339, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. Found one new qualifying candidate (2006 Ford F-350
+  Super Duty diesel, $18,499, 63,711 mi, clean title, Vienna VA —
+  clears the tow gate via the diesel-class exemption) and emailed
+  Paul. Worth noting for future runs: the posting-ID-based dedup
+  check (extracting IDs from the ledger via regex) missed at least
+  one exact-href duplicate that a plain substring search on the raw
+  href string caught cleanly — plain substring matching on the full
+  href remains the more reliable first-pass dedup method; the
+  title-signature pass is a good second-pass catch for reposts under
+  genuinely new URLs/IDs. Next scheduled SUV/truck cron fire: 6pm
+  Eastern today (2026-10-16).
