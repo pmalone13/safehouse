@@ -206,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 338, 2026-10-16 ~01:16Z, text, Paul: "hey Ted, quick question. What
+was the strategy that Nixon used when selecting Gerald Ford as the
+replacement for Spiro Agnew? What is it did? Did Gerald Ford bring
+anything that Nixon needed?" Plain history/general-knowledge question,
+no project named. Moved the pointer here from `suv-replacement`
+(folded back into the other-live-projects list below, nothing new
+since queue id 337). Used `WebSearch` to confirm the real mechanism
+rather than answer purely from memory: Nixon's actual first preference
+was John Connally, but with Watergate underway and a Democratic
+Congress, he asked the Democratic leaders themselves (Speaker Carl
+Albert, Senate Majority Leader Mike Mansfield) who'd be easiest to
+confirm — they named House Minority Leader Gerald Ford, confirmed in a
+landslide (House 387-5, Senate 92-3), the first real use of the 25th
+Amendment's VP-replacement provision. What Ford brought: 25 years of
+bipartisan House goodwill, a reputation for honesty ("Mr. Clean"), and
+no serious presidential ambition — a low-friction, fast, credible
+confirmation that helped stabilize the administration's image
+mid-scandal, not policy substance. Checked and declined to assert the
+popular "insurance policy against impeachment" theory — the search
+results support the confirmability story, not that specific framing.
+Replied by SMS. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 337, 2026-10-15 ~22:00Z, channel `cron`, source `suv-replacement-
 watch` — 6pm Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the live-projects list, nothing
@@ -5857,3 +5880,14 @@ thing that needs it, not because anything currently lives under it.
   bug (queue id 275) all remain open and need Paul live to fix; and
   the next scheduled SUV/truck cron fire is 9am Eastern tomorrow
   (2026-10-16).
+
+- 2026-10-16 ~01:16Z: fresh session, queue id 338, text channel,
+  Paul's Nixon/Ford/Agnew history question. Already fully handled,
+  logged, and committed as part of this checkpoint. Used `WebSearch`
+  to confirm the real mechanism (confirmability strategy, Democratic
+  leaders naming Ford, 387-5/92-3 landslide confirmation) rather than
+  rely on memory alone, and deliberately declined to assert the
+  popular "insurance policy against impeachment" theory since the
+  search results didn't support that specific framing. Moved the
+  Current-project pointer here from `suv-replacement`. Replied by
+  SMS. Full detail in `projects/safehouse/general/CLAUDE.md`.
