@@ -5975,3 +5975,22 @@ thing that needs it, not because anything currently lives under it.
   bug (queue id 275) all remain open and need Paul live to fix; and
   the next scheduled SUV/truck cron fire is 6pm Eastern today
   (2026-10-16).
+
+- 2026-10-16 ~15:4xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 340, Paul's email
+  re-confirming the NE trip departure (Sunday 10/18, consistent with
+  queue id 331) and noting he's packing now, already fully handled,
+  logged, committed, and pushed (`71b9920`) before this wrap-up fired
+  — replied by email in the same thread. Working tree confirmed clean
+  at wrap-up (`git status --short` empty), so this entry is the only
+  change this turn makes. Drive already synced clean as part of that
+  turn's own checkpoint (one transient Google-side `500 Internal
+  Error` on the first attempt, unrelated to the recurring
+  `invalid_grant` outage pattern — cleared on an immediate retry, not
+  worth a TODO entry). Nothing outstanding heading into the next turn
+  beyond what's already on file: the three-outage recurring
+  session-limit bug (TODO section, queue ids 260/272/315), the v3
+  file-send session-collision architecture issue, and
+  `poll_for_reply()`'s stale-reply bug (queue id 275) all remain open
+  and need Paul live to fix; and the next scheduled SUV/truck cron
+  fire is 6pm Eastern today (2026-10-16).
