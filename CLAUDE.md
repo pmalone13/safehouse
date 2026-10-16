@@ -6273,3 +6273,22 @@ thing that needs it, not because anything currently lives under it.
   Drive-sync corruption finding from queue id 346/347 also still
   needs Paul live; and the next scheduled SUV/truck cron fire is 9am
   Eastern tomorrow (2026-10-17).
+
+- 2026-10-16 ~22:1xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 350, already fully
+  handled, logged, committed, and pushed (`2216f93`) before this
+  wrap-up fired — the 6pm SUV/truck cron fire, one caveated candidate
+  (2003 Mercedes G500, tow rating unconfirmed) emailed, and a new
+  posting-ID dedup pass adopted after catching a slug-changed repost.
+  Working tree confirmed clean at wrap-up (`git status --short`
+  empty), so this entry is the only change this turn makes. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the public-GitHub-repo finding (queue id 348) is waiting on
+  Paul to flip visibility himself; the three-outage recurring
+  session-limit bug (TODO section, queue ids 260/272/315), the v3
+  file-send session-collision architecture issue, and
+  `poll_for_reply()`'s stale-reply bug (queue id 275) all remain open
+  and need Paul live to fix; the `ssa.png`/`passport.jpg` Drive-sync
+  corruption finding (queue id 346/347) also still needs Paul live;
+  and the next scheduled SUV/truck cron fire is 9am Eastern tomorrow
+  (2026-10-17).
