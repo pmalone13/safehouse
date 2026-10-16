@@ -207,7 +207,15 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 343, 2026-10-16 ~17:02Z, text, Paul: "I'm doing the takeout
+id 344, 2026-10-16 ~17:03Z, text, Paul: "cool. Did I share it via
+drive? That is how I'm doing the photos." Pointer already here, no
+move needed. Checked `projects/travel/CLAUDE.md` rather than answer
+from memory: confirmed yes — the 9/20 Timeline.json was shared
+directly via a Google Drive file share, not email/MMS, so the same
+mechanism works for his planned Takeout photos. Replied by SMS. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id 343, 2026-10-16 ~17:02Z, text, Paul: "I'm doing the takeout
 approach. BTW, did you get my takeout timeline around september
 20th?" Pointer already here, no move needed. Two parts: confirmed
 he's proceeding with the Takeout-to-Drive plan from queue id 342 (no
