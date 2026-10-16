@@ -206,9 +206,63 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 345, 2026-10-16 ~17:04Z, text, Paul: "cool." Plain acknowledgment
-of the queue id 344 confirmation. No reply needed, no pointer move.
+**Current project**: `projects/paris-september-2026/CLAUDE.md` —
+queue id 347, 2026-10-16 ~17:1xZ, text, Paul: "Just shared photos with
+you... could you put together a book of our travels? ... in HTML
+format such that the output is a zipfile with a root index.html file
+and then pages for travel stuff... Perhaps we could expose from our
+server somehow." Moved the pointer here from `safehouse/general`
+(folded back into the other-live-projects list below, nothing new
+since queue id 345). A real build request (HTML generator + zip
+packaging, or a static site served from the existing nginx box) —
+squarely application code under the hard boundary, so **not built
+from this queued text**. Replied by SMS describing the concrete
+shape of the deliverable (chronological index.html outlining each
+trip/stop, linking to per-stop pages built from `Timeline.json` +
+this trip's new photo archive + existing project narrative) and
+engaging with his own "expose from our server" idea — `idealfed.com`'s
+existing live nginx box is a genuinely better fit than a one-off zip
+given he plans monthly recurring Timeline exports, since it's
+incrementally updatable and shareable by URL. Asked him to choose
+(static zip / real server path / build the generator first and decide
+hosting later) and offered to build whichever he wants once he's live
+on SSH. Full detail in `projects/paris-september-2026/CLAUDE.md`.
+
+Previous pointer, same project — queue id 346, 2026-10-16 ~17:0xZ,
+email, a genuine Google Drive share notification (verified via
+DKIM/SPF/DMARC), Paul: "Paris photos." The Google Takeout photo
+export he'd described planning at queue ids 342-344 actually arrived:
+`takeout-20261016T170049Z-1-001.zip`, 1.4GB. Downloaded via
+`MediaIoBaseDownload` and verified with Python's `zipfile` module (no
+`unzip` binary on this VM): 395 real media files (388 jpg/4 mp4/3
+png) + 380 Takeout metadata sidecars, dated 2026-09-13 through
+2026-09-24 — matches this Paris trip's Normandy-leg dates plus a few
+days either side. **Deliberately stored outside this git repo
+entirely**, at `/home/ubuntu/safehouse-media/paris-september-2026/`
+(a sibling directory to `/home/ubuntu/safehouse`, not a subdirectory)
+— `drive_sync.py`'s `REPO_ROOT` only ever walks this repo, so a
+sibling path is structurally invisible to its known binary-corruption
+bug (root TODO section) with no code change needed. Chose this over
+the project/personal-project precedent of a manual "skip this turn"
+flag specifically because that precedent was just found to have
+failed silently — see the next paragraph. No reply sent for this
+message alone (handled together with queue id 347 above).
+
+**Found and flagged the same checkpoint, not previously known**:
+while deciding how to protect this new zip, checked
+`.drive_sync_state.json` directly and found that
+`projects/personal/ssa.png` and `projects/personal/passport.jpg` —
+both explicitly documented in that project's own CLAUDE.md as
+deliberately local-only, never synced, due to this exact
+binary-corruption bug — **do have live Drive manifest entries**,
+meaning a later routine checkpoint silently synced (and likely
+corrupted) them anyway. The original protection was only ever a
+one-turn manual skip, not a code-level exclude (unlike `ted_key.txt`/
+the OAuth token files, which are actually in `drive_sync.py`'s
+`EXCLUDE_NAMES`), so nothing stopped a future ordinary checkpoint from
+sweeping them in. Not fixed this turn (needs Paul live, same as every
+other `drive_sync.py` change) — flagged to Paul by SMS and logged in
+full in `projects/personal/CLAUDE.md` and the TODO section below.
 
 Previous pointer, same project — queue id 344, 2026-10-16 ~17:03Z, text, Paul: "cool. Did I share it via
 drive? That is how I'm doing the photos." Pointer already here, no
@@ -2550,6 +2604,39 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-16: `projects/personal/ssa.png` and `passport.jpg`
+  were supposed to be local-only (never synced to Drive) but actually
+  got synced anyway — the "skip this turn" protection doesn't hold
+  across future turns, needs Paul live to fix for real.** Both files
+  are explicitly documented in `projects/personal/CLAUDE.md` as
+  deliberately excluded from `drive_sync.py` at creation time
+  (2026-09-08), given what they are (an SSN document, a passport) and
+  `drive_sync.py`'s own known binary-corruption bug (see the entry
+  below). That exclusion was only ever a one-turn manual skip, not a
+  code-level protection — `ted_key.txt` and the OAuth token files
+  *are* hardcoded into `drive_sync.py`'s own `EXCLUDE_NAMES`, but
+  these two filenames never were. Discovered while handling queue id
+  346/347 (a new 1.4GB Paris Takeout photo archive, see
+  `projects/paris-september-2026/CLAUDE.md`): checked
+  `.drive_sync_state.json` directly as part of deciding how to store
+  that archive safely, and found both `ssa.png` and `passport.jpg`
+  already have live Drive `drive_file_id`/`sha256` manifest entries —
+  meaning some later, perfectly ordinary checkpoint synced them like
+  any other file, almost certainly corrupting them the same way as
+  the already-proven alliecar `.docx` case (UTF-8-decoded, re-uploaded
+  as `text/plain`). **Not fixed this turn** — the real fix (add both
+  filenames to `EXCLUDE_NAMES`, or build real binary-upload support)
+  is an edit to existing application code and needs Paul live, same
+  posture as every other `drive_sync.py` change. Flagged to Paul by
+  SMS; full detail in `projects/personal/CLAUDE.md`. **Lesson for any
+  future turn handling a sensitive/binary file**: a manual "don't sync
+  this" note in a project file is not durable — either get it into
+  `drive_sync.py`'s own `EXCLUDE_NAMES` (needs Paul live), or store it
+  somewhere `drive_sync.py` structurally cannot reach, e.g. outside
+  this repo entirely (the approach used for the new Paris photo
+  archive, stored at `/home/ubuntu/safehouse-media/`, a sibling
+  directory to this repo, specifically because of this failure mode).
 
 - **Found 2026-10-14: a live interactive SSH session and the autonomous
   email-monitor/coordinator pipeline are NOT mutually exclusive --
@@ -6039,3 +6126,27 @@ thing that needs it, not because anything currently lives under it.
   `poll_for_reply()`'s stale-reply bug (queue id 275) all remain open
   and need Paul live to fix; and the next scheduled SUV/truck cron
   fire is 6pm Eastern today (2026-10-16).
+
+- 2026-10-16 ~18:2xZ: fresh session, queue id 346 (email, genuine
+  Drive share, "Paris photos") and queue id 347 (text, the "book of
+  our travels" request), both handled in one turn. Downloaded and
+  verified the 1.4GB Takeout zip (395 media files + 380 metadata
+  sidecars, dated 2026-09-13 through 2026-09-24) via
+  `MediaIoBaseDownload` + Python's `zipfile` module, stored it at
+  `/home/ubuntu/safehouse-media/paris-september-2026/` — deliberately
+  a sibling directory to this repo, not under it, so `drive_sync.py`'s
+  binary-corruption bug can never reach it. While deciding on that
+  storage approach, checked `.drive_sync_state.json` directly and
+  **found `projects/personal/ssa.png`/`passport.jpg` already have live
+  Drive manifest entries despite being documented as local-only** —
+  flagged as a new TODO entry above and in `projects/personal/
+  CLAUDE.md`, not fixed (needs Paul live). Declined to build the
+  requested HTML "travel book" generator/zip/server-hosting from this
+  queued text (application code, hard boundary) — replied by SMS
+  describing the concrete design and engaging with Paul's own "expose
+  from our server" idea (the existing live `idealfed.com` nginx box
+  is a better fit than a one-off zip given his monthly recurring
+  Timeline exports), asked him to choose an approach. Moved the
+  Current-project pointer to `paris-september-2026` from
+  `safehouse/general`. Full detail in
+  `projects/paris-september-2026/CLAUDE.md`.
