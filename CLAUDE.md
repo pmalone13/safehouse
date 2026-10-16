@@ -206,7 +206,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+350, 2026-10-16 ~22:00Z, channel `cron`, source `suv-replacement-
+watch` — 6pm Eastern scheduled fire. Moved the pointer here from
+`safehouse/general` (folded back into the other-live-projects list
+below, nothing new since queue id 349). Ran the standing four-region
+recipe (SUV + truck + five diesel-specific queries, washingtondc/
+annapolis/baltimore/easternshore, `<=2012`/`<110,000 mi`). 153 unique
+hrefs, 119 not an exact URL/posting-ID match to the ledger. **Found
+one new candidate, caveated rather than confirmed**: a 2003
+Mercedes-Benz G500 (G-Class), $29,000, 90,000 mi, clean title, Laurel
+MD — a genuine body-on-frame 4x4 V8 SUV, but real tow-rating research
+came back conflicting (5,000 lb vs. 7,000 lb depending on source), so
+it isn't confirmed to clear the 6,000 lb tow gate — emailed with that
+caveat spelled out rather than reported as a clean match, same
+posture as prior caveated-maybe finds. **Adopted a new dedup method
+this run**: found a GMC Savana cargo van (already excluded the
+previous day) resurfacing under a changed URL slug but an identical
+trailing Craigslist posting ID — plain full-href matching alone would
+have missed it, so started also extracting and cross-checking bare
+posting IDs against the ledger as a second dedup pass, worth keeping
+standing going forward. Individually checked and excluded two others:
+a 2007 Toyota Tacoma, Randallstown ($7,500) — the search-card
+odometer field was garbled, but the listing's own body text says
+296,000 mi, far over the ceiling; and a 1957 Chevy 150 Business Coupe
+(Madison VA) — same already-established classic-car exclusion
+category, different specific listing. Everything else was a
+content-match repost or the Houston-TX dealer cross-post pattern. Full
+detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 9am Eastern
+tomorrow (2026-10-17).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 349, 2026-10-16 ~21:06Z, text, Paul (dictation): "Ted's quad files
 don't go to get. They should only be going to Google drive except for
 I guess the main Claude file maybe?" — decoded as "Ted's project files
