@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 340,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 341, 2026-10-16 ~16:53Z, text, Paul: "Ted, can you see these pics:
+https://photos.app.goo.gl/TWXmtgHVtjRySy7H8" Moved the pointer here
+from `new-england` (folded back into the other-live-projects list
+below, nothing new since queue id 340). Tried `WebFetch` on the link
+rather than assume it wouldn't work — it followed the redirect to the
+real `photos.google.com/share/...` URL, but the page itself is
+JS-rendered and returned no actual photo content, same wall already
+hit for YouTube Shorts and documented in the TODO section for Google
+Photos sharing. Replied by SMS explaining the limitation and asking
+Paul to share the actual files (email/MMS/Drive) instead. Full detail
+in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 340,
 2026-10-16 ~15:37Z, email, subject "Re: New England Trip: Packing
 List & Weather-Based Clothing Guide," Paul: "thanks for this. yes
 checkin at Portland is Sunday. We are packing now." Moved the pointer
