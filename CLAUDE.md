@@ -207,7 +207,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 342, 2026-10-16 ~16:55Z, text, Paul: "Is there a way to copy from
+id 343, 2026-10-16 ~17:02Z, text, Paul: "I'm doing the takeout
+approach. BTW, did you get my takeout timeline around september
+20th?" Pointer already here, no move needed. Two parts: confirmed
+he's proceeding with the Takeout-to-Drive plan from queue id 342 (no
+action needed), and a recall question — grepped
+`projects/travel/CLAUDE.md` rather than answer from memory, confirmed
+yes: 2026-09-20, queue id 133, a real Google Maps Timeline export
+(37MB, 1,720 GPS segments) was received and saved into the `travel`
+project. Replied by SMS. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id 342, 2026-10-16 ~16:55Z, text, Paul: "Is there a way to copy from
 photos to drive in Google?" Pointer already here, no move needed —
 direct follow-up to queue id 341's JS-rendering limitation. Used
 `WebSearch` to confirm current state: no native Photos<->Drive
