@@ -206,7 +206,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 340,
+2026-10-16 ~15:37Z, email, subject "Re: New England Trip: Packing
+List & Weather-Based Clothing Guide," Paul: "thanks for this. yes
+checkin at Portland is Sunday. We are packing now." Moved the pointer
+here from `suv-replacement` (folded back into the other-live-projects
+list below, nothing new since queue id 339). Re-confirms the same
+Sunday 10/18 Portland check-in already settled at queue id 331 —
+consistent both times, nothing to correct — plus a status update
+that packing is underway. Replied by email in the same thread with a
+short acknowledgment. Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 339, 2026-10-16 ~13:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the other-live-projects list
