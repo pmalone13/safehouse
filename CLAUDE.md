@@ -207,7 +207,10 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 344, 2026-10-16 ~17:03Z, text, Paul: "cool. Did I share it via
+id 345, 2026-10-16 ~17:04Z, text, Paul: "cool." Plain acknowledgment
+of the queue id 344 confirmation. No reply needed, no pointer move.
+
+Previous pointer, same project — queue id 344, 2026-10-16 ~17:03Z, text, Paul: "cool. Did I share it via
 drive? That is how I'm doing the photos." Pointer already here, no
 move needed. Checked `projects/travel/CLAUDE.md` rather than answer
 from memory: confirmed yes — the 9/20 Timeline.json was shared
