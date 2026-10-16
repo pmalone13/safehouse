@@ -207,7 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 341, 2026-10-16 ~16:53Z, text, Paul: "Ted, can you see these pics:
+id 342, 2026-10-16 ~16:55Z, text, Paul: "Is there a way to copy from
+photos to drive in Google?" Pointer already here, no move needed —
+direct follow-up to queue id 341's JS-rendering limitation. Used
+`WebSearch` to confirm current state: no native Photos<->Drive
+auto-sync exists anymore, but two manual paths work — select-and-
+download-as-zip then upload to Drive, or Google Takeout with
+Destination set to "Add to Drive" for a whole batch at once. Replied
+by SMS with both options. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id 341, 2026-10-16 ~16:53Z, text, Paul: "Ted, can you see these pics:
 https://photos.app.goo.gl/TWXmtgHVtjRySy7H8" Moved the pointer here
 from `new-england` (folded back into the other-live-projects list
 below, nothing new since queue id 340). Tried `WebFetch` on the link
