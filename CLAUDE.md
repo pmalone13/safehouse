@@ -6196,3 +6196,31 @@ thing that needs it, not because anything currently lives under it.
   Current-project pointer to `paris-september-2026` from
   `safehouse/general`. Full detail in
   `projects/paris-september-2026/CLAUDE.md`.
+
+- 2026-10-16 ~20:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 348, text channel, Paul:
+  "Drive is ok secure. Git Bayhouse is too. Git 'safehouse' is not" —
+  already fully handled, logged, committed, and pushed (`6b7a9b3`)
+  before this wrap-up fired. Verified Paul's security report directly
+  against GitHub's own REST API rather than take it on faith:
+  confirmed `github.com/pmalone13/safehouse` really is public
+  (`"private": false`). Checked for a way to fix it from this VM —
+  none exists (no GitHub token/PAT/OAuth credential anywhere, only a
+  push/pull-only SSH deploy key) — so flagged it to Paul by SMS with
+  the exact fix path (GitHub Settings -> Danger Zone -> Change
+  visibility -> Private) and logged it as a new standing TODO entry
+  above rather than leave it only in this session's reply. Moved the
+  Current-project pointer to `safehouse/general` from
+  `paris-september-2026` (folded back into the live-projects list,
+  nothing new since queue id 347). Working tree confirmed clean at
+  this wrap-up (`git status --short` empty), so this entry is the
+  only change this turn makes. Nothing outstanding heading into the
+  next turn beyond what's already on file: the public-GitHub-repo
+  finding is waiting on Paul to flip visibility himself; the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, and `poll_for_reply()`'s stale-reply bug (queue id 275) all
+  remain open and need Paul live to fix; the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding from queue id 346/347 also still
+  needs Paul live; and the next scheduled SUV/truck cron fire is 9am
+  Eastern tomorrow (2026-10-17).
