@@ -206,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/paris-september-2026/CLAUDE.md` —
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 348, 2026-10-16 ~19:42Z, text, Paul: "Drive is ok secure. Git
+Bayhouse is too. Git 'safehouse' is not." Moved the pointer here from
+`paris-september-2026` (folded back into the other-live-projects list
+below, nothing new since queue id 347). A security status report
+across three systems — verified rather than taken on faith: queried
+GitHub's own public REST API directly and **confirmed
+`github.com/pmalone13/safehouse` is genuinely public right now**
+(`"private": false`, readable by anyone, no login needed), matching
+Paul's claim exactly. Checked whether this VM could fix it directly —
+it can't: no GitHub token/PAT/OAuth credential exists anywhere on
+this box (only an SSH deploy key, push/pull only, no Settings-page
+access), so flipping visibility needs Paul himself via the GitHub web
+UI (Settings -> Danger Zone -> Change visibility -> Private). Flagged
+as worth doing soon rather than urgent-emergency, but real: even
+after the 2026-09-23/24 history purge, this root file's own prose
+still has personal detail (e.g. Allie's VIN, already flagged once)
+and the full remaining commit history (protocol code, systemd units,
+etc.) is sitting world-readable. Replied by SMS with the confirmed
+finding and the exact fix path. See this file's own TODO section
+below for the standing entry. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/paris-september-2026/CLAUDE.md` —
 queue id 347, 2026-10-16 ~17:1xZ, text, Paul: "Just shared photos with
 you... could you put together a book of our travels? ... in HTML
 format such that the output is a zipfile with a root index.html file
@@ -2604,6 +2627,29 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-16 (queue id 348): the GitHub remote for this repo,
+  `github.com/pmalone13/safehouse`, is PUBLIC — needs Paul to flip it
+  private via the GitHub web UI, not something this VM can fix.**
+  Paul reported it himself ("Git 'safehouse' is not [secure]"),
+  verified directly against GitHub's own REST API
+  (`"private": false`) rather than taken on faith. No GitHub token/
+  PAT/OAuth credential exists anywhere on this VM — only a push/pull-
+  only SSH deploy key — so there is no API path from here to change
+  it; it needs Paul himself on github.com, Settings -> Danger Zone ->
+  Change visibility -> Private. Exposure is real but bounded: the
+  2026-09-23/24 `git-filter-repo` purge already stripped every
+  `projects/` path from all 202 commits, so none of that content is
+  in the public history. What *is* still exposed: this root
+  `CLAUDE.md` file's own prose (deliberately never purged — it's the
+  one file git is supposed to track — and it still has some personal
+  detail, e.g. Allie's car VIN, already flagged once before) plus the
+  full commit history of every other still-tracked file
+  (`twilio_webhook.py`, `ted_protocol.py`, `google_client.py`,
+  systemd units, etc. — none of it holds live secrets since those are
+  all gitignored, but the code/architecture itself is world-readable).
+  Not fixed this turn — flagged to Paul by SMS with the exact fix
+  path. Full detail in `projects/safehouse/general/CLAUDE.md`.
 
 - **Found 2026-10-16: `projects/personal/ssa.png` and `passport.jpg`
   were supposed to be local-only (never synced to Drive) but actually
