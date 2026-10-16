@@ -207,8 +207,26 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
-id 348, 2026-10-16 ~19:42Z, text, Paul: "Drive is ok secure. Git
-Bayhouse is too. Git 'safehouse' is not." Moved the pointer here from
+id 349, 2026-10-16 ~21:06Z, text, Paul (dictation): "Ted's quad files
+don't go to get. They should only be going to Google drive except for
+I guess the main Claude file maybe?" — decoded as "Ted's project files
+don't go to git. They should only be going to Google Drive except for
+I guess the main Claude [i.e. CLAUDE.md] file maybe?" (same dictation-
+garble pattern as queue id 265: "quad"→"project," "get"→"git").
+Pointer already here, no move needed since queue id 348. Verified
+against the actual repo state rather than answer from memory: `git
+ls-files projects/` returns zero tracked files (confirmed `0` via a
+direct count) and `.gitignore`'s own 2026-09-23 comment block
+confirms the by-design reasoning (Drive is the sole durable copy for
+everything under `projects/`); root `CLAUDE.md` itself **is** tracked
+(`git ls-files CLAUDE.md` returns it) — exactly matching what Paul
+described as already true, not a change request. Replied by SMS
+confirming the current setup matches exactly, nothing to change. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue id 348, 2026-10-16 ~19:42Z,
+text, Paul: "Drive is ok secure. Git Bayhouse is too. Git 'safehouse'
+is not." Moved the pointer here from
 `paris-september-2026` (folded back into the other-live-projects list
 below, nothing new since queue id 347). A security status report
 across three systems — verified rather than taken on faith: queried
