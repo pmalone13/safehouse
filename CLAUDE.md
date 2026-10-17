@@ -206,7 +206,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/travel/CLAUDE.md` — live direct
+interactive session, 2026-10-17 ~01:2xZ-01:5xZ, Paul present over SSH
+(verified via `auth.log`, same key fingerprint as every prior login).
+Moved the pointer here from `suv-replacement` (folded back into the
+other-live-projects list below, nothing new since queue id 350).
+Resolved the standing "book of our travels" request
+(`paris-september-2026`, queue id 347) after iterating through options
+live: declined building it on the public `idealfed.com` site (the
+GitHub repo backing it was just confirmed public, queue id 348 — a
+hardcoded Basic Auth password there would leak into public git
+history), started then superseded a static-zip approach, and landed on
+a small local-only Flask app at `projects/travel/webapp/app.py` —
+same visual style as `idealfed_site/app.py`'s `/safehouse` page but a
+fully separate implementation, bound to `127.0.0.1:8095` only (no
+public nginx vhost — reach it via `ssh -L 8095:127.0.0.1:8095
+ubuntu@<host>` then a browser), gated behind HTTP Basic Auth
+(`malonetravel`/`HouseBay`, stored in a `.travel_auth` file next to
+`app.py`, same KEY=VALUE convention as `~/.keys/twilioConfig`). Safe to
+keep plaintext there specifically because everything under `projects/`
+is gitignored repo-wide — confirmed via `git check-ignore -v` before
+relying on it. On first run it extracts all 395 photos/videos from the
+Paris Takeout archive into dated folders, builds thumbnails via
+Pillow, and serves a chronological day index plus GPS-tracked-stops
+pulled from `Timeline_2026-09-20.json`. Verified working end-to-end
+(401 with no/wrong auth, 200 with correct auth on the index, a day
+page, and a thumbnail) rather than just started. Not yet a systemd
+unit — running as a plain foreground process this session, won't
+survive a reboot unless Paul asks for persistence next time. Full
+detail in `projects/travel/CLAUDE.md`'s new "Travel book webapp"
+section and cross-logged in `projects/paris-september-2026/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 350, 2026-10-16 ~22:00Z, channel `cron`, source `suv-replacement-
 watch` — 6pm Eastern scheduled fire. Moved the pointer here from
 `safehouse/general` (folded back into the other-live-projects list
