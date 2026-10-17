@@ -60,6 +60,14 @@ EXCLUDE_NAMES = {
     "queue.db", "queue.db-wal", "queue.db-shm",
     "logs.db", "logs.db-wal", "logs.db-shm",
     "optins.db", "optins.db-wal", "optins.db-shm",
+    # webapp/ (e.g. projects/travel/webapp/): holds a Basic Auth
+    # credential file plus a locally-extracted photo/thumbnail cache --
+    # same binary-corruption risk as the SQLite files above, at much
+    # larger scale (hundreds of JPEGs), and the credential file has no
+    # business on Drive at all. Excluded by directory name rather than
+    # moved outside the repo, since Paul asked for this one to live
+    # under projects/ specifically.
+    "webapp",
 }
 EXCLUDE_SUFFIXES = (".pyc",)
 
