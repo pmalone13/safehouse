@@ -2898,6 +2898,26 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- 2026-10-18 ~22:1xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 357-359, all
+  `new-england`/`suv-replacement`: emailed the Portland things-to-do
+  list pulled from the existing trip-planning workbook (357), the 6pm
+  SUV/truck cron fire with no new qualifying candidate (358), and a
+  Portland weather forecast (real NWS data) plus a day-by-day plan and
+  day-trip suggestions including Boothbay Harbor per Paul's explicit
+  ask (359). All three already fully handled, logged, committed, and
+  pushed (`dd0555b`, `507f2b9`, `82c9f04`) before this wrap-up fired.
+  Working tree confirmed clean at this wrap-up, so this entry is the
+  only change this turn makes. Nothing outstanding heading into the
+  next turn beyond what's already on file: the public-GitHub-repo
+  finding (queue id 348), the three-outage recurring session-limit bug
+  (queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are mid-trip in Portland, ME through 10/25; and the next
+  scheduled SUV/truck cron fire is 9am Eastern tomorrow (2026-10-19).
+
 - **Found 2026-10-16 (queue id 348): the GitHub remote for this repo,
   `github.com/pmalone13/safehouse`, is PUBLIC — needs Paul to flip it
   private via the GitHub web UI, not something this VM can fix.**
