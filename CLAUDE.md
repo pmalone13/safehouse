@@ -206,23 +206,41 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+353, 2026-10-18 ~00:23Z, text, Paul: "hi ted. we are packed and
+doing last reviews. Can you give us a list of things we should pack?
+Things we might have missed. have the dog bed." Departure-day
+pre-trip check. Moved the pointer here from `suv-replacement` (folded
+back into the other-live-projects list below, nothing new since
+queue id 352). Added "Dog bed (Nala)" to the project's own packing
+list, then gave a broader "commonly missed on a long multi-stop road
+trip" list by SMS, organized by category and tailored to this trip's
+own facts already on file (driving, dog, 6 Airbnbs they're bringing
+their own kitchen gear to, ~2-month duration into winter, outdoor
+hiking): dog essentials, travel documents (incl. ~2 months of
+prescriptions), car items (ice scraper flagged as genuinely needed
+given the already-researched cold-stop temps), electronics, kitchen
+basics, laundry supplies, a first aid kit, and home-departure items
+(mail hold, autopay, light timer). Offered to email a fuller
+checklist if wanted. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 352, 2026-10-17 ~22:00Z, channel `cron`, source `suv-replacement-
-watch` — 6pm Eastern scheduled fire. Pointer already here, no move
-needed. Ran the standing four-region recipe (SUV + truck + five
-diesel-specific queries, washingtondc/annapolis/baltimore/
-easternshore, `<=2012`/`<110,000 mi`). 154 unique hrefs, 118 not an
-exact URL/posting-ID match to the ledger. **No new qualifying
-candidate.** All 118 traced to already-established exclusion
-categories via title-signature review (not individually re-fetched):
-the Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (~44
-hits, including one cross-posted onto annapolis.craigslist.org under
-a Houston TX location string — same pattern as the queue-id-277
-case), off-class crossovers/sedans/sports cars/classics/commercial
-trucks, or content-match reposts of already-logged pickups (Tacoma,
-Tundra, etc.) under fresh posting IDs. Per the standing rule (queue
-id 287), emailed Paul a "checked, nothing new" note anyway
-(`1a14be2c194b2954`). Full detail in
+watch` — 6pm Eastern scheduled fire. Ran the standing four-region
+recipe (SUV + truck + five diesel-specific queries, washingtondc/
+annapolis/baltimore/easternshore, `<=2012`/`<110,000 mi`). 154 unique
+hrefs, 118 not an exact URL/posting-ID match to the ledger. **No new
+qualifying candidate.** All 118 traced to already-established
+exclusion categories via title-signature review (not individually
+re-fetched): the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern (~44 hits, including one cross-posted onto
+annapolis.craigslist.org under a Houston TX location string — same
+pattern as the queue-id-277 case), off-class crossovers/sedans/sports
+cars/classics/commercial trucks, or content-match reposts of
+already-logged pickups (Tacoma, Tundra, etc.) under fresh posting
+IDs. Per the standing rule (queue id 287), emailed Paul a "checked,
+nothing new" note anyway (`1a14be2c194b2954`). Full detail in
 `projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
 results.md`. Next scheduled fire: 9am Eastern tomorrow (2026-10-18).
 
