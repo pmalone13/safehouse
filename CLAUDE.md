@@ -6605,3 +6605,35 @@ thing that needs it, not because anything currently lives under it.
   (queue id 346/347) all remain open and need Paul live to fix; the
   Malones are en route on the New England trip; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-18).
+
+- 2026-10-18 ~15:3xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 356, email channel,
+  Paul's "safehouse portal" infrastructure idea — a local, SSH-
+  tunneled web dashboard into this system's own data, modeled on
+  Bill's bayhouse dashboard and the `travel` project's own webapp.
+  Already fully handled, logged, committed, and pushed (`ff731cf`)
+  before this wrap-up fired — new sub-project created at
+  `projects/engineering/safehouse-portal/CLAUDE.md`, Current-project
+  pointer moved here from `new-england` (folded back into the
+  live-projects list, nothing new since queue id 355), replied by
+  email naming both precedents and asking the open scoping questions
+  (what to show, read-only vs. interactive). Not built — Paul said
+  "keep for a note," and it's application code under the hard
+  boundary regardless. Working tree confirmed clean at this wrap-up
+  (`git status --short` empty), so this entry is the only change this
+  turn makes. Drive already synced clean as part of that turn's own
+  checkpoint (1 created — the new sub-project folder — 6 updated, 1
+  orphaned, the already-known stale `ted_protocol_package_v2.zip`
+  reference, harmless). Nothing outstanding heading into the next
+  turn beyond what's already on file: the new `safehouse-portal` idea
+  is waiting on Paul's answers to the scoping questions before any
+  build happens, and needs him live regardless; the public-GitHub-
+  repo finding (queue id 348), the three-outage recurring session-
+  limit bug (TODO section, queue ids 260/272/315), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; no real location email has arrived yet
+  per the queue id 355 standing note; the Malones are en route on the
+  New England trip; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-18).
