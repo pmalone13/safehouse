@@ -206,7 +206,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 359,
+2026-10-18 ~22:03Z, email, same thread as queue id 357, Paul: "Can u
+look At weather and recommend plan for Portland stay. Can u add
+suggestions for other local day trips. Like booth bay." Moved the
+pointer here from `suv-replacement` (folded back into the
+other-live-projects list below, nothing new since queue id 358).
+Pulled a real NWS forecast (`api.weather.gov`, Portland ME gridpoint
+GYX/72,58) for the rest of the stay: dry, mild week, sunny/mostly
+sunny, highs 53-60°F, under 10% precip chance every day. Built a
+day-by-day plan (Old Port/Eastern Prom, Kennebunkport day trip,
+Portland Head Light + art museum, Boothbay Harbor day trip on the
+warmest day per his own ask, Casco Bay ferry, Freeport/flex day,
+departure) plus driving times for Freeport/Kennebunkport/Boothbay
+Harbor/Camden as swappable alternatives. Emailed in the same thread
+(`1a1510b698d5cd66`). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 358, 2026-10-18 ~22:00Z, channel `cron`, source `suv-replacement-
 watch` — 6pm Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
