@@ -206,7 +206,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+354, 2026-10-18 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — 9am Eastern scheduled fire. Moved the pointer here from
+`new-england` (folded back into the other-live-projects list below,
+nothing new since queue id 353). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 154 unique hrefs, 116
+not an exact URL/posting-ID match to the ledger. **No new qualifying
+candidate.** All 116 traced to already-established exclusion
+categories via title-signature review (not individually re-fetched):
+the Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (~30
+hits, including the usual 2011 Ford F-250 Super Duty Crew Cab
+cross-post to annapolis.craigslist.org from "Houston TX FREE
+SHIPPING"), off-class/unibody/sedan/sports-car/classic/commercial
+exclusions, or content-match reposts of already-logged pickups
+(Tacoma, Tundra, Silverado) under fresh posting IDs — including the
+2007 Toyota Tacoma (Randallstown, zip 21117) resurfacing yet again
+under a new posting ID, same already-excluded 296,000-mile listing.
+Per the standing rule (queue id 287), emailed Paul a "checked,
+nothing new" note anyway (`1a14f1bf9be85d0b`). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`. Next scheduled fire: 6pm Eastern today (2026-10-18).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 353, 2026-10-18 ~00:23Z, text, Paul: "hi ted. we are packed and
 doing last reviews. Can you give us a list of things we should pack?
 Things we might have missed. have the dog bed." Departure-day
@@ -6457,4 +6480,21 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the `ssa.png`/`passport.jpg` Drive-sync
   corruption finding (queue id 346/347) also still needs Paul live;
   and the next scheduled SUV/truck cron fire is 9am Eastern tomorrow
+  (2026-10-18).
+
+- 2026-10-18 ~13:0xZ: fresh session, queue id 354, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. No new qualifying candidate (154 unique hrefs, 116 not
+  an exact URL/posting-ID match to the ledger, all excluded via
+  title-signature review against already-established patterns —
+  Houston-TX "DIESEL OF HOUSTON" dealer cross-posts, off-class
+  exclusions, and content-match reposts of already-logged pickups,
+  including the 2007 Toyota Tacoma Randallstown/21117 resurfacing
+  yet again under a new posting ID). Emailed Paul a "checked, nothing
+  new" note per the standing rule (queue id 287). Also backfilled a
+  missing log entry in `projects/suv-replacement/CLAUDE.md` for the
+  prior 6pm 2026-10-17 fire (queue id 352), which had been logged in
+  the root file and the ledger but not yet in the project's own
+  CLAUDE.md. Next scheduled SUV/truck cron fire: 6pm Eastern today
   (2026-10-18).
