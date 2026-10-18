@@ -206,7 +206,35 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 355,
+2026-10-18 ~14:25Z, text, Paul (en route, departure day): "on our way.
+question: I'm going to add an email utility that sends you an email
+with my location every few minutes. Please just record in the main
+claude.md file so as I ask questions you know where I am." Moved the
+pointer here from `suv-replacement` (folded back into the other-
+live-projects list below, nothing new since queue id 354). **Standing
+note for every future turn, until Paul says otherwise**: he is
+building (not yet confirmed live) a utility that will email
+`tedassistent@gmail.com` his current location every few minutes while
+traveling. No such email has arrived yet as of this entry — this is
+advance notice, not a live feed. Once they start arriving: treat a
+location email as a passive location update, not a message requiring
+a reply on its own (same posture as a plain status text); when Paul
+asks a location-dependent question (weather, tides, "what's nearby,"
+drive-time estimates, etc.), check Gmail for the most recent one of
+these before answering, and use its contents to ground the answer
+rather than guessing from his trip itinerary alone — the itinerary
+says where he's *supposed* to be, the location email says where he
+*actually* is. No format/sender/subject-line details were given for
+what these emails will look like, so the first one to actually arrive
+should be read carefully and this note updated with the real
+specifics (sender address if different from his own, subject
+pattern, coordinate format) once known. Replied by SMS confirming
+this is noted and asking him to flag once the first real location
+email lands so the format can be nailed down. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 354, 2026-10-18 ~13:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
