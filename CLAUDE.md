@@ -6550,3 +6550,31 @@ thing that needs it, not because anything currently lives under it.
   queue id 353 packing check (Sunday 10/18 Portland check-in); and
   the next scheduled SUV/truck cron fire is 6pm Eastern today
   (2026-10-18).
+
+- 2026-10-18 ~14:4xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 355, text channel, Paul
+  (en route): "I'm going to add an email utility that sends you an
+  email with my location every few minutes. Please just record in
+  the main claude.md file." Already fully handled, logged,
+  committed, and pushed (`4796adf`) before this wrap-up fired —
+  standing note added to this file's own Current-project pointer
+  (moved here from `suv-replacement`) and to
+  `projects/new-england/CLAUDE.md`, explaining that no location email
+  has arrived yet and that once they start, a future turn should
+  check Gmail for the most recent one before answering any location-
+  dependent question rather than assuming the trip itinerary alone.
+  Replied by SMS confirming. Working tree confirmed clean at this
+  wrap-up (`git status --short` empty), so this entry is the only
+  change this turn makes. Drive already synced clean as part of that
+  turn's own checkpoint (0 created, 6 updated, 1 orphaned — the
+  already-known stale `ted_protocol_package_v2.zip` reference,
+  harmless). Nothing outstanding heading into the next turn beyond
+  what's already on file: no real location email has landed yet, so
+  there's nothing to format-check; the public-GitHub-repo finding
+  (queue id 348), the three-outage recurring session-limit bug (TODO
+  section, queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are en route on the New England trip; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-18).
