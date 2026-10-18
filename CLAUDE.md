@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/safehouse-portal/CLAUDE.md`
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 357,
+2026-10-18 ~21:52Z, email, subject "Request," Paul: "Please email me
+the things to do around Portland from out planning." Moved the
+pointer here from `engineering/safehouse-portal` (folded back into
+the other-live-projects list below, nothing new since queue id 356).
+Pulled the real "Things to See & Do" content straight from the
+Portland worksheet of the already-built friends-facing workbook
+(`/tmp/ne_work/NE_Trip_Planner.xlsx`, built 2026-10-05, still on
+disk) rather than re-research from scratch: Old Port District,
+Portland Head Light & Fort Williams Park, Casco Bay Lines ferry,
+Portland Museum of Art, Eastern Promenade, plus the "About this
+stop" narrative and the Freeport/L.L.Bean day-trip mention. Emailed
+it to `pmalone13@gmail.com` (`1a15100c69224c34`). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/safehouse-portal/CLAUDE.md`
 — queue id 356, 2026-10-18 ~15:29Z, email, subject "General," Paul:
 "I'm kind of curious... in the Bay House I have a website application
 that shows kind of all the conversations and other settings. And now
