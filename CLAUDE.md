@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 357,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+358, 2026-10-18 ~22:00Z, channel `cron`, source `suv-replacement-
+watch` — 6pm Eastern scheduled fire. Moved the pointer here from
+`new-england` (folded back into the other-live-projects list below,
+nothing new since queue id 357). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 135 unique hrefs, 104
+not an exact URL/posting-ID match to the ledger. **No new qualifying
+candidate.** All 104 traced to already-established exclusion
+categories via title-signature review (not individually re-fetched):
+the Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (~29
+hits), content-match reposts of already-logged pickups (Tacoma,
+Tundra, GMC Savana cargo van) under fresh posting IDs, or off-class/
+unibody/sedan/sports-car/classic/commercial exclusions — including a
+2003 Hummer H2 at a $0 dealer-placeholder price (Kargar Motors of
+Manassas, same dealer/placeholder-price pattern already excluded
+before). Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a151097ef1f022d`). Full detail
+in `projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`. Next scheduled fire: 9am Eastern tomorrow (2026-10-19).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 357,
 2026-10-18 ~21:52Z, email, subject "Request," Paul: "Please email me
 the things to do around Portland from out planning." Moved the
 pointer here from `engineering/safehouse-portal` (folded back into
