@@ -6498,3 +6498,27 @@ thing that needs it, not because anything currently lives under it.
   the root file and the ledger but not yet in the project's own
   CLAUDE.md. Next scheduled SUV/truck cron fire: 6pm Eastern today
   (2026-10-18).
+
+- 2026-10-18 ~13:1xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 354, already fully
+  handled, logged, committed, and pushed (`b49aeed`) before this
+  wrap-up fired — the 9am SUV/truck cron fire, no new qualifying
+  candidate, "checked, nothing new" email sent per the standing rule,
+  plus a backfill of the project file's own missing log entry for the
+  prior 6pm 2026-10-17 fire. Working tree confirmed clean at wrap-up
+  (`git status --short` empty), so this entry is the only change this
+  turn makes. Drive already synced clean as part of that turn's own
+  checkpoint (0 created, 6 updated, 1 orphaned — the already-known
+  stale `ted_protocol_package_v2.zip` reference, harmless). Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the public-GitHub-repo finding (queue id 348) is waiting on
+  Paul to flip visibility himself; the three-outage recurring
+  session-limit bug (TODO section, queue ids 260/272/315), the v3
+  file-send session-collision architecture issue, and
+  `poll_for_reply()`'s stale-reply bug (queue id 275) all remain open
+  and need Paul live to fix; the `ssa.png`/`passport.jpg` Drive-sync
+  corruption finding (queue id 346/347) also still needs Paul live;
+  the Malones are departing on the New England trip today per the
+  queue id 353 packing check (Sunday 10/18 Portland check-in); and
+  the next scheduled SUV/truck cron fire is 6pm Eastern today
+  (2026-10-18).
