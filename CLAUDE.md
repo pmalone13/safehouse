@@ -206,7 +206,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 355,
+**Current project**: `projects/engineering/safehouse-portal/CLAUDE.md`
+— queue id 356, 2026-10-18 ~15:29Z, email, subject "General," Paul:
+"I'm kind of curious... in the Bay House I have a website application
+that shows kind of all the conversations and other settings. And now
+that we've done... a test HTML app using the SSH tunnel. I'm thinking
+I'd like to stand up a portal of information that we have that I
+could access via SSH tunnel... Keep for a note." Moved the pointer
+here from `new-england` (folded back into the other-live-projects
+list below, nothing new since queue id 355). New sub-project under
+`engineering`, parallel to `secure-agent-communication`: Paul wants a
+local, SSH-tunneled web portal into this system's own data (queue
+history / project logs / settings), explicitly modeled on two
+precedents he named — Bill's existing bayhouse dashboard (matches the
+`dashboard_server` process already seen in Bill's own `STATUS`
+replies) and the `travel` project's own local-only Flask webapp built
+2026-10-17 (bound to `127.0.0.1`, reached only via `ssh -L`, gated by
+HTTP Basic Auth in a gitignored credentials file). **Not built** —
+Paul said "keep for a note," and even if he hadn't, this is squarely
+application code under the hard boundary. Replied by email
+acknowledging the idea, naming both precedents back to him, and
+asking the open scoping questions (what exactly "conversations and
+settings" should mean — raw queue history vs. project-log narrative
+vs. live integration status; read-only vs. interactive; scoped to
+Ted's own data only) so a future live session can design it with him
+rather than guess. Full detail in
+`projects/engineering/safehouse-portal/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 355,
 2026-10-18 ~14:25Z, text, Paul (en route, departure day): "on our way.
 question: I'm going to add an email utility that sends you an email
 with my location every few minutes. Please just record in the main
