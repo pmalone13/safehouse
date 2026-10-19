@@ -206,7 +206,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 363,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+370, 2026-10-19 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— 6pm Eastern scheduled fire. Moved the pointer here from
+`new-england` (folded back into the other-live-projects list below,
+nothing new since queue id 369). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 143 unique hrefs, 110
+not an exact URL/posting-ID match to the ledger. **No new qualifying
+candidate.** Individually fetched four ambiguous listings: an expired
+posting ("Brick nose, high boy"), a 2005 Ford F-150 confirmed
+extended-cab (not crew cab), a 2007 International 7400 commercial
+diesel chassis, and a 2011 Ford F-250 Super Duty confirmed to be the
+recurring Houston-TX dealer cross-post onto Annapolis Craigslist.
+Everything else traced to the Houston-TX dealer cross-post pattern
+(~31 hits), a new cluster of Joppa MD sedan reposts, or already-
+established off-class/commercial/classic exclusion categories. Per
+the standing rule (queue id 287), emailed Paul a "checked, nothing
+new" note anyway (`1a15631dfecebfa6`). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`. Next scheduled fire: 9am Eastern tomorrow (2026-10-20).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 363,
 2026-10-19 ~20:08Z, text channel, Paul: "Hey Ted, check for Bill and
 also send me a summary of the big fire that happened in the Portland
 Maine." Moved the pointer here from `engineering/
@@ -7120,3 +7141,33 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~22:0xZ: fresh session, queue id 370, channel `cron`,
+  source `suv-replacement-watch` — 6pm Eastern scheduled fire.
+  Already fully handled, logged, committed, and pushed as part of
+  this checkpoint. Ran the full four-region recipe; 143 unique
+  hrefs, 110 not an exact URL/posting-ID match to the ledger. No new
+  qualifying candidate — individually fetched four ambiguous
+  listings (an expired posting, a Ford F-150 confirmed extended-cab
+  not crew-cab, an International 7400 commercial diesel chassis, and
+  the recurring Houston-TX dealer F-250 cross-post onto Annapolis
+  Craigslist); everything else traced to the Houston-TX dealer
+  cross-post pattern, a new cluster of Joppa MD sedan reposts, or
+  already-established off-class/commercial/classic exclusion
+  categories. Emailed Paul a "checked, nothing new" note per the
+  standing rule (queue id 287). Moved the Current-project pointer to
+  `suv-replacement` from `new-england` (folded back into the
+  live-projects list, nothing new since queue id 369). Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: queue id 362's open question (automated hourly Bill-check
+  vs. an alternative) is still waiting on Paul's reply; Bill remains
+  unreachable; the public-GitHub-repo finding (queue id 348), the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 9am Eastern tomorrow (2026-10-20).
