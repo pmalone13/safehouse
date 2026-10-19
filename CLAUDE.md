@@ -206,7 +206,31 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — live
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 362, 2026-10-19 ~17:38Z, text channel, Paul:
+"Please ping periodically. Hourly?" Moved the pointer here from
+`location-tracker` (folded back into the other-live-projects list
+below, nothing new since the table-for-a-few-hours decision — still
+waiting on Bill/Bayhouse, which this message is itself about). Read
+as taking up the "offered to keep periodically re-pinging if useful"
+line from the queue id 361 follow-up thread (below) — Paul wants an
+ongoing, roughly-hourly recheck of whether Bill is back up, not
+another one-off manual ask. Sent a fresh real `PING` immediately via
+the already-built `ted_protocol` tooling (not new code) and polled
+Gmail directly by `internalDate` for ~110s — no `PONG`, Bill still
+unreachable, consistent with every check since 15:36Z today. **Did
+not build the actual recurring hourly check** — a real schedule needs
+a new VM crontab entry (the `cron_suv_watch.py` pattern) or
+equivalent, which is new application code and, per the hard boundary,
+needs Paul live/present, same posture as every other cron build in
+this system. Replied by SMS with the no-PONG result, explained that,
+offered "just text 'ping bill' anytime" as a no-build interim option,
+and asked him to confirm the reading (vs., e.g., wanting hourly status
+texts from Ted instead) so the right thing gets built once he's next
+on SSH. Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`'s newest Log entry.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — live
 direct interactive session, 2026-10-19 ~17:2xZ (SSH, confirmed via
 `auth.log`, same key fingerprint as every prior login, this time from a
 new source IP consistent with Paul traveling), Paul: "I was going to
@@ -6861,3 +6885,28 @@ thing that needs it, not because anything currently lives under it.
   Malones are mid-trip in Portland, ME through 10/25 (no location
   email has arrived yet per the queue id 355 standing note); and the
   next scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~17:4xZ: fresh session, queue id 362, text channel, Paul:
+  "Please ping periodically. Hourly?" Read against the live thread
+  from queue id 361's follow-ups (Bill unreachable since 15:36Z today,
+  Ted offered at ~17:07Z to "keep periodically re-pinging if useful")
+  as Paul taking up that offer — wants an ongoing, roughly-hourly
+  recheck of Bill, not another one-off manual ask. Sent a real `PING`
+  immediately via the already-built `ted_protocol.send_command()`
+  (existing tooling, no new code) and polled Gmail directly by
+  `internalDate` for ~110s rather than trust `poll_for_reply()` (its
+  stale-reply bug, queue id 275, is still unfixed) — no `PONG`, Bill
+  still unreachable, consistent with every check today. Declined to
+  build the actual recurring hourly automation itself — a new VM
+  crontab entry (the `cron_suv_watch.py` pattern: wake, enqueue, let a
+  normal turn do the work) is new application code and needs Paul
+  live/present per the hard boundary, same posture as every prior
+  cron build in this system. Moved the Current-project pointer to
+  `engineering/secure-agent-communication` from `location-tracker`
+  (folded back into the live-projects list, nothing new there since
+  the table-for-a-few-hours decision). Replied by SMS with the
+  no-PONG result, the live-build explanation, a no-build interim
+  option ("just text 'ping bill' anytime"), and a question confirming
+  the reading vs. an alternative (e.g. hourly status texts from Ted
+  instead). Full detail in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`'s newest Log entry.
