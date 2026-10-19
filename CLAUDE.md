@@ -7061,3 +7061,34 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~21:3xZ: fresh session, queue id 367, text channel,
+  Paul: "We're in the West end of Portland, Maine and looking at
+  these big big beautiful houses... We know anyone who who owned
+  houses here meaning like rich people from our theme." Already
+  fully handled, logged, committed, and pushed as part of this
+  checkpoint. Direct continuation of the fire/founding/whaling
+  history thread, now explicitly tied to the trip's own locked
+  "riches tour" theme. Used `WebSearch` to confirm real West End
+  mansion owners rather than guess: John Bundy Brown (Maine's
+  wealthiest man, Portland's largest landowner, fortune from
+  refining West Indies molasses into sugar — a direct riches-theme
+  fit — built Bramhall on the Western Promenade 1855-58; his own
+  sugar refinery burned in the 1866 fire just discussed at queue id
+  365), Ruggles Sylvester Morse (Victoria Mansion), Hugh McLellan
+  (McLellan-Sweat Mansion), plus other named builders (George
+  Fletcher West, Henry P. Cox, Adam P. Leighton, Walter G. Davis).
+  Replied by SMS. Pointer stayed on `new-england`, no move needed.
+  Nothing outstanding heading into the next turn beyond what's
+  already on file: queue id 362's open question (automated hourly
+  Bill-check vs. an alternative) is still waiting on Paul's reply;
+  Bill remains unreachable; the public-GitHub-repo finding (queue id
+  348), the three-outage recurring session-limit bug (TODO section,
+  queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-19).
