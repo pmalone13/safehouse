@@ -206,7 +206,41 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/location-tracker/CLAUDE.md` — live
+direct interactive session, 2026-10-19 ~17:2xZ (SSH, confirmed via
+`auth.log`, same key fingerprint as every prior login, this time from a
+new source IP consistent with Paul traveling), Paul: "I was going to
+have Bill build my pixel 9a android app to send my location but I
+would like to shift that to you. Add it as a sub folder under
+Safehouse," followed by a full feature spec (persistent background
+service, settings screen with target email/frequency/enable-disable,
+periodic GPS-location emails, build+compile+email the install file to
+`pmalone13@gmail.com`). Moved the pointer here from `engineering/
+secure-agent-communication` (folded back into the other-live-projects
+list below, nothing new since the queue id 361 PING-retest follow-up).
+Created the new project and captured the full spec in
+`projects/location-tracker/CLAUDE.md`, cross-referenced in
+`projects/new-england/CLAUDE.md` (supersedes the queue-id-355 standing
+note about Paul writing a location-email utility himself — that one
+never actually arrived). **Confirmed this is a live/Paul-present
+session** (the hard boundary's explicit carve-out for writing
+application code) before even considering building — but found a real
+blocker before starting: this VM is an AWS `t3.nano` (0.5GB RAM, ~80MB
+free, confirmed via IMDSv2) running every one of Paul's live services
+on one box (coordinator, email monitor, Twilio webhook, nginx/
+idealfed-site) — no Android SDK/JDK/Gradle toolchain installed, and
+installing one risks OOM-killing the live coordinator/webhook while
+building. Presented three options (resize this instance temporarily,
+spin up a throwaway build box, permanently upgrade); **Paul's call:
+"Perhaps we give bayhouse a bit to come back up. Bill is on a bigger
+machine. Let's table for a few hours."** Nothing built. Open design
+questions (on-device SMTP vs. a server-side email-relay endpoint on the
+existing idealfed.com box; Pixel 9a's actual Android version; signing/
+sideload approach) are logged in the project file, not yet decided.
+Resume whenever Paul raises it again or Bill is confirmed reachable,
+whichever comes first.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 361, 2026-10-19 ~15:36Z-16:00Z, text channel,
 Paul: "morning Ted. ask bill if I should be able to RDP. trying from
 outside the local network. it should work but it is not," followed
