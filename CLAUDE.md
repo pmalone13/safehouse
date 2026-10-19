@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 363,
+2026-10-19 ~20:08Z, text channel, Paul: "Hey Ted, check for Bill and
+also send me a summary of the big fire that happened in the Portland
+Maine." Moved the pointer here from `engineering/
+secure-agent-communication` (folded back into the other-live-projects
+list below, nothing new there since queue id 362). Two-part message,
+handled both: sent another real `PING` via the already-built
+`ted_protocol` tooling and polled Gmail directly by `internalDate` for
+~110s — no `PONG`, Bill still unreachable, unchanged since 15:36Z
+yesterday (logged in `projects/engineering/
+secure-agent-communication/CLAUDE.md`, not duplicated here). For the
+fire: ran `WebSearch` and fetched a source article directly rather
+than guess which "big fire" he meant — it's the **Custom House Wharf
+fire**, Old Port, night of 2025-12-26 (~10 months before this
+message, not current/breaking) — destroyed a historic wharf building
+including a repair shop, damaged Maritime Antiques and the Sea Bags
+Factory Store, sank/damaged several boats, closed/damaged several
+well-known Old Port restaurants (The Porthole, Boone's, Andy's Old
+Port Pub, Solo Italiano), 2 firefighters minor injuries, cause still
+undetermined, area since reopened. Flagged the ~10-month-old timing
+plainly in the reply rather than imply it was recent, since Paul gave
+no date and is physically in the Old Port right now (mid-trip through
+10/25) where this would be a natural thing to hear locals mention.
+Replied with one combined SMS covering both halves. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 362, 2026-10-19 ~17:38Z, text channel, Paul:
 "Please ping periodically. Hourly?" Moved the pointer here from
 `location-tracker` (folded back into the other-live-projects list
@@ -6923,6 +6949,33 @@ thing that needs it, not because anything currently lives under it.
   hourly Bill-check built next time he's on SSH, or did he mean
   something else) is waiting on his reply; Bill has been unreachable
   from every check since 15:36Z today (queue id 361's thread); the
+  public-GitHub-repo finding (queue id 348), the three-outage
+  recurring session-limit bug (TODO section, queue ids 260/272/315),
+  the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~20:1xZ: fresh session, queue id 363, text channel,
+  Paul: "check for Bill and also send me a summary of the big fire
+  that happened in the Portland Maine." Already fully handled, logged,
+  committed, and pushed as part of this checkpoint. Sent another real
+  `PING` to Bill (no `PONG` within ~110s, still unreachable, unchanged
+  since 15:36Z yesterday). Separately researched and confirmed the
+  Custom House Wharf fire (Old Port, 2025-12-26) as the real "big
+  fire" via `WebSearch` + a direct `WebFetch` on a source article,
+  flagged its ~10-month-old timing rather than imply it was recent.
+  Replied with one combined SMS. Moved the Current-project pointer to
+  `new-england` from `engineering/secure-agent-communication` (folded
+  back into the live-projects list). Working tree confirmed clean
+  beyond this turn's own changes. Nothing outstanding heading into
+  the next turn beyond what's already on file: queue id 362's own
+  open question (automated hourly Bill-check vs. an alternative) is
+  still waiting on Paul's reply; Bill remains unreachable; the
   public-GitHub-repo finding (queue id 348), the three-outage
   recurring session-limit bug (TODO section, queue ids 260/272/315),
   the v3 file-send session-collision architecture issue,
