@@ -7031,3 +7031,33 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~20:5xZ: fresh session, queue id 366, text channel,
+  Paul: "Describe for me the wailing industry in the Atlantic and
+  North Atlantic and how and where it was run from on the Eastern
+  seaboard." Already fully handled, logged, committed, and pushed as
+  part of this checkpoint. Read "wailing" as dictation garble for
+  "whaling" (continuing the same history thread as the Portland fire/
+  founding questions). Used `WebSearch` to confirm the real history
+  and geography rather than answer from memory: shore-whaling for
+  right whales from the 1600s, deep-sea whaling after Nantucket's
+  1712 first sperm-whale catch, run almost entirely from New England
+  ports (Nantucket dominant through the mid-1700s, overtaken by New
+  Bedford MA by 1827 which became the global capital with 700+ ships
+  registered there by the mid-1800s; also Provincetown, New London/
+  Mystic CT, Sag Harbor NY), collapsed after petroleum (1859) and
+  Civil War losses, Nantucket's last ship 1869. Replied by SMS.
+  Pointer stayed on `new-england`, no move needed. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: queue id 362's open question (automated hourly Bill-check vs.
+  an alternative) is still waiting on Paul's reply; Bill remains
+  unreachable; the public-GitHub-repo finding (queue id 348), the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-19).
