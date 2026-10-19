@@ -206,7 +206,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 361, 2026-10-19 ~15:36Z-16:00Z, text channel,
+Paul: "morning Ted. ask bill if I should be able to RDP. trying from
+outside the local network. it should work but it is not," followed
+by a live direct message ("I have texted Ted and not gotten
+response. can u look at queue") in this same session. Moved the
+pointer here from `suv-replacement` (folded back into the other-
+live-projects list below, nothing new since queue id 360). **Found a
+new bug, distinct from the known session-limit outages**: the
+queue-id-361 session actually ran to completion (`done`, no error)
+and genuinely relayed Paul's RDP question to Bayhouse, but never
+replied to Paul and never logged/committed anything — invisible in
+`queue.db` since the status looks healthy. Diagnosed via
+`coordinator.py`'s own log and Gmail Sent mail (confirmed the
+Bayhouse send really happened at 15:36:56Z). Re-sent the RDP question
+to Bill with more context (15:44:20Z), polled Gmail directly by
+`internalDate` for ~170s — no reply arrived; checked again a few
+minutes later — still nothing (Bill's last actual reply on file is
+still 2026-10-15). Texted Paul twice: confirming the original message
+had been processed and relayed after all, and confirming Bill still
+hasn't answered. Added a new TODO entry above (needs Paul live to
+fix — either the coordinator should flag/retry a `done` session with
+no git diff and no outbound reply, or the free-form-reply polling
+path should guarantee an acknowledgment gets sent before a turn risks
+running out of budget). Full detail in `projects/engineering/
+secure-agent-communication/CLAUDE.md`'s newest Log entry.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 360, 2026-10-19 ~13:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
@@ -2919,6 +2946,35 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-19 (queue id 361): a session can complete `done`
+  with no error while silently doing nothing for Paul — a new failure
+  mode distinct from the known session-limit outages, needs Paul live
+  to fix.** Paul texted "ask bill if I should be able to RDP" at
+  15:36:12Z. `coordinator.py`'s log confirms a real session ran for
+  ~3 minutes and genuinely sent the question to Bayhouse via the Ted
+  protocol (confirmed in Gmail Sent mail) — but it never replied to
+  Paul by SMS, never logged anything in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`, and never committed/
+  checkpointed (`git log` has no commit for queue id 361 at all).
+  Unlike the three known Claude-session-limit outages (queue ids
+  260/272/315), which mark the row `failed` with a clear error
+  string, this one reports healthy completion while producing
+  nothing — much harder to detect, since `queue.db` alone looks fine.
+  Paul noticed the silence himself and asked Ted to check the queue.
+  **Root cause unknown** — the session's own transcript isn't
+  retained/inspectable from here, so whether it was still mid-poll
+  for Bill's reply when its turn budget ran out, or something else
+  entirely, can't be confirmed. Not fixed this turn (re-sent the
+  question and relayed the "no answer yet" status to Paul by SMS
+  instead, as a live workaround). **Real fix needs Paul present**:
+  either `coordinator.py` should flag/retry a `done` session that
+  produced no git diff and no outbound reply, or the free-form-reply
+  polling path in `ted_protocol`/the turn logic should guarantee some
+  acknowledgment gets sent to Paul before a turn risks running out of
+  budget waiting on Bayhouse. Full incident detail in
+  `projects/engineering/secure-agent-communication/CLAUDE.md`'s
+  2026-10-19 Log entry.
 
 - 2026-10-18 ~22:1xZ: session wrap-up (idle window elapsed, no new
   message). Three turns this session, queue ids 357-359, all
