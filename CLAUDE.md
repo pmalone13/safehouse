@@ -7092,3 +7092,31 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-19).
+
+- 2026-10-19 ~21:5xZ: fresh session, queue ids 368/369, text channel,
+  Paul: "Name architecture style" then, after no reply landed, "?"
+  Both now fully handled, logged, committed, and pushed as part of
+  this checkpoint. Direct continuation of the West End mansion thread
+  (queue id 367) — Paul wanted the architectural style of the big
+  houses he's looking at in person. Caught that queue id 368 had gone
+  unanswered (a gap in the prior turn, not intentional) once queue id
+  369's "?" flagged it. Used `WebSearch` to confirm real styles rather
+  than guess: the West End/Western Promenade is a Victorian-era mix —
+  Italianate (Victoria Mansion, Adam P. Leighton House), Second
+  Empire, Queen Anne, Colonial Revival, Shingle style — gave Paul
+  quick visual tells for spotting each as he walks. Replied with one
+  combined SMS covering both messages. Pointer stayed on
+  `new-england`, no move needed. Nothing outstanding heading into the
+  next turn beyond what's already on file: queue id 362's open
+  question (automated hourly Bill-check vs. an alternative) is still
+  waiting on Paul's reply; Bill remains unreachable; the
+  public-GitHub-repo finding (queue id 348), the three-outage
+  recurring session-limit bug (TODO section, queue ids 260/272/315),
+  the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-19).
