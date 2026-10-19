@@ -206,7 +206,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 359,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+360, 2026-10-19 ~13:00Z, channel `cron`, source `suv-replacement-
+watch` — 9am Eastern scheduled fire. Moved the pointer here from
+`new-england` (folded back into the other-live-projects list below,
+nothing new since queue id 359). Ran the standing four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 145 unique hrefs, 112
+not an exact URL/posting-ID match to the ledger. **No new qualifying
+candidate.** Individually checked one genuinely new listing (2012
+Subaru Forester Limited, 91,000 mi, Capitol Heights MD) by fetching
+its listing page directly and confirmed it's a unibody crossover
+(same class as the already-excluded Outback/CR-V/RAV4/Highlander),
+not a body-on-frame SUV — excluded. Everything else traced to the
+Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (~29 hits),
+content-match reposts of already-logged pickups under fresh posting
+IDs, or already-established off-class/unibody/sedan/sports-car/
+classic/commercial exclusion categories. Per the standing rule (queue
+id 287), emailed Paul a "checked, nothing new" note anyway
+(`1a1544112aac9d1c`). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`. Next scheduled fire: 6pm Eastern today (2026-10-19).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 359,
 2026-10-18 ~22:03Z, email, same thread as queue id 357, Paul: "Can u
 look At weather and recommend plan for Portland stay. Can u add
 suggestions for other local day trips. Like booth bay." Moved the
@@ -6710,3 +6732,25 @@ thing that needs it, not because anything currently lives under it.
   per the queue id 355 standing note; the Malones are en route on the
   New England trip; and the next scheduled SUV/truck cron fire is 6pm
   Eastern today (2026-10-18).
+
+- 2026-10-19 ~13:0xZ: fresh session, queue id 360, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, committed, and pushed as part of
+  this checkpoint. Ran the full four-region recipe; 145 unique
+  hrefs, 112 not an exact URL/posting-ID match to the ledger. No new
+  qualifying candidate — one genuinely new listing (2012 Subaru
+  Forester, Capitol Heights MD) individually checked and excluded as
+  a unibody crossover; everything else traced to the Houston-TX
+  dealer cross-post pattern or already-established off-class/repost
+  categories. Emailed Paul a "checked, nothing new" note per the
+  standing rule (queue id 287). Working tree confirmed clean at this
+  checkpoint beyond this turn's own changes. Nothing outstanding
+  heading into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the three-outage
+  recurring session-limit bug (TODO section, queue ids 260/272/315),
+  the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-19).
