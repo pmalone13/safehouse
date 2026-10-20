@@ -7595,3 +7595,12 @@ thing that needs it, not because anything currently lives under it.
   are mid-trip in Portland, ME through 10/25, currently out on Peaks
   Island; and the next scheduled SUV/truck cron fire is 9am Eastern
   tomorrow (2026-10-21).
+
+- 2026-10-20 ~22:05Z: fresh session, queue id 379, text channel, Paul:
+  "👍" acknowledging the Drive-outage SMS just sent at queue id 378's
+  checkpoint. No reply needed, no pointer move (stayed
+  `suv-replacement`). Retried `drive_sync.py` as part of this
+  checkpoint in case it had self-resolved — still the identical
+  `invalid_grant` failure first flagged at queue id 378's checkpoint
+  minutes earlier; git push unaffected. Not re-texting Paul about it
+  again — already flagged once this session, nothing new to add.
