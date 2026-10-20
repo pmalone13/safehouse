@@ -206,7 +206,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 377,
+2026-10-20 ~18:58Z, text channel, Paul: "we're on peak peeks peaks
+Island and we're walking around it. Looking at these houses and
+wondering what they go for? What's kind of the range of house costs
+on peaks Island." Moved the pointer here from `safehouse/general`
+(folded back into the other-live-projects list below, nothing new
+since queue id 376). Direct continuation of the trip — they followed
+up on the Casco Bay ferry schedule (queue id 373) and are now
+actually walking Peaks Island. Used `WebSearch` for real current
+figures: overall range ~$300K-$1.9M, median sale price ~$700K
+(average value $743K, ~$547/sqft); smaller inland cottages start
+~$300-475K, waterfront/backshore properties (likely what he's
+looking at) run $800K-$1.9M+. Replied by SMS
+(`SMcc3baee00e94990d3fd69d5976db71e6`). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 376, 2026-10-20 ~17:57Z, text channel, Paul: "Off topic question
 about millennium challenge corporation the mcc.gov organization. I
 was actually a CIO there for one year in 2013... I'm actually going
@@ -7416,6 +7432,32 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-20).
+
+- 2026-10-20 ~19:0xZ: fresh session, queue id 377, text channel,
+  Paul, on Peaks Island: "Looking at these houses and wondering what
+  they go for? What's kind of the range of house costs on peaks
+  Island." Already fully handled, logged, and committed as part of
+  this checkpoint. Moved the Current-project pointer back to
+  `new-england` from `safehouse/general` (folded back into the
+  live-projects list, nothing new since queue id 376's MCC research).
+  Used `WebSearch` for real current figures (Zillow/Redfin/Homes.com):
+  overall range ~$300K-$1.9M, median sale price ~$700K, waterfront/
+  backshore properties $800K-$1.9M+. Replied by SMS. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: queue id 362's open question (automated hourly Bill-check vs.
+  an alternative) is still waiting on Paul's reply; Bill remains
+  unreachable (last check queue id 372, no PONG); the public-GitHub-
+  repo finding (queue id 348), the three-outage recurring
+  session-limit bug (TODO section, queue ids 260/272/315), the v3
+  file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25, currently out on Peaks
+  Island; and the next scheduled SUV/truck cron fire is 6pm Eastern
+  today (2026-10-20).
 
 - 2026-10-20 ~18:0xZ: fresh session, queue id 376, text channel,
   Paul: "Off topic question about millennium challenge corporation
