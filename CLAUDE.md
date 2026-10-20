@@ -7611,3 +7611,31 @@ thing that needs it, not because anything currently lives under it.
   needed, no pointer move (stayed `suv-replacement`). No Drive retry
   this turn (already confirmed broken twice in the last few minutes,
   nothing would change).
+
+- 2026-10-20 ~22:1xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 378-380: the 6pm
+  SUV/truck cron fire with no new qualifying candidate and a fresh
+  Drive `invalid_grant` outage discovered at that checkpoint (378,
+  flagged to Paul by SMS), his 👍 acknowledgment with a retry
+  confirming it's still broken (379), and his tapback removal, a
+  no-op (380). All three already fully handled, logged, committed,
+  and pushed (`29df652`, `4baeb9d`, `ca0e8b2`, `ec90ac6`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up, so this
+  entry is the only change this turn makes. Nothing outstanding
+  heading into the next turn beyond what's already on file: the
+  fresh Drive outage found at queue id 378's checkpoint still needs
+  Paul to re-authorize (`authorize_drive_once.py` + scp, same fix as
+  every prior occurrence); queue id 362's open question (automated
+  hourly Bill-check vs. an alternative) is still waiting on Paul's
+  reply; Bill remains unreachable (last check queue id 372, no PONG);
+  the public-GitHub-repo finding (queue id 348), the three-outage
+  recurring session-limit bug (TODO section, queue ids 260/272/315),
+  the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25, currently out on Peaks
+  Island; and the next scheduled SUV/truck cron fire is 9am Eastern
+  tomorrow (2026-10-21).
