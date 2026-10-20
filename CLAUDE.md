@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 372, 2026-10-20 ~01:01Z, text channel, Paul:
+"Hey Ted, can you check bill." Moved the pointer here from
+`suv-replacement` (folded back into the other-live-projects list
+below, nothing new since queue id 371). Sent a fresh real `PING` via
+the already-built `ted_protocol` tooling and polled Gmail directly by
+`internalDate` for ~110s — no `PONG`, Bill still unreachable, now over
+9 hours unchanged since 15:36Z yesterday (2026-10-19). Replied by SMS
+with the no-PONG result. Queue id 362's standing open question (build
+an automated hourly recheck, or something else) remains unanswered.
+Full detail in `projects/engineering/secure-agent-communication/
+CLAUDE.md`'s newest Log entry.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 370, 2026-10-19 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — 6pm Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
@@ -7189,3 +7202,26 @@ thing that needs it, not because anything currently lives under it.
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 9am Eastern tomorrow (2026-10-20).
+
+- 2026-10-20 ~01:0xZ: fresh session, queue id 372, text channel,
+  Paul: "Hey Ted, can you check bill." Moved the Current-project
+  pointer here from `suv-replacement`. Sent a fresh real `PING` via
+  the already-built `ted_protocol` tooling and polled Gmail directly
+  by `internalDate` for ~110s rather than trust `poll_for_reply()`
+  (its stale-reply bug, queue id 275, is still unfixed) — still no
+  `PONG`, Bill remains unreachable, unchanged since 15:36Z yesterday
+  (now over 9 hours). Replied by SMS. Full detail in
+  `projects/engineering/secure-agent-communication/CLAUDE.md`. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: queue id 362's open question (automated hourly Bill-check vs.
+  an alternative) is still waiting on Paul's reply; Bill remains
+  unreachable; the public-GitHub-repo finding (queue id 348), the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 9am Eastern today (2026-10-20).
