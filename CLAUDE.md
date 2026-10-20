@@ -206,7 +206,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 373,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 375,
+2026-10-20 ~14:38Z, text channel, Paul: "can you send me a description
+about the history of the Portland Head lighthouse? We're going over to
+that Park to walk around." Moved the pointer here from `suv-replacement`
+(folded back into the other-live-projects list below, nothing new since
+queue id 374). Ties to the day-by-day plan's own "Portland Head Light +
+Fort Williams Park" stop (queue id 359). Used `WebSearch` to confirm
+real history rather than recite from memory: commissioned by George
+Washington, built 1787-1791, first lit January 10, 1791 — oldest
+lighthouse in Maine, one of the first built by the US government.
+Raised ~20ft in 1865 with a 2nd-order Fresnel lens (used until 1958);
+automated 1989; keeper's house is now a maritime museum in Fort
+Williams Park; often called the most photographed lighthouse in
+America. Replied by SMS. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id 373,
 2026-10-20 ~01:29Z, text channel, Paul: "Casco ferry schedule?" Moved
 the pointer here from `engineering/secure-agent-communication` (folded
 back into the other-live-projects list below, nothing new since queue
@@ -216,8 +232,7 @@ the real current schedule — Casco Bay Lines just switched to its
 Winter schedule (2026-10-13 through 2027-05-20) right before this
 trip, so gave Peaks Island's (most popular route) winter departures
 from Portland rather than stale Fall times. Replied by SMS, offering
-to pull another island's times if Paul meant a different one. Full
-detail in `projects/new-england/CLAUDE.md`.
+to pull another island's times if Paul meant a different one.
 
 Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 372, 2026-10-20 ~01:01Z, text channel, Paul:
@@ -7323,6 +7338,30 @@ thing that needs it, not because anything currently lives under it.
   recurring session-limit bug (TODO section, queue ids 260/272/315),
   the v3 file-send session-collision architecture issue,
   `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-20).
+
+- 2026-10-20 ~14:4xZ: fresh session, queue id 375, text channel, Paul
+  asked for a description of Portland Head Light's history ahead of
+  walking Fort Williams Park. Moved the Current-project pointer here
+  from `suv-replacement` (folded back into the live-projects list,
+  nothing new since queue id 374). Used `WebSearch` to confirm real
+  history (commissioned by George Washington, built 1787-1791, first
+  lit Jan 10 1791, raised ~20ft in 1865 with a 2nd-order Fresnel lens,
+  automated 1989, keeper's house now a maritime museum) rather than
+  recite from memory. Replied by SMS. Full detail in
+  `projects/new-england/CLAUDE.md`. Nothing outstanding heading into
+  the next turn beyond what's already on file: queue id 362's open
+  question (automated hourly Bill-check vs. an alternative) is still
+  waiting on Paul's reply; Bill remains unreachable (last check queue
+  id 372, no PONG); the public-GitHub-repo finding (queue id 348),
+  the three-outage recurring session-limit bug (TODO section, queue
+  ids 260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
   `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
   346/347) all remain open and need Paul live to fix; the
   location-tracker Android build is tabled pending Bill/Bayhouse
