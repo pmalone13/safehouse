@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 373,
+2026-10-20 ~01:29Z, text channel, Paul: "Casco ferry schedule?" Moved
+the pointer here from `engineering/secure-agent-communication` (folded
+back into the other-live-projects list below, nothing new since queue
+id 372). Ties to the already-planned "Casco Bay ferry" item in the
+Portland day-by-day plan (queue id 359). Used `WebSearch` to confirm
+the real current schedule — Casco Bay Lines just switched to its
+Winter schedule (2026-10-13 through 2027-05-20) right before this
+trip, so gave Peaks Island's (most popular route) winter departures
+from Portland rather than stale Fall times. Replied by SMS, offering
+to pull another island's times if Paul meant a different one. Full
+detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 372, 2026-10-20 ~01:01Z, text channel, Paul:
 "Hey Ted, can you check bill." Moved the pointer here from
 `suv-replacement` (folded back into the other-live-projects list
@@ -7218,6 +7231,29 @@ thing that needs it, not because anything currently lives under it.
   unreachable; the public-GitHub-repo finding (queue id 348), the
   three-outage recurring session-limit bug (TODO section, queue ids
   260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 9am Eastern today (2026-10-20).
+
+- 2026-10-20 ~01:3xZ: fresh session, queue id 373, text channel,
+  Paul: "Casco ferry schedule?" Moved the Current-project pointer
+  here from `engineering/secure-agent-communication`. Used
+  `WebSearch` to confirm Casco Bay Lines just switched to its Winter
+  schedule (2026-10-13 - 2027-05-20), so gave Peaks Island's current
+  winter departure times from Portland rather than stale Fall-
+  schedule data, and offered to pull another island's schedule if
+  that's not the one Paul meant. Replied by SMS. Full detail in
+  `projects/new-england/CLAUDE.md`. Nothing outstanding heading into
+  the next turn beyond what's already on file: queue id 362's open
+  question (automated hourly Bill-check vs. an alternative) is still
+  waiting on Paul's reply; Bill remains unreachable (last check queue
+  id 372, no PONG); the public-GitHub-repo finding (queue id 348),
+  the three-outage recurring session-limit bug (TODO section, queue
+  ids 260/272/315), the v3 file-send session-collision architecture
   issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
   `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
   346/347) all remain open and need Paul live to fix; the
