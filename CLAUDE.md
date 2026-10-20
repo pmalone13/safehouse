@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 375,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 376, 2026-10-20 ~17:57Z, text channel, Paul: "Off topic question
+about millennium challenge corporation the mcc.gov organization. I
+was actually a CIO there for one year in 2013... I'm actually going
+to talk to somebody about it tomorrow for a proposal that somebody's
+writing for them in the it space. Can you give me an executive
+summary on the state of that organization?... And if you can look
+around for the it solicitation that these guys might be going after
+that would be helpful too." Moved the pointer here from `new-england`
+(folded back into the other-live-projects list below, nothing new
+since queue id 375) — a one-off research question, no existing
+project fits, Paul called it "off topic" himself. Used `WebSearch` to
+confirm MCC's real current state: survived the 2025 Trump
+administration foreign-aid review that dismantled USAID, but
+genuinely shrinking (FY26 $830M enacted, down from ~$900M; FY27 ask
+only $609M; over half its compacts cancelled; office lease space cut
+25%+; live DFC/USTDA merger talk) while arguably becoming more
+strategically relevant as one of the few surviving metrics-driven aid
+agencies. **Found a live, highly relevant IT solicitation**: "MCC
+Software Development Recompete," a Sources Sought notice on SAM.gov
+posted 2026-10-13, responses due 2026-10-29 — near-certainly the
+recompete of MCC's existing ~6-year, $47.4M software dev contract
+currently held by TCG Inc. Sent the full write-up with sources by
+email (`1a15a7852532334d`) plus a short SMS pointer. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 375,
 2026-10-20 ~14:38Z, text channel, Paul: "can you send me a description
 about the history of the Portland Head lighthouse? We're going over to
 that Park to walk around." Moved the pointer here from `suv-replacement`
@@ -7384,6 +7410,42 @@ thing that needs it, not because anything currently lives under it.
   three-outage recurring session-limit bug (TODO section, queue ids
   260/272/315), the v3 file-send session-collision architecture issue,
   `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-20).
+
+- 2026-10-20 ~18:0xZ: fresh session, queue id 376, text channel,
+  Paul: "Off topic question about millennium challenge corporation
+  the mcc.gov organization... was a CIO there for one year in
+  2013... talk to somebody about it tomorrow for a proposal...
+  Can you give me an executive summary on the state of that
+  organization?... And if you can look around for the it
+  solicitation..." Already fully handled, logged, and committed as
+  part of this checkpoint. Moved the Current-project pointer to
+  `safehouse/general` from `new-england` (folded back into the
+  live-projects list, nothing new since queue id 375) — a one-off
+  research question, no existing project fits, Paul called it "off
+  topic" himself. Used `WebSearch` to confirm MCC's real current
+  state (survived the 2025 USAID-dismantling-era foreign aid review
+  but genuinely shrinking in budget/programs/footprint) and found a
+  live, highly relevant SAM.gov Sources Sought notice ("MCC Software
+  Development Recompete," posted 10/13, responses due 10/29) that's
+  almost certainly the recompete of MCC's existing software dev
+  contract (TCG Inc, $47.4M/6yr) — likely the exact opportunity
+  Paul's contact is targeting. Sent the full write-up with sources by
+  email (`1a15a7852532334d`) and a short SMS pointer
+  (`SMf0497e21d123579d0f33874c0f806509`), since the detail was too
+  much for one text. Nothing outstanding heading into the next turn
+  beyond what's already on file: queue id 362's open question
+  (automated hourly Bill-check vs. an alternative) is still waiting
+  on Paul's reply; Bill remains unreachable (last check queue id 372,
+  no PONG); the public-GitHub-repo finding (queue id 348), the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
   `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
   346/347) all remain open and need Paul live to fix; the
   location-tracker Android build is tabled pending Bill/Bayhouse
