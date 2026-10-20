@@ -7604,3 +7604,10 @@ thing that needs it, not because anything currently lives under it.
   `invalid_grant` failure first flagged at queue id 378's checkpoint
   minutes earlier; git push unaffected. Not re-texting Paul about it
   again — already flagged once this session, nothing new to add.
+
+- 2026-10-20 ~22:05Z: fresh session, queue id 380, text channel, Paul
+  removed the "👍" tapback he'd sent seconds earlier at queue id 379
+  — a reaction-removal notification, not new content. No reply
+  needed, no pointer move (stayed `suv-replacement`). No Drive retry
+  this turn (already confirmed broken twice in the last few minutes,
+  nothing would change).
