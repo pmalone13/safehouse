@@ -3504,6 +3504,27 @@ the pending `/sms-optin` build still live there.
   project pointer note above) — now actually explained rather than
   just "not built."
 
+- **Drive down again, `invalid_grant`, discovered 2026-10-20 ~22:03Z
+  at queue id 378's checkpoint.** Same recurring error shape as every
+  prior occurrence of this issue: `creds.refresh()` throws
+  `RefreshError: invalid_grant: Token has been expired or revoked.`
+  Drive-only — Gmail was used successfully in this very turn (the
+  "checked, nothing new" email sent fine) and its own token file has
+  a newer mtime (21:09) than Drive's (20:01), consistent with the
+  established pattern where the two tokens fail independently.
+  Retried once after a few seconds — identical failure, not
+  transient. As always, root cause (why a token under ~2h old would
+  suddenly `invalid_grant`) is unexplained and not diagnosable from
+  this VM. **Fix is the same as every prior time**: Paul runs
+  `authorize_drive_once.py` on a machine with a browser, `scp`s the
+  resulting token to this VM at the existing `.drive_api_token.json`
+  path. Flagged to Paul by SMS. Git push for this turn's own commit
+  was unaffected (Drive is the only thing down) — the project-file
+  and ledger updates are safely committed/pushed, just not yet
+  mirrored to Drive. A future turn should retry `drive_sync.py` at
+  its own checkpoint and only re-flag if still broken, same posture
+  as every past occurrence.
+
 - ~~Drive down again, `invalid_grant`, discovered 2026-10-05 ~19:23Z~~
   **RESOLVED 2026-10-13 ~20:45Z.** Discovered at queue id 176's
   checkpoint (2026-10-05 ~19:23Z). Same error shape as every prior
@@ -7553,8 +7574,14 @@ thing that needs it, not because anything currently lives under it.
   "checked, nothing new" note per the standing rule (queue id 287).
   Moved the Current-project pointer here from `new-england` (folded
   back into the live-projects list, nothing new since queue id 377).
+  **Also found a fresh Drive outage at this checkpoint**: `drive_
+  sync.py` failed with the same recurring `invalid_grant` error (Gmail
+  unaffected — the email send above worked fine), retried once,
+  identical failure. New TODO entry added above; flagged to Paul by
+  SMS. Git push for this turn's own commit succeeded regardless.
   Nothing outstanding heading into the next turn beyond what's
-  already on file: queue id 362's open question (automated hourly
+  already on file: the fresh Drive outage found this turn needs Paul
+  to re-authorize; queue id 362's open question (automated hourly
   Bill-check vs. an alternative) is still waiting on Paul's reply;
   Bill remains unreachable (last check queue id 372, no PONG); the
   public-GitHub-repo finding (queue id 348), the three-outage
