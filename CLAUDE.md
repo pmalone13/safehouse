@@ -207,11 +207,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
-400, 2026-10-21 ~18:41Z, email, subject "safeutil location," 14:40:56
-EDT, 43.6655411, -70.2768826 — same Portland, ME spot, ~10 min after
-queue id 399, routine cadence. Passive status ping, no reply sent,
+402, 2026-10-21 ~19:01Z, email, subject "safeutil location," 15:01:03
+EDT, 43.6647731, -70.2753146 — same Portland, ME spot, ~10 min after
+queue id 401, routine cadence. Passive status ping, no reply sent,
 nothing new to log beyond the location itself. Pointer already here,
 no move needed.
+
+Previous pointer, same project — queue id
+401, 2026-10-21 ~18:51Z, email, subject "safeutil location," 14:51:00
+EDT, 43.6655981, -70.2768427 — same Portland, ME spot, ~10 min after
+queue id 400. **Failed on first attempt with a different error than
+the known session-limit outages** (`'Prompt is too long'`) — a single
+dropped message, not the recurring outage pattern. Recovered and
+backfilled from the raw queue row while handling queue id 402.
+Passive status ping, no reply owed.
+
+Previous pointer, same project — queue id
+400, 2026-10-21 ~18:41Z, email, subject "safeutil location," 14:40:56
+EDT, 43.6655411, -70.2768826 — same Portland, ME spot, ~10 min after
+queue id 399, routine cadence. Passive status ping, no reply sent.
 
 Previous pointer, same project — queue id
 399, 2026-10-21 ~18:31Z, email, subject "safeutil location," 14:30:50
@@ -8030,3 +8044,13 @@ thing that needs it, not because anything currently lives under it.
   queue id 399. Confirmed via `queue.db` no gap exists (399 status
   `done`). Logged, no reply needed. Nothing new beyond what's
   already on file.
+
+- 2026-10-21 ~19:01Z: fresh session, queue id 402, another routine
+  "safeutil location" email, same Portland, ME spot, ~10 min after
+  queue id 401. Checking `queue.db` found queue id 401 had actually
+  failed — not the known Claude-session-limit outage shape, but a
+  separate `'Prompt is too long'` error (same failure type seen once
+  before at queue id 230, "Checkpoint D") — a single dropped message,
+  recovered and backfilled into `projects/location-tracker/CLAUDE.md`
+  and this file's own pointer history while handling this turn.
+  Logged both, no reply needed for either (passive status pings).
