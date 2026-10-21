@@ -207,11 +207,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+406, 2026-10-21 ~19:41Z, email, subject "safeutil location," 15:41:23
+EDT, 43.6640866, -70.2737395 — same Portland, ME area, ~10 min after
+queue id 405 (recovered below), routine cadence. Passive status ping,
+no reply sent, nothing new to log beyond the location itself. Pointer
+already here, no move needed.
+
+Previous pointer, same project — queue id
+405, 2026-10-21 ~19:31Z, email, subject "safeutil location," 15:31:15
+EDT, 43.6648007, -70.2732843 — same Portland, ME area, ~10 min after
+queue id 404. **Failed again with the same `'Prompt is too long'`
+error** seen at queue id 401 and queue id 230 — a third occurrence of
+this distinct, non-session-limit failure type. Recovered and
+backfilled from the raw queue row while handling queue id 406.
+Passive status ping, no reply owed either way.
+
+Previous pointer, same project — queue id
 404, 2026-10-21 ~19:21Z, email, subject "safeutil location," 15:21:11
 EDT, 43.6647923, -70.2731937 — same Portland, ME area, ~10 min after
-queue id 403, routine cadence. Passive status ping, no reply sent,
-nothing new to log beyond the location itself. Pointer already here,
-no move needed.
+queue id 403, routine cadence. Passive status ping, no reply sent.
 
 Previous pointer, same project — queue id
 403, 2026-10-21 ~19:11Z, email, subject "safeutil location," 15:11:08
@@ -8076,3 +8090,11 @@ thing that needs it, not because anything currently lives under it.
   queue id 403. Confirmed via `queue.db` no gap exists (403 status
   `done`). Logged, no reply needed. Nothing new beyond what's
   already on file.
+
+- 2026-10-21 ~19:41Z: fresh session, queue id 406, another routine
+  "safeutil location" email, same Portland, ME area, ~10 min after
+  queue id 405. While checking, found queue id 405 had failed with
+  the same `'Prompt is too long'` error seen before (queue id 401,
+  queue id 230) — a third occurrence of this distinct failure type.
+  Recovered and backfilled from the raw queue row. Both logged, no
+  reply needed for either (passive status pings).
