@@ -207,6 +207,29 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+386, 2026-10-21 ~16:0xZ, email, subject "safeutil location" — **the
+first real location email actually arrived**, ~2h15m after queue id
+385's app-spec email. Pointer already here, no move needed. Paul's own
+local build worked: sent from his own `pmalone13@gmail.com` (not a
+separate relay account — consistent with on-device sending, option
+(a) from the project's own open design questions), subject exactly
+"safeutil location," plain-text body with `Latitude:`/`Longitude:`/
+`Accuracy:` (meters)/`Time:` (local + zone abbreviation) fields plus a
+ready `Map:` Google Maps link. First reading: 43.6655836, -70.2767494,
+11:58:47 EDT — Portland, ME, matching the trip; `WebSearch` placed it
+on the city's inland/west side (near Woodfords/Morrills Corner), an
+approximate read, not a confirmed street address. Logged the real
+format into both `projects/location-tracker/CLAUDE.md` and the
+standing note in `projects/new-england/CLAUDE.md` (queue id 355's
+anticipatory note, now confirmed real) so a future turn checks Gmail
+for the most recent "safeutil location" email before answering any
+location-dependent question, rather than relying on the trip itinerary
+alone. Replied by email confirming receipt and the location read; no
+other action needed since this was a passive status ping, not a
+question. Full detail in `projects/location-tracker/CLAUDE.md`'s
+newest Log entry.
+
+Previous pointer, same project — queue id
 385, 2026-10-21 ~13:39Z, email, Paul: "Can you please email a good
 description of our location pixel app. I'm going to attempt to use
 my local machine here to build. And, can you check if Bill is back?"
@@ -7839,6 +7862,30 @@ thing that needs it, not because anything currently lives under it.
   his last real reply); the public-GitHub-repo finding (queue id
   348), the three-outage recurring session-limit bug (TODO section,
   queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are mid-trip in Portland, ME through 10/25; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-21).
+
+- 2026-10-21 ~16:0xZ: fresh session, queue id 386, email, subject
+  "safeutil location" — the first real location-tracker email, ~2h15m
+  after queue id 385's app-spec email. Already fully handled, logged,
+  committed, and pushed as part of this checkpoint. Confirmed real
+  format (sender `pmalone13@gmail.com`, Latitude/Longitude/Accuracy/
+  Time fields, Maps link) and logged it into both
+  `projects/location-tracker/CLAUDE.md` and the standing note in
+  `projects/new-england/CLAUDE.md` (queue id 355). First reading
+  placed Paul in Portland, ME per `WebSearch`, matching the trip.
+  Replied by email confirming receipt. Pointer stayed on
+  `location-tracker`, no move needed. Nothing outstanding heading
+  into the next turn beyond what's already on file: queue id 362's
+  open question (automated hourly Bill-check vs. an alternative) is
+  still waiting on Paul's reply; Bill remains unreachable (last check
+  queue id 385, no PONG, now ~48+ hours since his last real reply);
+  the Drive outage from queue id 378, the public-GitHub-repo finding
+  (queue id 348), the three-outage recurring session-limit bug (TODO
+  section, queue ids 260/272/315), the v3 file-send session-collision
   architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
   275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
   (queue id 346/347) all remain open and need Paul live to fix; the
