@@ -206,7 +206,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/movies/CLAUDE.md` — queue id 381,
+2026-10-21 ~00:32Z, text channel, Paul: "Watching rain man with cruise
+and Hoffman. Did anyone win awards for it." Moved the pointer here
+from `suv-replacement` (folded back into the other-live-projects list
+below, nothing new since queue id 380). Used `WebSearch` to confirm
+rather than answer from memory: Rain Man (1988) won 4 Oscars at the
+61st Academy Awards (Best Picture, Best Director, Best Actor for
+Dustin Hoffman, Best Original Screenplay) out of 8 nominations — Tom
+Cruise himself wasn't nominated. Replied by SMS
+(`SMbff3783c2242a28b74b7da9a94a64e08`). Full detail in
+`projects/movies/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 378, 2026-10-20 ~22:00Z, channel `cron`, source `suv-replacement-
 watch` — 6pm Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
