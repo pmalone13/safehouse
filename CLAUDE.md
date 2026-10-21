@@ -206,7 +206,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+385, 2026-10-21 ~13:39Z, email, Paul: "Can you please email a good
+description of our location pixel app. I'm going to attempt to use
+my local machine here to build. And, can you check if Bill is back?"
+Moved the pointer here from `suv-replacement` (folded back into the
+other-live-projects list below, nothing new since queue id 384).
+Two-part message, both handled: emailed Paul the full location-
+tracker app spec (background-service behavior, settings fields, the
+two email-sending design options with their security tradeoff, the
+Android-version/signing open questions) straight from the project
+file so he has it for his own build — he's now building it himself
+rather than waiting on Bill/Bayhouse or a VM resize, a different
+resolution to the original resource blocker than either option first
+raised. Also sent a fresh `PING` to Bill and polled Gmail directly by
+`internalDate` for ~110s (same workaround as always —
+`poll_for_reply()`'s stale-reply bug, queue id 275, is still unfixed)
+— still no `PONG`, Bill remains unreachable, now ~46 hours since his
+last real reply (15:36Z on 2026-10-19). Replied with one combined
+email covering both halves. Full detail in
+`projects/location-tracker/CLAUDE.md` and `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 384, 2026-10-21 ~13:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Moved the pointer here from
 `new-england` (folded back into the other-live-projects list below,
@@ -7763,4 +7785,33 @@ thing that needs it, not because anything currently lives under it.
   location-tracker Android build is tabled pending Bill/Bayhouse
   coming back up or a resource decision on this t3.nano; the Malones
   are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-21).
+
+- 2026-10-21 ~13:4xZ: fresh session, queue id 385, email channel,
+  Paul: "Can you please email a good description of our location
+  pixel app. I'm going to attempt to use my local machine here to
+  build. And, can you check if Bill is back?" Already fully handled,
+  logged, committed, and pushed as part of this checkpoint. Emailed
+  the full location-tracker app spec (background behavior, settings
+  fields, both email-sending design options with the security
+  tradeoff spelled out, Android-version/signing open questions) for
+  Paul's own local build — left the still-open design questions
+  unanswered for him rather than picking an answer, since he's the
+  one building and hosting it now. Sent another real `PING` to Bill;
+  no `PONG` within ~110s, unreachable now ~46 hours since his last
+  reply (15:36Z on 2026-10-19). Replied with one combined email.
+  Nothing outstanding heading into the next turn beyond what's
+  already on file: whether Paul's local build uses on-device SMTP or
+  a server relay (or something else) for sending the location email
+  is still undecided — update `projects/location-tracker/CLAUDE.md`
+  once he reports back; queue id 362's open question (automated
+  hourly Bill-check vs. an alternative) is still waiting on Paul's
+  reply; Bill remains unreachable; the Drive `invalid_grant` outage
+  from queue id 378, the public-GitHub-repo finding (queue id 348),
+  the three-outage recurring session-limit bug (TODO section, queue
+  ids 260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-21).
