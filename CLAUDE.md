@@ -7921,3 +7921,10 @@ thing that needs it, not because anything currently lives under it.
   (queue id 346/347) all remain open and need Paul live to fix; the
   Malones are mid-trip in Portland, ME through 10/25; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-21).
+
+- 2026-10-21 ~16:09Z: fresh session, queue id 389, email, subject
+  "safeutil location" — third location-tracker email, ~5 min after
+  the second (confirms the ~5min cadence), location still essentially
+  unchanged (Paul stationary in Portland, ME). Passive status ping,
+  no reply sent. Pointer stayed on `location-tracker`, no move
+  needed. Nothing new to add beyond what's already on file.
