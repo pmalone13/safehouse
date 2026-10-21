@@ -207,11 +207,16 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
-398, 2026-10-21 ~18:20Z, email, subject "safeutil location," 14:20:46
-EDT, 43.6656413, -70.276781 — same Portland, ME spot, ~10 min after
-queue id 397, routine cadence. Passive status ping, no reply sent,
+399, 2026-10-21 ~18:31Z, email, subject "safeutil location," 14:30:50
+EDT, 43.6656124, -70.2768974 — same Portland, ME spot, ~10 min after
+queue id 398, routine cadence. Passive status ping, no reply sent,
 nothing new to log beyond the location itself. Pointer already here,
 no move needed.
+
+Previous pointer, same project — queue id
+398, 2026-10-21 ~18:20Z, email, subject "safeutil location," 14:20:46
+EDT, 43.6656413, -70.276781 — same Portland, ME spot, ~10 min after
+queue id 397, routine cadence. Passive status ping, no reply sent.
 
 Previous pointer, same project — queue id
 397, 2026-10-21 ~18:10Z, email, subject "safeutil location," 14:10:42
@@ -8008,3 +8013,9 @@ thing that needs it, not because anything currently lives under it.
   queue id 397. Confirmed via `queue.db` that no gap exists between
   397 and 398 (397 status `done`, no outage). Logged, no reply
   needed. Nothing new beyond what's already on file.
+
+- 2026-10-21 ~18:31Z: fresh session, queue id 399, another routine
+  "safeutil location" email, same Portland, ME spot, ~10 min after
+  queue id 398. Confirmed via `queue.db` no gap exists (398 status
+  `done`). Logged, no reply needed. Nothing new beyond what's
+  already on file.
