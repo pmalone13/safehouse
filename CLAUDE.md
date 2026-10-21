@@ -7891,3 +7891,13 @@ thing that needs it, not because anything currently lives under it.
   (queue id 346/347) all remain open and need Paul live to fix; the
   Malones are mid-trip in Portland, ME through 10/25; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-21).
+
+- 2026-10-21 ~15:59Z: fresh session, queue id 387, text channel, Paul:
+  "ted. keep an eye out for emails with my location." Arrived one
+  second after the queue id 386 email itself (same timestamp pair) —
+  confirms exactly what the immediately-prior turn already set up
+  (watching for "safeutil location" emails before answering
+  location-dependent questions). Pointer stayed on
+  `location-tracker`, no move needed. Replied by SMS confirming
+  already on it, referencing the first email just received (Portland,
+  ME). No new research needed.
