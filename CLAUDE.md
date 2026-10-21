@@ -207,11 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+407, 2026-10-21 ~19:58Z, email, subject "safeutil location," 15:58:32
+EDT, 43.6667472, -70.2766689 — same Portland, ME area, ~17 min after
+queue id 406, routine cadence. Passive status ping, no reply sent,
+nothing new to log beyond the location itself. Pointer already here,
+no move needed.
+
+Previous pointer, same project — queue id
 406, 2026-10-21 ~19:41Z, email, subject "safeutil location," 15:41:23
 EDT, 43.6640866, -70.2737395 — same Portland, ME area, ~10 min after
 queue id 405 (recovered below), routine cadence. Passive status ping,
-no reply sent, nothing new to log beyond the location itself. Pointer
-already here, no move needed.
+no reply sent.
 
 Previous pointer, same project — queue id
 405, 2026-10-21 ~19:31Z, email, subject "safeutil location," 15:31:15
@@ -8098,3 +8104,9 @@ thing that needs it, not because anything currently lives under it.
   queue id 230) — a third occurrence of this distinct failure type.
   Recovered and backfilled from the raw queue row. Both logged, no
   reply needed for either (passive status pings).
+
+- 2026-10-21 ~19:58Z: fresh session, queue id 407, another routine
+  "safeutil location" email, same Portland, ME area, ~17 min after
+  queue id 406. Confirmed via `queue.db` no gap exists (406 status
+  `done`). Logged, no reply needed. Nothing new beyond what's
+  already on file.
