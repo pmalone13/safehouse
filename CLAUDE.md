@@ -207,25 +207,31 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+398, 2026-10-21 ~18:20Z, email, subject "safeutil location," 14:20:46
+EDT, 43.6656413, -70.276781 — same Portland, ME spot, ~10 min after
+queue id 397, routine cadence. Passive status ping, no reply sent,
+nothing new to log beyond the location itself. Pointer already here,
+no move needed.
+
+Previous pointer, same project — queue id
 397, 2026-10-21 ~18:10Z, email, subject "safeutil location," 14:10:42
 EDT, 43.6657025, -70.2766106 — same Portland, ME spot as every prior
-reading. Pointer already here, no move needed. While handling this
-routine ping, found and backfilled a **fourth Claude-session-limit
-outage** (~16:09Z-17:59Z, resetting at 18:00 UTC, same recurring shape
-as the three before it — see the root TODO section's newly added
-"Update 2026-10-21" note): queue ids 390-396, seven straight
-"safeutil location" emails, failed identically and were silently
-dropped with no reply/retry/notify. Recovered all seven from the raw
-queue rows and logged them in `projects/location-tracker/CLAUDE.md` —
-low-stakes this time since every dropped message was just a passive
-location ping with nothing to act on, but the outage pattern itself
-is now a fourth confirmed occurrence, still needing Paul live to add
-real retry/notify logic to `coordinator.py`. One oddity noted in
-passing, not chased further: a ~42min gap between two of the dropped
-pings (13:17-13:59 EDT) breaks the otherwise ~5-12min cadence,
-possibly the phone app pausing in the background. No reply sent for
-queue id 397 itself — passive status ping, same posture as every
-prior location email.
+reading. While handling this routine ping, found and backfilled a
+**fourth Claude-session-limit outage** (~16:09Z-17:59Z, resetting at
+18:00 UTC, same recurring shape as the three before it — see the root
+TODO section's "Update 2026-10-21" note): queue ids 390-396, seven
+straight "safeutil location" emails, failed identically and were
+silently dropped with no reply/retry/notify. Recovered all seven from
+the raw queue rows and logged them in
+`projects/location-tracker/CLAUDE.md` — low-stakes this time since
+every dropped message was just a passive location ping with nothing
+to act on, but the outage pattern itself is now a fourth confirmed
+occurrence, still needing Paul live to add real retry/notify logic to
+`coordinator.py`. One oddity noted in passing, not chased further: a
+~42min gap between two of the dropped pings (13:17-13:59 EDT) breaks
+the otherwise ~5-12min cadence, possibly the phone app pausing in the
+background. No reply sent — passive status ping, same posture as
+every prior location email.
 
 Previous pointer, same project — queue id
 386, 2026-10-21 ~16:0xZ, email, subject "safeutil location" — **the
@@ -7996,3 +8002,9 @@ thing that needs it, not because anything currently lives under it.
   unreachable; the Malones are mid-trip in Portland, ME through
   10/25; and the next scheduled SUV/truck cron fire is 9am Eastern
   tomorrow (2026-10-22).
+
+- 2026-10-21 ~18:20Z: fresh session, queue id 398, another routine
+  "safeutil location" email, same Portland, ME spot, ~10 min after
+  queue id 397. Confirmed via `queue.db` that no gap exists between
+  397 and 398 (397 status `done`, no outage). Logged, no reply
+  needed. Nothing new beyond what's already on file.
