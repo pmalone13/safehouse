@@ -7901,3 +7901,23 @@ thing that needs it, not because anything currently lives under it.
   `location-tracker`, no move needed. Replied by SMS confirming
   already on it, referencing the first email just received (Portland,
   ME). No new research needed.
+
+- 2026-10-21 ~16:04Z: fresh session, queue id 388, email, subject
+  "safeutil location" — the second real location-tracker email,
+  ~5 minutes after the first (queue id 386). Confirms the send
+  cadence is ~5 minutes; location essentially unchanged (Paul
+  stationary in Portland, ME). Logged the cadence confirmation in
+  `projects/location-tracker/CLAUDE.md`. Passive status ping per the
+  standing posture — no reply sent, nothing to act on. Pointer stayed
+  on `location-tracker`, no move needed. Nothing outstanding heading
+  into the next turn beyond what's already on file: queue id 362's
+  open question (automated hourly Bill-check vs. an alternative) is
+  still waiting on Paul's reply; Bill remains unreachable; the Drive
+  outage from queue id 378, the public-GitHub-repo finding (queue id
+  348), the three-outage recurring session-limit bug (TODO section,
+  queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are mid-trip in Portland, ME through 10/25; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-21).
