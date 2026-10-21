@@ -206,7 +206,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — queue id 381,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 382,
+2026-10-21 ~01:10Z, text channel, Paul: "Tomorrow we are thinking day
+trip. We have our dog Nala. Happy to drive an hour or so. Can you
+recommend a few trips." Moved the pointer here from `movies` (folded
+back into the other-live-projects list below, nothing new since
+queue id 381). Used `WebSearch` to confirm real dog-leash rules and
+drive times (Nala's beach/off-leash access depends on season-
+specific rules): recommended Cape Elizabeth (~20 min — Two Lights +
+Crescent Beach State Parks, leashed dogs allowed on the beach Oct
+1-Mar 31, a window that just opened), Freeport (~20-30 min — Wolfe's
+Neck Woods State Park, L.L.Bean, Desert of Maine), and Kennebunkport
+(~40 min — Dock Square, Goose Rocks Beach, leashed dogs with only a
+noon-6pm restriction this time of year). All three fit his "an hour
+or so" budget; flagged Boothbay Harbor (already in the Portland
+day-by-day plan) as a stretch option beyond that at ~1.5hr. Replied
+by SMS (`SM78175ba9682ebfb263c0fd5118ff7312`). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/movies/CLAUDE.md` — queue id 381,
 2026-10-21 ~00:32Z, text channel, Paul: "Watching rain man with cruise
 and Hoffman. Did anyone win awards for it." Moved the pointer here
 from `suv-replacement` (folded back into the other-live-projects list
