@@ -7815,3 +7815,32 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-21).
+
+- 2026-10-21 ~14:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 385, already fully
+  handled, logged, committed, and pushed (`8199d94`) before this
+  wrap-up fired — emailed Paul the full location-tracker app spec for
+  his own local build and checked Bill again (still no `PONG`).
+  Working tree confirmed clean at wrap-up (`git status --short`
+  empty), so this entry is the only change this turn makes. Re-tried
+  `drive_sync.py` — still the identical `invalid_grant` failure first
+  flagged at queue id 378's checkpoint on 2026-10-20, unchanged across
+  queue ids 379-385; git push unaffected. Not re-texting Paul about
+  the Drive outage again — already flagged multiple times, nothing
+  new to add. Nothing outstanding heading into the next turn beyond
+  what's already on file: the Drive outage from queue id 378 still
+  needs Paul to re-authorize (`authorize_drive_once.py` + scp);
+  whether Paul's local location-tracker build uses on-device SMTP or
+  a server relay is still undecided, update
+  `projects/location-tracker/CLAUDE.md` once he reports back; queue
+  id 362's open question (automated hourly Bill-check vs. an
+  alternative) is still waiting on Paul's reply; Bill remains
+  unreachable (last check queue id 385, no PONG, now ~46 hours since
+  his last real reply); the public-GitHub-repo finding (queue id
+  348), the three-outage recurring session-limit bug (TODO section,
+  queue ids 260/272/315), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are mid-trip in Portland, ME through 10/25; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-21).
