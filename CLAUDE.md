@@ -207,9 +207,30 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+397, 2026-10-21 ~18:10Z, email, subject "safeutil location," 14:10:42
+EDT, 43.6657025, -70.2766106 — same Portland, ME spot as every prior
+reading. Pointer already here, no move needed. While handling this
+routine ping, found and backfilled a **fourth Claude-session-limit
+outage** (~16:09Z-17:59Z, resetting at 18:00 UTC, same recurring shape
+as the three before it — see the root TODO section's newly added
+"Update 2026-10-21" note): queue ids 390-396, seven straight
+"safeutil location" emails, failed identically and were silently
+dropped with no reply/retry/notify. Recovered all seven from the raw
+queue rows and logged them in `projects/location-tracker/CLAUDE.md` —
+low-stakes this time since every dropped message was just a passive
+location ping with nothing to act on, but the outage pattern itself
+is now a fourth confirmed occurrence, still needing Paul live to add
+real retry/notify logic to `coordinator.py`. One oddity noted in
+passing, not chased further: a ~42min gap between two of the dropped
+pings (13:17-13:59 EDT) breaks the otherwise ~5-12min cadence,
+possibly the phone app pausing in the background. No reply sent for
+queue id 397 itself — passive status ping, same posture as every
+prior location email.
+
+Previous pointer, same project — queue id
 386, 2026-10-21 ~16:0xZ, email, subject "safeutil location" — **the
 first real location email actually arrived**, ~2h15m after queue id
-385's app-spec email. Pointer already here, no move needed. Paul's own
+385's app-spec email. Paul's own
 local build worked: sent from his own `pmalone13@gmail.com` (not a
 separate relay account — consistent with on-device sending, option
 (a) from the project's own open design questions), subject exactly
@@ -3526,6 +3547,27 @@ the pending `/sms-optin` build still live there.
   overdue with each one; this is the first time the dropped content
   was itself real, time-sensitive work rather than a question that
   could be re-asked.
+  **Update 2026-10-21 (queue id 397): a fourth instance, lower
+  stakes.** ~16:09Z-17:59Z (~1h50m, resetting at 18:00 UTC per the
+  error text, same reset-time pattern as every prior occurrence),
+  queue ids 390-396 (7 messages) failed identically. This time every
+  dropped message was a routine "safeutil location" ping (the
+  location-tracker app Paul built himself, sending roughly every
+  5-10 minutes) — passive status content with no action owed per
+  that project's own standing posture, so the actual cost was near
+  zero; caught and backfilled as a single combined log entry while
+  handling queue id 397 rather than Paul having to notice and ask.
+  Queue id 389, received 20 seconds before this outage's first real
+  failure, is a half-case worth noting for the "`failed` doesn't mean
+  unprocessed" lesson above: `queue.db` marks it `failed` with the
+  identical session-limit error, yet a real commit
+  (`440b30a`, 16:09:32Z) logged it cleanly seconds later — some
+  retry/race inside the coordinator let that one specific message
+  through despite the status column saying otherwise. **Fourth
+  outage now on record** — still needs Paul live to add retry/notify
+  logic to `coordinator.py`; this occurrence's low stakes (passive
+  pings, not owed replies or time-sensitive work) is likely luck of
+  timing, not evidence the gap is safe to leave as-is.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
@@ -7928,3 +7970,29 @@ thing that needs it, not because anything currently lives under it.
   unchanged (Paul stationary in Portland, ME). Passive status ping,
   no reply sent. Pointer stayed on `location-tracker`, no move
   needed. Nothing new to add beyond what's already on file.
+
+- 2026-10-21 ~18:10Z: fresh session, queue id 397, another routine
+  "safeutil location" email, same Portland, ME spot. Already fully
+  handled, logged, committed as part of this checkpoint. While
+  checking `queue.db` to see whether any location emails had arrived
+  between queue id 389 and this one, found a fourth Claude-session-
+  limit outage (~16:09Z-17:59Z) had silently dropped queue ids
+  390-396 — seven more location pings, all passive/no-action-needed
+  content, recovered and backfilled into
+  `projects/location-tracker/CLAUDE.md` and logged as a new "Update
+  2026-10-21" addendum to the root TODO section's recurring-outage
+  entry (now a fourth confirmed instance). No reply sent for queue id
+  397 itself, same posture as every prior location ping. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the fourth outage instance still needs Paul live to fix
+  `coordinator.py`'s retry/notify gap (TODO section); the Drive
+  `invalid_grant` outage from queue id 378, the public-GitHub-repo
+  finding (queue id 348), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; queue
+  id 362's open question (automated hourly Bill-check vs. an
+  alternative) is still waiting on Paul's reply; Bill remains
+  unreachable; the Malones are mid-trip in Portland, ME through
+  10/25; and the next scheduled SUV/truck cron fire is 9am Eastern
+  tomorrow (2026-10-22).
