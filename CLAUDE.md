@@ -7669,3 +7669,44 @@ thing that needs it, not because anything currently lives under it.
   are mid-trip in Portland, ME through 10/25, currently out on Peaks
   Island; and the next scheduled SUV/truck cron fire is 9am Eastern
   tomorrow (2026-10-21).
+
+- 2026-10-21 ~01:3xZ: session wrap-up (idle window elapsed, no new
+  message). Three turns this session, queue ids 381-383: Paul's
+  "Rain Man" Oscar-awards question (381, `movies`, used `WebSearch`
+  to confirm 4 wins at the 61st Academy Awards — Best Picture, Best
+  Director, Best Actor for Dustin Hoffman, Best Original Screenplay —
+  and that Tom Cruise himself wasn't nominated), a day-trip request
+  with the dog Nala within an hour of Portland (382, `new-england`,
+  recommended Cape Elizabeth, Freeport, and Kennebunkport with real
+  `WebSearch`-confirmed dog-leash rules and drive times), and a
+  direct follow-up asking for a description of Boothbay Harbor (383,
+  same project, no pointer move needed — already part of the
+  existing Portland day-by-day plan). All three already fully
+  handled, logged, and replied to by SMS
+  (`SMbff3783c2242a28b74b7da9a94a64e08`, `SM78175ba9682ebfb263c0fd
+  5118ff7312`, `SMe145c18b3a87b7478adcb02faaf06de4`). Queue ids 381
+  and 382 already committed/pushed (`79ff603`, `d32f62e`) before this
+  wrap-up fired; queue id 383 only touched the gitignored
+  `projects/new-england/CLAUDE.md` file (no pointer move, so no root
+  `CLAUDE.md` change was needed for it), confirmed via `git status
+  --short` returning empty at this wrap-up — nothing new to commit.
+  Drive sync retried at every one of this session's three
+  checkpoints — still the identical `invalid_grant` failure first
+  flagged at queue id 378's checkpoint earlier tonight; git push and
+  all three SMS sends were unaffected throughout. Not re-texting Paul
+  about the Drive outage again — already flagged twice this session,
+  nothing new to add. Nothing outstanding heading into the next turn
+  beyond what's already on file: the Drive outage from queue id 378
+  still needs Paul to re-authorize; queue id 362's open question
+  (automated hourly Bill-check vs. an alternative) is still waiting
+  on Paul's reply; Bill remains unreachable (last check queue id 372,
+  no PONG); the public-GitHub-repo finding (queue id 348), the
+  three-outage recurring session-limit bug (TODO section, queue ids
+  260/272/315), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  location-tracker Android build is tabled pending Bill/Bayhouse
+  coming back up or a resource decision on this t3.nano; the Malones
+  are mid-trip in Portland, ME through 10/25; and the next scheduled
+  SUV/truck cron fire is 9am Eastern today (2026-10-21).
