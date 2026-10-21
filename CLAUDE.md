@@ -207,11 +207,27 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+417, 2026-10-21 ~23:19Z, email, subject "safeutil location," 19:19:48
+EDT, 43.6656569, -70.2766755 — same Portland, ME area. While handling
+this routine ping, found and recovered a **fifth Claude-session-limit
+outage** (~20:26Z-23:10Z, queue ids 409-416, 8 messages) — see the
+root TODO section's updated recurring-outage entry. Unlike most prior
+occurrences, this one's dropped content wasn't uniformly harmless:
+queue id 410 was a real text from Paul ("test the drive sych") that
+got no reply for ~3 hours until this recovery found it, and queue id
+415 was a genuinely missed 6pm `suv-replacement-watch` cron fire (no
+search ran, no email sent — logged in that project's own file, not
+retroactively re-run). Confirmed Drive is working again (full
+`drive_sync.py` catchup ran clean) and texted Paul the overdue answer
+to his drive-sync test question plus a summary of what was recovered.
+Full detail in `projects/location-tracker/CLAUDE.md` and
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 408, 2026-10-21 ~20:08Z, email, subject "safeutil location," 16:08:37
 EDT, 43.6655955, -70.2769332 — same Portland, ME area, ~10 min after
 queue id 407, routine cadence. Passive status ping, no reply sent,
-nothing new to log beyond the location itself. Pointer already here,
-no move needed.
+nothing new to log beyond the location itself.
 
 Previous pointer, same project — queue id
 407, 2026-10-21 ~19:58Z, email, subject "safeutil location," 15:58:32
@@ -3633,6 +3649,27 @@ the pending `/sms-optin` build still live there.
   logic to `coordinator.py`; this occurrence's low stakes (passive
   pings, not owed replies or time-sensitive work) is likely luck of
   timing, not evidence the gap is safe to leave as-is.
+  **Update 2026-10-21, same day (queue id 417): a fifth instance,
+  higher stakes this time.** ~20:26Z-23:10Z (~2h44m, resetting at
+  11:10pm UTC per the error text), queue ids 410-416 (7 messages)
+  failed on the session-limit error, plus queue id 409 failed
+  separately with the `'Prompt is too long'` error (a fourth
+  occurrence of that distinct failure type, see queue ids 230/401/
+  405). Dropped content this time was mixed, not uniformly harmless:
+  five more routine "safeutil location" pings (409, 411-414, 416,
+  passive, no action owed) and one routine 6pm `suv-replacement-watch`
+  cron fire (415) — **a real missed search cycle**, no email sent,
+  nothing appended to the dedup ledger, logged in
+  `projects/suv-replacement/CLAUDE.md` but not retroactively re-run
+  (next scheduled 9am fire will run normally) — but also **queue id
+  410, a real text from Paul ("test the drive sych") that got no
+  reply at all** until this recovery found it, roughly 3 hours later.
+  Recovered and answered by SMS (Drive confirmed working via a fresh
+  `drive_sync.py` run) once found. **Fifth outage now on record,
+  stakes trending upward** — the coordinator retry/notify fix is
+  overdue, not just "worth doing": this is the second time (after
+  queue id 315) a dropped message was a real, owed-reply question
+  rather than something re-askable or purely passive.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
