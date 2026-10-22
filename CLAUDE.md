@@ -207,6 +207,16 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+419, 2026-10-22 ~01:36Z, email, subject "safeutil location,"
+21:36:13 EDT, 43.6656547, -70.2766658 — same Portland, ME area. The
+first location email since the gap just flagged one message earlier
+at queue id 418 (last one was 7:19:48pm Eastern) — confirms the
+~2h16m gap was real but short-lived, not a permanent stop; the app
+itself resumed sending on its own. Replied by SMS confirming it's
+back and offering to dig into the cause if Paul wants. Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 418, 2026-10-22 ~01:33Z, text channel, Paul: "How are tracking
 emails." Read as a status check on the location-pinging app. Checked
 `queue.db` fresh, then Gmail directly by subject rather than trust
@@ -8228,3 +8238,20 @@ thing that needs it, not because anything currently lives under it.
   `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
   346/347) all remain open and need Paul live to fix; the Malones are
   mid-trip in Portland, ME through 10/25.
+
+- 2026-10-22 ~01:36Z: fresh session, queue id 419, email channel,
+  "safeutil location," 21:36:13 EDT, same Portland ME spot. Already
+  fully handled, logged, and committed as part of this checkpoint —
+  the first location email since the ~2h16m gap flagged one message
+  earlier at queue id 418, confirming the app resumed on its own
+  rather than permanently stopping. Replied by SMS confirming the
+  resumption. No pointer move — stayed on `location-tracker`. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: queue id 362's open question (automated hourly Bill-check vs.
+  an alternative), Bill's continued unreachability, the public-
+  GitHub-repo finding (queue id 348), the v3 file-send session-
+  collision architecture issue, `poll_for_reply()`'s stale-reply bug
+  (queue id 275), and the `ssa.png`/`passport.jpg` Drive-sync
+  corruption finding (queue id 346/347) all remain open and need Paul
+  live to fix; the Malones are mid-trip in Portland, ME through
+  10/25.
