@@ -207,6 +207,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+459, 2026-10-22 ~13:59Z, email, subject "safeutil status" — **a new
+third email type, and it's the location/words merge Paul asked for
+at queue id 423 finally landing.** Supersedes the separate "safeutil
+location" and "safeutil my words" subjects seen until now with one
+combined email (`--- Location ---` / `--- My Words ---` sections) —
+lands right after Paul said he's "tuning" the app at queue id 458.
+**Standing fact for future turns**: watch for subject "safeutil
+status" going forward; if the old separate subjects stop appearing,
+this merged format is the reason, not a new outage. Replied by email
+confirming the merge landed. No pointer move needed — already here.
+
+Previous pointer, same project — queue id
 458, 2026-10-22 ~13:55Z, text channel, Paul: "I'm working on the
 email utility. Tuning. Please alter your handling and ONLY react to
 a 'words' email from me that includes the phrase: 'Claude Please'."
