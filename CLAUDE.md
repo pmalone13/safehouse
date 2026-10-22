@@ -207,6 +207,27 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+428, 2026-10-22 ~04:24Z, email, subject "safeutil my words." While
+handling this routine batch, found and recovered a **sixth Claude-
+session-limit outage** (~03:51Z-04:20Z, queue ids 423-427) — see the
+root TODO section's updated recurring-outage entry. The dropped
+content mattered this time: queue id 423 was Paul confirming "my
+words" is his own speech-transcription feature and giving two
+standing instructions now in force — (1) he's set it to merge into
+the location email, (2) **Ted should read the words content but only
+react if Paul says "Ted" by name in it** (a spoken wake-word gate,
+nothing else in the stream gets a reaction). Queue id 425 was a real
+question, "Is it also sending my location" — checked Gmail directly
+and found the answer is **no**: the last "safeutil location" email
+was at 23:15:23 EDT, nothing since, even though "safeutil my words"
+has kept arriving every ~10 min separately — the location/words merge
+Paul asked for doesn't appear to have taken effect yet. Replied to
+Paul by email with the outage explanation, confirmation the new
+"only react to 'Ted'" rule is in effect (nothing in any batch has
+said "Ted," so nothing was reacted to), and the location-stopped
+finding. Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 422, 2026-10-22 ~03:44Z, email, subject "safeutil my words" — **a
 brand-new email type from the same self-built "safeutil" app family,
 never seen before.** Verified genuine (DKIM/SPF/DMARC pass). Body: a
@@ -3721,6 +3742,23 @@ the pending `/sms-optin` build still live there.
   overdue, not just "worth doing": this is the second time (after
   queue id 315) a dropped message was a real, owed-reply question
   rather than something re-askable or purely passive.
+  **Update 2026-10-22 (queue id 428): a sixth instance, same night,
+  real cost again.** ~03:51Z-04:20Z (~29min, resets 4:20am UTC per the
+  error text), queue ids 423-427 (5 messages) failed identically.
+  Dropped content included a real owed-reply question (queue id 425,
+  "Is it also sending my location") that sat unanswered for ~25
+  minutes, and — more consequentially — queue id 423, Paul confirming
+  a new speech-transcription feature ("safeutil my words") and giving
+  two standing behavioral instructions (merge into the location
+  email; only react if Paul says "Ted" by name in the transcript) —
+  instructions that would have simply never taken effect if this
+  recovery hadn't caught the outage. Recovered and acted on fully
+  (see `projects/location-tracker/CLAUDE.md`'s newest Log entry) —
+  but this is now **six occurrences** of the identical failure shape,
+  and twice in a row (queue id 410, queue id 425) a dropped message
+  has been a real question Paul was actively waiting on an answer
+  to, not just passive content. The coordinator retry/notify fix
+  (flagged since queue id 260) is overdue, not merely worth doing.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
