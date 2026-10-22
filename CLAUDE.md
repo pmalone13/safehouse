@@ -8158,3 +8158,38 @@ thing that needs it, not because anything currently lives under it.
   queue id 407. Confirmed via `queue.db` no gap exists (407 status
   `done`). Logged, no reply needed. Nothing new beyond what's
   already on file.
+
+- 2026-10-21 ~23:2xZ: fresh session, queue id 417, another routine
+  "safeutil location" email, same Portland, ME area. Already fully
+  handled, logged, committed, and pushed (`d4e13bd`) before this
+  wrap-up fired — recovered a **fifth Claude-session-limit outage**
+  (~20:26Z-23:10Z, queue ids 409-416), the first occurrence where a
+  real text from Paul ("test the drive sych") went unanswered for
+  ~3 hours and a scheduled 6pm SUV/truck cron fire was genuinely
+  missed (not just passive content dropped). Confirmed Drive working
+  again via a fresh `drive_sync.py` run and texted Paul the overdue
+  answer plus a recovery summary. Full detail in
+  `projects/location-tracker/CLAUDE.md`, `projects/suv-replacement/
+  CLAUDE.md`, and the TODO section's updated recurring-outage entry
+  above (fifth instance now on record).
+
+- 2026-10-22 ~00:2xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 417, already fully
+  handled as described above before this wrap-up fired. Working tree
+  confirmed clean at wrap-up (`git status --short` empty), so this
+  entry is the only change this turn makes. Drive sync re-ran clean
+  (0 created, 3 updated, 876 unchanged, 1 orphaned — the already-known
+  stale `ted_protocol_package_v2.zip` reference, harmless). Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the fifth session-limit outage (queue ids 409-416) is fully
+  recovered and answered; the missed 6pm 2026-10-21 SUV/truck cron
+  fire was not retroactively re-run (next scheduled fire, 9am Eastern
+  today 2026-10-22, will run normally); queue id 362's open question
+  (automated hourly Bill-check vs. an alternative), Bill's continued
+  unreachability, the public-GitHub-repo finding (queue id 348), the
+  v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  mid-trip in Portland, ME through 10/25, location pings arriving
+  every ~5-10 minutes.
