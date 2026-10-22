@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+418, 2026-10-22 ~01:33Z, text channel, Paul: "How are tracking
+emails." Read as a status check on the location-pinging app. Checked
+`queue.db` fresh, then Gmail directly by subject rather than trust
+the queue alone (in case this was a sixth session-limit outage) —
+it isn't: Gmail has nothing newer than queue id 417's email
+(2026-10-21T23:19:49 UTC / 7:19:49pm Eastern). The app's own sends
+genuinely stopped — a real ~2h14m gap after running reliably every
+5-10 min all afternoon/evening, not a Ted-side drop. Replied by SMS
+with the last-seen time and three plausible causes (app closed,
+phone died/lost signal, Paul turned it off), offering to keep
+watching. Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 417, 2026-10-21 ~23:19Z, email, subject "safeutil location," 19:19:48
 EDT, 43.6656569, -70.2766755 — same Portland, ME area. While handling
 this routine ping, found and recovered a **fifth Claude-session-limit
@@ -8193,3 +8206,25 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   mid-trip in Portland, ME through 10/25, location pings arriving
   every ~5-10 minutes.
+
+- 2026-10-22 ~01:3xZ: fresh session, queue id 418, text channel,
+  Paul: "How are tracking emails." Already fully handled, logged,
+  and committed as part of this checkpoint. Checked `queue.db` fresh
+  (nothing after queue id 417) and then Gmail directly by subject
+  rather than assume a sixth session-limit outage — ruled that out:
+  Gmail itself has no "safeutil location" email newer than queue id
+  417's (23:19:49 UTC / 7:19:49pm Eastern), so the app's own sends
+  have genuinely stopped, a real ~2h14m gap as of this message after
+  running every 5-10 min reliably all afternoon/evening. Replied by
+  SMS with the last-seen time and three plausible causes (app
+  closed, phone died/lost signal, Paul turned it off). Pointer stayed
+  on `location-tracker`. Nothing outstanding heading into the next
+  turn beyond what's already on file: whether/when the location app
+  resumes is now the open thread to watch for; queue id 362's open
+  question (automated hourly Bill-check vs. an alternative), Bill's
+  continued unreachability, the public-GitHub-repo finding (queue id
+  348), the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  mid-trip in Portland, ME through 10/25.
