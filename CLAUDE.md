@@ -206,7 +206,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+**Current project**: `projects/words/CLAUDE.md` — queue id 490,
+2026-10-22 ~15:07Z, text, Paul: "and...I think we should have a new
+project called 'words' under which we store the raw messages. Over
+time we may do work with the data." Created the new project plus a
+structured `raw_words_log.jsonl` append-only data file, backfilled
+with all 497 historical words-entries found across every "safeutil"
+email on file (493 `[other words]` placeholders, 4 real transcribed
+snippets, all already documented in `location-tracker`'s own log).
+**Standing fact for future turns, changes existing practice**: every
+future "safeutil status" email's "My Words" entries get appended to
+`words/raw_words_log.jsonl`, and routine placeholder-only pings (no
+format change, no outage, no "Claude Please" trigger) no longer get
+their own narrative bullet in `location-tracker/CLAUDE.md` — that
+project's log had been accumulating ~30 near-identical entries for
+queue ids 460-489 right before this request, which is the exact noise
+this split is meant to stop. `location-tracker/CLAUDE.md` still gets
+a new entry for anything actually notable. Replied by SMS confirming
+both the new project and the logging-practice change, plus two open
+questions (what "do work with the data" might mean later; whether
+location coordinates deserve the same raw/structured-log treatment).
+Full detail in `projects/words/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue id
 459, 2026-10-22 ~13:59Z, email, subject "safeutil status" — **a new
 third email type, and it's the location/words merge Paul asked for
 at queue id 423 finally landing.** Supersedes the separate "safeutil
