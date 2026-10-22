@@ -206,23 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-450, 2026-10-22 ~13:00Z, channel `cron`, 9am Eastern scheduled fire.
-Moved the pointer here from `location-tracker` (folded back into the
-other-live-projects list below — nothing new there since queue id
-419, aside from a long run of passive "safeutil my words" batches,
-queue ids 429-449, all placeholder `[other words]` content with no
-"Ted" mention, so no reaction needed per the standing rule). Ran the
-full four-region recipe; 143 unique hrefs, 115 not an exact match to
-the ledger. **No new qualifying candidate.** Two individually
-checked (a 2002 Ford F-150 "King Ranch" excluded for insufficient
-info; a 2008 GMC Sierra 1500 Crew Cab confirmed a repost of an
-already-logged find), everything else matched already-established
-exclusion categories. Emailed Paul a "checked, nothing new" note per
-the standing rule. Full detail in
-`projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern today
-(2026-10-22).
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+458, 2026-10-22 ~13:55Z, text channel, Paul: "I'm working on the
+email utility. Tuning. Please alter your handling and ONLY react to
+a 'words' email from me that includes the phrase: 'Claude Please'."
+**Supersedes the queue id 423 "only react if Paul says 'Ted' by
+name" rule** — the new standing trigger for "safeutil my words"
+content is the literal phrase "Claude Please," not the word "Ted."
+Paul is actively tuning the app right now (explains the uneven/bursty
+cadence and the first appearance of real transcribed content, not
+just the `[other words]` placeholder, earlier this morning at queue
+id 453 — still nothing said "Claude Please" either, so nothing was
+missed by the rule switch). Replied by SMS confirming. Moved the
+pointer back here from `suv-replacement` (folded back into the
+other-live-projects list below — the 9am scheduled fire, queue id
+450, found no new qualifying candidate and emailed Paul the standard
+"checked, nothing new" note; next scheduled fire 6pm Eastern today).
 
 Previous pointer, `projects/location-tracker/CLAUDE.md` — queue id
 428, 2026-10-22 ~04:24Z, email, subject "safeutil my words." While
