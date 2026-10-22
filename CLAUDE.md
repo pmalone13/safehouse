@@ -207,6 +207,15 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+420, 2026-10-22 ~02:45Z, email, subject "safeutil location,"
+22:45:15 EDT, 43.6655726, -70.2769042 — same Portland, ME area, ~69
+min after queue id 419 (longer than the usual 5-10 min cadence but
+confirmed via `queue.db` not to be an outage — no failed rows in
+between, just the app itself pausing longer than normal, same benign
+pattern as queue id 397's earlier ~42min gap). Passive status ping,
+no reply sent.
+
+Previous pointer, same project — queue id
 419, 2026-10-22 ~01:36Z, email, subject "safeutil location,"
 21:36:13 EDT, 43.6656547, -70.2766658 — same Portland, ME area. The
 first location email since the gap just flagged one message earlier
