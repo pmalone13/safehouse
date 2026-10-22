@@ -206,7 +206,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+450, 2026-10-22 ~13:00Z, channel `cron`, 9am Eastern scheduled fire.
+Moved the pointer here from `location-tracker` (folded back into the
+other-live-projects list below — nothing new there since queue id
+419, aside from a long run of passive "safeutil my words" batches,
+queue ids 429-449, all placeholder `[other words]` content with no
+"Ted" mention, so no reaction needed per the standing rule). Ran the
+full four-region recipe; 143 unique hrefs, 115 not an exact match to
+the ledger. **No new qualifying candidate.** Two individually
+checked (a 2002 Ford F-150 "King Ranch" excluded for insufficient
+info; a 2008 GMC Sierra 1500 Crew Cab confirmed a repost of an
+already-logged find), everything else matched already-established
+exclusion categories. Emailed Paul a "checked, nothing new" note per
+the standing rule. Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`. Next scheduled fire: 6pm Eastern today
+(2026-10-22).
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue id
 428, 2026-10-22 ~04:24Z, email, subject "safeutil my words." While
 handling this routine batch, found and recovered a **sixth Claude-
 session-limit outage** (~03:51Z-04:20Z, queue ids 423-427) — see the
