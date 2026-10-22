@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue id
+422, 2026-10-22 ~03:44Z, email, subject "safeutil my words" — **a
+brand-new email type from the same self-built "safeutil" app family,
+never seen before.** Verified genuine (DKIM/SPF/DMARC pass). Body: a
+timestamped batch of 41 entries (23:34-23:44 EDT), apparently a new
+word/speech-transcription feature — but only the first entry has real
+content ("and now we are on"); all 40 others literally read the
+placeholder string `[other words]`, confirmed as the actual raw email
+text, not a rendering artifact. Didn't guess further — replied by
+email asking Paul what this feature is, whether the placeholder is
+expected (testing) or a bug, and how to treat future emails of this
+type. Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 421, 2026-10-22 ~03:15Z, email, subject "safeutil location,"
 23:15:22 EDT, 43.6656699, -70.2766679 — same Portland, ME area, ~30
 min after queue id 420, confirmed via `queue.db` not to be an outage
