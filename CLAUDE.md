@@ -221,6 +221,20 @@ narrative bullet (unlike the placeholder-only queue id 619 ping)
 since the location genuinely changed. No reply sent — passive status
 content. Pointer stayed here.
 
+**Addendum, queue id 623, 2026-10-23 ~20:30Z, email, subject
+"safeutil status" — the `'Prompt is too long'` retry mentioned in
+the queue id 624 entry below, finally landing after 624/625/626 were
+already logged.** Content-wise this is the earliest of the whole
+backlog, filling the gap between queue id 622 and queue id 624: all
+9 fixes stationary at the same 43.708/-70.314 brewery spot, "My
+Words" (48 entries) mostly placeholders with four real snippets near
+the end (town-history talk, a family/travel tangent). Checked for
+and clear of "Claude Please." Appended to
+`projects/words/raw_words_log.jsonl`, given its own location-tracker
+bullet to keep the backlog's real chronology straight. No reply
+sent. Pointer not moved — queue id 639's state is still the most
+current.
+
 **Addendum, queue id 624, 2026-10-23 ~20:40Z, email, subject
 "safeutil status" — processed out of order, after queue id 639
 above.** A queue backlog had built up (ids 625-638 sitting
