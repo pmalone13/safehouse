@@ -206,7 +206,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — live
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 608, 2026-10-23 ~15:30Z, text channel, Paul: "should be applied.
+Let's see how it goes. Our experience is that when I do development
+work we chew up my tokens but normal day to day interaction is below
+the allocation." Follow-up after the retry/notify build below landed.
+**This message ended up proving the fix live, by accident**: Paul's
+own observation (dev sessions burn disproportionate usage vs. routine
+traffic) is exactly what caused this very message to need the new
+logic. Found on resuming: a prior attempt at queue id 608 had already
+done the real work — written the log entry below and sent Paul a real
+SMS reply at 15:31:10Z reflecting his usage-pattern observation back
+— but then hit the session-limit error itself (consistent with his
+point) before reaching this file's own checkpoint commit. The new
+retry/notify logic (just built, still warm) caught that failure,
+texted Paul "hit an error processing message #608 (attempt 2)" at
+15:31:34Z per its own design, and requeued the message —
+**landing this resumed session**, whose only remaining job is to
+verify the prior attempt's work and close out the checkpoint (no
+second reply needed, one was already sent). Confirms two things at
+once: the fix works (automatic retry on a real failure, no message
+lost), and the narrower gap flagged as still-open below (work done
+but checkpoint not reached) is a real, now-observed failure shape,
+not just a theoretical one from the queue id 604 postmortem. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — live
 direct interactive session, 2026-10-23 ~14:5xZ-15:0xZ (Paul SSHed in,
 verified via `auth.log`), exactly the build anticipated one message
 earlier at queue id 607: the `coordinator.py` outage retry/notify fix
