@@ -221,6 +221,23 @@ narrative bullet (unlike the placeholder-only queue id 619 ping)
 since the location genuinely changed. No reply sent — passive status
 content. Pointer stayed here.
 
+**Addendum, queue id 624, 2026-10-23 ~20:40Z, email, subject
+"safeutil status" — processed out of order, after queue id 639
+above.** A queue backlog had built up (ids 625-638 sitting
+`unclaimed`, queue id 623 failed with the known `'Prompt is too
+long'` error and sits on the new automatic retry path) when this
+turn picked up id 624. Content-wise this is an earlier snapshot than
+639: all 9 fixes stationary at 43.708/-70.314, the same NA brewery
+spot, confirming Paul was still there ~20 min before the move to
+43.638/-70.253 already logged. "My Words" batch (44 entries) had
+substantial real family-history-sounding content (a father who
+"summers on capitol hill," an economist named "Brad Setser," talk of
+divorce/salary/retirement), checked for and clear of the "Claude
+Please" trigger. Appended to `projects/words/raw_words_log.jsonl` and
+given its own location-tracker bullet for the content, same posture
+as queue id 618. No reply sent. Pointer not moved — queue id 639's
+state is the more current one.
+
 Previous pointer, same project — queue
 id 622, 2026-10-23 ~20:20Z, email channel, subject "safeutil status."
 Another routine placeholder-only ping — still stationary at the same
