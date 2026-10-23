@@ -207,6 +207,15 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 607, 2026-10-23 ~14:48Z, text channel, Paul: "switching to live to
+apply this change." Pointer already here, no move needed. Read as
+Paul about to SSH in to build the `coordinator.py` retry/notify fix
+discussed at queue ids 605/606 — a status update, no action taken
+this turn (correctly, per the hard boundary). Replied by SMS
+acknowledging and naming the assumed fix so he can correct if wrong.
+Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 606, 2026-10-23 ~14:46Z, text channel, Paul: "i'm ok as long as
 you always go back and see older messages. what is your opinion, is
 what we have now OK." Pointer already here, no move needed. Gave an
