@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 609, 2026-10-23 ~18:21Z, text channel, Paul: "Caught up?" Queried
+`queue.db` fresh rather than answer from the last log entry alone:
+every message from queue id 605 through 608 shows `done`, no
+`retry_pending`/`failed` rows exist past the already-recovered 63-
+message weekly-limit outage (queue ids 542-603, still marked `failed`
+in the DB since those failures predate the retry-logic build, but
+their content was already fully recovered per the queue id 604 entry
+— a status-column leftover, not missing work), and all three live
+services (`safehouse-coordinator`, `safehouse-email-monitor`,
+`safehouse-twilio-webhook`) are active. Replied by SMS confirming
+caught up. Pointer stayed here, no move needed.
+
+Previous pointer, same project — queue
 id 608, 2026-10-23 ~15:30Z, text channel, Paul: "should be applied.
 Let's see how it goes. Our experience is that when I do development
 work we chew up my tokens but normal day to day interaction is below
