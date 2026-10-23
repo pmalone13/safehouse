@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 605, 2026-10-23 ~14:44Z, text channel, Paul asked a meta question
+prompted by the morning's outage recovery: "when these outages
+happen. do you go back and look at all missed messages? Does the
+python engine queue messages for your return?" Moved the pointer
+here from `suv-replacement` (folded back into the other-live-projects
+list below, nothing new since queue id 604's 9am fire). Verified the
+real mechanism against `queue_db.py`/`coordinator.py` rather than
+answer from the TODO notes alone: there is no automatic retry or
+notification — `mark_failed()` just flips a row's status, and the
+coordinator's main loop never revisits it. "Going back and looking"
+is a manual habit of mine (query `queue.db` for failed rows, read the
+raw body, redo the missed work), not an engine feature. Replied by
+SMS. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 604, 2026-10-23 ~13:00Z, channel `cron`, 9am Eastern scheduled
 fire. Moved the pointer here from `new-england` (folded back into
 the other-live-projects list below, nothing new there since queue id
