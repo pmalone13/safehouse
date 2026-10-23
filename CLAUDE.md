@@ -207,6 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 611, 2026-10-23 ~18:58Z, text channel, Paul: "Getting them now?"
+Direct follow-up to the ~15h45m safeutil-location silence flagged one
+message earlier (queue id 610) — read as asking whether the app has
+resumed sending. Checked Gmail directly again rather than assume: no
+— still nothing newer than the same 2026-10-23 02:40:59 EDT email
+(queue id 603), gap now ~16h20m. Replied by SMS with the honest
+answer, including the possibility that Paul just restarted the app
+and the first send may take a minute to land. Pointer stayed here,
+no move needed. Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 610, 2026-10-23 ~18:27Z, text channel, Paul: "Is my luck that most
 recent locations data been ingested" (read as "Is it [the case / my
 understanding] that the most recent location(s) data has been
