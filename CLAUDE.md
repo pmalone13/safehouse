@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 616, 2026-10-23 ~19:20Z, email channel, subject "safeutil status."
+Continuation of the drive-to-the-NA-brewery stretch already narrated
+at queue ids 613-615: 10 more location fixes tracing a path ~1.5km
+further from the morning's stationary Portland spot, consistent with
+continued driving. "My Words" batch had a few real transcribed
+snippets this time (one mentioning a tasting, matching the brewery
+context) rather than just placeholders, but nothing actionable and no
+"Claude Please" trigger. Appended all 50 words entries to
+`projects/words/raw_words_log.jsonl` per the standing process. No
+reply sent — passive content already covered by the acknowledgments
+sent for queue ids 614/615. Pointer stayed here.
+
+Previous pointer, same project — queue
 id 615, 2026-10-23 ~19:13Z, text channel, Paul: "NA brewery." Arrived
 11s after queue id 614 — a clarification that it's a non-alcoholic
 brewery, not a regular one. Plain status detail, no question, no
