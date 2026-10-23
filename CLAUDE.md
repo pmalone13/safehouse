@@ -238,6 +238,21 @@ given its own location-tracker bullet for the content, same posture
 as queue id 618. No reply sent. Pointer not moved — queue id 639's
 state is the more current one.
 
+**Addendum, queue id 625, 2026-10-23 ~20:50Z, email, subject
+"safeutil status" — processed right after queue id 624, same
+backlog-catch-up situation.** The first batch to show real movement
+away from the brewery: starts at the same 43.708/-70.314 spot and
+ends 10 fixes later ~2.3km southeast at 43.6856/-70.2922 — the start
+of the drive toward the new spot (43.638/-70.253) already logged at
+queue id 639. "My Words" (48 entries) included a literal turn-by-turn
+navigation line ("right turn left onto riverside street") and a Cape
+Elizabeth day-trip mention, consistent with being in the car. Checked
+for and clear of "Claude Please." Appended to
+`projects/words/raw_words_log.jsonl`, given its own location-tracker
+bullet since the location genuinely moved within the batch. No reply
+sent. Pointer not moved — queue id 639's state is still the most
+current.
+
 Previous pointer, same project — queue
 id 622, 2026-10-23 ~20:20Z, email channel, subject "safeutil status."
 Another routine placeholder-only ping — still stationary at the same
