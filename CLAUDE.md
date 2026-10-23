@@ -206,7 +206,31 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 610, 2026-10-23 ~18:27Z, text channel, Paul: "Is my luck that most
+recent locations data been ingested" (read as "Is it [the case / my
+understanding] that the most recent location(s) data has been
+ingested" — dictation garble). Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list,
+nothing new since queue id 609). Checked rather than assumed: the
+real on-device Maps Timeline export Paul shared mid-outage
+(`Timeline_2026-10-22.json`, 28.5MB, 2,376 segments through
+2026-10-22 5:47:54pm EDT, see queue id 546's entry below) was already
+downloaded and saved to `projects/travel/timeline_export/` during
+this morning's weekly-limit-outage recovery (queue id 604) — confirmed
+present on disk, mtime matches that recovery turn. Separately queried
+Gmail directly for the most recent "safeutil status" email rather
+than trust `queue.db` alone: the app's last send was 2026-10-23
+02:40:59 EDT (queue id 603, already backfilled into
+`projects/words/raw_words_log.jsonl`) — nothing newer exists in Gmail
+as of this turn, a ~15h45m gap, longer than any prior pause flagged
+in this project (the worst before was ~2h16m at queue id 418/419).
+Replied by SMS confirming the Timeline export is ingested and flagging
+the unusually long location-app silence as a separate, possibly
+notable thing, offering to look into it. Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 609, 2026-10-23 ~18:21Z, text channel, Paul: "Caught up?" Queried
 `queue.db` fresh rather than answer from the last log entry alone:
 every message from queue id 605 through 608 shows `done`, no
