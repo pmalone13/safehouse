@@ -253,6 +253,21 @@ bullet since the location genuinely moved within the batch. No reply
 sent. Pointer not moved — queue id 639's state is still the most
 current.
 
+**Addendum, queue id 626, 2026-10-23 ~21:00Z, email, subject
+"safeutil status" — continuing the same drive, backlog now resolving
+in normal order.** 10 more fixes trace the route southeast from queue
+id 625's endpoint, then swinging back to settle at 43.6656/-70.2767 —
+the same central-Portland spot held stationary all morning (queue ids
+397-421), not a direct brewery->43.638 drive as queue id 639's own
+entry implies. Flagged that route correction in
+`projects/location-tracker/CLAUDE.md`. "My Words" (36 entries) had
+real content again — a train-crossing mention matching the route, a
+Cheers-episode tangent, and house-touring-sounding talk ("pretty
+happy with the size too"). Checked for and clear of "Claude Please."
+Appended to `projects/words/raw_words_log.jsonl`, given its own
+location-tracker bullet. No reply sent. Pointer not moved — queue id
+639's state is still the most current.
+
 Previous pointer, same project — queue
 id 622, 2026-10-23 ~20:20Z, email channel, subject "safeutil status."
 Another routine placeholder-only ping — still stationary at the same
