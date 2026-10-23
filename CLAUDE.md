@@ -206,7 +206,46 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — live
+direct interactive session, 2026-10-23 ~14:5xZ-15:0xZ (Paul SSHed in,
+verified via `auth.log`), exactly the build anticipated one message
+earlier at queue id 607: the `coordinator.py` outage retry/notify fix
+discussed at queue ids 605/606. Built together, Paul present and
+directing — the hard boundary's explicit carve-out, not an unattended
+change. **Implemented and now live, resolving the standing TODO
+flagged since queue id 260** (see this section's TODO entry below,
+now marked resolved): `coordinator.py` classifies every `spawn_claude`
+failure (`usage_limit` / `prompt_too_long` / `other`) and computes a
+retry time from the error text itself — usage-limit errors parse the
+real `"resets HH(:MM)(am|pm) (UTC)"` string out of the error and retry
+just after it (this alone would have self-healed every outage logged
+this month, including the 63-message weekly-limit one at queue id
+604), `'Prompt is too long'` forces a fresh session on retry (clears
+`session_state`, since resuming the same bloated session would almost
+certainly fail identically again), everything else backs off up to 5
+tries then gives up. A direct Twilio SMS fires the moment a failure
+happens and again once a delayed message finally goes through —
+deliberately never routed through a Claude spawn, since the outage
+being reported might *be* Claude's own usage limit — throttled to one
+notice per ~30min so one outage dropping many messages sends one
+text, not dozens (per the "don't irritate" principle from queue id
+257). `queue_db.py` gained `retry_count`/`next_retry_at` columns, a
+new `retry_pending` status, and an `outage_notice` table; the main
+loop now calls `requeue_due_retries()` before `claim_next()` each
+cycle. Tested the classification/parsing/backoff logic and the full
+enqueue→fail→retry_pending→requeue→reclaim flow against scratch copies
+of the DB before touching anything live, then restarted the live
+`safehouse-coordinator.service` and confirmed the schema migration
+applied cleanly to the real `queue.db` (`retry_count`/`next_retry_at`
+columns and the `outage_notice` table all present, service running
+clean with no startup errors). **Deliberately out of scope, still
+open**: the queue id 361 failure mode (a session completes `done`
+with no actual output/checkpoint) never raises an exception, so this
+retry logic can't catch it — would need a different check (git diff
+or outbound-reply verification), left as a separate TODO. Committed
+and pushed as this turn's checkpoint.
+
+Previous pointer, same project — queue
 id 607, 2026-10-23 ~14:48Z, text channel, Paul: "switching to live to
 apply this change." Pointer already here, no move needed. Read as
 Paul about to SSH in to build the `coordinator.py` retry/notify fix
@@ -3953,6 +3992,31 @@ the pending `/sms-optin` build still live there.
   general fix; this occurrence adds a second, narrower lesson: a
   future fix should also guard the gap between "real work done" and
   "checkpoint saved," not just treat a `failed` row as all-or-nothing.
+
+  **RESOLVED 2026-10-23 ~15:0xZ, live session, Paul present.** The
+  general coordinator retry/notify fix flagged above since queue id
+  260 is now built and live — see this file's own Current-project
+  entry for the live session for full detail: `coordinator.py` now
+  classifies every failure (usage_limit / prompt_too_long / other),
+  auto-retries each on a schedule derived from the error itself
+  (usage-limit errors parse the real reset time out of the error text
+  and retry just after it — this alone would have self-healed every
+  outage above, including this 63-message one), and sends a direct
+  Twilio SMS the moment a failure happens and again once a delayed
+  message finally succeeds, bypassing Claude entirely since the
+  outage might be Claude's own usage limit. `queue_db.py` gained
+  `retry_count`/`next_retry_at` columns and a `retry_pending` status
+  so a failed message is requeued automatically rather than sitting
+  silently as `failed` forever. **Not covered by this fix**: the
+  narrower "real work done but never checkpointed" gap named in the
+  paragraph just above (a session that does something real, including
+  sending a reply, but dies before its own `git add/commit/push`) —
+  that failure never raises an exception for `coordinator.py` to catch
+  in the first place, so it needs a different mechanism entirely
+  (something that can tell a `done`-status session apart from one that
+  actually reached its checkpoint) and remains open. Same for the
+  queue id 361 "session completes `done` with genuinely zero output"
+  shape — also uncaught by this fix, also still open.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh

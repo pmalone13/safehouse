@@ -38,6 +38,15 @@ def _connect() -> sqlite3.Connection:
     return conn
 
 
+def _ensure_column(conn: sqlite3.Connection, table: str, column: str, decl: str) -> None:
+    """Additive migration for a column that didn't exist in older copies
+    of this DB -- lets existing queue.db files on disk pick up the new
+    retry columns without a destructive rebuild."""
+    cols = {row["name"] for row in conn.execute(f"PRAGMA table_info({table})")}
+    if column not in cols:
+        conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {decl}")
+
+
 def init_db() -> None:
     with _connect() as conn:
         conn.execute(
@@ -50,10 +59,14 @@ def init_db() -> None:
                 received_at TEXT NOT NULL,
                 status TEXT NOT NULL DEFAULT 'unclaimed',
                 claimed_at TEXT,
-                error TEXT
+                error TEXT,
+                retry_count INTEGER NOT NULL DEFAULT 0,
+                next_retry_at TEXT
             )
             """
         )
+        _ensure_column(conn, "messages", "retry_count", "INTEGER NOT NULL DEFAULT 0")
+        _ensure_column(conn, "messages", "next_retry_at", "TEXT")
         conn.execute("CREATE INDEX IF NOT EXISTS idx_messages_status ON messages(status)")
         conn.execute(
             """
@@ -62,6 +75,17 @@ def init_db() -> None:
                 session_id TEXT,
                 deadline TEXT,
                 updated_at TEXT
+            )
+            """
+        )
+        # Singleton row tracking the last time an outage SMS went out, so
+        # one outage that fails many messages in a row (e.g. a usage-limit
+        # window) triggers one text, not one per dropped message.
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS outage_notice (
+                id INTEGER PRIMARY KEY CHECK (id = 1),
+                last_notified_at TEXT
             )
             """
         )
@@ -123,10 +147,73 @@ def mark_done(message_id: int) -> None:
 
 
 def mark_failed(message_id: int, error: str) -> None:
+    """Terminal failure -- retries (if any) are exhausted. Distinct from
+    mark_retry_pending below, which is the normal landing spot for a
+    failure that's still being retried automatically."""
     with _connect() as conn:
         conn.execute(
             "UPDATE messages SET status = 'failed', error = ? WHERE id = ?", (error, message_id)
         )
+
+
+def mark_retry_pending(message_id: int, error: str, retry_count: int, next_retry_at: str) -> None:
+    """Keeps a failed message out of 'failed' purgatory -- it's requeued
+    automatically once next_retry_at passes (see requeue_due_retries),
+    instead of being silently dropped the way every message failure was
+    before this (the recurring outage gap logged across 2026-10, see
+    root CLAUDE.md's TODO section)."""
+    with _connect() as conn:
+        conn.execute(
+            """
+            UPDATE messages
+            SET status = 'retry_pending', error = ?, retry_count = ?, next_retry_at = ?
+            WHERE id = ?
+            """,
+            (error, retry_count, next_retry_at, message_id),
+        )
+
+
+def requeue_due_retries() -> int:
+    """Flips any retry_pending message whose next_retry_at has passed back
+    to 'unclaimed' so claim_next() picks it up through the ordinary
+    path -- deliberately not a separate claim mechanism, so resume-id
+    logic, done/failed handling, etc. all stay exactly as they are for
+    a normal message. Returns how many rows were flipped."""
+    with _connect() as conn:
+        cur = conn.execute(
+            """
+            UPDATE messages
+            SET status = 'unclaimed'
+            WHERE status = 'retry_pending' AND next_retry_at IS NOT NULL AND next_retry_at <= ?
+            """,
+            (_now_iso(),),
+        )
+        return cur.rowcount
+
+
+def get_outage_notice() -> Optional[sqlite3.Row]:
+    with _connect() as conn:
+        return conn.execute("SELECT * FROM outage_notice WHERE id = 1").fetchone()
+
+
+def set_outage_notice(ts_iso: str) -> None:
+    with _connect() as conn:
+        conn.execute(
+            """
+            INSERT INTO outage_notice (id, last_notified_at) VALUES (1, ?)
+            ON CONFLICT(id) DO UPDATE SET last_notified_at = excluded.last_notified_at
+            """,
+            (ts_iso,),
+        )
+
+
+def clear_outage_notice() -> None:
+    """Called once a delayed message finally succeeds, so the throttle
+    only suppresses repeat texts within one ongoing outage -- a later,
+    unrelated outage still gets its own prompt notification rather than
+    inheriting whatever's left of the old throttle window."""
+    with _connect() as conn:
+        conn.execute("DELETE FROM outage_notice WHERE id = 1")
 
 
 def get_session_state() -> Optional[sqlite3.Row]:
