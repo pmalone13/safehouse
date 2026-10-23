@@ -207,6 +207,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 618, 2026-10-23 ~19:40Z, email channel, subject "safeutil status."
+Location fully stationary at 43.708/-70.314 across all 9 fixes in
+this batch, confirming arrival at the NA brewery. "My Words" batch
+has its most substantial real transcription yet — overheard
+conversation about brewery history/licensing (a real "1820" brewing
+company named) mixed with other unrelated chatter — checked every
+entry for the "Claude Please" trigger phrase, none found. Appended
+all 50 words entries to `projects/words/raw_words_log.jsonl` per the
+standing process. No reply sent — passive status content. Pointer
+stayed here.
+
+Previous pointer, same project — queue
 id 617, 2026-10-23 ~19:30Z, email channel, subject "safeutil status."
 Continuation of the same drive — 10 more location fixes show the
 path going nearly stationary around 43.708/-70.314 for the back half
