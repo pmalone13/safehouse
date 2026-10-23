@@ -207,6 +207,13 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 615, 2026-10-23 ~19:13Z, text channel, Paul: "NA brewery." Arrived
+11s after queue id 614 — a clarification that it's a non-alcoholic
+brewery, not a regular one. Plain status detail, no question, no
+reply needed (614 already got an acknowledgment). Pointer stayed
+here.
+
+Previous pointer, same project — queue
 id 614, 2026-10-23 ~19:13Z, text channel, Paul: "Did a hike. Now off
 to brewery." Plain status update confirming the movement already
 seen in queue id 613's location batch — the ~6-7km-north move was a
