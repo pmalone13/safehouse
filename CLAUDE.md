@@ -207,6 +207,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 612, 2026-10-23 ~18:59Z, email channel, subject "safeutil status."
+A new email did arrive — but checking its real Gmail `internalDate`
+(18:59:41 UTC / 2:59:41pm EDT) against the 9 location fixes inside it
+(timestamped 02:41:43-02:50:04 EDT) found a ~12-hour gap between
+delivery and content: this is a delayed/backlogged send picking up
+right where the last known email (02:40:59 EDT, queue id 603) left
+off, not evidence of live tracking resuming. Nothing from today's
+actual afternoon has arrived yet. Also caught and corrected a gap-
+arithmetic mistake in the two preceding log entries (queue ids
+610/611): they compared an EDT timestamp to a UTC "now" without
+converting, overstating the gap by ~4 hours (~16h20m claimed vs.
+~12h18m real). Replied by SMS with the corrected finding. Pointer
+stayed here, no move needed. Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 611, 2026-10-23 ~18:58Z, text channel, Paul: "Getting them now?"
 Direct follow-up to the ~15h45m safeutil-location silence flagged one
 message earlier (queue id 610) — read as asking whether the app has
