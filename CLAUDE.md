@@ -207,6 +207,13 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 614, 2026-10-23 ~19:13Z, text channel, Paul: "Did a hike. Now off
+to brewery." Plain status update confirming the movement already
+seen in queue id 613's location batch — the ~6-7km-north move was a
+hike, now heading to a brewery. No research needed, replied by SMS
+with a short acknowledgment. Pointer stayed here.
+
+Previous pointer, same project — queue
 id 613, 2026-10-23 ~19:10Z, email channel, subject "safeutil status" —
 the app is genuinely live again, and Paul has moved. Arrived ~10
 minutes after queue id 612 (below). This time the delivery-vs-content
