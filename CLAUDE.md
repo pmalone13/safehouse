@@ -207,6 +207,23 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 613, 2026-10-23 ~19:10Z, email channel, subject "safeutil status" —
+the app is genuinely live again, and Paul has moved. Arrived ~10
+minutes after queue id 612 (below). This time the delivery-vs-content
+math checks out as real-time: a 10-fix location batch and a 50-entry
+"My Words" batch both end right around the email's own Gmail delivery
+timestamp (19:10:05 UTC), only ~23 seconds after the latest entry —
+confirming queue id 612 really was a one-off stale backlog send, not
+evidence the stream was still broken. Location also moved for the
+first time all day, ~6-7km north of the stationary Portland spot held
+all morning (43.7242611,-70.2891248 -> 43.7201103,-70.2811066).
+Appended the 50 `[other words]` placeholder entries (no "Claude
+Please" trigger) to `projects/words/raw_words_log.jsonl` per the
+standing process. Replied by SMS confirming the app is live again and
+flagging the location change. Pointer stayed here. Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 612, 2026-10-23 ~18:59Z, email channel, subject "safeutil status."
 A new email did arrive — but checking its real Gmail `internalDate`
 (18:59:41 UTC / 2:59:41pm EDT) against the 9 location fixes inside it
