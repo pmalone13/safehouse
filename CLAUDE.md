@@ -207,6 +207,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 606, 2026-10-23 ~14:46Z, text channel, Paul: "i'm ok as long as
+you always go back and see older messages. what is your opinion, is
+what we have now OK." Pointer already here, no move needed. Gave an
+honest opinion rather than reassurance: the current recovery is not
+a guaranteed "always" — it only happens when something tips me off
+(Paul asking, or noticing a gap incidentally), not a systematic
+per-turn check, so it's luck of timing rather than a real guarantee.
+Cited the weekly-limit outage from this same morning (queue id 604)
+as proof: it sat undetected ~12.5 hours until a routine cron turn
+happened to catch it. Concluded it's fine for passive content but a
+genuinely time-sensitive ask could sit for hours without Paul
+following up himself. Pointed again at the standing `coordinator.py`
+retry/notify TODO as the real fix, needs Paul live. Replied by SMS.
+Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 605, 2026-10-23 ~14:44Z, text channel, Paul asked a meta question
 prompted by the morning's outage recovery: "when these outages
 happen. do you go back and look at all missed messages? Does the
