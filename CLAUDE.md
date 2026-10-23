@@ -207,6 +207,21 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 639, 2026-10-23 ~23:01Z, email channel, subject "safeutil status."
+A real location change — all 10 fixes stationary within ~25m of
+43.638/-70.253, a genuine ~8km move southeast from the NA brewery
+spot held since queue id 617. "My Words" batch (46 entries, one
+short of the usual 50) has more real transcribed snippets than usual
+— household/moving-cost-sounding fragments ("a five hour drive,"
+"water heater," "the white house and renting a house") — checked
+every entry for the "Claude Please" trigger phrase, none found.
+Appended all 46 words entries to `projects/words/raw_words_log.jsonl`
+per the standing process, and gave this one its own location-tracker
+narrative bullet (unlike the placeholder-only queue id 619 ping)
+since the location genuinely changed. No reply sent — passive status
+content. Pointer stayed here.
+
+Previous pointer, same project — queue
 id 619, 2026-10-23 ~19:50Z, email channel, subject "safeutil status."
 Routine placeholder-only ping — still stationary at the same
 43.708/-70.314 brewery spot, all 50 "My Words" entries are
