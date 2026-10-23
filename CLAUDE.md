@@ -206,7 +206,61 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/words/CLAUDE.md` — queue id 490,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 604, 2026-10-23 ~13:00Z, channel `cron`, 9am Eastern scheduled
+fire. Moved the pointer here from `new-england` (folded back into
+the other-live-projects list below, nothing new there since queue id
+541). While handling this routine search, found and recovered the
+**biggest outage on record**: a Claude Pro **weekly usage limit**
+(not just the usual session/daily limit), ~2026-10-22T21:28Z through
+~2026-10-23T10:00Z (~12.5 hours), silently dropping 63 messages
+(queue ids 541/542-603). New failure nuance found while recovering:
+queue id 541 itself shows `failed` in `queue.db`, yet a session had
+already done the real work (research, an SMS reply, editing both
+this file and `projects/new-england/CLAUDE.md`) before dying
+mid-checkpoint, leaving this file modified-but-uncommitted for this
+turn to find and commit — a session can produce real, user-visible
+output and still never reach git/Drive. Recovered in full: 626 "My
+Words" entries backfilled into `projects/words/raw_words_log.jsonl`
+(no "Claude Please" trigger found), a real on-device Maps Timeline
+export Paul shared mid-outage (`Timeline2.json`, 2,376 segments,
+June-Oct 2026) downloaded and saved to `projects/travel/
+timeline_export/Timeline_2026-10-22.json`, and three open texts
+(Pixel/Maps export-path reminder, outage confirmation, two stale
+"Ted?" checks) answered in one combined SMS. Two Takeout-zip shares
+from the same window turned out already fully handled by a session
+that completed its checkpoint before the limit hit — confirmed via
+`projects/travel/CLAUDE.md`, not redone. Also found and logged a
+missed 6pm 2026-10-22 SUV/truck cron fire (same outage window, not
+retroactively re-run). The SUV/truck search itself: full four-region
+recipe, 146 unique hrefs, 116 not an exact match to the ledger, no
+new qualifying candidate — "checked, nothing new" emailed per the
+standing rule. Full detail in `projects/suv-replacement/CLAUDE.md`,
+`projects/words/CLAUDE.md`, `projects/travel/CLAUDE.md`, and the root
+TODO section's updated recurring-outage entry above. Next scheduled
+SUV/truck cron fire: 6pm Eastern today (2026-10-23).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
+541, 2026-10-22 ~21:28Z, text, Paul asked why Portland ME's big
+freestanding houses keep getting chopped into apartments and why new
+construction is multi-unit — direct continuation of the West End
+mansion/architecture thread (queue ids 367-369). Delegated to a
+research subagent: confirmed it's deliberate zoning policy, not just
+organic demand — Portland ended single-family-only zoning citywide
+Dec 2023 (up to 4 units/lot), followed by the "ReCode Portland"
+zoning-code rewrite (effective Dec 2024, first full rewrite in 50
+years), both following a 2022 Maine state law forcing denser zoning
+amid a real shortage (~84,000 more units needed statewide by 2030).
+Also noted many Victorians were already converted to apartments back
+in the early 1900s — not new. Replied by SMS. Moved the pointer here
+from `words` (folded back into the other-live-projects list below —
+that project's own standing process, established at queue id 490,
+continues unattended: every "safeutil status" email's words content
+still gets silently appended to `raw_words_log.jsonl` and checked for
+the "Claude Please" trigger regardless of which project the pointer
+currently sits on). Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/words/CLAUDE.md` — queue id 490,
 2026-10-22 ~15:07Z, text, Paul: "and...I think we should have a new
 project called 'words' under which we store the raw messages. Over
 time we may do work with the data." Created the new project plus a
@@ -3810,6 +3864,55 @@ the pending `/sms-optin` build still live there.
   has been a real question Paul was actively waiting on an answer
   to, not just passive content. The coordinator retry/notify fix
   (flagged since queue id 260) is overdue, not merely worth doing.
+
+  **Update 2026-10-23 (queue id 604): a new, much larger outage
+  class — a WEEKLY usage limit, not just the usual session limit,
+  the biggest gap on record.** `~2026-10-22T21:28:09Z` through
+  `~2026-10-23T10:00Z` (~12h32m, resets 10am UTC per the error text),
+  queue ids 541/542-603 (63 messages) failed with `"You've hit your
+  weekly limit · resets 10am (UTC)"` (several wrapped in an
+  additional `"Prompt is too long · automatic compaction failed:
+  ..."` layer — the auto-compaction step itself needs API budget
+  too, so it fails the same way once the weekly cap is hit). This is
+  the Claude Pro subscription's own weekly cap (see the 2026-09-07
+  TODO entry on `claude setup-token` subscription billing — the same
+  "shares account-wide rate limits with everything else Paul does
+  under that login" caveat flagged there, now actually biting at a
+  coarser, slower-to-reset granularity than the daily/session cap
+  seen in every outage before this one). **New and important nuance,
+  found while recovering**: queue id 541 itself shows `failed` in
+  `queue.db`, yet a real session had already done the full research
+  (delegated to a subagent), sent Paul a real SMS reply, and edited
+  both the root `CLAUDE.md` pointer and `projects/new-england/
+  CLAUDE.md` — it just died (mid weekly-limit hit) before reaching
+  its own git commit/push, leaving `CLAUDE.md` modified-but-
+  uncommitted in the working tree for this recovery turn to find and
+  commit. **This is a new failure shape, distinct from both known
+  prior ones** (the silent-success-with-no-output bug at queue id
+  361, and the clean `failed`-with-nothing-done shape of every
+  session-limit outage before this): a session can do real,
+  user-visible work — including sending a real SMS — and still never
+  checkpoint, because it can run out of budget *between* finishing
+  the work and running the git/Drive steps. Recovered in full:
+  backfilled 626 "My Words" entries (queue ids 542-603) into
+  `projects/words/raw_words_log.jsonl` (checked all for the "Claude
+  Please" trigger phrase — none found), downloaded a real on-device
+  Maps Timeline export Paul had shared mid-outage (queue id 546,
+  `Timeline2.json`, 2,376 segments spanning 2026-06-21 through
+  2026-10-22, saved to `projects/travel/timeline_export/
+  Timeline_2026-10-22.json` — it sat safely on Drive the whole time,
+  nothing lost), and answered three still-open texts (queue id 544,
+  the Pixel/Maps Timeline-export path; queue id 547, confirming the
+  outage and that Timeline2.json was received; queue ids 552/555,
+  stale "Ted?" attention-checks) in one combined SMS. Queue ids
+  520-522/536/537/540 (two Takeout zips + the Takeout-vs-on-device-
+  export distinction) turned out to already be fully handled by a
+  session that *did* complete its checkpoint before the limit hit —
+  confirmed via `projects/travel/CLAUDE.md`'s own Log, not re-done.
+  The coordinator retry/notify gap (queue id 260) remains the right
+  general fix; this occurrence adds a second, narrower lesson: a
+  future fix should also guard the gap between "real work done" and
+  "checkpoint saved," not just treat a `failed` row as all-or-nothing.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
