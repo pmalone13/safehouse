@@ -311,7 +311,23 @@ known (per queue id 637's entry just above) to have been reached at
 time queue id 639's own window starts (18:51:26), the arrival was
 already ~14 minutes old, not newly happening. Flagged that
 refinement in `projects/location-tracker/CLAUDE.md` rather than let
-queue id 639's framing stand as the moment of arrival. "My Words" (44 entries) has
+queue id 639's framing stand as the moment of arrival.
+
+**Addendum, queue id 641, 2026-10-23 ~23:21Z, email, subject
+"safeutil status" — continues right after queue id 640's last fix
+(19:10:58 EDT, a small drift that entry flagged as possible GPS
+jitter or the start of a real departure, unconfirmed either way).**
+This batch confirms it was a real departure: 9 fixes (19:12:00-
+19:20:12 EDT) trace a genuine ~1km move northeast away from the
+43.638/-70.253 spot held since queue id 638, settling around
+43.6456/-70.2415 by the batch's end. "My Words" (47 entries) has a
+real run of driving/parking-sounding conversation in the middle
+("park here," "the... driveway," "your part in front of them...
+drew me in," "no going to happen percent") consistent with arriving
+somewhere new. Checked for and clear of "Claude Please." Appended
+to `projects/words/raw_words_log.jsonl`, given its own
+location-tracker bullet. No reply sent. Pointer not moved — queue id
+670's state is still the most current. "My Words" (44 entries) has
 a long run of real transcribed fragments in the back half (18:44:50
 onward) — casual conversation snippets, nothing actionable, checked
 for and clear of "Claude Please." Appended all 44 to
