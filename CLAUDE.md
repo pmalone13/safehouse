@@ -259,6 +259,18 @@ narrative bullet (unlike the placeholder-only queue id 619 ping)
 since the location genuinely changed. No reply sent — passive status
 content. Pointer stayed here.
 
+**Addendum, queue id 636, 2026-10-23 ~22:30Z, email, subject
+"safeutil status" — continuing right after queue id 635's endpoint,
+same out-of-order backlog processing.** 8 of 9 fixes (18:21:45-
+18:28:54 EDT) stay at the same 43.6252/-70.2769 spot, then the last
+fix moves ~0.4km east — the start of leaving the stop, consistent
+with continuing toward queue id 639's eventual 43.638/-70.253
+endpoint. "My Words" (22 entries) mostly placeholders with a few
+garbled fragments, nothing actionable — checked for and clear of
+"Claude Please." Appended to `projects/words/raw_words_log.jsonl`,
+given its own location-tracker bullet. No reply sent. Pointer not
+moved — queue id 639's state is still the most current.
+
 **Addendum, queue id 635, 2026-10-23 ~22:20Z, email, subject
 "safeutil status" — continuing right after queue id 634's endpoint,
 same out-of-order backlog processing.** 9 fixes (18:11:31-18:19:42
