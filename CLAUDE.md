@@ -206,7 +206,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 682, 2026-10-24 ~19:44Z, text channel, Paul: "Perhaps it's the
+fact that we're putting the words in the email that's causing a
+[problem] we should encrypt them on the source, have it sent and
+then just store the encrypted version, not even unpacking it. And
+yeah I don't have any directives inside it. What do you think?"
+Continuation of the queue id 675 token/outage thread — Paul proposed
+client-side-encrypting the "safeutil status" words content and
+storing it encrypted on this end without ever decrypting, as a fix
+for the outage problem. Moved the pointer here from
+`location-tracker` (folded back into the live-projects list, nothing
+new since queue id 681). Gave an honest answer rather than just
+agreeing: encryption addresses a real but *different* problem (the
+words log holds real transcribed private conversations sitting as
+plaintext in Gmail/this repo right now) but doesn't fix the actual
+outage mechanism — that cost comes from every queued message
+spawning a full Claude session that re-reads the ~140K-token root
+file regardless of content size, so an encrypted blob costs the same
+fixed overhead as plaintext. Flagged a real tension: never unpacking
+the content means this system can never check for the "Claude
+Please" trigger phrase. Proposed combining both: a small non-Claude
+script that decrypts on receipt, scans only for the trigger phrase,
+re-stores just the encrypted blob (plaintext never persisted), and
+only wakes a real Claude session if the phrase is found — a sharper
+version of "option 2" from queue id 675, reusing the same Fernet-key
+mechanics as the Ted<->Bayhouse protocol. Not built (needs Paul live)
+— replied by SMS. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue
 id 681, 2026-10-24 ~19:16Z, email channel, subject "safeutil
 status." Continues right after queue id 679's 14:11:17 endpoint: 12
 fixes (14:16:18-15:11:37 EDT) trace a real driving loop through the
@@ -224,7 +253,7 @@ passive status content. Pointer moved here from `safehouse/general`
 680's rhumb-line explainer). Full detail in
 `projects/location-tracker/CLAUDE.md`.
 
-Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
+Previous pointer, same project — queue
 id 680, 2026-10-24 ~18:55Z, text channel, Paul: "Hey Ted how you
 doing today and tell me what a rum line is rhumb line?" Plain
 greeting plus a general-knowledge/navigation question — moved the
