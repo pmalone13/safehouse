@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 680, 2026-10-24 ~18:55Z, text channel, Paul: "Hey Ted how you
+doing today and tell me what a rum line is rhumb line?" Plain
+greeting plus a general-knowledge/navigation question — moved the
+pointer here from `suv-replacement` (folded back into the
+live-projects list, nothing new since queue id 673). Explained a
+rhumb line (loxodrome): a constant-compass-bearing path crossing
+every meridian at the same angle, not the shortest route (a great
+circle is), but easy to steer without changing heading — shows up as
+a straight line on a Mercator map, the actual reason that projection
+was invented. Replied by SMS. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue
 id 679, 2026-10-24 ~18:15Z, email channel, subject "safeutil status."
 Continuation of queue id 678: held at the same Kennebunkport spot
 through 13:46 EDT, then a real ~1.1km move east-southeast (13:51-
