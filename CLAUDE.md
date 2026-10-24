@@ -259,6 +259,15 @@ narrative bullet (unlike the placeholder-only queue id 619 ping)
 since the location genuinely changed. No reply sent — passive status
 content. Pointer stayed here.
 
+**Addendum, queue id 635, 2026-10-23 ~22:20Z, email, subject
+"safeutil status" — continuing right after queue id 634's endpoint,
+same out-of-order backlog processing.** 9 fixes (18:11:31-18:19:42
+EDT) stay tightly clustered at the same 43.6252/-70.2769 spot queue
+id 634 settled at, confirming it's a real stop. "My Words" had no
+new entries this time ("no new words since last send"). No reply
+sent. Pointer not moved — queue id 639's state is still the most
+current.
+
 **Addendum, queue id 634, 2026-10-23 ~22:11Z, email, subject
 "safeutil status" — continuing right after queue id 633's endpoint,
 same out-of-order backlog processing.** 10 fixes (18:01:14-18:10:30
