@@ -206,7 +206,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 684, 2026-10-24 ~20:29Z, text channel, Paul: "Not yet." Direct
+answer to the question closing the queue id 682 SMS reply ("Want to
+build that next time you're on SSH?" — the proposed non-Claude
+decrypt/scan/escalate script for the words-encryption fix). Moved the
+pointer here from `location-tracker` (folded back into the
+live-projects list, nothing new since queue id 683). No action
+needed beyond logging — replied by SMS
+(`SMdd1f8ae97ba0d43b84af56e9a6e861ed`) acknowledging, no rush. Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue
 id 683, 2026-10-24 ~20:15Z, email channel, subject "safeutil
 status." Continues right after queue id 681's endpoint: 12 fixes
 (15:16:38-16:11:54 EDT) trace a short drive northwest then settle by
