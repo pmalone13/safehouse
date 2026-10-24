@@ -206,7 +206,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 674, 2026-10-24 ~14:21Z, text channel, Paul: "Ted?" Plain
+attention-check, no topic named, same shape as past bare greetings
+(queue ids 171/173/314). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 673). Replied by SMS confirming I'm here and
+asking what he needs. No other action taken.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 673, 2026-10-24 ~13:00Z, channel `cron`, 9am Eastern scheduled
 fire. Pointer already here, no move needed. Ran the full four-region
 recipe (SUV + truck + five diesel-specific queries, washingtondc/
