@@ -207,6 +207,24 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 670, 2026-10-24 ~04:02Z, email channel, subject "safeutil status."
+Location content (23:52-00:01 EDT) shows a return to the familiar
+43.6656/-70.2767 central-Portland spot, ~4h50m after queue id 639
+reported a move to 43.638/-70.253 — a real round-trip within the
+evening. "My Words" had 1 placeholder entry, clear of "Claude
+Please," appended to `projects/words/raw_words_log.jsonl`. **This
+message landed at the tail of a real outage, handled automatically
+for the first time**: a session-limit outage ran ~22:20Z-04:00Z
+(2026-10-23, resets 4am UTC), dropping queue ids 635-669 (35
+messages) into `retry_pending` rather than failing silently — the
+first real-world exercise of the retry/notify fix built live
+2026-10-23 (queue id 608's session). One SMS outage notice already
+went out automatically (03:32Z); the coordinator will reprocess the
+whole backlog itself on its own schedule going forward, not manually
+recovered this turn. No reply sent — passive status content. Pointer
+already here, no move needed.
+
+Previous pointer, same project — queue
 id 639, 2026-10-23 ~23:01Z, email channel, subject "safeutil status."
 A real location change — all 10 fixes stationary within ~25m of
 43.638/-70.253, a genuine ~8km move southeast from the NA brewery
@@ -4341,6 +4359,18 @@ the pending `/sms-optin` build still live there.
   actually reached its checkpoint) and remains open. Same for the
   queue id 361 "session completes `done` with genuinely zero output"
   shape — also uncaught by this fix, also still open.
+
+  **First real-world confirmation, 2026-10-23 ~22:20Z through
+  2026-10-24 ~04:00Z (queue id 670): the fix worked exactly as
+  designed.** A session-limit outage ("resets 4am (UTC)") dropped 35
+  messages (queue ids 635-669) — every one landed in `queue.db` as
+  `retry_pending` with a parsed `next_retry_at` of 04:03Z (just after
+  the real reset), not `failed` with nothing further happening. A
+  single SMS outage notice went out automatically at 03:32Z. No
+  manual archaeology was needed this time — unlike every outage
+  before this fix, which required a turn to notice, query `queue.db`,
+  and hand-recover each dropped message's content. The coordinator
+  reprocesses the backlog on its own.
 
 - **Fixed same-session mistake, keep for history: `drive_sync.py`
   briefly leaked `.photos_api_token.json` (a live OAuth refresh
