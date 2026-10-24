@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 632, 2026-10-23 ~22:00Z, channel `cron`, 6pm Eastern scheduled
+fire. Moved the pointer here from `location-tracker` (folded back
+into the live-projects list, nothing new since queue id 627's
+backlog backfill). Ran the full four-region recipe (SUV + truck +
+five diesel-specific queries, washingtondc/annapolis/baltimore/
+easternshore, `<=2012`/`<110,000 mi`). 141 unique hrefs, 113 not an
+exact posting-ID match to the ledger. **No new qualifying
+candidate.** Individually checked one: "1997 Ford F250 HD" ($1,000,
+Alexandria) — seller's own ad says it won't start and hasn't been
+diagnosed, excluded as non-running. Everything else traced to the
+Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (33 hits),
+content-match reposts of already-logged/excluded listings, or the
+broad off-class/unibody/sedan/sports-car/classic/commercial exclusion
+categories. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note. Full detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s new
+2026-10-23 6pm section. Next scheduled fire: 9am Eastern tomorrow
+(2026-10-24).
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue
 id 670, 2026-10-24 ~04:02Z, email channel, subject "safeutil status."
 Location content (23:52-00:01 EDT) shows a return to the familiar
 43.6656/-70.2767 central-Portland spot, ~4h50m after queue id 639
