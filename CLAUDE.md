@@ -207,6 +207,28 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 673, 2026-10-24 ~13:00Z, channel `cron`, 9am Eastern scheduled
+fire. Pointer already here, no move needed. Ran the full four-region
+recipe (SUV + truck + five diesel-specific queries, washingtondc/
+annapolis/baltimore/easternshore, `<=2012`/`<110,000 mi`). 146 unique
+hrefs, only 26 an exact URL/posting-ID match to the ledger (120 not).
+**No new qualifying candidate.** Individually checked two: a
+"Chevrolet Trailblazer" ($3,900, Woodbridge) confirmed to be the same
+2008 Trailblazer already logged as a qualifying find (queue id 218),
+just a fresh posting ID at a lower price; "BMW X5 2012 - 97K miles"
+($7,400, Fairfax) confirmed to be the same mislabeled-X3 listing
+already excluded at queue id 329. Everything else traced to the
+Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (31 hits),
+content-match reposts of already-logged/excluded listings, or the
+broad off-class/unibody/sedan/sports-car/classic/commercial/fire-
+truck/food-truck/barnfind exclusion categories. Per the standing rule
+(queue id 287), emailed Paul a "checked, nothing new" note
+(`1a16e02fb1e12cb2`). Full detail in
+`projects/suv-replacement/craigslist_watch_results.md`'s new
+2026-10-24 9am section. Next scheduled fire: 6pm Eastern today
+(2026-10-24).
+
+Previous pointer, same project — queue
 id 632, 2026-10-23 ~22:00Z, channel `cron`, 6pm Eastern scheduled
 fire. Moved the pointer here from `location-tracker` (folded back
 into the live-projects list, nothing new since queue id 627's
@@ -9194,3 +9216,23 @@ thing that needs it, not because anything currently lives under it.
   central-Portland spot as of the last location fix (00:21:17 EDT,
   2026-10-24); and the next scheduled SUV/truck cron fire is 9am
   Eastern today (2026-10-24).
+
+- 2026-10-24 ~13:0xZ: fresh session, queue id 673, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, committed, and pushed as part of
+  this checkpoint. Ran the full four-region recipe; 146 unique hrefs,
+  only 26 an exact URL/posting-ID match to the ledger. No new
+  qualifying candidate — two ambiguous listings individually checked
+  (a "Chevrolet Trailblazer" repost of the already-logged queue id
+  218 find, and a mislabeled "BMW X5" that's really the X3 already
+  excluded at queue id 329); everything else traced to the Houston-TX
+  dealer cross-post pattern or already-established exclusion
+  categories. Emailed Paul a "checked, nothing new" note per the
+  standing rule (queue id 287). Nothing outstanding heading into the
+  next turn beyond what's already on file: the public-GitHub-repo
+  finding (queue id 348), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption finding
+  (queue id 346/347) all remain open and need Paul live to fix; the
+  Malones are mid-trip in Portland, ME through 10/25; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-24).
