@@ -206,7 +206,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 681, 2026-10-24 ~19:16Z, email channel, subject "safeutil
+status." Continues right after queue id 679's 14:11:17 endpoint: 12
+fixes (14:16:18-15:11:37 EDT) trace a real driving loop through the
+Kennebunkport day-trip area — northeast to ~43.3511-43.3583/
+-70.4521-70.4531 by mid-afternoon, then back southwest to
+~43.358-43.3603/-70.4617-70.4667 by the batch's end, accuracy
+fluctuating 5-52m consistent with continued driving. "My Words" (161
+entries) mostly placeholders, a few real-but-minor fragments
+including one car-related ("yeah the car is still hold you think it
+can through town"); no "Claude Please" trigger. Appended all 161 to
+`projects/words/raw_words_log.jsonl`, gave it its own
+location-tracker bullet for the real movement. No reply sent —
+passive status content. Pointer moved here from `safehouse/general`
+(folded back into the live-projects list, nothing new since queue id
+680's rhumb-line explainer). Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 680, 2026-10-24 ~18:55Z, text channel, Paul: "Hey Ted how you
 doing today and tell me what a rum line is rhumb line?" Plain
 greeting plus a general-knowledge/navigation question — moved the
