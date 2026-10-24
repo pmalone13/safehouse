@@ -206,7 +206,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 686, 2026-10-24 ~22:00Z, channel `cron`, 6pm Eastern scheduled
+fire. Ran the full four-region recipe (SUV + truck + five
+diesel-specific queries, washingtondc/annapolis/baltimore/
+easternshore, `<=2012`/`<110,000 mi`). 143 unique hrefs, 117 not an
+exact match to the ledger. No new qualifying candidate — two
+genuinely new listings turned up but both had already been pulled/
+404'd by the time their listing pages were fetched to confirm specs,
+excluded for lack of confirmable information. Everything else
+traced to the Houston-TX dealer cross-post pattern, content-match
+reposts of already-logged/excluded listings, or established
+off-class/classic/commercial exclusion categories. Emailed Paul a
+"checked, nothing new" note per the standing rule. Pointer moved
+here from `location-tracker` (folded back into the live-projects
+list, nothing new since queue id 685). Full detail in
+`projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — queue
 id 685, 2026-10-24 ~21:15Z, email channel, subject "safeutil status."
 Holds at the queue id 683 Kennebunkport-area stop (43.360/-70.4798)
 through ~17:02 EDT, then the last two of 12 fixes trace a real
