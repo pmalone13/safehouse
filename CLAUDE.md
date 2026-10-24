@@ -301,6 +301,16 @@ bullet since this meaningfully refines the arrival timing. No reply
 sent. Pointer not moved — queue id 670's state is still the most
 current.
 
+**Addendum, queue id 642, 2026-10-23 ~23:31Z, email, subject
+"safeutil status" — continues right after queue id 641's last fix
+(19:20:12 EDT, 43.6456262/-70.2414353).** 10 fixes (19:21:14-
+19:30:26 EDT) stay tightly clustered within ~15m of that same spot —
+confirms the new ~43.6456/-70.2414 location is a genuine stop, not a
+transit point. "My Words" (50 entries) all placeholders, clear of
+"Claude Please." Appended to `projects/words/raw_words_log.jsonl`.
+No reply sent. Pointer not moved — queue id 670's state is still the
+most current.
+
 **Addendum, queue id 638, 2026-10-23 ~22:51Z, email, subject
 "safeutil status" — continuing right after queue id 636's endpoint,
 same out-of-order backlog processing.** All 10 fixes (18:41:14-
