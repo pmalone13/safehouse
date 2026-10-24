@@ -284,20 +284,34 @@ garbled fragments, nothing actionable — checked for and clear of
 given its own location-tracker bullet. No reply sent. Pointer not
 moved — queue id 639's state is still the most current.
 
+**Addendum, queue id 637, 2026-10-23 ~22:41Z, email, subject
+"safeutil status" — lands between queue id 636 and queue id 638 in
+real time too (18:30:58-18:40:38 EDT), and turns out to be the
+actual missing piece of the drive those two entries could only
+infer.** Fills the ~12-minute gap between queue id 636's last fix
+(18:28:54, 43.6252/-70.2769, "leaving the stop") and queue id 638's
+first fix (18:41:14, already settled at 43.6381/-70.2531): tracks
+the real drive east/southeast through five intermediate points,
+reaching 43.6381/-70.2531 and settling there by 18:37:08 EDT — so
+the real arrival time is now pinned to ~18:37:08, not just "sometime
+in the gap" as queue id 638's own entry had to guess. "My Words" (27
+entries) all placeholders, clear of "Claude Please." Appended to
+`projects/words/raw_words_log.jsonl`, given its own location-tracker
+bullet since this meaningfully refines the arrival timing. No reply
+sent. Pointer not moved — queue id 670's state is still the most
+current.
+
 **Addendum, queue id 638, 2026-10-23 ~22:51Z, email, subject
 "safeutil status" — continuing right after queue id 636's endpoint,
-same out-of-order backlog processing, and the piece that actually
-fills the gap between queue id 636's "leaving the stop" fix and
-queue id 639's own 18:51:26 EDT start.** All 10 fixes (18:41:14-
+same out-of-order backlog processing.** All 10 fixes (18:41:14-
 18:50:25 EDT) sit tightly at 43.6381/-70.2531 — already the same
-spot queue id 639 later reports as its "new" destination. This
-means the real ~8km move southeast happened in the ~12-minute gap
-between queue id 636's last fix (18:28:54, still at 43.6252/
--70.2769) and this batch's first fix (18:41:14) — by the time queue
-id 639's own window starts, the arrival was already ~10 minutes old,
-not newly happening. Flagged that refinement in
-`projects/location-tracker/CLAUDE.md` rather than let queue id 639's
-framing stand as the moment of arrival. "My Words" (44 entries) has
+spot queue id 639 later reports as its "new" destination, and now
+known (per queue id 637's entry just above) to have been reached at
+~18:37:08, about 4 minutes before this batch even starts. By the
+time queue id 639's own window starts (18:51:26), the arrival was
+already ~14 minutes old, not newly happening. Flagged that
+refinement in `projects/location-tracker/CLAUDE.md` rather than let
+queue id 639's framing stand as the moment of arrival. "My Words" (44 entries) has
 a long run of real transcribed fragments in the back half (18:44:50
 onward) — casual conversation snippets, nothing actionable, checked
 for and clear of "Claude Please." Appended all 44 to
