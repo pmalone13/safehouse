@@ -271,6 +271,28 @@ garbled fragments, nothing actionable — checked for and clear of
 given its own location-tracker bullet. No reply sent. Pointer not
 moved — queue id 639's state is still the most current.
 
+**Addendum, queue id 638, 2026-10-23 ~22:51Z, email, subject
+"safeutil status" — continuing right after queue id 636's endpoint,
+same out-of-order backlog processing, and the piece that actually
+fills the gap between queue id 636's "leaving the stop" fix and
+queue id 639's own 18:51:26 EDT start.** All 10 fixes (18:41:14-
+18:50:25 EDT) sit tightly at 43.6381/-70.2531 — already the same
+spot queue id 639 later reports as its "new" destination. This
+means the real ~8km move southeast happened in the ~12-minute gap
+between queue id 636's last fix (18:28:54, still at 43.6252/
+-70.2769) and this batch's first fix (18:41:14) — by the time queue
+id 639's own window starts, the arrival was already ~10 minutes old,
+not newly happening. Flagged that refinement in
+`projects/location-tracker/CLAUDE.md` rather than let queue id 639's
+framing stand as the moment of arrival. "My Words" (44 entries) has
+a long run of real transcribed fragments in the back half (18:44:50
+onward) — casual conversation snippets, nothing actionable, checked
+for and clear of "Claude Please." Appended all 44 to
+`projects/words/raw_words_log.jsonl`, given its own location-tracker
+bullet since the content meaningfully refines the arrival timing.
+No reply sent — passive status content. Pointer not moved — queue
+id 670's state is still the most current.
+
 **Addendum, queue id 635, 2026-10-23 ~22:20Z, email, subject
 "safeutil status" — continuing right after queue id 634's endpoint,
 same out-of-order backlog processing.** 9 fixes (18:11:31-18:19:42
