@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 677, 2026-10-24 ~16:15Z, email channel, subject "safeutil status."
+A real day trip, not tomorrow's Bar Harbor move: stationary at the
+familiar central-Portland spot through 00:30 EDT, an overnight gap
+(no outage), then a real ~17km drive southwest ending at coordinates
+matching the already-recommended Kennebunkport day trip (queue id
+382), opposite direction from the northeast move to Bar Harbor
+scheduled for 10/25. Words content (152 entries) had real but
+inactionable chatter (dog praise, a daughter/conference mention,
+errand talk, the word "canada"); no "Claude Please" trigger. Both
+appended to the standing logs, no reply sent (passive status).
+Pointer moved here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 675's token-usage
+finding). Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 675, 2026-10-24 ~14:27Z, text channel, Paul: "I am concerned that
 our email processing of the location and words is chewing up our
 tokens. Can you look at yesterday and determine what processing on
