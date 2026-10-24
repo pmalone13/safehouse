@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 687, 2026-10-24 ~22:02Z, text channel, Paul: "I changed email to
+hourly. Let's let that run for a few days." Direct follow-through on
+"option 1" from the queue id 675 token/usage-limit finding (slow the
+safeutil location+words app's own send interval — his own app
+setting, no system change) — now actually done, cutting the ~5-10min
+cadence to hourly. Should substantially reduce the location/words
+share of daily queue volume (70-85% of traffic on the worst recent
+days) that's been driving the recurring session-limit/weekly-limit
+outages. Nothing to verify yet — Paul wants it left alone for a few
+days. Replied by SMS acknowledging, no other action taken. Pointer
+moved here from `suv-replacement` (folded back into the live-projects
+list, nothing new since queue id 686). Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 686, 2026-10-24 ~22:00Z, channel `cron`, 6pm Eastern scheduled
 fire. Ran the full four-region recipe (SUV + truck + five
 diesel-specific queries, washingtondc/annapolis/baltimore/
