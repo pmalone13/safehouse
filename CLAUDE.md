@@ -207,6 +207,17 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 678, 2026-10-24 ~17:15Z, email channel, subject "safeutil status."
+Continuation of queue id 677's Kennebunkport day trip: a further
+~1.3km move south-southeast within the same area, settling by ~13:00
+EDT and holding. Words content (145 entries, already appended by an
+earlier pass at this same message) had a long real political/social
+debate plus some day-trip chatter; no "Claude Please" trigger.
+Location logged with its own bullet, no reply sent (passive status).
+Pointer stayed here — queue id 677's state was still current, no
+move needed. Full detail in `projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 677, 2026-10-24 ~16:15Z, email channel, subject "safeutil status."
 A real day trip, not tomorrow's Bar Harbor move: stationary at the
 familiar central-Portland spot through 00:30 EDT, an overnight gap
