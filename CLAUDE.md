@@ -206,7 +206,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 685, 2026-10-24 ~21:15Z, email channel, subject "safeutil status."
+Holds at the queue id 683 Kennebunkport-area stop (43.360/-70.4798)
+through ~17:02 EDT, then the last two of 12 fixes trace a real
+~420m move northeast to 43.3625/-70.4757 — the start of leaving that
+stop. "My Words" (297 entries) has several real fragments (travel/
+trip-planning chatter, a Fort Collins CO headquarters mention,
+echoes of the family-history material already in this log); no
+"Claude Please" trigger. Appended all 297 to
+`projects/words/raw_words_log.jsonl`, gave it its own
+location-tracker bullet. No reply sent — passive status content.
+Pointer moved here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 684). Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 684, 2026-10-24 ~20:29Z, text channel, Paul: "Not yet." Direct
 answer to the question closing the queue id 682 SMS reply ("Want to
 build that next time you're on SSH?" — the proposed non-Claude
