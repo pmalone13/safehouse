@@ -9153,3 +9153,44 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   mid-trip in Portland, ME through 10/25; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-23).
+
+- 2026-10-24 ~04:3xZ: session wrap-up (idle window elapsed, no new
+  message). This entire session was a continuous stretch of
+  `location-tracker`/`words` backlog backfill — queue ids 645-669,
+  671-672, plus queue id 644 (a `retry_pending` message that landed
+  out of order and filled the content gap between queue ids 643 and
+  645). All already fully handled, logged into
+  `projects/location-tracker/CLAUDE.md`, appended to
+  `projects/words/raw_words_log.jsonl`, and Drive-synced individually
+  as each arrived — `projects/` is gitignored so none of this produced
+  git commits, only Drive syncs. Working tree confirmed clean at this
+  wrap-up (`git status --short` empty), so this entry (a root-file-only
+  change) is the only thing this turn pushes to git. **Real content
+  recovered in this stretch, not just routine pings**: queue id 644
+  revealed the "My Words" recording running through queue ids
+  645-654 was a real school parent-community meeting — opened as a
+  routine admissions/governance session, then absorbed breaking news
+  of a measles exposure/quarantine at the school, escalating into a
+  heated, personal debate over a parent petition against a proposed
+  vaccination mandate (one parent's account of a child's severe
+  vaccine reaction, heated analogies to climate denial/opioids/
+  evolution-teaching, a "no villains" framing, closing with a poem).
+  Queue id 655 then caught the real end of that meeting and the first
+  movement in ~2.5 hours; queue id 656 traced a genuine ~4.5km drive
+  back to the familiar central-Portland spot (43.6656/-70.2767),
+  arriving 21:51:33 EDT — directly explaining the round-trip queue id
+  670 had already flagged without being able to pin the route. Every
+  batch was checked for the "Claude Please" trigger phrase; none ever
+  found, so nothing was reacted to beyond logging. One stray text,
+  queue id 659 ("Okay"), had no identifiable referent (nothing
+  recently sent by Ted it could be acknowledging) — logged as-is, no
+  reply sent. Nothing outstanding heading into the next turn beyond
+  what's already on file: the public-GitHub-repo finding (queue id
+  348), the v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  mid-trip in Portland, ME through 10/25, now stationary back at the
+  central-Portland spot as of the last location fix (00:21:17 EDT,
+  2026-10-24); and the next scheduled SUV/truck cron fire is 9am
+  Eastern today (2026-10-24).
