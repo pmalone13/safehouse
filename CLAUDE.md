@@ -311,6 +311,19 @@ transit point. "My Words" (50 entries) all placeholders, clear of
 No reply sent. Pointer not moved — queue id 670's state is still the
 most current.
 
+**Addendum, queue id 643, 2026-10-23 ~23:41Z, email, subject
+"safeutil status" — continues right after queue id 642's last fix
+(19:40:39 EDT, 43.6456487/-70.2413379).** 10 fixes (19:31:27-
+19:40:39 EDT) stay within ~30m of that same spot, confirming the
+~43.6456/-70.2414 dwell continued at least through 19:40 EDT. "My
+Words" (50 entries) has its most substantial real transcription batch
+in this stretch — a long run of overheard conversation reading like a
+school community/board meeting discussing diversity, heritage-month
+language, and inclusion. Checked for and clear of "Claude Please."
+Appended to `projects/words/raw_words_log.jsonl`, given its own
+location-tracker bullet. No reply sent. Pointer not moved — queue id
+670's state is still the most current.
+
 **Addendum, queue id 638, 2026-10-23 ~22:51Z, email, subject
 "safeutil status" — continuing right after queue id 636's endpoint,
 same out-of-order backlog processing.** All 10 fixes (18:41:14-
