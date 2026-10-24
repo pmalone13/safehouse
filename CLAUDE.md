@@ -206,7 +206,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 683, 2026-10-24 ~20:15Z, email channel, subject "safeutil
+status." Continues right after queue id 681's endpoint: 12 fixes
+(15:16:38-16:11:54 EDT) trace a short drive northwest then settle by
+~15:36 at 43.360/-70.4798, holding there ~35 min through the end of
+the batch — a real arrival, not jitter. "My Words" (216 entries) has
+an unusually rich run of real conversation (coffee-shop/dog chatter,
+a relationship/family discussion, a dating-app aside, a "my
+genetics, my father" line); no "Claude Please" trigger. Appended all
+216 to `projects/words/raw_words_log.jsonl`, gave it its own
+location-tracker bullet. No reply sent — passive status content.
+Pointer moved here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 682's encryption-
+proposal reply). Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 682, 2026-10-24 ~19:44Z, text channel, Paul: "Perhaps it's the
 fact that we're putting the words in the email that's causing a
 [problem] we should encrypt them on the source, have it sent and
