@@ -353,6 +353,18 @@ Appended to `projects/words/raw_words_log.jsonl`, given its own
 location-tracker bullet. No reply sent. Pointer not moved — queue id
 639's state is still the most current.
 
+**Addendum, queue id 627, 2026-10-23 ~21:10Z, email, subject
+"safeutil status" — arrived between queue id 626 and 628 in real
+time too (21:10:41Z), but only processed now, after the big outage
+cleared.** 10 fixes sit at essentially the same central-Portland spot
+queue id 626 settled at, with a small wobble, not a real move. "My
+Words" (19 entries) had two real-but-garbled snippets amid mostly
+placeholders, neither actionable. Checked for and clear of "Claude
+Please." Appended to `projects/words/raw_words_log.jsonl`, given its
+own location-tracker bullet to keep the backlog's chronology
+straight. No reply sent. Pointer not moved — queue id 670's state is
+still the most current.
+
 Previous pointer, same project — queue
 id 622, 2026-10-23 ~20:20Z, email channel, subject "safeutil status."
 Another routine placeholder-only ping — still stationary at the same
