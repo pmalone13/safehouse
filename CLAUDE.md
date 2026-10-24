@@ -207,6 +207,41 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 675, 2026-10-24 ~14:27Z, text channel, Paul: "I am concerned that
+our email processing of the location and words is chewing up our
+tokens. Can you look at yesterday and determine what processing on
+your side caused the outages through the day." Pointer already here
+(no move needed since queue id 674). **Confirmed: yes, the
+location/words emails are the dominant cause, not Paul's own usage.**
+Queried `queue.db` directly rather than rely on memory: daily queue
+volume was 7-37/day through 10/20, jumped to 146/day on 10/22 (the
+day the 12.5h weekly-limit outage started) and 81/day on 10/23 — of
+which 70-102/day (70-85%) are "safeutil status" (location+words)
+pings arriving every ~5-10 min around the clock, dwarfing every other
+message type combined. On 10/23 specifically, 68 of 81 messages (84%)
+hit at least one usage-limit error before a retry got them through,
+and the raw error log shows repeated `"Prompt is too long ·
+automatic compaction failed: You've hit your weekly limit"` through
+the outage window — direct evidence the per-session context size,
+not just message count, is the mechanism. Traced the real cause: every
+queued message spawns a full Claude session that re-reads this entire
+root `CLAUDE.md` file per step 1 of its own instructions, and that
+file is now 575KB (~140K+ tokens, confirmed via `git show` across
+10/18→10/24: 420KB→575KB, growing ~25-35KB/day almost entirely from
+logging these same routine pings) — so a 5-minute GPS/words append
+costs a full ~140K-token context read every time, and that fixed cost
+keeps climbing because each logged entry makes the file bigger for
+the next session. Emailed the full breakdown (`1a16e51365512377`)
+with three fix options (slow down the app's own send interval — no
+system change needed, Paul's call; a lightweight non-Claude handler
+for safeutil emails that only escalates to a real session on the
+"Claude Please" trigger or a real location change; archiving this
+file's historical Test Log out of the every-turn-read path) and a
+short SMS pointer. None built — options 2/3 are real code changes,
+need Paul live per the hard boundary; option 1 is his own app to
+adjust. No other action taken.
+
+Previous pointer, same project — queue
 id 674, 2026-10-24 ~14:21Z, text channel, Paul: "Ted?" Plain
 attention-check, no topic named, same shape as past bare greetings
 (queue ids 171/173/314). Moved the pointer here from
@@ -4152,6 +4187,33 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-24 (queue id 675): the location/words ("safeutil
+  status") emails are the dominant driver of recent token/usage-limit
+  outages, not Paul's own conversational use — confirmed with real
+  numbers, not just suspected.** Queue volume jumped from 7-37
+  messages/day (through 10/20) to 146/day on 10/22 and 81/day on
+  10/23, with 70-85% of that being location+words pings arriving
+  every ~5-10 min around the clock since the app went live ~10/21
+  (queue id 386). On 10/23, 84% of all messages hit at least one
+  usage-limit error before a retry succeeded, and the raw error log
+  shows `"Prompt is too long · automatic compaction failed: You've
+  hit your weekly limit"` repeating through the 12.5h weekly-limit
+  outage window (queue id 604) — the per-session context size, not
+  just message count, is the actual mechanism. Root cause: every
+  queued message, however trivial, spawns a full Claude session that
+  re-reads this entire root `CLAUDE.md` per step 1 — now 575KB
+  (~140K+ tokens), growing ~25-35KB/day almost entirely from logging
+  these same routine pings, so the fixed per-message cost keeps
+  climbing. **Not fixed** — three options given to Paul (slow the
+  app's own send interval, no system change needed; a lightweight
+  non-Claude handler for safeutil emails that only escalates to a
+  real session on the "Claude Please" trigger or a real location
+  change; archive this file's historical Test Log out of the
+  every-turn-read path), all needing Paul live or his own app
+  settings, not something to build unattended. Full detail in
+  `projects/safehouse/general/CLAUDE.md` and the email sent
+  (`1a16e51365512377`).
 
 - **Found 2026-10-19 (queue id 361): a session can complete `done`
   with no error while silently doing nothing for Paul — a new failure
