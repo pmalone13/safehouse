@@ -206,7 +206,39 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+id 691, 2026-10-24 ~23:15Z, email channel, subject "safeutil status."
+Continues right after queue id 688's 18:12:44 EDT endpoint: 12 fixes
+(18:17:46-19:13:11 EDT) settle by 18:27:49 at the familiar central-
+Portland spot (43.6656/-70.2769) and hold there the rest of the
+batch — the stay continued, no new move. "My Words" (292 entries) has
+a rich mix: a stretch echoing this same session's own queue id 689
+SUV-search reply content (Paul likely reading/discussing it aloud
+near the phone), a real news-radio segment, an AI-themed podcast
+segment, background adult-content radio chatter, and a real, pleasant
+fragment about friends' Halloween yard decorations. Checked all 292
+for the "Claude Please" trigger phrase — none found. Appended to
+`projects/words/raw_words_log.jsonl`. No reply sent — passive status
+content. Pointer moved here from `new-england` (folded back into the
+live-projects list, nothing new since queue id 690). Full detail in
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 690,
+2026-10-24 ~22:51Z, text channel, Paul: "Ted, we're going to need a
+list of all the things we need to pack from Portland. Let's start it
+with binoculars! Chromecast freezer food." A new departure-day list
+(distinct from the trip's original packing/supplies list) — things to
+remember to bring/use up when leaving the Portland Airbnb (they depart
+for Bar Harbor today, 2026-10-25). Started a "Departure from Portland
+— don't leave behind" list with the three items given (read "Chromecast
+freezer food" as two items, a dropped "and," consistent with Paul's
+established phone-dictation pattern). Replied by SMS confirming and
+offering the standard departure-day reminders. Pointer moved here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 689). Full detail in `projects/new-england/
+CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 689, 2026-10-24 ~22:24Z, email channel, reply to the 6pm "checked,
 nothing new" note, Paul: "Checking, are you still sharing gas SUV and
 Trucks?" Confirmed yes — the standing recipe runs `query=SUV` and
