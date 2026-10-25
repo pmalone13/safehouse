@@ -207,6 +207,29 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 695, 2026-10-25 ~14:20Z, text channel, Paul: "Is there a command
+line to check Claude usage without starting session" — direct
+follow-up to queue id 694's caveat. Actually investigated rather than
+repeat the caveat: `claude --help`'s full command list has no
+`usage` subcommand; `claude auth status` runs cleanly without
+spawning a session but only returns login/subscription metadata
+(`subscriptionType: "pro"`, email, org — confirmed via a real run,
+no usage numbers); `claude doctor` is health-check-only; checked
+`~/.claude/` for any locally-cached rate-limit/usage file — found
+only `policy-limits.json` (unrelated policy restrictions) and the
+per-session `.jsonl` transcripts, which log raw per-call token counts
+(input/output/cache) but never a running percentage against the
+session/weekly cap — that cap only ever surfaces as the literal error
+text when a limit is actually hit (what `coordinator.py` has been
+parsing all along). Concluded honestly: no CLI path exists; the
+`/usage` slash command is interactive-session-only (defeats the
+point); the only real no-cost check is the Usage page in claude.ai's
+own account settings in a browser, which nothing on this end can
+query. Replied by SMS (`SMe199ba41a42b2a580abdf731d860c051`). Pointer
+stayed on `safehouse/general`, no move needed. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 694, 2026-10-25 ~13:19Z, text channel, Paul: "Morning Ted, how's
 our queue messages that is?. And can you check usage on your side?"
 A system/meta health check, not tied to any project. Queried
@@ -9733,6 +9756,32 @@ thing that needs it, not because anything currently lives under it.
   such output against ground truth before trusting it, same
   discipline as any other tool result. Nothing outstanding heading
   into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are traveling from Portland
+  to Bar Harbor/Acadia; and the next scheduled SUV/truck cron fire is
+  6pm Eastern today (2026-10-25).
+
+- 2026-10-25 ~14:2xZ: fresh session, queue id 695, text channel,
+  Paul: "Is there a command line to check Claude usage without
+  starting session." Already fully handled, logged, and committed as
+  part of this checkpoint. Direct follow-up to queue id 694's caveat
+  — actually investigated rather than just repeat it: checked
+  `claude --help`'s full command list (no `usage` subcommand exists),
+  ran `claude auth status` for real (works without spawning a
+  session, but only returns login/subscription metadata, no usage
+  numbers), checked `claude doctor` (health-check only), and searched
+  `~/.claude/` for any locally-cached rate-limit file (found only
+  `policy-limits.json`, unrelated restrictions, and per-session
+  `.jsonl` transcripts that log raw token counts per API call but
+  never a running percentage against the session/weekly cap — that
+  only ever surfaces as literal error text when a limit is actually
+  hit). Concluded honestly: no CLI path exists; `/usage` is
+  interactive-session-only; the real no-cost check is claude.ai's own
+  account Usage page in a browser. Replied by SMS. Nothing outstanding
+  heading into the next turn beyond what's already on file: the
   public-GitHub-repo finding (queue id 348), the v3 file-send
   session-collision architecture issue, `poll_for_reply()`'s
   stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
