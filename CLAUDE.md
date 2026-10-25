@@ -9622,3 +9622,24 @@ thing that needs it, not because anything currently lives under it.
   (queue id 346/347) all remain open and need Paul live to fix; the
   Malones are mid-trip in Portland, ME through 10/25; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-24).
+
+- 2026-10-25 ~03:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 692, text channel, Paul:
+  "I think we are better now. Packing now and headed to bar harbor" —
+  already fully handled, logged, committed, and pushed (`87b0cbe`)
+  before this wrap-up fired. Confirms the planned 10/25 Portland->Bar
+  Harbor move (the new-england v4 outline's own table) is underway;
+  replied by SMS with well wishes and a pointer to the already-
+  started "Departure from Portland" checklist. Moved the
+  Current-project pointer to `new-england` from `location-tracker`.
+  Working tree confirmed clean at this wrap-up (`git status --short`
+  empty), so this entry is the only change this turn makes. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the public-GitHub-repo finding (queue id 348), the v3
+  file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  now traveling from Portland to Bar Harbor/Acadia (expected arrival
+  per the trip outline, ~7-day stay through ~11/1); and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
