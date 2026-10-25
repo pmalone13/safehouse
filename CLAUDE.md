@@ -207,36 +207,54 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/words/CLAUDE.md` — live session,
-2026-10-25 ~00:3xZ, Paul SSHed in (verified via `auth.log`, same key
-fingerprint as every prior login, IP 142.105.193.240 consistent with
-the New England trip), Paul: "I asked you to read the words of these
-emails and look for phrase 'claude please' and if there you react to
-what is written after. This ask is to depricate that claude please
-logic and have the handler that receives the message to log location
-simply ignore the words. They are in the message body because it
-logs location every 5 minutes and emails once an hour. You should log
-the locations and we will simply capture message in our DB. We may
-look later." **Retires two standing rules at once, going forward on
-every future "safeutil status" email**: the queue id 458 "Claude
-Please" trigger-phrase scan/reaction, and the queue id 490
-`raw_words_log.jsonl` per-email append process. New simplified
-process: a turn keeps logging the `--- Location ---` section exactly
-as before (narrative bullet on a real move/notable event, silent
-otherwise); the `--- My Words ---` section is no longer opened, read,
-or acted on at all. The words content isn't lost — the full raw email
-is already captured verbatim in `queue.db`'s own message record,
-which is the "capture in our DB" Paul means; nothing new needed to
-make that true, so this was a documentation/process change (within
-the step-3 self-documentation carve-out), not application code.
-`raw_words_log.jsonl` is frozen as of queue id 691's 292 entries, kept
-as historical record, not deleted. This also trims part of the
-per-message processing cost flagged at queue id 675 (words-scanning
-work on every turn), though the bigger architectural fix — every
-queued message still spawning a full session regardless of size —
-remains open. No reply needed; a direct live-session instruction, not
-a question. Full detail in `projects/words/CLAUDE.md`'s new
-"SUPERSEDED 2026-10-25" section and `projects/location-tracker/
-CLAUDE.md`'s matching log entry.
+2026-10-25 ~01:1xZ, Paul SSHed in (verified via `auth.log`, same key
+fingerprint as every prior login), Paul: "create the python routine
+like described, but simply spool the contents to a file and rotate to
+new file daily. We will post process." Direct follow-through on the
+queue id 675 cost problem, and the real fix this time — not a
+CLAUDE.md process change like the entry just below, but actual code.
+**Built `safeutil_spool.py`** (new, pure Python, zero Claude
+involvement) and wired it into `email_monitor.py`'s poll loop: any
+inbound email from `pmalone13@gmail.com` with a subject starting
+"safeutil" is now diverted there *before* `queue_db.enqueue()` ever
+runs — it never becomes a queued message, never spawns a coordinator-
+driven Claude session, never costs a root-file read. The routine does
+no parsing at all: it appends the full raw message (sender/subject/
+date header/body, location and words sections both) as one JSON line
+to `projects/location-tracker/spool/YYYY-MM-DD.jsonl`, a fresh file
+created automatically each UTC day — rotation is just the filename,
+no separate logic needed. Restarted the live
+`safehouse-email-monitor.service` to pick it up; confirmed clean
+startup with the baseline re-seeded against the 25 messages already
+in the inbox, so nothing already-processed gets touched twice.
+**This is a real fix for the dominant driver of the queue id 675
+outage finding** — these pings were 70-85% of daily message volume;
+they now cost nothing (no session, no token spend) instead of a full
+~140K-token session each. **Consequence, not silently absorbed**:
+since these emails never reach a Claude session anymore, this also
+ends the location-tracker project's own narrative logging for
+ordinary pings — `projects/location-tracker/CLAUDE.md` stops growing
+for routine moves as of this change; the real record now lives in the
+raw spool files for Paul's own later post-processing. A future turn
+needing a location-dependent answer before that post-processing
+tooling exists should read the day's spool `.jsonl` directly rather
+than assume the project log is current. Full detail and the superseded-
+history trail in `projects/words/CLAUDE.md` and
+`projects/location-tracker/CLAUDE.md`.
+
+Previous pointer, same project — live session, 2026-10-25 ~00:3xZ,
+Paul: "I asked you to read the words of these emails and look for
+phrase 'claude please' and if there you react to what is written
+after. This ask is to depricate that claude please logic and have the
+handler that receives the message to log location simply ignore the
+words. They are in the message body because it logs location every 5
+minutes and emails once an hour. You should log the locations and we
+will simply capture message in our DB. We may look later." First
+pass at this, done as a CLAUDE.md process change (retiring the queue
+id 458 "Claude Please" trigger and the queue id 490 words-append
+process) rather than code — immediately superseded by the entry above
+once Paul asked for the real Python routine. Full detail in
+`projects/words/CLAUDE.md`'s "SUPERSEDED 2026-10-25" section.
 
 Previous pointer, same project — queue
 id 691, 2026-10-24 ~23:15Z, email channel, subject "safeutil status."
@@ -4461,6 +4479,20 @@ the pending `/sms-optin` build still live there.
   settings, not something to build unattended. Full detail in
   `projects/safehouse/general/CLAUDE.md` and the email sent
   (`1a16e51365512377`).
+  **RESOLVED for this message type 2026-10-25, live session.** Option
+  2 from the list above actually got built: `safeutil_spool.py` +
+  an `email_monitor.py` change now diverts every "safeutil status"
+  email straight to a daily-rotated raw JSONL spool file
+  (`projects/location-tracker/spool/YYYY-MM-DD.jsonl`), **before** it
+  ever reaches `queue_db`/the coordinator/a Claude session. The
+  70-85%-of-daily-volume driver identified above now costs zero
+  tokens and spawns zero sessions — see the Current-project pointer
+  above for the live-session build detail. Still open: this only
+  covers safeutil mail specifically; every *other* queued message
+  (texts, other emails, cron fires) still pays the full root-file-read
+  cost per spawn, and the file itself (this one) keeps growing from
+  ordinary logging regardless of message type — the Test-Log-archival
+  option (#3 above) is still unbuilt and still worth doing.
 
 - **Found 2026-10-19 (queue id 361): a session can complete `done`
   with no error while silently doing nothing for Paul — a new failure

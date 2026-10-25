@@ -19,6 +19,7 @@ from pathlib import Path
 
 import google_client
 import queue_db
+import safeutil_spool
 import voice_transcribe
 from safehouse_logging import get_logger
 
@@ -77,6 +78,17 @@ def _poll_once(service) -> None:
 
     for message_id in reversed(new_ids):  # oldest-of-the-new first
         detail = google_client.get_message_detail(service, message_id)
+
+        if safeutil_spool.is_safeutil_message(detail["sender"], detail["subject"]):
+            # Diverted entirely -- never reaches queue_db, so no Claude
+            # session is ever spawned for these. See safeutil_spool.py
+            # and the 2026-10-25 root CLAUDE.md log entry for why.
+            path = safeutil_spool.spool_message(detail)
+            _seen_ids.add(message_id)
+            log.info(f"spooled safeutil email from={detail['sender']!r} "
+                     f"subject={detail['subject']!r} message_id={message_id} -> {path}")
+            continue
+
         body = f"Subject: {detail['subject']}\n\n{detail['body_text']}"
         for transcript in _transcribe_audio_attachments(service, message_id, detail["attachments"]):
             body += f"\n\n[Voice message transcript]: {transcript}"
