@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — same
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+692, 2026-10-25 ~02:54Z, text channel, Paul: "I think we are better
+now. Packing now and headed to bar harbor." Confirms the planned
+10/25 Portland->Bar Harbor move (the v4 outline's own table) is
+actually underway. "We are better now" is ambiguous (health, or the
+recent token/outage situation settling) — not chased, just a passing
+remark. Replied by SMS with well wishes and a pointer to the
+already-started "Departure from Portland" checklist (binoculars,
+Chromecast, freezer food), asking if anything else should be added.
+Pointer moved here from `location-tracker` (folded back into the
+live-projects list, nothing new there since the live spool-diversion
+build). Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/location-tracker/CLAUDE.md` — same
 live session, 2026-10-25 ~01:2xZ, Paul: "why not have the claude.md
 simply: tail --lines=2000 [dailyfile] | grep location to pick up the
 most recent?" A good, cheap proposal — tested it directly rather than
