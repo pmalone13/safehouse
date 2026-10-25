@@ -206,7 +206,39 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/location-tracker/CLAUDE.md` — queue
+**Current project**: `projects/words/CLAUDE.md` — live session,
+2026-10-25 ~00:3xZ, Paul SSHed in (verified via `auth.log`, same key
+fingerprint as every prior login, IP 142.105.193.240 consistent with
+the New England trip), Paul: "I asked you to read the words of these
+emails and look for phrase 'claude please' and if there you react to
+what is written after. This ask is to depricate that claude please
+logic and have the handler that receives the message to log location
+simply ignore the words. They are in the message body because it
+logs location every 5 minutes and emails once an hour. You should log
+the locations and we will simply capture message in our DB. We may
+look later." **Retires two standing rules at once, going forward on
+every future "safeutil status" email**: the queue id 458 "Claude
+Please" trigger-phrase scan/reaction, and the queue id 490
+`raw_words_log.jsonl` per-email append process. New simplified
+process: a turn keeps logging the `--- Location ---` section exactly
+as before (narrative bullet on a real move/notable event, silent
+otherwise); the `--- My Words ---` section is no longer opened, read,
+or acted on at all. The words content isn't lost — the full raw email
+is already captured verbatim in `queue.db`'s own message record,
+which is the "capture in our DB" Paul means; nothing new needed to
+make that true, so this was a documentation/process change (within
+the step-3 self-documentation carve-out), not application code.
+`raw_words_log.jsonl` is frozen as of queue id 691's 292 entries, kept
+as historical record, not deleted. This also trims part of the
+per-message processing cost flagged at queue id 675 (words-scanning
+work on every turn), though the bigger architectural fix — every
+queued message still spawning a full session regardless of size —
+remains open. No reply needed; a direct live-session instruction, not
+a question. Full detail in `projects/words/CLAUDE.md`'s new
+"SUPERSEDED 2026-10-25" section and `projects/location-tracker/
+CLAUDE.md`'s matching log entry.
+
+Previous pointer, same project — queue
 id 691, 2026-10-24 ~23:15Z, email channel, subject "safeutil status."
 Continues right after queue id 688's 18:12:44 EDT endpoint: 12 fixes
 (18:17:46-19:13:11 EDT) settle by 18:27:49 at the familiar central-
