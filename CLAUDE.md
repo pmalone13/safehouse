@@ -206,7 +206,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 689, 2026-10-24 ~22:24Z, email channel, reply to the 6pm "checked,
+nothing new" note, Paul: "Checking, are you still sharing gas SUV and
+Trucks?" Confirmed yes — the standing recipe runs `query=SUV` and
+`query=truck` on every fire with no fuel-type filter, and the five
+diesel-specific queries (added 2026-10-10) are additive extras, not a
+narrowing; cited recent real gas-vehicle finds (GMC Envoy XUV V8,
+Yukon XL V8, GMC Sierra V8, Mercedes G500 V8) as proof. Replied by
+email in the same thread. Pointer moved here from `safehouse/general`
+(folded back into the live-projects list, nothing new since queue id
+688). Full detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 687, 2026-10-24 ~22:02Z, text channel, Paul: "I changed email to
 hourly. Let's let that run for a few days." Direct follow-through on
 "option 1" from the queue id 675 token/usage-limit finding (slow the
