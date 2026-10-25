@@ -206,7 +206,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue
+id 698, 2026-10-25 ~17:25Z, text channel, Paul: "Hey, we're in
+Booth Bay. Question about tides. Is it true to say that the farther
+from the equator you are the larger the tide swing." Confirms they're
+on the Boothbay Harbor day trip already named in the Portland day-by-
+day plan (queue id 359), not yet at Bar Harbor. Used `WebSearch`
+rather than answer from memory — **confirmed this is a common
+misconception, not true**: observed tidal range is driven mainly by
+local coastline/seafloor geometry (resonance/funneling, e.g. the Bay
+of Fundy's 16m record tides), not distance from the equator —
+near-equator locations (e.g. northwest Australia) also see 5m+ tides,
+so there's no consistent latitude correlation. Replied by SMS
+(`SM797df1c63a7cfb875dc7a4db17f8bcd2`). Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list, nothing
+new since queue id 697). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 697, 2026-10-25 ~15:07Z, text channel, Paul: "Yes. Next ssh."
 Confirms the session-usage-logging plan proposed at queue id 696 —
 he'll build it with Ted next time he's on SSH. Replied by SMS
