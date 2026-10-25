@@ -206,7 +206,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 694, 2026-10-25 ~13:19Z, text channel, Paul: "Morning Ted, how's
+our queue messages that is?. And can you check usage on your side?"
+A system/meta health check, not tied to any project. Queried
+`queue.db` fresh rather than answer from memory: last 24h shows 49
+messages `done`, 0 failures — the only `failed` rows anywhere in the
+table are the 131 from the 2026-10-23 weekly-limit outage, already
+recovered at the time (queue id 604's session). Volume has dropped
+sharply since the queue id 687 hourly-email change and the
+2026-10-25 spool diversion — 1-5 messages/hour now, vs. the 70-100/
+day spikes that drove the recent outages. For "usage," checked
+Twilio (balance $15.47, ~$8.65 spent this month — $7.50 SMS +
+$1.15 number rental, via `twilio_client`'s own urllib-based REST
+calls since there's no SDK) and was honest that Claude's own usage/
+rate-limit percentage isn't something queryable from inside an
+automated turn — an accidental `claude usage` CLI invocation
+mid-turn spawned a nested session that hallucinated a plausible-
+looking but fabricated "blocked pending approval" answer, caught and
+discarded rather than relayed. Replied by SMS
+(`SM832105b79a8650d7a4e38870907ea729`) with the real queue/Twilio
+numbers and the Claude-usage caveat, asking Paul to clarify if he
+meant something else. Pointer moved here from `suv-replacement`
+(folded back into the live-projects list, nothing new since queue id
+693). Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 693, 2026-10-25 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -9682,3 +9707,36 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   now traveling from Portland to Bar Harbor/Acadia; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
+
+- 2026-10-25 ~13:2xZ: fresh session, queue id 694, text channel,
+  Paul: "how's our queue messages... check usage on your side?"
+  Already fully handled, logged, and committed as part of this
+  checkpoint. Queried `queue.db` directly rather than guess: queue
+  is healthy, 49 messages done in the last 24h, zero failures (the
+  only `failed` rows on record are the already-recovered 2026-10-23
+  weekly-limit outage batch). Checked Twilio usage via
+  `twilio_client`'s own urllib REST calls (balance $15.47, ~$8.65
+  spent this month). For Claude's own usage, an accidental `claude
+  usage` CLI invocation mid-turn spawned a nested session that
+  **hallucinated a fabricated answer** ("blocked pending approval")
+  — caught before relaying it to Paul, since it was plainly false
+  (no such approval gate exists in this environment) — and was
+  honest instead that Claude's own rate-limit percentage isn't
+  queryable from inside an automated turn. Replied by SMS. Moved the
+  Current-project pointer to `safehouse/general` from
+  `suv-replacement` (folded back into the live-projects list,
+  nothing new since queue id 693). **Lesson for a future turn**:
+  don't run `claude usage` (or similar bare CLI invocations with no
+  `-p`/flag) from inside Bash during a turn — it spawns a nested
+  interactive-style session that can produce plausible-sounding but
+  entirely fabricated output rather than erroring cleanly; verify any
+  such output against ground truth before trusting it, same
+  discipline as any other tool result. Nothing outstanding heading
+  into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are traveling from Portland
+  to Bar Harbor/Acadia; and the next scheduled SUV/truck cron fire is
+  6pm Eastern today (2026-10-25).
