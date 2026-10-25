@@ -206,7 +206,31 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/words/CLAUDE.md` — live session,
+**Current project**: `projects/location-tracker/CLAUDE.md` — same
+live session, 2026-10-25 ~01:2xZ, Paul: "why not have the claude.md
+simply: tail --lines=2000 [dailyfile] | grep location to pick up the
+most recent?" A good, cheap proposal — tested it directly rather than
+just agreeing: **as literally typed it matches nothing**, since the
+real section header is `--- Location ---` (capital L) and `grep`
+defaults to case-sensitive; confirmed empty against a real record,
+then confirmed working once `-i` is added. Also folded in a
+day-boundary fix: since rotation is on a UTC calendar day, a just-
+rotated new day's file can be sparse right after midnight UTC, so the
+standing command checks the two most recent day-files, not just
+today's, and takes the single last match:
+```
+tail -q -n 2000 $(ls -1 projects/location-tracker/spool/*.jsonl | tail -n 2) \
+  | grep -i location | tail -n 1
+```
+Tested end-to-end against synthetic two-day data (including a
+words-only entry with no Location section, correctly skipped) before
+trusting it. Documented as the standing retrieval method in
+`projects/location-tracker/CLAUDE.md` — deliberately a shell
+filter, not a Claude `Read` of a whole spool file, since reading the
+whole file back into a session's context would recreate the exact
+token-cost problem the spool diversion exists to avoid.
+
+Previous pointer, same project — live session,
 2026-10-25 ~01:1xZ, Paul SSHed in (verified via `auth.log`, same key
 fingerprint as every prior login), Paul: "create the python routine
 like described, but simply spool the contents to a file and rotate to
