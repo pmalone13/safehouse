@@ -223,6 +223,23 @@ so there's no consistent latitude correlation. Replied by SMS
 new since queue id 697). Full detail in
 `projects/new-england/CLAUDE.md`.
 
+- 2026-10-25 ~17:3xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 698, already fully
+  handled, logged, committed, and pushed (`147d1b2`) before this
+  wrap-up fired. Working tree confirmed clean at wrap-up (`git status
+  --short` empty), so this entry is the only change this turn makes.
+  Nothing outstanding heading into the next turn beyond what's
+  already on file: the public-GitHub-repo finding (queue id 348), the
+  v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the
+  session-usage-logging feature proposed at queue id 696 is confirmed
+  and waiting on Paul's next SSH session to build (queue id 697); the
+  Malones are traveling from Portland toward Bar Harbor/Acadia,
+  currently stopped at Boothbay Harbor per queue id 698; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
+
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 697, 2026-10-25 ~15:07Z, text channel, Paul: "Yes. Next ssh."
 Confirms the session-usage-logging plan proposed at queue id 696 —
