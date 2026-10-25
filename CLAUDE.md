@@ -207,6 +207,14 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 697, 2026-10-25 ~15:07Z, text channel, Paul: "Yes. Next ssh."
+Confirms the session-usage-logging plan proposed at queue id 696 —
+he'll build it with Ted next time he's on SSH. Replied by SMS
+(`SM68f799958cd33bdf613938301306201d`) acknowledging. No action
+taken, pointer stayed here. Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 696, 2026-10-25 ~14:48Z, text channel, Paul: "How about we add a
 check at the end of a standard message before commit? Since that
 session is me, it can query, spool to a sessionUsageLog" — direct
