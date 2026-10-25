@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 693, 2026-10-25 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 140 unique hrefs, 23 an exact URL match to the
+ledger (117 not). No new qualifying candidate — a genuinely new 2001
+Dodge Dakota ($5,900, Arlington) checked individually and excluded
+as regular-cab 2-door V6; two listings previously flagged 404'd came
+back live (a $32,000 Toyota Tundra Double Cab JDM reimport, excluded
+on price; a $7,900 GMC 7000 Cummins dump flatbed, excluded as
+commercial). Everything else traced to the Houston-TX dealer
+cross-post pattern or already-logged/excluded reposts. Per the
+standing rule (queue id 287), emailed Paul a "checked, nothing new"
+note (`1a17328d969edc3b`). Pointer moved here from `new-england`
+(folded back into the live-projects list, nothing new since queue id
+692). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-25 9am section. Next
+scheduled fire: 6pm Eastern today (2026-10-25).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 692, 2026-10-25 ~02:54Z, text channel, Paul: "I think we are better
 now. Packing now and headed to bar harbor." Confirms the planned
 10/25 Portland->Bar Harbor move (the v4 outline's own table) is
@@ -9642,4 +9662,23 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   now traveling from Portland to Bar Harbor/Acadia (expected arrival
   per the trip outline, ~7-day stay through ~11/1); and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
+
+- 2026-10-25 ~13:0xZ: fresh session, queue id 693, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, committed, and pushed as part of
+  this checkpoint. No new qualifying candidate (140 unique hrefs, 117
+  not an exact URL match to the ledger, all excluded — a genuinely
+  new 2001 Dodge Dakota checked individually and excluded as
+  regular-cab, two previously-404'd listings came back live and were
+  excluded on price/commercial grounds). Emailed Paul a "checked,
+  nothing new" note per the standing rule (queue id 287). Moved the
+  Current-project pointer here from `new-england`. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the public-GitHub-repo finding (queue id 348), the v3
+  file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  now traveling from Portland to Bar Harbor/Acadia; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
