@@ -206,7 +206,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 699, 2026-10-25 ~22:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 144 unique hrefs, none an exact href match to the
+ledger — confirmed this is expected (Craigslist's own link hashes
+change on every re-crawl, so href-matching alone misses reposts of
+the same ad), not evidence of 144 new listings. Cross-checked every
+non-matching href by title/price/location signature instead and
+confirmed all 122 non-repost hrefs traced to an established exclusion
+category, including two Toyota RAV4 listings that hadn't individually
+surfaced before but fit the ledger's own long-running RAV4 off-class-
+crossover exclusion. **No new qualifying candidate.** Everything else
+was the Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (24
+hits), reposts of already-logged/excluded listings, or the broad
+off-class/unibody/sedan/sports-car/classic/commercial exclusion
+categories. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note (`1a175161c339b698`). Moved the pointer
+here from `new-england` (folded back into the live-projects list,
+nothing new since queue id 698). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-25 6pm section. Next
+scheduled fire: 9am Eastern tomorrow (2026-10-26).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue
 id 698, 2026-10-25 ~17:25Z, text channel, Paul: "Hey, we're in
 Booth Bay. Question about tides. Is it true to say that the farther
 from the equator you are the larger the tide swing." Confirms they're
@@ -9854,3 +9879,23 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the Malones are traveling from Portland
   to Bar Harbor/Acadia; and the next scheduled SUV/truck cron fire is
   6pm Eastern today (2026-10-25).
+
+- 2026-10-25 ~22:1xZ: fresh session, queue id 699, channel `cron`,
+  source `suv-replacement-watch` — 6pm Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. No new qualifying candidate (144 unique hrefs, none an
+  exact href match to the ledger since Craigslist's own link hashes
+  change on every re-crawl — cross-checked all 122 non-repost hrefs
+  by title/price/location signature instead, all traced to
+  already-established exclusion categories, including two Toyota
+  RAV4 listings confirmed to fit the ledger's existing RAV4
+  off-class-crossover exclusion). Emailed Paul a "checked, nothing
+  new" note per the standing rule (queue id 287). Nothing outstanding
+  heading into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are now traveling from
+  Portland toward Bar Harbor/Acadia; and the next scheduled SUV/truck
+  cron fire is 9am Eastern tomorrow (2026-10-26).
