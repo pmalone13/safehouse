@@ -207,6 +207,29 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 696, 2026-10-25 ~14:48Z, text channel, Paul: "How about we add a
+check at the end of a standard message before commit? Since that
+session is me, it can query, spool to a sessionUsageLog" — direct
+follow-up to queue id 695's finding that no CLI exists to check
+Claude usage without a session. Verified the proposal is genuinely
+feasible rather than just agreeing: `$CLAUDE_CODE_SESSION_ID` maps to
+this session's own transcript `.jsonl` file under
+`~/.claude/projects/-home-ubuntu-safehouse/`, and each assistant
+message line there carries a real `usage` object (input/output/cache
+token counts, model name) — exactly the per-call data queue id 695
+found exists but never surfaces as a running percentage. Did not
+build it this turn — it's a new standing feature added to every
+future turn's checkpoint, same class of change as every other
+automation proposal in this system (Twilio daily monitor, hourly
+Bill-ping, words-encryption pre-filter), all deferred to a live
+session. Proposed the concrete design back to Paul (a new checkpoint
+sub-step summing this session's own transcript usage into a new
+`session_usage_log.jsonl`) with the caveat that it tracks per-turn
+token cost, not the actual weekly/session cap percentage. Replied by
+SMS (`SM704a29cf9c650ab426952184342a26b5`). Pointer stayed here, no
+move needed. Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 695, 2026-10-25 ~14:20Z, text channel, Paul: "Is there a command
 line to check Claude usage without starting session" — direct
 follow-up to queue id 694's caveat. Actually investigated rather than
