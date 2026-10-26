@@ -206,7 +206,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 704, 2026-10-26 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 142 unique hrefs, 21 an exact href match to the
+ledger (121 not). **No new qualifying candidate.** Spot-checked one
+listing that looked like it might be a different vehicle from an
+already-logged find — confirmed it's the same 2004 Ford F-250 Crew
+Cab Short-Bed diesel qualifying find from queue id 318, just a new
+URL hash. Everything else traced to the Houston-TX "DIESEL OF
+HOUSTON" dealer cross-post pattern (31 hits) or already-established
+exclusion categories. Per the standing rule (queue id 287), emailed
+Paul a "checked, nothing new" note (`1a1784f7d7fb2cc4`). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 703). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-26 9am section. Next
+scheduled fire: 6pm Eastern today (2026-10-26).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue
 id 703, 2026-10-26 ~01:42Z, text channel, Paul: "Sadly Nala is
 injured and cannot walk with us. We have a carriage for her but I
 don't think Acadia is good for that." Direct follow-up to queue id
@@ -10054,3 +10074,26 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   settled in Bar Harbor for the Acadia leg; and the next scheduled
   SUV/truck cron fire is 9am Eastern today (2026-10-26).
+
+- 2026-10-26 ~13:0xZ: fresh session, queue id 704, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. Ran the full four-region recipe (SUV + truck + five
+  diesel-specific queries, washingtondc/annapolis/baltimore/
+  easternshore, `<=2012`/`<110,000 mi`). 142 unique hrefs, 21 an exact
+  href match to the ledger (121 not). No new qualifying candidate —
+  one listing spot-checked that looked potentially distinct from an
+  already-logged find turned out to be the same 2004 Ford F-250 Crew
+  Cab Short-Bed diesel qualifying find (queue id 318), just a new URL
+  hash; everything else traced to the Houston-TX dealer cross-post
+  pattern or already-established exclusion categories. Emailed Paul a
+  "checked, nothing new" note per the standing rule (queue id 287).
+  Nothing outstanding heading into the next turn beyond what's
+  already on file: the public-GitHub-repo finding (queue id 348), the
+  v3 file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  settled in Bar Harbor for the Acadia leg, Nala limited to
+  carriage-road/smooth-path hikes per queue id 703; and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-26).
