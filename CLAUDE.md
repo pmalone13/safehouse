@@ -206,7 +206,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue
+id 701, 2026-10-26 ~01:35Z, text channel, Paul: "All good. We are
+settled in bar harbor." Confirms arrival at Bar Harbor, the next
+stop on the trip's own v4 outline after Portland, completing the
+move flagged as underway at queue id 692. Plain status update, no
+question. Replied by SMS (`SM4631750982affb55499074f923590018`) with
+well wishes and an offer for restaurant/activity recs. Moved the
+pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 700). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 700, 2026-10-26 ~01:34Z, text channel, Paul: "Just checking in.
 How are things?" Plain status check-in, no topic/action requested.
 Verified rather than guessed: queried `queue.db` fresh (8 messages
@@ -9945,3 +9956,20 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the Malones are traveling from Portland
   toward Bar Harbor/Acadia; and the next scheduled SUV/truck cron
   fire is 9am Eastern today (2026-10-26).
+
+- 2026-10-26 ~01:35Z: fresh session, queue id 701, text channel,
+  Paul: "All good. We are settled in bar harbor." Confirms arrival at
+  Bar Harbor, completing the Portland->Bar Harbor move flagged as
+  underway at queue id 692. Plain status update, already fully
+  handled, logged, and committed as part of this checkpoint. Replied
+  by SMS (`SM4631750982affb55499074f923590018`) with well wishes and
+  an offer for area recs. Moved the Current-project pointer to
+  `new-england` from `safehouse/general`. Nothing outstanding heading
+  into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are now settled in Bar
+  Harbor for the Acadia leg of the trip; and the next scheduled
+  SUV/truck cron fire is 9am Eastern today (2026-10-26).
