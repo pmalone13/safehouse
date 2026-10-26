@@ -325,6 +325,30 @@ new since queue id 697). Full detail in
   currently stopped at Boothbay Harbor per queue id 698; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-25).
 
+- 2026-10-26 ~01:5xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 703, Paul reporting Nala
+  injured and unable to walk, worried Acadia's not cart-friendly —
+  already fully handled, logged, committed, and pushed (`9a700a3`)
+  before this wrap-up fired. Used `WebSearch` rather than assume
+  Paul's worry was right: confirmed Acadia's 45 miles of carriage
+  roads (packed gravel, flat, literally built for horse carriages)
+  are explicitly stroller/wheelchair-friendly, so a wheeled pet cart
+  should actually work fine — recommended the Eagle Lake and Witch
+  Hole Pond carriage-road loops plus several smooth non-carriage-road
+  options, and flagged that the rugged hikes just emailed at queue id
+  702 aren't right for Nala specifically. Working tree confirmed
+  clean at this wrap-up (`git status --short` empty), so this entry
+  is the only change this turn makes. Nothing outstanding heading
+  into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are settled in Bar Harbor
+  for the Acadia leg, now with Nala unable to do the standard hikes
+  but likely fine on carriage roads; and the next scheduled SUV/truck
+  cron fire is 9am Eastern today (2026-10-26).
+
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 697, 2026-10-25 ~15:07Z, text channel, Paul: "Yes. Next ssh."
 Confirms the session-usage-logging plan proposed at queue id 696 —
