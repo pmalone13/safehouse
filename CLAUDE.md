@@ -207,6 +207,24 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue
+id 703, 2026-10-26 ~01:42Z, text channel, Paul: "Sadly Nala is
+injured and cannot walk with us. We have a carriage for her but I
+don't think Acadia is good for that." Direct follow-up to queue id
+702's hike list, which assumed walking. Used `WebSearch` rather than
+assume Paul's worry was right: confirmed Acadia's 45 miles of
+historic carriage roads (packed gravel, flat, wide — literally built
+for horse carriages) are explicitly stroller/wheelchair-friendly, so
+a wheeled pet cart should actually be fine there. Recommended the
+Eagle Lake Loop (6mi) and Witch Hole Pond Loop (5.3mi) carriage-road
+loops plus several smooth non-carriage-road options (Cadillac Summit
+Loop paved path, Ocean Path Sand Beach->Thunder Hole, Jesup Path/
+Hemlock Loop boardwalk, Ship Harbor Trail's gravel first loop), and
+told Paul to skip the rugged hikes from queue id 702 for Nala
+specifically. Replied by SMS (`SM6e2f97d677a0e31c965946cb0a24dc87`).
+Pointer stayed on `new-england`. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 702, 2026-10-26 ~01:38Z, text channel, Paul: "Yes please compile
 and email. And recommend hikes, 2-4 hours healthy pace." Taking up
 the offer from queue id 701. Delegated real research to a subagent:
