@@ -207,6 +207,26 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+710, 2026-10-26 ~19:40Z, text channel, Paul: "who set aside this
+land is national a national park and give us a brief history on
+that." Used `WebSearch` to confirm the real founding history rather
+than answer from memory: Charles W. Eliot and George B. Dorr formed
+the Hancock County Trustees of Public Reservations in 1901 to buy/
+protect Mount Desert Island land from development; Dorr personally
+donated ~5,000 acres and spent 13 years lobbying Washington. In 1916
+President Wilson created Sieur de Monts National Monument (first
+federal protection). In 1919 Wilson signed it into Lafayette
+National Park — the first national park east of the Mississippi,
+the first on the coast, and the first built entirely from privately
+donated land (including major contributions from John D. Rockefeller
+Jr., who also funded the carriage roads). Renamed Acadia National
+Park in 1929 when Congress accepted an additional land donation on
+the Schoodic Peninsula. Dorr is the "Father of Acadia" and its first
+superintendent. Replied by SMS (`SM111825ffa4a870d12c8b427c8d75c0c0`).
+Pointer stayed on `new-england`. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 707, 2026-10-26 ~17:41Z, text channel, Paul: "can you email me two
 or three recommendations for a hike this afternoon in bar harbor?
 That's about 4 MI ish and no ladders. I need it because Christine
