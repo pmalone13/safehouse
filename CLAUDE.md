@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+705, 2026-10-26 ~14:52Z, email channel, reply to the Bar Harbor/
+Acadia hikes-and-eats thread, Paul: "Can u email me hikes for us
+without Nala." Direct follow-up to queue id 702/703 — now that
+Nala's injury rules her out of the rugged hikes entirely (queue id
+703), Paul wants a separate list for him/his wife hiking without
+her, opening up the famous ladder/iron-rung trails flagged off-limits
+for a dog at queue id 702. Ran fresh `WebSearch` queries (not
+answered from memory, since real specs and current seasonal-closure
+status mattered) on Precipice Trail (~1.6mi RT, ~1,000ft gain,
+2-3hrs, Acadia's most intense climb, closed ~March-mid/late August
+for peregrine falcon nesting — confirmed that window has long since
+lifted by late October, flagged a verify-with-NPS caveat rather than
+assert with full certainty), Beehive Trail (1.4mi loop, ~450ft gain,
+1-2hrs, not falcon-restricted), Jordan Cliffs Trail (segment ~1.4mi,
+full loop 3.7-5.7mi, same falcon-closure pattern as Precipice), Dorr
+Mountain Ladder Trail + Schiff Path (~3.5mi combined, ~1,190ft gain,
+2-2.5hrs, less sheer than Precipice/Beehive), and Perpendicular Trail
+to Mansell Mountain (2.3mi, ~905ft gain, 18% avg grade, quieter west-
+side option). Gave pairing suggestions for a 2-4hr window and flagged
+that Precipice/Beehive sometimes get one-direction-only ranger
+restrictions on busy days. Emailed in the same thread
+(`1a178b42d0a1760b`). Moved the pointer here from `suv-replacement`
+(folded back into the live-projects list, nothing new since queue id
+704). Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 704, 2026-10-26 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -10112,3 +10138,24 @@ thing that needs it, not because anything currently lives under it.
   settled in Bar Harbor for the Acadia leg, Nala limited to
   carriage-road/smooth-path hikes per queue id 703; and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-26).
+
+- 2026-10-26 ~14:5xZ: fresh session, queue id 705, email channel,
+  Paul: "Can u email me hikes for us without Nala." Already fully
+  handled, logged, and committed as part of this checkpoint — ran
+  fresh `WebSearch` queries on the five ladder/iron-rung trails
+  flagged off-limits for a dog at queue id 702 (Precipice, Beehive,
+  Jordan Cliffs, Dorr Mountain Ladder/Schiff Path, Perpendicular/
+  Mansell), confirmed the peregrine-falcon seasonal closures on
+  Precipice/Jordan Cliffs should have lifted by now (with a
+  verify-with-NPS caveat rather than full certainty), and emailed
+  real distance/elevation/time specs plus pairing suggestions for a
+  2-4hr window. Moved the Current-project pointer here from
+  `suv-replacement` (folded back into the live-projects list, nothing
+  new since queue id 704). Nothing outstanding heading into the next
+  turn beyond what's already on file: the public-GitHub-repo finding
+  (queue id 348), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  settled in Bar Harbor for the Acadia leg; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-26).
