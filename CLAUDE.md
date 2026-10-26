@@ -207,6 +207,19 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+706, 2026-10-26 ~15:19Z, text channel, Paul: "Give Me Next Three
+Tides In Bar Harbor." Pulled real predictions directly from NOAA's
+own CO-OPS API (station 8413320, Bar Harbor, ME, confirmed via
+`WebSearch` rather than guessed) rather than a search-snippet
+summary. Bar Harbor has a large ~10.6ft mean tidal range, regular
+semidiurnal (two highs/two lows daily). Next three tides as of
+~11:20am Eastern: today 5:27pm Low (-1.0ft), today 11:36pm High
+(11.5ft), tomorrow 5:39am Low (-0.1ft). Replied by SMS
+(`SM2eaf006c09c694551a87d81f006fb054`). Pointer stayed on
+`new-england`, no move needed since queue id 705. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 705, 2026-10-26 ~14:52Z, email channel, reply to the Bar Harbor/
 Acadia hikes-and-eats thread, Paul: "Can u email me hikes for us
 without Nala." Direct follow-up to queue id 702/703 — now that
@@ -10155,6 +10168,21 @@ thing that needs it, not because anything currently lives under it.
   turn beyond what's already on file: the public-GitHub-repo finding
   (queue id 348), the v3 file-send session-collision architecture
   issue, `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  settled in Bar Harbor for the Acadia leg; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-26).
+
+- 2026-10-26 ~15:1xZ: fresh session, queue id 706, text channel,
+  Paul: "Give Me Next Three Tides In Bar Harbor." Already fully
+  handled, logged, and committed as part of this checkpoint. Pulled
+  real predictions directly from NOAA's CO-OPS API (station 8413320,
+  confirmed via `WebSearch` rather than guessed) and replied by SMS
+  with the next three tides. Pointer stayed on `new-england`. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the public-GitHub-repo finding (queue id 348), the v3
+  file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
   `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
   346/347) all remain open and need Paul live to fix; the Malones are
   settled in Bar Harbor for the Acadia leg; and the next scheduled
