@@ -206,7 +206,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 700, 2026-10-26 ~01:34Z, text channel, Paul: "Just checking in.
+How are things?" Plain status check-in, no topic/action requested.
+Verified rather than guessed: queried `queue.db` fresh (8 messages
+done, 0 failures in the last 24h) and confirmed all three live
+services (`safehouse-coordinator`, `safehouse-email-monitor`,
+`safehouse-twilio-webhook`) active. Replied by SMS
+(`SM590cf385ab15d9234093279cd94a7dea`) with the real numbers plus a
+quick trip-status pointer. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 699). Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 699, 2026-10-25 ~22:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -9914,3 +9927,21 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   traveling from Portland toward Bar Harbor/Acadia; and the next
   scheduled SUV/truck cron fire is 9am Eastern tomorrow (2026-10-26).
+
+- 2026-10-26 ~01:34Z: fresh session, queue id 700, text channel,
+  Paul: "Just checking in. How are things?" Plain status check-in,
+  already fully handled, logged, and committed as part of this
+  checkpoint. Queried `queue.db` fresh (8 messages done, 0 failures
+  in the last 24h) and confirmed all three live services active
+  rather than guess at system health. Replied by SMS
+  (`SM590cf385ab15d9234093279cd94a7dea`) with the real numbers plus a
+  trip-status pointer. Moved the Current-project pointer to
+  `safehouse/general` from `suv-replacement`. Nothing outstanding
+  heading into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are traveling from Portland
+  toward Bar Harbor/Acadia; and the next scheduled SUV/truck cron
+  fire is 9am Eastern today (2026-10-26).
