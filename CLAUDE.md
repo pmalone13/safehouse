@@ -10268,3 +10268,35 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   settled in Bar Harbor for the Acadia leg; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-26).
+
+- 2026-10-26 ~18:2xZ: fresh session, queue id 709, email channel,
+  Paul asking for driving directions + a trail map for the Jordan
+  Pond Path + South Bubble loop recommended at queue id 707. Already
+  fully handled, logged, committed, and pushed as part of this
+  checkpoint. **Caught and corrected a real error from queue id 707
+  while researching this**: the South Bubble summit climb (part of
+  the route recommended two turns ago as "no ladders anywhere")
+  actually does have a short iron-rungs section near the top,
+  confirmed via multiple independent sources plus NPS's own
+  dog-prohibition guidance for that exact reason. Corrected by email
+  in the same thread, recommending the genuinely flat "Jordan Pond
+  Path" loop (same trailhead, no rungs) instead, with real driving
+  directions (Google Maps link to the Jordan Pond North parking
+  lot), a correct AllTrails map link, the original route's map for
+  comparison only (marked not recommended), and the NPS topo map
+  page. Replied by SMS with a short pointer. Hit and fixed a Python
+  import path issue along the way: a script run directly as a file
+  (`python3 /tmp/foo.py`) doesn't get the invoking cwd on `sys.path`
+  the way a `python3 -c "..."` one-liner does, so `import
+  google_client` failed from `/tmp` — copied the script into the
+  repo directory to run it, consistent with the existing documented
+  `/tmp`-import lesson for `twilio_client` from queue id 197,
+  generalized here to any local module. Nothing outstanding heading
+  into the next turn beyond what's already on file: the public-
+  GitHub-repo finding (queue id 348), the v3 file-send session-
+  collision architecture issue, `poll_for_reply()`'s stale-reply bug
+  (queue id 275), and the `ssa.png`/`passport.jpg` Drive-sync
+  corruption finding (queue id 346/347) all remain open and need
+  Paul live to fix; the Malones are settled in Bar Harbor for the
+  Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-26).
