@@ -206,7 +206,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/travel/CLAUDE.md` — queue id 713,
+2026-10-26 ~23:10Z, email channel, genuine Drive share, "Timeline3.json"
+(Drive id `1NTgVFrF9i-YgO4h9KE109GgTwU9S-Kn3`, 36,625,467 bytes).
+Verified genuine (DKIM/SPF/DMARC all pass for google.com) before
+trusting it. The third real on-device Maps Timeline export —
+2,480 semantic segments spanning 2026-06-21 through
+2026-10-26T18:54:51 EDT, last segment's own visit coordinates landing
+right in Bar Harbor, consistent with the trip's current Acadia leg.
+**Caught and fixed a real data-corruption risk mid-turn**: an initial
+download via `get_file_content()` came back 58,788 bytes short of the
+file's own reported Drive size (that helper UTF-8-decodes then
+re-encodes — the same lossy text path already flagged unsafe for
+binary-adjacent files at queue id 546) — caught by comparing byte
+counts rather than trusting a clean JSON parse alone, then
+re-downloaded with `MediaIoBaseDownload` directly against raw bytes,
+which matched the reported size exactly. Saved to
+`projects/travel/timeline_export/Timeline_2026-10-26.json` alongside
+the first two exports. Replied by email confirming receipt. Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 712). Full detail in
+`projects/travel/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 712, 2026-10-26 ~22:39Z, text channel, Paul: "We walked Jordon pond
 and South bubble. Just right. Tomorrow a bit further..." Confirms
 they actually completed the South Bubble summit — the route the
