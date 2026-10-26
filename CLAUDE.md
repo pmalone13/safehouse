@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+712, 2026-10-26 ~22:39Z, text channel, Paul: "We walked Jordon pond
+and South bubble. Just right. Tomorrow a bit further..." Confirms
+they actually completed the South Bubble summit — the route the
+queue id 709 correction had flagged as having a short iron-rung
+section and recommended skipping for Christine — and it went fine.
+Resolved the apparent contradiction with a fresh `WebSearch` rather
+than ignore it: South Bubble's rung is one brief assist step on a
+short Class 2 scramble, genuinely different in kind from the
+sustained multi-rung ladder systems on Precipice/Beehive/Jordan
+Cliffs (which NPS fully prohibits dogs from); NPS only lists South
+Bubble as "not recommended" for pets, not prohibited, consistent with
+it being a minor feature rather than a true ladder trail. For
+"tomorrow a bit further," proposed two verified options: (1) Jordan
+Pond -> Penobscot Mountain -> Sargent Mountain loop (~5.3-5.7mi,
+~1,150-1,300ft gain, real summit views) — confirmed via `WebSearch`
+it also has "a couple of iron rungs and wooden rails" per NPS, same
+brief-assist character as today's South Bubble rung, just a longer/
+steeper climb; (2) Eagle Lake carriage-road loop (~6mi, flat packed
+gravel, zero climbing) as a genuinely rung-free alternative. Replied
+by SMS (`SM2272346ba871dcd160f1fb191b60ebea`) with both and offered
+a map/directions for either. Moved the pointer here from
+`suv-replacement` (folded back into the other-live-projects list,
+nothing new since queue id 711). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 711, 2026-10-26 ~22:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
