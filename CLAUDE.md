@@ -206,7 +206,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 711, 2026-10-26 ~22:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 143 unique hrefs, none an exact href match to the
+ledger (expected — Craigslist's own link hashes change on every
+re-crawl). Cross-checked all 123 non-repost hrefs by title/price/
+location signature instead: 31 traced to the Houston-TX "DIESEL OF
+HOUSTON" dealer cross-post pattern, several were already-logged
+qualifying finds resurfacing under fresh URLs (Cadillac Escalade
+Base, Lincoln Navigator Limited, GMC Sierra 1500 SLE2 Crew Cab, Audi
+Q7 Prestige S-Line), a few individually-excluded listings resurfaced
+(01 Dodge Dakota — regular-cab; LIFTED 2011 GMC 1500 X-CAB —
+extended not crew; 2003 Hummer H2 / 2004 Chevrolet SSR — Kargar
+Motors $0 dealer-placeholder pattern), and everything else traced to
+the broad already-established off-class/unibody/sedan/sports-car/
+classic/commercial/fire-truck/food-truck/kei-truck exclusion
+categories. **No new qualifying candidate.** Per the standing rule
+(queue id 287), emailed Paul a "checked, nothing new" note anyway
+(`1a17a3d2f328d85e`). Moved the pointer here from `new-england`
+(folded back into the other-live-projects list, nothing new since
+queue id 710). Full detail in `projects/suv-replacement/CLAUDE.md`
+and `craigslist_watch_results.md`'s new 2026-10-26 6pm section. Next
+scheduled fire: 9am Eastern tomorrow (2026-10-27).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 710, 2026-10-26 ~19:40Z, text channel, Paul: "who set aside this
 land is national a national park and give us a brief history on
 that." Used `WebSearch` to confirm the real founding history rather
