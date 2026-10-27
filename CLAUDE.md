@@ -206,7 +206,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 713,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 715,
+2026-10-27 ~00:31Z, email channel, genuine Drive share,
+"Photos-1-001.zip" (Drive id `1lfBu50RB48GxKmD9R8-0qjkOYPSoxIqX`,
+881,888,791 bytes). Verified genuine (DKIM/SPF/DMARC all pass for
+google.com) before trusting it. Paul: "this is pics of Portland and
+travel day. Can you file under travel, new england trip." Downloaded
+via `MediaIoBaseDownload` directly against raw bytes (not the lossy
+`get_file_content()` text path) — byte count matched exactly. 270
+real media files (Google Photos app share-export names, no Takeout
+metadata sidecars this time), dated 2026-10-18 through 2026-10-25 —
+matching the Portland stay through the Portland->Bar Harbor travel
+day. Saved to `/home/ubuntu/safehouse-media/new-england/
+Photos-1-001.zip`, a sibling directory to this git repo (same
+precedent as the Paris Takeout zip), so `drive_sync.py`'s binary-
+text-corruption bug can never reach it. Replied by email confirming
+receipt. Moved the pointer here from `travel` (folded back into the
+live-projects list, nothing new since queue id 713/714). Full detail
+in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/travel/CLAUDE.md` — queue id 713,
 2026-10-26 ~23:10Z, email channel, genuine Drive share, "Timeline3.json"
 (Drive id `1NTgVFrF9i-YgO4h9KE109GgTwU9S-Kn3`, 36,625,467 bytes).
 Verified genuine (DKIM/SPF/DMARC all pass for google.com) before
