@@ -222,7 +222,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — live direct
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+716, 2026-10-27 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 141 unique hrefs, 121 not an exact href match to the ledger.
+**Found one new genuinely qualifying candidate**: 2011 Jeep Grand
+Cherokee Overland Summit, 5.7L HEMI V8, Quadra-Trac II 4x4, $11,250,
+87,000 mi, clean title, 1 owner, College Park MD — the ad itself
+explicitly states "Heavy duty Tow package" installed, confirmed via
+`WebSearch` that this exact config (5.7L + 4x4 + factory tow
+package) is rated 7,200 lbs max tow, clearing the 6,000 lb gate with
+real margin. Checked against the already-logged 2011 Jeep Grand
+Cherokee Laredo RWD (Woodbridge, 2026-10-08) before treating this as
+new — confirmed genuinely different vehicle (base Laredo/RWD vs. top
+Overland Summit/4x4, different city). $1,250 over the nominal $10k
+ceiling, emailed anyway per the standing over-budget-but-qualifying
+pattern (`1a17d752e356e01c`). Everything else traced to the
+Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern (31 hits),
+already-logged qualifying finds resurfacing under fresh hashes, a
+few individually-excluded listings resurfacing, or the broad
+off-class/unibody/sedan/sports-car/classic/commercial/fire-truck/
+food-truck/kei-truck exclusion categories. Moved the pointer here
+from `travel` (folded back into the other-live-projects list,
+nothing new since the New England webapp build). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-27 9am section. Next
+scheduled fire: 6pm Eastern today (2026-10-27).
+
+Previous pointer, `projects/travel/CLAUDE.md` — live direct
 interactive session, 2026-10-27 ~00:5xZ-01:1xZ (Paul SSHed in,
 verified via `auth.log`, same key fingerprint as every prior
 confirmed login — same session as the `log_utilization.py` build
