@@ -222,7 +222,45 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 715,
+**Current project**: `projects/travel/CLAUDE.md` — live direct
+interactive session, 2026-10-27 ~00:5xZ-01:1xZ (Paul SSHed in,
+verified via `auth.log`, same key fingerprint as every prior
+confirmed login — same session as the `log_utilization.py` build
+earlier that session, see `safehouse/general`). Paul: "switching
+focuse to output of travel. We built html pages for our paris trip
+and hosted on this machine. Can you please add a page for New
+England and a sub page for Portland and add all content: locations
+from locations, pictures, iterary and you guess at meals or stops."
+Extended the existing live `projects/travel/webapp/app.py` (same
+process/port 8095/Basic Auth, not a second app) with two new routes:
+`/new-england` (trip-level index, all 6 booked stops, only Portland
+linked so far) and `/new-england/portland` (one consolidated,
+day-sectioned page, 10/18 arrival through 10/25 departure — Paul
+asked for "a sub page," singular, unlike Paris's index+day-page
+split). Pulled in the `Photos-1-001.zip` ingested at queue id 715
+(270 files), reused the Timeline-based GPS-stop/meal-guess logic
+already built for Paris (generalized to take `home_latlng`/
+`timeline_json`/`date_range` as parameters instead of hardcoded
+globals — verified byte-identical Paris output before trusting the
+refactor), and wrote the itinerary from this project's own
+day-by-day log entries, cross-checked against the real GPS trace for
+each day — flagging plan-only days (no text/GPS confirmation) as
+such rather than claiming they happened. **Found and fixed a real
+latent bug while building**: the original lat/lng parser silently
+dropped the minus sign off negative longitude (invisible for Paris,
+whose own displayed days are always positive-longitude; would have
+been wrong for any US point). Tested the whole thing via Flask's own
+test client (new and existing routes, with/without auth) before ever
+touching the live process; only then killed and restarted the real
+port-8095 server, re-verified live via `curl`. `media_ne`/`thumbs_ne`
+(~850MB) ride the same `webapp`-wide `drive_sync.py` exclusion
+already in place from the original Paris build (binary-corruption-
+risk-at-scale, no new exclusion needed). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 715). Full detail in `projects/travel/CLAUDE.md`'s
+new "New England pages added to the webapp" section.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 715,
 2026-10-27 ~00:31Z, email channel, genuine Drive share,
 "Photos-1-001.zip" (Drive id `1lfBu50RB48GxKmD9R8-0qjkOYPSoxIqX`,
 881,888,791 bytes). Verified genuine (DKIM/SPF/DMARC all pass for
