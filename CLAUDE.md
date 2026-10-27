@@ -103,6 +103,7 @@ for you.
    file if anything here needs to change (most commonly: the "Current
    project" pointer, if Paul just told you to switch), then:
    ```
+   ./venv/bin/python log_utilization.py
    git add -A && git commit -m "<short, real description of what this turn did>" && git push origin main
    ./venv/bin/python drive_sync.py
    ```
@@ -114,6 +115,21 @@ for you.
    local -> Drive, incremental via content hash) — it's how Paul checks
    what you're doing without SSH, so it belongs in the same checkpoint as
    the git push, not a separate/optional step.
+   `log_utilization.py` (added 2026-10-27, live session, Paul's direct
+   follow-through on the proposal floated at queue id 696 and confirmed
+   at queue id 697) snapshots this session's own cumulative token usage
+   — read straight from `$CLAUDE_CODE_SESSION_ID`'s own transcript file
+   under `~/.claude/projects/-home-ubuntu-safehouse/`, deduped by
+   message id before summing — and appends one JSON line to
+   `utilizationSpool.log` (repo root, gitignored like `queue.db`/
+   `logs.db`, but plain text so `drive_sync.py`'s whole-repo mirror
+   picks it up fine — durable on Drive without bloating git history
+   with a file that grows every turn). If Paul asks to "describe our
+   utilization," read this file rather than attempt a live query — per
+   the queue id 694/695 investigation, there is no CLI/API path to a
+   live usage percentage from inside an automated turn, and this log's
+   own numbers are raw per-session token cost, not a percentage against
+   the actual session/weekly rate-limit cap.
 4. Stop. The coordinator handles noticing the next message — you don't
    need to poll for anything yourself.
 

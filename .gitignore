@@ -61,5 +61,13 @@
 /logs.db
 /logs/
 
+# utilizationSpool.log -- appended every checkpoint by
+# log_utilization.py (added 2026-10-27), so it grows every turn like
+# queue.db/logs.db above. Not git-tracked for the same reason, but
+# it's plain JSONL (not binary like those two), so drive_sync.py's
+# whole-repo mirror picks it up fine -- durable on Drive, just not in
+# git history.
+/utilizationSpool.log
+
 # venv, credentials -- never committed.
 /venv/
