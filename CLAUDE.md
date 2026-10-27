@@ -10418,3 +10418,39 @@ thing that needs it, not because anything currently lives under it.
   hikes per queue id 703, with a ladder-trail list ready whenever
   Paul and Christine want it (queue id 705/708); and the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-26).
+
+- 2026-10-27 ~00:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 714, text channel, Paul
+  asking for steps/distance/elevation/duration/speed on the Jordan
+  Pond + South Bubble hike, already fully handled before this
+  wrap-up fired. Pulled real per-fix GPS data (position, altitude,
+  speed) straight out of Timeline3's `rawSignals` array — a richer
+  source than the `semanticSegments` distance/duration fields used
+  for every prior Timeline lookup in this project — rather than
+  guess or rely on segment summaries alone: ~3.57mi raw-trace
+  distance (matches the officially published ~3.6mi for this exact
+  loop, confirmed via `WebSearch`), 2h1m22s door-to-door, peak GPS
+  altitude reading ~595ft near the South Bubble summit (flagged
+  against NPS's published 766ft summit elevation and the degraded
+  GPS accuracy during the climb, rather than presented as exact),
+  ~1mph average pace including the summit stop, 2.5-3mph on the flat
+  pond-path sections. Confirmed no step/pedometer data exists
+  anywhere in the export. Emailed the full writeup
+  (`1a17a8601ec6fdce`) and replied by SMS
+  (`SMd404e79e1c3433ed97c1b26d6f6df398`). Logged in
+  `projects/travel/CLAUDE.md`, including a note that `rawSignals` is
+  the right source for any future "how fast/how high/how far"
+  Timeline question. Working tree confirmed clean at this wrap-up
+  (`git status --short` empty) — queue id 714 only touched the
+  gitignored project file, already Drive-synced in that turn, so
+  this entry is the only change this turn makes. Nothing outstanding
+  heading into the next turn beyond what's already on file: the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are settled in Bar Harbor
+  for the Acadia leg, Nala limited to carriage-road/smooth-path
+  hikes per queue id 703, with a ladder-trail list ready whenever
+  Paul and Christine want it (queue id 705/708); and the next
+  scheduled SUV/truck cron fire is 9am Eastern today (2026-10-27).
