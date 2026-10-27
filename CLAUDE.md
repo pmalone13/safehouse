@@ -222,7 +222,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 717,
+2026-10-27 ~13:15Z, text channel, Paul: "Please email me directions
+and links for: Jordan Pond -> Penobscot Mtn -> Sargent Mtn loop. :)"
+Direct follow-through on the option floated at queue id 712. Used
+`WebSearch` to confirm the exact AllTrails page (~5.3-5.7mi/~1,150-
+1,300ft gain, 4-6hrs) and the official NPS "Things to Do" page for
+this specific route. Trailhead is the same Jordan Pond North parking
+lot used for the earlier Jordan Pond Path research (44.321547,
+-68.251892) — reused that Google Maps directions link rather than
+re-derive it. **Flagged a new fact not previously surfaced**:
+AllTrails states dogs are not allowed on this specific trail, so Nala
+would sit this one out regardless of the rung question. Emailed the
+full write-up (`1a17d8164ede09e3`) and replied by SMS
+(`SM7d80088f070c5c8c5fb5e068a8cf5b29`). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 716). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 716, 2026-10-27 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
