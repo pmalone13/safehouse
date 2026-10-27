@@ -68,6 +68,12 @@ EXCLUDE_NAMES = {
     # moved outside the repo, since Paul asked for this one to live
     # under projects/ specifically.
     "webapp",
+    # .claude/: the Claude Code harness's own per-repo session state
+    # (e.g. scheduled_tasks.lock) -- internal bookkeeping, not
+    # anything Paul needs visible on Drive. Found 2026-10-27 after a
+    # scheduled-wakeup tool call created one and a routine sync
+    # uploaded it before this exclusion existed.
+    ".claude",
 }
 EXCLUDE_SUFFIXES = (".pyc",)
 
