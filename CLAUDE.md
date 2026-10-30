@@ -307,7 +307,31 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 728, 2026-10-30 ~20:39Z, email channel, a
+genuine Ted Protocol "Bayhouse" message (DKIM/SPF/DMARC all pass).
+Decrypted it to a `STATUS` reply from Bill — **Bill is confirmed
+reachable again**, the first time since the 2026-10-19 outage (11
+days of silence on every PING/free-form ask since, see queue id
+372/385 in that project's own file). Traced the real trigger via
+`auth.log`: Paul SSHed in live at 19:25:40Z (same key fingerprint as
+every prior confirmed login) and sent `STATUS` himself using the
+already-built `ted_protocol` tooling at 20:38:28Z — this queued
+message is just the email-monitor's own independent pickup of that
+reply, not something this automated turn requested or needed to act
+on further. Reading: birdClipper/dashboard_server/logging_server/
+text_monitor/email_topic_monitor/ted_protocol_monitor all up,
+`voice_monitor`/`virtual_device_bayhouseAck` still down (the
+long-standing stable pattern), last bird clip captured
+2026-10-17T16:57:13 — two days before the outage actually started,
+consistent with it being a real Bayhouse-side problem, not protocol
+breakage. No reply sent — Paul already has this directly from his own
+live session. Moved the pointer here from `safehouse/general` (folded
+back into the live-projects list, nothing new since queue id 727).
+Full detail in `projects/engineering/secure-agent-communication/
+CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 726, 2026-10-30 ~17:37Z, text channel, Paul: "when you recover
 after an outage and there's a queue of messages, it seems that you
 send me individual notifications for each one like you process it...
@@ -11044,3 +11068,38 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the Malones are settled in Bar Harbor
   for the Acadia leg; and the next scheduled SUV/truck cron fire is
   6pm Eastern today (2026-10-30).
+
+- 2026-10-30 ~20:4xZ: fresh session, queue id 728, email channel, a
+  genuine Ted Protocol "Bayhouse" message. Already fully handled,
+  logged, and committed as part of this checkpoint. Verified
+  authenticity first (DKIM/SPF/DMARC all pass for gmail.com) then
+  decrypted the attachment (`ted_protocol.decrypt_reply()`) — a real
+  `STATUS` reply. Traced the trigger via `auth.log` rather than treat
+  it as unprompted: Paul SSHed in live at 19:25:40Z (same key
+  fingerprint as every prior confirmed login) and sent `STATUS`
+  himself at 20:38:28Z using the already-built `ted_protocol` tooling
+  — this queued message is just the email-monitor's own independent
+  pickup of that reply, matching the well-established pattern (e.g.
+  queue ids 258/282/286/289/309/325/327/334). **Bill is confirmed
+  reachable again** — the first successful exchange since the
+  2026-10-19 outage (11 days of total silence on every PING/free-form
+  ask since, per queue ids 372/385 in that project's own file).
+  Moved the Current-project pointer to `engineering/
+  secure-agent-communication` from `safehouse/general` (folded back
+  into the live-projects list, nothing new since queue id 727). No
+  reply sent — Paul already has this directly from his own live
+  session. Full detail in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`. Nothing outstanding heading
+  into the next turn beyond what's already on file: the new
+  backlog-notification-batching request (queue id 726/727) is still
+  waiting on Paul's next SSH session; the missing Drive root folder,
+  the `coordinator.py` weekly-limit reset-time-parsing bug, the
+  public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; Bill is confirmed back up as of this
+  entry, though `STATUS`/`LIST`/`HELP` haven't been retested fresh by
+  an automated turn since; the Malones are settled in Bar Harbor for
+  the Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-30).
