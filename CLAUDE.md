@@ -222,7 +222,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 725,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 726, 2026-10-30 ~17:37Z, text channel, Paul: "when you recover
+after an outage and there's a queue of messages, it seems that you
+send me individual notifications for each one like you process it...
+when there's a backlog of messages go through all of them and then
+only send me one notification." A real, reasonable ask, but a genuine
+`coordinator.py` architecture change — each queued message currently
+spawns its own independent session, and any backlog message that
+warrants a reply gets its own separate SMS/email as the coordinator
+works through `retry_pending` rows one at a time, which is what Paul
+is seeing as "individual notifications." Distinguished this from the
+different, already-logged queue id 722 finding (the weekly-limit
+reset-time-parsing bug that made the coordinator's own *outage
+notice* SMS fire ~60+ times for one outage) — that's the system
+repeatedly saying "there's an outage"; this is about the *content*
+replies individual backlog messages generate once processed, a
+different code path, and fixing the reset-time bug won't fix this.
+A real fix needs new coordinator logic (detect multiple backlog rows
+from the same outage, process them in one combined pass instead of
+one session per message, suppress individual replies, emit one
+consolidated summary at the end) — a real design decision, needs Paul
+live/present, same posture as every other `coordinator.py` change.
+Replied by SMS (`SMa2a0fe801ccca05623e525b0d6b85d66`) confirming the
+read, naming the distinction, and offering to build it together next
+time he's on SSH. Not built this turn. Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 725). Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 725,
 2026-10-30 ~14:07Z, text channel, Paul: "We should be on project NE
 trip. In Bar Harbor now. I'm going to monitor our usage more closely
 to find out why we keep running out of tokens. My theory is that when
@@ -5168,6 +5197,31 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Requested 2026-10-30 (queue id 726): batch backlog-recovery
+  notifications into one summary instead of one text per message —
+  needs Paul live to design/build, not fixed by the reset-time-parsing
+  bug fix below.** Paul: "when there's a backlog of messages go
+  through all of them and then only send me one notification." Today,
+  every queued message spawns its own independent `coordinator.py`-
+  driven session, so when a backlog of `retry_pending` rows gets
+  reprocessed after an outage, each message that warrants a reply
+  sends its own separate SMS/email — a 20-message backlog can produce
+  a rapid string of individual texts. This is a different mechanism
+  from the queue id 722 reset-time-parsing bug just below (that one is
+  the coordinator's own repeated *outage-notice* SMS; this one is the
+  *content* replies individual messages generate once processed) —
+  fixing one does not fix the other. A real fix needs new
+  `coordinator.py` logic: detect that multiple backlog rows exist from
+  the same outage, process them in one combined pass rather than one
+  spawned session per message, suppress each message's own individual
+  reply, and emit a single consolidated summary once the backlog is
+  clear. Open design question for that live session: does "backlog"
+  mean strictly post-outage `retry_pending` rows, or any stretch of
+  several queued messages regardless of cause? Not built — replied by
+  SMS (`SMa2a0fe801ccca05623e525b0d6b85d66`) confirming the read and
+  offering to build it together next time Paul's on SSH. Full detail
+  in `projects/safehouse/general/CLAUDE.md`.
 
 - ~~Drive down again, `invalid_grant`, discovered 2026-10-30 ~10:1xZ
   at queue id 722's checkpoint~~ **Token issue resolved on its own by
