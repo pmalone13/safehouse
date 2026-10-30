@@ -222,7 +222,61 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 717,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+722, 2026-10-30 (nominally the 2026-10-27 6pm fire by queue
+timestamp, but actually processed just now after a multi-day Claude
+weekly-limit outage finally cleared), channel `cron`, source
+`suv-replacement-watch`. This turn did double duty: ran the real
+scheduled search (full four-region recipe, 145 unique hrefs, 128 not
+an exact href match, all traced to already-established exclusion
+patterns including four individually-checked ambiguous listings —
+no new qualifying candidate, "checked, nothing new" emailed per the
+standing rule), **and** recovered a real outage that had silently
+dropped three subsequent cron fires (queue ids 719/720/721 — 6pm
+2026-10-27, 9am 2026-10-28, 6pm 2026-10-28, none retroactively
+re-run) plus one real text from Paul (queue id 718, a hike-duration/
+Cadillac-driving-time question for the Jordan Pond->Penobscot->
+Sargent loop, answered ~3 days late by SMS). **Found a new,
+previously-undiagnosed bug in `coordinator.py`'s own retry logic
+while investigating why this outage ran so much longer/noisier than
+every prior one**: `_RESET_TIME_RE` only matches a reset time in the
+plain `"resets HH(:MM)(am|pm) (UTC)"` shape; this was a **weekly**
+limit with the real reset >24h away, so Claude's own error text
+included a date prefix (`"resets Oct 30, 10am (UTC)"`) that the
+regex doesn't handle. `_parse_reset_time` silently returned `None`
+for every single failure, so `compute_retry` fell back to its
+"couldn't parse, retry in 30 minutes" default instead of actually
+waiting ~2.3 days for the real reset — burning through all 15
+`MAX_RETRIES_USAGE_LIMIT` attempts in ~7.5 hours per message instead
+of surviving to the real reset, so queue ids 719/720/721 each
+exhausted their retries and were marked **permanently failed** (not
+`retry_pending`) well before the weekly limit actually lifted — a
+`notify_terminal_failure` SMS went to Paul for each one, confirmed
+via the Twilio API. The 30-min retry cadence also interacted badly
+with `NOTIFY_THROTTLE_SECONDS` (1800s): since each retry landed
+~33 minutes after the last (30min delay + 180s buffer), it just
+barely cleared the throttle every single time, so this one outage
+sent **~60+ separate SMS notifications to Paul's phone over ~2.3
+days** (confirmed via a direct Twilio Messages API query) — far more
+than the "one text per outage" the throttle was actually designed
+for (root CLAUDE.md queue id 257's "don't irritate" principle).
+Queue id 722 itself (and 723, sitting queued for the 6pm fire) came
+through clean because by the time *those* failed, the real reset was
+under 24h away, so Claude's error text had already dropped back to
+the plain no-date format the regex does handle. **Not fixed this
+turn** — `_RESET_TIME_RE`/`_parse_reset_time` need a date-aware
+pattern (or a safer fallback than a fixed 30-minute retry when
+parsing fails, e.g. exponential backoff capped well under the
+15-retry budget), which is an edit to existing application code and
+needs Paul live, same posture as every other `coordinator.py` change.
+Logged as a new standing TODO entry below. Moved the pointer here
+from `new-england` (folded back into the live-projects list, nothing
+new since queue id 717/718). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-30 section, and
+`projects/new-england/CLAUDE.md` for the recovered queue id 718.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 717,
 2026-10-27 ~13:15Z, text channel, Paul: "Please email me directions
 and links for: Jordan Pond -> Penobscot Mtn -> Sargent Mtn loop. :)"
 Direct follow-through on the option floated at queue id 712. Used
@@ -5028,6 +5082,46 @@ anything that isn't a specific named project — the A2P/idealfed work and
 the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
+
+- **Found 2026-10-30 (queue id 722, during a weekly-limit outage
+  recovery): `coordinator.py`'s own usage-limit retry logic can't
+  parse a reset time that's more than ~24h away, causing it to burn
+  through all its retries and give up well before the real reset —
+  and the resulting retry cadence happened to spam Paul with ~60+
+  SMS notifications over ~2.3 days for one outage.** The regex
+  (`_RESET_TIME_RE`, built live 2026-10-23 for exactly this kind of
+  outage, see the queue id 604/608 entries below) only matches
+  `"resets HH(:MM)(am|pm) (UTC)"`. A **weekly** limit (as opposed to
+  the usual session/daily one) reports its reset more than a day out,
+  and Claude's own error text reflects that with a date prefix —
+  `"resets Oct 30, 10am (UTC)"` — which the regex doesn't match.
+  `_parse_reset_time` returns `None` for that shape, so
+  `compute_retry` silently falls back to its "couldn't parse" default
+  of retrying in 30 minutes, instead of actually waiting out the real
+  ~2.3-day gap. Confirmed via `coordinator.py`'s own log: queue ids
+  719/720/721 (a text from Paul plus two cron fires, 2026-10-27
+  through 2026-10-28) each retried every ~33 minutes, exhausted all
+  15 `MAX_RETRIES_USAGE_LIMIT` attempts in ~7.5 hours, and were marked
+  **permanently failed** (not `retry_pending`) less than a third of
+  the way into the actual outage — `notify_terminal_failure` fired
+  for each, confirmed via a direct Twilio Messages API query. The
+  problem compounds: that ~33-minute retry cadence (30min delay + a
+  180s buffer) just barely clears `NOTIFY_THROTTLE_SECONDS` (1800s)
+  on every single attempt, so one outage produced **~60+ separate
+  outage SMS to Paul's phone** over the ~2.3 days it ran — far more
+  than the "one text per outage" the throttle was built to guarantee
+  (root CLAUDE.md queue id 257's "don't irritate" principle). Queue
+  ids 722/723 (the next two cron fires after the three above gave up)
+  came through clean/`retry_pending` as designed, only because by the
+  time *they* failed the real reset was under 24h out, so Claude's
+  error text had already dropped the date prefix and the existing
+  regex matched fine. **Not fixed this turn** — needs either a
+  date-aware extension to `_RESET_TIME_RE`/`_parse_reset_time`, or a
+  safer no-match fallback (e.g. real exponential backoff capped well
+  under the 15-retry budget, rather than a fixed 30-minute retry) —
+  an edit to existing application code, needs Paul live. Full detail
+  in `projects/suv-replacement/CLAUDE.md`'s 2026-10-30 entry and this
+  file's own Current-project pointer above.
 
 - **Found 2026-10-24 (queue id 675): the location/words ("safeutil
   status") emails are the dominant driver of recent token/usage-limit
