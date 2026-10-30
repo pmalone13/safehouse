@@ -222,7 +222,41 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — live direct
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+724, 2026-10-30 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire, the first of
+the coordinator's own normal resumed schedule now that the
+10/27-10/30 weekly-limit-outage backlog is fully cleared (queue ids
+722/723). Ran the full four-region recipe (SUV + truck + five
+diesel-specific queries, washingtondc/annapolis/baltimore/
+easternshore, `<=2012`/`<110,000 mi`). 145 unique hrefs, 128 not an
+exact href match to the ledger — same totals as queue ids 722/723,
+consistent with little real Craigslist turnover since those runs.
+Individually checked one genuinely new listing (never seen before):
+a 2004 Nissan Pathfinder, $1,850, 96,000 mi, clean title, Glen Burnie
+MD — confirmed body-on-frame via its own listing page, but
+`WebSearch` confirmed its 3.5L V6 tops out at 5,000 lbs tow
+(automatic transmission), below the project's 6,000 lb boat-towing
+gate — excluded on tow rating. Everything else traced to
+already-established patterns (Houston-TX "DIESEL OF HOUSTON" dealer
+cross-posts, the Joppa MD sedan cluster, already-logged qualifying
+finds resurfacing under fresh hashes, the same four ambiguous
+listings already individually checked and excluded at queue id 722,
+and the broad off-class/unibody/sedan/sports-car/classic/commercial/
+fire-truck/food-truck/kei-truck exclusion categories), plus two new
+listings excluded on title alone without a fetch (a 1992 Dodge
+Dakota V6 — no 4-door cab option existed for that model year under
+the standing crew-cab rule; a 2008 Toyota Tacoma PreRunner, confirmed
+4x2/Access Cab in its own title). **No new qualifying candidate.**
+Emailed Paul a "checked, nothing new" note per the standing rule
+(queue id 287, `1a18ce95775ff000`). Moved the pointer here from
+`new-england` (folded back into the other-live-projects list,
+nothing new since queue id 723's own live-session pointer-switch).
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-30 ~13:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-10-30).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — live direct
 interactive session, 2026-10-30, Paul: "set current project New
 England Trip. In Bar Harbor now." Pointer moved here from
 `suv-replacement` (folded back into the live-projects list, nothing
@@ -10739,6 +10773,32 @@ thing that needs it, not because anything currently lives under it.
   hikes per queue id 703, with a ladder-trail list ready whenever
   Paul and Christine want it (queue id 705/708); and the next
   scheduled SUV/truck cron fire is 9am Eastern today (2026-10-27).
+
+- 2026-10-30 ~13:0xZ: fresh session, queue id 724, channel `cron`,
+  source `suv-replacement-watch` -- 9am Eastern scheduled fire, the
+  first of the coordinator's own normal resumed schedule now that the
+  10/27-10/30 weekly-limit-outage backlog is fully cleared. Already
+  fully handled, logged, and committed as part of this checkpoint.
+  145 unique hrefs, 128 not an exact href match to the ledger (same
+  totals as queue ids 722/723). One genuinely new listing
+  individually checked -- a 2004 Nissan Pathfinder, $1,850, 96,000
+  mi, clean title, Glen Burnie MD -- confirmed body-on-frame but
+  excluded via `WebSearch`-confirmed 5,000 lb max tow rating (below
+  the 6,000 lb gate). Everything else traced to already-established
+  exclusion patterns. **No new qualifying candidate.** Emailed Paul a
+  "checked, nothing new" note per the standing rule (queue id 287,
+  `1a18ce95775ff000`). Moved the Current-project pointer here from
+  `new-england`. Nothing outstanding heading into the next turn
+  beyond what's already on file: the public-GitHub-repo finding
+  (queue id 348), the v3 file-send session-collision architecture
+  issue, `poll_for_reply()`'s stale-reply bug (queue id 275), the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347), the fresh Drive `invalid_grant` outage found at queue id
+  722's checkpoint, and the new `coordinator.py` weekly-limit
+  reset-time-parsing bug found the same session all remain open and
+  need Paul live to fix; the Malones are settled in Bar Harbor for
+  the Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-30).
 
 - 2026-10-30 ~10:2xZ: session wrap-up (idle window elapsed, no new
   message). Two turns this session: queue id 722 (nominally the
