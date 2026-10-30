@@ -5083,6 +5083,24 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **Drive down again, `invalid_grant`, discovered 2026-10-30 ~10:1xZ
+  at queue id 722's checkpoint.** Same recurring error shape as every
+  prior occurrence (last resolved 2026-10-13 ~20:45Z): Gmail confirmed
+  working in this same turn (used to send the "checked, nothing new"
+  email, and `get_client()` retested clean afterward), while
+  `.drive_api_token.json` hasn't refreshed since 2026-10-27 13:04 (its
+  mtime) and `drive_sync.py` fails identically on two consecutive
+  tries with `RefreshError: invalid_grant`. As always, root cause is
+  not diagnosable from this VM — the fix is Paul running
+  `authorize_drive_once.py` on a machine with a browser and `scp`ing
+  the fresh token to this VM at the existing `.drive_api_token.json`
+  path. Flagged to Paul by SMS. This turn's git commit/push succeeded
+  regardless (Drive is the only thing down) — the project-file/ledger/
+  root-file updates are safely on GitHub, just not yet mirrored to
+  Drive. A future turn should retry `drive_sync.py` at its own
+  checkpoint and only re-flag if still broken, same posture as every
+  past occurrence.
+
 - **Found 2026-10-30 (queue id 722, during a weekly-limit outage
   recovery): `coordinator.py`'s own usage-limit retry logic can't
   parse a reset time that's more than ~24h away, causing it to burn
