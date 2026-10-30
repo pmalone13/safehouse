@@ -307,7 +307,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+733, 2026-10-30 ~22:00Z, channel `cron`, source
+`suv-replacement-watch` — the 6pm Eastern scheduled fire. Ran the
+full four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 146 unique hrefs, 128 not an exact href match to the
+ledger — same totals as the morning's queue id 724 run, consistent
+with very little real Craigslist turnover since then. Every one of
+the 128 traced to an already-established exclusion pattern (Houston-
+TX "DIESEL OF HOUSTON" dealer cross-posts, the Joppa MD sedan
+cluster, already-logged qualifying finds resurfacing under fresh
+hashes, the same ambiguous listings already individually excluded at
+queue id 722/724, and the broad off-class/unibody/sedan/sports-car/
+classic/commercial exclusion categories — including a new 2009 Ram
+1500 SLT AWD, Glyndon MD, excluded as a no-crew-cab-claim half-ton).
+**No new qualifying candidate.** Emailed Paul a "checked, nothing
+new" note per the standing rule (queue id 287, `1a18ed5853fdee04`).
+Moved the pointer here from `engineering/secure-agent-communication`
+(folded back into the live-projects list, nothing new since queue id
+728/729-732). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-30 ~22:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-10-31).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 728, 2026-10-30 ~20:39Z, email channel, a
 genuine Ted Protocol "Bayhouse" message (DKIM/SPF/DMARC all pass).
 Decrypted it to a `STATUS` reply from Bill — **Bill is confirmed
