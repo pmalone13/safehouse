@@ -223,6 +223,27 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+723, 2026-10-30 ~10:12Z (nominally the 2026-10-29 6pm fire by queue
+timestamp, the second half of the same outage backlog as queue id
+722 immediately below, processed right behind it with almost no time
+elapsed). Ran the identical four-region recipe; results came back
+byte-for-byte identical to queue id 722's run — same 145 unique
+hrefs, same 128 not an exact href match, same four ambiguous
+listings already individually checked and excluded there (Land Rover
+Discovery "project," Tacoma "DREAM TRUCK," Ford F-150 King Ranch
+unconfirmed cab type, 2WD/base-I4 Tacoma). **No new qualifying
+candidate.** Emailed Paul a second "checked, nothing new" note per
+the standing rule (queue id 287, `1a18c4c333b51ff0`), distinguishing
+it as the 6pm 10/29 fire rather than silently resending the identical
+9am one. The 10/27-10/30 weekly-limit outage backlog (queue ids
+718-723) is now fully cleared — the coordinator resumes its own
+normal 9am/6pm Eastern schedule from here; next real fire is 9am
+Eastern today (2026-10-30). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-30 ~10:12Z section.
+No pointer move needed — already here from queue id 722.
+
+Previous pointer, same project — queue id
 722, 2026-10-30 (nominally the 2026-10-27 6pm fire by queue
 timestamp, but actually processed just now after a multi-day Claude
 weekly-limit outage finally cleared), channel `cron`, source
