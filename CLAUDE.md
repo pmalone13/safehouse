@@ -222,7 +222,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 725,
+2026-10-30 ~14:07Z, text channel, Paul: "We should be on project NE
+trip. In Bar Harbor now. I'm going to monitor our usage more closely
+to find out why we keep running out of tokens. My theory is that when
+we do actual work, like refactoring, we chew a lot. We will attempt to
+queue things into general as they come up and address them when we
+have headroom." Moved the pointer here from `suv-replacement` (folded
+back into the live-projects list, nothing new since queue id 724).
+Confirms still settled in Bar Harbor. Paul is stating a new standing
+intent, not asking for anything built: he'll watch Claude usage more
+closely himself, floats refactoring/real-code-work sessions as the
+likely heavy token spenders, and plans to route non-urgent items into
+`safehouse/general` to address only when there's headroom rather than
+immediately. Replied by SMS confirming the pointer move and reflecting
+back a relevant counter-data point already on file — the queue id 675
+investigation found the location/words app pings (routine, not
+refactoring work) were the actual dominant volume driver before the
+spool-diversion fix, and this week's queue id 722/723 outage was a
+plain multi-day weekly-limit exhaustion, not obviously tied to a
+refactoring session — without disputing his plan. No code/config
+change made. Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 724, 2026-10-30 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire, the first of
 the coordinator's own normal resumed schedule now that the
