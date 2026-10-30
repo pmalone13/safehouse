@@ -10707,3 +10707,36 @@ thing that needs it, not because anything currently lives under it.
   hikes per queue id 703, with a ladder-trail list ready whenever
   Paul and Christine want it (queue id 705/708); and the next
   scheduled SUV/truck cron fire is 9am Eastern today (2026-10-27).
+
+- 2026-10-30 ~10:2xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session: queue id 722 (nominally the
+  2026-10-27 6pm fire by queue timestamp, actually processed today
+  after a multi-day weekly-limit outage finally cleared — ran the
+  real SUV/truck search, no new qualifying candidate, and recovered
+  the outage itself: three dropped cron fires plus one real text from
+  Paul answered ~3 days late, found and documented a new
+  `coordinator.py` bug where the reset-time regex can't parse a
+  weekly-limit reset more than ~24h out, causing ~60+ duplicate
+  outage SMS over the outage's ~2.3-day run) and queue id 723 (the
+  other half of that same backlog, a near-duplicate run with
+  identical results, emailed Paul a second distinguishing "checked,
+  nothing new" note). Both already fully handled, logged, committed,
+  and pushed (`9c3e31e`, `60ba410`, `9856664`) before this wrap-up
+  fired. Working tree confirmed clean at this wrap-up (`git status
+  --short` empty) and `queue.db` confirmed caught up (723/722 both
+  `done`, nothing queued behind them), so this entry is the only
+  change this turn makes. Re-tried `drive_sync.py` — still the same
+  `invalid_grant` outage flagged this session (first noticed at queue
+  id 722's own checkpoint); not re-flagging to Paul again, already
+  done once. Nothing outstanding heading into the next turn beyond
+  what's already on file: the fresh Drive `invalid_grant` outage and
+  the new coordinator reset-time-parsing bug (both logged in the TODO
+  section above) need Paul live to fix; the public-GitHub-repo
+  finding (queue id 348), the v3 file-send session-collision
+  architecture issue, `poll_for_reply()`'s stale-reply bug (queue id
+  275), and the `ssa.png`/`passport.jpg` Drive-sync corruption
+  finding (queue id 346/347) all remain open and need Paul live too;
+  queue id 718's hike-duration answer was sent ~3 days late and is
+  likely moot by now; and the next real scheduled SUV/truck cron fire
+  is 9am Eastern today (2026-10-30), the coordinator's normal
+  schedule resuming cleanly from here.
