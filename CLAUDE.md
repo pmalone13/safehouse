@@ -222,7 +222,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — live direct
+interactive session, 2026-10-30, Paul: "set current project New
+England Trip. In Bar Harbor now." Pointer moved here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 723). Confirms the Acadia/Bar Harbor leg is
+underway, consistent with what was already on file (queue id 701,
+2026-10-26, "We are settled in bar harbor"). No new research
+requested this turn — a plain pointer-switch/status confirmation.
+
+Previous pointer, same project — queue id
 723, 2026-10-30 ~10:12Z (nominally the 2026-10-29 6pm fire by queue
 timestamp, the second half of the same outage backlog as queue id
 722 immediately below, processed right behind it with almost no time
@@ -5104,23 +5113,46 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
-- **Drive down again, `invalid_grant`, discovered 2026-10-30 ~10:1xZ
-  at queue id 722's checkpoint.** Same recurring error shape as every
-  prior occurrence (last resolved 2026-10-13 ~20:45Z): Gmail confirmed
-  working in this same turn (used to send the "checked, nothing new"
-  email, and `get_client()` retested clean afterward), while
-  `.drive_api_token.json` hasn't refreshed since 2026-10-27 13:04 (its
-  mtime) and `drive_sync.py` fails identically on two consecutive
-  tries with `RefreshError: invalid_grant`. As always, root cause is
-  not diagnosable from this VM — the fix is Paul running
-  `authorize_drive_once.py` on a machine with a browser and `scp`ing
-  the fresh token to this VM at the existing `.drive_api_token.json`
-  path. Flagged to Paul by SMS. This turn's git commit/push succeeded
-  regardless (Drive is the only thing down) — the project-file/ledger/
-  root-file updates are safely on GitHub, just not yet mirrored to
-  Drive. A future turn should retry `drive_sync.py` at its own
-  checkpoint and only re-flag if still broken, same posture as every
-  past occurrence.
+- ~~Drive down again, `invalid_grant`, discovered 2026-10-30 ~10:1xZ
+  at queue id 722's checkpoint~~ **Token issue resolved on its own by
+  2026-10-30 ~10:3xZ (live session) — but replaced by a bigger
+  finding, see next entry.** Original symptom: Gmail confirmed working
+  (used to send the "checked, nothing new" email), while
+  `.drive_api_token.json` hadn't refreshed since 2026-10-27 13:04 and
+  `drive_sync.py` failed with `RefreshError: invalid_grant` on two
+  consecutive tries. By the time Paul checked in a live session
+  shortly after, `get_drive_client()` + a plain `files().list()` call
+  succeeded cleanly — auth itself is fine now, no token re-authorize
+  was needed this time (unclear why it self-healed; not something this
+  VM can diagnose).
+
+- **Found 2026-10-30 ~10:3xZ, live session: the entire "safehouse"
+  root folder on Drive is gone — not a token problem, the folder
+  itself.** Discovered when Paul asked to verify Drive was back up:
+  auth works fine, but the root folder ID recorded in
+  `.drive_sync_state.json` (`1kQlLRVWDdItVC01Y3pk18xZ31m6u9cio`)
+  returns a plain 404, and a fresh Drive search for a folder named
+  "safehouse" — including trashed items — returns zero results. Not
+  sitting in Drive's trash, not findable by name; it's just gone, for
+  reasons this VM has no visibility into (Paul confirmed he didn't
+  knowingly delete it, chose not to investigate further yet — see
+  below). **Nothing was actually lost**: every project's real content
+  lives on local disk first (Drive is only ever the human-readable
+  mirror, written to after the fact) and everything git-tracks is
+  safe on GitHub regardless — this only affects the "check on Ted
+  without SSH" convenience, not any data. The fix, when Paul wants it
+  done, is straightforward and non-destructive: delete (or clear) the
+  stale `.drive_sync_state.json` so every remembered folder/file ID is
+  forgotten, then run `drive_sync.py`, which will recreate the whole
+  `safehouse` folder tree fresh from local disk (132 folders worth,
+  per the stale state file's own count). **Presented this choice to
+  Paul live; he chose not to rebuild yet** ("2" — hold off/investigate
+  first, not "1" — rebuild now). Do not rebuild the Drive mirror
+  unprompted — wait for Paul to actually ask for it. A future turn
+  that needs to check "is Drive still missing" can repeat the same
+  check (`files().list(q="name='safehouse' ...")`) without needing to
+  re-flag this if the answer is still no — only re-flag if something
+  changes (the folder reappears, or Paul asks for the rebuild).
 
 - **Found 2026-10-30 (queue id 722, during a weekly-limit outage
   recovery): `coordinator.py`'s own usage-limit retry logic can't
