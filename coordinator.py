@@ -1,33 +1,39 @@
 """safehouse's coordinator: the one process that turns queued messages
 into Claude Code sessions.
 
-Design (agreed with Paul 2026-08-31, see this repo's own history for the
-full discussion -- not duplicated here since this file's docstring is
-meant to stay short):
+Design (redesigned with Paul 2026-10-30, live session; supersedes the
+2026-08-31 "resume ticket" design -- see this repo's own history for
+that prior discussion, not duplicated here):
 
   - Entrypoint for Claude is always a message pulled off queue_db's FIFO.
-  - One message at a time, serially -- never two spawns running at once.
-  - Session continuity is a "resume ticket," not a resident process:
-    after a successful turn, queue_db.session_state remembers the
-    session_id and a deadline (now + SESSION_IDLE_TIMEOUT_SECONDS). A
-    message arriving before the deadline resumes that same Claude
-    session (`claude -p --resume <session_id>`) with full prior context;
-    nothing costs anything while idle since no process stays resident.
-  - Once the deadline passes with nothing new queued, a final wrap-up
-    turn runs (giving the session a chance to checkpoint), then the
-    ticket is cleared -- the next message starts a brand new session.
-  - Two race windows are checked deliberately, mirroring a real bug
-    bayhouse hit with this exact pattern locally: a message can land (1)
-    in the gap between "idle timeout reached" and actually committing to
-    the wrap-up turn, or (2) while the wrap-up turn itself is running (a
-    real, possibly slow `claude -p --resume` call). Both are re-checked
-    so a message never goes unnoticed just because it arrived at a bad
-    moment.
+  - One spawn at a time, serially -- never two running at once. This
+    file stays genuinely dumb: claim the oldest unclaimed message, spawn
+    one `claude -p` turn for it (always fresh, never --resume), wait for
+    it to finish, repeat.
+  - What used to be the coordinator's job (deciding whether to resume a
+    prior session across separate spawns) is now entirely inside the
+    turn itself. A single spawn is expected to stay alive and keep
+    self-claiming further messages as they arrive -- via the same
+    claim_next()/mark_done() this file uses -- for as long as its own
+    CLAUDE.md-documented stay-alive protocol says to (bounded by an idle
+    window, a forced-restart ceiling, a daily reset, or Paul explicitly
+    asking it to exit). Because of that, SPAWN_TIMEOUT_SECONDS has to be
+    generous -- it's now a true "something is stuck" tripwire, not a
+    normal per-message ceiling.
+  - Consequence: there is no session_state table anymore, no resume
+    ticket, no wrap-up turn spawned by this file. Once a turn decides to
+    stop, the next message -- whenever it arrives -- always starts a
+    brand-new, empty-context session. Continuity within a busy stretch
+    comes entirely from one process staying alive, never from this file
+    remembering a session_id to resume later.
+  - A message can end up stuck in 'claimed' if the process holding it
+    (including one that self-claimed it mid-turn) dies before marking it
+    done/failed/retry_pending -- requeue_stale_claimed() recovers that.
   - What each Claude turn actually does (read CLAUDE.md, decide how to
-    respond, update its own state, commit + push) is NOT this file's
-    concern -- that behavior contract lives in the repo's own CLAUDE.md,
-    authored separately. This coordinator only ever hands a message to a
-    session and trusts the session to do its own bookkeeping.
+    respond, update its own state, commit + push, and now also: whether
+    to keep watching for more messages before actually stopping) is NOT
+    this file's concern -- that behavior contract lives in the repo's
+    own CLAUDE.md, authored separately.
 
 Run standalone, long-lived (systemd unit: safehouse-coordinator.service):
     python coordinator.py
@@ -53,8 +59,29 @@ REPO_DIR = Path(__file__).parent
 CLAUDE_BIN = os.environ.get("SAFEHOUSE_CLAUDE_BIN", "claude")
 PERMISSION_MODE = os.environ.get("SAFEHOUSE_PERMISSION_MODE", "bypassPermissions")
 POLL_INTERVAL_SECONDS = float(os.environ.get("SAFEHOUSE_POLL_INTERVAL_SECONDS", "5"))
-SESSION_IDLE_TIMEOUT_SECONDS = float(os.environ.get("SAFEHOUSE_SESSION_IDLE_TIMEOUT_SECONDS", "3600"))
-SPAWN_TIMEOUT_SECONDS = float(os.environ.get("SAFEHOUSE_SPAWN_TIMEOUT_SECONDS", "900"))
+
+# These two govern the in-turn stay-alive protocol documented in root
+# CLAUDE.md, not anything this file branches on directly -- they're
+# defined here so there's one canonical place for the numbers, and
+# inherited into the spawned `claude` subprocess's environment (default
+# subprocess.run behavior) so the turn can read them back via `echo
+# $SAFEHOUSE_IDLE_WINDOW_SECONDS` etc. instead of a hardcoded number in
+# CLAUDE.md prose that could drift out of sync with reality.
+IDLE_WINDOW_SECONDS = float(os.environ.get("SAFEHOUSE_IDLE_WINDOW_SECONDS", "3600"))  # 1 hour
+FORCED_RESTART_SECONDS = float(os.environ.get("SAFEHOUSE_FORCED_RESTART_SECONDS", "14400"))  # 4 hours
+
+# A single spawn can now legitimately stay alive for most of a day (see
+# the stay-alive protocol above), so this is a true "something is stuck"
+# tripwire, not a normal per-message ceiling -- set comfortably above the
+# worst case (started just after the daily reset, runs until the next
+# one, plus real working time).
+SPAWN_TIMEOUT_SECONDS = float(os.environ.get("SAFEHOUSE_SPAWN_TIMEOUT_SECONDS", "90000"))  # ~25h
+
+# Only recover a message stuck in 'claimed' once the spawn that could
+# possibly still be holding it is certainly dead -- i.e. comfortably
+# past SPAWN_TIMEOUT_SECONDS, never while a long-lived turn might still
+# legitimately be mid-handling it.
+STALE_CLAIM_SECONDS = SPAWN_TIMEOUT_SECONDS + 300
 
 # Outage retry/notify config. A failed message used to just sit marked
 # 'failed' forever -- no retry, no notification -- which is how six-plus
@@ -73,14 +100,6 @@ OTHER_BACKOFF_SECONDS = [120, 600, 1800, 3600, 3600]
 # Matches the "resets 11pm (UTC)" / "resets 4:20am (UTC)" shape actually
 # seen in Claude Code's own session/weekly-limit error text.
 _RESET_TIME_RE = re.compile(r"resets\s+(\d{1,2})(?::(\d{2}))?\s*(am|pm)\s*\(UTC\)", re.IGNORECASE)
-
-WRAPUP_PROMPT = (
-    "No new messages have arrived and this session's idle window has "
-    "elapsed. If your CLAUDE.md files or any other state need a final "
-    "update before this session ends, do that now (the same checkpoint "
-    "you do after every message: update project CLAUDE.md, update root "
-    "CLAUDE.md, commit, push origin), then stop."
-)
 
 
 @dataclass
@@ -128,13 +147,14 @@ def _parse_reset_time(error: str, now: datetime) -> Optional[datetime]:
     return candidate
 
 
-def compute_retry(error: str, retry_count: int) -> Optional[tuple[datetime, bool]]:
+def compute_retry(error: str, retry_count: int) -> Optional[datetime]:
     """Decides whether a failed message should be retried and, if so,
-    when, plus whether the retry should force a brand-new Claude
-    session rather than resuming one. Returns None once retries for
-    this error's class are exhausted -- caller should then treat the
-    message as terminally failed. `retry_count` is the number of
-    retries already made (0 on the first failure)."""
+    when. Returns None once retries for this error's class are
+    exhausted -- caller should then treat the message as terminally
+    failed. `retry_count` is the number of retries already made (0 on
+    the first failure). Every retry is already a fresh spawn (this file
+    never resumes a session across separate spawns anymore), so there's
+    no "force a new session" distinction left to make here."""
     now = _now()
     kind = classify_error(error)
 
@@ -144,20 +164,17 @@ def compute_retry(error: str, retry_count: int) -> Optional[tuple[datetime, bool
         reset_at = _parse_reset_time(error, now)
         if reset_at is None:
             reset_at = now + timedelta(minutes=30)
-        return reset_at + timedelta(seconds=RESET_BUFFER_SECONDS), False
+        return reset_at + timedelta(seconds=RESET_BUFFER_SECONDS)
 
     if kind == "prompt_too_long":
         if retry_count >= MAX_RETRIES_OTHER:
             return None
-        # A bloated resumed session is the near-certain cause (even
-        # automatic compaction fails for lack of budget) -- retrying into
-        # the same session would just fail the same way again.
-        return now + timedelta(seconds=PROMPT_TOO_LONG_RETRY_SECONDS), True
+        return now + timedelta(seconds=PROMPT_TOO_LONG_RETRY_SECONDS)
 
     if retry_count >= MAX_RETRIES_OTHER:
         return None
     delay = OTHER_BACKOFF_SECONDS[min(retry_count, len(OTHER_BACKOFF_SECONDS) - 1)]
-    return now + timedelta(seconds=delay), False
+    return now + timedelta(seconds=delay)
 
 
 def _should_notify_outage() -> bool:
@@ -272,91 +289,54 @@ def spawn_claude(prompt: str, resume: Optional[str] = None) -> SpawnResult:
     return SpawnResult(session_id=session_id, result_text=parsed.get("result"), raw=parsed)
 
 
-def _live_resume_id() -> Optional[str]:
-    state = queue_db.get_session_state()
-    if state is None or not state["session_id"] or not state["deadline"]:
-        return None
-    if state["deadline"] > _now_iso():
-        return state["session_id"]
-    return None
-
-
 def process_one(msg) -> None:
-    resume_id = _live_resume_id()
     prior_retries = msg["retry_count"] or 0
     log.info(f"processing message id={msg['id']} channel={msg['channel']} "
-             f"source={msg['source']} resume={resume_id!r} prior_retries={prior_retries}")
+             f"source={msg['source']} prior_retries={prior_retries}")
     try:
-        result = spawn_claude(build_prompt(msg), resume=resume_id)
+        result = spawn_claude(build_prompt(msg))
     except (subprocess.TimeoutExpired, RuntimeError) as e:
         error = str(e)
         retry_count = prior_retries + 1
         log.warning(f"message id={msg['id']} failed (attempt {retry_count}): {error}")
-        retry = compute_retry(error, prior_retries)
-        if retry is None:
+        next_retry_at = compute_retry(error, prior_retries)
+        if next_retry_at is None:
             queue_db.mark_failed(msg["id"], error)
             notify_terminal_failure(msg["id"], error, retry_count)
             return
-        next_retry_at, force_fresh = retry
-        if force_fresh:
-            queue_db.clear_session_state()
         queue_db.mark_retry_pending(msg["id"], error, retry_count, next_retry_at.isoformat())
         notify_outage(msg["id"], error, retry_count, next_retry_at)
         return
 
+    # The turn itself may have stayed alive handling (and marking done)
+    # any number of further self-claimed messages before finally
+    # returning -- this file only ever knows about, and only ever marks
+    # done, the one message it originally spawned for.
     queue_db.mark_done(msg["id"])
-    deadline = (_now() + timedelta(seconds=SESSION_IDLE_TIMEOUT_SECONDS)).isoformat()
-    queue_db.set_session_state(result.session_id, deadline)
-    log.info(f"message id={msg['id']} done, session={result.session_id} "
-             f"resumable until {deadline}")
+    log.info(f"message id={msg['id']} done, session={result.session_id}")
     queue_db.clear_outage_notice()
     notify_recovered(msg["id"], prior_retries)
-
-
-def run_wrapup_turn(session_id: str) -> None:
-    log.info(f"session {session_id} idle-timeout reached, running wrap-up turn")
-    try:
-        spawn_claude(WRAPUP_PROMPT, resume=session_id)
-    except (subprocess.TimeoutExpired, RuntimeError) as e:
-        log.warning(f"wrap-up turn for session {session_id} failed (session will still end): {e}")
 
 
 def main() -> None:
     queue_db.init_db()
     log.info("safehouse coordinator starting "
-             f"(idle_timeout={SESSION_IDLE_TIMEOUT_SECONDS}s, poll={POLL_INTERVAL_SECONDS}s)")
+             f"(poll={POLL_INTERVAL_SECONDS}s, spawn_timeout={SPAWN_TIMEOUT_SECONDS}s)")
 
     while True:
         requeued = queue_db.requeue_due_retries()
         if requeued:
             log.info(f"requeued {requeued} message(s) whose retry delay elapsed")
 
+        recovered = queue_db.requeue_stale_claimed(STALE_CLAIM_SECONDS)
+        if recovered:
+            log.warning(f"recovered {recovered} message(s) stuck in 'claimed' "
+                        "(the spawn holding them must have died without finishing)")
+
         msg = queue_db.claim_next()
         if msg is not None:
             process_one(msg)
             continue  # check for more immediately, no sleep
-
-        state = queue_db.get_session_state()
-        now = _now_iso()
-
-        if state is not None and state["deadline"] and state["deadline"] > now:
-            time.sleep(POLL_INTERVAL_SECONDS)
-            continue
-
-        if state is not None and state["deadline"] and state["deadline"] <= now:
-            # Race window 1: something may have landed between the idle
-            # check above and committing to the wrap-up turn.
-            if queue_db.has_pending():
-                continue
-            run_wrapup_turn(state["session_id"])
-            # Race window 2: something may have landed while the
-            # (possibly slow) wrap-up turn itself was running.
-            if queue_db.has_pending():
-                log.info("new message arrived during wrap-up turn, session stays alive")
-                continue
-            queue_db.clear_session_state()
-            log.info(f"session {state['session_id']} ended")
-            continue
 
         time.sleep(POLL_INTERVAL_SECONDS)
 

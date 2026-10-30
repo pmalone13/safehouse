@@ -66,26 +66,45 @@ programming and don't do it unattended.
 
 ## How you got invoked, and how this session actually works
 
-You were spawned (or resumed) by `coordinator.py` because a message
-arrived on the FIFO queue (email or text — both channels are live; see
-TODO below for the texting approval history). The message that triggered this turn is described in
-your prompt. There is no persistent process sitting between messages —
-"the session" is a **resume ticket**: `coordinator.py` remembers your
-`session_id` for up to an hour (configurable) after you finish a turn,
-and resumes you (`claude --resume`) with full prior context if another
-message arrives in that window. Nothing costs anything while idle. If the
-window elapses with nothing new, you'll get one final turn to wrap up
-before the ticket is cleared — after that, the next message starts a
-genuinely fresh session. Because the coordinator only ever runs one
-message through one session at a time, there's no scenario where two
-sessions could be alive for this project at once — you don't need to
-check for or defer to "another session," that's structurally handled
-for you.
+**Redesigned 2026-10-30, live session with Paul** — supersedes the old
+"resume ticket" design described in this section before this date (that
+design is gone: no `session_state` table, no `--resume` between
+separate spawns, no coordinator-run wrap-up turn). The problem it
+replaced: a resume ticket only let a *later, separate* spawn pick up
+prior context — every queued message still got its own full spawn, its
+own reply, its own commit/push/Drive-sync, which is exactly what made a
+backlog (several messages piled up, e.g. after an outage, or just a few
+texts sent close together) show up to Paul as a burst of separate,
+individually-committed replies instead of one coherent response.
+
+You were spawned by `coordinator.py` because a message arrived on the
+FIFO queue (email, text, or `cron` — all live). The message that
+triggered this turn is described in your prompt. **You are now expected
+to stay alive and keep handling further messages yourself**, rather than
+finish this one and stop, for as long as the protocol in step 4 below
+says to. `coordinator.py` itself stays dumb: it claims one message,
+spawns you, and waits — however long you run — before it'll ever claim
+another. That's deliberate: while you're alive, nothing else gets
+spawned, so a message that arrives mid-session is safe to self-claim
+yourself (via the same `queue_db.claim_next()` the coordinator itself
+uses) with zero risk of the coordinator also grabbing it.
+
+Once you (or a future turn) actually decide to stop — per step 4 — that's
+final: there is no ticket, no resume. The *next* message, whenever it
+arrives, starts a genuinely fresh session with empty context. Any
+continuity across a lull shorter than the windows in step 4 comes
+entirely from this one process having stayed alive, not from anything
+being remembered afterward.
 
 ## What to do, every turn
 
 1. Read this file (you're doing that now), then read the current
-   project's own `CLAUDE.md` (see "Current project" below).
+   project's own `CLAUDE.md` (see "Current project" below). **Exception:
+   if you're handling a message you self-claimed mid-session per step 4
+   below (i.e. you already read this file once this session), you don't
+   need to re-read the whole thing again — it's already in your context.
+   Just re-check the "Current project" pointer if something upstream of
+   this message might have changed it.**
    `projects/safehouse/general/` is the designated catch-all for
    anything that isn't clearly a specific named project (automated
    notifications, conversational messages, small one-offs) — that's
@@ -130,8 +149,74 @@ for you.
    live usage percentage from inside an automated turn, and this log's
    own numbers are raw per-session token cost, not a percentage against
    the actual session/weekly rate-limit cap.
-4. Stop. The coordinator handles noticing the next message — you don't
-   need to poll for anything yourself.
+4. **Decide whether to stay alive and watch for more, or actually stop.**
+   This replaced a "resume ticket" design on 2026-10-30 — see "How you
+   got invoked" above for why. The problem being solved: without this
+   step, a backlog of several messages (after an outage, or just a few
+   texts sent close together) turns into several separate spawns, each
+   with its own commit and its own reply — which is what used to show up
+   to Paul as a burst of individual, slightly-redundant texts instead of
+   one coherent response.
+
+   - **If this message itself is Paul directing you to end cleanly**
+     (e.g. "please exit after this message for a clean restart," or
+     anything else expressing that intent in his own words — recognize
+     the intent, don't require exact phrasing) — do step 3's checkpoint,
+     reply confirming, then stop outright. Skip the waiting below
+     entirely. (If no live session is actually running when a message
+     like this arrives, there's nothing to restart — just say so.)
+   - **Otherwise, check whether you've hit a hard cap on this session's
+     own life**, regardless of how recently something arrived:
+     - Has it been `$SAFEHOUSE_FORCED_RESTART_SECONDS` (default 14400 =
+       4h) since *this session's own first message* (not since the
+       last one)? Track that yourself — e.g. note the wall-clock time
+       when you handle your first message this session, compare against
+       it each time you reach this step.
+     - Is it past 2am America/New_York, and did this session start
+       before that boundary? Check via `TZ=America/New_York date`, not
+       a hardcoded UTC offset (DST shifts it) — same discipline as
+       `cron_suv_watch.py`'s own documented approach.
+     If either is true: do step 3's checkpoint, then stop. This is a
+     deliberate periodic reset so a continuously-busy stretch can't
+     quietly keep growing this session's own context forever — the
+     exact mechanism that caused the worst outages logged in this
+     file's TODO section (a bloated, repeatedly-resumed session eventually
+     hitting "Prompt is too long" or a usage limit).
+   - **Otherwise, wait for up to `$SAFEHOUSE_IDLE_WINDOW_SECONDS`**
+     (default 3600 = 1h), capped at whichever of the two limits above
+     comes sooner (compute the remaining seconds to each and take the
+     min). Do this as **one single Bash call that waits internally**,
+     not a loop of separate tool calls — every round-trip back to you
+     adds to this session's own context, which is exactly what this
+     redesign is trying to avoid. Something like:
+     ```bash
+     deadline=$(( $(date +%s) + <seconds to wait, from the min above> ))
+     found=0
+     while [ "$(date +%s)" -lt "$deadline" ]; do
+       if [ "$(./venv/bin/python -c 'import queue_db; print(1 if queue_db.has_pending() else 0)')" = "1" ]; then
+         found=1; break
+       fi
+       sleep 20
+     done
+     echo $found
+     ```
+     - If that reports a message found: claim it yourself —
+       `./venv/bin/python -c "import queue_db, json; m = queue_db.claim_next(); print(json.dumps(dict(m)) if m else '')"`
+       (same atomic function the coordinator itself uses — never write
+       raw SQL for this, it's how two things could end up claiming the
+       same row). Handle it like any other message (steps 1-3, with
+       step 1's exception above), **mark it done the moment you've
+       actually handled it** —
+       `./venv/bin/python -c "import queue_db; queue_db.mark_done(<id>)"`
+       — don't batch several self-claimed messages before marking them,
+       since a crash mid-batch leaves the unmarked ones stuck in
+       'claimed' forever (there's a sweep in `coordinator.py` that
+       eventually recovers a stuck 'claimed' row, but only after a very
+       long timeout — don't rely on it, mark done promptly instead).
+       Then return to the top of this step.
+     - If the wait elapses with nothing: stop. Nothing further to do —
+       the coordinator will claim the next message, whenever it
+       arrives, into a genuinely fresh session.
 
 ## Tools available to you
 

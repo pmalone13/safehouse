@@ -1,5 +1,4 @@
-"""SQLite-backed FIFO message queue + session-continuity state for the
-safehouse coordinator.
+"""SQLite-backed FIFO message queue for the safehouse coordinator.
 
 Two tables:
   - messages: one row per inbound event (text, email, whatever channel
@@ -8,14 +7,18 @@ Two tables:
     (same convention bayhouse itself uses in analyzeBirdClips.py /
     assistant_queue/db.py) so it stays safe even if something ever claims
     concurrently, though today's coordinator is single-process/serial.
-  - session_state: a single row (id=1) holding the current resumable
-    Claude session_id and the deadline past which it should be treated
-    as expired. This is the "resume-ticket" -- no process stays resident
-    between messages; the coordinator just remembers this ticket and
-    resumes (`claude -p --resume <session_id>`) if a new message arrives
-    before the deadline, otherwise starts fresh. Persisted (not just
-    in-memory) specifically so a coordinator restart/bounce doesn't lose
-    the ability to resume mid-window.
+  - outage_notice / retry columns on messages: see coordinator.py.
+
+Session continuity (2026-10-30 redesign, see coordinator.py's own
+docstring) now lives entirely *inside* one long-lived Claude turn, which
+self-claims further messages via claim_next() as they arrive rather than
+the coordinator resuming a new spawn per message -- there is no
+session_state table anymore. One consequence: a message can land in
+'claimed' and never reach 'done'/'failed'/'retry_pending' if the process
+holding it dies mid-handling (crash, VM bounce, SPAWN_TIMEOUT_SECONDS
+kill). requeue_stale_claimed() below is the recovery path for that -- a
+'claimed' row older than any legitimate spawn could still be running is
+flipped back to 'unclaimed' so claim_next() picks it up again.
 
 Deliberately no multi-tenant capability/actor model here (unlike
 bayhouse's own rules/pairings tables) -- this box is single-user by
@@ -23,7 +26,7 @@ design.
 """
 import sqlite3
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -68,16 +71,6 @@ def init_db() -> None:
         _ensure_column(conn, "messages", "retry_count", "INTEGER NOT NULL DEFAULT 0")
         _ensure_column(conn, "messages", "next_retry_at", "TEXT")
         conn.execute("CREATE INDEX IF NOT EXISTS idx_messages_status ON messages(status)")
-        conn.execute(
-            """
-            CREATE TABLE IF NOT EXISTS session_state (
-                id INTEGER PRIMARY KEY CHECK (id = 1),
-                session_id TEXT,
-                deadline TEXT,
-                updated_at TEXT
-            )
-            """
-        )
         # Singleton row tracking the last time an outage SMS went out, so
         # one outage that fails many messages in a row (e.g. a usage-limit
         # window) triggers one text, not one per dropped message.
@@ -176,9 +169,9 @@ def mark_retry_pending(message_id: int, error: str, retry_count: int, next_retry
 def requeue_due_retries() -> int:
     """Flips any retry_pending message whose next_retry_at has passed back
     to 'unclaimed' so claim_next() picks it up through the ordinary
-    path -- deliberately not a separate claim mechanism, so resume-id
-    logic, done/failed handling, etc. all stay exactly as they are for
-    a normal message. Returns how many rows were flipped."""
+    path -- deliberately not a separate claim mechanism, so done/failed
+    handling etc. all stay exactly as they are for a normal message.
+    Returns how many rows were flipped."""
     with _connect() as conn:
         cur = conn.execute(
             """
@@ -187,6 +180,27 @@ def requeue_due_retries() -> int:
             WHERE status = 'retry_pending' AND next_retry_at IS NOT NULL AND next_retry_at <= ?
             """,
             (_now_iso(),),
+        )
+        return cur.rowcount
+
+
+def requeue_stale_claimed(staleness_seconds: float) -> int:
+    """Recovers a message stuck in 'claimed' because the process handling
+    it (or one it was self-claimed into, mid-turn) died before ever
+    marking it done/failed/retry_pending -- otherwise such a row has no
+    path back to being processed at all, since claim_next() only ever
+    looks at 'unclaimed'. Pass a staleness_seconds comfortably above
+    coordinator.py's SPAWN_TIMEOUT_SECONDS so this never touches a
+    message that's still legitimately being worked on."""
+    cutoff = (datetime.now(timezone.utc) - timedelta(seconds=staleness_seconds)).isoformat()
+    with _connect() as conn:
+        cur = conn.execute(
+            """
+            UPDATE messages
+            SET status = 'unclaimed', claimed_at = NULL
+            WHERE status = 'claimed' AND claimed_at IS NOT NULL AND claimed_at <= ?
+            """,
+            (cutoff,),
         )
         return cur.rowcount
 
@@ -214,28 +228,3 @@ def clear_outage_notice() -> None:
     inheriting whatever's left of the old throttle window."""
     with _connect() as conn:
         conn.execute("DELETE FROM outage_notice WHERE id = 1")
-
-
-def get_session_state() -> Optional[sqlite3.Row]:
-    with _connect() as conn:
-        return conn.execute("SELECT * FROM session_state WHERE id = 1").fetchone()
-
-
-def set_session_state(session_id: str, deadline_iso: str) -> None:
-    with _connect() as conn:
-        conn.execute(
-            """
-            INSERT INTO session_state (id, session_id, deadline, updated_at)
-            VALUES (1, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                session_id = excluded.session_id,
-                deadline = excluded.deadline,
-                updated_at = excluded.updated_at
-            """,
-            (session_id, deadline_iso, _now_iso()),
-        )
-
-
-def clear_session_state() -> None:
-    with _connect() as conn:
-        conn.execute("DELETE FROM session_state WHERE id = 1")

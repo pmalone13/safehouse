@@ -10,7 +10,15 @@ EnvironmentFile=/home/ubuntu/safehouse/.env
 ExecStart=/home/ubuntu/safehouse/venv/bin/python3 /home/ubuntu/safehouse/coordinator.py
 Restart=on-failure
 RestartSec=5
-Environment=SAFEHOUSE_SESSION_IDLE_TIMEOUT_SECONDS=3600
+# 2026-10-30 redesign: SESSION_IDLE_TIMEOUT_SECONDS (the old between-spawn
+# "resume ticket") is gone -- these now govern the in-turn stay-alive
+# protocol documented in root CLAUDE.md step 4. Values match what Paul
+# asked for: 1h idle before a session gives up, 4h forced restart even
+# under continuous activity, and a generous spawn ceiling since one
+# spawn can legitimately run most of a day now.
+Environment=SAFEHOUSE_IDLE_WINDOW_SECONDS=3600
+Environment=SAFEHOUSE_FORCED_RESTART_SECONDS=14400
+Environment=SAFEHOUSE_SPAWN_TIMEOUT_SECONDS=90000
 
 [Install]
 WantedBy=multi-user.target
