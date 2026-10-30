@@ -10931,3 +10931,31 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the Malones are settled in Bar Harbor
   for the Acadia leg; and the next scheduled SUV/truck cron fire is
   6pm Eastern today (2026-10-30).
+
+- 2026-10-30 ~17:5xZ: session wrap-up (idle window elapsed, no new
+  message). Two turns this session: queue id 726 (Paul asked that
+  backlog-recovery notifications be batched into one summary instead
+  of one text per message — logged as a new standing TODO entry
+  above, not built unattended since it needs a real `coordinator.py`
+  architecture change, replied by SMS offering to build it together
+  next time he's on SSH) and queue id 727 (Paul's "Yes," confirming
+  he wants to take that offer up at his next SSH session). Both
+  already fully handled, logged, committed, and pushed (`284cc39`,
+  `e2715aa`) before this wrap-up fired. Working tree confirmed clean
+  at this wrap-up (`git status --short` empty), so this entry is the
+  only change this turn makes. Drive sync still blocked on the
+  already-known missing-root-folder issue found at queue id 722
+  (Paul chose not to rebuild yet, confirmed still the case when
+  retried during queue id 727's own checkpoint) — not re-flagging
+  again, nothing new to add. Nothing outstanding heading into the
+  next turn beyond what's already on file: the new backlog-
+  notification-batching request (queue id 726/727) is waiting on
+  Paul's next SSH session to design/build; the missing Drive root
+  folder, the `coordinator.py` weekly-limit reset-time-parsing bug,
+  the public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are settled in Bar Harbor
+  for the Acadia leg; and the next scheduled SUV/truck cron fire is
+  6pm Eastern today (2026-10-30).
