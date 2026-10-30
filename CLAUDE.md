@@ -5345,33 +5345,35 @@ the pending `/sms-optin` build still live there.
   was needed this time (unclear why it self-healed; not something this
   VM can diagnose).
 
-- **Found 2026-10-30 ~10:3xZ, live session: the entire "safehouse"
-  root folder on Drive is gone — not a token problem, the folder
-  itself.** Discovered when Paul asked to verify Drive was back up:
-  auth works fine, but the root folder ID recorded in
-  `.drive_sync_state.json` (`1kQlLRVWDdItVC01Y3pk18xZ31m6u9cio`)
-  returns a plain 404, and a fresh Drive search for a folder named
-  "safehouse" — including trashed items — returns zero results. Not
-  sitting in Drive's trash, not findable by name; it's just gone, for
-  reasons this VM has no visibility into (Paul confirmed he didn't
-  knowingly delete it, chose not to investigate further yet — see
-  below). **Nothing was actually lost**: every project's real content
-  lives on local disk first (Drive is only ever the human-readable
-  mirror, written to after the fact) and everything git-tracks is
-  safe on GitHub regardless — this only affects the "check on Ted
-  without SSH" convenience, not any data. The fix, when Paul wants it
-  done, is straightforward and non-destructive: delete (or clear) the
-  stale `.drive_sync_state.json` so every remembered folder/file ID is
-  forgotten, then run `drive_sync.py`, which will recreate the whole
-  `safehouse` folder tree fresh from local disk (132 folders worth,
-  per the stale state file's own count). **Presented this choice to
-  Paul live; he chose not to rebuild yet** ("2" — hold off/investigate
-  first, not "1" — rebuild now). Do not rebuild the Drive mirror
-  unprompted — wait for Paul to actually ask for it. A future turn
-  that needs to check "is Drive still missing" can repeat the same
-  check (`files().list(q="name='safehouse' ...")`) without needing to
-  re-flag this if the answer is still no — only re-flag if something
-  changes (the folder reappears, or Paul asks for the rebuild).
+- ~~Found 2026-10-30 ~10:3xZ, live session: the entire "safehouse"
+  root folder on Drive is gone~~ **RESOLVED on its own by 2026-10-30
+  ~20:58Z (queue id 732).** Original finding: auth worked fine, but
+  the root folder ID recorded in `.drive_sync_state.json`
+  (`1kQlLRVWDdItVC01Y3pk18xZ31m6u9cio`) returned a plain 404, and a
+  fresh Drive search for a folder named "safehouse" — including
+  trashed items — returned zero results. Paul chose not to rebuild
+  it (deliberately not reconstructed from this end). Paul texted
+  "test google synch now" at queue id 732; re-checked directly rather
+  than assume — **that exact same folder ID is back and not
+  trashed**, and a fresh `drive_sync.py` run against it succeeded
+  clean (4 created, 15 updated, 879 unchanged, 1 pre-existing orphan).
+  As usual for this recurring class of Drive glitch, the underlying
+  cause (why a folder would 404/vanish-from-search for ~10h and then
+  simply reappear) is not diagnosable from this VM — not investigated
+  further, just reconfirmed working. **One new thing found while
+  checking, not previously known, flagged to Paul rather than acted
+  on**: there are now **two** Drive folders both named "safehouse"
+  (same `createdTime`, 2026-09-01, so this isn't a side effect of
+  today's outage) — the one just confirmed working
+  (`1kQlLRVWDdItVC01Y3pk18xZ31m6u9cio`, parented under what looks like
+  a Shared Drive, id `0ADw3PCjJ6i34Uk9PVA`) and a second, mostly-empty
+  one (`1pXvjKUijHn6EZQwKmf2kmEhC7TlYy505`, parented under a regular
+  My Drive folder, containing only a single `general` subfolder) that
+  `drive_sync.py` has never used and isn't referenced anywhere in
+  `.drive_sync_state.json`. Likely a leftover from some earlier setup
+  step, not something this turn created or touched — left alone
+  rather than deleted speculatively, since it's unclear which, if
+  either, Paul actually looks at by hand.
 
 - **Found 2026-10-30 (queue id 722, during a weekly-limit outage
   recovery): `coordinator.py`'s own usage-limit retry logic can't
@@ -11103,3 +11105,48 @@ thing that needs it, not because anything currently lives under it.
   an automated turn since; the Malones are settled in Bar Harbor for
   the Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
   Eastern today (2026-10-30).
+
+- 2026-10-30 ~20:49Z-20:59Z: this session continued live (no idle gap)
+  through four more messages under the redesigned "stay alive and
+  self-claim" protocol (first real exercise of it under genuine
+  conversation traffic, not just a quiet wrap-up). Queue id 729, text,
+  Paul: "Send bill message: 'you had power outage for 12 days or so.
+  I will fix to prevent happening again.'" — sent verbatim via
+  `ted_protocol.send_command()` (existing tooling), replied by SMS
+  confirming. Self-claimed queue id 730 (email, the monitor's own
+  independent pickup of Bill's reply to that send) — decrypted a
+  genuine error: *"something went wrong answering that on Bill's
+  end."* Retried once with a shorter rephrase; got the **identical
+  generic error** back ~14s later — two different phrasings failing
+  the same way points at something unstable on Bill's side right
+  after his 11-day outage, not a wording problem. Flagged that to
+  Paul by SMS rather than keep retrying. Self-claimed queue id 731
+  (email), confirmed via internalDate it was just the monitor's own
+  pickup of the same second-failure reply already handled — no new
+  action. Self-claimed queue id 732, text, Paul: "test google synch
+  now" — checked Drive directly rather than assume: the "safehouse"
+  root folder that had gone missing at queue id 722's checkpoint this
+  morning (404, unfindable by search, Paul chose not to rebuild) is
+  **back** on its own, and a full `drive_sync.py` run against it
+  succeeded clean (4 created, 15 updated, 879 unchanged). Marked that
+  TODO entry resolved above. Found and flagged (not acted on) a new,
+  separate, harmless fact while checking: two Drive folders are both
+  named "safehouse" — the real one just confirmed working, plus an
+  old, mostly-empty second one containing only a `general` subfolder,
+  never referenced by `drive_sync.py`'s own state file. Replied by
+  SMS. All four messages marked done individually, promptly, per the
+  new protocol's own rule. Working tree confirmed to have only this
+  root-file change at this checkpoint (the project-file edits for
+  queue id 729/730 are gitignored). Nothing outstanding heading into
+  the next turn beyond what's already on file: whether Bill's
+  send-command path recovers on its own (worth a plain retry later)
+  or needs Paul live to look at; the new backlog-notification-
+  batching request (queue id 726/727) is still waiting on Paul's next
+  SSH session; the `coordinator.py` weekly-limit reset-time-parsing
+  bug, the public-GitHub-repo finding (queue id 348), the v3
+  file-send session-collision architecture issue,
+  `poll_for_reply()`'s stale-reply bug (queue id 275), and the
+  `ssa.png`/`passport.jpg` Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones are
+  settled in Bar Harbor for the Acadia leg; and the next scheduled
+  SUV/truck cron fire is 6pm Eastern today (2026-10-30).
