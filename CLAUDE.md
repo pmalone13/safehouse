@@ -337,7 +337,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+741, 2026-10-31 ~22:00Z, channel `cron`, source `suv-replacement-watch`
+— 6pm Eastern scheduled fire. Ran the full four-region recipe (SUV +
+truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 149 unique hrefs, 19
+an exact href match to the ledger (130 not). **No new qualifying
+candidate** — all 130 traced to already-established exclusion
+categories via title+price+location cross-check (not individually
+re-fetched): the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern (~29 hits), the Joppa MD sedan cluster, already-logged
+qualifying finds resurfacing under fresh hashes (Lincoln Navigator
+Limited, Audi Q7 Prestige S-Line, GMC Sierra 1500 SLE2 Crew Cab
+Essex, 2004 Toyota Tundra DoubleCab V8 SR5 4WD, 1997 Land Rover
+Discovery 1), the same ambiguous/non-running listings already
+individually checked and excluded in prior runs, the 1995 Ford F-800
+flatbed/snowplow commercial truck already excluded earlier today
+(queue id 734), and the broad off-class/unibody/sedan/sports-car/
+classic/commercial/fire-truck/food-truck/kei-truck exclusion
+categories. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a193fd02eb33dff`). Moved the
+pointer here from `engineering/secure-agent-communication` (folded
+back into the live-projects list, nothing new since queue id 739).
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-31 ~22:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-01).
+
+Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 739, 2026-10-31 ~21:07Z, text channel, Paul:
 "Ted, Bill is unresponsive on RDP, can you ask for status." Confirmed
 `retry_count=0` before acting (ordinary traffic). Sent `STATUS` via
