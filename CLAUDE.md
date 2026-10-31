@@ -205,8 +205,36 @@ being remembered afterward.
        (same atomic function the coordinator itself uses — never write
        raw SQL for this, it's how two things could end up claiming the
        same row). Handle it like any other message (steps 1-3, with
-       step 1's exception above), **mark it done the moment you've
-       actually handled it** —
+       step 1's exception above) — **except for step 2's reply, under
+       one condition: backlog mode.** Added 2026-10-31 (queue id
+       726/727, Paul: "when there's a backlog of messages go through
+       all of them and then only send me one notification") — the
+       stay-alive redesign above already stopped a backlog from
+       spawning a separate session per message, but nothing stopped
+       each self-claimed message from still sending its own individual
+       reply, which is the actual thing Paul was seeing as a burst of
+       texts. Trigger: the claimed message's own `retry_count` field is
+       **> 0** — that's the signature of a message that previously
+       failed and is only going through now because an outage cleared,
+       not of Paul texting quickly (an ordinary message always claims
+       at `retry_count == 0`). While in backlog mode: do the real work
+       and step 3's checkpoint exactly as normal for each message, but
+       hold step 2's human-facing reply instead of sending it — keep a
+       short running note of what each one needed and what you did.
+       Stay in backlog mode across every further self-claimed message
+       that also has `retry_count > 0`. The moment you self-claim one
+       with `retry_count == 0` (ordinary traffic resuming), or the wait
+       below elapses with nothing left pending, backlog mode ends:
+       send **one** consolidated reply covering everything held (email
+       if long, SMS if short), then carry on normally. This doesn't
+       cover a project's own standing automated notifications that
+       aren't a reply to Paul about the backlog itself (e.g. the SUV
+       watch's "always email, even nothing new" rule) — those keep
+       firing exactly as their own project file says regardless of
+       backlog mode. A lone recovered message with nothing queued
+       behind it isn't a backlog either — just reply to it normally.
+       **Mark it done the moment you've actually handled it**, backlog
+       mode or not —
        `./venv/bin/python -c "import queue_db; queue_db.mark_done(<id>)"`
        — don't batch several self-claimed messages before marking them,
        since a crash mid-batch leaves the unmarked ones stuck in
@@ -216,7 +244,9 @@ being remembered afterward.
        Then return to the top of this step.
      - If the wait elapses with nothing: stop. Nothing further to do —
        the coordinator will claim the next message, whenever it
-       arrives, into a genuinely fresh session.
+       arrives, into a genuinely fresh session. If backlog mode was
+       still open when the wait started, this is also where its held
+       reply finally goes out, per the trigger above.
 
 ## Tools available to you
 
@@ -5385,6 +5415,28 @@ the pending `/sms-optin` build still live there.
   offering to build it together next time Paul's on SSH. Full detail
   in `projects/safehouse/general/CLAUDE.md`.
 
+  **RESOLVED 2026-10-31, live session, Paul present.** Answered the
+  open design question above: strictly post-outage `retry_pending`
+  rows (Paul's explicit choice between the two options offered), not
+  any stretch of ordinary messages — so a normal rapid back-and-forth
+  conversation still gets a reply per message, same as always. Built
+  as a new "backlog mode" rule in step 4 above (not a `coordinator.py`
+  change — the stay-alive redesign built the same day as this
+  complaint already stops a backlog from spawning a separate session
+  per message; what was still missing was telling the session itself
+  to stop replying to each one individually once it's in that
+  stay-alive loop). Trigger: a self-claimed message's own
+  `retry_count > 0` field — the actual signature of "this only went
+  through because an outage cleared," not guessed at structurally.
+  Verified the signal is real and already present on real rows rather
+  than invented: `queue.db` message ids 719-721 (recovered same
+  session, see the queue id 722 entry below) all carry
+  `retry_count=15`, confirming `retry_count` genuinely distinguishes a
+  backlog retry from a fresh message. Not yet exercised against a real
+  live outage (the next one to actually produce a multi-row
+  `retry_pending` backlog will be the first real test) — logged here
+  rather than claimed proven.
+
 - ~~Drive down again, `invalid_grant`, discovered 2026-10-30 ~10:1xZ
   at queue id 722's checkpoint~~ **Token issue resolved on its own by
   2026-10-30 ~10:3xZ (live session) — but replaced by a bigger
@@ -5467,6 +5519,32 @@ the pending `/sms-optin` build still live there.
   an edit to existing application code, needs Paul live. Full detail
   in `projects/suv-replacement/CLAUDE.md`'s 2026-10-30 entry and this
   file's own Current-project pointer above.
+
+  **RESOLVED 2026-10-31, live session, Paul present.** Built both
+  fixes named above, not just one: `_RESET_TIME_RE` now has an
+  optional date-prefix group (`"resets Oct 30, 10am (UTC)"`, full or
+  abbreviated month name, via a `calendar.month_abbr`/`month_name`
+  lookup) alongside the original time-only shape, and
+  `_parse_reset_time` uses the stated date directly when present
+  (rolling to next year only if that exact date has already passed
+  this year) instead of assuming "today or tomorrow." Verified against
+  the real failing text before trusting it: fed the exact queue id
+  719-721 error string (`"resets Oct 30, 10am (UTC)"`) through the
+  fixed function and confirmed it now resolves to 2026-10-30 10:00 UTC
+  instead of `None`. Also added
+  `USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS` (30m/1h/2h/4h/8h, then holds
+  at 8h) for the case the date-aware parse still doesn't recognize —
+  an unanticipated format, not this specific bug — so a genuinely
+  unparseable reset now survives ~4 days across its 15 retries instead
+  of giving up in ~7.5h on a flat 30-minute cadence. Tested both the
+  parser (8 cases: plain time-only still-ahead/already-passed exactly
+  as before, date-prefix with/without minutes, full month name, an
+  unrecognized month name correctly returning `None` rather than
+  guessing, a non-matching string) and `compute_retry`'s two branches
+  (parseable → reset+buffer; unparseable → the new capped backoff)
+  against synthetic and the real historical error text — all passed —
+  before restarting the live `safehouse-coordinator.service` to pick
+  it up. Confirmed clean restart, no startup errors.
 
 - **Found 2026-10-24 (queue id 675): the location/words ("safeutil
   status") emails are the dominant driver of recent token/usage-limit
@@ -11203,3 +11281,50 @@ thing that needs it, not because anything currently lives under it.
   346/347) all remain open and need Paul live to fix; the Malones are
   settled in Bar Harbor for the Acadia leg; and the next scheduled
   SUV/truck cron fire is 6pm Eastern today (2026-10-30).
+
+- 2026-10-31 ~14:4xZ: live direct interactive session (no queue id),
+  Paul present and directing — reviewing this file's own TODO notes in
+  light of the 2026-10-30 stay-alive session redesign and asking which
+  were now addressable. Analyzed and verified both candidates against
+  the real code/data before building anything, per Paul's explicit
+  "verify, then check with me" instruction: confirmed the queue id 722
+  reset-time-parsing bug was still live by testing `_RESET_TIME_RE`
+  directly against a date-prefixed reset string and finding it didn't
+  match, then confirming via `queue.db` that message ids 718-721
+  really did carry that exact error text with `retry_count=15`/
+  `status=failed` — i.e. it already cost real messages, not just a
+  theoretical risk; separately confirmed the queue id 726/727
+  batching request was only half-solved by the stay-alive redesign
+  (no more separate spawn per backlog message, but nothing yet
+  stopped each self-claimed message from still sending its own
+  individual reply). Asked Paul to resolve the one open design
+  question from the TODO itself (does "backlog" mean strictly
+  post-outage `retry_pending` rows, or any multi-message stretch) —
+  answered: strictly `retry_count > 0`, not ordinary rapid
+  conversation. Built both, live, with Paul directing throughout (the
+  hard boundary's explicit carve-out): `coordinator.py` gained a
+  date-aware `_RESET_TIME_RE`/`_parse_reset_time` (via a
+  `calendar.month_abbr`/`month_name` lookup, year-rollover only if the
+  stated date already passed this year) plus a capped exponential
+  `USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS` schedule for the rarer case a
+  reset string still doesn't parse at all; this file's own step 4
+  gained a new "backlog mode" rule gated on a self-claimed message's
+  `retry_count > 0`, holding each one's individual reply until the
+  backlog drains and sending one consolidated summary instead.
+  Tested the parser/retry logic against 8 synthetic cases plus the
+  real historical failing error text from queue ids 719-721 before
+  trusting it (all passed, confirmed in detail in the TODO section's
+  two now-resolved entries above), then restarted the live
+  `safehouse-coordinator.service` and confirmed a clean startup with
+  no errors. Neither fix has been exercised against a real live
+  outage yet — logged as verified-by-test, not yet verified-in-the-
+  wild. Nothing outstanding heading into the next turn beyond what's
+  already on file: whether Bill's send-command path has recovered on
+  its own (queue id 729/730) still needs a plain retry or Paul live;
+  the public-GitHub-repo finding (queue id 348), the v3 file-send
+  session-collision architecture issue, `poll_for_reply()`'s
+  stale-reply bug (queue id 275), and the `ssa.png`/`passport.jpg`
+  Drive-sync corruption finding (queue id 346/347) all remain open
+  and need Paul live to fix; the Malones are settled in Bar Harbor for
+  the Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-10-31).

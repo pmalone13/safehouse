@@ -38,6 +38,7 @@ that prior discussion, not duplicated here):
 Run standalone, long-lived (systemd unit: safehouse-coordinator.service):
     python coordinator.py
 """
+import calendar
 import json
 import os
 import re
@@ -97,9 +98,34 @@ RESET_BUFFER_SECONDS = 180  # cushion past the stated reset time, it's not alway
 PROMPT_TOO_LONG_RETRY_SECONDS = 300
 OTHER_BACKOFF_SECONDS = [120, 600, 1800, 3600, 3600]
 
-# Matches the "resets 11pm (UTC)" / "resets 4:20am (UTC)" shape actually
-# seen in Claude Code's own session/weekly-limit error text.
-_RESET_TIME_RE = re.compile(r"resets\s+(\d{1,2})(?::(\d{2}))?\s*(am|pm)\s*\(UTC\)", re.IGNORECASE)
+# Found 2026-10-30 (queue id 722): a WEEKLY usage-limit error reports a
+# reset more than ~24h out, and Claude's own error text reflects that with
+# a date prefix -- "resets Oct 30, 10am (UTC)" -- that the plain time-only
+# regex below never matched. That silently fell back to a flat 30-minute
+# retry (see USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS), which burned through
+# all of MAX_RETRIES_USAGE_LIMIT in ~7.5h, well short of the real
+# multi-day reset -- confirmed against queue.db: message ids 718-721 all
+# hit retry_count=15/status=failed with this exact date-prefixed text.
+# The date group is optional so the plain "resets 11pm (UTC)" /
+# "resets 4:20am (UTC)" shape (the common session/daily-limit case) still
+# matches exactly as before.
+_RESET_TIME_RE = re.compile(
+    r"resets\s+(?:([A-Za-z]{3,9})\s+(\d{1,2}),\s*)?(\d{1,2})(?::(\d{2}))?\s*(am|pm)\s*\(UTC\)",
+    re.IGNORECASE,
+)
+_MONTH_NUMBER = {}
+for _i in range(1, 13):
+    _MONTH_NUMBER[calendar.month_abbr[_i].lower()] = _i
+    _MONTH_NUMBER[calendar.month_name[_i].lower()] = _i
+
+# Fallback schedule when a usage-limit error's reset time can't be parsed
+# at all (an unanticipated format, not just the date-prefix case fixed
+# above -- that one's now handled directly). A flat 30-minute retry used
+# to apply here unconditionally, which is exactly what let a multi-day
+# weekly-limit outage exhaust all 15 retries in ~7.5h. This grows the gap
+# between retries instead, so an unparseable reset still survives most of
+# a week (~4 days across 15 retries) rather than giving up same-day.
+USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS = [1800, 3600, 7200, 14400, 28800]  # 30m,1h,2h,4h,8h, then hold at 8h
 
 
 @dataclass
@@ -131,19 +157,48 @@ def classify_error(error: str) -> str:
 
 
 def _parse_reset_time(error: str, now: datetime) -> Optional[datetime]:
-    """Extracts the UTC time a usage-limit error says it resets at, as
-    the next occurrence of that time (today if still ahead, else
-    tomorrow). Returns None if the error text doesn't match."""
+    """Extracts the UTC time a usage-limit error says it resets at.
+
+    Two shapes, both seen in real Claude Code error text:
+      - time-only ("resets 11pm (UTC)") -- a session/daily limit, reset
+        is always within the next 24h, so this resolves to the next
+        occurrence of that time (today if still ahead, else tomorrow).
+      - date+time ("resets Oct 30, 10am (UTC)") -- a weekly limit, reset
+        can be days out, so the stated date is used directly rather than
+        assumed to be today/tomorrow.
+    Returns None if the error text doesn't match at all, or names a month
+    this doesn't recognize -- never guesses at a reset time it can't
+    actually read.
+    """
     m = _RESET_TIME_RE.search(error)
     if not m:
         return None
-    hour = int(m.group(1)) % 12
-    if m.group(3).lower() == "pm":
+    month_name, day_str, hour_str, minute_str, ampm = m.groups()
+    hour = int(hour_str) % 12
+    if ampm.lower() == "pm":
         hour += 12
-    minute = int(m.group(2)) if m.group(2) else 0
-    candidate = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    minute = int(minute_str) if minute_str else 0
+
+    if month_name is None:
+        candidate = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+        if candidate <= now:
+            candidate += timedelta(days=1)
+        return candidate
+
+    month = _MONTH_NUMBER.get(month_name.lower())
+    if month is None:
+        return None
+    day = int(day_str)
+    try:
+        candidate = now.replace(month=month, day=day, hour=hour, minute=minute,
+                                 second=0, microsecond=0)
+    except ValueError:
+        return None  # e.g. a stated day that doesn't exist in this year's month
     if candidate <= now:
-        candidate += timedelta(days=1)
+        try:
+            candidate = candidate.replace(year=candidate.year + 1)
+        except ValueError:
+            return None  # e.g. Feb 29 landing on a non-leap year
     return candidate
 
 
@@ -162,9 +217,12 @@ def compute_retry(error: str, retry_count: int) -> Optional[datetime]:
         if retry_count >= MAX_RETRIES_USAGE_LIMIT:
             return None
         reset_at = _parse_reset_time(error, now)
-        if reset_at is None:
-            reset_at = now + timedelta(minutes=30)
-        return reset_at + timedelta(seconds=RESET_BUFFER_SECONDS)
+        if reset_at is not None:
+            return reset_at + timedelta(seconds=RESET_BUFFER_SECONDS)
+        delay = USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS[
+            min(retry_count, len(USAGE_LIMIT_FALLBACK_BACKOFF_SECONDS) - 1)
+        ]
+        return now + timedelta(seconds=delay)
 
     if kind == "prompt_too_long":
         if retry_count >= MAX_RETRIES_OTHER:
