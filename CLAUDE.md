@@ -337,7 +337,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 735,
+**Current project**: `projects/sailboat/CLAUDE.md` — queue id 738,
+2026-10-31 ~19:44Z, text channel, Paul: "Please start a new reminder
+for a project called sailboat. Kind of like the SUV where we start
+monitoring Craigslist." New project created, modeled directly on
+`suv-replacement` (same cron-watch pattern). **Not built** — the
+actual search/cron automation needs Paul live on SSH to write the
+script and wire up the crontab entry, same posture as every other
+cron build in this system (`cron_suv_watch.py` itself was built that
+way, 2026-10-08). Replied by SMS confirming the project exists and
+asking the open criteria questions (boat type/size/price ceiling/
+year/condition/trailer/region/rigging/must-haves) needed before a
+search recipe can be written. Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 735/736). Full detail in `projects/sailboat/
+CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 735,
 2026-10-31 ~19:24Z, text channel, Paul: "Packing for move tomorrow.
 Going to Vermont next. Ask Bill for status and share, along with
 yours." Confirms the next trip leg: Bar Harbor/Acadia -> Vermont
