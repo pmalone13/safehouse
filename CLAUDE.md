@@ -337,7 +337,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/sailboat/CLAUDE.md` — queue id 738,
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 739, 2026-10-31 ~21:07Z, text channel, Paul:
+"Ted, Bill is unresponsive on RDP, can you ask for status." Confirmed
+`retry_count=0` before acting (ordinary traffic). Sent `STATUS` via
+the already-built `ted_protocol` tooling, verified the reply's real
+Gmail `internalDate` against the send time (not `poll_for_reply()` —
+its stale-reply bug, queue id 275, is still unfixed) — clean reply,
+~44s turnaround, no repeat of the queue id 730 error. Bill's status:
+birdClipper/dashboard_server/logging_server/text_monitor/
+email_topic_monitor/ted_protocol_monitor all up, `voice_monitor`/
+`virtual_device_bayhouseAck` still down (the long-standing stable
+pattern), last bird clip unchanged at 2026-10-17T17:25:35. Flagged a
+real distinction to Paul rather than just relay the status: the Ted
+Protocol's own health check going through means Bill is up and
+processing email-based protocol messages, but says nothing about RDP
+specifically — a separate OS-level service/network path the protocol
+doesn't touch — so this confirms Bill isn't fully down without
+explaining or ruling out an RDP-specific problem. Replied by SMS.
+Moved the pointer here from `sailboat` (folded back into the
+live-projects list, nothing new since queue id 738). Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/sailboat/CLAUDE.md` — queue id 738,
 2026-10-31 ~19:44Z, text channel, Paul: "Please start a new reminder
 for a project called sailboat. Kind of like the SUV where we start
 monitoring Craigslist." New project created, modeled directly on
