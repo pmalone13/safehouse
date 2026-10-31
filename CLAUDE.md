@@ -337,7 +337,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 742, 2026-10-31 ~22:12Z, text channel, Paul:
+"Ask Bill to send me email as test." Confirmed `retry_count=0`
+(ordinary traffic). Sent a free-form task via the already-built
+`ted_protocol` tooling, verified the reply's real Gmail `internalDate`
+against the send time rather than trust `poll_for_reply()` (its
+stale-reply bug, queue id 275, is still unfixed) — genuine reply in
+~37s. Confirmed two things: Bill's free-form-send path has fully
+recovered since the queue id 730 "something went wrong" failure two
+messages back, and Bill genuinely cannot send an email himself — no
+email/internet/device access from his own channel, only project notes
+and a text-style reply — he'd need a `RUN <pairing>` set up on Paul's
+side for that, or Paul sending the test directly. Replied by SMS with
+both findings. Also fixed two small script call-signature mistakes
+mid-turn: `ted_protocol.send_command()` needs a `service` object as
+its first arg, and `google_client.download_attachment()` takes the
+whole attachment dict as its third arg, not a bare attachment id.
+Moved the pointer here from `suv-replacement` (folded back into the
+live-projects list, nothing new since queue id 741). Full detail in
+`projects/engineering/secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 741, 2026-10-31 ~22:00Z, channel `cron`, source `suv-replacement-watch`
 — 6pm Eastern scheduled fire. Ran the full four-region recipe (SUV +
 truck + five diesel-specific queries, washingtondc/annapolis/
@@ -11449,6 +11470,24 @@ thing that needs it, not because anything currently lives under it.
   already decrypted directly in queue id 735's own turn minutes
   earlier (received 19:26:30Z, right after that 19:25:24Z send /
   ~19:26:10Z reply). No new content, no reply sent.
+
+- 2026-10-31 ~22:12Z: fresh session, queue id 742, text channel,
+  Paul: "Ask Bill to send me email as test." Sent a free-form task to
+  Bill via the already-built `ted_protocol` tooling, verified the
+  reply's real Gmail `internalDate` against the send time rather than
+  trust `poll_for_reply()` (its stale-reply bug, queue id 275, is
+  still unfixed) — genuine reply in ~37s, confirming two things: the
+  free-form-send path has fully recovered since the queue id 730
+  failure, and Bill genuinely can't send an email himself (no email/
+  internet/device access from his own channel) — he'd need a `RUN
+  <pairing>` on Paul's side for that, or Paul sending the test
+  directly. Replied by SMS. Also fixed two small call-signature
+  mistakes mid-turn (`ted_protocol.send_command()` needs a `service`
+  arg; `download_attachment()` takes the whole attachment dict, not
+  just its id). Full detail in `projects/engineering/
+  secure-agent-communication/CLAUDE.md`. Moved the Current-project
+  pointer here from `suv-replacement` (folded back into the
+  live-projects list, nothing new since queue id 741).
 
 - 2026-10-31 ~22:06Z: fresh session, queue id 732, text channel,
   Paul: "test google synch now" — the real content here was already
