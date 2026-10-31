@@ -337,7 +337,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 735,
+2026-10-31 ~19:24Z, text channel, Paul: "Packing for move tomorrow.
+Going to Vermont next. Ask Bill for status and share, along with
+yours." Confirms the next trip leg: Bar Harbor/Acadia -> Vermont
+(Dorset, per the already-booked itinerary), departing 2026-11-01.
+Sent `STATUS` to Bill via the already-built `ted_protocol` tooling,
+verified the reply's real Gmail `internalDate` against the send time
+rather than trust `poll_for_reply()` (its stale-reply bug, queue id
+275, is still unfixed) — genuine reply in ~46s, a clean success this
+time (unlike the queue id 730 failure two messages earlier). Bill's
+status: all core services up (birdClipper/dashboard_server/
+logging_server/text_monitor/email_topic_monitor/ted_protocol_monitor),
+`voice_monitor`/`virtual_device_bayhouseAck` still down (the
+long-standing stable pattern), last bird clip 2026-10-17T17:25:35 —
+about two weeks old, no new capture since, worth watching but not an
+outage signal on its own since every monitored service reports up.
+Checked Ted's own status directly: queue healthy (10 done/0 failed in
+the last 24h), all three live services active, Gmail and Drive both
+confirmed working live. Replied by SMS with both statuses plus well
+wishes for tomorrow's move. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 734). Full detail in
+`projects/new-england/CLAUDE.md` and `projects/engineering/
+secure-agent-communication/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 734, 2026-10-31 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — the 9am Eastern scheduled fire. Ran the
 full four-region recipe (SUV + truck + five diesel-specific queries,
@@ -11328,3 +11353,26 @@ thing that needs it, not because anything currently lives under it.
   and need Paul live to fix; the Malones are settled in Bar Harbor for
   the Acadia leg; and the next scheduled SUV/truck cron fire is 6pm
   Eastern today (2026-10-31).
+
+- 2026-10-31 ~19:2xZ: fresh session, queue id 735, text channel,
+  Paul: "Packing for move tomorrow. Going to Vermont next. Ask Bill
+  for status and share, along with yours." Already fully handled,
+  logged, and committed as part of this checkpoint. Confirmed
+  retry_count=0 before acting (ordinary traffic, not backlog mode).
+  Sent STATUS to Bill, verified the reply's real Gmail timestamp
+  rather than trust poll_for_reply() -- clean success in ~46s (the
+  send_command() path recovered fine from the queue id 730 failure
+  two messages earlier; this was a different command type, STATUS
+  not a free-form send, so not conclusive on its own). Bill: all core
+  services up, voice_monitor/bayhouseAck still down (stable pattern),
+  last bird clip ~2 weeks stale. Checked Ted's own status directly:
+  queue healthy, all services active, Gmail+Drive both OK. Replied by
+  SMS with both. Moved the Current-project pointer to new-england
+  from suv-replacement. Nothing outstanding heading into the next
+  turn beyond what's already on file: the public-GitHub-repo finding
+  (queue id 348), the v3 file-send session-collision architecture
+  issue, poll_for_reply()'s stale-reply bug (queue id 275), and the
+  ssa.png/passport.jpg Drive-sync corruption finding (queue id
+  346/347) all remain open and need Paul live to fix; the Malones
+  depart Bar Harbor for Vermont tomorrow (2026-11-01); and the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-10-31).
