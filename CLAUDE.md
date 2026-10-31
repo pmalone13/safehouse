@@ -11471,6 +11471,13 @@ thing that needs it, not because anything currently lives under it.
   earlier (received 19:26:30Z, right after that 19:25:24Z send /
   ~19:26:10Z reply). No new content, no reply sent.
 
+- 2026-10-31 ~22:15Z: self-claimed queue id 743, email channel,
+  subject "Bayhouse" — confirmed via Gmail message id
+  (`1a1940665f8e8ed1`) it's just the email-monitor's own independent
+  pickup of the exact same reply already decrypted in queue id 742's
+  turn two minutes earlier. No new content, no reply sent. Pointer
+  stayed on `engineering/secure-agent-communication`, no move needed.
+
 - 2026-10-31 ~22:12Z: fresh session, queue id 742, text channel,
   Paul: "Ask Bill to send me email as test." Sent a free-form task to
   Bill via the already-built `ted_protocol` tooling, verified the
