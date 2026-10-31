@@ -308,6 +308,39 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+734, 2026-10-31 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — the 9am Eastern scheduled fire. Ran the
+full four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 142 unique hrefs, 16 an exact href match to the
+ledger (126 not). **Found one new qualifying candidate**: a 2002
+Dodge Ram 2500, 5.9L Cummins turbo diesel, automatic, 74,500 mi,
+clean title, $34,900, Broad Run/Warrenton VA — fetched the listing
+page directly to confirm mileage/title/fuel (not shown on the search
+card); no cab type stated, but qualifies under the standing diesel-
+equivalent-class exemption from the crew-cab rule (queue id 208) — a
+5.9L Cummins in a 2500 clears the 6,000 lb tow gate by a wide margin
+regardless of cab. $24,900 over the nominal $10k ceiling, emailed
+anyway per the standing over-budget-but-qualifying pattern
+(`1a1920fe9ee7e735`). Also excluded a genuinely new commercial
+listing without a fetch (1995 Ford F-800 12-valve Cummins flatbed/
+snowplow truck, $23,500, Bristow VA — medium-duty commercial
+chassis, same established exclusion category as every other dump/
+flatbed/utility truck in this ledger). Everything else traced to
+already-established exclusion patterns via title+price+location
+cross-check (the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern, the Joppa MD sedan cluster, already-logged qualifying finds
+resurfacing under fresh hashes, the same ambiguous listings already
+individually checked and excluded in prior runs, and the broad
+off-class/unibody/sedan/sports-car/classic/commercial/fire-truck/
+food-truck/kei-truck exclusion categories). Moved the pointer here
+from `engineering/secure-agent-communication` (folded back into the
+live-projects list, nothing new since queue id 728/729-732). Full
+detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-31 ~13:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-10-31).
+
+Previous pointer, same project — queue id
 733, 2026-10-30 ~22:00Z, channel `cron`, source
 `suv-replacement-watch` — the 6pm Eastern scheduled fire. Ran the
 full four-region recipe (SUV + truck + five diesel-specific queries,
@@ -324,11 +357,8 @@ classic/commercial exclusion categories — including a new 2009 Ram
 1500 SLT AWD, Glyndon MD, excluded as a no-crew-cab-claim half-ton).
 **No new qualifying candidate.** Emailed Paul a "checked, nothing
 new" note per the standing rule (queue id 287, `1a18ed5853fdee04`).
-Moved the pointer here from `engineering/secure-agent-communication`
-(folded back into the live-projects list, nothing new since queue id
-728/729-732). Full detail in `projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`'s new 2026-10-30 ~22:00Z section. Next
-scheduled fire: 9am Eastern tomorrow (2026-10-31).
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-10-30 ~22:00Z section.
 
 Previous pointer, `projects/engineering/secure-agent-communication/
 CLAUDE.md` — queue id 728, 2026-10-30 ~20:39Z, email channel, a
