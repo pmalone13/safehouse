@@ -11449,3 +11449,28 @@ thing that needs it, not because anything currently lives under it.
   already decrypted directly in queue id 735's own turn minutes
   earlier (received 19:26:30Z, right after that 19:25:24Z send /
   ~19:26:10Z reply). No new content, no reply sent.
+
+- 2026-10-31 ~22:06Z: fresh session, queue id 732, text channel,
+  Paul: "test google synch now" — the real content here was already
+  fully handled on 2026-10-30 (the entry for queue id 732 further up
+  this log: found the "safehouse" Drive root folder back after
+  going missing, ran a clean catch-up sync, replied by SMS). Checked
+  `queue.db` directly rather than redo any of that work: the row had
+  sat in `claimed` status for ~25 hours with `retry_count=0` and no
+  `mark_done` ever recorded — that live session must have written its
+  commit/log entry but ended (crash or otherwise) before reaching the
+  actual `mark_done(732)` call, so the row sat orphaned until
+  `coordinator.py`'s own `requeue_stale_claimed()` sweep (threshold
+  `STALE_CLAIM_SECONDS` = `SPAWN_TIMEOUT_SECONDS` (~25h) + 5min) caught
+  it and respawned this session — the first observed real-world
+  firing of that sweep, confirming it works exactly as the sweep's own
+  code comments and the step-4 "mark done promptly, don't rely on the
+  sweep" warning describe. Re-verified rather than trusted the stale
+  log: both Drive "safehouse" folders (the real working one and the
+  known-harmless empty duplicate) are still present, and a fresh
+  `drive_sync.py` run succeeded clean (0 created, 3 updated, 897
+  unchanged, 1 pre-existing orphan). No new reply sent — nothing
+  changed since the original reply, and this is a recovered duplicate
+  of already-answered content, not fresh output. Marked message 732
+  `done` directly via `queue_db.mark_done()`. Current-project pointer
+  left on `suv-replacement` (no project-relevant content here).
