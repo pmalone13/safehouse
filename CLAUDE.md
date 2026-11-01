@@ -337,7 +337,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/managing-paul/monitoring-weed-effect/
+CLAUDE.md` — queue id 752, 2026-11-01 ~23:54Z, text channel, Paul:
+"What are the marijuana laws in VT." Motivated by the just-arrived
+Dorset VT stop (queue id 751) rather than a lettered timestamp
+marker for this thread. Used `WebSearch` to confirm current 2026 law:
+2oz flower/10g hash public possession limit (doubled from 1oz/5g by
+S.278, effective 2026-07-01), 6-plant/household home grow (2 mature,
+4 immature, doesn't count against the public limit if stored securely
+at home), and public smoking/consuming is illegal ($150 fine, private
+property only). Replied by SMS
+(`SMd23092019d4ed6b2cccd7727d6933dae`). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 751). Full detail in `projects/managing-paul/
+monitoring-weed-effect/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 751, 2026-11-01 ~23:36Z, text channel, Paul: "We are in dorsett VT.
 Unpacking." Confirms arrival at the booked Dorset VT stop (the
 destination verified at queue id 748/749), ~2 hours after the last
