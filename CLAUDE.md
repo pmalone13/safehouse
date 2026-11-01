@@ -338,6 +338,26 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+749, 2026-11-01 ~21:59Z, text channel, Paul: "Hey Ted or about 100 mi
+or 50 70 mi out from our place in Vermont. Hey can you just verify
+that you're getting my emails with location." Verified for real
+rather than just said "yes": Gmail has the full run of "safeutil
+status" emails arriving on the standing hourly cadence (queue id
+687), most recent landing ~41 min before this text, and the local
+spool (`projects/location-tracker/spool/2026-11-01.jsonl`) shows it
+ingested cleanly with its own per-second GPS trace — the pipeline is
+genuinely working end to end, not just sitting unprocessed in an
+inbox. Used the last fix in that email (lat 43.7595/-72.2340, on
+US-2 near Lancaster NH — confirming the no-toll Franconia Notch
+route recommended at queue id 748 is the one actually being driven)
+to compute a real distance to the Dorset VT destination: straight-
+line ~56mi, so realistic driving distance ~65-75mi — closer to
+Paul's own "50-70" guess than his "100" one. Replied by SMS (two
+messages, the second a quick CT/ET timezone-label correction to the
+first). Pointer stayed here, no move needed since queue id 748. Full
+detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 748, 2026-11-01 ~14:11Z, text channel (MMS), Paul: "Here is our
 route. Long drive so not too interested in stopping too much but is
 there a recommended route that shows stuff we haven't seen? Note we
