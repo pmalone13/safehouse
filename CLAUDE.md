@@ -338,6 +338,14 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 745, 2026-11-01 ~12:34Z, text channel, Paul: "Morning, how are u ?"
+Plain conversational check-in, same shape as queue id 700. Queried
+`queue.db` fresh (11 messages done, 0 failures in the last 24h) and
+confirmed all three live services active. Replied by SMS with the
+real numbers plus a Vermont-trip check-in. Pointer stayed here, no
+move needed since queue id 744.
+
+Previous pointer, same project — queue
 id 744, 2026-11-01 ~02:24Z, text channel, Paul: "ted, what branch are
 we on?" Plain meta/system question about this repo's own git state,
 confirmed directly (`git branch --show-current`): `main`, clean
