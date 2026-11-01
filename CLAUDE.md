@@ -337,7 +337,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+751, 2026-11-01 ~23:36Z, text channel, Paul: "We are in dorsett VT.
+Unpacking." Confirms arrival at the booked Dorset VT stop (the
+destination verified at queue id 748/749), ~2 hours after the last
+location fix placed him ~65-75mi out — consistent with the distance
+estimate given at queue id 749. Plain status update, no question
+asked. Replied by SMS (`SM2116ac7582110e5670c4c86a3d1aa683`) with a
+short acknowledgment and an offer for area recs. Moved the pointer
+here from `suv-replacement` (folded back into the live-projects
+list, nothing new since queue id 750). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 750, 2026-11-01 ~22:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
