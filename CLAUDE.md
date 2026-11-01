@@ -337,7 +337,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+748, 2026-11-01 ~14:11Z, text channel (MMS), Paul: "Here is our
+route. Long drive so not too interested in stopping too much but is
+there a recommended route that shows stuff we haven't seen? Note we
+have seen lots of coastal views." Direct follow-up to queue id 737's
+still-open routing question, now with a real GPS screenshot attached
+— the webhook doesn't forward MMS image bodies (the known gap),
+fetched it directly via the Twilio Media API instead. Confirmed the
+destination is 39 Dorset View Ln #1 (Dorset VT, the already-booked
+stop) and that Google Maps offered two real options from Bar Harbor:
+the highlighted default (7h7m, $5.18 tolls) and an alternate (7h18m,
+no tolls) — both run through New Hampshire, not Massachusetts,
+resolving queue id 737's open question partway. Used `WebSearch` to
+confirm the toll/time signature matches a well-known pattern for
+this corridor: the tolled default almost certainly continues down
+I-95 through Portsmouth/coastal NH (more of the coast they've
+already seen all week), while the no-toll alternate matches the
+classic US-2 inland route through Bethel ME and the White
+Mountains/Franconia Notch (I-93) — real mountain scenery instead,
+only 11 min longer, saves the toll too. Recommended the no-toll
+alternate for that reason. Kept stops minimal per Paul's own ask —
+noted Franconia Notch needs zero detour (I-93 runs straight through
+it), with the Basin/Cannon Mountain pullout there as an optional
+~5min leg-stretch if wanted. Replied by SMS
+(`SMd8f0be9b8f3a6e4c9913692eff2dc6ca`). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 747, 2026-11-01 ~13:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
