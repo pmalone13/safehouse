@@ -337,7 +337,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+746, 2026-11-01 ~12:36Z, text channel, Paul: "Have not left Maine
+yet, will leave by 10. Will tell u route when we go." Plain status
+update ahead of the planned Vermont leg, no question asked. Replied
+by SMS with a short acknowledgment. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list,
+nothing new since queue id 745).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 745, 2026-11-01 ~12:34Z, text channel, Paul: "Morning, how are u ?"
 Plain conversational check-in, same shape as queue id 700. Queried
 `queue.db` fresh (11 messages done, 0 failures in the last 24h) and
