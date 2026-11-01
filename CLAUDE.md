@@ -337,7 +337,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 747, 2026-11-01 ~13:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/
+`<110,000 mi`). 146 unique hrefs, 16 an exact href match to the
+ledger (130 not). **No new qualifying candidate.** Individually
+fetched the one genuinely new listing (1978 Ford F-250 Ranger XLT
+4x4 "restomod," $28,500, 19,017 mi, Leesburg VA) and confirmed no
+crew-cab claim via its own listing page — excluded on the same
+standing non-diesel-no-crew-cab rule, also well over the nominal
+ceiling. Everything else traced to already-established exclusion
+patterns. No email sent. Moved the pointer here from `new-england`
+(folded back into the live-projects list, nothing new since queue
+id 746). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-01 ~13:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-01).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 746, 2026-11-01 ~12:36Z, text channel, Paul: "Have not left Maine
 yet, will leave by 10. Will tell u route when we go." Plain status
 update ahead of the planned Vermont leg, no question asked. Replied
