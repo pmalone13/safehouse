@@ -337,7 +337,35 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 750, 2026-11-01 ~22:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 144 unique hrefs, 15 an exact href match to the ledger (129
+not) — essentially the identical set to the 9am run earlier today,
+consistent with very little real Craigslist turnover in nine hours.
+**No new qualifying candidate.** Everything traced to the same
+already-established exclusion categories as the 9am run (Houston-TX
+"DIESEL OF HOUSTON" dealer cross-posts, the Joppa MD sedan cluster,
+already-logged qualifying finds resurfacing under fresh hashes, the
+same ambiguous/non-running listings already individually checked and
+excluded in prior runs, and the broad off-class/unibody/sedan/
+sports-car/classic/commercial/fire-truck/food-truck/kei-truck
+exclusion categories). **Caught and fixed a real gap**: this
+morning's 9am fire (queue id 747) found no new qualifying candidate
+either but never actually sent the standing "checked, nothing new"
+email required by the queue id 287 rule — checked Gmail Sent mail
+directly to confirm (last SUV-watch email on file was from 10/31),
+then sent one combined "checked, nothing new" email covering both
+today's fires (`1a1995aa5341e010`) rather than let the gap stand
+silently. Moved the pointer here from `new-england` (folded back
+into the live-projects list, nothing new since queue id 749). Full
+detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-01 ~22:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-02).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 749, 2026-11-01 ~21:59Z, text channel, Paul: "Hey Ted or about 100 mi
 or 50 70 mi out from our place in Vermont. Hey can you just verify
 that you're getting my emails with location." Verified for real
