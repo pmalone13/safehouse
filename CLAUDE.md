@@ -337,7 +337,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 760,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 761,
+2026-11-02 ~17:21Z, text channel, Paul: "Is it affiliated with a
+religion?" Fifth message in the same BBA thread, self-claimed
+mid-session (`retry_count=0`, ordinary traffic). Used `WebSearch` to
+confirm: no current religious affiliation (secular/nondenominational,
+no creed-based discrimination); checked the historical "Seminary"
+name (1860-1980s) specifically since that word often implies a
+religious founding, found no evidence of a specific denomination
+either way. Replied by SMS (`SM56c3db2d767a25ab428c2dbc67e88fd6`).
+Pointer stayed here, no move needed since queue id 760.
+
+Previous pointer, same project — queue id 760,
 2026-11-02 ~17:19Z, text channel, Paul: "What percentage are the
 graduating class are local versus external tuition payers." Fourth
 message in the same BBA thread, self-claimed mid-session
