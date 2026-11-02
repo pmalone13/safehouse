@@ -337,7 +337,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — live
+interactive session (no queue id), Paul: "looking for a 4-5 mile walk
+that could be bicycled because Nala is with us. Can you recommend
+something near us, happy to drive up to 20 minutes." Used `WebSearch`
+to rule out the technical singletrack options right next to Dorset
+(not dog+bike-friendly) and recommended the Historic Marble Rail
+Trail/Manchester Rec Path (flat, wide crushed-stone former rail bed,
+dog-leash-friendly, North Road trailhead ~6-7 miles/well under 20 min
+from Dorset, out-and-back so any 4-5mi target is achievable), with the
+paved Battenkill Pathway as a shorter backup. Answered directly
+in-session, no SMS/email needed. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list, nothing
+new since queue id 763).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 763, 2026-11-02 ~19:31Z, text channel, Paul: "Are u up and
 available?" Plain attention-check, same shape as past bare checks
 (queue ids 171/173/314/674/745/753). Confirmed `retry_count=0`
