@@ -337,7 +337,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 758,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 759,
+2026-11-02 ~17:16Z, text channel, Paul: "What percentage of the high
+school seniors go to college?" Third message in the same Burr and
+Burton thread (follows queue ids 757/758), self-claimed mid-session
+(`retry_count=0`, ordinary traffic, not backlog mode). Used
+`WebSearch` to confirm via Niche's own school data: 84% of BBA
+seniors go on to 4-year colleges (2-year/community college enrollment
+not separately reported anywhere found). Replied by SMS
+(`SM4c3840baee825ebbb39e93f21910b7d7`). Pointer stayed here, no move
+needed since queue id 758.
+
+Previous pointer, same project — queue id 758,
 2026-11-02 ~16:57Z, text channel, Paul: "Is there an entrance exam
 for the town centers" — read as dictation garble for "sending towns/
 town students," a direct follow-up to queue id 757's Burr and Burton
