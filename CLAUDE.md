@@ -11775,3 +11775,24 @@ thing that needs it, not because anything currently lives under it.
   of already-answered content, not fresh output. Marked message 732
   `done` directly via `queue_db.mark_done()`. Current-project pointer
   left on `suv-replacement` (no project-relevant content here).
+
+- 2026-11-02 ~19:0xZ: same stuck-row pattern as queue id 732, this
+  time for queue id 758 (the Burr and Burton entrance-exam/sending-
+  town question). Checked `queue.db` directly before redoing any
+  work: the row was `claimed` with `error: "You've hit your session
+  limit · resets 7pm (UTC)"` and `retry_count=1` — but the real work
+  had already fully landed: commit `40ec47f` ("Log queue id 758...")
+  exists, timestamped 16:59:55Z, and a direct Twilio API query
+  confirmed SMS `SMac5ed74114a47f089121166c756c0d09` actually
+  delivered at 16:59:21Z with the real answer. So the original
+  session finished the work and its own git checkpoint, then hit the
+  session-limit error on some later step (likely `log_utilization.py`
+  or the Drive sync, after the commit had already landed) — leaving
+  the queue row claimed/retry-pending even though nothing was
+  actually missing. `git log` also already shows three later messages
+  (759/760/761) committed on top of this, confirming the system had
+  moved on cleanly in the meantime. No new reply sent (duplicate of
+  already-delivered content). Marked message 758 `done` directly via
+  `queue_db.mark_done()`. No pointer move — stayed `new-england`,
+  matching this file's own Current-project section (unchanged since
+  queue id 761).
