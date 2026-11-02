@@ -337,7 +337,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 757,
+2026-11-02 ~16:55Z, text channel, Paul: "What is the Burr& Burton
+academy in Manchester, Vermont? It's a school. What kind of school
+and what is the tuition?" Manchester VT is right next to Dorset,
+where they're now staying, so almost certainly a local-curiosity
+question. Used `WebSearch` to confirm: independent (private) high
+school, founded 1829, grades 9-12, ~665 students — Vermont's historic
+"town academy" model, serving as the de facto public high school for
+13 designated "sending towns" (tuition-free for those residents, paid
+by the town) alongside tuition-paying day/boarding students. 2026-27
+non-sending-town day tuition $25,933; boarding ~$59,500-$64,600.
+Didn't confirm whether Dorset itself is a sending town — flagged as
+unverified rather than guessed. Replied by SMS
+(`SM4269c7638b3ed56b4869ff0baf9d9934`). **Also found and backfilled a
+gap while checking queue.db for this turn**: queue id 756 ("And also
+Manchester Vermont population," ~16:37Z) had already been answered
+by SMS (`SMc446b051fc954302ed34ee5ab1b007e5`, ~4,486) and marked
+`done`, but was never logged or committed anywhere — the same
+"real work done, checkpoint never reached" failure shape already on
+file in the TODO section. Backfilled into
+`projects/safehouse/general/CLAUDE.md`. Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 755, 2026-11-02 ~16:37Z, text channel, Paul: "Hey Ted, what is the
 population of chestertown Maryland?" Plain trivia question, no
 project tied. Used `WebSearch` to confirm a current figure rather
