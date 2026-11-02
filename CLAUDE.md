@@ -337,7 +337,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — live
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+765, 2026-11-02 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 143 unique hrefs, 31 the Houston-TX "DIESEL OF HOUSTON" dealer
+cross-post pattern, 112 remaining. **Found one new qualifying
+candidate**: a 2006 Ford F-250 Super Duty, 6.0L Power Stroke diesel,
+4WD, single cab, ~87,000-89,000 mi, clean VA title, $13,000, Great
+Falls VA — fetched the listing page directly to confirm diesel/4WD/
+title/mileage; qualifies under the diesel-F250-or-equivalent
+exemption (no crew cab needed) and clears the 6,000 lb tow gate
+automatically. $3,000 over the nominal $10k ceiling, emailed anyway
+per the standing over-budget-but-qualifying pattern
+(`1a19e814c481090c`). Everything else traced to already-established
+exclusion patterns (Houston-TX dealer cross-posts, the Joppa MD sedan
+cluster, already-logged qualifying finds resurfacing under fresh
+hashes, and the broad off-class/unibody/sedan/sports-car/classic/
+commercial/fire-truck/food-truck/kei-truck exclusion categories).
+Moved the pointer here from `new-england` (folded back into the
+live-projects list, nothing new since queue id 764/the Manchester
+Rec Path walk recommendation). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-02 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-03).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — live
 interactive session (no queue id), Paul: "looking for a 4-5 mile walk
 that could be bicycled because Nala is with us. Can you recommend
 something near us, happy to drive up to 20 minutes." Used `WebSearch`
