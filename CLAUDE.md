@@ -337,7 +337,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+754, 2026-11-02 ~14:00Z, channel `cron`, source `suv-replacement-
+watch` — 9am Eastern scheduled fire. Ran the full four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 136 unique hrefs, 13
+an exact href match to the ledger (123 not). **No new qualifying
+candidate** — everything traced to already-established exclusion
+patterns (the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern, the Joppa MD sedan cluster, already-logged qualifying finds
+resurfacing under fresh hashes, the same ambiguous/non-running
+listings already individually checked and excluded in prior runs, and
+the broad off-class/unibody/sedan/sports-car/classic/commercial/
+fire-truck/food-truck/kei-truck exclusion categories). Per the
+standing rule (queue id 287), emailed Paul a "checked, nothing new"
+note (`1a19c925431926c9`). Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list, nothing
+new since queue id 753). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-02 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-02).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue id
 753, 2026-11-02 ~01:22Z, text channel, Paul: "Ted?" Plain attention-
 check, no topic named, same shape as past bare greetings (queue ids
 171/173/314/674/745). Confirmed `retry_count=0` (ordinary traffic).
