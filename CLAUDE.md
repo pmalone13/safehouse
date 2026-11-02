@@ -337,7 +337,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+755, 2026-11-02 ~16:37Z, text channel, Paul: "Hey Ted, what is the
+population of chestertown Maryland?" Plain trivia question, no
+project tied. Used `WebSearch` to confirm a current figure rather
+than answer from memory: ~5,500-5,700 (2024 estimate), Kent County MD,
+up slightly from 5,532 at the 2020 census. Replied by SMS
+(`SM4a132a063f0353026ab36f5429a9aacd`). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 754).
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 754, 2026-11-02 ~14:00Z, channel `cron`, source `suv-replacement-
 watch` — 9am Eastern scheduled fire. Ran the full four-region recipe
 (SUV + truck + five diesel-specific queries, washingtondc/annapolis/
