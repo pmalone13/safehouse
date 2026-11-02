@@ -337,7 +337,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 757,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 758,
+2026-11-02 ~16:57Z, text channel, Paul: "Is there an entrance exam
+for the town centers" — read as dictation garble for "sending towns/
+town students," a direct follow-up to queue id 757's Burr and Burton
+Academy question. Used `WebSearch` to confirm: no admission entrance
+exam — sending-town residents are guaranteed enrollment by VT's
+town-academy statute; all incoming students take a spring math
+placement test (course-level only, not an admission gate);
+non-sending-town/tuition applicants go through a standard application
+(transcripts/recommendations/interview), not a standardized exam like
+the SSAT. Also resolved queue id 757's own left-open question: the
+search confirmed Dorset (where the Malones are staying) is itself one
+of BBA's 13 sending towns. Replied by SMS
+(`SMac5ed74114a47f089121166c756c0d09`). Pointer stayed here, no move
+needed since queue id 757.
+
+Previous pointer, same project — queue id 757,
 2026-11-02 ~16:55Z, text channel, Paul: "What is the Burr& Burton
 academy in Manchester, Vermont? It's a school. What kind of school
 and what is the tuition?" Manchester VT is right next to Dorset,
