@@ -337,7 +337,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 759,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 760,
+2026-11-02 ~17:19Z, text channel, Paul: "What percentage are the
+graduating class are local versus external tuition payers." Fourth
+message in the same BBA thread, self-claimed mid-session
+(`retry_count=0`, ordinary traffic). Used `WebSearch` to confirm via
+BBA's own "By the Numbers" page: ~90% sending-town (tuition-free),
+~10% non-sending-town/boarding/international (tuition-paying).
+Replied by SMS (`SM3bdbd70f6614e027a0bb839598e758ba`). Pointer stayed
+here, no move needed since queue id 759.
+
+Previous pointer, same project — queue id 759,
 2026-11-02 ~17:16Z, text channel, Paul: "What percentage of the high
 school seniors go to college?" Third message in the same Burr and
 Burton thread (follows queue ids 757/758), self-claimed mid-session
