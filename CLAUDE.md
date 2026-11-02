@@ -337,7 +337,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/managing-paul/monitoring-weed-effect/
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+753, 2026-11-02 ~01:22Z, text channel, Paul: "Ted?" Plain attention-
+check, no topic named, same shape as past bare greetings (queue ids
+171/173/314/674/745). Confirmed `retry_count=0` (ordinary traffic).
+Replied by SMS confirming presence and noting the trip is still
+tracked as Dorset VT. Moved the pointer here from
+`managing-paul/monitoring-weed-effect` (folded back into the
+live-projects list, nothing new since queue id 752).
+
+Previous pointer, `projects/managing-paul/monitoring-weed-effect/
 CLAUDE.md` — queue id 752, 2026-11-01 ~23:54Z, text channel, Paul:
 "What are the marijuana laws in VT." Motivated by the just-arrived
 Dorset VT stop (queue id 751) rather than a lettered timestamp
