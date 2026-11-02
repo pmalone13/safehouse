@@ -337,7 +337,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 761,
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 763, 2026-11-02 ~19:31Z, text channel, Paul: "Are u up and
+available?" Plain attention-check, same shape as past bare checks
+(queue ids 171/173/314/674/745/753). Confirmed `retry_count=0`
+(ordinary traffic), queried `queue.db` fresh (18 done, 0 failures in
+the last 24h) and confirmed all three live services active. Replied
+by SMS with the real numbers plus a pointer to the current topic.
+Moved the pointer here from `new-england` (folded back into the
+live-projects list, nothing new since queue id 761).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 761,
 2026-11-02 ~17:21Z, text channel, Paul: "Is it affiliated with a
 religion?" Fifth message in the same BBA thread, self-claimed
 mid-session (`retry_count=0`, ordinary traffic). Used `WebSearch` to
