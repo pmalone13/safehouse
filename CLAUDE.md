@@ -337,7 +337,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/fishing/CLAUDE.md` — queue id 762,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+767, 2026-11-03 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 143 unique hrefs, 14 an exact href match to the ledger (129
+not). **Found one new qualifying candidate**: a 2012 Lexus GX 460,
+$16,250, 98,500 mi, clean title, Centreville VA — fetched the
+listing page to confirm price/mileage/title, confirmed via
+`WebSearch` at a 6,500 lb max tow rating (body-on-frame, shares the
+4Runner/Land Cruiser Prado platform) — clears the 6,000 lb tow gate.
+$6,250 over the nominal $10k ceiling, emailed anyway per the
+standing over-budget-but-qualifying pattern (`1a1a3a74e6ae88e7`).
+Everything else traced to already-established exclusion patterns
+(the Houston-TX "DIESEL OF HOUSTON" dealer cross-post pattern, the
+Joppa MD sedan cluster, already-logged qualifying finds resurfacing
+under fresh hashes, a genuinely new but off-class 2007 Buick
+Rendezvous CXL, and the broad off-class/unibody/sedan/sports-car/
+classic/commercial/fire-truck/food-truck/kei-truck exclusion
+categories). Moved the pointer here from `fishing` (folded back into
+the live-projects list, nothing new since queue id 762). Full detail
+in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-03 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-04).
+
+Previous pointer, `projects/fishing/CLAUDE.md` — queue id 762,
 2026-11-03 ~17:49Z, text channel, Paul: "Topic fishing: can u
 recommend a near by lake or pond I can fish with my light tackle
 spinning rod?" New named project (Paul explicitly named the topic,
