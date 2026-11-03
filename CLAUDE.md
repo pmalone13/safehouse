@@ -337,7 +337,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/fishing/CLAUDE.md` — queue id 762,
+2026-11-03 ~17:49Z, text channel, Paul: "Topic fishing: can u
+recommend a near by lake or pond I can fish with my light tackle
+spinning rod?" New named project (Paul explicitly named the topic,
+same "Topic <name>:" pattern as `movies`/`books`). No location was
+given in the text, so checked the live location-tracker spool
+(`projects/location-tracker/spool/2026-11-03.jsonl`) rather than ask
+or guess — most recent fix (~43.2432/-73.0808, 12:33 EDT) matches the
+Dorset VT stop already tracked in `projects/new-england/CLAUDE.md`.
+Used `WebSearch` to confirm three real spots: Emerald Lake (East
+Dorset, ~5 min, motorless so good for light spinning tackle from
+shore/kayak — smallmouth bass/perch/pike/sunfish), Lake Ninevah (Mt.
+Holly/Peru, ~25-30 min, public launch + shore access — bass/pickerel/
+panfish), and Hapgood Pond (Peru, ~25-30 min, brook trout, has a
+fishing pier). Flagged the relevant Vermont season status for early
+November: general trout harvest season closed 10/31 (artificial-
+lures-only/catch-and-release after that), bass season runs through
+11/30 then closes until 3/15, but chain pickerel and panfish are open
+year-round — called that out as the best target right now. Also
+noted VT requires a fishing license for anyone 15+ (~$21 for a 1-day
+nonresident). Replied by SMS (`SMc9571a32da41dfb7ef78d63104f79522`)
+leading with Emerald Lake and Lake Ninevah. Moved the pointer here
+from `suv-replacement` (folded back into the live-projects list,
+nothing new since queue id 766). Full detail in
+`projects/fishing/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 766, 2026-11-03 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
