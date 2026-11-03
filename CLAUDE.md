@@ -338,6 +338,31 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+766, 2026-11-03 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 135 unique hrefs, 14 an exact href match to the ledger (121
+not). **No new qualifying candidate** — every one of the 121 traced
+via title+price+location cross-check to an already-established
+pattern, essentially the same set as the 2026-11-02 ~23:00Z run just
+under fresh href hashes (very little real Craigslist turnover
+overnight): the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern (31 hits), the Joppa MD sedan cluster, already-logged
+qualifying finds resurfacing under fresh hashes (Lincoln Navigator
+Limited, Audi Q7 Prestige S-Line, GMC Sierra 1500 SLE2 Crew Cab
+Essex, 2004 Toyota Tundra DoubleCab V8 SR5 4WD, 1997 Land Rover
+Discovery 1, GL550 Manassas, Cadillac Escalade Base Upper Marlboro),
+already-individually-excluded ambiguous/non-running listings, and
+the broad off-class/unibody/sedan/sports-car/classic/commercial/
+fire-truck/food-truck/kei-truck exclusion categories. Per the
+standing rule (queue id 287), emailed Paul a "checked, nothing new"
+note anyway (`1a1a1b98080eefbf`). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-03 9am section. Next
+scheduled fire: 6pm Eastern today (2026-11-03).
+
+Previous pointer, same project — queue id
 765, 2026-11-02 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
