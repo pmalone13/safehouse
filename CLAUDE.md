@@ -338,6 +338,40 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+769, 2026-11-04 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 144 unique hrefs, 13 an exact href match to the ledger (131
+not). **No new qualifying candidate — but made and corrected a real
+mistake this run.** Individually checked a 2006 Toyota Tundra Double
+Cab Limited ($32,000, Centreville VA, JDM reimport, specs confirmed
+qualifying) and emailed Paul as a new find **without first checking
+whether the listing had already been seen** — it hadn't: the ledger
+already shows this exact listing individually excluded since queue
+id 693 (reaffirmed again in this morning's own 9am fire) on the
+standing grounds that $32,000 is too far over budget for a gas
+truck under the over-budget-but-qualifying exemption. Caught the
+error minutes later by grepping the ledger, sent a correction email.
+Also individually checked a 2008 Mercury Mountaineer AWD Base
+($6,900, Upper Marlboro MD) and confirmed via `WebSearch` it's the
+4.0L V6 trim (~5,000 lb max tow), below the 6,000 lb gate — matches
+its own prior exclusions. Everything else traced to already-
+established exclusion patterns (the Houston-TX "DIESEL OF HOUSTON"
+dealer cross-post pattern, the Joppa MD sedan cluster, already-
+logged qualifying finds resurfacing under fresh hashes, and the
+broad off-class/unibody/sedan/sports-car/classic/commercial/
+fire-truck/food-truck/kei-truck exclusion categories). **New
+standing lesson added to the ledger file**: before emailing any "new"
+find, grep the ledger for the listing's own title/price/location,
+not just the href — an href miss is expected (Craigslist rotates
+link hashes) and doesn't mean the listing is actually new. Pointer
+stayed here, no move needed since queue id 768. Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-04 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-05).
+
+Previous pointer, same project — queue id
 768, 2026-11-04 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
