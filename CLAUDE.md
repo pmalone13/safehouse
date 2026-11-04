@@ -338,6 +338,29 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+768, 2026-11-04 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 143 unique hrefs, 14 an exact href match to the ledger (129
+not). **No new qualifying candidate.** Individually fetched three
+ambiguous half-ton-truck listings (a 2002 Ford F-150 King Ranch with
+no crew-cab claim, a 2003 Toyota Tundra confirmed V6 via its own body
+text, a 2005 Ford F-150 confirmed Extended Cab not crew) and excluded
+all three. Everything else traced to already-established exclusion
+patterns (the Houston-TX "DIESEL OF HOUSTON" dealer cross-post
+pattern, the Joppa MD sedan cluster, already-logged qualifying finds
+resurfacing under fresh hashes, a 2007 Buick Rendezvous CXL
+resurfacing again under a new location, and the broad off-class/
+unibody/sedan/sports-car/classic/commercial/fire-truck/food-truck/
+kei-truck exclusion categories). Per the standing rule (queue id
+287), emailed Paul a "checked, nothing new" note anyway
+(`1a1a6df37961fb70`). Pointer stayed here, no move needed since queue
+id 767. Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-04 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-04).
+
+Previous pointer, same project — queue id
 767, 2026-11-03 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
