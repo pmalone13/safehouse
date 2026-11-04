@@ -337,7 +337,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/dc-llc/CLAUDE.md` — queue id 770,
+2026-11-04 ~23:40Z, text channel, Paul: "New project. DC LLC. Dad is
+setting up a single member LLC in DC to rent his house." New named
+project. Dad's own question, relayed by Paul: DC's licensing
+department states LLCs are taxed on earnings and owners can also be
+taxed on business income — sounds like double taxation on rental
+income. Researched via `WebSearch` (DC OTR's own D-30/D-40
+publications and several tax-advisory sources) rather than answered
+from memory, since real filing decisions ride on it: DC's
+Unincorporated Business Franchise Tax (D-30) taxes the LLC's rental
+income at the entity level (8.25%, $250 minimum, once DC gross
+receipts exceed $12,000/year) regardless of whether the property is
+held via an LLC or individually — forming the LLC doesn't create or
+worsen this tax, it's triggered by the rental activity itself. DC's
+personal D-40 return separately taxes the owner's net income, but
+has a specific subtraction (Schedule I) for income already taxed on
+a D-30, so the identical dollar isn't counted twice in total — DC's
+answer to exactly this "taxed twice" concern. The real cost isn't
+literal double-counting, it's that the flat 8.25% entity rate plus
+the $250 minimum tax typically costs more than if the rental income
+had simply flowed through untaxed at the entity level (as federal
+tax and most states do for a disregarded single-member LLC).
+Recommended Dad confirm with a DC-licensed CPA/tax attorney before
+filing. Emailed the full write-up and replied by SMS with a pointer.
+Full detail in `projects/dc-llc/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 769, 2026-11-04 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
