@@ -337,7 +337,72 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/dc-llc/CLAUDE.md` — queue id 770,
+**Current project**: `projects/new-england/CLAUDE.md` — live direct
+interactive session, 2026-11-05 ~04:3xZ-05:0xZ, Paul: "switch project
+to new england trip. now in VT. I just uploaded and shared a new zip
+of photos and json of location that brings them up to date. Please
+file. And, please extend our html site to include Bar Harbor as peer
+of Portland." Moved the pointer here from `dc-llc` (folded back into
+the other-live-projects list below, nothing new since queue id 770).
+Confirms they've reached Dorset, VT (matches the already-booked
+11/1-11/8 stop). Found two genuine new Drive shares (not emailed —
+shared directly, same pattern as past large files): `Timeline4.json`
+(62,197,558 bytes, real on-device Maps Timeline export, 2,692
+segments spanning 2026-06-21 through 2026-11-04T18:41:02-05:00) and
+`NewEngland26-1-001.zip` (3,224,019,330 bytes, 801 photos/videos dated
+10/18 through 11/4, one nested `NewEngland26/` folder prefix — a
+different shape than Portland's own earlier, separate, much smaller
+zip). Downloaded both via `MediaIoBaseDownload` directly against raw
+bytes (byte counts matched exactly); Timeline saved to
+`projects/travel/timeline_export/Timeline_2026-11-05.json`, the zip
+saved to `/home/ubuntu/safehouse-media/new-england/
+NewEngland26-1-001.zip` (same sibling-directory-outside-git pattern as
+every prior media zip). **Hit a real disk-space constraint before
+building anything**: this VM is a 20GB-disk t3.nano, already at ~92%
+full (1.5GB free) right after the zip download alone — fully
+extracting the zip's ~3.2GB of Bar Harbor-dated photos the way
+Portland's own zip was extracted would have overflowed the disk and
+risked crashing the live coordinator/webhook/email-monitor services.
+**Worked around it rather than asking Paul to free up space**: built
+a zip-backed serving path instead of a pre-extraction one — only
+small 500px thumbnails (18MB for 427 Bar Harbor photos) get written
+to disk ahead of time; full-size photos/videos are read directly out
+of the zip on each request (`zipfile.read()`) rather than ever
+extracted to individual files. Verified this holds disk flat: free
+space stayed at 1.5GB through the whole build. Extended
+`projects/travel/webapp/app.py` (same live process, port 8095, Basic
+Auth) with a new `/new-england/bar-harbor` page, mirroring Portland's
+page shape (day-sectioned, jump nav, GPS-tracked-stops classification
+reusing the already-generalized `_load_timeline_visits()`) — Bar
+Harbor's home/Airbnb coordinate was read directly off the Timeline's
+own recurring overnight-stay location (44.3821843, -68.2190073),
+matching 25 Forest Street. Day notes for 10/25-10/31 built from a
+cross-check of this project's own text log (arrival the evening of
+10/25; the confirmed Jordan Pond + South Bubble hike on 10/26; the
+"tomorrow a bit further" Penobscot/Sargent plan on 10/27, which GPS
+shows as a genuine ~4-hour return to the same hiking area though not
+independently confirmed as that exact loop; the 10/31 packing day)
+against the real GPS trace — 10/28-10/30 have no text on file, so
+those days' notes say plainly they're GPS-reconstructed only. Updated
+the trip-level `/new-england` index to link Bar Harbor and count its
+photos too. **Tested via Flask's own test client first** (existing
+Paris/Portland routes still 200 with unchanged byte counts, new Bar
+Harbor route 200 with real classified GPS stops rendering — e.g.
+correctly identifying a Boothbay Harbor "Dunkin'" coffee stop and
+"Cap'n Fish's Cruises" sightseeing stop on the 10/25 drive up) before
+ever touching the live process; only then killed the old process and
+started a fresh one, reconfirmed via `curl` against the real port
+(401/401/200 auth gate, all five routes 200). **Left deliberately
+unprocessed, flagged rather than silently done**: the same combined
+zip also has a few 10/18-10/24 photos (already covered by Portland's
+own separate zip — not touched, to avoid disturbing that already-
+built extraction) and 11/2-11/4 photos (the start of the Dorset VT
+stay) — a future "add Dorset" turn can reuse this same zip and the
+new `NE_COMBINED_ZIP`/zip-backed-serving pattern directly, no new
+share needed from Paul. Full detail in
+`projects/new-england/CLAUDE.md` and `projects/travel/CLAUDE.md`.
+
+Previous pointer, `projects/dc-llc/CLAUDE.md` — queue id 770,
 2026-11-04 ~23:40Z, text channel, Paul: "New project. DC LLC. Dad is
 setting up a single member LLC in DC to rent his house." New named
 project. Dad's own question, relayed by Paul: DC's licensing
