@@ -367,6 +367,33 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+772, 2026-11-05 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 140 unique hrefs, 14 an exact href match to the ledger (126
+not). **No new qualifying candidate.** All 126 traced to already-
+established exclusion patterns via title+price+location cross-check
+(not individually re-fetched): the Houston-TX "DIESEL OF HOUSTON"
+dealer cross-post pattern (31 hits), the Joppa MD sedan cluster (9
+hits), already-logged qualifying finds resurfacing under fresh
+hashes (2008 Mercedes-Benz GL550 Manassas, 2011 Lincoln Navigator
+Limited Leesburg, 2012 Audi Q7 Prestige S-Line Manassas, 2008 GMC
+Sierra 1500 SLE2 Crew Cab Essex, 2004 Toyota Tundra DoubleCab
+Woodbridge, 1997 Land Rover Discovery 1 Washington, 1998 Mitsubishi
+Pajero Alexandria, 2009 Cadillac Escalade Base Upper Marlboro, 2002
+Dodge Ram 2500 Cummins diesel Warrenton), the same ambiguous/non-
+running listings already individually checked and excluded in prior
+runs, and the broad off-class/unibody/sedan/sports-car/classic/
+commercial/fire-truck/food-truck/kei-truck exclusion categories. Per
+the standing rule (queue id 287), emailed Paul a "checked, nothing
+new" note anyway (`1a1adf44b98006ac`). Pointer stayed here, no move
+needed since queue id 771. Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-05 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-06).
+
+Previous pointer, same project — queue id
 771, 2026-11-05 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
