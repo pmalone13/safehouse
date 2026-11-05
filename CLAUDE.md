@@ -366,7 +366,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — same
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+771, 2026-11-05 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 140 unique hrefs, 13 an exact href match to the ledger (127
+not). **No new qualifying candidate.** One genuinely new listing
+individually checked via its own listing page: a 2004 Ford F-250
+Super Duty 4x4, 5.4L gas, $18,900, 40,000 mi, Arlington VA (Fisher
+snowplow included) — the seller's own ad confirms "Single Cab,
+8-foot bed," so (gas, not diesel) the crew-cab/four-door rule applies
+and isn't met — excluded. Everything else traced to already-
+established exclusion patterns via title+price+location cross-check
+(not individually re-fetched): the Houston-TX "DIESEL OF HOUSTON"
+dealer cross-post pattern (31 hits), the Joppa MD sedan cluster,
+already-logged qualifying finds resurfacing under fresh hashes, the
+same ambiguous/non-running listings already individually checked and
+excluded in prior runs, and the broad off-class/unibody/sedan/
+sports-car/classic/commercial/fire-truck/food-truck/kei-truck
+exclusion categories. Per the standing rule (queue id 287), emailed
+Paul a "checked, nothing new" note anyway (`1a1ac07425f60089`). Moved
+the pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since this session's own disk-space
+work). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-05 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-05).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — same
 live direct interactive session, continuing straight from the
 Bar Harbor build below: Paul confirmed "looks good. commit, push.
 then let's work on diskspace here. This is a 'litesail' vm I bought
