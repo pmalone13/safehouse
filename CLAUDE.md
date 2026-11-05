@@ -285,6 +285,35 @@ being remembered afterward.
   plain text prefixed `[Voice message transcript]: ` — never a raw
   audio file or a transcription step of your own.
 
+## Infrastructure
+
+This VM is an **AWS Lightsail instance** (confirmed via IMDSv2 IAM
+info — `AmazonLightsailInstanceProfile`, not plain EC2; matters for
+disk/storage decisions — see below), `t3.nano`-class, `us-east-1`,
+instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
+- **Root** (`/`, `nvme0n1p1`) — 20GB. OS, this repo, `venv/`,
+  `.claude/`. Check with `df -h /`.
+- **`/mnt/data`** (`nvme1n1`, a separate 64GB Lightsail Block Storage
+  volume, ~$6.40/mo at $0.10/GB-month, mounted via `/etc/fstab` by
+  UUID with `nofail`) — holds `/home/ubuntu/safehouse-media/` and the
+  `travel` project's webapp's extracted photo/thumbnail directories,
+  each reached via a symlink left at its original path (so no code
+  anywhere references `/mnt/data` directly — existing path constants
+  just resolve through the symlink). New large downloads to those
+  same paths land here automatically. Check with `df -h /mnt/data` —
+  `df -h /` alone no longer tells the whole story for disk-space
+  questions. Full story (why this was needed — a 3GB trip-photo zip
+  alone took root from 4.6GB free down to 1.5GB — and the real
+  numbers behind the Lightsail-Block-Storage-vs-S3 decision) in
+  `projects/safehouse/general/CLAUDE.md`'s 2026-11-05 entry.
+- **S3 is not yet wired up.** Considered as the cheaper
+  ($0.023/GB-month vs. Block Storage's $0.10) long-term option for
+  the raw media zips specifically, but needs real new code (an IAM
+  user + access keys — Lightsail instances can't use IAM roles the
+  way EC2 can — plus `boto3` integration), so it's a deliberate
+  future build, not done yet. Revisit if `/mnt/data` ever fills up or
+  Paul wants cheaper archival for the growing pile of trip zips.
+
 ## Projects
 
 Each project (and sub-project) gets its own folder under `projects/`,
