@@ -337,7 +337,44 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — live direct
+**Current project**: `projects/safehouse/general/CLAUDE.md` — same
+live direct interactive session, continuing straight from the
+Bar Harbor build below: Paul confirmed "looks good. commit, push.
+then let's work on diskspace here. This is a 'litesail' vm I bought
+from aws. Can we clean local space to free some. And, can i purchase
+mor disk, or perhaps I simply buy an S3 for us?" Moved the pointer
+here from `new-england` (folded back into the live-projects list,
+nothing new since this session's own Bar Harbor page build).
+**Confirmed this VM is genuinely an AWS Lightsail instance** (via the
+instance's own IAM info over IMDSv2 — `AmazonLightsailInstanceProfile`),
+which rules out a plain EC2 root-volume resize and means any future
+S3 access needs an IAM user + keys, not an instance role. Did the
+safe, zero-risk local cleanup first (pip/npm caches, `journalctl
+--vacuum-time=5d`, orphaned apt `node-*` packages — ~600MB freed, all
+services confirmed still active). Researched real `WebSearch`-
+confirmed numbers for the two real options (Lightsail Block Storage,
+$0.10/GB-month, simple to attach, no new code; S3, $0.023/GB-month,
+cheaper but needs a real `boto3` build since Lightsail can't use IAM
+roles) and recommended Block Storage as the immediate fix, S3 as a
+good later project. **Paul attached a 64GB Block Storage disk**
+(shows as `/dev/xvdf` in the Lightsail console, `/dev/nvme1n1` on
+this instance's real device tree) — formatted ext4, mounted at
+`/mnt/data`, added to `/etc/fstab` by UUID with `nofail`. Migrated
+the two biggest local consumers there via `rsync` + full
+`sha256sum`/byte-count verification before deleting each original,
+replacing it with a symlink at the same path so no code anywhere
+needed to change: `/home/ubuntu/safehouse-media` (7.0GB) and the
+travel webapp's five extracted-media directories (2.3GB combined).
+Stopped/restarted the webapp process around the move and re-verified
+every route live via `curl`, including a real zip-backed photo fetch.
+**Root disk went from 92% full (1.5GB free) to 39% full (12GB
+free)**; the new volume sits at 7.0GB used / 53GB free. Full detail
+in `projects/safehouse/general/CLAUDE.md` and
+`projects/travel/CLAUDE.md`. S3 itself not built this session — a
+deliberate later choice, not an oversight, since Block Storage alone
+already resolved the immediate pressure.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — live direct
 interactive session, 2026-11-05 ~04:3xZ-05:0xZ, Paul: "switch project
 to new england trip. now in VT. I just uploaded and shared a new zip
 of photos and json of location that brings them up to date. Please
