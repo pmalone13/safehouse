@@ -366,7 +366,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 782,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+783, 2026-11-06 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 141 unique hrefs, 2 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** Both excluded: a 2002
+Toyota Tacoma "DREAM TRUCK" repost (Chantilly, already established
+as regular-cab/4-cyl) under a fresh posting hash, and a genuinely
+new listing, 2012 Infiniti EX35 AWD ($5,000, 98,000 mi, Pikesville)
+— confirmed via `WebSearch` at ~1,000 lb max tow, far below the
+6,000 lb gate. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a1b3191e497d2e3`). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 782). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-06 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-07).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 782,
 2026-11-06 ~17:50Z, text channel, Paul: "We're going to drive up to
 Ticonderoga and then from there drive back to our Vermont place. Any
 notes that you'd like to share on seeing anything special on the way
