@@ -366,7 +366,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+778, 2026-11-06 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 142 unique hrefs, 6 not an exact href match to the ledger. **No
+new qualifying candidate.** All 6 excluded: a 2010 Mercedes-Benz GLK
+350 (Bethesda) — established unibody/off-class exclusion; a 2004
+Mercedes-Benz ML500 (Woodbridge) — confirmed via `WebSearch` at
+5,000 lb max tow, below the 6,000 lb gate; a 2012 Hyundai Azera
+(Joppa) — same listing already logged under a different posting
+hash; a 1965 Cadillac DeVille Convertible (Atascadero) and a 1970
+Chevelle Malibu (Madison VA) — established classic-car exclusions;
+a 2008 F450 Diesel (Hillsborough, New Jersey) — out-of-region, same
+exclusion class as the Houston-TX dealer cross-posts. Per the
+standing rule (queue id 287), emailed Paul a "checked, nothing new"
+note anyway (`1a1b12ae8dca7199`). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 777). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-06 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-06).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 777, 2026-11-06 ~04:12Z, email channel, same Christine->Paul->Ted
 forwarding pattern one message later, Paul: "File under ne trip
 activity." Self-claimed mid-session (`retry_count=0`, ordinary
