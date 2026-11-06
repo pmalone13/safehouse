@@ -366,7 +366,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 781,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 782,
+2026-11-06 ~17:50Z, text channel, Paul: "We're going to drive up to
+Ticonderoga and then from there drive back to our Vermont place. Any
+notes that you'd like to share on seeing anything special on the way
+up or the way down?" A separate day trip from the Dorset stay
+(~56mi/1h22m one way), not a continuation of today's Lake George trip
+(queue id 779/780/781). Checked and flagged a real constraint via
+`WebSearch`: the Fort Ticonderoga cable ferry closed for the 2026
+season on 10/14, so a bridge crossing is needed both ways. Recommended
+a loop using two different crossings: up via VT-30/VT-22A through
+Orwell, Mount Independence State Historic Site, the free Lake
+Champlain Bridge at Chimney Point/Crown Point, and Crown Point State
+Historic Site ruins into Ticonderoga; down via NY-22 to Whitehall NY
+(Skene Manor/Skenesborough Museum, already flagged at queue id 779),
+crossing back into VT there, then VT-30 N home to Dorset. Replied by
+SMS. Pointer stayed here, no move needed since queue id 781. Full
+detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id 781,
 2026-11-06 ~16:12Z, text channel, Paul: "Ted, we're in lake George.
 What is the summertime population and winter population comparison?"
 Direct follow-up to queue id 779's day-trip recommendations, now that
