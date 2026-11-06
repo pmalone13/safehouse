@@ -366,7 +366,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+776, 2026-11-06 ~04:11Z, email channel, Paul forwarding a
+Christine->Paul->Ted chain (a PortTIX box-office reminder originally
+sent 2026-10-22), Paul: "File this under our new England trip as
+activiy." Self-claimed mid-session (`retry_count=0`, ordinary
+traffic). Logged as a real activity, not a planning question: Eureka
+(play) at Mad Horse Theatre Company's "The Hutchins School," South
+Portland ME, Friday 2026-10-23 7:30pm — falls within the already-
+confirmed Portland stay window (10/18-10/25). Replied by email
+confirming filed. Moved the pointer here from `safehouse/general`
+(folded back into the live-projects list, nothing new since queue id
+775). Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
+id 775, 2026-11-06 ~04:03Z, text channel, self-claimed mid-session
+(`retry_count=0`, ordinary traffic), Paul: "Inside day today.
+Programmed Java for downtown. Copilot was again a struggle but I
+finished." Plain personal/work status update, no project match found
+(grepped `projects/` for "java"/"downtown"/"copilot," nothing
+relevant). Replied by SMS (`SMec82eadc363db036264851938464fb9a`) with
+a short acknowledgment.
+
+Previous pointer, same project — queue
 id 773, 2026-11-06 ~01:53Z, text channel, Paul: "Hi Ted. General
 topic. How are you and ask Bill for status." Confirmed `retry_count=0`
 (ordinary traffic). Queried `queue.db` fresh (2 done, 0 failures in
