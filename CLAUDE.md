@@ -6286,6 +6286,23 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
+- **Drive down again, `invalid_grant`, discovered 2026-11-06 ~23:02Z
+  at queue id 783's checkpoint.** Same recurring error shape as every
+  prior occurrence: `creds.refresh()` throws `RefreshError:
+  invalid_grant: Token has been expired or revoked.` Retried once,
+  identical failure — not transient. Drive-only: Gmail worked fine
+  minutes earlier in this same turn (the SUV-watch "checked, nothing
+  new" email sent cleanly). Notably the token (`.drive_api_token.json`)
+  had last refreshed only ~5h before this failure (17:53Z same day),
+  so — same as several past occurrences — the timing doesn't cleanly
+  fit the old 7-day-refresh-token-cap theory either; root cause
+  remains unexplained and undiagnosable from this VM. Flagged to Paul
+  by SMS (`SM108aa4ee37a0e6d65a78a375a6684e8d`). Fix is the same as
+  every prior time: `authorize_drive_once.py` on a machine with a
+  browser, `scp` the resulting token to this VM at the existing
+  `.drive_api_token.json` path. Git push for this turn's own commit
+  was unaffected (Drive is the only thing down).
+
 - **Requested 2026-10-30 (queue id 726): batch backlog-recovery
   notifications into one summary instead of one text per message —
   needs Paul live to design/build, not fixed by the reset-time-parsing
