@@ -366,7 +366,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 779,
+2026-11-06 ~14:04Z, text channel, Paul: "project travel we are going
+to lake George for a day trip leaving in 15 minutes. Any
+recommendations to see things on the way and any highlights you want
+to point out for things we might want to see there?" A day trip from
+the Dorset/Vermont stay. Given the 15-minute window, answered fast by
+SMS via `WebSearch`: route ~1hr15 via VT-30/NY-149 (Fort Ann) or
+VT-30/VT-315 (Granville), on-the-way stops Hubbardton Battlefield and
+Skene Manor (Whitehall), and at Lake George Prospect Mountain, a
+steamboat cruise, Fort William Henry, the Village, and Bolton Landing
+as a quieter alternative. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 778). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 778, 2026-11-06 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
