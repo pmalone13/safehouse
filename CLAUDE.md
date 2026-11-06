@@ -366,7 +366,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 773, 2026-11-06 ~01:53Z, text channel, Paul: "Hi Ted. General
+topic. How are you and ask Bill for status." Confirmed `retry_count=0`
+(ordinary traffic). Queried `queue.db` fresh (2 done, 0 failures in
+the last 24h), confirmed all three live services active. Sent
+`STATUS` to Bill via the already-built `ted_protocol` tooling,
+verified the reply's real Gmail `internalDate` against the send time
+rather than trust `poll_for_reply()` (its stale-reply bug, queue id
+275, is still unfixed) — clean reply in ~17s, no error this time
+(unlike the queue id 730 failure). Bill's status: birdClipper/
+dashboard_server/logging_server/text_monitor/email_topic_monitor/
+ted_protocol_monitor all up, `voice_monitor`/
+`virtual_device_bayhouseAck` still down (the long-standing stable
+pattern), last bird clip 2026-11-05T15:52:32. Replied by SMS
+(`SM79eee2b0caa63d8871a40d71b0b68d67`) with both Ted's own and Bill's
+status. Moved the pointer here from `suv-replacement` (folded back
+into the live-projects list, nothing new since queue id 772). Full
+detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 772, 2026-11-05 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
