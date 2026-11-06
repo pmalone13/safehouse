@@ -367,6 +367,16 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+777, 2026-11-06 ~04:12Z, email channel, same Christine->Paul->Ted
+forwarding pattern one message later, Paul: "File under ne trip
+activity." Self-claimed mid-session (`retry_count=0`, ordinary
+traffic). Logged a Green Mountain Academy for Lifelong Learning
+lecture ("The Boorn Murder Trial," 2026-11-05 5:30pm, Historic
+Bennington County Courthouse) as an activity during the Dorset/
+Vermont stay. Replied by email confirming filed. Pointer stayed here,
+no move needed since queue id 776.
+
+Previous pointer, same project — queue id
 776, 2026-11-06 ~04:11Z, email channel, Paul forwarding a
 Christine->Paul->Ted chain (a PortTIX box-office reminder originally
 sent 2026-10-22), Paul: "File this under our new England trip as
