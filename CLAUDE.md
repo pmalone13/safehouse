@@ -366,7 +366,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 779,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 781,
+2026-11-06 ~16:12Z, text channel, Paul: "Ted, we're in lake George.
+What is the summertime population and winter population comparison?"
+Direct follow-up to queue id 779's day-trip recommendations, now that
+they've actually arrived. Used `WebSearch` to confirm real figures:
+Village of Lake George has ~1,000 year-round residents (933-1,038
+depending on source), but summer tourist season swells the village
+itself to 15,000+, and up to ~50,000 across the broader lake region.
+Replied by SMS. Pointer stayed here, no move needed since queue id
+779. Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id 779,
 2026-11-06 ~14:04Z, text channel, Paul: "project travel we are going
 to lake George for a day trip leaving in 15 minutes. Any
 recommendations to see things on the way and any highlights you want
