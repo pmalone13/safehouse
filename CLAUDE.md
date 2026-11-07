@@ -367,6 +367,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+785, 2026-11-07 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 149 unique hrefs, 5 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 5 excluded: two
+out-of-year-range listings (2018 GMC Sierra 3500HD, 2022 Ford F-250
+XLT), two Houston-TX dealer cross-posts (the 2022 F-250 again plus a
+2011 F-250 Super Duty FX4 — excluded as out-of-region regardless of
+specs), and a 2002 Ford F-150 King Ranch (Alexandria) confirmed via
+its own listing page to have no crew-cab claim — a repost of the
+same listing already excluded at queue id 768. Per the standing rule
+(queue id 287), emailed Paul a "checked, nothing new" note anyway
+(`1a1b65127a62fcd1`). Pointer stayed here, no move needed since
+queue id 784. Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-07 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-07).
+
+Previous pointer, same project — queue id
 784, 2026-11-07 ~00:08Z, text channel, Paul: "Ok." Plain
 acknowledgment of the prior turn's 6pm SUV/truck cron report and
 Drive-outage flag (queue id 783). No reply needed, no new work.
