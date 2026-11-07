@@ -366,7 +366,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/ancestory/CLAUDE.md` — queue id 787,
+**Current project**: `projects/ancestory/CLAUDE.md` — queue id 788,
+2026-11-07 ~18:45Z, email channel, Paul: "Who is Margaret Scott? And
+can you spend a few minutes seeing if you can find other close
+relationships to me?" Used `WebSearch` to confirm Margaret
+(Stephenson) Scott, the "10th great-grandmother" named in Amy Otey's
+original genealogy email, was a real Salem witch trials victim —
+hanged September 22, 1692 at Proctor's Ledge, one of the last Salem
+victims formally exonerated (Massachusetts legislature, 2001). Her
+recorded death date matches the project's own lineage table exactly,
+confirming identity. Traced her line to Paul: son Benjamin Scott Jr.
+(stayed in Rowley) -> granddaughter Mehitable Scott -> Dresser family
+-> Grandee Jane -> Abigail -> Paul — a direct blood ancestor, not just
+by marriage. Spent additional research time per Paul's ask: found
+independent WikiTree corroboration of the Oliver Dresser/Mehitable
+Scott link, checked and ruled out any connection to President Andrew
+Jackson's family, and flagged (not confirmed) an online claim that
+actress Claire Danes shares the same ancestor. Logged all findings in
+`projects/ancestory/CLAUDE.md`'s two new sections. Replied by email
+(`1a1b756409659bad`). Pointer stayed here, no move needed since queue
+id 787.
+
+Previous pointer, same project — queue id 787,
 2026-11-07 ~18:23Z, email channel, Paul replying to resolve the one
 open item left from queue id 786 (which of Grandee Jane's children is
 Amy's/Adam's parent): "I am the son of Abigail and Amy is son of
