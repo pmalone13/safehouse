@@ -366,7 +366,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/ancestory/CLAUDE.md` — queue id 789
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+792, 2026-11-07 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 139 unique hrefs, 2 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** Both excluded: a 2010 Ford
+F-150 Super Cab SVT ($20,950, 103,113 mi, clean title, Alexandria) —
+fetched the listing page directly and confirmed gas 4WD with an
+extended ("Super Cab," not crew) cab, excluded under the standing
+non-diesel-no-crew-cab-claim rule; and a 2011 BMW X3 xDrive35i
+(104k mi, Baltimore) — already-established off-class unibody-
+crossover exclusion. Per the standing rule (queue id 287), emailed
+Paul a "checked, nothing new" note anyway (`1a1b83f40cc5b580`).
+Moved the pointer here from `ancestory` (folded back into the
+live-projects list, nothing new since queue id 790). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-07 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-08).
+
+Previous pointer, `projects/ancestory/CLAUDE.md` — queue id 789
 (empty, no action) and queue id 790, 2026-11-07 ~19:10Z, email
 channel. Queue id 789 was Paul replying in the Margaret Scott thread
 with nothing typed above the quoted prior email — no action, no
