@@ -12363,3 +12363,18 @@ thing that needs it, not because anything currently lives under it.
   message 776 `done` directly via `queue_db.mark_done()`. No pointer
   move — root file's own Current-project section is already past
   this point (queue id 784).
+
+- 2026-11-07 ~05:28Z: same stuck-row pattern yet again, this time for
+  queue id 777 (the "file under ne trip activity" forward of the
+  Green Mountain Academy "Boorn Murder Trial" lecture reminder).
+  Checked before redoing anything: the real work had already fully
+  landed in commit `a4ea925` (logged in
+  `projects/new-england/CLAUDE.md`, matching this file's own existing
+  queue-777 pointer history above) and a direct Gmail query confirmed
+  the reply email was actually sent ("Re: Fwd: GMALL - Reminder:
+  Lecture Tonight," 2026-11-05 20:12:54-08:00) — the row just never
+  got `mark_done()` called before that session ended, same shape as
+  queue ids 732/758/776. No new reply sent. Marked message 777 `done`
+  directly via `queue_db.mark_done()`. No pointer move — root file's
+  own Current-project section is already past this point (queue id
+  784).
