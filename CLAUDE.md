@@ -12350,3 +12350,16 @@ thing that needs it, not because anything currently lives under it.
   `queue_db.mark_done()`. No pointer move — stayed `new-england`,
   matching this file's own Current-project section (unchanged since
   queue id 761).
+
+- 2026-11-07 ~05:1xZ: same stuck-row pattern again, this time for
+  queue id 776 (the "file Eureka play under NE trip activity"
+  forward). Checked before redoing anything: the real work had
+  already fully landed in commit `eed6b79` (logged in
+  `projects/new-england/CLAUDE.md`, matching this file's own existing
+  queue-776 pointer history above) and a direct Gmail query confirmed
+  the acknowledgment email was actually sent (`1a1af0e08c1492cd`) —
+  the row just never got `mark_done()` called before that session
+  ended, same shape as queue ids 732/758. No new reply sent. Marked
+  message 776 `done` directly via `queue_db.mark_done()`. No pointer
+  move — root file's own Current-project section is already past
+  this point (queue id 784).
