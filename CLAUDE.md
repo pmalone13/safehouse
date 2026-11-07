@@ -366,7 +366,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/ancestory/CLAUDE.md` — queue id 786,
+2026-11-07 ~17:54Z, email channel, Paul: "New project: ancestory,"
+forwarding a genealogy email from his first cousin Amy Otey
+(cc Adam Skelton) tracing a lineage from "Grandee Jane" (Paul's
+maternal grandmother, Dorothy Jane Ford, 1913-?) back nine
+generations to a 10th-great-grandmother, Margaret Kinsey Stephenson
+Scott (1616-1692). New named project created, lineage table and
+Paul's own family-relationship note (Amy is his first cousin; his
+mother Abigail Skelton and her brother Luther Skelton are Grandee
+Jane's children) logged verbatim. No research/verification requested
+this turn — pure filing. Replied by email confirming. Moved the
+pointer here from `suv-replacement` (folded back into the live-
+projects list, nothing new since queue id 785). Full detail in
+`projects/ancestory/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 785, 2026-11-07 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
