@@ -366,7 +366,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/ancestory/CLAUDE.md` — queue id 786,
+**Current project**: `projects/ancestory/CLAUDE.md` — queue id 787,
+2026-11-07 ~18:23Z, email channel, Paul replying to resolve the one
+open item left from queue id 786 (which of Grandee Jane's children is
+Amy's/Adam's parent): "I am the son of Abigail and Amy is son of
+Luther. Amy's brother is Adam. My brother is Stuart." Resolves the
+family tree at this level — Abigail's sons (Paul, Stuart) and
+Luther's sons (Amy, Adam) are first cousins, both one generation below
+Grandee Jane. Updated `projects/ancestory/CLAUDE.md`'s family-context
+section and closed the open item. Replied by email confirming. Pointer
+stayed here, no move needed since queue id 786.
+
+Previous pointer, same project — queue id 786,
 2026-11-07 ~17:54Z, email channel, Paul: "New project: ancestory,"
 forwarding a genealogy email from his first cousin Amy Otey
 (cc Adam Skelton) tracing a lineage from "Grandee Jane" (Paul's
