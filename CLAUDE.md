@@ -12430,6 +12430,30 @@ thing that needs it, not because anything currently lives under it.
   move — root file's own Current-project section is already past
   this point (queue id 784).
 
+- 2026-11-07 ~19:1xZ: live direct interactive session (no queue id),
+  Paul asked for a deep-dive on Margaret Scott's pre-emigration
+  English ancestry (parents, grandparents, the Stephenson-vs-Kinsey
+  maiden-name question, her Somerset parish). Researched via
+  `WebSearch`/`WebFetch` across WikiTree, Wikipedia, Find a Grave,
+  the Salem Witch Museum, History of Massachusetts Blog, Geni, and
+  several derivative genealogy sites. Conclusion: her pre-emigration
+  English ancestry is essentially undocumented — WikiTree (the most
+  source-disciplined site checked) lists both parents unknown, while
+  every other site gives a different, mutually contradictory,
+  unsourced parentage/birthplace (Somerset vs. Yorkshire vs. Durham;
+  Stevenson+Betts vs. "Edward and Margarita Dunn" vs. a separate
+  "John Kinsey" theory). Concluded "Stephenson" is the better-
+  supported surname and "Kinsey" (as in Amy's own lineage-table entry)
+  is very likely a genealogy-site conflation, not a documented name.
+  Gave Paul the full comparison table and honest "treat as unverified,
+  don't add to the tree" conclusion directly in the session, and
+  logged full detail in `projects/ancestory/CLAUDE.md`. **Hit the
+  Drive outage still open since queue id 783** (`invalid_grant`,
+  unchanged) while checkpointing — not re-flagged again since it's
+  already on file and this was a live session, not a queued message
+  needing a fresh SMS notice; git push had nothing new to push since
+  `projects/` edits don't touch git.
+
 - 2026-11-07 ~05:28Z: same stuck-row pattern yet again, this time for
   queue id 777 (the "file under ne trip activity" forward of the
   Green Mountain Academy "Boorn Murder Trial" lecture reminder).
