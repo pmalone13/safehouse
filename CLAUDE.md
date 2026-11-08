@@ -366,7 +366,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 797,
+2026-11-08 ~23:16Z, text channel, Paul: "we need to add a checklist
+for Christine myself to review as we leave a place. So far we have
+left a teddy bear for the dog, a fishing pole for me, a shirt for me,
+a coat for Christine and now a Chromecast. I would think you should
+add binoculars to that list and just remind us of that list. Every
+time we're leaving a place I will prompt you for that." A
+generalized, standing version of the one-off "Departure from
+Portland" list already in that project file — this one isn't tied to
+one stop, it's a running record of items actually left behind across
+the trip, read back on request at every future departure. Added
+binoculars per Paul's own suggestion and created a new "Standing
+leave-a-place checklist" section in `projects/new-england/CLAUDE.md`
+(teddy bear/dog, fishing pole/Paul, shirt/Paul, coat/Christine,
+Chromecast, binoculars). Replied by SMS
+(`SM02aefe2d9446133b18f3f2a06f0a722d`) confirming. Moved the pointer
+here from `suv-replacement` (folded back into the live-projects list,
+nothing new since queue id 796).
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 796, 2026-11-08 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
