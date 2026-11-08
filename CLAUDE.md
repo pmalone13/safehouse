@@ -366,7 +366,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/ancestory/CLAUDE.md` — queue id 793,
+**Current project**: `projects/ancestory/CLAUDE.md` — queue id 794,
+2026-11-08 ~02:28Z, email channel, Paul replying with three things:
+"Bill==Luther" (resolves the queue id 793 naming discrepancy — a
+nickname, not a typo); "The chart is from ancestry.com. my cousin
+Amy put it together" (confirms the attached chart is Amy's own
+second document, not an independent source); and "Does it refute the
+earlier list to Margaret Scott." Worked through the actual lineage
+chain rather than answer impressionistically: the whole Margaret
+Scott connection runs through exactly one link — Henrietta Clarissa
+Ford's mother being Clarissa Cassandra Dresser — and the new chart's
+"Sarah A Barlow" claim, if correct, severs that link completely (the
+Dresser->Scott chain simply wouldn't attach, not a minor edit).
+Reiterated the age-implausibility evidence favoring Barlow (Clarissa
+Cassandra Dresser, b. 1819, would be 72 at Henrietta's 1891 birth)
+and recommended Paul ask Amy directly or check her ancestry.com
+source record, since a public `WebSearch` found nothing on either
+name (private tree data, not publicly indexed). Replied by email
+(`1a1b8fe18bd93fa7`) in the same thread. Barnthouse/Deel/Gill branch
+question from queue id 793 still unanswered. No pointer move needed.
+Full detail in `projects/ancestory/CLAUDE.md`.
+
+Previous pointer, same project — queue id 793,
 2026-11-08 ~02:19Z, email channel, subject "project - ancestory,"
 Paul: "here is a bigger picture of that side of my family," with
 text naming Abigail Skelton's husband (Michael Malone, father of
