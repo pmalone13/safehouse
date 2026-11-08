@@ -12607,3 +12607,12 @@ thing that needs it, not because anything currently lives under it.
   directly via `queue_db.mark_done()`. No pointer move — root file's
   own Current-project section is already past this point (queue id
   784).
+
+- 2026-11-08 ~23:0xZ: queue id 796, the 6pm SUV/truck cron fire, no
+  new qualifying candidate, "checked, nothing new" email sent per
+  the standing rule. Re-tried `drive_sync.py` as part of this
+  checkpoint — still the same `invalid_grant` failure first flagged
+  at queue id 783's checkpoint on 2026-11-06, unchanged; git push
+  unaffected. Not re-texting Paul about it again — already flagged.
+  Next scheduled SUV/truck cron fire: 9am Eastern tomorrow
+  (2026-11-09).
