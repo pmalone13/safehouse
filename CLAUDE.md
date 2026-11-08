@@ -367,6 +367,25 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+796, 2026-11-08 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). Only 105 unique hrefs this run (lower than usual — no
+Houston-TX dealer cross-posts turned up at all), 3 not an exact href
+match to the ledger. **No new qualifying candidate.** All 3 excluded
+without needing an individual fetch: a GMC Kodiak 95 (medium-duty
+commercial chassis, off-class), a 2012 Mini Cooper ($68k mi, Glen
+Burnie, off-class compact hatchback), and the already-excluded 1987
+UMM Alter 4x4 (Stafford VA, not drivable) resurfacing under a fresh
+posting hash. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a1bd66d0de62dc6`). Pointer
+stayed here, no move needed since queue id 795. Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-08 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-09).
+
+Previous pointer, same project — queue id
 795, 2026-11-08 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -382,8 +401,7 @@ new" note anyway (`1a1bb7769f5b22f0`). Moved the pointer here from
 `ancestory` (folded back into the live-projects list, nothing new
 since queue id 794). Full detail in
 `projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`'s new 2026-11-08 9am section. Next
-scheduled fire: 6pm Eastern today (2026-11-08).
+`craigslist_watch_results.md`'s new 2026-11-08 9am section.
 
 Previous pointer, `projects/ancestory/CLAUDE.md` — queue id 794,
 2026-11-08 ~02:28Z, email channel, Paul replying with three things:
