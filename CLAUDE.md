@@ -366,7 +366,30 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/ancestory/CLAUDE.md` — queue id 793,
+2026-11-08 ~02:19Z, email channel, subject "project - ancestory,"
+Paul: "here is a bigger picture of that side of my family," with
+text naming Abigail Skelton's husband (Michael Malone, father of
+Paul and Stuart) and filling in Luther Skelton's two marriages
+(Anne Baber -> Amy, Adam; then Bonnie [surname unknown] -> Ben,
+Savanna, new half-siblings for Amy/Adam — flagged one naming
+discrepancy, "uncle bill," almost certainly Luther but not
+confirmed), plus an attached family-tree screenshot. The image names
+Grandee Jane's husband for the first time (Luther W Skelton III,
+1934-1999) and extends the Skelton line back two more generations,
+surfaces a discrepancy in Henrietta Clarissa Ford's parents vs. Amy's
+original chart (Sarah A Barlow vs. an implausibly-old Clarissa
+Cassandra Dresser), and shows a second, seemingly unconnected
+Barnthouse/Deel/Gill branch on the same chart. Saved the image
+outside the git repo at `/home/ubuntu/safehouse-media/ancestory/
+family_tree_2026-11-08.png` (same pattern as other binary saves, to
+avoid `drive_sync.py`'s known corruption bug). Replied by email
+(`1a1b8f69c3c85bb1`) logging it all and asking Paul to resolve both
+flagged items. Moved the pointer here from `suv-replacement` (folded
+back into the live-projects list, nothing new since queue id 792).
+Full detail in `projects/ancestory/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 792, 2026-11-07 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
