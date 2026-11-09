@@ -367,25 +367,27 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-798, 2026-11-09 ~14:00Z, channel `cron`, source
-`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+799, 2026-11-09 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
 washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
-mi`). 98 unique hrefs (another lower-than-usual count, no Houston-TX
-dealer cross-post pattern turned up at all — second run in a row
-without that pattern), 1 not an exact href/posting-ID match to the
-ledger. **No new qualifying candidate.** The one non-matching href —
-a "Jeep WRANGLER X sport TJ" ($12,000, Alexandria VA) — confirmed via
-posting-ID cross-check to be a repost of a listing already excluded
-many times before under the standing Jeep Wrangler tow-rating
-exclusion (well under the 6,000 lb gate regardless of price/
-condition). Per the standing rule (queue id 287), emailed Paul a
-"checked, nothing new" note anyway (`1a1c09f007028dac`). Moved the
-pointer here from `new-england` (folded back into the live-projects
-list, nothing new since queue id 797). Full detail in
-`projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`'s new 2026-11-09 ~14:00Z section. Next
-scheduled fire: 6pm Eastern today (2026-11-09).
+mi`). 100 unique hrefs, 4 not an exact href/posting-ID match to the
+ledger. **No new qualifying candidate.** All 4 excluded: a 2005
+Chevrolet Silverado 1500 Extended Cab 2WD ($6,800, listed location
+"Hillsborough, New Jersey" despite a Finksburg-MD-slugged href —
+out-of-region/cross-post, and gas extended cab regardless); a 2004
+Chrysler Crossfire ($5,950, Leesburg VA — sports car, off-class); a
+1993 Ford Ranger XLT SuperCab 4.0 V6 ($4,200, Takoma Park — compact
+pickup, extended cab not crew); and a 2009 Chevrolet Silverado 1500
+WT 5.3L V8 4x4 ($10,500, 89,000 mi, clean title, Chestertown MD —
+fetched the listing page directly, seller's own ad confirms Extended
+Cab, not crew cab). No Houston-TX dealer cross-posts turned up this
+run, third run in a row without that pattern. Per the standing rule
+(queue id 287), emailed Paul a "checked, nothing new" note anyway
+(`1a1c28baee170c91`). Pointer stayed here, no move needed since
+queue id 798. Full detail in `projects/suv-replacement/CLAUDE.md`
+and `craigslist_watch_results.md`'s new 2026-11-09 ~23:00Z section.
+Next scheduled fire: 9am Eastern tomorrow (2026-11-10).
 
 Previous pointer, `projects/new-england/CLAUDE.md` — queue id 797,
 2026-11-08 ~23:16Z, text channel, Paul: "we need to add a checklist
