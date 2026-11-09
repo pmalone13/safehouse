@@ -366,7 +366,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 797,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+798, 2026-11-09 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 98 unique hrefs (another lower-than-usual count, no Houston-TX
+dealer cross-post pattern turned up at all — second run in a row
+without that pattern), 1 not an exact href/posting-ID match to the
+ledger. **No new qualifying candidate.** The one non-matching href —
+a "Jeep WRANGLER X sport TJ" ($12,000, Alexandria VA) — confirmed via
+posting-ID cross-check to be a repost of a listing already excluded
+many times before under the standing Jeep Wrangler tow-rating
+exclusion (well under the 6,000 lb gate regardless of price/
+condition). Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a1c09f007028dac`). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 797). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-09 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-09).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 797,
 2026-11-08 ~23:16Z, text channel, Paul: "we need to add a checklist
 for Christine myself to review as we leave a place. So far we have
 left a teddy bear for the dog, a fishing pole for me, a shirt for me,
