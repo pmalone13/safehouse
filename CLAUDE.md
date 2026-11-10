@@ -366,7 +366,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 802, 2026-11-10 ~17:28Z, text channel, Paul: "The island submarine
+movie just put it in general notes and remind me of it later."
+Confirmed `retry_count=0` (ordinary traffic). No further detail given
+about the movie (title, plot, context), so logged as a new standing
+item in that file's own Reminders section rather than guess at a
+title — "island submarine movie" doesn't match anything already on
+file (no existing `movies` project entry, no prior mention anywhere
+in the repo). Replied by SMS (`SMa00f7aca58e8562735673172e26cf00b`)
+confirming it's logged and asking for the title/plot whenever he
+wants it looked into. Moved the pointer here from `suv-replacement`
+(folded back into the live-projects list, nothing new since queue id
+801). Full detail in `projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 801, 2026-11-10 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
