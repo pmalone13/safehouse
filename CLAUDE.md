@@ -366,7 +366,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 800,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+801, 2026-11-10 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 99 unique hrefs, all 99 an exact posting-ID match to the
+ledger — zero genuinely new listings, the cleanest "nothing new"
+result on record for this project (every prior run had at least one
+non-matching href to trace). All five diesel-specific queries came
+back empty in every region this run (page sizes consistent with a
+normal empty-results response, not a fetch failure); no Houston-TX
+dealer cross-posts turned up either, fourth run in a row without
+that pattern. Per the standing rule (queue id 287), emailed Paul a
+"checked, nothing new" note anyway (`1a1c5c3cbc85f483`). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 800). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-10 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-10).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 800,
 2026-11-10 ~02:34Z, email channel, subject "NE Trip: Portsmith," Paul:
 "we walked most of portsmith today... looking for a good day-trip or
 more like 3/4 day trip that is good for Nala... a good walk ~4-5
