@@ -366,7 +366,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 800,
+2026-11-10 ~02:34Z, email channel, subject "NE Trip: Portsmith," Paul:
+"we walked most of portsmith today... looking for a good day-trip or
+more like 3/4 day trip that is good for Nala... a good walk ~4-5
+miles where we can see good sites... her carriage if she needs to be
+carried... a meal (lunch) which is dog friendly. willing to drive
+~30-40 mins." They're at the real booked Eliot, ME stay (11/8-11/15,
+across the river from Portsmouth) and have already covered downtown
+Portsmouth. Researched real current dog policies rather than assume —
+ruled out several obvious-looking candidates that actually prohibit
+dogs (Great Bay NWR, Wells Reserve at Laudholm, and Odiorne Point
+State Park, whose official nhstateparks.org page contradicts the
+crowd-sourced AllTrails claim that leashed dogs are allowed there) and
+flagged that York's Cliff Walk is closed/no-pets and Marginal Way's
+anchor restaurant already shut for the season. Gave two real options
+with confirmed current leash rules: Fort Foster Park + Seapoint Beach
+in Kittery Point (~15 min, 1.9mi shoreline loop past WWII bunkers plus
+a beach add-on) and Fisherman's Walk/Wiggly Bridge + Long Sands Beach
++ a Nubble Light viewing stop in York Harbor (~25-30 min, ~3-4mi
+combined), both well within the drive budget. Recommended
+Loco Coco's Tacos in Kittery for lunch (confirmed dog-friendly,
+year-round — the obvious seasonal lobster-shack picks are already
+closed) and suggested combining both areas into one longer "3/4 day"
+outing. Emailed the full writeup (`1a1c351fa6f261cc`) and replied by
+SMS (`SMca060e05401a2e52d649461616376d8c`). Moved the pointer here
+from `suv-replacement` (folded back into the live-projects list,
+nothing new since queue id 799). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 799, 2026-11-09 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
