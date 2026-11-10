@@ -366,7 +366,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 804,
+2026-11-10 ~23:09Z, email channel, subject "In Portsmouth at dinner
+at river house," Paul: "How busy is this pier. We see 4 tugs but I
+haven't seen a ship come through." They're dining at The River House
+(53 Bow St, Portsmouth, NH), right on the Piscataqua, with prime
+views of the Moran Towing tugboat pier. Used `WebSearch` to confirm
+real numbers rather than guess: Moran Towing keeps 3-4 tugs stationed
+there as their standing fleet, so 4 tugs tied up is normal, not a
+sign of unusual traffic. Actual ship movement is rare — pilots guide
+only ~270 ships/year up or down the river, under 1/day on average —
+and tugs can only move ships during "slack tide," a ~1-hour window
+twice daily when the incoming/outgoing currents briefly balance (the
+Piscataqua is the 3rd-fastest tidal river in North America and very
+narrow). So a quiet pier with lots of tugs visible and no ship
+movement is the expected state most of the time. Replied by email
+(`1a1c7b9fdbaa33d5`) in the same thread. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 803). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 803, 2026-11-10 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
