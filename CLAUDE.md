@@ -366,7 +366,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+803, 2026-11-10 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 95 unique hrefs, 93 an exact posting-ID match to the ledger (2
+not). **No new qualifying candidate.** Both excluded: a 2001
+Chevrolet Silverado 3500 dump truck ($9,000, 152,000 mi, Falls Church
+VA — over the mileage ceiling and a commercial dump truck, off-class)
+and a 1970 Chevelle Malibu ($54,500, Madison VA — the same already-
+excluded classic car, fresh posting, price changed slightly). Caught
+and re-fixed a positional-pairing parsing bug (JSON-LD items paired
+positionally against a separately-extracted href list can silently
+misalign when list lengths differ) by switching to parsing each
+`<li class="cl-static-search-result">` card directly — the fix
+already proven once before at queue id 206 but not consistently
+carried forward since; flagged as the standing method going forward.
+No Houston-TX dealer cross-posts turned up this run, fifth run in a
+row without that pattern. Per the standing rule (queue id 287),
+emailed Paul a "checked, nothing new" note anyway (`1a1c7b32f30ead6a`).
+Moved the pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 802). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-10 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-11).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 802, 2026-11-10 ~17:28Z, text channel, Paul: "The island submarine
 movie just put it in general notes and remind me of it later."
 Confirmed `retry_count=0` (ordinary traffic). No further detail given
