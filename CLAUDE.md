@@ -353,8 +353,14 @@ instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
   with Tailscale's `"check"` ACL action (the common, safer default —
   grants access without a managed keypair, but still periodically
   re-confirms identity via browser rather than connecting silently
-  forever). Expect the same one-time browser-approval step the first
-  time from Termius on the phone.
+  forever). **Confirmed working from the phone itself, same session**:
+  Paul connected via Termius (host `100.117.156.93`, user `ubuntu`,
+  default port 22) with the same one-time browser-approval step, then
+  a real shell. The whole chain from this conversation's start — plan
+  Tailscale vs. migrating to Bill, join this VM to the tailnet, rebind
+  the travel webapp off the SSH tunnel, add a systemd unit, enable
+  Tailscale SSH, fix the ACL, confirm from a laptop then the phone —
+  is done and verified end to end.
 
 ## Projects
 
