@@ -366,7 +366,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 804,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 805,
+2026-11-11 ~01:16Z, text channel, Paul: "This is from my savvy Navvy
+app. What is the flag from pic and where is destination." Direct
+follow-up to queue id 804's tugboat-pier question, now with a real
+screenshot — the webhook doesn't forward MMS images, fetched it
+directly via the Twilio Media API instead. It's a savvyNavvy AIS
+popup for vessel AFRICAN SETO (Cargo, MMSI 373494000, 0 kts, 6.1nm
+away, destination "US PSM"). Cropped and zoomed the flag icon to
+confirm visually: Panama's flag, consistent with MMSI MID 373 (one
+of Panama's several registry prefixes). Destination "US PSM" is the
+UN/LOCODE for Portsmouth, NH — this cargo ship is actually inbound to
+the exact river they were just asking about. Replied by SMS
+(`SMaa88ab88503398ea2dd1efc04f27920b`) with the flag, vessel details,
+and the destination decode, flagging it as their likely answer — the
+ship probably comes through on the next slack tide. Pointer stayed
+here, no move needed since queue id 804. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id 804,
 2026-11-10 ~23:09Z, email channel, subject "In Portsmouth at dinner
 at river house," Paul: "How busy is this pier. We see 4 tugs but I
 haven't seen a ship come through." They're dining at The River House
