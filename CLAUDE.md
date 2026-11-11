@@ -338,17 +338,23 @@ instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
   rationale, verbatim intent, logged per his explicit request**: he
   decided this is OK because he alone has physical access to the
   phone and the bayhouse machines, and the tailnet's network
-  credentials are known solely to him. **Not fully working yet, one
-  step still pending on Paul's side**: a live test (`ssh
-  ubuntu@100.117.156.93` from this box itself) came back with a plain
-  `Permission denied (publickey)` — the connection hit this VM's
-  normal `sshd`, not Tailscale's own SSH handling, meaning the
-  tailnet's Access Control policy almost certainly has no `ssh` rule
-  granting it yet (enabling it locally isn't sufficient by Tailscale's
-  own design). Needs Paul to add an `ssh` block to the ACL policy at
-  `https://login.tailscale.com/admin/acls/file` — a console change
-  only he can make, not retried further from this end until he's done
-  that.
+  credentials are known solely to him. **Confirmed working end to end
+  as of this same session.** A self-test from this box to its own
+  Tailscale IP (`ssh ubuntu@100.117.156.93`) came back
+  `Permission denied (publickey)` twice — turned out to be an invalid
+  test, not a real failure: a self-loopback connection apparently
+  doesn't traverse Tailscale's own interception path the way a real
+  peer-to-peer tailnet connection does (confirmed no SSH-related
+  tailscaled log lines appeared for either attempt). The real test —
+  Paul connecting from a genuinely separate device's terminal — worked
+  after he added an `ssh` block to the tailnet's Access Control policy
+  (`https://login.tailscale.com/admin/acls/file`). It required a
+  one-time browser approval before the shell connected, consistent
+  with Tailscale's `"check"` ACL action (the common, safer default —
+  grants access without a managed keypair, but still periodically
+  re-confirms identity via browser rather than connecting silently
+  forever). Expect the same one-time browser-approval step the first
+  time from Termius on the phone.
 
 ## Projects
 
