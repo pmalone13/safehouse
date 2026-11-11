@@ -366,7 +366,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — live
+interactive session (Paul present, no queue id), 2026-11-11 ~14:3xZ.
+Paul: "we lost connection last night. Last night we were updating
+photos and other data for our Dorset stay. you were in process. goal
+was to file all data and create html site for Dorset." Checked rather
+than assumed the work was actually interrupted: `git log` showed the
+build's own checkpoint commit (`95babce`, 03:35:42 UTC) had already
+landed before the connection dropped, and the working tree was clean
+at reconnect. Verified the real artifacts on disk, not just the
+commit message — both zips present at their logged byte counts,
+`Timeline_2026-11-11.json` present at the right size, the
+`thumbs_dorset/.built` marker present with 161 thumbnails across the
+four days the zip actually covers (11/1-11/4), the live port-8095
+webapp process still running unbroken, and a direct `curl` test of
+`/new-england/dorset` returning 200 with the correct heading.
+**Nothing was actually lost or left mid-process — the prior session's
+Dorset ingest/webapp build finished and checkpointed cleanly before
+it ended.** Reported that back to Paul rather than re-running anything,
+and reiterated the one still-open item already flagged in that
+build's own log: only photos through 11/4 have been shared so far,
+even though the booked Dorset stay runs through 11/8 — days 11/5-11/8
+render with notes/GPS stops but no photo gallery yet, pending a
+future share. Full verification detail in
+`projects/travel/CLAUDE.md`'s new "Verified intact after connection
+drop" section. Moved the pointer here from `suv-replacement` (folded
+back into the live-projects list, nothing new since queue id 807).
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 807, 2026-11-11 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
