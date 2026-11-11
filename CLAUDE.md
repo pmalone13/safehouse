@@ -328,7 +328,27 @@ instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
   he can make). Use `tailscale status`/`tailscale ip -4` to check
   this VM's own state; don't assume a service is exposed just because
   it binds somewhere other than `127.0.0.1` — check what IP it
-  actually bound to.
+  actually bound to. Also on this tailnet, confirmed via `tailscale
+  status`: `pixel-9a` (`100.118.7.52`) — Paul's phone.
+- **Tailscale SSH enabled on this VM, same day (`sudo tailscale set
+  --ssh`, confirmed `RunSSH=true` in the tailscaled log)** — so Paul
+  can shell in from his phone (a plain SSH app, e.g. Termius) without
+  managing a separate keypair there, authenticated via tailnet
+  identity instead of a copied private key. **Paul's own stated
+  rationale, verbatim intent, logged per his explicit request**: he
+  decided this is OK because he alone has physical access to the
+  phone and the bayhouse machines, and the tailnet's network
+  credentials are known solely to him. **Not fully working yet, one
+  step still pending on Paul's side**: a live test (`ssh
+  ubuntu@100.117.156.93` from this box itself) came back with a plain
+  `Permission denied (publickey)` — the connection hit this VM's
+  normal `sshd`, not Tailscale's own SSH handling, meaning the
+  tailnet's Access Control policy almost certainly has no `ssh` rule
+  granting it yet (enabling it locally isn't sufficient by Tailscale's
+  own design). Needs Paul to add an `ssh` block to the ACL policy at
+  `https://login.tailscale.com/admin/acls/file` — a console change
+  only he can make, not retried further from this end until he's done
+  that.
 
 ## Projects
 
