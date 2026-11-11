@@ -366,7 +366,40 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 806,
+**Current project**: `projects/new-england/CLAUDE.md` — live
+interactive session (Paul present, no queue id), 2026-11-11
+~02:2xZ-03:3xZ. First, Paul: "try now" / "wait, forgot to scp the
+file...stand by" -- re-authorizing the Drive OAuth token for the
+`invalid_grant` outage open since queue id 783 (2026-11-06). Retested
+`get_drive_client()` and ran a full `drive_sync.py` catch-up (6
+created, 12 updated, 897 unchanged) -- **resolved**, marked so in the
+TODO section below. While verifying, found a new genuine Drive share,
+`Timeline5.json` (80,064,478 bytes), and downloaded it. Paul then:
+"I don't know where your at in your process of ingesting the new
+timeline data. I've also uploaded a new zipfile: NewEngland26-1-002.zip
+that has all pics up to now. Please ingest both new timeline data and
+pics. And, create a page in our web app for Dorset as a peer of bar
+harbor." Downloaded and verified `NewEngland26-1-002.zip`
+(3,283,110,503 bytes, a second combined whole-trip zip -- 18 new files
+vs. the prior one, all from the Dorset arrival day 11/1; nothing past
+11/4 shared yet even though the booked Dorset stay runs through 11/8,
+flagged rather than implied complete). Built a `/new-england/dorset`
+page in the travel webapp (`projects/travel/webapp/app.py`) mirroring
+Bar Harbor's zip-backed-serving pattern exactly, with day notes for
+the full 11/1-11/8 stay (arrival, fishing recs, Burr and Burton
+Academy, the Boorn Murder Trial lecture, the confirmed Lake George
+day trip, departure) built from this project's own log cross-checked
+against a fresh GPS pull from the new Timeline export --
+`DORSET_HOME_LATLNG` (43.2431678, -73.0808106) read directly off the
+Timeline data's recurring overnight cluster, matching 39 Dorset View
+Lane. Tested via Flask's own test client (existing Portland/Bar
+Harbor routes unaffected, new Dorset route correct, auth gate intact)
+before restarting the live port-8095 process; reconfirmed live via
+`curl`. `NE_STOPS`' Dorset link updated from `None` to the new route.
+Full detail in `projects/travel/CLAUDE.md` and
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id 806,
 2026-11-11 ~01:20Z, text channel, Paul: "Cool, I will watch." Plain
 acknowledgment of the queue id 805 savvyNavvy flag/destination answer
 — no reply needed. Caught and backfilled a gap: the message was
@@ -6669,22 +6702,26 @@ the pending `/sms-optin` build still live there.
 
 ## TODO / known limitations (don't let these surprise a future turn)
 
-- **Drive down again, `invalid_grant`, discovered 2026-11-06 ~23:02Z
-  at queue id 783's checkpoint.** Same recurring error shape as every
-  prior occurrence: `creds.refresh()` throws `RefreshError:
-  invalid_grant: Token has been expired or revoked.` Retried once,
-  identical failure — not transient. Drive-only: Gmail worked fine
-  minutes earlier in this same turn (the SUV-watch "checked, nothing
-  new" email sent cleanly). Notably the token (`.drive_api_token.json`)
-  had last refreshed only ~5h before this failure (17:53Z same day),
-  so — same as several past occurrences — the timing doesn't cleanly
-  fit the old 7-day-refresh-token-cap theory either; root cause
-  remains unexplained and undiagnosable from this VM. Flagged to Paul
-  by SMS (`SM108aa4ee37a0e6d65a78a375a6684e8d`). Fix is the same as
-  every prior time: `authorize_drive_once.py` on a machine with a
-  browser, `scp` the resulting token to this VM at the existing
-  `.drive_api_token.json` path. Git push for this turn's own commit
-  was unaffected (Drive is the only thing down).
+- ~~Drive down again, `invalid_grant`, discovered 2026-11-06 ~23:02Z
+  at queue id 783's checkpoint.~~ **RESOLVED 2026-11-11 ~02:2xZ, live
+  session, Paul present.** Same recurring error shape as every prior
+  occurrence: `creds.refresh()` throws `RefreshError: invalid_grant:
+  Token has been expired or revoked.` Drive-only: Gmail worked fine
+  throughout (every SUV-watch "checked, nothing new" email and the
+  savvyNavvy/tugboat SMS replies all sent cleanly while this was
+  down). Stayed broken across every checkpoint from queue id 783
+  (2026-11-06) through queue id 806 (2026-11-11), ~4.5 days — as
+  usual, root cause remains unexplained/undiagnosable from this VM.
+  **Fixed when Paul re-ran `authorize_drive_once.py` on a machine
+  with a browser and `scp`'d the fresh token over**; `get_drive_client()`
+  retested clean (`files().list()` succeeded) and a full
+  `drive_sync.py` catch-up synced the backlog (6 created, 12 updated,
+  897 unchanged, 1 pre-existing harmless orphan). No token file was
+  touched by this VM to fix it — same pattern as every prior
+  resolution. If `invalid_grant` reappears, same fix mechanics as
+  always: `authorize_drive_once.py` on a machine with a browser, `scp`
+  the resulting token to this VM at the existing
+  `.drive_api_token.json` path.
 
 - **Requested 2026-10-30 (queue id 726): batch backlog-recovery
   notifications into one summary instead of one text per message —
