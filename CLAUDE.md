@@ -366,7 +366,33 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — live
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+807, 2026-11-11 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 106 unique hrefs, 7 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 7 excluded: a $999,999
+spam/placeholder listing titled "00" (Baltimore); a 2010
+International 4400 cab ($22,999, Burkeville VA, commercial chassis);
+a 2008 Ford 650 box truck ($16,999, Burkeville VA, commercial); a
+2012 Audi Q5 ($5,800, Joppa MD, unibody crossover); a 2011 Ford
+Explorer 4WD 4dr ($5,975, Woodbridge VA — the 2011+ Explorer
+redesign is unibody, not body-on-frame); a 2012 Honda CR-V EX AWD
+($1,800, Annapolis MD, unibody crossover); and a 2003 Toyota Tundra
+(83,000 mi, clean title, $4,250, Washington DC — fetched the listing
+page directly, confirmed base 6-cylinder RWD with no tow package,
+well under the 6,000 lb gate). No Houston-TX dealer cross-posts
+turned up this run, sixth run in a row without that pattern. Per the
+standing rule (queue id 287), emailed Paul a "checked, nothing new"
+note anyway (`1a1caeaedd2cba67`). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since the live Dorset/timeline-ingest session). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-11 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-11).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — live
 interactive session (Paul present, no queue id), 2026-11-11
 ~02:2xZ-03:3xZ. First, Paul: "try now" / "wait, forgot to scp the
 file...stand by" -- re-authorizing the Drive OAuth token for the
@@ -12834,3 +12860,20 @@ thing that needs it, not because anything currently lives under it.
   unaffected. Not re-texting Paul about it again — already flagged.
   Next scheduled SUV/truck cron fire: 9am Eastern tomorrow
   (2026-11-09).
+
+- 2026-11-11 ~14:0xZ: fresh session, queue id 807, channel `cron`,
+  source `suv-replacement-watch` — 9am Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. Ran the full four-region recipe; 106 unique hrefs, 7
+  not an exact posting-ID match to the ledger — all 7 excluded (a
+  $999,999 spam/placeholder listing, two commercial trucks, two
+  unibody crossovers (Audi Q5, Honda CR-V), the 2011+ unibody-era
+  Ford Explorer, and a base V6 RWD Toyota Tundra below the tow
+  gate). No new qualifying candidate. Emailed Paul a "checked,
+  nothing new" note per the standing rule (queue id 287,
+  `1a1caeaedd2cba67`). Moved the Current-project pointer here from
+  `new-england`. Drive is still down per the `invalid_grant` outage
+  open since queue id 783 (2026-11-06) — resolved once earlier this
+  same day (the live session logged above this entry) but worth
+  re-verifying at this checkpoint rather than assumed. Next
+  scheduled SUV/truck cron fire: 6pm Eastern today (2026-11-11).
