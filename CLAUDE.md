@@ -414,7 +414,36 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — live interactive
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+808, 2026-11-11 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 111 unique hrefs, 19 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 19 excluded: two
+already-logged qualifying finds resurfacing under fresh posting IDs
+(2008 GMC Sierra 1500 SLE2 Crew Cab, Essex; 2004 Toyota Tundra
+DoubleCab V8 SR5 4WD, Woodbridge); a repost of this morning's own
+Audi Q5 exclusion (Joppa); the established ML500 ~5,000 lb tow
+exclusion and the $0 Kargar Motors Hummer H2 placeholder pattern,
+both resurfacing; a 2010 Ford F150 Super Cab SVT Raptor (Super Cab
+not crew cab); a Hummer H2 stretch limousine; a 2009 Porsche 911 4S
+(Mundelein IL, out-of-region); the Joppa MD sedan cluster gaining a
+Chevrolet Equinox and a Mazda6; a 2011 Nissan Sentra; three classic
+cars (1955 Chevrolet Bel Air, 1962 Dodge 880, 1957 Chevy 150); a
+1938 International Hot Rod; a 2012 Ford F350 DRW Utility Service Bed
+(commercial); and a 2007 Casita Liberty Deluxe travel trailer (not
+an SUV/truck). No Houston-TX dealer cross-posts turned up this run,
+seventh run in a row without that pattern. Per the standing rule
+(queue id 287), emailed Paul a "checked, nothing new" note anyway
+(`1a1ccd8d511dd32b`). Moved the pointer here from `travel` (folded
+back into the other-live-projects list, nothing new since this
+session's own Tailscale/systemd build). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-11 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-12).
+
+Previous pointer, `projects/travel/CLAUDE.md` — live interactive
 session (Paul present, no queue id), 2026-11-11 ~17:0xZ. Paul wanted
 the `new-england`/Bar Harbor/Dorset webapp reachable without SSH
 tunneling, for anyone "on the same network as Bill," and floated
@@ -12999,3 +13028,21 @@ thing that needs it, not because anything currently lives under it.
   same day (the live session logged above this entry) but worth
   re-verifying at this checkpoint rather than assumed. Next
   scheduled SUV/truck cron fire: 6pm Eastern today (2026-11-11).
+
+- 2026-11-11 ~23:0xZ: fresh session, queue id 808, channel `cron`,
+  source `suv-replacement-watch` — 6pm Eastern scheduled fire.
+  Already fully handled, logged, and committed as part of this
+  checkpoint. Ran the full four-region recipe; 111 unique hrefs, 19
+  not an exact posting-ID match to the ledger — all 19 excluded (two
+  already-logged qualifying finds resurfacing under fresh posting
+  IDs, a repost of this morning's own Audi Q5 exclusion, an
+  established ML500 tow-rating exclusion and a $0 Kargar Motors
+  placeholder both resurfacing, a non-crew-cab Super Cab Raptor, a
+  Hummer H2 stretch limousine, an out-of-region Porsche dealer
+  listing, two new Joppa MD sedan-cluster additions, a sedan, three
+  classic cars, a hot rod, a commercial utility truck, and a travel
+  trailer). No new qualifying candidate. Emailed Paul a "checked,
+  nothing new" note per the standing rule (queue id 287,
+  `1a1ccd8d511dd32b`). Moved the Current-project pointer here from
+  `travel`. Next scheduled SUV/truck cron fire: 9am Eastern tomorrow
+  (2026-11-12).
