@@ -409,12 +409,21 @@ and the VM's public IP on port 8095 now fails to connect at all
 rather than just 401, confirming it's reachable over the tailnet only.
 The SSH-tunnel requirement from the original build is superseded —
 any device on Paul's tailnet reaches the webapp directly from
-anywhere, not just the house. Not done, flagged rather than silently
-decided: no systemd unit yet for the webapp process (still a plain
-`nohup`, won't survive a reboot — a good next step if Paul wants
-durability, not built since it wasn't asked for), and the Bill-
-migration option was set aside, not ruled out, if Paul wants a single
-combined family portal later. Full detail in
+anywhere, not just the house. **Update, same session**: Paul asked
+for the systemd unit flagged as missing above — added
+`systemd/travel-webapp.service` (runs the same `python -u app.py`
+invocation rather than switching to `gunicorn`, since the Tailscale-IP
+binding lives inside the app's own `if __name__ == "__main__":` block,
+which gunicorn would never execute), plus a 15-second retry loop in
+`app.py` itself for the Tailscale-IP lookup so a boot-time race against
+`tailscaled.service` reporting "active" before it's actually assigned
+an IP degrades gracefully instead of silently binding to `127.0.0.1`
+forever. Installed, enabled, and verified — `systemctl is-enabled`
+reports `enabled`, same 401/401/200 auth-gate and public-IP-
+unreachable checks still pass under the new unit. This now survives a
+reboot. The Bill-migration option (Option B) remains set aside, not
+ruled out, if Paul wants a single combined family portal later. Full
+detail in
 `projects/travel/CLAUDE.md`'s newest entry and this file's own new
 Infrastructure note above. Moved the pointer here from `new-england`
 (folded back into the live-projects list, nothing new since this

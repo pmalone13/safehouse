@@ -1,0 +1,15 @@
+[Unit]
+Description=Travel webapp (trip photo galleries, Tailscale-only access)
+After=network-online.target tailscaled.service
+Wants=network-online.target tailscaled.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/safehouse/projects/travel/webapp
+ExecStart=/home/ubuntu/safehouse/venv/bin/python -u app.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
