@@ -313,6 +313,22 @@ instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
   way EC2 can — plus `boto3` integration), so it's a deliberate
   future build, not done yet. Revisit if `/mnt/data` ever fills up or
   Paul wants cheaper archival for the growing pile of trip zips.
+- **This VM is on Paul's Tailscale tailnet as of 2026-11-11** —
+  live session, built so the `travel` project's webapp could drop
+  its SSH-tunnel requirement (see `projects/travel/CLAUDE.md`'s newest
+  entry for the full build). Node name `ted-safehouse`, IP
+  `100.117.156.93`. Other confirmed nodes on the same tailnet:
+  `bayhouse` (Bill, `100.83.129.22`) and `nurface` (`100.66.80.61` —
+  Paul's Surface laptop, confirming the previously-unconfirmed
+  "unnamed fourth node" from queue id 238 is real and on this same
+  network). Routed via DERP relay (NYC), not a direct peer-to-peer
+  link, as of this entry — fine for browsing, improvable later by
+  opening UDP 41641 inbound in the Lightsail firewall console if
+  Paul wants lower latency (not done, a Lightsail-console change only
+  he can make). Use `tailscale status`/`tailscale ip -4` to check
+  this VM's own state; don't assume a service is exposed just because
+  it binds somewhere other than `127.0.0.1` — check what IP it
+  actually bound to.
 
 ## Projects
 
@@ -366,7 +382,45 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — live
+**Current project**: `projects/travel/CLAUDE.md` — live interactive
+session (Paul present, no queue id), 2026-11-11 ~17:0xZ. Paul wanted
+the `new-england`/Bar Harbor/Dorset webapp reachable without SSH
+tunneling, for anyone "on the same network as Bill," and floated
+either a VPN or actually migrating the site onto Bill's Windows
+machine (it already hosts the "bayhouse" site there). Weighed both
+and flagged the real cost of migrating (Bill's own site stack is
+unknown, the Ted<->Bayhouse email protocol caps attachments at 20MB
+so the ~10GB+ of trip media couldn't move that way, and Python/Flask
+availability on Bill's box is unconfirmed) against just putting this
+VM on a VPN directly (no code/data change beyond the bind address).
+Paul picked the VPN option — and it turned out Bill already runs
+Tailscale, which settled the tool choice too. Installed and joined
+Tailscale on this VM live with Paul present (a real network/infra
+change, the hard boundary's own carve-out): `ted-safehouse` at
+`100.117.156.93`, confirmed alongside `bayhouse` (Bill,
+`100.83.129.22`) and, newly confirmed real rather than theoretical,
+`nurface` (`100.66.80.61` — Paul's Surface laptop, the previously-
+unconfirmed "unnamed fourth node" from queue id 238). Rebound the
+travel webapp's Flask process from `127.0.0.1` to this VM's own
+Tailscale IP (resolved dynamically via `tailscale ip -4`, not
+hardcoded, with a `127.0.0.1` fallback if Tailscale is ever down) —
+verified via direct `curl`: auth gate still 401/401/200 as before,
+and the VM's public IP on port 8095 now fails to connect at all
+rather than just 401, confirming it's reachable over the tailnet only.
+The SSH-tunnel requirement from the original build is superseded —
+any device on Paul's tailnet reaches the webapp directly from
+anywhere, not just the house. Not done, flagged rather than silently
+decided: no systemd unit yet for the webapp process (still a plain
+`nohup`, won't survive a reboot — a good next step if Paul wants
+durability, not built since it wasn't asked for), and the Bill-
+migration option was set aside, not ruled out, if Paul wants a single
+combined family portal later. Full detail in
+`projects/travel/CLAUDE.md`'s newest entry and this file's own new
+Infrastructure note above. Moved the pointer here from `new-england`
+(folded back into the live-projects list, nothing new since this
+morning's Dorset-ingest verification).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — live
 interactive session (Paul present, no queue id), 2026-11-11 ~14:3xZ.
 Paul: "we lost connection last night. Last night we were updating
 photos and other data for our Dorset stay. you were in process. goal
