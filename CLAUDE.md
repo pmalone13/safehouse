@@ -366,7 +366,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 805,
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 806,
+2026-11-11 ~01:20Z, text channel, Paul: "Cool, I will watch." Plain
+acknowledgment of the queue id 805 savvyNavvy flag/destination answer
+— no reply needed. Caught and backfilled a gap: the message was
+already marked `done` in `queue.db` but had never been logged or
+committed by whatever turn handled it (same "real work/ack done,
+checkpoint never reached" shape documented elsewhere in this file's
+own TODO section) — found while doing a routine live-session queue
+health check (0 pending, 7 done/0 failed in the last 24h, all three
+services active). No new research needed. Pointer stayed here, no
+move needed since queue id 805.
+
+Previous pointer, same project — queue id 805,
 2026-11-11 ~01:16Z, text channel, Paul: "This is from my savvy Navvy
 app. What is the flag from pic and where is destination." Direct
 follow-up to queue id 804's tugboat-pier question, now with a real
