@@ -414,7 +414,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 810, 2026-11-12 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 110 unique hrefs, 8 not an exact posting-ID match to the
+ledger. **Found one new qualifying candidate**: a 2006 Ford F-250
+Super Duty Lariat 4X4, 6.0L Power Stroke diesel, Crew Cab, 92,357
+mi, $12,575, Baltimore MD (dealer, Auto Budget MD) — fetched the
+listing page directly to confirm diesel/4WD/mileage, clears the
+6,000 lb tow gate automatically per the standing diesel-F250/F350
+exemption. Title status not stated in the ad, flagged rather than
+assumed clean. $2,575 over the nominal $10k ceiling, emailed anyway
+per the standing over-budget-but-qualifying pattern
+(`1a1d01122a515c5f`). All 7 other non-matching hrefs confirmed as
+resurfacing/off-class reposts of already-excluded categories under
+fresh posting IDs — same set as queue id 808's own exclusions,
+essentially unchanged overnight. No Houston-TX dealer cross-posts
+turned up this run, eighth run in a row without that pattern. Moved
+the pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 809). Full detail in
+`projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-12 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-12).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 809, 2026-11-12 ~00:37Z, text channel, Paul: "Hi Ted. Just
 checking in. Tailscale network working:)" Plain status check-in
 confirming the Tailscale/SSH-from-phone build (this file's own
