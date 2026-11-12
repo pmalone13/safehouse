@@ -414,7 +414,18 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 809, 2026-11-12 ~00:37Z, text channel, Paul: "Hi Ted. Just
+checking in. Tailscale network working:)" Plain status check-in
+confirming the Tailscale/SSH-from-phone build (this file's own
+Infrastructure section) is holding up in daily use. Replied by SMS
+(`SM2e8fcb518f41f7bc2cf55de5c271dfeb`) confirming and offering help
+on the NE trip or SUV watch. Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 808). Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 808, 2026-11-11 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
