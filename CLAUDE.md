@@ -415,6 +415,16 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 811, 2026-11-12 ~14:52Z, email channel, Paul replying to the
+queue id 810 F-250 find: "Nice truck. If I was there I would go
+see." Plain positive reaction, no action requested. Replied by
+email (`1a1d03f43086593f`) acknowledging and flagging the one open
+gap on that listing — title status, not stated in the dealer's ad
+— and offered to pull the dealer's phone number for whoever ends up
+going. Pointer stayed here, no move needed since queue id 810. Full
+detail in `projects/suv-replacement/CLAUDE.md`.
+
+Previous pointer, same project — queue
 id 810, 2026-11-12 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
