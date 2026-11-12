@@ -414,7 +414,32 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/youtube/CLAUDE.md` — queue id 813,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 814, 2026-11-12 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 109 unique hrefs, 20 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 20 traced via
+title+price+location cross-check to already-logged/excluded
+listings resurfacing under fresh posting IDs — including two
+already-logged qualifying finds resurfacing again (2004 Toyota
+Tundra DoubleCab V8 SR5 4WD, Woodbridge; 2008 GMC Sierra 1500 SLE2
+Crew Cab, Essex), the already-excluded 2004 Ford F-250 snowplow
+truck (confirmed via identical $18,900/40,000 mi to the queue id 316
+exclusion), the established ML500/Kargar-Hummer/Super-Cab-Raptor/
+classic-car/travel-trailer/out-of-region-sports-car exclusion
+patterns, and the Joppa MD sedan cluster gaining a new Hyundai Santa
+Fe alongside its usual members. Emailed Paul a "checked, nothing
+new" note per the standing rule (queue id 287, `1a1d1ff210a63c01`).
+No Houston-TX dealer cross-posts turned up this run, ninth run in a
+row without that pattern. Moved the pointer here from `youtube`
+(folded back into the live-projects list, nothing new since queue id
+813). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-12 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-13).
+
+Previous pointer, `projects/youtube/CLAUDE.md` — queue id 813,
 2026-11-12 ~17:44Z, email channel, Paul shared 4 Google Drive Takeout
 export links and asked: "please unpack, create a new project called
 youtube and place in there. I'm not sure how we will use. Please
