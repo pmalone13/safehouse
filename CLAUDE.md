@@ -414,7 +414,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 812, 2026-11-12 ~15:15Z, text channel, Paul: "Hi Ted, a note for
+shopping today. Need Tylenol the prescription for Christine and
+yogurt Icelandic yogurt." Confirmed `retry_count=0` (ordinary
+traffic). Plain shopping-list note, no project tied — logged in that
+file's own Reminders section (Tylenol, prescription, for Christine;
+Icelandic yogurt) and its Log. Replied by SMS
+(`SM00d129ac350c9b15bd11bf17fe17d3d9`) confirming it's logged. Moved
+the pointer here from `suv-replacement` (folded back into the
+live-projects list, nothing new since queue id 811). Full detail in
+`projects/safehouse/general/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 811, 2026-11-12 ~14:52Z, email channel, Paul replying to the
 queue id 810 F-250 find: "Nice truck. If I was there I would go
 see." Plain positive reaction, no action requested. Replied by
