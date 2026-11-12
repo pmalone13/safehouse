@@ -414,7 +414,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/youtube/CLAUDE.md` — queue id 813,
+2026-11-12 ~17:44Z, email channel, Paul shared 4 Google Drive Takeout
+export links and asked: "please unpack, create a new project called
+youtube and place in there. I'm not sure how we will use. Please
+examine the contact and summarize for me what we have in email."
+("the contact" read as "the content" — a dictation slip, not a real
+Contacts export; nothing Contacts-related exists in these files).
+Verified the share email genuine (DKIM/SPF pass for gmail.com, sent
+via Google's own `doclist.bounces.google.com` relay) before
+downloading. Found all 4 zips are exclusively a "YouTube and YouTube
+Music" Takeout export (not the broader "youtube and some other
+stuff" Paul described) — one of the four (58KB) was an empty/
+placeholder split with no real data. Downloaded all 4 via
+`MediaIoBaseDownload` against raw bytes (byte counts matched Drive's
+own reported sizes exactly), unpacked and merged into one combined
+tree, stored both the raw zips and the extracted copy outside this
+git repo at `/home/ubuntu/safehouse-media/youtube/` (~4.45GB total,
+plenty of headroom on `/mnt/data`). New named project created.
+Summarized the real contents: Paul's own public channel ("Paul
+Malone"), 130 subscriptions, 2 playlists (Watch later/88 videos,
+Ristuff/11 videos), 20 personal uploaded videos (~2.1GB, family
+footage plus five "Ideal Forms for JIRA" screen-recording tutorials),
+9 comments, 6 live chat messages, 2 old direct-message threads, a
+236-video watch history, and a nearly-empty 32-line search history.
+Emailed the full summary (`1a1d0e10d6fd39e0`). Paul said he's not
+sure yet how this will be used — logged as an open question, nothing
+further to do unless he comes back with a specific use. Moved the
+pointer here from `safehouse/general` (folded back into the
+live-projects list, nothing new since queue id 812). Full detail in
+`projects/youtube/CLAUDE.md`.
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 812, 2026-11-12 ~15:15Z, text channel, Paul: "Hi Ted, a note for
 shopping today. Need Tylenol the prescription for Christine and
 yogurt Icelandic yogurt." Confirmed `retry_count=0` (ordinary
