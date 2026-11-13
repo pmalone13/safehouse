@@ -415,6 +415,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+818, 2026-11-13 ~18:12Z, text channel, Paul: "Can you summarize
+Newbury history. Business and population." Direct follow-up to
+queue id 817's Grog/Newburyport exchange minutes earlier — covered
+both towns since Newbury, MA is itself real and distinct
+(Newburyport split off from it in 1764), not assumed a typo for the
+town just discussed. Used `WebSearch`: Newbury settled 1635 (~100
+Wiltshire-England colonists), historically agricultural, pop. today
+~6,700-7,200 (6,716 at 2020 census); Newburyport split off 1764
+(then-smallest MA town, pop. 2,800), city since 1851, shipbuilding/
+maritime trade/fishing then shoe/comb/silver manufacturing,
+birthplace of the U.S. Coast Guard, pop. today 18,289 (2020 census).
+Replied by SMS (`SMf8a22f6ed05efa1610b814eb3492cd30`). Pointer stayed
+here, no move needed since queue id 817. Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, same project — queue id
 817, 2026-11-13 ~18:07Z, text channel, Paul: "How old is Grog.
 Restaurant in Newberry nh." No NH town named "Newberry" exists —
 read as dictation garble for Newburyport, MA, which sits right next
