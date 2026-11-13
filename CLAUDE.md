@@ -414,7 +414,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+815, 2026-11-13 ~13:43Z, email channel, subject "Fwd: Athenaeum
+Event Confirmed." Confirmed `retry_count=0` (ordinary traffic,
+no backlog mode). Paul forwarded Christine's own forward of a
+Portsmouth Athenaeum confirmation email (2 seats, a Nov 12 book talk
+on Captain John Manley) — falls within the already-booked Eliot/
+Portsmouth-area stay (11/8-11/15). Paul: "Please not this. And note
+Chris was bit by tic and we missed show. Chris on antibiotics for
+ten days." Logged both facts (the reserved event was missed;
+Christine was bitten by a tick and is now on a 10-day antibiotics
+course) in `projects/new-england/CLAUDE.md`. Replied by email
+(`1a1d526e2f20790c`) acknowledging and wishing Christine a smooth
+recovery. Moved the pointer here from `suv-replacement` (folded
+back into the live-projects list, nothing new since queue id 814).
+Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 814, 2026-11-12 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
