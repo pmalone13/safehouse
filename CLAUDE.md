@@ -414,7 +414,37 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 816, 2026-11-13 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 105 unique hrefs, 13 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 13 excluded: a 2011
+Jeep Liberty (standing off-class exclusion); a 2009 Land Rover
+Range Rover Supercharged and a 2011 Nissan Sentra, both
+cross-posted by a New Jersey dealer ("Motorhubnj.com") — a new
+out-of-region dealer cross-post pattern, same exclusion category as
+the Houston-TX pattern; a 2004 Ford F-250 SD snowplow truck ($18,000,
+40,000 mi, Arlington — fetched the listing page, confirmed Regular
+Cab/gas, same already-excluded truck as the queue id 316/814
+$18,900 listing, fresh posting at a slightly different price); a
+1990 Ford F-150 Lariat (half-ton gas, no crew cab); a Jeep Wrangler
+Sport 2010 (standing Wrangler tow-rating exclusion); and six
+resurfacing reposts of already-excluded listings (Subaru Outback,
+Casita travel trailer, International Hot Rod, Chevy 150 Business
+Coupe, Dodge 880 wagon, Ford F350 DRW Utility Service Bed, Hummer H2
+Stretch Limousine). No Houston-TX dealer cross-posts turned up this
+run, tenth run in a row without that specific pattern, though the
+new NJ-dealer cross-post shows the same cross-posting behavior from
+a different dealer. No email needed (nothing new qualifying). Moved
+the pointer here from `new-england` (folded back into the
+live-projects list, nothing new since queue id 815). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-13 ~14:00Z section. Next scheduled fire:
+6pm Eastern today (2026-11-13).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 815, 2026-11-13 ~13:43Z, email channel, subject "Fwd: Athenaeum
 Event Confirmed." Confirmed `retry_count=0` (ordinary traffic,
 no backlog mode). Paul forwarded Christine's own forward of a
