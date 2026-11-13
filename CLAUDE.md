@@ -414,7 +414,28 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+819, 2026-11-13 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 108 unique hrefs, 14 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** One genuinely new listing
+individually checked: a 2012 Nissan Xterra PRO-4X, 4WD, clean title,
+106,678 mi, $11,500, Lanham/Glenarden MD — fetched the listing page
+directly then `WebSearch`-confirmed a 5,000 lb max tow rating for
+this exact trim/year, below the 6,000 lb gate — excluded. All 13
+others matched already-established exclusion categories, essentially
+the same set as this morning's 9am fire (queue id 816) under fresh
+posting IDs/prices. No Houston-TX dealer cross-posts turned up this
+run, eleventh run in a row without that pattern. No email needed
+(nothing new qualifying). Moved the pointer here from `new-england`
+(folded back into the live-projects list, nothing new since queue id
+818). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-13 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-14).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 818, 2026-11-13 ~18:12Z, text channel, Paul: "Can you summarize
 Newbury history. Business and population." Direct follow-up to
 queue id 817's Grog/Newburyport exchange minutes earlier — covered
