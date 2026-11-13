@@ -414,7 +414,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+817, 2026-11-13 ~18:07Z, text channel, Paul: "How old is Grog.
+Restaurant in Newberry nh." No NH town named "Newberry" exists —
+read as dictation garble for Newburyport, MA, which sits right next
+to the booked Eliot/Portsmouth-area stay (11/8-11/15). Used
+`WebSearch` to confirm: The Grog, 13 Middle St, Newburyport MA — the
+building has served as a restaurant/tavern since not long after the
+Civil War under earlier names, but the current name/identity "The
+Grog" dates to 1969 (~57 years). Replied by SMS
+(`SM8aab9aebce6d9e2b25823a784a2f514c`). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 816). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue
 id 816, 2026-11-13 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
