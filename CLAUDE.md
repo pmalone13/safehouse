@@ -415,6 +415,40 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+821, 2026-11-14 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 104 unique hrefs, 13 not an exact posting-ID match to the
+ledger. **Found one new qualifying candidate**: a 2010 Mercedes-Benz
+ML 350 BlueTEC 4MATIC, diesel, AWD, 87,643 mi, clean title, $9,811,
+dealer "Precise Automotive Group" (703-420-3442, Northern VA based)
+— fetched the listing page directly to confirm mileage/title/trim
+(a genuinely different vehicle from the already-logged/excluded
+2008 ML350 gas model that's resurfaced repeatedly in this ledger —
+different year, trim, price, and dealer), then `WebSearch`-confirmed
+the BlueTEC 4MATIC diesel's max tow rating at 7,200 lbs — clears the
+6,000 lb gate with real margin, and under the $10k ceiling too.
+Emailed (`1a1dc4c5308685a7`). All 12 other non-matching hrefs traced
+to already-established exclusion categories under fresh posting
+IDs/prices — the Jeep Wrangler Sport (Herndon, standing tow-rating
+exclusion), a 2010 Subaru Outback (Manassas, unibody crossover), a
+2003 Hummer H2 stretch limo (Woodbridge, novelty vehicle), the
+"Motorhubnj.com" New Jersey dealer's Sentra + Range Rover cross-post
+pair, the already-excluded F-250 snowplow truck (Arlington), a Ford
+F350 DRW utility bed (DC, commercial), the long-excluded "87K"
+Tacoma (Chantilly), a 2011 BMW X3 (Baltimore, standing off-class
+exclusion), the not-running 1990 Ford Lariat ("Ford Pick/up 1990,"
+Baltimore), a 1938 International Hot Rod (classic/barnfind), and
+the Casita travel trailer (Odenton, not an SUV/truck). No Houston-TX
+dealer cross-posts, thirteenth run in a row without that pattern.
+Moved the pointer here from `suv-replacement` itself (no move
+needed, already here since queue id 820). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-14 ~23:00Z section. Next scheduled fire:
+9am Eastern tomorrow (2026-11-15).
+
+Previous pointer, same project — queue id
 820, 2026-11-14 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
