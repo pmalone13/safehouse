@@ -414,7 +414,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+823, 2026-11-14 ~23:47Z, text channel, Paul: "On ne trip. Headed to
+85 Congress Street, Salem, MA 01970, United States. Tomorrow.
+Describe parking options for us." Confirmed `retry_count=0`
+(ordinary traffic). Checked the project's own trip table first and
+found 85 Congress Street is literally their booked Salem Airbnb
+(11/15-11/22, $1,500), not a separate destination — so answered as
+"where to park for a week's stay," not "parking for an outing."
+Used `WebSearch`/`WebFetch` to confirm current (post-October,
+non-surge) facts: South Harbor Garage, 10 Congress Street, same
+street ~1 block away, open 24hrs, off-season rates ($0.75/hr
+weekday, $1.50/hr weekend) — the recommended default for the whole
+stay. Flagged that nearby street parking is resident-permit-only and
+a short-term Airbnb guest can't buy a visitor pass themselves, so
+street parking should only be relied on if the host supplies one.
+Caught and fixed a bash dollar-sign-escaping mistake in the first SMS
+attempt (same documented pitfall as queue id 185/197, this time via
+a heredoc) — resent correctly
+(`SM64dccc26b99e1f4962bc0e4f3481917f`). Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list,
+nothing new since queue id 822).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 822, 2026-11-14 ~23:30Z, text channel, Paul: "Ted, add portable
 speaker to the list of things to remind." Confirmed `retry_count=0`
 (ordinary traffic). Plain reminder-list addition, no project tied —
