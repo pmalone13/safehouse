@@ -415,6 +415,15 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/new-england/CLAUDE.md` — queue id
+824, 2026-11-14 ~23:52Z, text channel, Paul: "Is there mass transit
+for Salem to Boston?" Direct follow-up to queue id 823's Salem
+parking question. Used `WebSearch` to confirm: yes, MBTA commuter
+rail (Newburyport/Rockport Line) runs Salem Station -> Boston North
+Station, ~35-36 min, roughly hourly ~5:20am-11:10pm, fare ~$8-13
+one-way. Replied by SMS (`SM1e80fddc988d894be2c1441790326122`).
+Pointer stayed here, no move needed since queue id 823.
+
+Previous pointer, same project — queue id
 823, 2026-11-14 ~23:47Z, text channel, Paul: "On ne trip. Headed to
 85 Congress Street, Salem, MA 01970, United States. Tomorrow.
 Describe parking options for us." Confirmed `retry_count=0`
