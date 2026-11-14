@@ -415,6 +415,38 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+820, 2026-11-14 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 107 unique hrefs, 12 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 12 traced via
+title+price+location cross-check to already-established exclusion
+categories under fresh posting IDs — a Jeep Wrangler Sport (Herndon,
+standing tow-rating exclusion), a 2010 Subaru Outback (Manassas,
+unibody crossover), a 2003 Hummer H2 stretch limo (Woodbridge,
+novelty vehicle), the "Motorhubnj.com" New Jersey dealer's Sentra +
+Range Rover cross-post pair (first seen yesterday), the already-
+excluded F-250 snowplow truck (Arlington), a Ford F350 DRW utility
+bed (DC, commercial), the long-excluded "87K" Tacoma (Chantilly), a
+1957 Chevy 150 (Madison VA, classic), the not-running 1990 Ford
+Lariat ("Ford Pick/up 1990," Baltimore), a 1938 International Hot
+Rod (classic/barnfind), and the Casita travel trailer (Odenton, not
+an SUV/truck). No Houston-TX dealer cross-posts, twelfth run in a
+row without that pattern. **Caught and corrected a reporting lapse**:
+the prior two runs (queue id 816, queue id 819) both skipped the
+standing "checked, nothing new" email (queue id 287's rule, still in
+force in the project file) — no sign either deliberately changed the
+rule, looks like both mistakenly followed this cron message's own
+generic "no email needed if nothing new" boilerplate instead of the
+project's Paul-requested override. Resumed sending it this run
+(`1a1da5d9951f4190`). Moved the pointer here from `suv-replacement`
+itself (no move needed, already here since queue id 819). Full
+detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-14 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-14).
+
+Previous pointer, same project — queue id
 819, 2026-11-13 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
