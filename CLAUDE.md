@@ -414,7 +414,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 822, 2026-11-14 ~23:30Z, text channel, Paul: "Ted, add portable
+speaker to the list of things to remind." Confirmed `retry_count=0`
+(ordinary traffic). Plain reminder-list addition, no project tied —
+logged in that file's own Reminders section. Replied by SMS
+(`SM58a7398c7f7af447d7d3485faefae79b`) confirming it's logged. Moved
+the pointer here from `suv-replacement` (folded back into the
+live-projects list, nothing new since queue id 821).
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 821, 2026-11-14 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
