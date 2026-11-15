@@ -414,7 +414,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+825, 2026-11-15 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 108 unique hrefs, 16 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 16 traced via
+title+price+location cross-check to already-established exclusion
+categories under fresh posting IDs/prices — the Jeep Wrangler Sport/
+Herndon, Subaru Outback/Manassas, Hummer H2 stretch limo/Woodbridge,
+the "Motorhubnj.com" NJ-dealer Sentra + Range Rover pair, the F-250
+snowplow truck/Arlington, the F350 DRW utility bed/DC, the "87K"
+Tacoma/Chantilly, a 1962 Dodge 880 wagon and 1957 Chevy 150 (both
+Madison VA, classics), a 2011 BMW X3/Baltimore, the 1990 Ford Lariat
+("Ford Pick/up 1990")/Baltimore, a 1938 International Hot Rod, the
+Casita travel trailer/Odenton, a 2010 Mitsubishi Outlander/Silver
+Spring, and a 2012 Ford Escape Limited/Dumfries (both unibody-
+crossover exclusions resurfacing under fresh posting IDs). No
+Houston-TX dealer cross-posts this run, fourteenth run in a row
+without that pattern. Per the standing rule (queue id 287), emailed
+Paul a "checked, nothing new" note (`1a1df835b100fcd5`). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 824). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-15 ~14:00Z section. Next scheduled fire:
+6pm Eastern today (2026-11-15).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 824, 2026-11-14 ~23:52Z, text channel, Paul: "Is there mass transit
 for Salem to Boston?" Direct follow-up to queue id 823's Salem
 parking question. Used `WebSearch` to confirm: yes, MBTA commuter
