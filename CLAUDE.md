@@ -414,7 +414,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 826,
+2026-11-15 ~17:36Z, text channel, Paul: "we're driving through
+Ipswich Mass. Any ideas on where we might be able to eat with a dog."
+A drive-through stop between the Portland/Bar Harbor/Vermont legs
+already on file and the booked Salem stay (11/15-11/22) — Ipswich
+itself isn't a trip stop on the table, just a point on the route.
+Used `WebSearch` (BringFido) to confirm real current dog-friendly
+options: The Brown Dog (heated outdoor patio, good for November),
+Ipswich Ale Brewer's Table (brewpub, 8 outdoor tables), Clam Box of
+Ipswich (iconic fried clams, seasonal pet-friendly patio if open),
+plus Heart & Soul Cafe and Common Ground Coffee as quick/casual
+backups. Confirmed `retry_count=0` (ordinary traffic). Replied by SMS
+(`SM6c58539913ea2735cd4f59bd0949056d`). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 825). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 825, 2026-11-15 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
