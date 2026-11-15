@@ -414,7 +414,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 826,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+827, 2026-11-15 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 108 unique hrefs, 17 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** All 17 traced via
+title+price+location cross-check to already-established exclusion
+categories under fresh posting IDs/prices — a 2005 Hyundai Santa Fe/
+Friendship Heights (unibody crossover, same recurring Santa Fe
+exclusion, also sitting right at the 110,000 mi boundary rather than
+under it), the Jeep Wrangler Sport/Herndon, Subaru Outback/Manassas,
+Hummer H2 stretch limo/Woodbridge, the "Motorhubnj.com" NJ-dealer
+Range Rover + Sentra pair, the F-250 snowplow truck/Arlington, the
+F350 DRW utility bed/DC, the "87K" Tacoma/Chantilly, a 1962 Dodge 880
+wagon and 1957 Chevy 150 (both Madison VA, classics), a 2011 BMW X3/
+Baltimore, the 1990 Ford Lariat ("Ford Pick/up 1990")/Baltimore, a
+1938 International Hot Rod, the Casita travel trailer/Odenton, a 2010
+Mitsubishi Outlander/Silver Spring, and a 2012 Ford Escape Limited/
+Dumfries. No Houston-TX dealer cross-posts, fifteenth run in a row
+without that pattern. No email needed (nothing new qualifying). Moved
+the pointer here from `new-england` (folded back into the
+live-projects list, nothing new since queue id 826). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-15 ~23:00Z section. Next scheduled fire:
+9am Eastern tomorrow (2026-11-16).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 826,
 2026-11-15 ~17:36Z, text channel, Paul: "we're driving through
 Ipswich Mass. Any ideas on where we might be able to eat with a dog."
 A drive-through stop between the Portland/Bar Harbor/Vermont legs
