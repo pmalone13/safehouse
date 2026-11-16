@@ -414,7 +414,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 830,
+**Current project**: `projects/movies/CLAUDE.md` — queue id 831,
+2026-11-16 ~18:11Z, text channel, Paul: "did Gregory Peck win the
+academy award for the movie Moby Dick perhaps? Best actor." Used
+`WebSearch` rather than answer from memory (same posture as queue id
+381's Rain Man awards question in this project): no, Peck played
+Captain Ahab in Moby Dick (1956) but wasn't nominated for it; he won
+Best Actor at his 5th nomination for To Kill a Mockingbird (1962),
+after four earlier losses. Confirmed `retry_count=0` (ordinary
+traffic, not backlog mode). Replied by SMS
+(`SM283ef9b1d5c643bb404dd0608ec0f08d`). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 830). Full detail in `projects/movies/CLAUDE.md`.
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 830,
 2026-11-16 ~15:44Z, text channel, Paul: "Can u make a few first day
 or two Salem mass things to do. We are saving cape Anne for weekend."
 Direct follow-up to queue id 828's Salem/"The Point" arrival —
