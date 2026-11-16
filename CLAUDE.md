@@ -414,7 +414,25 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 830,
+2026-11-16 ~15:44Z, text channel, Paul: "Can u make a few first day
+or two Salem mass things to do. We are saving cape Anne for weekend."
+Direct follow-up to queue id 828's Salem/"The Point" arrival —
+Cape Ann is deliberately deferred to the weekend, so this covers
+Mon 11/16-Tue 11/17 only. Used `WebSearch` to confirm real current
+hours before splitting by day: Peabody Essex Museum (open Mon
+10am-5pm but closed Tue/Wed) led day 1 alongside the Essex St
+pedestrian mall, Salem Witch Museum, and the Witch Trials Memorial/
+Old Burying Point; day 2 covered House of the Seven Gables (10am-6pm,
+no weekday closure), Salem Maritime NHS (free NPS site), and the
+Witch House (1642), ending at Pickering Wharf for dinner. All
+confirmed walkable from downtown/The Point. Replied by SMS
+(`SM73c56e86224217f11b290e1a606f70f7`), offering restaurant picks as
+a follow-up. Moved the pointer here from `suv-replacement` (folded
+back into the live-projects list, nothing new since queue id 829).
+Full detail in `projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 829, 2026-11-16 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
