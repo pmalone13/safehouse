@@ -414,7 +414,40 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 828,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+829, 2026-11-16 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 110 unique hrefs, 21 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** Two genuinely new titles
+checked individually — a 1972 Range Rover Classic (Rockville,
+fetched the listing page directly, real page title reads "1978
+range rover," $47,000, a classic/collector vehicle far beyond this
+ledger's over-budget-but-qualifying threshold) and a 1984 GMC 7000
+Cummins diesel 20ft dump flatbed (Midland, commercial chassis,
+established exclusion). Two new Toyota Highlander postings (2004
+Laurel, 2006 Leesburg) also excluded without a fetch as the standing
+unibody-crossover exclusion. All 17 remaining non-matching hrefs
+traced to already-established exclusion categories under fresh
+posting IDs/prices — a 2005 Hyundai Santa Fe/Friendship Heights, 2010
+Mitsubishi Outlander/Silver Spring, 2012 Ford Escape Limited/
+Dumfries, the Jeep Wrangler Sport/Herndon, Subaru Outback/Manassas,
+Hummer H2 stretch limo/Woodbridge, the "Motorhubnj.com" NJ-dealer
+Range Rover + Sentra pair, the F-250 snowplow truck/Arlington, the
+F350 DRW utility bed/DC, the "87K" Tacoma/Chantilly, a 1962 Dodge 880
+wagon and 1957 Chevy 150 (both Madison VA, classics), a 2011 BMW X3/
+Baltimore, the 1990 Ford Lariat ("Ford Pick/up 1990")/Baltimore, a
+1938 International Hot Rod, and the Casita travel trailer/Odenton.
+No Houston-TX dealer cross-posts, sixteenth run in a row without
+that pattern. No email needed (nothing new qualifying). Moved the
+pointer here from `new-england` (folded back into the live-projects
+list, nothing new since queue id 828). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-16 ~14:00Z section. Next scheduled fire:
+6pm Eastern today (2026-11-16).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id 828,
 2026-11-16 ~02:10Z, text channel, Paul: "we are in Salem and settled
 in and we note that our neighborhood is called the point. Can you
 look up and tell us if the point has a reputation of any kind for
