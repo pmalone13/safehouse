@@ -414,7 +414,34 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 828,
+2026-11-16 ~02:10Z, text channel, Paul: "we are in Salem and settled
+in and we note that our neighborhood is called the point. Can you
+look up and tell us if the point has a reputation of any kind for
+housing or who lives here or crime." Confirms arrival at the
+already-booked Salem stay (85 Congress St, 11/15-11/22) and names the
+neighborhood as "The Point" (locally "El Punto"). Used `WebSearch` to
+confirm real history/demographics/crime rather than guess: historic
+working-class/immigrant neighborhood on the peninsula south of
+downtown, settled 1850s as "Stage Point" for Salem's maritime/mill
+trade, burned flat in the 1914 fire, rebuilt. Today a Dominican
+enclave (~24.4% Dominican ancestry per NeighborhoodScout, one of the
+highest concentrations in the US), lower-income (~$47K avg) and
+mostly renters (~28% own). Known for Caribbean/Dominican restaurants
+and small businesses, diversity, walkability, historic charm; a ULI
+case study documents a real City-backed revitalization/affordable-
+housing investment effort there in recent years. Crime: rated "B,"
+among Salem's relatively higher-crime neighborhoods (second only to
+Castle Hill's "B-") but still within Salem's overall "broadly safe"
+range — Salem as a whole is a low-crime small city. No signs of it
+being notably dangerous historically, just Salem's more working-
+class/immigrant corner. Replied by SMS
+(`SM9d8d219b5f39805153ce4751146203e9`). Moved the pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since queue id 827). Full detail in
+`projects/new-england/CLAUDE.md`.
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 827, 2026-11-15 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
