@@ -414,7 +414,38 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/boating/CLAUDE.md` — queue id 834,
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+835, 2026-11-16 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 109 unique hrefs, 22 not an exact posting-ID match to the
+ledger. **No new qualifying candidate.** Two genuinely new titles
+excluded without needing a fetch, matching the already-established
+off-class unibody-crossover category: a 2009 Honda CR-V ($7,300,
+Alexandria) and a 2012 Jeep Compass ($6,470, Spotsylvania/
+Thornburg). Everything else traced to already-established exclusion
+categories under fresh posting IDs/prices — the Subaru Outback/
+Manassas, the Hyundai Santa Fe/Friendship Heights, the Ford Escape
+Limited/Dumfries, the Casita travel trailer/Odenton, the Toyota
+Highlander 105k/Laurel, the 1938 International Hot Rod, the
+"Motorhubnj.com" NJ-dealer Range Rover + Sentra pair, the
+Mitsubishi Outlander/Silver Spring, the F-250 SD snowplow truck/
+Arlington, the Toyota Highlander V6 89K/Leesburg, the "87K" Tacoma/
+Chantilly, the BMW X3/Baltimore, the 1972 Range Rover Classic/
+Rockville, the 1957 Chevy 150 Business Coupe/Madison VA, the Hummer
+H2 stretch limo, the Jeep Wrangler Sport/Herndon, the GMC 7000
+Cummins dump flatbed/Midland, the F350 DRW Utility Service Bed/DC,
+and the "Ford Pick/up 1990"/Baltimore. No Houston-TX dealer
+cross-posts, seventeenth run in a row without that pattern. No
+email needed (nothing new qualifying). Moved the pointer here from
+`boating` (folded back into the live-projects list, nothing new
+since queue id 834). Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-16 ~23:00Z section. Next scheduled fire:
+9am Eastern tomorrow (2026-11-17).
+
+Previous pointer, `projects/boating/CLAUDE.md` — queue id 834,
 2026-11-16 ~18:15Z, text channel, self-claimed mid-session
 (`retry_count=0`, ordinary traffic), Paul: "if I was fishing for
 haddock is there a way to fish for that from a small boat like from
