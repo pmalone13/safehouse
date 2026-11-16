@@ -414,7 +414,23 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — queue id 833,
+**Current project**: `projects/boating/CLAUDE.md` — queue id 834,
+2026-11-16 ~18:15Z, text channel, self-claimed mid-session
+(`retry_count=0`, ordinary traffic), Paul: "if I was fishing for
+haddock is there a way to fish for that from a small boat like from
+down east or the Salem area like a 24-ft center console like my
+boat." Used `WebSearch` to confirm real grounds/depths/regs: yes,
+doable from a 24-ft CC, but a genuine offshore trip — Stellwagen
+Bank/Jeffreys Ledge near Salem/Cape Ann (~15-25mi out), similarly
+offshore grounds Down East; depths 90-250+ft depending on season,
+with haddock sitting deeper/farther out by mid-November, meaning a
+real weather window matters for a 24-footer. 2026 GOM haddock regs:
+17in min, April 1-Feb 28 season, 15/day bag limit. Replied by SMS
+(`SMc2c1cc0a6dbc756caa708a3a03d23c44`). Moved the pointer here from
+`movies` (folded back into the live-projects list, nothing new since
+queue id 833). Full detail in `projects/boating/CLAUDE.md`.
+
+Previous pointer, `projects/movies/CLAUDE.md` — queue id 833,
 2026-11-16 ~18:14Z, text channel, direct follow-up, Paul: "Who won
 best picture and best actor in 1956." Used `WebSearch` to confirm
 rather than rely on memory: the 28th Academy Awards (held 1956,
