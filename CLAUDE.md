@@ -414,7 +414,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/movies/CLAUDE.md` — queue id 832,
+**Current project**: `projects/movies/CLAUDE.md` — queue id 833,
+2026-11-16 ~18:14Z, text channel, direct follow-up, Paul: "Who won
+best picture and best actor in 1956." Used `WebSearch` to confirm
+rather than rely on memory: the 28th Academy Awards (held 1956,
+honoring 1955 films) gave both Best Picture and Best Actor to
+*Marty* (Ernest Borgnine) — a 4-Oscar sweep including Director and
+Screenplay too. Replied by SMS
+(`SMc5b45582f3c83ba26932e329dad16cb6`). Pointer stayed here, no move
+needed since queue id 832.
+
+Previous pointer, same project — queue id 832,
 2026-11-16 ~18:13Z, text channel, direct follow-up, Paul: "Who won
 the year that Moby Dick was up for Oscars?" Used `WebSearch` to
 check the premise rather than guess a year/winner — Moby Dick (1956)
