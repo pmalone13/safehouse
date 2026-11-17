@@ -13629,3 +13629,21 @@ thing that needs it, not because anything currently lives under it.
   `1a1ccd8d511dd32b`). Moved the Current-project pointer here from
   `travel`. Next scheduled SUV/truck cron fire: 9am Eastern tomorrow
   (2026-11-12).
+
+- 2026-11-17 ~15:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 836, the 9am SUV/truck
+  cron fire, already fully handled, logged, committed, and pushed
+  (`f70501f`) before this wrap-up. No new qualifying candidate (111
+  unique hrefs, 23 not matching the ledger by posting ID, all traced
+  to already-established exclusion categories; caught one repost
+  disguised as new by matching on the trailing unique-id segment
+  rather than the full href string, since Craigslist's slug text can
+  change — e.g. a "SALE PENDING" prefix dropping — while the real id
+  stays the same). No email needed. Waited ~60 minutes (in five
+  ~9-10min Bash chunks, since this harness caps a single Bash call at
+  10 minutes, not the full 3600s in one call as the standing
+  instructions describe) with nothing new arriving, so stopping per
+  step 4. Working tree confirmed clean at this wrap-up, so this entry
+  is the only change this turn makes. Nothing outstanding heading
+  into the next turn beyond what's already on file: the next
+  scheduled SUV/truck cron fire is 6pm Eastern today (2026-11-17).
