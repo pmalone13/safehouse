@@ -415,6 +415,45 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+837, 2026-11-17 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 113 unique hrefs, 25 not matching the ledger by trailing
+unique posting-id segment. **Found one new qualifying candidate**: a
+2007 Chevrolet Avalanche 1500 4WD, 5.3L V8, factory Towing Package
+per the seller's own ad, $9,200, 108,050 mi, clean title, Fairfax
+VA — fetched the listing page directly to confirm mileage/title,
+then `WebSearch`-confirmed a 2007 Avalanche 1500 4WD with the tow
+package clears roughly 7,200-8,200 lbs depending on axle ratio,
+comfortably clearing the 6,000 lb gate, and under the $10k ceiling.
+Emailed (`1a1ebbf3725b7ce2`). Everything else traced to already-
+established exclusion categories under fresh posting IDs/prices —
+the 1972 Range Rover Classic/Rockville, the Toyota Highlander 105k/
+Laurel and 89K/Leesburg, the Hyundai Santa Fe/Friendship Heights,
+the Mitsubishi Outlander/Silver Spring, the Ford Escape Limited/
+Dumfries, the Jeep Wrangler Sport/Herndon, the Subaru Outback/
+Manassas, the Hummer H2 stretch limo/Woodbridge, the
+"Motorhubnj.com" NJ-dealer Range Rover + Sentra pair, the F-250 SD
+snowplow truck/Arlington, the F350 DRW Utility Service Bed/DC, the
+GMC 7000 Cummins dump flatbed/Midland, the "87K" Tacoma/Chantilly,
+the 1962 Dodge 880 wagon and 1957 Chevy 150 (both Madison VA,
+classics), the BMW X3/Baltimore, the "Ford Pick/up 1990"/Baltimore,
+the 1938 International Hot Rod/Parkton, and the Casita travel
+trailer/Odenton. Two genuinely new listings excluded without a
+fetch, both off-class: a 2012 Honda Fit Sport hatchback (Alexandria,
+compact unibody) and a $0-price custom food-truck-build listing
+(Baltimore, commercial business ad, not a personal vehicle). One
+repost confirmed under a changed title year to the same posting ID
+as an existing exclusion: the 2012 Chevrolet Captiva Sport (Joppa)
+already excluded this morning. No Houston-TX dealer cross-posts,
+nineteenth run in a row without that pattern. Pointer stayed here,
+no move needed since queue id 836. Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-17 ~23:00Z section. Next scheduled fire:
+9am Eastern tomorrow (2026-11-18).
+
+Previous pointer, same project — queue id
 836, 2026-11-17 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
