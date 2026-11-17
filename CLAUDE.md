@@ -415,6 +415,42 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+836, 2026-11-17 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 111 unique hrefs, 23 not matching the ledger by unique posting
+ID. **No new qualifying candidate.** Caught one repost disguised as
+new — "78 Jeep J-20 Pickup" ($23,500, Arbutus) matches the
+already-logged "SALE PENDING: 78 Jeep J-20 Pickup" from 2026-11-05
+by its trailing unique-id segment, even though the full href slug
+text differs (the sale-pending prefix was dropped) — a naive
+full-href string match would have missed it; matching on the
+trailing unique-id segment instead caught it. Everything else
+traced to already-established exclusion categories under fresh
+posting IDs/prices — the 1972 Range Rover Classic/Rockville, the
+Toyota Highlander 105k/Laurel and 89K/Leesburg, the Hyundai Santa
+Fe/Friendship Heights, the Mitsubishi Outlander/Silver Spring, the
+Ford Escape Limited/Dumfries, the Jeep Wrangler Sport/Herndon, the
+Subaru Outback/Manassas, the Hummer H2 stretch limo/Woodbridge, the
+"Motorhubnj.com" NJ-dealer Range Rover + Sentra pair, the F-250 SD
+snowplow truck/Arlington, the F350 DRW Utility Service Bed/DC, the
+GMC 7000 Cummins dump flatbed/Midland, the "87K" Tacoma/Chantilly,
+the 1962 Dodge 880 wagon and 1957 Chevy 150 (both Madison VA,
+classics), the BMW X3/Baltimore, the "Ford Pick/up 1990"/Baltimore,
+the 1938 International Hot Rod/Parkton, and the Casita travel
+trailer/Odenton. One genuinely new listing, a 2012 Chevrolet
+Captiva Sport (Joppa, $3,900), matched the existing Joppa MD
+dealer-cluster exclusion signature (same placeholder-location-
+string pattern as other Joppa listings already excluded). No
+Houston-TX dealer cross-posts, eighteenth run in a row without that
+pattern. No email needed (nothing new qualifying). Pointer stayed
+here, no move needed since queue id 835. Full detail in
+`projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-17 ~14:00Z section. Next scheduled fire:
+6pm Eastern today (2026-11-17).
+
+Previous pointer, same project — queue id
 835, 2026-11-16 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
