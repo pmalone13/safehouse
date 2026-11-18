@@ -415,6 +415,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 842, 2026-11-18 ~22:29Z, text channel, Paul: "Recommend a good
+casual restaurant near this talk." Direct follow-up to queue id
+841's filed MIT Starr Forum event (Wed 2026-11-18 5-6:30pm, MIT Wong
+Auditorium/E51-115, Cambridge MA). Confirmed `retry_count=0`
+(ordinary traffic). Used `WebSearch` for real current walking-
+distance options near the venue: recommended Area Four (wood-fired
+pizza, ~10 min walk) as the lead pick, Shy Bird (rotisserie chicken)
+as a backup, both Kendall Square. Replied by SMS
+(`SMd3418dbf2dd9aa81f6076bbc24187bd4`). Pointer stayed here, no move
+needed since queue id 841.
+
+Previous pointer, same project — queue
 id 841, 2026-11-18 ~18:04Z, email channel, self-claimed mid-session
 (`retry_count=0`, ordinary traffic), Paul forwarded an MIT event
 reminder email ("Fwd: 11/18 MIT Starr Forum: AI and Global Power:
