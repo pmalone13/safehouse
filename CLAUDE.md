@@ -13732,3 +13732,20 @@ thing that needs it, not because anything currently lives under it.
   is the only change this turn makes. Nothing outstanding heading
   into the next turn beyond what's already on file: the next
   scheduled SUV/truck cron fire is 6pm Eastern today (2026-11-17).
+
+- 2026-11-18 ~15:0xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 838, the 9am SUV/truck
+  cron fire, already fully handled, logged, committed, and pushed
+  (`15e1fd2`) before this wrap-up fired -- no new qualifying
+  candidate (one listing's search-card title turned out not to
+  match its own live posting page, an unrelated Subaru Impreza, both
+  off-class regardless), and a fresh Drive `invalid_grant` outage
+  found at that checkpoint (recurrence of the queue id 783 class,
+  only a week after the 2026-11-11 fix) -- flagged to Paul by SMS,
+  new TODO entry added. Working tree confirmed clean at this
+  wrap-up, so this entry is the only change this turn makes. Nothing
+  outstanding heading into the next turn beyond what's already on
+  file: the fresh Drive outage needs Paul to re-authorize
+  (`authorize_drive_once.py` + scp) when he's next on a machine with
+  a browser; and the next scheduled SUV/truck cron fire is 6pm
+  Eastern today (2026-11-18).
