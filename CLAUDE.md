@@ -414,7 +414,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 841, 2026-11-18 ~18:04Z, email channel, self-claimed mid-session
+(`retry_count=0`, ordinary traffic), Paul forwarded an MIT event
+reminder email ("Fwd: 11/18 MIT Starr Forum: AI and Global Power:
+Democracy, Competition, and Control") with just "Please file" above
+the quote. Plain filing request, no project tied — logged here
+rather than under `new-england`, since the forum is in Cambridge, MA
+and unrelated to the current Salem trip leg. Replied by email
+confirming filed (`1a1efd583d32c256`). Moved the pointer here from
+`new-england` (folded back into the live-projects list, nothing new
+since queue id 840).
+
+Previous pointer, `projects/new-england/CLAUDE.md` — queue id
 840, 2026-11-18 ~17:45Z, text channel, Paul: "Ted, question about
 Marblehead. What is the average price of the house on Marblehead
 point point and then Marblehead proper? And then if you could tell
