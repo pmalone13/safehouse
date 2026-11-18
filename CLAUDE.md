@@ -414,7 +414,24 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue
+id 843, 2026-11-18 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 113 unique hrefs, 1 not matching the ledger by posting ID — a
+2005 Toyota Tacoma ($7,700, Alexandria), fetched the listing page
+directly and found a rebuilt (not clean) title, excluded. Everything
+else traced to already-established exclusion categories. No
+Houston-TX dealer cross-posts, twenty-first run in a row without
+that pattern. Emailed Paul a "checked, nothing new" note
+(`1a1f0e50b2a3e868`). Moved the pointer here from `safehouse/general`
+(folded back into the live-projects list, nothing new since queue id
+842). Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-18 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-19).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 842, 2026-11-18 ~22:29Z, text channel, Paul: "Recommend a good
 casual restaurant near this talk." Direct follow-up to queue id
 841's filed MIT Starr Forum event (Wed 2026-11-18 5-6:30pm, MIT Wong
