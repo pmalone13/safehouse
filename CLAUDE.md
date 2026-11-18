@@ -13761,3 +13761,18 @@ thing that needs it, not because anything currently lives under it.
   (`authorize_drive_once.py` + scp) when he's next on a machine with
   a browser; and the next scheduled SUV/truck cron fire is 6pm
   Eastern today (2026-11-18).
+
+- 2026-11-18 ~16:2xZ: session wrap-up (idle window elapsed, no new
+  message). One turn this session: queue id 839, text channel, Paul:
+  "drive should be fixed." Already fully handled, logged, committed,
+  and pushed (`654eaef`) before this wrap-up fired — verified rather
+  than took at his word: retested `get_drive_client()` directly
+  (succeeded) and ran a full `drive_sync.py` catch-up (1 created, 10
+  updated, 915 unchanged, 1 pre-existing harmless orphan). Marked the
+  Drive `invalid_grant` outage from queue id 838's checkpoint
+  resolved in the TODO section. Replied by SMS confirming. Working
+  tree confirmed clean at this wrap-up, so this entry is the only
+  change this turn makes. Nothing outstanding heading into the next
+  turn beyond what's already on file: Drive is confirmed working
+  again; and the next scheduled SUV/truck cron fire is 6pm Eastern
+  today (2026-11-18).
