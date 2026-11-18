@@ -414,7 +414,29 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+**Current project**: `projects/new-england/CLAUDE.md` — queue id
+840, 2026-11-18 ~17:45Z, text channel, Paul: "Ted, question about
+Marblehead. What is the average price of the house on Marblehead
+point point and then Marblehead proper? And then if you could tell
+us what is the average annual income of a lobster waterman out of
+marblehead." Marblehead sits right next to Salem, where they're
+currently staying (11/15-11/22) — a local-curiosity question, not a
+new trip stop. Read "Marblehead point point" as a dictation repeat
+for Marblehead Neck (the peninsula), since real-estate sources draw
+exactly that split against "Marblehead proper" (the rest of town) —
+flagged that reading rather than silently guessed. Used `WebSearch`
+for real current figures: Marblehead Neck median home value ~$1.47M,
+very thin inventory; Marblehead proper average value ~$1.05M, recent
+median sale price ~$994K-$1.1M. For lobstering income, found no
+Marblehead-specific data anywhere — gave the MA-wide wage-based
+"lobster fisherman" average (~$42-51K/yr) with an explicit caveat
+that this is employee pay, not a boat-owning waterman's real
+(highly variable) take. Replied by SMS
+(`SMb6ce1ef9b9eee6c2275b8e7e1c387ae0`). Moved the pointer here from
+`safehouse/general` (folded back into the live-projects list,
+nothing new since queue id 839).
+
+Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 839, 2026-11-18 ~15:21Z, text channel, Paul: "drive should be
 fixed." Direct follow-up to the fresh Drive `invalid_grant` outage
 flagged at queue id 838's checkpoint earlier this morning. Verified
