@@ -414,7 +414,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue
+id 839, 2026-11-18 ~15:21Z, text channel, Paul: "drive should be
+fixed." Direct follow-up to the fresh Drive `invalid_grant` outage
+flagged at queue id 838's checkpoint earlier this morning. Verified
+rather than took at his word: retested `get_drive_client()` directly
+(a real `files().list()` call succeeded) and ran a full
+`drive_sync.py` catch-up (1 created, 10 updated, 915 unchanged, 1
+pre-existing harmless orphan). Marked the TODO entry resolved above.
+Replied by SMS confirming. Moved the pointer here from
+`suv-replacement` (folded back into the other-live-projects list,
+nothing new since queue id 838).
+
+Previous pointer, `projects/suv-replacement/CLAUDE.md` — queue id
 838, 2026-11-18 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -7552,21 +7564,21 @@ the pending `/sms-optin` build still live there.
   the resulting token to this VM at the existing
   `.drive_api_token.json` path.
 
-- **Drive down AGAIN, `invalid_grant`, discovered 2026-11-18 ~14:02Z
-  at queue id 838's checkpoint — recurred one week after the
-  2026-11-11 fix above.** Identical error shape:
-  `RefreshError: invalid_grant: Token has been expired or revoked.`
-  on `creds.refresh()`. Drive-only — Gmail confirmed working fine
-  (used directly to test, and nothing in this turn needed an email
-  send). As usual, root cause is unexplained/undiagnosable from this
-  VM. Flagged to Paul by SMS (`SM97af855944030ef670e3cdd062062906`).
-  Same fix mechanics as every prior occurrence: `authorize_drive_
-  once.py` on a machine with a browser, `scp` the resulting token to
-  this VM at the existing `.drive_api_token.json` path. A future turn
-  should retry `drive_sync.py` at its own checkpoint and mark this
-  resolved once it works again, same posture as every past
-  occurrence — don't re-flag to Paul every single turn once it's
-  already been flagged once.
+- ~~Drive down AGAIN, `invalid_grant`, discovered 2026-11-18 ~14:02Z
+  at queue id 838's checkpoint~~ **RESOLVED 2026-11-18 ~15:22Z.**
+  Recurred one week after the 2026-11-11 fix above, identical error
+  shape (`RefreshError: invalid_grant: Token has been expired or
+  revoked.` on `creds.refresh()`), Drive-only, Gmail unaffected
+  throughout. Paul texted "drive should be fixed" (queue id 839);
+  retested directly (`get_drive_client()` + `files().list()`
+  succeeded) and ran a full `drive_sync.py` catch-up (1 created, 10
+  updated, 915 unchanged, 1 pre-existing harmless orphan). As usual,
+  root cause (why this keeps recurring roughly weekly) remains
+  undiagnosable from this VM — just re-authorize when it happens
+  again, same mechanics as every prior occurrence:
+  `authorize_drive_once.py` on a machine with a browser, `scp` the
+  resulting token to this VM at the existing `.drive_api_token.json`
+  path.
 
 - **Requested 2026-10-30 (queue id 726): batch backlog-recovery
   notifications into one summary instead of one text per message —
