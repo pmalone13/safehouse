@@ -415,6 +415,36 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+838, 2026-11-18 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 110 unique hrefs, 3 not matching the ledger by trailing unique
+posting-id segment. **No new qualifying candidate.** All 3 excluded:
+a "Low-Mile 2012 Jeep Wrangler Unlimited Sport" ($13,500, Rockville)
+— the identical listing already excluded on 2026-10-20 at $15,500
+under the standing Jeep Wrangler tow-rating exclusion, reposted
+under a fresh posting ID at a lower price; a 2007 Workhorse W42
+Food Truck (Manassas VA, commercial food-truck conversion,
+established exclusion category); and a genuinely odd one — the
+search card read "2007 Chevrolet TrailBlazer LT" (Essex) but
+fetching the listing page directly found it's actually a 2007
+Subaru Impreza, $2,200, 90,000 mi, clean title, 4WD — the search
+snapshot and the live posting no longer match (likely the seller
+edited the ad to a different vehicle under the same slug), and
+either way a Subaru Impreza is a unibody compact, excluded as
+off-class. No Houston-TX dealer cross-posts, twentieth run in a row
+without that pattern. No email needed (nothing new qualifying).
+**Also found a fresh Drive outage at this checkpoint** —
+`invalid_grant`, same recurring error shape, the 2026-11-11 fix
+only lasted a week; Gmail unaffected; flagged to Paul by SMS
+(`SM97af855944030ef670e3cdd062062906`); new TODO entry added above.
+Pointer stayed here, no move needed since queue id 837. Full detail
+in `projects/suv-replacement/CLAUDE.md` and `craigslist_watch_
+results.md`'s new 2026-11-18 ~14:00Z section. Next scheduled fire:
+6pm Eastern today (2026-11-18).
+
+Previous pointer, same project — queue id
 837, 2026-11-17 ~23:00Z, channel `cron`, source
 `suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
@@ -7521,6 +7551,22 @@ the pending `/sms-optin` build still live there.
   always: `authorize_drive_once.py` on a machine with a browser, `scp`
   the resulting token to this VM at the existing
   `.drive_api_token.json` path.
+
+- **Drive down AGAIN, `invalid_grant`, discovered 2026-11-18 ~14:02Z
+  at queue id 838's checkpoint — recurred one week after the
+  2026-11-11 fix above.** Identical error shape:
+  `RefreshError: invalid_grant: Token has been expired or revoked.`
+  on `creds.refresh()`. Drive-only — Gmail confirmed working fine
+  (used directly to test, and nothing in this turn needed an email
+  send). As usual, root cause is unexplained/undiagnosable from this
+  VM. Flagged to Paul by SMS (`SM97af855944030ef670e3cdd062062906`).
+  Same fix mechanics as every prior occurrence: `authorize_drive_
+  once.py` on a machine with a browser, `scp` the resulting token to
+  this VM at the existing `.drive_api_token.json` path. A future turn
+  should retry `drive_sync.py` at its own checkpoint and mark this
+  resolved once it works again, same posture as every past
+  occurrence — don't re-flag to Paul every single turn once it's
+  already been flagged once.
 
 - **Requested 2026-10-30 (queue id 726): batch backlog-recovery
   notifications into one summary instead of one text per message —
