@@ -415,7 +415,30 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
-id 847, 2026-11-19 ~14:00Z, channel `cron`, source
+id 848, 2026-11-19 ~23:00Z, channel `cron`, source
+`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 116 unique hrefs, 6 not matching the ledger by posting ID.
+**No new qualifying candidate.** All 6 excluded: a 2012 Jeep Wrangler
+Unlimited Rubicon posted twice under different IDs (standing Jeep
+Wrangler tow-rating exclusion); a 2009 Chevy Silverado K1500
+($2,800, Annandale VA, 4.3L V6 RWD) — fetched the listing, no
+crew-cab claim; a 2002 Toyota Tacoma "DREAM TRUCK" repost ($9,900,
+Chantilly) — confirmed 4-cylinder, matches the established recurring
+exclusion; a 2007 Honda Ridgeline RTL Crew Cab ($12,995) — the ad's
+own text says "Monocoque Chassis" (unibody), and `WebSearch`
+confirmed ~4,800-5,000 lb max tow, below the 6,000 lb gate; and a
+1937 Ford Street Rod Pick Up Truck ($24,500, Parkton) — classic/
+hot-rod exclusion. No Houston-TX dealer cross-posts, twenty-third run
+in a row without that pattern. No email needed (nothing new
+qualifying). Pointer stayed here, no move needed since queue id 847.
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-19 ~23:00Z section. Next
+scheduled fire: 9am Eastern tomorrow (2026-11-20).
+
+Previous pointer, same project — queue id 847,
+2026-11-19 ~14:00Z, channel `cron`, source
 `suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
 four-region recipe (SUV + truck + five diesel-specific queries,
 washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
@@ -435,10 +458,8 @@ Hyundai Santa Fe (both same suspicious dealer-cluster signature,
 unibody crossovers), and a Toyota Tacoma matching the exact price/
 mileage/location of the rebuilt-title Tacoma excluded two days ago.
 No Houston-TX dealer cross-posts, twenty-second run in a row without
-that pattern. Pointer stayed here, no move needed since queue id 846.
-Full detail in `projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`'s new 2026-11-19 ~14:00Z section. Next
-scheduled fire: 6pm Eastern today (2026-11-19).
+that pattern. Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-19 ~14:00Z section.
 
 Previous pointer, same project — queue id 846,
 2026-11-19 ~02:05Z, text channel, direct follow-up, Paul:
