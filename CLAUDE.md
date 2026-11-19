@@ -415,21 +415,23 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
-id 843, 2026-11-18 ~23:00Z, channel `cron`, source
-`suv-replacement-watch` — 6pm Eastern scheduled fire. Ran the full
-four-region recipe (SUV + truck + five diesel-specific queries,
-washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
-mi`). 113 unique hrefs, 1 not matching the ledger by posting ID — a
-2005 Toyota Tacoma ($7,700, Alexandria), fetched the listing page
-directly and found a rebuilt (not clean) title, excluded. Everything
-else traced to already-established exclusion categories. No
-Houston-TX dealer cross-posts, twenty-first run in a row without
-that pattern. Emailed Paul a "checked, nothing new" note
-(`1a1f0e50b2a3e868`). Moved the pointer here from `safehouse/general`
-(folded back into the live-projects list, nothing new since queue id
-842). Full detail in `projects/suv-replacement/CLAUDE.md` and
-`craigslist_watch_results.md`'s new 2026-11-18 ~23:00Z section. Next
-scheduled fire: 9am Eastern tomorrow (2026-11-19).
+id 844, 2026-11-19 ~01:58Z, text channel, Paul: "The hunt for the car
+u found a ML350 BlueTEC 4MATIC. I like this car. Let's keep an eye
+out for one." Direct follow-up to the queue id 821 find (2026-11-14
+6pm fire — 2010 Mercedes-Benz ML 350 BlueTEC 4MATIC, diesel, AWD,
+87,643 mi, clean title, $9,811, Precise Automotive Group, Northern
+VA). Added a new standing "Preferred model" entry to the project's
+own Replacement criteria section — any future ML350 BlueTEC 4MATIC
+listing is now called out explicitly as a priority find, not just
+incidentally covered by the existing tow-rating rule — without
+narrowing scope away from other makes/models (the standing "keep
+SUVs in response" rule, queue id 212, still applies). Replied by SMS
+(`SM1a2f3e778814246b13fcf0b91d6f5d9c`) confirming the preference is
+logged and asking whether to check if the specific 11/14 listing is
+still available or just keep watching for another. Pointer stayed
+here, no move needed since queue id 843. Full detail in
+`projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
+Eastern today (2026-11-19).
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 842, 2026-11-18 ~22:29Z, text channel, Paul: "Recommend a good
