@@ -415,13 +415,27 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
-id 844, 2026-11-19 ~01:58Z, text channel, Paul: "The hunt for the car
-u found a ML350 BlueTEC 4MATIC. I like this car. Let's keep an eye
-out for one." Direct follow-up to the queue id 821 find (2026-11-14
-6pm fire — 2010 Mercedes-Benz ML 350 BlueTEC 4MATIC, diesel, AWD,
-87,643 mi, clean title, $9,811, Precise Automotive Group, Northern
-VA). Added a new standing "Preferred model" entry to the project's
-own Replacement criteria section — any future ML350 BlueTEC 4MATIC
+id 845, 2026-11-19 ~02:02Z, text channel, direct follow-up, Paul:
+"Check on that one please:)" — confirming he wants the specific
+queue id 821 listing (2010 Mercedes ML 350 BlueTEC 4MATIC, $9,811,
+Precise Automotive Group) checked for live availability. Re-fetched
+the listing URL directly via `curl` (not just `WebFetch`'s own
+summary) to confirm a clean HTTP 200 and read the page's own price
+field — still live, unchanged at $9,811/87,643 mi. Replied by SMS
+(`SM2fbe091e1d40b3fffa13bac72eceda75`) with the listing link and
+dealer phone (703-420-3442), flagging that dealer inventory can move
+fast. Pointer stayed here, no move needed since queue id 844. Full
+detail in `projects/suv-replacement/CLAUDE.md`. Next scheduled fire:
+9am Eastern today (2026-11-19).
+
+Previous pointer, same project — queue id 844,
+2026-11-19 ~01:58Z, text channel, Paul: "The hunt for the car u
+found a ML350 BlueTEC 4MATIC. I like this car. Let's keep an eye out
+for one." Direct follow-up to the queue id 821 find (2026-11-14 6pm
+fire — 2010 Mercedes-Benz ML 350 BlueTEC 4MATIC, diesel, AWD, 87,643
+mi, clean title, $9,811, Precise Automotive Group, Northern VA).
+Added a new standing "Preferred model" entry to the project's own
+Replacement criteria section — any future ML350 BlueTEC 4MATIC
 listing is now called out explicitly as a priority find, not just
 incidentally covered by the existing tow-rating rule — without
 narrowing scope away from other makes/models (the standing "keep
@@ -429,9 +443,7 @@ SUVs in response" rule, queue id 212, still applies). Replied by SMS
 (`SM1a2f3e778814246b13fcf0b91d6f5d9c`) confirming the preference is
 logged and asking whether to check if the specific 11/14 listing is
 still available or just keep watching for another. Pointer stayed
-here, no move needed since queue id 843. Full detail in
-`projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
-Eastern today (2026-11-19).
+here, no move needed since queue id 843.
 
 Previous pointer, `projects/safehouse/general/CLAUDE.md` — queue
 id 842, 2026-11-18 ~22:29Z, text channel, Paul: "Recommend a good
