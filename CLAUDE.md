@@ -415,7 +415,33 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
-id 846, 2026-11-19 ~02:05Z, text channel, direct follow-up, Paul:
+id 847, 2026-11-19 ~14:00Z, channel `cron`, source
+`suv-replacement-watch` — 9am Eastern scheduled fire. Ran the full
+four-region recipe (SUV + truck + five diesel-specific queries,
+washingtondc/annapolis/baltimore/easternshore, `<=2012`/`<110,000
+mi`). 111 unique hrefs, 5 not matching the ledger by posting ID.
+**Found one new qualifying candidate**: a 2005 Cadillac Escalade
+AWD, 6.0L V8, $6,500, 22,500 mi (flagged as possibly a typo for
+225,000 given the ad also mentions a rebuilt transmission and new
+fuel pump), clean title, Warrenton VA — fetched the listing page to
+confirm specs, then `WebSearch`-confirmed this config clears 8,100
+lbs max tow, well over the 6,000 lb gate; matches the project's
+already-established "Cadillac Escalade Base" qualifying class (a
+different vehicle than the 2009 Upper Marlboro Escalade on file).
+Emailed (`1a1f41e0d4f9bee3`). The other 4 non-matching hrefs excluded
+via already-established patterns: a Chrysler Crossfire (sports car),
+a repost of the already-excluded Joppa MD Audi Q5 and a new Joppa MD
+Hyundai Santa Fe (both same suspicious dealer-cluster signature,
+unibody crossovers), and a Toyota Tacoma matching the exact price/
+mileage/location of the rebuilt-title Tacoma excluded two days ago.
+No Houston-TX dealer cross-posts, twenty-second run in a row without
+that pattern. Pointer stayed here, no move needed since queue id 846.
+Full detail in `projects/suv-replacement/CLAUDE.md` and
+`craigslist_watch_results.md`'s new 2026-11-19 ~14:00Z section. Next
+scheduled fire: 6pm Eastern today (2026-11-19).
+
+Previous pointer, same project — queue id 846,
+2026-11-19 ~02:05Z, text channel, direct follow-up, Paul:
 "Yeah but we are in Massachusetts. I need to see and try trading in
 my expedition. Perhaps it will not sell for while. Diesel is
 expensive." Two new standing facts logged: he's currently out of
@@ -427,10 +453,8 @@ tradeoff to weigh per-candidate, not a hard new exclusion (the
 project's tow-rating criteria already favors diesel for towing
 capacity). Replied by SMS (`SMf8820184d5c226fc2eb348b31af3d3f0`)
 acknowledging both, noting the watch continues broadly with
-trade-in-fit flagging once he's back home. Pointer stayed here, no
-move needed since queue id 845. Full detail in
-`projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
-Eastern today (2026-11-19).
+trade-in-fit flagging once he's back home. Full detail in
+`projects/suv-replacement/CLAUDE.md`.
 
 Previous pointer, same project — queue id 844,
 2026-11-19 ~01:58Z, text channel, Paul: "The hunt for the car u
