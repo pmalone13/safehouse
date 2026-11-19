@@ -415,18 +415,22 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue
-id 845, 2026-11-19 ~02:02Z, text channel, direct follow-up, Paul:
-"Check on that one please:)" — confirming he wants the specific
-queue id 821 listing (2010 Mercedes ML 350 BlueTEC 4MATIC, $9,811,
-Precise Automotive Group) checked for live availability. Re-fetched
-the listing URL directly via `curl` (not just `WebFetch`'s own
-summary) to confirm a clean HTTP 200 and read the page's own price
-field — still live, unchanged at $9,811/87,643 mi. Replied by SMS
-(`SM2fbe091e1d40b3fffa13bac72eceda75`) with the listing link and
-dealer phone (703-420-3442), flagging that dealer inventory can move
-fast. Pointer stayed here, no move needed since queue id 844. Full
-detail in `projects/suv-replacement/CLAUDE.md`. Next scheduled fire:
-9am Eastern today (2026-11-19).
+id 846, 2026-11-19 ~02:05Z, text channel, direct follow-up, Paul:
+"Yeah but we are in Massachusetts. I need to see and try trading in
+my expedition. Perhaps it will not sell for while. Diesel is
+expensive." Two new standing facts logged: he's currently out of
+state on the New England trip (Salem, MA), so acting on the specific
+NoVA listing right now isn't realistic — he needs to physically see
+the car and trade in the Expedition, not buy remotely; and he wants
+a trade-in, not a second vehicle. Diesel fuel cost flagged as a real
+tradeoff to weigh per-candidate, not a hard new exclusion (the
+project's tow-rating criteria already favors diesel for towing
+capacity). Replied by SMS (`SMf8820184d5c226fc2eb348b31af3d3f0`)
+acknowledging both, noting the watch continues broadly with
+trade-in-fit flagging once he's back home. Pointer stayed here, no
+move needed since queue id 845. Full detail in
+`projects/suv-replacement/CLAUDE.md`. Next scheduled fire: 9am
+Eastern today (2026-11-19).
 
 Previous pointer, same project — queue id 844,
 2026-11-19 ~01:58Z, text channel, Paul: "The hunt for the car u
