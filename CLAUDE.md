@@ -420,18 +420,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 857,
-2026-11-20 ~18:30Z, text channel. Paul: "Last night I was online and I
-was unable to update web app. Ssh kept dropping. Recommendations?"
-Matches the already-diagnosed queue-id-850 OOM incident — his dropped
-SSH session was very likely the visible symptom of the kernel OOM
-killer, not an unrelated network flake. Gave recommendations (tmux +
-rsync --partial for resumable uploads, stop services before a big
-upload to free RAM, consider a bigger Lightsail plan) rather than
-acting, since this is an infra/ops change that needs Paul present, not
-something to do unattended. Full detail in `projects/travel/CLAUDE.md`'s
-new queue-id-857 entry. Replied by SMS.
+**Current project**: `projects/travel/CLAUDE.md` — live session,
+2026-11-20 ~21:5xZ-22:1xZ, Paul SSHed back in and asked to continue
+the photos/timeline/webapp update flagged at queue id 857. Found the
+Eliot/Salem ingestion code (`NewEngland26.zip` + `Timeline_2026-11-20.
+json`) already written from his earlier same-day 14:35-15:20Z
+session, but the live `travel-webapp.service` was still running the
+pre-edit code (started at the 14:05Z reboot, before the 15:18Z edit).
+Stopped the other three services for headroom given this box's real
+memory ceiling (confirmed OOM twice today), restarted the webapp
+(~19min — Eliot/Salem needed fresh OpenStreetMap geocoding), verified
+both new pages live via `curl` against the real Tailscale IP, then
+restarted the three services. Full detail in `projects/travel/
+CLAUDE.md`'s new "Eliot + Salem pages added" entry.
 
+- qid —, 2026-11-20, `projects/travel/CLAUDE.md` — live session, Paul continuing photos/timeline/webapp work. Eliot + Salem pages (code already written earlier) deployed via a travel-webapp.service restart; verified live (270/135 photos).
 - qid 857, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Last night...ssh kept dropping. Recommendations?" Matches the diagnosed qid 850 OOM incident. Recommended tmux+rsync --partial, stopping services before big uploads, and a bigger Lightsail plan. Replied by SMS.
 - qid 856, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Right." Plain acknowledgment, no action.
 - qid 855, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Can u see timeline data too?" Confirmed Timeline_2026-11-20.json (115MB) intact; same cumulative pattern as the zips — only the newest Timeline file needed. Replied by SMS.
