@@ -420,23 +420,21 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 850,
-2026-11-20 ~14:24Z, text channel. Paul: "yesterday I was sshd in trying
-to update travel data with zip file and timeline but my SSH session
-kept crashing. I just rebooted a lightsale server. How does things
-look to you?" Investigated rather than guess: found a real kernel OOM
-kill at 04:14/04:18Z (this box is a `t3.nano`, 412MB RAM — uploading a
-4.86GB zip + 120MB timeline while the normal coordinator stack was
-also running pushed it over), confirmed the reboot came up clean (all
-five systemd units healthy, disk/Tailscale fine), and confirmed both
-uploaded files landed intact despite the crash. Flagged rather than
-fixed autonomously: three NewEngland zip batches (~11GB total, from
-11/5, 11/11, 11/20) are still sitting unextracted — the gallery only
-shows photos through 10/25 — since running the ingestion script is
-real application code and this box's actual memory ceiling needs
-addressing first; needs Paul live. Full detail in
-`projects/travel/CLAUDE.md`'s new queue-id-850 entry. Replied by SMS.
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 853,
+2026-11-20 ~18:00Z, text channel. Paul: "And can u recommend a good
+glouster restaurant for local feel" (dictation for "Gloucester") —
+they're staying in Salem through 11/22 and deliberately saved Cape
+Ann/Gloucester for the weekend (queue id 830), so this is them
+starting to plan that leg. Recommended The Causeway Restaurant and Roy
+Moore Lobster Co via `WebSearch`. Replied by SMS. (Immediately prior,
+queue id 852 on `travel`: Paul asked for a system-status check after
+his queue-id-851 SSH session ended without running the flagged
+extraction — confirmed all 5 systemd units healthy, no process
+touching the zips/timeline, memory tight but stable, the 3 NewEngland
+zips still unextracted. Full detail in `projects/travel/CLAUDE.md`'s
+queue-id-852 entry.)
 
+- qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
 - qid 852, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "What is the status of the system. Look for another process working on photos and timeline." His SSH session from qid 851 had already ended with no extraction run; confirmed all 5 systemd units active/healthy, no SSH session open, no process touching the zips/timeline, memory still tight but stable, 3 NewEngland zips (~11GB) still unextracted. Replied by SMS.
 
 ## Pointer history (index only — full narrative archived)
