@@ -420,18 +420,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 854,
-2026-11-20 ~18:02Z, text channel. Paul: "Should only be one zip to
-process. The latest. The zip files are cumulative" — correcting the
-queue-id-850 assumption that all three NewEngland zip batches (~11GB)
-needed extracting; they're cumulative, so only the newest
-(`NewEngland26.zip`, 4.86GB, 11/20) actually needs ingesting. Still
-needs Paul live. Full detail in `projects/travel/CLAUDE.md`'s new
-queue-id-854 entry. Replied by SMS. (Immediately prior, queue id 853
-on `new-england`: Gloucester restaurant recommendation for the
-upcoming Cape Ann weekend leg — The Causeway Restaurant and Roy Moore
-Lobster Co.)
+**Current project**: `projects/travel/CLAUDE.md` — queue id 855,
+2026-11-20 ~18:09Z, text channel. Paul: "Can u see timeline data too?"
+Confirmed `Timeline_2026-11-20.json` (115MB) is present and intact,
+and that the Timeline exports follow the same cumulative pattern just
+established for the zips at queue id 854 — only the newest Timeline
+file is needed, the other five on disk can be ignored for ingestion.
+Full detail in `projects/travel/CLAUDE.md`'s new queue-id-855 entry.
+Replied by SMS.
 
+- qid 855, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Can u see timeline data too?" Confirmed Timeline_2026-11-20.json (115MB) intact; same cumulative pattern as the zips — only the newest Timeline file needed. Replied by SMS.
 - qid 854, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Should only be one zip to process. The latest. The zip files are cumulative." Corrects qid 850 — only the newest NewEngland zip (4.86GB) needs extracting, not all three (~11GB). Still needs Paul live. Replied by SMS.
 - qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
 - qid 852, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "What is the status of the system. Look for another process working on photos and timeline." His SSH session from qid 851 had already ended with no extraction run; confirmed all 5 systemd units active/healthy, no SSH session open, no process touching the zips/timeline, memory still tight but stable, 3 NewEngland zips (~11GB) still unextracted. Replied by SMS.
