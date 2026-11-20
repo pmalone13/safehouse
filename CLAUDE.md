@@ -420,59 +420,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — live
-direct interactive session (no queue id), Paul present and directing,
-2026-11-20. Restructured this whole root-file-size problem per his
-explicit "let's do it": root CLAUDE.md had grown from 30KB
-(2026-09-07) to 860KB (2026-11-19), read in full on every single turn
-regardless of topic — the same growth mechanism as the already-fixed
-location/words-ping outage (queue id 675), just applying to every
-turn now instead of one message type. Verified the diagnosis first
-(byte size of `CLAUDE.md` at several points in git history) before
-touching anything. Did three things, all non-destructive — every
-removed byte was relocated, nothing deleted:
-1. **Archived the Test Log section verbatim** (~5,150 lines/325KB) to
-   `projects/safehouse/general/archive/test-log.md` — it almost
-   entirely duplicated git commit messages and each project's own
-   Log. Root now carries a short pointer note instead and this
-   section is retired going forward, not paused.
-2. **Collapsed the "## Projects" pointer-chain** (358 "Previous
-   pointer" blocks, ~400KB of full-paragraph narrative re-told every
-   time the pointer moved) into a compact one-line-per-entry index —
-   see the new "## Pointer history" section below. Full original text
-   archived verbatim to `projects/safehouse/general/archive/
-   pointer-history.md`. **Standing rule going forward**: don't write a
-   new full-paragraph block here when the pointer moves — add one line
-   to the top of the index instead, same format as the existing
-   entries, and let the real detail live in the destination project's
-   own CLAUDE.md.
-3. **Collapsed the TODO section's already-resolved entries** (several
-   repeat write-ups of the same recurring Drive `invalid_grant`
-   outage, the backlog-notification fix, the coordinator retry-time
-   bug, the full A2P saga) to short "resolved, here's the gist"
-   entries, and removed three Test-Log-style narrative blocks that had
-   leaked into TODO (confirmed each was already duplicated in the
-   relevant project's own CLAUDE.md or the new test-log archive before
-   removing). Genuinely still-open items were left untouched, in full.
-4. **Split `projects/safehouse/general/CLAUDE.md`'s own 3,776-line Log**
-   into themed files under `projects/safehouse/general/topics/`
-   (the A2P/Twilio build saga, recurring Drive outages, status checks,
-   capability questions, one-off trivia) — see that file's own new
-   "## Topics" section. The genuinely miscellaneous remainder (57 of
-   153 entries) stayed in `general/CLAUDE.md`'s own Log, which is
-   still the right home for one-off conversational items.
-
-**Result**: root CLAUDE.md 860KB -> 130KB (85% smaller), read every
-turn; `general/CLAUDE.md` 235KB -> 61KB. Total historical content is
-unchanged — it's all still on disk and still mirrors to Drive, just
-relocated so it's read only when actually needed rather than on every
-single turn regardless of topic.
-
-Previous current-project state, folded back into the pointer-history
-index below rather than kept as its own paragraph (per the new
-standing rule just adopted): `suv-replacement`, queue id 848,
-2026-11-19 6pm cron fire, no new qualifying candidate. Next scheduled
-fire: 9am Eastern tomorrow (2026-11-20).
+**Current project**: `projects/travel/CLAUDE.md` — queue id 850,
+2026-11-20 ~14:24Z, text channel. Paul: "yesterday I was sshd in trying
+to update travel data with zip file and timeline but my SSH session
+kept crashing. I just rebooted a lightsale server. How does things
+look to you?" Investigated rather than guess: found a real kernel OOM
+kill at 04:14/04:18Z (this box is a `t3.nano`, 412MB RAM — uploading a
+4.86GB zip + 120MB timeline while the normal coordinator stack was
+also running pushed it over), confirmed the reboot came up clean (all
+five systemd units healthy, disk/Tailscale fine), and confirmed both
+uploaded files landed intact despite the crash. Flagged rather than
+fixed autonomously: three NewEngland zip batches (~11GB total, from
+11/5, 11/11, 11/20) are still sitting unextracted — the gallery only
+shows photos through 10/25 — since running the ingestion script is
+real application code and this box's actual memory ceiling needs
+addressing first; needs Paul live. Full detail in
+`projects/travel/CLAUDE.md`'s new queue-id-850 entry. Replied by SMS.
 
 ## Pointer history (index only — full narrative archived)
 
@@ -496,6 +459,7 @@ here** — when the pointer moves, add one line to the top of this index
 (same format) and let the actual detail live in the destination
 project's own CLAUDE.md, which is where it belongs anyway.
 
+- qid ?, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live direct interactive session, Paul present. Restructured root CLAUDE.md/general's runaway file-size growth (860KB→130KB) by archiving the Test Log, collapsing the pointer-chain and TODO sections, and splitting general/CLAUDE.md's Log into topic files. See commit `ead9d98` and `projects/safehouse/general/archive/` for full detail.
 - qid 848, 2026-11-19, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate. Next scheduled fire 9am Eastern 2026-11-20.
 - qid 847, 2026-11-19, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. Ran the full four-region recipe (SUV + truck + five diesel-specific queries, washingtondc/annapolis/baltimore/easternshore,…
 - qid 846, 2026-11-19, `projects/suv-replacement/CLAUDE.md` — direct follow-up, Paul: "Yeah but we are in Massachusetts. I need to see and try trading in my expedition. Perhaps it will not sell for while. Diesel is expensive."…
