@@ -437,6 +437,8 @@ real application code and this box's actual memory ceiling needs
 addressing first; needs Paul live. Full detail in
 `projects/travel/CLAUDE.md`'s new queue-id-850 entry. Replied by SMS.
 
+- qid 852, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "What is the status of the system. Look for another process working on photos and timeline." His SSH session from qid 851 had already ended with no extraction run; confirmed all 5 systemd units active/healthy, no SSH session open, no process touching the zips/timeline, memory still tight but stable, 3 NewEngland zips (~11GB) still unextracted. Replied by SMS.
+
 ## Pointer history (index only — full narrative archived)
 
 **Restructured 2026-11-20** (Paul, live session) — this used to be a
