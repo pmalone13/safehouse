@@ -420,26 +420,22 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — channel
-`cron`, source `suv-replacement-watch`, queue id 858, 2026-11-20
-~23:00Z, 6pm Eastern scheduled fire. Ran the full four-region recipe
-(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
-baltimore/easternshore, `<=2012`/`<110,000 mi`). 121 unique hrefs, 3
-not matching the ledger by trailing posting-id segment — all 3
-excluded (a "buy junk cars" WANTED ad, a 2012 VW Tiguan, a 2010
-Mercedes GLK350, all either not-a-real-listing or well under the
-6,000 lb tow gate). **Also found and fixed a parsing gap**: the
-JSON-LD results block on this Craigslist layout carries no `url`
-field at all, so pairing it by list-order with the page's raw hrefs
-is unsafe — a dropped non-vehicle entry (a $0 food-truck ad present
-as an href but absent from JSON-LD) silently offset every later
-pairing by one, producing wrong title/price/href combinations. Fixed
-by parsing the `<li class="cl-static-search-result" title="...">`
-cards directly instead, which carry href+title+price+location
-together per card. No email needed (nothing new qualifying). Full
-detail in `projects/suv-replacement/CLAUDE.md`'s new 2026-11-20
-~23:00Z entry.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — live
+interactive session (no queue id), 2026-11-20, Paul pointed at a
+Drive share and asked to read two files named
+`takeout-20261111T020910Z-1-002.zip` and `-2-001.zip`, said they
+"should be chrome history," and asked to file them in a new folder.
+Checked before filing anything: both are the exact same files (same
+Drive ids, same byte sizes) already downloaded and summarized into
+the `youtube` project on 2026-11-12 — no new data landed, and the
+content is YouTube watch history, not Chrome browsing history (re-
+downloaded the small zip directly to confirm). No new project
+created; flagged the mismatch back to Paul and asked whether a real
+Chrome export has actually finished uploading. Full detail in
+`projects/safehouse/general/CLAUDE.md`'s new 2026-11-20 entry and
+`projects/youtube/CLAUDE.md`'s cross-reference note.
 
+- qid —, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live session, Paul asked to file two Drive files as "chrome history." Both turned out to be the exact same already-processed `youtube` project files (YouTube watch history, not Chrome) — flagged the mismatch, no new project created.
 - qid 858, 2026-11-20, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded). Found/fixed a JSON-LD/href pairing bug in the parsing recipe itself.
 - qid —, 2026-11-20, `projects/travel/CLAUDE.md` — live session, Paul continuing photos/timeline/webapp work. Eliot + Salem pages (code already written earlier) deployed via a travel-webapp.service restart; verified live (270/135 photos).
 - qid 857, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Last night...ssh kept dropping. Recommendations?" Matches the diagnosed qid 850 OOM incident. Recommended tmux+rsync --partial, stopping services before big uploads, and a bigger Lightsail plan. Replied by SMS.
@@ -447,7 +443,6 @@ detail in `projects/suv-replacement/CLAUDE.md`'s new 2026-11-20
 - qid 855, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Can u see timeline data too?" Confirmed Timeline_2026-11-20.json (115MB) intact; same cumulative pattern as the zips — only the newest Timeline file needed. Replied by SMS.
 - qid 854, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Should only be one zip to process. The latest. The zip files are cumulative." Corrects qid 850 — only the newest NewEngland zip (4.86GB) needs extracting, not all three (~11GB). Still needs Paul live. Replied by SMS.
 - qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
-- qid 852, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "What is the status of the system. Look for another process working on photos and timeline." His SSH session from qid 851 had already ended with no extraction run; confirmed all 5 systemd units active/healthy, no SSH session open, no process touching the zips/timeline, memory still tight but stable, 3 NewEngland zips (~11GB) still unextracted. Replied by SMS.
 
 ## Pointer history (index only — full narrative archived)
 
