@@ -459,6 +459,8 @@ here** — when the pointer moves, add one line to the top of this index
 (same format) and let the actual detail live in the destination
 project's own CLAUDE.md, which is where it belongs anyway.
 
+- qid 851, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Yes. I will connect in few mins" — confirming he's about to SSH in to work on the travel-data extraction/memory-ceiling issue flagged at queue id 850. No action needed beyond acknowledging.
+- qid 850, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "yesterday I was sshd in trying to update travel data with zip file and timeline but my SSH session kept crashing. I just rebooted a lightsale server. How does things look to you?" Found a real kernel OOM kill (this box is a `t3.nano`, 412MB RAM) from uploading a 4.86GB zip + 120MB timeline alongside the normal coordinator stack; reboot came up clean, both files landed intact. ~11GB of NewEngland zips still unextracted — needs Paul live, flagged rather than run unattended.
 - qid ?, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live direct interactive session, Paul present. Restructured root CLAUDE.md/general's runaway file-size growth (860KB→130KB) by archiving the Test Log, collapsing the pointer-chain and TODO sections, and splitting general/CLAUDE.md's Log into topic files. See commit `ead9d98` and `projects/safehouse/general/archive/` for full detail.
 - qid 848, 2026-11-19, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate. Next scheduled fire 9am Eastern 2026-11-20.
 - qid 847, 2026-11-19, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. Ran the full four-region recipe (SUV + truck + five diesel-specific queries, washingtondc/annapolis/baltimore/easternshore,…
