@@ -420,20 +420,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 853,
-2026-11-20 ~18:00Z, text channel. Paul: "And can u recommend a good
-glouster restaurant for local feel" (dictation for "Gloucester") —
-they're staying in Salem through 11/22 and deliberately saved Cape
-Ann/Gloucester for the weekend (queue id 830), so this is them
-starting to plan that leg. Recommended The Causeway Restaurant and Roy
-Moore Lobster Co via `WebSearch`. Replied by SMS. (Immediately prior,
-queue id 852 on `travel`: Paul asked for a system-status check after
-his queue-id-851 SSH session ended without running the flagged
-extraction — confirmed all 5 systemd units healthy, no process
-touching the zips/timeline, memory tight but stable, the 3 NewEngland
-zips still unextracted. Full detail in `projects/travel/CLAUDE.md`'s
-queue-id-852 entry.)
+**Current project**: `projects/travel/CLAUDE.md` — queue id 854,
+2026-11-20 ~18:02Z, text channel. Paul: "Should only be one zip to
+process. The latest. The zip files are cumulative" — correcting the
+queue-id-850 assumption that all three NewEngland zip batches (~11GB)
+needed extracting; they're cumulative, so only the newest
+(`NewEngland26.zip`, 4.86GB, 11/20) actually needs ingesting. Still
+needs Paul live. Full detail in `projects/travel/CLAUDE.md`'s new
+queue-id-854 entry. Replied by SMS. (Immediately prior, queue id 853
+on `new-england`: Gloucester restaurant recommendation for the
+upcoming Cape Ann weekend leg — The Causeway Restaurant and Roy Moore
+Lobster Co.)
 
+- qid 854, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Should only be one zip to process. The latest. The zip files are cumulative." Corrects qid 850 — only the newest NewEngland zip (4.86GB) needs extracting, not all three (~11GB). Still needs Paul live. Replied by SMS.
 - qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
 - qid 852, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "What is the status of the system. Look for another process working on photos and timeline." His SSH session from qid 851 had already ended with no extraction run; confirmed all 5 systemd units active/healthy, no SSH session open, no process touching the zips/timeline, memory still tight but stable, 3 NewEngland zips (~11GB) still unextracted. Replied by SMS.
 
