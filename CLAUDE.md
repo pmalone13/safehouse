@@ -420,15 +420,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 855,
-2026-11-20 ~18:09Z, text channel. Paul: "Can u see timeline data too?"
-Confirmed `Timeline_2026-11-20.json` (115MB) is present and intact,
-and that the Timeline exports follow the same cumulative pattern just
-established for the zips at queue id 854 — only the newest Timeline
-file is needed, the other five on disk can be ignored for ingestion.
-Full detail in `projects/travel/CLAUDE.md`'s new queue-id-855 entry.
-Replied by SMS.
+**Current project**: `projects/travel/CLAUDE.md` — queue id 857,
+2026-11-20 ~18:30Z, text channel. Paul: "Last night I was online and I
+was unable to update web app. Ssh kept dropping. Recommendations?"
+Matches the already-diagnosed queue-id-850 OOM incident — his dropped
+SSH session was very likely the visible symptom of the kernel OOM
+killer, not an unrelated network flake. Gave recommendations (tmux +
+rsync --partial for resumable uploads, stop services before a big
+upload to free RAM, consider a bigger Lightsail plan) rather than
+acting, since this is an infra/ops change that needs Paul present, not
+something to do unattended. Full detail in `projects/travel/CLAUDE.md`'s
+new queue-id-857 entry. Replied by SMS.
 
+- qid 857, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Last night...ssh kept dropping. Recommendations?" Matches the diagnosed qid 850 OOM incident. Recommended tmux+rsync --partial, stopping services before big uploads, and a bigger Lightsail plan. Replied by SMS.
+- qid 856, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Right." Plain acknowledgment, no action.
 - qid 855, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Can u see timeline data too?" Confirmed Timeline_2026-11-20.json (115MB) intact; same cumulative pattern as the zips — only the newest Timeline file needed. Replied by SMS.
 - qid 854, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Should only be one zip to process. The latest. The zip files are cumulative." Corrects qid 850 — only the newest NewEngland zip (4.86GB) needs extracting, not all three (~11GB). Still needs Paul live. Replied by SMS.
 - qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
