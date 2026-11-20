@@ -420,20 +420,27 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — live session,
-2026-11-20 ~21:5xZ-22:1xZ, Paul SSHed back in and asked to continue
-the photos/timeline/webapp update flagged at queue id 857. Found the
-Eliot/Salem ingestion code (`NewEngland26.zip` + `Timeline_2026-11-20.
-json`) already written from his earlier same-day 14:35-15:20Z
-session, but the live `travel-webapp.service` was still running the
-pre-edit code (started at the 14:05Z reboot, before the 15:18Z edit).
-Stopped the other three services for headroom given this box's real
-memory ceiling (confirmed OOM twice today), restarted the webapp
-(~19min — Eliot/Salem needed fresh OpenStreetMap geocoding), verified
-both new pages live via `curl` against the real Tailscale IP, then
-restarted the three services. Full detail in `projects/travel/
-CLAUDE.md`'s new "Eliot + Salem pages added" entry.
+**Current project**: `projects/suv-replacement/CLAUDE.md` — channel
+`cron`, source `suv-replacement-watch`, queue id 858, 2026-11-20
+~23:00Z, 6pm Eastern scheduled fire. Ran the full four-region recipe
+(SUV + truck + five diesel-specific queries, washingtondc/annapolis/
+baltimore/easternshore, `<=2012`/`<110,000 mi`). 121 unique hrefs, 3
+not matching the ledger by trailing posting-id segment — all 3
+excluded (a "buy junk cars" WANTED ad, a 2012 VW Tiguan, a 2010
+Mercedes GLK350, all either not-a-real-listing or well under the
+6,000 lb tow gate). **Also found and fixed a parsing gap**: the
+JSON-LD results block on this Craigslist layout carries no `url`
+field at all, so pairing it by list-order with the page's raw hrefs
+is unsafe — a dropped non-vehicle entry (a $0 food-truck ad present
+as an href but absent from JSON-LD) silently offset every later
+pairing by one, producing wrong title/price/href combinations. Fixed
+by parsing the `<li class="cl-static-search-result" title="...">`
+cards directly instead, which carry href+title+price+location
+together per card. No email needed (nothing new qualifying). Full
+detail in `projects/suv-replacement/CLAUDE.md`'s new 2026-11-20
+~23:00Z entry.
 
+- qid 858, 2026-11-20, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded). Found/fixed a JSON-LD/href pairing bug in the parsing recipe itself.
 - qid —, 2026-11-20, `projects/travel/CLAUDE.md` — live session, Paul continuing photos/timeline/webapp work. Eliot + Salem pages (code already written earlier) deployed via a travel-webapp.service restart; verified live (270/135 photos).
 - qid 857, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Last night...ssh kept dropping. Recommendations?" Matches the diagnosed qid 850 OOM incident. Recommended tmux+rsync --partial, stopping services before big uploads, and a bigger Lightsail plan. Replied by SMS.
 - qid 856, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Right." Plain acknowledgment, no action.
