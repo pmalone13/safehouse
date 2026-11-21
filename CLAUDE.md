@@ -437,6 +437,7 @@ CLAUDE.md`'s new entry.
 - qid 855, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Can u see timeline data too?" Confirmed Timeline_2026-11-20.json (115MB) intact; same cumulative pattern as the zips — only the newest Timeline file needed. Replied by SMS.
 - qid 854, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Should only be one zip to process. The latest. The zip files are cumulative." Corrects qid 850 — only the newest NewEngland zip (4.86GB) needs extracting, not all three (~11GB). Still needs Paul live. Replied by SMS.
 - qid 853, 2026-11-20, `projects/new-england/CLAUDE.md` — Paul: "And can u recommend a good glouster restaurant for local feel." Cape Ann weekend leg (deferred at qid 830) starting to get planned. Recommended The Causeway Restaurant and Roy Moore Lobster Co. Replied by SMS.
+- qid 849, 2026-11-20, `projects/suv-replacement/CLAUDE.md` — **backfilled 2026-11-21**: this 9am Eastern scheduled fire's own search/log work was already done (found Craigslist's `/search/cta` -> `/search/area/` redirect change, fixed the recipe, logged 8 excluded listings, no new qualifying candidate) but the session died before its checkpoint — no git commit, no root-file index entry, message stuck `claimed` in `queue.db`. Same known failure shape as this file's own open TODO item ("a session can do real work and still die before its own git commit"). No new work needed this turn — just completed the missed checkpoint and marked the message done.
 
 ## Pointer history (index only — full narrative archived)
 
