@@ -420,12 +420,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
-862, 2026-11-21 ~17:35Z, text, Paul: "Ted, what year did Will Smith
-smack Chris Rock at the Oscars?" Plain trivia question, no project
-tied. Used `WebSearch`: 2022, 94th Academy Awards, March 27, 2022.
-Replied by SMS.
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+863, 2026-11-21 ~23:00Z, channel `cron`, source `suv-replacement-watch`,
+6pm Eastern scheduled fire. Ran the full four-region recipe. No new
+qualifying candidate under $10k (4 new hrefs, 3 excluded via standing
+categories, one genuine over-budget 2008 GMC Sierra 1500 4WD Crew Cab
+that clears the 6,000 lb tow gate at ~8,500 lbs but is $12,000, logged
+not emailed). First sighting of a Norfolk VA dealer cross-post pattern.
+No email needed.
 
+- qid 863, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate under $10k; logged an over-budget GMC Sierra 1500 that clears the tow gate. New Norfolk VA dealer cross-post pattern spotted.
 - qid 862, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked what year Will Smith slapped Chris Rock at the Oscars. Confirmed via WebSearch: 2022 (94th Academy Awards).
 - qid 861, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked whether Miller Lite/Bud Light alcohol content changed over time. Confirmed via WebSearch: both unchanged at 4.2% ABV since launch.
 - qid 860, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded — a Dodge Journey repost, a V6 Toyota Tundra, a V6 Ford Explorer under the tow gate).
