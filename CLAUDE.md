@@ -427,6 +427,7 @@ Tailscale address reachable before answering. Replied by SMS with
 `http://100.117.156.93:8095`. Full detail in `projects/travel/
 CLAUDE.md`'s new entry.
 
+- qid 860, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded — a Dodge Journey repost, a V6 Toyota Tundra, a V6 Ford Explorer under the tow gate).
 - qid 859, 2026-11-21, `projects/travel/CLAUDE.md` — Paul asked for the Tailscale URL for the travel webapp. Verified service active and reachable, replied with `http://100.117.156.93:8095`.
 - qid —, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live session, Paul asked to file two Drive files as "chrome history." Both turned out to be the exact same already-processed `youtube` project files (YouTube watch history, not Chrome) — flagged the mismatch, no new project created.
 - qid 858, 2026-11-20, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded). Found/fixed a JSON-LD/href pairing bug in the parsing recipe itself.
