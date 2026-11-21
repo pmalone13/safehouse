@@ -420,21 +420,14 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — live
-interactive session (no queue id), 2026-11-20, Paul pointed at a
-Drive share and asked to read two files named
-`takeout-20261111T020910Z-1-002.zip` and `-2-001.zip`, said they
-"should be chrome history," and asked to file them in a new folder.
-Checked before filing anything: both are the exact same files (same
-Drive ids, same byte sizes) already downloaded and summarized into
-the `youtube` project on 2026-11-12 — no new data landed, and the
-content is YouTube watch history, not Chrome browsing history (re-
-downloaded the small zip directly to confirm). No new project
-created; flagged the mismatch back to Paul and asked whether a real
-Chrome export has actually finished uploading. Full detail in
-`projects/safehouse/general/CLAUDE.md`'s new 2026-11-20 entry and
-`projects/youtube/CLAUDE.md`'s cross-reference note.
+**Current project**: `projects/travel/CLAUDE.md` — queue id 859,
+2026-11-21 ~00:47Z, text, Paul: "Can u give me url for app on
+tailscale?" Confirmed the webapp's systemd unit was active and the
+Tailscale address reachable before answering. Replied by SMS with
+`http://100.117.156.93:8095`. Full detail in `projects/travel/
+CLAUDE.md`'s new entry.
 
+- qid 859, 2026-11-21, `projects/travel/CLAUDE.md` — Paul asked for the Tailscale URL for the travel webapp. Verified service active and reachable, replied with `http://100.117.156.93:8095`.
 - qid —, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live session, Paul asked to file two Drive files as "chrome history." Both turned out to be the exact same already-processed `youtube` project files (YouTube watch history, not Chrome) — flagged the mismatch, no new project created.
 - qid 858, 2026-11-20, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded). Found/fixed a JSON-LD/href pairing bug in the parsing recipe itself.
 - qid —, 2026-11-20, `projects/travel/CLAUDE.md` — live session, Paul continuing photos/timeline/webapp work. Eliot + Salem pages (code already written earlier) deployed via a travel-webapp.service restart; verified live (270/135 photos).
