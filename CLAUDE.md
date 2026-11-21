@@ -421,11 +421,12 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
-861, 2026-11-21 ~17:20Z, text, Paul: "Calories Coors hey Ted, can you
-tell me if Miller lite or Bud light have changed their alcohol content
-over time." Plain trivia question, no project tied. Used `WebSearch`:
-both have stayed at 4.2% ABV since original launch. Replied by SMS.
+862, 2026-11-21 ~17:35Z, text, Paul: "Ted, what year did Will Smith
+smack Chris Rock at the Oscars?" Plain trivia question, no project
+tied. Used `WebSearch`: 2022, 94th Academy Awards, March 27, 2022.
+Replied by SMS.
 
+- qid 862, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked what year Will Smith slapped Chris Rock at the Oscars. Confirmed via WebSearch: 2022 (94th Academy Awards).
 - qid 861, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked whether Miller Lite/Bud Light alcohol content changed over time. Confirmed via WebSearch: both unchanged at 4.2% ABV since launch.
 - qid 860, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded — a Dodge Journey repost, a V6 Toyota Tundra, a V6 Ford Explorer under the tow gate).
 - qid 859, 2026-11-21, `projects/travel/CLAUDE.md` — Paul asked for the Tailscale URL for the travel webapp. Verified service active and reachable, replied with `http://100.117.156.93:8095`.
