@@ -420,13 +420,13 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/travel/CLAUDE.md` — queue id 859,
-2026-11-21 ~00:47Z, text, Paul: "Can u give me url for app on
-tailscale?" Confirmed the webapp's systemd unit was active and the
-Tailscale address reachable before answering. Replied by SMS with
-`http://100.117.156.93:8095`. Full detail in `projects/travel/
-CLAUDE.md`'s new entry.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+861, 2026-11-21 ~17:20Z, text, Paul: "Calories Coors hey Ted, can you
+tell me if Miller lite or Bud light have changed their alcohol content
+over time." Plain trivia question, no project tied. Used `WebSearch`:
+both have stayed at 4.2% ABV since original launch. Replied by SMS.
 
+- qid 861, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked whether Miller Lite/Bud Light alcohol content changed over time. Confirmed via WebSearch: both unchanged at 4.2% ABV since launch.
 - qid 860, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate (3 new hrefs, all excluded — a Dodge Journey repost, a V6 Toyota Tundra, a V6 Ford Explorer under the tow gate).
 - qid 859, 2026-11-21, `projects/travel/CLAUDE.md` — Paul asked for the Tailscale URL for the travel webapp. Verified service active and reachable, replied with `http://100.117.156.93:8095`.
 - qid —, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live session, Paul asked to file two Drive files as "chrome history." Both turned out to be the exact same already-processed `youtube` project files (YouTube watch history, not Chrome) — flagged the mismatch, no new project created.
