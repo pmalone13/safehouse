@@ -420,18 +420,20 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-864, 2026-11-22 ~14:00Z, channel `cron`, source `suv-replacement-watch`,
-9am Eastern scheduled fire. Ran the full four-region recipe. No new
-qualifying candidate (5 new hrefs, all 5 excluded via standing
-categories — an Escalade/Mountaineer/ML500 repost or established class
-exclusion, a Jeep Cherokee off-class exclusion, and a new exclusion
-shape: a Range Rover Sport excluded as non-drivable/sold for parts,
-not a functional replacement vehicle). Had to add `curl -L` to follow
-Craigslist's `/search/cta` redirect (same issue flagged at qid 849) —
-every region fetch came back empty until that was added. No email
-needed.
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 865,
+2026-11-22 ~20:30Z, text channel, Paul: "can you please email me a
+couple of listings like Mansion drives for touring in and around
+Newport." Right-timed — Salem ends today (11/22) and Newport starts
+the same day per the trip table. Used `WebSearch` to confirm current
+info, then emailed two drives plus a bonus third: Ocean Drive/"Ten
+Mile Drive" (free scenic road past the mansion exteriors), Bellevue
+Avenue "Mansion Mile" (Holidays at the Newport Mansions, opened
+11/21, through 1/3/27 — Breakers/Marble House/Chateau-sur-Mer daytime
+tours plus the "Sparkling Lights" evening event), and Blithewold
+Mansion & Gardens in Bristol (already a planned day trip) also doing
+holiday lights through 1/3/27. Confirmed by SMS.
 
+- qid 865, 2026-11-22, `projects/new-england/CLAUDE.md` — Paul asked for Newport mansion driving-tour listings. Emailed Ocean Drive, Bellevue Ave Mansion Mile (holiday-decorated through Jan 3), and bonus Blithewold (Bristol) lights.
 - qid 864, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate; new exclusion shape (non-drivable Range Rover Sport sold for parts). `curl -L` needed for the search-page redirect.
 - qid 863, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate under $10k; logged an over-budget GMC Sierra 1500 that clears the tow gate. New Norfolk VA dealer cross-post pattern spotted.
 - qid 862, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked what year Will Smith slapped Chris Rock at the Oscars. Confirmed via WebSearch: 2022 (94th Academy Awards).
