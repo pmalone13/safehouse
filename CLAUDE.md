@@ -433,6 +433,7 @@ tours plus the "Sparkling Lights" evening event), and Blithewold
 Mansion & Gardens in Bristol (already a planned day trip) also doing
 holiday lights through 1/3/27. Confirmed by SMS.
 
+- qid 866, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. Found and emailed one new qualifying candidate: 2003 BMW X5 4.4i, $9,000, 96,879 mi, Millersville MD, clears the 6,000 lb tow gate exactly.
 - qid 865, 2026-11-22, `projects/new-england/CLAUDE.md` — Paul asked for Newport mansion driving-tour listings. Emailed Ocean Drive, Bellevue Ave Mansion Mile (holiday-decorated through Jan 3), and bonus Blithewold (Bristol) lights.
 - qid 864, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate; new exclusion shape (non-drivable Range Rover Sport sold for parts). `curl -L` needed for the search-page redirect.
 - qid 863, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate under $10k; logged an over-budget GMC Sierra 1500 that clears the tow gate. New Norfolk VA dealer cross-post pattern spotted.
