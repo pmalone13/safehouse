@@ -421,14 +421,18 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-863, 2026-11-21 ~23:00Z, channel `cron`, source `suv-replacement-watch`,
-6pm Eastern scheduled fire. Ran the full four-region recipe. No new
-qualifying candidate under $10k (4 new hrefs, 3 excluded via standing
-categories, one genuine over-budget 2008 GMC Sierra 1500 4WD Crew Cab
-that clears the 6,000 lb tow gate at ~8,500 lbs but is $12,000, logged
-not emailed). First sighting of a Norfolk VA dealer cross-post pattern.
-No email needed.
+864, 2026-11-22 ~14:00Z, channel `cron`, source `suv-replacement-watch`,
+9am Eastern scheduled fire. Ran the full four-region recipe. No new
+qualifying candidate (5 new hrefs, all 5 excluded via standing
+categories — an Escalade/Mountaineer/ML500 repost or established class
+exclusion, a Jeep Cherokee off-class exclusion, and a new exclusion
+shape: a Range Rover Sport excluded as non-drivable/sold for parts,
+not a functional replacement vehicle). Had to add `curl -L` to follow
+Craigslist's `/search/cta` redirect (same issue flagged at qid 849) —
+every region fetch came back empty until that was added. No email
+needed.
 
+- qid 864, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new qualifying candidate; new exclusion shape (non-drivable Range Rover Sport sold for parts). `curl -L` needed for the search-page redirect.
 - qid 863, 2026-11-21, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. No new qualifying candidate under $10k; logged an over-budget GMC Sierra 1500 that clears the tow gate. New Norfolk VA dealer cross-post pattern spotted.
 - qid 862, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked what year Will Smith slapped Chris Rock at the Oscars. Confirmed via WebSearch: 2022 (94th Academy Awards).
 - qid 861, 2026-11-21, `projects/safehouse/general/CLAUDE.md` — Paul asked whether Miller Lite/Bud Light alcohol content changed over time. Confirmed via WebSearch: both unchanged at 4.2% ABV since launch.
