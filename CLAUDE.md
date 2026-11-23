@@ -433,6 +433,7 @@ tours plus the "Sparkling Lights" evening event), and Blithewold
 Mansion & Gardens in Bristol (already a planned day trip) also doing
 holiday lights through 1/3/27. Confirmed by SMS.
 
+- qid 868, 2026-11-23, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new candidate — first run ever with zero not-already-logged hrefs (all 111 unique hrefs exact posting-ID matches).
 - qid 867, 2026-11-23, `projects/new-england/CLAUDE.md` — Paul, settled into the Newport RI place: "they have... Paramount plus TV. Can you recommend... top three adventures dramas sci-fi's action adventure things to watch." Emailed three: Star Trek: Strange New Worlds, Halo, SEAL Team (plus bonus Blade Runner 2099).
 - qid 866, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. Found and emailed one new qualifying candidate: 2003 BMW X5 4.4i, $9,000, 96,879 mi, Millersville MD, clears the 6,000 lb tow gate exactly.
 - qid 865, 2026-11-22, `projects/new-england/CLAUDE.md` — Paul asked for Newport mansion driving-tour listings. Emailed Ocean Drive, Bellevue Ave Mansion Mile (holiday-decorated through Jan 3), and bonus Blithewold (Bristol) lights.
