@@ -420,18 +420,26 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 869,
-2026-11-23 ~17:50Z, text channel, Paul, walking downtown Newport:
-"Can you give us a quick history of this area like just overview from
-the settlement through today? And lastly, is it currently blue or red
-political?" Used `WebSearch` for both parts. History: founded 1639
-(Coddington group, religious-freedom split from Portsmouth RI),
-colonial seaport boom via the triangular trade, British occupation
-1776-79 gutted it, Providence overtook it, mid-1800s Gilded Age
-summer-resort reinvention (the mansions from qid 865), today tourism/
-Navy/sailing. Politics: solidly blue (2024 pres Harris 70%/Trump 27%
-in Newport). Replied by SMS.
+**Current project**: `projects/contacts/CLAUDE.md` — live session,
+2026-11-23 ~19:2xZ-19:3xZ, Paul shared a Google Takeout "Contacts"
+export via Drive (two zips, `contacts-20261123T192413Z-001.zip` and
+`-1-001.zip`, the second found by name after the first turned out to
+be the empty Takeout placeholder split), asked whether Contacts had
+already been shared before (checked — no: the `youtube` project's "the
+contact" phrase at qid 813 was a dictation slip for "the content,"
+confirmed nothing Contacts-related existed anywhere on this VM before
+today), and to file it under a new `contacts` project if not already
+somewhere. New project created: 1,000 contacts (`All Contacts.vcf`),
+747 self-added (`My Contacts.vcf`), across 11 label folders, raw+
+extracted stored outside the repo at `/home/ubuntu/safehouse-media/
+contacts/` (binary contact photos, same precedent as `youtube`). No
+stated use yet — filed and summarized only. Paul also separately
+mentioned he's about to share his YouTube watch history too (a second
+export, already have a `youtube` project from qid 813 to file it
+under if it's the same kind of data, or check fresh if not).
 
+- qid —, 2026-11-23, `projects/safehouse/general/CLAUDE.md` — Paul asked for disk status on this VM and "our S3." Reported root (9.0GB free/52% used) and `/mnt/data` Block Storage (39GB free/36% used) via `df -h`; clarified S3 isn't actually wired up yet (per TODO/Infrastructure section) — everything currently lives on the Block Storage volume. Paul: "no, we will keep an eye on growth."
+- qid 869, 2026-11-23, `projects/new-england/CLAUDE.md` — text channel, Paul, walking downtown Newport: "Can you give us a quick history of this area like just overview from the settlement through today? And lastly, is it currently blue or red political?" Used `WebSearch` for both parts. History: founded 1639 (Coddington group, religious-freedom split from Portsmouth RI), colonial seaport boom via the triangular trade, British occupation 1776-79 gutted it, Providence overtook it, mid-1800s Gilded Age summer-resort reinvention (the mansions from qid 865), today tourism/Navy/sailing. Politics: solidly blue (2024 pres Harris 70%/Trump 27% in Newport). Replied by SMS.
 - qid 868, 2026-11-23, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new candidate — first run ever with zero not-already-logged hrefs (all 111 unique hrefs exact posting-ID matches).
 - qid 867, 2026-11-23, `projects/new-england/CLAUDE.md` — Paul, settled into the Newport RI place: "they have... Paramount plus TV. Can you recommend... top three adventures dramas sci-fi's action adventure things to watch." Emailed three: Star Trek: Strange New Worlds, Halo, SEAL Team (plus bonus Blade Runner 2099).
 - qid 866, 2026-11-22, `projects/suv-replacement/CLAUDE.md` — 6pm Eastern scheduled fire. Found and emailed one new qualifying candidate: 2003 BMW X5 4.4i, $9,000, 96,879 mi, Millersville MD, clears the 6,000 lb tow gate exactly.
