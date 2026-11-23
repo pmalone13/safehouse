@@ -420,18 +420,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 865,
-2026-11-22 ~20:30Z, text channel, Paul: "can you please email me a
-couple of listings like Mansion drives for touring in and around
-Newport." Right-timed — Salem ends today (11/22) and Newport starts
-the same day per the trip table. Used `WebSearch` to confirm current
-info, then emailed two drives plus a bonus third: Ocean Drive/"Ten
-Mile Drive" (free scenic road past the mansion exteriors), Bellevue
-Avenue "Mansion Mile" (Holidays at the Newport Mansions, opened
-11/21, through 1/3/27 — Breakers/Marble House/Chateau-sur-Mer daytime
-tours plus the "Sparkling Lights" evening event), and Blithewold
-Mansion & Gardens in Bristol (already a planned day trip) also doing
-holiday lights through 1/3/27. Confirmed by SMS.
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 869,
+2026-11-23 ~17:50Z, text channel, Paul, walking downtown Newport:
+"Can you give us a quick history of this area like just overview from
+the settlement through today? And lastly, is it currently blue or red
+political?" Used `WebSearch` for both parts. History: founded 1639
+(Coddington group, religious-freedom split from Portsmouth RI),
+colonial seaport boom via the triangular trade, British occupation
+1776-79 gutted it, Providence overtook it, mid-1800s Gilded Age
+summer-resort reinvention (the mansions from qid 865), today tourism/
+Navy/sailing. Politics: solidly blue (2024 pres Harris 70%/Trump 27%
+in Newport). Replied by SMS.
 
 - qid 868, 2026-11-23, `projects/suv-replacement/CLAUDE.md` — 9am Eastern scheduled fire. No new candidate — first run ever with zero not-already-logged hrefs (all 111 unique hrefs exact posting-ID matches).
 - qid 867, 2026-11-23, `projects/new-england/CLAUDE.md` — Paul, settled into the Newport RI place: "they have... Paramount plus TV. Can you recommend... top three adventures dramas sci-fi's action adventure things to watch." Emailed three: Star Trek: Strange New Worlds, Halo, SEAL Team (plus bonus Blade Runner 2099).
