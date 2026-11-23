@@ -421,20 +421,23 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/youtube/CLAUDE.md` — live session,
-2026-11-23 ~19:4xZ-20:0xZ, Paul asked to find `youtube*.zip` files in
-the shared Drive folder ("there are three"). Found and verified a
-genuine second/fresh Takeout export (timestamp `20261123T194313Z`,
-different Drive ids/byte sizes from the original 2026-11-12 export),
-downloaded all 3 (~2.25GB total) and unpacked. Mostly stable vs. the
-first export — same 20 uploaded videos byte-identical, same playlists,
-same 2 message conversations — with one new subscription (131 vs 130)
-and watch-history entry count down slightly (4,238 vs 4,346, read as
-normal YouTube-side churn, not a bug). Reorganized
-`/home/ubuntu/safehouse-media/youtube/` into dated `raw-20261111`/
-`extracted-20261111`/`raw-20261123`/`extracted-20261123` subfolders so
-the two exports don't collide — both kept, nothing deleted. Full
-detail in the project file's own "Second export" section.
+2026-11-23 ~20:1xZ-20:3xZ, Paul asked to (1) dedupe watch history
+between the two youtube exports and (2) find a watched video about a
+small foiling kayak-shell boat with front and back foils "so it
+flys," wanting the link. Parsed both `watch-history.html` files for
+real (correcting a bad earlier `grep`-based count — real totals are
+45,276/45,339 raw entries, not the ~4,300 misreported a few turns
+earlier); deduped by video URL to 40,245 unique videos across both
+exports, saved to `/home/ubuntu/safehouse-media/youtube/
+watch-history-deduped-combined.csv`. For the foiling-boat ask: best
+match found is Birdyfish's "Ioda" (3.2m single-person foiling dinghy,
+tagline "Fly the Future"), watched 2026-11-10 —
+https://www.youtube.com/watch?v=_YtSkf-CXVw — flagged as best-match
+rather than certain since no title was an exact phrase match. Full
+detail, plus two runner-up links, in the project file's own "Dedupe"
+and Log sections.
 
+- qid —, 2026-11-23, `projects/youtube/CLAUDE.md` — found and verified a genuine second/fresh Takeout export (timestamp `20261123T194313Z`, different Drive ids/byte sizes from the original 2026-11-12 export), downloaded all 3 files (~2.25GB total) and unpacked. Mostly stable vs. the first export — same 20 uploaded videos byte-identical, same playlists, same 2 message conversations, one new subscription (131 vs 130). Reorganized `/home/ubuntu/safehouse-media/youtube/` into dated `raw-20261111`/`extracted-20261111`/`raw-20261123`/`extracted-20261123` subfolders so the two exports don't collide — both kept, nothing deleted.
 - qid —, 2026-11-23, `projects/contacts/CLAUDE.md` — Paul shared a Google Takeout "Contacts" export via Drive (two zips, found by exact filename), asked whether Contacts had already been shared before (checked — no, confirmed nothing Contacts-related existed anywhere on this VM), and to file it under a new `contacts` project. Created: 1,000 contacts (`All Contacts.vcf`), 747 self-added (`My Contacts.vcf`), across 11 label folders, raw+extracted stored outside the repo at `/home/ubuntu/safehouse-media/contacts/` (binary contact photos, same precedent as `youtube`). No stated use yet — filed and summarized only.
 - qid —, 2026-11-23, `projects/safehouse/general/CLAUDE.md` — Paul asked for disk status on this VM and "our S3." Reported root (9.0GB free/52% used) and `/mnt/data` Block Storage (39GB free/36% used) via `df -h`; clarified S3 isn't actually wired up yet (per TODO/Infrastructure section) — everything currently lives on the Block Storage volume. Paul: "no, we will keep an eye on growth."
 - qid 869, 2026-11-23, `projects/new-england/CLAUDE.md` — text channel, Paul, walking downtown Newport: "Can you give us a quick history of this area like just overview from the settlement through today? And lastly, is it currently blue or red political?" Used `WebSearch` for both parts. History: founded 1639 (Coddington group, religious-freedom split from Portsmouth RI), colonial seaport boom via the triangular trade, British occupation 1776-79 gutted it, Providence overtook it, mid-1800s Gilded Age summer-resort reinvention (the mansions from qid 865), today tourism/Navy/sailing. Politics: solidly blue (2024 pres Harris 70%/Trump 27% in Newport). Replied by SMS.
