@@ -426,16 +426,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/
-CLAUDE.md` — queue id 880, 2026-11-24 ~22:13Z, email channel, Paul:
-"Ask bill for status." Sent a real `STATUS` command via
-`ted_protocol.send_command()` and polled Gmail directly (bypassing
-`poll_for_reply()`'s known stale-reply bug) — **no reply after ~10
-minutes**, unusual vs. every prior check (normally under a minute).
-Not confirmed as a real outage, flagged to Paul by SMS rather than
-guessed — full detail in the project file's own Log. No code changes
-made.
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+881, channel `cron`, source `suv-replacement-watch`, 6pm Eastern
+scheduled fire. Ran the full four-region recipe (delegated the
+crawl/dedup to a subagent with the established recipe spelled out in
+full, verified its report before logging) — 115 unique hrefs, 2 new
+(both fresh reposts of already-excluded vehicles), no new qualifying
+candidate, no email needed — full detail in the project file's own
+Log. Next scheduled fire: 9am Eastern tomorrow (2026-11-25).
 
+- qid 880, 2026-11-24, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, Paul: "Ask bill for status." Sent a real `STATUS` command and polled Gmail directly — no reply after ~10 minutes, unusual vs. every prior check. Flagged to Paul by SMS, not confirmed as a real outage.
 - qid 879, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — email channel, Paul replying to the qid 876 MCP heads-up: "The way I read it is you would be accessing gmail through the gmail MCP and that puts gemeni [Gemini] in the loop, correct?" Confirmed no — MCP is model-agnostic. Replied by email.
 - qid 878, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "Retail sales?" Direct follow-up to qid 877's RI weed-laws answer. Used `WebSearch` to confirm 11 licensed recreational dispensaries statewide, closest to Newport is Newport Cannabis Co. in Portsmouth RI. Replied by SMS.
 - qid 877, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "What are weed laws in RI." Legal-reference question motivated by the ongoing New England trip now in the Newport RI area. Used `WebSearch` to confirm current law. Replied by SMS.
