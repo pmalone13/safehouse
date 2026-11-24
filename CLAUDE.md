@@ -426,17 +426,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 872,
-2026-11-24 ~20:46Z, text channel, Paul (out walking near the Newport
-mansions): "give us a background on the Salve University... near the
-Mansions... When did the school get started? Who started it? How did
-the land get donated... How do they keep these lots from being
-chopped up?" Used `WebSearch` to answer all four parts (founding,
-founder, land donations, zoning/subdivision protection) rather than
-rely on memory — full detail in the project file's own Log. Replied
-by SMS.
-and Log sections.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+876, 2026-11-24 ~21:48Z, email channel, genuine Google Cloud policy
+notice (DKIM/SPF/DMARC pass) naming this project (`safehouse-507313`)
+directly: AI agents must use MCP (not direct REST API calls) to access
+Workspace data starting Feb 1, 2027. Flagged to Paul by email, not
+acted on myself (a real migration is application code, needs Paul
+live); added as a new open TODO item (migration decision needed
+before Feb 1, 2027) — full detail in that section above and in the
+project file's own Log.
 
+- qid 872, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, out walking near the Newport mansions: "give us a background on the Salve University... near the Mansions... When did the school get started? Who started it? How did the land get donated... How do they keep these lots from being chopped up?" Used `WebSearch` to answer all four parts. Replied by SMS.
 - qid 875, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul: "Tell me what the endowment is for the school and also look up West towns in Media Pennsylvania's endowment." St. George's (RI) ~$230M; "West towns" read as Westtown School (West Chester PA, near Media) ~$133.8M — flagged as not certain. Replied by SMS.
 - qid 874, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, direct follow-up seconds after qid 873: "What is the tuition for day students and boarding for high school?" Read as asking about St. George's specifically. Used `WebSearch`: 2026-27 tuition $55,470/yr day, $79,900/yr boarding; 31% of students get need-based aid. Replied by SMS.
 - qid 873, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, direct follow-up to qid 872 minutes later: "tell me about St. George's school that's in... Middletown Rhode Island just north of Newport." Used `WebSearch`: founded 1896 by Rev. John Diman (English-public-school model), moved to its current Middletown hilltop campus 1901, non-profit since 1903, still Episcopal/co-ed/day-boarding today. Replied by SMS.
@@ -885,6 +885,23 @@ anything that isn't a specific named project.
 ## TODO / known limitations (don't let these surprise a future turn)
 
 **Still open — read these in full, they're exactly what this section is for:**
+
+- **Google will technically enforce MCP-only access to Workspace data
+  for AI agents starting Feb 1, 2027 — `google_client.py` calls the
+  Gmail/Drive REST APIs directly, exactly what this targets.** Flagged
+  2026-11-24 (queue id 876), a genuine Google Cloud policy email
+  (DKIM/SPF/DMARC pass) naming this project (`safehouse-507313`)
+  directly. Two usage tiers (Standard=free/rate-limited,
+  Scaled=billed for overage from April 1, 2027); no action by April 1,
+  2027 just means Standard-tier throttling is stated as the
+  consequence, not an outright shutoff — but the Feb 1 MCP-enforcement
+  line is separate and could break direct REST calls from agent tools
+  regardless of tier. Emailed Paul a heads-up; no migration attempted
+  (a real `google_client.py` rewrite onto an MCP server is application
+  code — needs Paul live, same as every other item in this section).
+  **Decision needed before Feb 1, 2027**: migrate now, or wait and see
+  what actually breaks. Full detail: `projects/safehouse/general/
+  CLAUDE.md`'s 2026-11-24 entry.
 
 - **A session can complete `done` with no error while doing nothing for
   Paul.** First caught 2026-10-19 (queue id 361, "ask bill if I should be
