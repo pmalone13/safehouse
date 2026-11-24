@@ -426,21 +426,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/youtube/CLAUDE.md` — live session,
-2026-11-23 ~20:1xZ-20:3xZ, Paul asked to (1) dedupe watch history
-between the two youtube exports and (2) find a watched video about a
-small foiling kayak-shell boat with front and back foils "so it
-flys," wanting the link. Parsed both `watch-history.html` files for
-real (correcting a bad earlier `grep`-based count — real totals are
-45,276/45,339 raw entries, not the ~4,300 misreported a few turns
-earlier); deduped by video URL to 40,245 unique videos across both
-exports, saved to `/home/ubuntu/safehouse-media/youtube/
-watch-history-deduped-combined.csv`. For the foiling-boat ask: best
-match found is Birdyfish's "Ioda" (3.2m single-person foiling dinghy,
-tagline "Fly the Future"), watched 2026-11-10 —
-https://www.youtube.com/watch?v=_YtSkf-CXVw — flagged as best-match
-rather than certain since no title was an exact phrase match. Full
-detail, plus two runner-up links, in the project file's own "Dedupe"
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 872,
+2026-11-24 ~20:46Z, text channel, Paul (out walking near the Newport
+mansions): "give us a background on the Salve University... near the
+Mansions... When did the school get started? Who started it? How did
+the land get donated... How do they keep these lots from being
+chopped up?" Used `WebSearch` to answer all four parts (founding,
+founder, land donations, zoning/subdivision protection) rather than
+rely on memory — full detail in the project file's own Log. Replied
+by SMS.
 and Log sections.
 
 - qid —, 2026-11-23, `projects/youtube/CLAUDE.md` — found and verified a genuine second/fresh Takeout export (timestamp `20261123T194313Z`, different Drive ids/byte sizes from the original 2026-11-12 export), downloaded all 3 files (~2.25GB total) and unpacked. Mostly stable vs. the first export — same 20 uploaded videos byte-identical, same playlists, same 2 message conversations, one new subscription (131 vs 130). Reorganized `/home/ubuntu/safehouse-media/youtube/` into dated `raw-20261111`/`extracted-20261111`/`raw-20261123`/`extracted-20261123` subfolders so the two exports don't collide — both kept, nothing deleted.
@@ -489,6 +483,7 @@ here** — when the pointer moves, add one line to the top of this index
 (same format) and let the actual detail live in the destination
 project's own CLAUDE.md, which is where it belongs anyway.
 
+- qid —, 2026-11-23, `projects/youtube/CLAUDE.md` — Paul asked to (1) dedupe watch history between the two youtube exports and (2) find a watched video about a small foiling kayak-shell boat "so it flys." Deduped by video URL to 40,245 unique videos; best-match boat video is Birdyfish's "Ioda," https://www.youtube.com/watch?v=_YtSkf-CXVw — flagged best-match not certain.
 - qid 851, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "Yes. I will connect in few mins" — confirming he's about to SSH in to work on the travel-data extraction/memory-ceiling issue flagged at queue id 850. No action needed beyond acknowledging.
 - qid 850, 2026-11-20, `projects/travel/CLAUDE.md` — Paul: "yesterday I was sshd in trying to update travel data with zip file and timeline but my SSH session kept crashing. I just rebooted a lightsale server. How does things look to you?" Found a real kernel OOM kill (this box is a `t3.nano`, 412MB RAM) from uploading a 4.86GB zip + 120MB timeline alongside the normal coordinator stack; reboot came up clean, both files landed intact. ~11GB of NewEngland zips still unextracted — needs Paul live, flagged rather than run unattended.
 - qid ?, 2026-11-20, `projects/safehouse/general/CLAUDE.md` — live direct interactive session, Paul present. Restructured root CLAUDE.md/general's runaway file-size growth (860KB→130KB) by archiving the Test Log, collapsing the pointer-chain and TODO sections, and splitting general/CLAUDE.md's Log into topic files. See commit `ead9d98` and `projects/safehouse/general/archive/` for full detail.
