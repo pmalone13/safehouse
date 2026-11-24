@@ -426,16 +426,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
-879, 2026-11-24 ~22:09Z, email channel, Paul replying to the qid 876
-MCP heads-up: "The way I read it is you would be accessing gmail
-through the gmail MCP and that puts gemeni [Gemini] in the loop,
-correct?" Checked rather than guessed — confirmed MCP is
-model-agnostic (Google's own docs list Claude and Gemini CLI as
-example clients for the same official server), so no, Gemini
-wouldn't be in the loop — full detail in the TODO section above and
-the project file's own Log. Replied by email.
+**Current project**: `projects/engineering/secure-agent-communication/
+CLAUDE.md` — queue id 880, 2026-11-24 ~22:13Z, email channel, Paul:
+"Ask bill for status." Sent a real `STATUS` command via
+`ted_protocol.send_command()` and polled Gmail directly (bypassing
+`poll_for_reply()`'s known stale-reply bug) — **no reply after ~10
+minutes**, unusual vs. every prior check (normally under a minute).
+Not confirmed as a real outage, flagged to Paul by SMS rather than
+guessed — full detail in the project file's own Log. No code changes
+made.
 
+- qid 879, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — email channel, Paul replying to the qid 876 MCP heads-up: "The way I read it is you would be accessing gmail through the gmail MCP and that puts gemeni [Gemini] in the loop, correct?" Confirmed no — MCP is model-agnostic. Replied by email.
 - qid 878, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "Retail sales?" Direct follow-up to qid 877's RI weed-laws answer. Used `WebSearch` to confirm 11 licensed recreational dispensaries statewide, closest to Newport is Newport Cannabis Co. in Portsmouth RI. Replied by SMS.
 - qid 877, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "What are weed laws in RI." Legal-reference question motivated by the ongoing New England trip now in the Newport RI area. Used `WebSearch` to confirm current law. Replied by SMS.
 - qid 876, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — genuine Google Cloud policy email naming this project directly: AI agents must use MCP (not direct REST calls) to access Workspace data starting Feb 1, 2027. Flagged to Paul by email, not acted on; added as a new open TODO item (migration decision needed before Feb 1, 2027).
