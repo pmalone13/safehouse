@@ -426,16 +426,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
-876, 2026-11-24 ~21:48Z, email channel, genuine Google Cloud policy
-notice (DKIM/SPF/DMARC pass) naming this project (`safehouse-507313`)
-directly: AI agents must use MCP (not direct REST API calls) to access
-Workspace data starting Feb 1, 2027. Flagged to Paul by email, not
-acted on myself (a real migration is application code, needs Paul
-live); added as a new open TODO item (migration decision needed
-before Feb 1, 2027) — full detail in that section above and in the
-project file's own Log.
+**Current project**: `projects/managing-paul/monitoring-weed-effect/
+CLAUDE.md` — queue id 877, 2026-11-24 ~21:52Z, text channel, Paul:
+"What are weed laws in RI." Legal-reference question motivated by the
+ongoing New England trip now in the Newport RI area, same shape as the
+queue id 752 VT question. Used `WebSearch` to confirm current law
+rather than rely on memory — full detail in the project file's own
+Log. Replied by SMS.
 
+- qid 876, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — genuine Google Cloud policy email naming this project directly: AI agents must use MCP (not direct REST calls) to access Workspace data starting Feb 1, 2027. Flagged to Paul by email, not acted on; added as a new open TODO item (migration decision needed before Feb 1, 2027).
 - qid 872, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, out walking near the Newport mansions: "give us a background on the Salve University... near the Mansions... When did the school get started? Who started it? How did the land get donated... How do they keep these lots from being chopped up?" Used `WebSearch` to answer all four parts. Replied by SMS.
 - qid 875, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul: "Tell me what the endowment is for the school and also look up West towns in Media Pennsylvania's endowment." St. George's (RI) ~$230M; "West towns" read as Westtown School (West Chester PA, near Media) ~$133.8M — flagged as not certain. Replied by SMS.
 - qid 874, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, direct follow-up seconds after qid 873: "What is the tuition for day students and boarding for high school?" Read as asking about St. George's specifically. Used `WebSearch`: 2026-27 tuition $55,470/yr day, $79,900/yr boarding; 31% of students get need-based aid. Replied by SMS.
