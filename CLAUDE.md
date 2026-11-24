@@ -26,10 +26,15 @@ computer's business/accounting instance is **The Accountant**. Flagged
 back to Paul rather than assumed outright, since that's the most
 natural mapping (matches this paragraph's own "business/accounting"
 description) but wasn't stated with 100% explicitness, and there's
-also a separate, still-unnamed fourth node mentioned once
-(queue id 238, a new agent Paul is building on his Surface laptop —
-see `projects/engineering/secure-agent-communication/CLAUDE.md`) that
-could in principle be confused with it.
+also a separate fourth node (queue id 238, the agent Paul is building
+on his Surface laptop — "nurface" on the tailnet, see
+`projects/engineering/secure-agent-communication/CLAUDE.md`) that
+could in principle be confused with it. **Named 2026-11-24, live
+session**: Paul adopted **Rufus** for this fourth node (the name had
+been floated in the secure-agent-communication file's own Bill &
+Ted-themed naming discussion) — he says he'll inform that system
+himself; no communication channel to it exists from here yet either
+way.
 **New detail, 2026-10-11 (queue id 223):** that third/basement instance
 also controls home automation (lights/switches) at Paul's house as part
 of its own scope — he nicknamed it "the bay house" (likely the same
@@ -319,9 +324,10 @@ instance id `i-066d2ff2bfd9cf3c9`. **Two disks as of 2026-11-05:**
   entry for the full build). Node name `ted-safehouse`, IP
   `100.117.156.93`. Other confirmed nodes on the same tailnet:
   `bayhouse` (Bill, `100.83.129.22`) and `nurface` (`100.66.80.61` —
-  Paul's Surface laptop, confirming the previously-unconfirmed
-  "unnamed fourth node" from queue id 238 is real and on this same
-  network). Routed via DERP relay (NYC), not a direct peer-to-peer
+  Paul's Surface laptop, confirming the fourth node from queue id 238
+  is real and on this same network; named **Rufus** as of 2026-11-24,
+  see root section above). Routed via DERP relay (NYC), not a direct
+  peer-to-peer
   link, as of this entry — fine for browsing, improvable later by
   opening UDP 41641 inbound in the Lightsail firewall console if
   Paul wants lower latency (not done, a Lightsail-console change only
