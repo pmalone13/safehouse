@@ -426,14 +426,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/managing-paul/monitoring-weed-effect/
-CLAUDE.md` — queue id 878, 2026-11-24 ~21:53Z, text channel, Paul:
-"Retail sales?" Direct follow-up to qid 877's RI weed-laws answer.
-Used `WebSearch` to confirm: 11 licensed recreational dispensaries
-statewide, 21+ w/ ID, closest to Newport is Newport Cannabis Co. in
-Portsmouth RI — full detail in the project file's own Log. Replied by
-SMS.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+879, 2026-11-24 ~22:09Z, email channel, Paul replying to the qid 876
+MCP heads-up: "The way I read it is you would be accessing gmail
+through the gmail MCP and that puts gemeni [Gemini] in the loop,
+correct?" Checked rather than guessed — confirmed MCP is
+model-agnostic (Google's own docs list Claude and Gemini CLI as
+example clients for the same official server), so no, Gemini
+wouldn't be in the loop — full detail in the TODO section above and
+the project file's own Log. Replied by email.
 
+- qid 878, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "Retail sales?" Direct follow-up to qid 877's RI weed-laws answer. Used `WebSearch` to confirm 11 licensed recreational dispensaries statewide, closest to Newport is Newport Cannabis Co. in Portsmouth RI. Replied by SMS.
 - qid 877, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "What are weed laws in RI." Legal-reference question motivated by the ongoing New England trip now in the Newport RI area. Used `WebSearch` to confirm current law. Replied by SMS.
 - qid 876, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — genuine Google Cloud policy email naming this project directly: AI agents must use MCP (not direct REST calls) to access Workspace data starting Feb 1, 2027. Flagged to Paul by email, not acted on; added as a new open TODO item (migration decision needed before Feb 1, 2027).
 - qid 872, 2026-11-24, `projects/new-england/CLAUDE.md` — text channel, Paul, out walking near the Newport mansions: "give us a background on the Salve University... near the Mansions... When did the school get started? Who started it? How did the land get donated... How do they keep these lots from being chopped up?" Used `WebSearch` to answer all four parts. Replied by SMS.
@@ -900,8 +903,14 @@ anything that isn't a specific named project.
   (a real `google_client.py` rewrite onto an MCP server is application
   code — needs Paul live, same as every other item in this section).
   **Decision needed before Feb 1, 2027**: migrate now, or wait and see
-  what actually breaks. Full detail: `projects/safehouse/general/
-  CLAUDE.md`'s 2026-11-24 entry.
+  what actually breaks. **Follow-up same day (queue id 879)**: Paul
+  asked whether using the Gmail MCP server would put Gemini in the
+  loop — confirmed no, MCP is model-agnostic (Google's own docs list
+  Claude and Gemini CLI side by side as example clients for the same
+  official MCP server); migrating swaps the access layer
+  (`google_client.py`'s direct REST calls -> MCP client calls), not
+  which model does the reasoning. Full detail: `projects/safehouse/
+  general/CLAUDE.md`'s 2026-11-24 entries.
 
 - **A session can complete `done` with no error while doing nothing for
   Paul.** First caught 2026-10-19 (queue id 361, "ask bill if I should be
