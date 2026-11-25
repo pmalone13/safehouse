@@ -426,17 +426,16 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/new-england/CLAUDE.md` — queue id 883,
-text channel, Paul: "Morning Ted. Bill is down for bit. Will fix the
-reboot on return in December. Walking Newport today with kids who are
-here for tday." Two halves: Bill's down status resolves the queue id
-880 no-reply flag (not an outage, a known reboot issue Paul will fix
-in December — logged in `secure-agent-communication/CLAUDE.md`); the
-Newport/Thanksgiving half is a new detail — kids have joined the trip
-for Thanksgiving. Plain status update, no question asked; replied by
-SMS. Next `suv-replacement` scheduled fire: 6pm Eastern today
-(2026-11-25).
+**Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md` —
+queue id 885, text channel, Paul: "Add a to do note for us to
+implement Ted protocol for Ted to question Rufus like Ted can question
+Bill." Plain documentation request, not a build (hard boundary) — added
+as a new TODO item directly against that project's own open question
+about whether Rufus joins the existing Ted<->Bill protocol. Replied by
+SMS confirming. Next `suv-replacement` scheduled fire: 6pm Eastern
+today (2026-11-25).
 
+- qid 885, 2026-11-25, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Add a to do note for us to implement Ted protocol for Ted to question Rufus like Ted can question Bill." Logged as a TODO against the Rufus section, not built. Replied by SMS.
 - qid 884, 2026-11-25, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: thumbs-up emoji acknowledging the Drive `invalid_grant` outage heads-up SMS. No action, no reply. Pointer stayed on `new-england`.
 - qid 883, 2026-11-25, `projects/new-england/CLAUDE.md` — text channel, Paul: "Bill is down for bit... Walking Newport today with kids who are here for tday." Bill-down note resolves qid 880; new detail that kids joined for Thanksgiving. Replied by SMS.
 - qid 882, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. Ran the full four-region recipe — 113 unique hrefs, 1 new (a 2012 Nissan Juke, excluded for no meaningful tow rating), no new qualifying candidate, no email needed.
