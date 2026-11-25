@@ -427,13 +427,13 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-881, channel `cron`, source `suv-replacement-watch`, 6pm Eastern
+882, channel `cron`, source `suv-replacement-watch`, 9am Eastern
 scheduled fire. Ran the full four-region recipe (delegated the
 crawl/dedup to a subagent with the established recipe spelled out in
-full, verified its report before logging) — 115 unique hrefs, 2 new
-(both fresh reposts of already-excluded vehicles), no new qualifying
-candidate, no email needed — full detail in the project file's own
-Log. Next scheduled fire: 9am Eastern tomorrow (2026-11-25).
+full, verified its report before logging) — 113 unique hrefs, 1 new
+(a 2012 Nissan Juke, excluded for no meaningful tow rating), no new
+qualifying candidate, no email needed — full detail in the project
+file's own Log. Next scheduled fire: 6pm Eastern today (2026-11-25).
 
 - qid 880, 2026-11-24, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, Paul: "Ask bill for status." Sent a real `STATUS` command and polled Gmail directly — no reply after ~10 minutes, unusual vs. every prior check. Flagged to Paul by SMS, not confirmed as a real outage.
 - qid 879, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — email channel, Paul replying to the qid 876 MCP heads-up: "The way I read it is you would be accessing gmail through the gmail MCP and that puts gemeni [Gemini] in the loop, correct?" Confirmed no — MCP is model-agnostic. Replied by email.
