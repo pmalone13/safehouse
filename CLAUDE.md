@@ -437,6 +437,7 @@ for Thanksgiving. Plain status update, no question asked; replied by
 SMS. Next `suv-replacement` scheduled fire: 6pm Eastern today
 (2026-11-25).
 
+- qid 884, 2026-11-25, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: thumbs-up emoji acknowledging the Drive `invalid_grant` outage heads-up SMS. No action, no reply. Pointer stayed on `new-england`.
 - qid 883, 2026-11-25, `projects/new-england/CLAUDE.md` — text channel, Paul: "Bill is down for bit... Walking Newport today with kids who are here for tday." Bill-down note resolves qid 880; new detail that kids joined for Thanksgiving. Replied by SMS.
 - qid 882, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. Ran the full four-region recipe — 113 unique hrefs, 1 new (a 2012 Nissan Juke, excluded for no meaningful tow rating), no new qualifying candidate, no email needed.
 - qid 880, 2026-11-24, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, Paul: "Ask bill for status." Sent a real `STATUS` command and polled Gmail directly — no reply after ~10 minutes, unusual vs. every prior check. Flagged to Paul by SMS, not confirmed as a real outage.
