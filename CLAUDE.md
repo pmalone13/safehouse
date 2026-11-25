@@ -426,15 +426,19 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-882, channel `cron`, source `suv-replacement-watch`, 9am Eastern
-scheduled fire. Ran the full four-region recipe (delegated the
-crawl/dedup to a subagent with the established recipe spelled out in
-full, verified its report before logging) — 113 unique hrefs, 1 new
-(a 2012 Nissan Juke, excluded for no meaningful tow rating), no new
-qualifying candidate, no email needed — full detail in the project
-file's own Log. Next scheduled fire: 6pm Eastern today (2026-11-25).
+**Current project**: `projects/new-england/CLAUDE.md` — queue id 883,
+text channel, Paul: "Morning Ted. Bill is down for bit. Will fix the
+reboot on return in December. Walking Newport today with kids who are
+here for tday." Two halves: Bill's down status resolves the queue id
+880 no-reply flag (not an outage, a known reboot issue Paul will fix
+in December — logged in `secure-agent-communication/CLAUDE.md`); the
+Newport/Thanksgiving half is a new detail — kids have joined the trip
+for Thanksgiving. Plain status update, no question asked; replied by
+SMS. Next `suv-replacement` scheduled fire: 6pm Eastern today
+(2026-11-25).
 
+- qid 883, 2026-11-25, `projects/new-england/CLAUDE.md` — text channel, Paul: "Bill is down for bit... Walking Newport today with kids who are here for tday." Bill-down note resolves qid 880; new detail that kids joined for Thanksgiving. Replied by SMS.
+- qid 882, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. Ran the full four-region recipe — 113 unique hrefs, 1 new (a 2012 Nissan Juke, excluded for no meaningful tow rating), no new qualifying candidate, no email needed.
 - qid 880, 2026-11-24, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, Paul: "Ask bill for status." Sent a real `STATUS` command and polled Gmail directly — no reply after ~10 minutes, unusual vs. every prior check. Flagged to Paul by SMS, not confirmed as a real outage.
 - qid 879, 2026-11-24, `projects/safehouse/general/CLAUDE.md` — email channel, Paul replying to the qid 876 MCP heads-up: "The way I read it is you would be accessing gmail through the gmail MCP and that puts gemeni [Gemini] in the loop, correct?" Confirmed no — MCP is model-agnostic. Replied by email.
 - qid 878, 2026-11-24, `projects/managing-paul/monitoring-weed-effect/CLAUDE.md` — text channel, Paul: "Retail sales?" Direct follow-up to qid 877's RI weed-laws answer. Used `WebSearch` to confirm 11 licensed recreational dispensaries statewide, closest to Newport is Newport Cannabis Co. in Portsmouth RI. Replied by SMS.
