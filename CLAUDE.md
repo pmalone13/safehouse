@@ -426,15 +426,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md` —
-queue id 885, text channel, Paul: "Add a to do note for us to
-implement Ted protocol for Ted to question Rufus like Ted can question
-Bill." Plain documentation request, not a build (hard boundary) — added
-as a new TODO item directly against that project's own open question
-about whether Rufus joins the existing Ted<->Bill protocol. Replied by
-SMS confirming. Next `suv-replacement` scheduled fire: 6pm Eastern
-today (2026-11-25).
+**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
+886, channel `cron`, source `suv-replacement-watch`, 6pm Eastern
+scheduled fire. Ran the full four-region recipe; no new qualifying
+candidate under $10k, two over-budget finds (Lincoln Navigator,
+GMC Sierra 2500HD) that clear the tow gate logged but not emailed.
+No email needed. Next scheduled fire: 9am Eastern tomorrow
+(2026-11-26).
 
+- qid 886, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 6pm Eastern scheduled fire. 109 unique hrefs, 6 new; no new qualifying candidate under $10k (two over-budget tow-gate-clearing finds logged, not emailed).
 - qid 885, 2026-11-25, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Add a to do note for us to implement Ted protocol for Ted to question Rufus like Ted can question Bill." Logged as a TODO against the Rufus section, not built. Replied by SMS.
 - qid 884, 2026-11-25, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: thumbs-up emoji acknowledging the Drive `invalid_grant` outage heads-up SMS. No action, no reply. Pointer stayed on `new-england`.
 - qid 883, 2026-11-25, `projects/new-england/CLAUDE.md` — text channel, Paul: "Bill is down for bit... Walking Newport today with kids who are here for tday." Bill-down note resolves qid 880; new detail that kids joined for Thanksgiving. Replied by SMS.
