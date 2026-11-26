@@ -426,13 +426,13 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-887, channel `cron`, source `suv-replacement-watch`, 9am Eastern
-scheduled fire. Ran the full four-region recipe; found one new
-qualifying candidate under $10k (2010 Range Rover Sport HSE, $8,950,
-79,890 mi, Springfield VA, clears the 6,000 lb tow gate at ~7,716 lb
-rated) — emailed. Next scheduled fire: 6pm Eastern today (2026-11-26).
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+888, text channel, Paul: "Happy thanksgiving Ted." Plain holiday
+greeting, no action tied. Replied by SMS. Moved pointer here from
+`suv-replacement` (folded back into the live-projects list, nothing
+new since qid 887's 9am cron fire).
 
+- qid 888, 2026-11-26, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Happy thanksgiving Ted." Plain holiday greeting, replied by SMS wishing him/Christine/Nala well.
 - qid 887, 2026-11-26, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. 116 unique hrefs, 2 new; found one new qualifying candidate under $10k (2010 Range Rover Sport HSE, $8,950, Springfield VA) — emailed.
 - qid 886, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 6pm Eastern scheduled fire. 109 unique hrefs, 6 new; no new qualifying candidate under $10k (two over-budget tow-gate-clearing finds logged, not emailed).
 - qid 885, 2026-11-25, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Add a to do note for us to implement Ted protocol for Ted to question Rufus like Ted can question Bill." Logged as a TODO against the Rufus section, not built. Replied by SMS.
