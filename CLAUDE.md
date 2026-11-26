@@ -427,13 +427,13 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-886, channel `cron`, source `suv-replacement-watch`, 6pm Eastern
-scheduled fire. Ran the full four-region recipe; no new qualifying
-candidate under $10k, two over-budget finds (Lincoln Navigator,
-GMC Sierra 2500HD) that clear the tow gate logged but not emailed.
-No email needed. Next scheduled fire: 9am Eastern tomorrow
-(2026-11-26).
+887, channel `cron`, source `suv-replacement-watch`, 9am Eastern
+scheduled fire. Ran the full four-region recipe; found one new
+qualifying candidate under $10k (2010 Range Rover Sport HSE, $8,950,
+79,890 mi, Springfield VA, clears the 6,000 lb tow gate at ~7,716 lb
+rated) — emailed. Next scheduled fire: 6pm Eastern today (2026-11-26).
 
+- qid 887, 2026-11-26, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. 116 unique hrefs, 2 new; found one new qualifying candidate under $10k (2010 Range Rover Sport HSE, $8,950, Springfield VA) — emailed.
 - qid 886, 2026-11-25, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 6pm Eastern scheduled fire. 109 unique hrefs, 6 new; no new qualifying candidate under $10k (two over-budget tow-gate-clearing finds logged, not emailed).
 - qid 885, 2026-11-25, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Add a to do note for us to implement Ted protocol for Ted to question Rufus like Ted can question Bill." Logged as a TODO against the Rufus section, not built. Replied by SMS.
 - qid 884, 2026-11-25, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: thumbs-up emoji acknowledging the Drive `invalid_grant` outage heads-up SMS. No action, no reply. Pointer stayed on `new-england`.
