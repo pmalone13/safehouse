@@ -1031,10 +1031,13 @@ CLAUDE.md if you ever need the full blow-by-blow:**
   that one time), 2026-09-16, 2026-09-27, 2026-10-05 (the worst one,
   ~8 days), 2026-10-20, 2026-10-30 (self-healed, paired with a same-day
   "safehouse" Drive root-folder-gone 404 that also self-healed ~10h
-  later), 2026-11-06, 2026-11-18, and 2026-11-25 (queue id 883's own
+  later), 2026-11-06, 2026-11-18, and 2026-11-25-26 (queue id 883's
   checkpoint — Gmail confirmed fine, Drive failed twice in a row,
-  flagged to Paul by SMS, not yet fixed as of this entry). **Fix is
-  always the same**: Paul
+  flagged to Paul by SMS, acknowledged with a thumbs-up at queue id
+  884; still broken as of queue id 887's checkpoint the next morning,
+  2026-11-26 ~14:0xZ — retried once, same `invalid_grant`, not
+  re-flagged since it's the same already-acknowledged outage). **Fix
+  is always the same**: Paul
   runs `authorize_drive_once.py` on a machine with a browser and `scp`s
   the fresh token to this VM at the existing `.drive_api_token.json`
   path; this VM never fixes it on its own. When it happens again:
