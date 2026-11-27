@@ -426,12 +426,17 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
-891, text channel, Paul: "Ted are u there." Plain attention-check,
-replied by SMS confirming presence and noting the SUV watch's been
-clean lately. Pointer moved here from `suv-replacement` (folded back
-into the live-projects list below, nothing new there since qid 890).
+**Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md`
+— queue id 892, text channel, Paul: "I got an email from you with a
+command.bin?" Checked Gmail directly — no command.bin sent today, and
+none ever sent to Paul's own address (only to Bayhouse's
+`psmalone13@gmail.com`); likely Paul was looking at Bayhouse's inbox
+directly and noticed an old attachment. Replied by SMS explaining
+what it is and asking which inbox he saw it in. Pointer moved here
+from `safehouse/general` (folded back into the live-projects list
+below, nothing new there since qid 891 beyond the plain check-in).
 
+- qid 892, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "I got an email from you with a command.bin?" No command.bin sent today; explained the protocol attachment by SMS, asked which inbox he saw it in.
 - qid 891, 2026-11-27, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Ted are u there." Plain attention-check, replied by SMS confirming presence.
 - qid 890, 2026-11-27, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. 108 unique hrefs, 2 new, both excluded (Wrangler tow rating; Dakota regular-cab); no email needed.
 - qid 889, 2026-11-26, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 6pm Eastern scheduled fire. 117 unique hrefs, 2 new, both excluded (off-class sports car; Explorer under tow gate); no email needed.
