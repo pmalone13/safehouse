@@ -426,14 +426,13 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/suv-replacement/CLAUDE.md` — queue id
-890, channel `cron`, 9am Eastern scheduled fire. 108 unique hrefs, 2
-new (a 2007 Jeep Wrangler TJ, standing tow-rating exclusion; a 2001
-Dodge Dakota Regular Cab, fails the pickup-truck crew-cab rule) — both
-excluded, no new qualifying candidate, no email needed. Pointer stayed
-here (already on this project from qid 889). Drive `invalid_grant`
-outage (flagged qid 883) still unresolved — retested, same error again.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+891, text channel, Paul: "Ted are u there." Plain attention-check,
+replied by SMS confirming presence and noting the SUV watch's been
+clean lately. Pointer moved here from `suv-replacement` (folded back
+into the live-projects list below, nothing new there since qid 890).
 
+- qid 891, 2026-11-27, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Ted are u there." Plain attention-check, replied by SMS confirming presence.
 - qid 890, 2026-11-27, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. 108 unique hrefs, 2 new, both excluded (Wrangler tow rating; Dakota regular-cab); no email needed.
 - qid 889, 2026-11-26, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 6pm Eastern scheduled fire. 117 unique hrefs, 2 new, both excluded (off-class sports car; Explorer under tow gate); no email needed.
 - qid 888, 2026-11-26, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Happy thanksgiving Ted." Plain holiday greeting, replied by SMS wishing him/Christine/Nala well.
