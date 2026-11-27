@@ -427,13 +427,13 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md`
-— queue id 893, text channel, Paul: "Got it. Ask Bill for status."
-Sent a real `STATUS` command and got a genuine reply back in under a
-minute — **Bill is actually back up**, contradicting the qid 883
-"down for a bit" note from two days ago (most services up, only
-voice_monitor and virtual_device_bayhouseAck down). Replied by SMS
-with the full status. Pointer stayed here (same thread as qid 892).
+— queue id 894, email channel, subject "Bayhouse." Just the
+email-monitor's own independent pickup of the same `STATUS` reply
+already handled directly at qid 893 (same `internalDate`) — the usual
+duplicate-detection pattern, no new content, no reply sent. Pointer
+stayed here.
 
+- qid 894, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, subject "Bayhouse." Email-monitor's duplicate pickup of the qid 893 STATUS reply, no new content.
 - qid 893, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Got it. Ask Bill for status." Bill replied, actually back up (contradicts qid 883's "down" note) — most services up, voice_monitor/virtual_device_bayhouseAck down. Replied by SMS.
 - qid 892, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "I got an email from you with a command.bin?" No command.bin sent today; explained the protocol attachment by SMS, asked which inbox he saw it in.
 - qid 891, 2026-11-27, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Ted are u there." Plain attention-check, replied by SMS confirming presence.
