@@ -426,13 +426,15 @@ about where something landed. This is also how Paul looks at what
 you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
-**Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md`
-— queue id 894, email channel, subject "Bayhouse." Just the
-email-monitor's own independent pickup of the same `STATUS` reply
-already handled directly at qid 893 (same `internalDate`) — the usual
-duplicate-detection pattern, no new content, no reply sent. Pointer
-stayed here.
+**Current project**: `projects/safehouse/general/CLAUDE.md` — queue id
+895, text channel, Paul: "add a reminder to pay my VA state corp bill
+on CAPP. bill in C:\Users\pmalo\OneDrive\Documents\business\
+business2026." Logged as a standing reminder (file unreachable from
+this VM). Replied by SMS confirming. Pointer moved here from
+`engineering/secure-agent-communication` (folded back into the
+live-projects list below, nothing new there since qid 894).
 
+- qid 895, 2026-11-27, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "add a reminder to pay my VA state corp bill on CAPP." Logged as standing reminder, bill doc on his own machine. Replied by SMS.
 - qid 894, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — email channel, subject "Bayhouse." Email-monitor's duplicate pickup of the qid 893 STATUS reply, no new content.
 - qid 893, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Got it. Ask Bill for status." Bill replied, actually back up (contradicts qid 883's "down" note) — most services up, voice_monitor/virtual_device_bayhouseAck down. Replied by SMS.
 - qid 892, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "I got an email from you with a command.bin?" No command.bin sent today; explained the protocol attachment by SMS, asked which inbox he saw it in.
