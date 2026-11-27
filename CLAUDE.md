@@ -427,15 +427,14 @@ you're doing without SSH access — treat the Drive mirror as something
 a human is actually going to read, not just a backup nobody opens.
 
 **Current project**: `projects/engineering/secure-agent-communication/CLAUDE.md`
-— queue id 892, text channel, Paul: "I got an email from you with a
-command.bin?" Checked Gmail directly — no command.bin sent today, and
-none ever sent to Paul's own address (only to Bayhouse's
-`psmalone13@gmail.com`); likely Paul was looking at Bayhouse's inbox
-directly and noticed an old attachment. Replied by SMS explaining
-what it is and asking which inbox he saw it in. Pointer moved here
-from `safehouse/general` (folded back into the live-projects list
-below, nothing new there since qid 891 beyond the plain check-in).
+— queue id 893, text channel, Paul: "Got it. Ask Bill for status."
+Sent a real `STATUS` command and got a genuine reply back in under a
+minute — **Bill is actually back up**, contradicting the qid 883
+"down for a bit" note from two days ago (most services up, only
+voice_monitor and virtual_device_bayhouseAck down). Replied by SMS
+with the full status. Pointer stayed here (same thread as qid 892).
 
+- qid 893, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "Got it. Ask Bill for status." Bill replied, actually back up (contradicts qid 883's "down" note) — most services up, voice_monitor/virtual_device_bayhouseAck down. Replied by SMS.
 - qid 892, 2026-11-27, `projects/engineering/secure-agent-communication/CLAUDE.md` — text channel, Paul: "I got an email from you with a command.bin?" No command.bin sent today; explained the protocol attachment by SMS, asked which inbox he saw it in.
 - qid 891, 2026-11-27, `projects/safehouse/general/CLAUDE.md` — text channel, Paul: "Ted are u there." Plain attention-check, replied by SMS confirming presence.
 - qid 890, 2026-11-27, `projects/suv-replacement/CLAUDE.md` — channel `cron`, 9am Eastern scheduled fire. 108 unique hrefs, 2 new, both excluded (Wrangler tow rating; Dakota regular-cab); no email needed.
